@@ -15,7 +15,19 @@ sass.compiler = require('node-sass');
  */
 
 const fractal = require('@frctl/fractal').create();
+/* Tell Fractal where the components will live */
+fractal.components.set('path', __dirname + '/src/components');
+
+/* Preview template in /src/components/_preview.hbs */
+fractal.components.set('default.preview', '@preview');
+
+/* Tell Fractal where the documentation pages will live */
+fractal.docs.set('path', __dirname + '/src/docs');
+
+/* Specify a directory of static assets */
 fractal.web.set('static.path', __dirname + '/public');
+
+/* Set the static HTML build destination */
 fractal.web.set('builder.dest', __dirname + '/build');
 
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
@@ -33,13 +45,8 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
  function styles() {
  	return src('src/scss/**/*.scss')
- 		.pipe(sass({outputStyle: 'expanded'}).on("error", sass.logError))
+ 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
  		.pipe(dest('public/css'));
- }
-
- function testStyles() {
-	 console.log('testing styles');
-   return;
  }
 
  function stylesProduction() {
@@ -49,14 +56,9 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  }
 
  function watchStyles() {
-	 console.log('keep going');
 	 watch('src/scss/**/*.scss', series('styles'))
-	 console.log('stuck');
  }
 
-//  gulp.task('sass:watch', function () {
-//   gulp.watch('./sass/**/*.scss', ['sass']);
-// });
  /**
   * Fractal tasks
   */
@@ -94,10 +96,10 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
 
 exports.styles = styles;
-exports.testStyles = testStyles;
+
 exports.stylesProduction = stylesProduction;
 
-exports.watchStyles = watchStyles;
+exports.watch = watchStyles;
 
 exports.fractalStart = series(
 	fractalStart,
