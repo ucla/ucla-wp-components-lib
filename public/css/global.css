@@ -1,1 +1,15 @@
-h1{color:blue;font-size:90px}h2{color:teal;font-size:20px}
+/* Mixins and variable */
+h1 {
+  color: blue;
+  font-size: 90px;
+}
+
+/* components */
+h2 {
+  color: teal;
+  font-size: 20px;
+}
+
+h4 {
+  display: none;
+}

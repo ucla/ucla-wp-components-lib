@@ -1,6 +1,6 @@
 'use strict';
 
-const { src, series, dest, parallel } = require('gulp');
+const { src, series, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
@@ -39,6 +39,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
  function testStyles() {
 	 console.log('testing styles');
+   return;
  }
 
  function stylesProduction() {
@@ -47,9 +48,9 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 		 .pipe(dest('public/css'));
  }
 
- function watch() {
+ function watchStyles() {
 	 console.log('keep going');
-	 watch('src/scss/**/*.scss', series('testStyles'))
+	 watch('src/scss/**/*.scss', series('styles'))
 	 console.log('stuck');
  }
 
@@ -96,11 +97,11 @@ exports.styles = styles;
 exports.testStyles = testStyles;
 exports.stylesProduction = stylesProduction;
 
-exports.watch = watch;
+exports.watchStyles = watchStyles;
 
 exports.fractalStart = series(
 	fractalStart,
-	watch
+	watchStyles
 );
 
 exports.fractalBuild = fractalBuild;
