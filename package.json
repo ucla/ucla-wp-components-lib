@@ -1,0 +1,24 @@
+{
+  "name": "ucla-bruin-components",
+  "version": "1.0.0",
+  "description": "UCLA Component Library",
+  "dependencies": {
+    "@frctl/fractal": "^1.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "start": "fractal start --sync",
+    "build": "fractal build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://scottiev@bitbucket.org/scottiev/ucla-bruin-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/scottiev/ucla-bruin-components#readme"
+}
