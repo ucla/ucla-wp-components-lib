@@ -2,10 +2,10 @@
 
 const { src, series, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
+const concat = require('gulp-concat');
 const fractal = require("./fractal");
 
 sass.compiler = require('node-sass');
-
 
 /*
  * Configure a Fractal instance.
@@ -15,25 +15,7 @@ sass.compiler = require('node-sass');
  * i.e. const fractal = require('./my-fractal-config-file');
  */
 
-// const fractal = require('@frctl/fractal').create();
-//
-// /* Tell Fractal where the components will live */
-// fractal.components.set('path', __dirname + '/src/components');
-//
-// /* Preview template in /src/components/_preview.hbs */
-// fractal.components.set('default.preview', '@preview');
-//
-// /* Tell Fractal where the documentation pages will live */
-// fractal.docs.set('path', __dirname + '/src/docs');
-//
-// /* Specify a directory of static assets */
-// fractal.web.set('static.path', __dirname + '/public');
-//
-// /* Set the static HTML build destination */
-// fractal.web.set('builder.dest', __dirname + '/build');
-
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
-
 
 /*
  * Run a static export of the project web UI.
@@ -61,6 +43,11 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 	 watch('src/scss/**/*.scss', series('styles'))
  }
 
+function concatJS() {
+   return src('src/js/accordion.js')
+     .pipe(concat('scripts.js'))
+     .pipe(dest('public/js'));
+ }
  /**
   * Fractal tasks
   */
@@ -105,7 +92,8 @@ exports.watch = watchStyles;
 
 exports.fractalStart = series(
 	fractalStart,
-	watchStyles
+	watchStyles,
+	concatJS
 );
 
 exports.fractalBuild = fractalBuild;
@@ -117,7 +105,8 @@ exports.default = series(
 
 exports.build = series(
 	fractalBuild,
-	styles
+	styles,
+	concatJS
 );
 
 exports.production = series(

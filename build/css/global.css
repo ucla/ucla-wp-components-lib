@@ -1,11 +1,15 @@
 /* Mixins and variable */
+/* Components */
 h1 {
-  color: blue;
+  color: #00598C;
   font-size: 90px;
 }
 
-/* components */
 h2 {
   color: teal;
   font-size: 20px;
+}
+
+h4 {
+  display: none;
 }
