@@ -2,6 +2,7 @@
 
 const { src, series, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
+const fractal = require("./fractal");
 
 sass.compiler = require('node-sass');
 
@@ -14,21 +15,22 @@ sass.compiler = require('node-sass');
  * i.e. const fractal = require('./my-fractal-config-file');
  */
 
-const fractal = require('@frctl/fractal').create();
-/* Tell Fractal where the components will live */
-fractal.components.set('path', __dirname + '/src/components');
-
-/* Preview template in /src/components/_preview.hbs */
-fractal.components.set('default.preview', '@preview');
-
-/* Tell Fractal where the documentation pages will live */
-fractal.docs.set('path', __dirname + '/src/docs');
-
-/* Specify a directory of static assets */
-fractal.web.set('static.path', __dirname + '/public');
-
-/* Set the static HTML build destination */
-fractal.web.set('builder.dest', __dirname + '/build');
+// const fractal = require('@frctl/fractal').create();
+//
+// /* Tell Fractal where the components will live */
+// fractal.components.set('path', __dirname + '/src/components');
+//
+// /* Preview template in /src/components/_preview.hbs */
+// fractal.components.set('default.preview', '@preview');
+//
+// /* Tell Fractal where the documentation pages will live */
+// fractal.docs.set('path', __dirname + '/src/docs');
+//
+// /* Specify a directory of static assets */
+// fractal.web.set('static.path', __dirname + '/public');
+//
+// /* Set the static HTML build destination */
+// fractal.web.set('builder.dest', __dirname + '/build');
 
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
 

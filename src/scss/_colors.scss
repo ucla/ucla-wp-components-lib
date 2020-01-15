@@ -1,0 +1,86 @@
+// PRIMARY COLORS
+$ucla-blue: #2774AE;
+$ucla-gold: #FFD100;
+$white: #FFFFFF;
+
+// SECONDARY COLORS
+$darker-blue: #005587;
+$darkest-blue: #003B5C;
+
+// SECONDARY COLORS - DEPRECATED FROM BRAND GUIDELINES
+$lightest-blue: #DAEBFE;
+$light-blue: #2BA1FB;
+$lighter-blue: #8BB8E8;
+$lightest-gold: #FFF0A5;
+$lighter-gold: #FFDF42;
+$darker-gold: #FFC72C;
+$darkest-gold: #FFB81C;
+
+// TERTIARY COLORS - DEPRECATED FROM BRAND GUIDELINES
+$yellow: #FFFF00;
+$green: #00FF87;
+$magenta: #FF00A5;
+$cyan: #00FFFF;
+$purple: #8237FF;
+$black: #000000;
+$cmyk-yellow: #FFEA00;
+$cmyk-green: #35B558;
+$cmyk-magenta: #EC008C;
+$cmyk-cyan: #20C4F4;
+$cmyk-purple: #6658A6;
+$cmyk-black: #23191C;
+
+// GREYS
+$grey-10: #E5E5E5;
+$grey-40: #999;
+$grey-60: #666;
+$grey-80: #333;
+
+// TEXT COLORS FROM BRAND GUIDELINES
+$grey: $grey-80;
+$lightest-grey-2: #EBEBEB;
+$light-grey: #E7E7E8;
+$dark-grey: #262626;
+$lightest-grey: #757575;
+$lighter-grey: #454545;
+$medium-grey: #424242;
+$medium-grey2: #525252;
+$medium-grey3: #CCCCCC;
+$medium-grey4: #666666;
+$medium-gray5: #333333;
+
+// LINK STATE COLORS
+$default-state: #00598C;
+$hover-state: #0079BF;
+$active-state: #003B5C;
+$focus-state: #0079BF;
+$disabled-state: #757575;
+$visited-state: #5223B0;
+
+$default-state-dark: $ucla-gold;
+$hover-state-dark: #FFE500;
+$active-state-dark: #FFBF0F;
+$focus-state-dark: $hover-state-dark;
+$disabled-state-dark: $grey-10;
+$visited-state-dark: #CFC3F3;
+
+// DENOTIVE COLORS
+$error-red: #D60000;
+$error-red-20: #F7CCCC;
+$success-green: #007339;
+$success-green-20: #CCE3D7;
+$warning-orange: #F57F17;
+$warning-orange-20: #FDE5D1;
+$primary-alert-blue: #8BB8E8;
+$primary-alert-blue-20: #E8F1FA;
+$secondary-alert-grey: $grey-40;
+$secondary-alert-grey-10: $grey-10;
+
+// BUTTON COLORS
+$button-hover: #FFE500;
+$button-active: #FFBF0F;
+
+//Emergency Colors
+$emergency-bg: #F7CCCC;
+$emergency-bg-light: #E5E5E5;
+$emergency-border: #D60000;
