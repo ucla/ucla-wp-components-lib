@@ -1,8 +1,20 @@
-START FRACTAL
+#UCLA FRACTAL Components Library
 
-Using Fractal CLI start fractal and gulp watch
-fractal start --sync
+Clone repository and run `npm install`
 
-FRACTAL BUILD
+
+Run and watch locally
+```
+gulp fractalStart
+```
+Site will be viewable at http://localhost:3000
+
+
+```
 gulp build
+```
+
+
+```
 gulp production
+```
