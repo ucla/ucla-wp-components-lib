@@ -9,7 +9,9 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0"
+    "gulp-stylelint": "^11.0.0",
+    "node-sass": "^4.13.0",
+    "stylelint": "^13.0.0"
   },
   "scripts": {
     "start": "fractal start --sync",

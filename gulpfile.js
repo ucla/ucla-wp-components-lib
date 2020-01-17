@@ -3,6 +3,7 @@
 const { src, series, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const gulpStylelint = require('gulp-stylelint');
 const fractal = require("./fractal");
 
 sass.compiler = require('node-sass');
@@ -33,14 +34,37 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  		.pipe(dest('public/css'));
  }
 
+
+ // List .scss files. See .stylelintrc for config
+ // function lintSassBuild() {
+	//  return src(['src/scss/**/*.scss'])
+ //   .pipe(stylelint({
+ //     failAfterError: false,
+ //     reporters: [
+ //       {formatter: 'string', console: true}
+ //     ]
+ //   }));
+ // }
+
+
+ function lintSassWatch() {
+   return src('src/scss/**/*.scss')
+     .pipe(gulpStylelint({
+       reporters: [
+         {formatter: 'string', console: true}
+       ]
+     }));
+ }
+
  function stylesProduction() {
    return src('src/scss/**/*.scss')
 	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
 		 .pipe(dest('public/css'));
  }
 
- function watchStyles() {
-	 watch('src/scss/**/*.scss', series('styles'))
+ function watchStyles(done) {
+	 watch('src/scss/**/*.scss', series(styles, lintSassWatch));
+	 done();
  }
 
 function concatJS() {
