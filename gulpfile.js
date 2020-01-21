@@ -34,19 +34,6 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  		.pipe(dest('public/css'));
  }
 
-
- // List .scss files. See .stylelintrc for config
- // function lintSassBuild() {
-	//  return src(['src/scss/**/*.scss'])
- //   .pipe(stylelint({
- //     failAfterError: false,
- //     reporters: [
- //       {formatter: 'string', console: true}
- //     ]
- //   }));
- // }
-
-
  function lintSassWatch() {
    return src('src/scss/**/*.scss')
      .pipe(gulpStylelint({
