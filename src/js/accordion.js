@@ -37,7 +37,7 @@ $(document).ready( function() {
 			$(this).next(".accordion__content").find("a").attr('tabindex', '-1');
 		} else {}
 
-		halfResetAria($)
+		halfResetAria($);
 
 	});
 
@@ -59,7 +59,7 @@ $(document).ready( function() {
 			$(".accordion__content").find("a").attr('tabindex', '-1');
 			$(".accordion__title").find("button").prop('disabled', false);
 
-			halfResetAria($)
+			halfResetAria($);
 
 		} else if ( window.innerWidth > accordBreakpoint ) {
 			$(".accordion__title-button").attr("aria-expanded", "true");
@@ -88,7 +88,7 @@ $(document).ready( function() {
 					$(element).parent(".accordion__title").trigger('click');
 				}
 			}
-		}
+		};
   }
 
 });

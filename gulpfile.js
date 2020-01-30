@@ -1,10 +1,11 @@
 'use strict';
 
-const { src, series, dest, parallel, watch } = require('gulp');
+const { src, series, dest, parallel, watch, task } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
 const fractal = require("./fractal");
+const eslint = require('gulp-eslint');
 
 sass.compiler = require('node-sass');
 
@@ -49,13 +50,31 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 		 .pipe(dest('public/css'));
  }
 
+ function lintJavascript() {
+      return src('src/js/*.js')
+          // eslint() attaches the lint output to the "eslint" property
+          // of the file object so it can be used by other modules.
+          .pipe(eslint())
+          // eslint.format() outputs the lint results to the console.
+          // Alternatively use eslint.formatEach() (see Docs).
+          .pipe(eslint.format())
+          // To have the process exit with an error code (1) on
+          // lint error, return the stream and pipe to failAfterError last.
+          //.pipe(eslint.failAfterError());
+  }
+
  function watchStyles(done) {
 	 watch('src/scss/**/*.scss', series(styles, lintSassWatch));
 	 done();
  }
 
+ function watchJavascript(done) {
+	 watch('src/js/*.js', series(lintJavascript));
+	 done();
+ }
+
 function concatJS() {
-   return src('src/js/accordion.js')
+   return src('src/js/**.js')
      .pipe(concat('scripts.js'))
      .pipe(dest('public/js'));
  }
@@ -74,14 +93,14 @@ function concatJS() {
 	 */
 
 	function fractalStart() {
-    const server = fractal.web.server({
-      sync: true
-    });
-    server.on("error", err => logger.error(err.message));
-    return server.start().then(() => {
-      logger.success(`Fractal server is now running at ${server.url}`);
-    });
-  }
+	  const server = fractal.web.server({
+	    sync: true
+	  });
+	  server.on("error", err => logger.error(err.message));
+	  return server.start().then(() => {
+	    logger.success(`Fractal server is now running at ${server.url}`);
+	  });
+	}
 
  function fractalBuild() {
    const builder = fractal.web.builder();
@@ -104,6 +123,7 @@ exports.watch = watchStyles;
 exports.fractalStart = series(
 	fractalStart,
 	watchStyles,
+	watchJavascript,
 	concatJS
 );
 

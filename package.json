@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "UCLA Component Library",
   "dependencies": {
-    "@frctl/fractal": "^1.2.1"
+    "@frctl/fractal": "^1.2.1",
+    "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
