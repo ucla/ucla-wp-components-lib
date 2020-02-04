@@ -26,7 +26,7 @@ Generate Assets with Compiled CSS.
 gulp production
 ```
 
-##Component Status Types
+## Component Status Types
 
 - Ready - Component is ready for production sites
 - Prototype - Component is in review

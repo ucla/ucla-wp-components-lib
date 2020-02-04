@@ -1,0 +1,39 @@
+{
+	"title": "Buttons",
+	"collated": "true",
+	"variants": [
+		{
+			"name": "Icon",
+			"status": "prototype",
+			"context": {
+				"button": {
+					"copy": "Icon Button"
+				}
+    	}
+		},
+		{
+			"name": "Gold",
+			"status": "prototype",
+			"context": {
+				"button": {
+					"copy": "Gold Button"
+				}
+    	}
+		},
+		{
+			"name": "Gold Icon",
+			"status": "prototype",
+			"context": {
+				"button": {
+					"copy": "Gold Icon Button"
+				}
+    	}
+		}
+	],
+	"status": "wip",
+  "context": {
+		"button": {
+			"copy": "Button Copy"
+		}
+  }
+}

@@ -1,0 +1,48 @@
+.btn {
+	padding: 12px 16px 8px;
+	color: white;
+	background: $default-state;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 2px;
+
+	&:hover {
+		background: $hover-state;
+		cursor: pointer;
+	}
+
+	&:active {
+		background: $active-state;
+	}
+
+	&--gold {
+		padding: 12px 16px 8px;
+		color: black;
+		background: $ucla-gold;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 2px;
+
+		&.play {
+			&:before {
+				display: inline-block;
+				content: '';
+				width: 15px;
+				height: 15px;
+				background: url('/img/black-play-button.svg') no-repeat 0 0;
+				background-size: contain;
+			}
+		}
+	}
+
+	&.play {
+		&:before {
+			display: inline-block;
+			content: '';
+			width: 15px;
+			height: 15px;
+			background: url('/img/white-play-button.svg') no-repeat 0 0;
+			background-size: contain;
+		}
+	}
+}
