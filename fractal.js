@@ -24,4 +24,6 @@ fractal.web.set('builder.dest', __dirname + '/build');
 /* Specify a directory of static assets */
 fractal.web.set('static.path', __dirname + '/public');
 
+fractal.components.set('default.status', 'wip');
+
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
