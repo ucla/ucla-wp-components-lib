@@ -1,11 +1,18 @@
 {
   "name": "ucla-bruin-components",
-  "version": "1.0.0",
-  "description": "UCLA Component Library",
+  "version": "0.0.1",
+  "description": "UCLA Bruin Component Library, not ready for production use.",
+	"license" : "BSD-3-Clause",
+	"main": "fractal.js",
+	"bugs": {
+    "url": "https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open",
+    "email": "svosburgh@stratcomm.ucla.edu"
+  },
   "dependencies": {
     "@frctl/fractal": "^1.2.1",
     "gulp-eslint": "^6.0.0"
   },
+
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -22,7 +29,7 @@
     "type": "git",
     "url": "git+https://scottiev@bitbucket.org/scottiev/ucla-bruin-components.git"
   },
-  "author": "",
+  "author": "UCLA Startegic Communications",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/scottiev/ucla-bruin-components#readme"
+  "homepage": "https://bitbucket.org/uclaucomm/ucla-bruin-components#readme"
 }

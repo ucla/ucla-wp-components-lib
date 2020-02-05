@@ -102,6 +102,16 @@ function concatJS() {
 	  });
 	}
 
+	/*
+ * Run a static export of the project web UI.
+ *
+ * This task will report on progress using the 'progress' event emitted by the
+ * builder instance, and log any errors to the terminal.
+ *
+ * The build destination will be the directory specified in the 'builder.dest'
+ * configuration option set above.
+ */
+ 
  function fractalBuild() {
    const builder = fractal.web.builder();
    builder.on("progress", (completed, total) =>
