@@ -5,6 +5,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	border-radius: 2px;
+	border: none;
 
 	&:hover {
 		background: $hover-state;
@@ -22,6 +23,12 @@
 		font-size: 16px;
 		font-weight: bold;
 		border-radius: 2px;
+		border: none;
+
+		&:hover {
+			background: $button-hover;
+			cursor: pointer;
+		}
 
 		&.play {
 			&:before {
@@ -29,9 +36,11 @@
 				content: '';
 				width: 15px;
 				height: 15px;
-				background: url('/img/black-play-button.svg') no-repeat 0 0;
+				background: url('../img/black-play-button.svg') no-repeat 0 0;
 				background-size: contain;
 			}
+
+
 		}
 	}
 
@@ -41,7 +50,7 @@
 			content: '';
 			width: 15px;
 			height: 15px;
-			background: url('/img/white-play-button.svg') no-repeat 0 0;
+			background: url('../img/white-play-button.svg') no-repeat 0 0;
 			background-size: contain;
 		}
 	}

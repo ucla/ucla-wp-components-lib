@@ -81,7 +81,6 @@
 		color: #fff;
 		right: 0;
 		transform: rotate(0deg);
-		//transition: 0.5s;
 		z-index: 9;
 		border-radius: 2px;
 		bottom: 5px;
@@ -106,7 +105,6 @@
 
 		&.flip {
 			transform: rotate(180deg);
-			//transition: 0.5s;
 			background: $default-state;
 		}
 	}

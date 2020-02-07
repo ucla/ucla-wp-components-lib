@@ -4,6 +4,15 @@
 const fractal = module.exports = require('@frctl/fractal').create();
 const mandelbrot = require('@frctl/mandelbrot');
 
+const myCustomisedTheme = mandelbrot({
+    skin: "black",
+    panels: ["html", "resources", "info"],
+		//styles: "http://mega-corp.com/css/custom-mandelbrot-stylesheet.css",
+		favicon: "/favicon.ico"
+});
+
+fractal.web.theme(myCustomisedTheme);
+
 /* Set the title of the project */
 fractal.set('project.title', 'UCLA Component Library');
 fractal.set('project.version', 'v1.0');
