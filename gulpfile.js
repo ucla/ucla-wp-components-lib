@@ -34,9 +34,24 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
  		.pipe(dest('public/css'));
  }
+ 
+ function docStyles() {
+ 	return src('src/docs/**/*.scss')
+ 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
+ 		.pipe(dest('public/docs/css'));
+ }
 
  function lintSassWatch() {
    return src('src/scss/**/*.scss')
+     .pipe(gulpStylelint({
+       reporters: [
+         {formatter: 'string', console: true}
+       ]
+     }));
+ }
+ 
+ function docLintSassWatch() {
+   return src('src/docs/**/*.scss')
      .pipe(gulpStylelint({
        reporters: [
          {formatter: 'string', console: true}
@@ -64,7 +79,8 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
   }
 
  function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(styles, lintSassWatch));
+	 watch('src/scss/**/*.scss', series(styles, lintSassWatch)),
+	 watch('src/docs/**/*.scss', series(docStyles, docLintSassWatch));
 	 done();
  }
 
@@ -124,11 +140,16 @@ function concatJS() {
  }
 
 
-exports.styles = styles;
+
 
 exports.stylesProduction = stylesProduction;
 
 exports.watch = watchStyles;
+
+exports.styles = series( 
+  styles,
+  docStyles 
+);
 
 exports.fractalStart = series(
 	fractalStart,
@@ -147,6 +168,7 @@ exports.default = series(
 exports.build = series(
 	fractalBuild,
 	styles,
+	docStyles,
 	concatJS
 );
 

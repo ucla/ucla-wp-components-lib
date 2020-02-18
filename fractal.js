@@ -6,10 +6,18 @@ const mandelbrot = require('@frctl/mandelbrot');
 
 const myCustomisedTheme = mandelbrot({
     skin: "black",
+    nav: ["docs", "components"],
     panels: ["html", "resources", "info"],
-		//styles: "http://mega-corp.com/css/custom-mandelbrot-stylesheet.css",
+    styles: [
+        "http://mega-corp.com/css/custom-mandelbrot-stylesheet.css",
+        "default",
+        "/docs/css/global.css"
+    ],
 		favicon: "/favicon.ico"
 });
+
+// specify a directory to hold the theme override templates
+myCustomisedTheme.addLoadPath(__dirname + '/src');
 
 fractal.web.theme(myCustomisedTheme);
 

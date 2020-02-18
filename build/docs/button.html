@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="css/global.css?cachebust=1.2.1" type="text/css">
 
 
-<title>Accordion Documentation | UCLA Component Library</title>
+<title>Example Documentation Page | UCLA Component Library</title>
 
 </head>
 <body>
@@ -56,7 +56,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Accordion Documentation</h1>
+        <h1 class="Document-title">Example Documentation Page</h1>
         
 
 
@@ -73,22 +73,37 @@
 
     
     
-    <p>Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.</p>
-<p>This site is a preview of the Bruin Components source. It’s where we develop new features and components and is not always stable. For that reason you should <strong>always</strong> reference the official Bruin Components documentation site at <a href="https://bruincomponents.ucla.edu/">bruincomponents.ucla.edu</a>.</p>
-<p><a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a></p>
-<pre><code class="language-javascript">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"section-wrapper accordion"</span>&gt;
+    <p>This is a example template on how to document your component to the repository guidelines. In this section give brief explanation of what your component is and does. </p>
+<p>Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.</p>
+<pre><code><span class="hljs-comment">// Class names must be BEM http://getbem.com/</span>
 
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__title"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion1id"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__title-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"sect1"</span>&gt;</span>
-            This is the Title
-        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>
+<span class="hljs-comment">// Default </span>
+&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Button Copy<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
 
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sect1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"accordion1id"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__content grey-bk"</span>&gt;</span>
-            This is the content
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-comment">// Icon</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn play"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Icon Button<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+<span class="hljs-comment">// Gold</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn--gold"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Gold Button<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+
+<span class="hljs-comment">// Gold Icon</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn--gold play"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Gold Icon Button<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre><h2 id="break-it-down-line-by-line">Break It Down Line by Line</h2>
+<p>I.     Button wrapper that represents self contained content.</p>
+<pre><code>&lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"btn"</span>&gt;</code></pre><p>II.     Span wrapper that represents self contained content.</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-span"</span>&gt;</span>Button Copy<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><h3 id="see-example-on">See Example On:</h3>
+<ul>
+<li><a href="/components/detail/button">Button</a></li>
+</ul>
+<p><strong>This site is a preview of the Bruin Components source. It’s where we develop new features and components and is not always stable. For that reason you should alway reference the official Bruin Components documentation site at <a href="https://bruincomponents.ucla.edu/">bruincomponents.ucla.edu</a>.</strong></p>
+
     
 
 
@@ -139,8 +154,8 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button.html" data-pjax>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Button</span>
                 
             </a>
@@ -149,8 +164,8 @@
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
                 <span>Accordion</span>
                 
             </a>

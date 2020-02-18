@@ -1,0 +1,38 @@
+.Prose {
+	max-width: 99%;
+
+  pre {
+		background: rgba(83, 83, 99, 0.075);
+		padding: 20px;
+		border-radius: 10px;
+		overflow-y: scroll;
+
+		code {
+			background: rgba(83, 83, 99, 0);
+		}
+  }
+}
+
+.create-button {
+	background-color: #006298;
+	border-style: solid;
+	border: 2px solid #006298;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+	padding: .625rem 1rem;
+	text-decoration: none;
+	vertical-align: middle;
+	margin-top: 2rem; 
+	margin-bottom: 1rem;
+}
+
+.create-button:hover {
+	color: #ffffff;
+	background-color: #00456a;
+}
+
