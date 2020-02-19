@@ -17,6 +17,8 @@ pipelines:
             - node
           script:
             - npm install
+            - npm install -g gulp
+            - gulp
             - gulp production
             - apt-get update
             - apt-get install -y zip
