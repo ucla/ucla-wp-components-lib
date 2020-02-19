@@ -1,0 +1,45 @@
+# This is a build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration
+# -----
+
+# Specify a docker image from Docker Hub as your build environment
+# All of your pipelines scripts will be executed within this docker image.
+# image: php:7.2-cli
+
+pipelines:
+  branches:
+    '{master}':
+      - step:
+          name: Fractal Build
+          image: atlassian/default-image:2
+          caches:
+            - node
+          script:
+            - npm install
+            - gulp production
+            - apt-get update
+            - apt-get install -y zip
+            - zip -r application.zip .
+            - pipe: atlassian/aws-code-deploy:0.2.9
+              variables:
+                AWS_ACCESS_KEY_ID: 'AKIAX3FU5UAQSFPXDSBO'
+                AWS_SECRET_ACCESS_KEY: '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'
+                AWS_DEFAULT_REGION: 'us-west-2'
+                APPLICATION_NAME: deployment-components
+                S3_BUCKET: deployment-ucla-components
+                COMMAND: 'upload'
+                ZIP_FILE: 'application.zip'
+                DEPLOYMENT_GROUP: componentsDeploy
+            - pipe: atlassian/aws-code-deploy:0.2.9
+              variables:
+                AWS_ACCESS_KEY_ID: 'AKIAX3FU5UAQSFPXDSBO'
+                AWS_SECRET_ACCESS_KEY: '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'
+                AWS_DEFAULT_REGION: 'us-west-2'
+                APPLICATION_NAME: deployment-components
+                DEPLOYMENT_GROUP: componentsDeploy
+                S3_BUCKET: deployment-ucla-components
+                COMMAND: 'deploy'
+                WAIT: 'true'
+                IGNORE_APPLICATION_STOP_FAILURES: 'true'
+                FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
