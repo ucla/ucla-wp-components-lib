@@ -20,8 +20,27 @@ We are using [Fractal](http://fractal.build/) to build and document components f
 
 ### CDN
 
-Coming Soon.
+Put the styles in between the <head> </head> tags of every page on your website.
 
+**The Styles**
+```
+<head>
+  // Copy Below
+  <link rel="stylesheet" href="https://d3pf0mc9wfwsg5.cloudfront.net/1.0.0/css/style.css">
+  // End Copy
+</head>
+```
+
+Install the javascript in the footer of every page on your website.
+
+**The Javascript**
+```
+<footer>
+  // Copy Below
+  <script type="text/javascript" src="https://d3pf0mc9wfwsg5.cloudfront.net/1.0.0/js/scripts.js"></script>
+  // End Copy
+</footer>
+```
 
 ### To install via NPM
 

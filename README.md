@@ -1,6 +1,8 @@
 # UCLA FRACTAL Components Library
 
-This components library is currently in development and is not meant for use in production sites.
+## This readme is for Developers and the Governance team.
+
+This components library was built on the Fractal technology and is continually in development.
 
 **Read the Fractal documentation at http://fractal.build/guide.**
 
