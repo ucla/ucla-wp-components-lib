@@ -1,0 +1,63 @@
+.stat-wrapper {
+  .stat-tout {
+    border-left: 4px solid $ucla-gold;
+    padding-left: 32px;
+    margin-bottom: 48px;
+
+    // .number and .label are spans
+    &__number {
+      font-size: 54px;
+      line-height: 4rem;
+      color: $grey-80;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    &__label {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      display: block;
+
+      &--grey {
+        color: $medium-grey4;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: bold;
+        display: block;
+      }
+    }
+
+    &--wide {
+      width: 100%;
+      border-bottom: 4px solid $ucla-gold;
+      padding-bottom: 24px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 768px) {
+      width: calc((100%/2) - (24px/2));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      width: calc((100%/3) - (48px/3));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 24px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

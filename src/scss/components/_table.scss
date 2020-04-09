@@ -150,15 +150,13 @@
         top: 12px;
         width: 6px;
         height: 9px;
-
-        @include transform ( rotate(45deg) );
+        transform: rotate(45deg);
       }
 
       &::after {
         left: 16px;
         top: 16px;
-
-        @include transform ( rotate(225deg) );
+        transform: rotate(45deg);
       }
 
       &.sorting-asc {
