@@ -1,9 +1,26 @@
 .stat-wrapper {
-  .stat-tout {
-    border-left: 4px solid $ucla-gold;
-    padding-left: 32px;
-    margin-bottom: 48px;
+  /* Use the .stat-tout class for VERTICAL stat touts
 
+	Example HTML structure (from Facts & Figures):
+
+	<div class="stat-wrapper clearfix">
+		<div class="stat-tout">
+			<span class="stat-tout__number">31,000</span>
+			<span class="stat-tout__label">Undergraduate Students</span>
+		</div>
+	</div>
+
+	*/
+
+  .stat-tout {
+    display: block;
+    border-left: 4px solid $ucla-gold;
+    padding: 6px 0 38px 32px;
+    margin: 24px 24px 0;
+
+    @media (min-width: breakpoint-min(md)) {
+      display: inline-block;
+    }
     // .number and .label are spans
     &__number {
       font-size: 54px;
@@ -19,6 +36,11 @@
       line-height: 24px;
       font-weight: bold;
       display: block;
+      max-width: 212px;
+
+      @media (min-width: breakpoint-min(md)) {
+        max-width: 312px;
+      }
 
       &--grey {
         color: $medium-grey4;
@@ -36,7 +58,7 @@
       margin-bottom: 48px;
     }
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: breakpoint-min(md)) {
       width: calc((100%/2) - (24px/2));
       float: left;
       margin-right: 24px;
@@ -46,7 +68,7 @@
       }
     }
 
-    @media (min-width: 1024px) {
+    @media only screen and (min-width: breakpoint-min(lg)) {
       width: calc((100%/3) - (48px/3));
       float: left;
       margin-right: 24px;

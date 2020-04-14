@@ -1,56 +1,8 @@
-/*******
-1. Accordion is a mobile only feature. Accordians are fully expanded on screens above 768px.
-2. Grey backgrounds are a mobile only feature.
-3. Numbers in IDs and aria-controls and aria-labelledby must be consecutive.
-   (i.e. first one is id="accordion1id" second one is id="accordion2id" and so on.)
-
-   HTML structure:
-
-   1. Accordion main wrapper (wraps #2 and content after [i.e faculty cards in leadership page])
-   2. Accordion title section and a button (used as a drop down mobile for mobile)
-   3. Accordion content section
-
-   Code:
-
-   1. Accordion Main Wrapper - Should include 'section-wrapper accordion' class names - <div class="section-wrapper accordion">
-
-   2. Accordion - Each accordion includes (letters denote levels of nesting):
-    a. h2 class - <h2 class="accordion__title">
-     b. button for accordion - <button id="accordion1id"...> <NAME OF SECTION> </button>
-
-   Example case for the accordion:
-
-   <div class="section-wrapper accordion">       <!-- 1. Accordion main wrapper -->
-
-     <h2 class="accordion__title">       <!-- 2. Accordion title section and button -->
-       <button id="accordion1id" class="accordion__title-button" type="button" aria-expanded="true" aria-controls="sect1">
-         <TITLE HERE (i.e. Fields Medal in Mathematics)>
-       </button>
-     </h2>
-
-     <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion__content"> <!-- 3. Accordion content section -->
-         <p>Add content here</p>
-     </div>
-   </div>
-
-See examples on:
-- Alumni & Student Honors Page
-- Terms of Use
-- Accessibility
-- Site Information
-
-Further documentation on ADA compliant accordions
-- https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
-Other Resources
-- aria-labelledby - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-- role = region - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role
-*******/
-
 .accordion {
   padding: 48px 24px 48px 24px;
   transition: 0.5s;
 
-  @media (min-width: breakpoint-min(md)) {
+  @media (min-width: 1024px) {
     padding: 48px 35px 48px 35px !important;
     display: inline-block;
   }
@@ -59,7 +11,7 @@ Other Resources
     padding: 48px 24px;
     transition: 0.5s;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: 1024px) {
       padding: 48px 35px 48px 35px !important;
     }
   }
@@ -71,7 +23,7 @@ Other Resources
     margin: 0 auto;
     max-width: 1200px;
 
-    @media (min-width: breakpoint-min(sm)) {
+    @media (min-width: 776px) {
       padding-left: 0;
       width: 100%;
       margin-left: auto !important;
@@ -102,7 +54,7 @@ Other Resources
       &:hover {
         cursor: pointer;
 
-        @media (min-width: breakpoint-min(md)) {
+        @media (min-width: 1024px) {
           cursor: default;
         }
       }
@@ -126,10 +78,9 @@ Other Resources
   &__title-arrow {
     background: $default-state;
     position: absolute;
-    color: $white;
+    color: #fff;
     right: 0;
     transform: rotate(0deg);
-    //transition: 0.5s;
     z-index: 9;
     border-radius: 2px;
     bottom: 5px;
@@ -144,17 +95,16 @@ Other Resources
       outline: 1px dotted $hover-state;
     }
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: 1024px) {
       display: none;
     }
 
     polygon#Path {
-      fill: $white;
+      fill: #fff;
     }
 
     &.flip {
       transform: rotate(180deg);
-      //transition: 0.5s;
       background: $default-state;
     }
   }
@@ -170,7 +120,7 @@ Other Resources
     opacity: 0;
 
     //always show content on desktop
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: 1024px) {
       opacity: 1 !important;
       height: auto;
       margin-top: 20px;
@@ -186,7 +136,7 @@ Other Resources
       margin-bottom: 20px;
       transition: 0.5s;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: 1024px) {
         padding-top: 50px;
         width: calc(100% + 70px);
         margin-left: -35px;
@@ -201,7 +151,7 @@ Other Resources
       opacity: 1;
       padding-top: 20px;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: 1024px) {
         padding-top: 30px;
       }
 

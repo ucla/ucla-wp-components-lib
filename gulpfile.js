@@ -34,7 +34,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
  		.pipe(dest('public/css'));
  }
- 
+
  function docStyles() {
  	return src('src/docs/**/*.scss')
  		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
@@ -42,14 +42,14 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  }
 
  function lintSassWatch() {
-   return src('src/scss/**/*.scss')
+   return src('src/scss/conponents/**/*.scss')
      .pipe(gulpStylelint({
        reporters: [
          {formatter: 'string', console: true}
        ]
      }));
  }
- 
+
  function docLintSassWatch() {
    return src('src/docs/**/*.scss')
      .pipe(gulpStylelint({
@@ -127,7 +127,7 @@ function concatJS() {
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
- 
+
  function fractalBuild() {
    const builder = fractal.web.builder();
    builder.on("progress", (completed, total) =>
@@ -146,9 +146,9 @@ exports.stylesProduction = stylesProduction;
 
 exports.watch = watchStyles;
 
-exports.styles = series( 
+exports.styles = series(
   styles,
-  docStyles 
+  docStyles
 );
 
 exports.fractalStart = series(
