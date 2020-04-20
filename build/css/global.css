@@ -5514,9 +5514,8 @@ Other Resources
 FIXED FIRST ROW Table component
 
 TABLE RULES:
-1. To align text right add class "fixed-table__text-right" to td element.
-2. NUMBERS MUST be aligned right using class="fixed-table__text-right".
-3. Total or distinctive columns at bottom should be wrapped in <tfoot> tags.
+1. To align text right add global class "align-right" to td element.
+2. Total or distinctive columns at bottom should be wrapped in <tfoot> tags.
 
 HTML structure:
 
@@ -5533,7 +5532,7 @@ HTML structure:
           <tbody>
               <tr>
                 <td class="fixed-table__sticky-col">First Row Title</td>
-                <td class="fixed-table__text-right">First row second column info. Text right example.</td>
+                <td class="align-right">First row second column info. Text right example.</td>
                 <td>First row third column info.</td>
               </tr>
               <tr>
@@ -5548,9 +5547,9 @@ HTML structure:
               </tr>
               <tfoot>
                 <tr class="yellow-total">
-                  <td  class="fixed-table__sticky-col">Total Example</td>
-                  <td class="fixed-table__text-right">99,999</td>
-                  <td class="fixed-table__text-right">99,999</td>
+                  <td class="fixed-table__sticky-col">Total Example</td>
+                  <td class="align-right">99,999</td>
+                  <td class="align-right">99,999</td>
                 </tr>
               </tfoot>
           </tbody>
