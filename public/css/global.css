@@ -5815,6 +5815,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
 .fixed-table {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .fixed-table__scroller {
@@ -5822,7 +5823,6 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
   /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
   overflow-x: auto;
   overflow-y: visible;
-  padding-bottom: 5px;
 }
 
 @media (min-width: 768px) {

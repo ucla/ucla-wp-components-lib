@@ -143,12 +143,13 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
 .fixed-table {
   position: relative;
   width: 100%;
+  overflow: hidden;
 
   &__scroller {
     margin-left: calc(36% + 16px); /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
     overflow-x: auto;
     overflow-y: visible;
-    padding-bottom: 5px;
+    //padding-bottom: 5px;
 
     @media (min-width: breakpoint-min(md)) {
       overflow-x: visible;
