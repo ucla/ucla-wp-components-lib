@@ -145,7 +145,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
   width: 100%;
 
   &__scroller {
-    margin-left: 40%; /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
+    margin-left: calc(36% + 16px); /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
     overflow-x: auto;
     overflow-y: visible;
     padding-bottom: 5px;
@@ -262,14 +262,6 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
     @media (min-width: breakpoint-min(md)) {
       min-width: 300px;
       position: relative;
-    }
-
-    @media (max-width: 604px) {
-      height: 32px;
-    }
-
-    @media (max-width: 373px) {
-      height: 48px !important;
     }
   }
 

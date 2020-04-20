@@ -5818,7 +5818,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
 }
 
 .fixed-table__scroller {
-  margin-left: 40%;
+  margin-left: calc(36% + 16px);
   /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
   overflow-x: auto;
   overflow-y: visible;
@@ -5938,18 +5938,6 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
   .fixed-table__sticky-col {
     min-width: 300px;
     position: relative;
-  }
-}
-
-@media (max-width: 604px) {
-  .fixed-table__sticky-col {
-    height: 32px;
-  }
-}
-
-@media (max-width: 373px) {
-  .fixed-table__sticky-col {
-    height: 48px !important;
   }
 }
 
