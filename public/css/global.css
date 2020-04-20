@@ -5924,6 +5924,66 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
   word-wrap: break-word;
 }
 
+.fixed-table #sortTable {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.fixed-table #sortTable tr th:nth-child(1) {
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .fixed-table #sortTable tr th:nth-child(1) {
+    position: relative;
+  }
+}
+
+.fixed-table #sortTable tr th:nth-child(1) {
+  width: 34%;
+}
+
+.fixed-table #sortTable th {
+  position: relative;
+  cursor: pointer;
+  padding-left: 32px;
+}
+
+.fixed-table #sortTable th::before, .fixed-table #sortTable th::after {
+  content: '\25E4';
+  font-size: 6px;
+  color: #999;
+  display: block;
+  position: absolute;
+  left: 18px;
+  top: 12px;
+  width: 6px;
+  height: 9px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.fixed-table #sortTable th::after {
+  left: 16px;
+  top: 16px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.fixed-table #sortTable th.sorting-asc::after {
+  color: #00598C;
+}
+
+.fixed-table #sortTable th.sorting-desc::before {
+  color: #00598C;
+}
+
 .fixed-table__sticky-col {
   left: 0;
   position: absolute;

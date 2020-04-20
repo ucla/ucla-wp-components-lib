@@ -252,6 +252,59 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
     }
   }
 
+  //Sorting tables can be found on the faculty Awards pages /about/awards-and-honors/faculty/
+  #sortTable {
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    tr th:nth-child(1) {
+      position: absolute;
+
+      @media (min-width: breakpoint-min(md)) {
+        position: relative;
+      }
+    }
+
+    tr th:nth-child(1) {
+      width: 34%;
+    }
+
+    th {
+      position: relative;
+      cursor: pointer;
+      padding-left: 32px;
+
+      &::before, &::after {
+        content: '\25E4';
+        font-size: 6px;
+        color: $grey-40;
+        display: block;
+        position: absolute;
+        left: 18px;
+        top: 12px;
+        width: 6px;
+        height: 9px;
+
+        @include transform ( rotate(45deg) );
+      }
+
+      &::after {
+        left: 16px;
+        top: 16px;
+
+        @include transform ( rotate(225deg) );
+      }
+
+      &.sorting-asc {
+        &::after { color: $default-state; }
+      }
+
+      &.sorting-desc {
+        &::before { color: $default-state; }
+      }
+    }
+  }
+
   &__sticky-col {
     left: 0;
     position: absolute;
