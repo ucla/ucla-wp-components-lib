@@ -1,5 +1,5 @@
 ---
-title: Accordion Documentation
+title: Tables Documentation
 ---
 Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.
 
@@ -8,6 +8,8 @@ This site is a preview of the Bruin Components source. It's where we develop new
 <a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a>
 
 ```
+<h1>Table</h1>
+
 <div class="fixed-table">
   <div class="fixed-table__scroller">
       <table class="fixed-table__wrapper">
@@ -25,16 +27,16 @@ This site is a preview of the Bruin Components source. It's where we develop new
                 <td>First row third column info.</td>
               </tr>
               <tr>
-                <td class="fixed-table__sticky-col">Second Row Bold Title Example</td>
+                <td class="fixed-table__sticky-col">Second Row Title</td>
                 <td>Second row second column info.</td>
                 <td>Second row third column info.</td>
               </tr>
-              <tr class="blue-total">
-                <td class="fixed-table__sticky-col">Third Row Title - Blue Total Row</td>
-                <td>Third row second column info - Blue Total Row</td>
-                <td>Third row third column info - Blue Total Row</td>
-              </tr>
               <tfoot>
+                <tr class="blue-total">
+                  <td class="fixed-table__sticky-col">Third Row Title - Blue Total Row</td>
+                  <td>Third row second column info + Blue Total Row</td>
+                  <td>Third row third column info + Blue Total Row</td>
+                </tr>
                 <tr class="yellow-total">
                   <td class="fixed-table__sticky-col">Total Example - Yellow Total Row</td>
                   <td>99,999 - Yellow Total Row</td>
@@ -47,6 +49,7 @@ This site is a preview of the Bruin Components source. It's where we develop new
 </div>
 
 <h1>Table with Aligned-Right Column Data</h1>
+<!-- global style, align-right is used below -->
 
 <div class="fixed-table">
   <div class="fixed-table__scroller">
@@ -87,6 +90,7 @@ This site is a preview of the Bruin Components source. It's where we develop new
 </div>
 
 <h1>Table with Sort Data Columns</h1>
+<!-- Script used within table.js is required for this feature to work correctly  -->
 
 <div class="fixed-table">
   <div class="fixed-table__scroller">
@@ -98,34 +102,33 @@ This site is a preview of the Bruin Components source. It's where we develop new
           <th data-sort="string">Department</th>
         </tr>
       </thead>
-      <!-- Loop array, get member details, remove br tag from 'department' index and add in blade if it exists -->
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Aa</td>
+        <td class="fixed-table__sticky-col">Name Aa</td>
         <td>1942</td>
         <td>Strategic Communications</td>
       </tr>
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Bb</td>
+        <td class="fixed-table__sticky-col">Name Bb</td>
         <td>1963</td>
         <td>External Affairs</td>
       </tr>
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Cc</td>
+        <td class="fixed-table__sticky-col">Name Cc</td>
         <td>1999</td>
         <td>Human Resources</td>
       </tr>
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Dd</td>
+        <td class="fixed-table__sticky-col">Name Dd</td>
         <td>2001</td>
         <td>Admissions</td>
       </tr>
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Ee</td>
+        <td class="fixed-table__sticky-col">Name Ee</td>
         <td>1910</td>
         <td>Dentistry</td>
       </tr>
       <tr>
-        <td class="fixed-table__sticky-col">Kevin Ff</td>
+        <td class="fixed-table__sticky-col">Name Ff</td>
         <td>2020</td>
         <td>Strategic Communications</td>
       </tr>
