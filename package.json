@@ -22,6 +22,7 @@
     "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
@@ -31,6 +32,13 @@
   },
   "scripts": {
     "start": "fractal start --sync",
-    "build": "fractal build"
+    "build": "fractal build",
+    "commit": "git-cz"
+  },
+  "release-it": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
