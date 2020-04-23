@@ -1,38 +1,9 @@
-.Prose {
-	max-width: 99%;
+// use @imports to bring in style sheets per element.
+// BASE UCLA Fractal.build mandlebrot themeoverides
+// https://fractal.build/guide/customisation/web-themes.html#configuring-themes
+// https://fractal.build/guide/web/default-theme.html
+// These are fractal or mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 
-  pre {
-		background: rgba(83, 83, 99, 0.075);
-		padding: 20px;
-		border-radius: 10px;
-		overflow-y: scroll;
 
-		code {
-			background: rgba(83, 83, 99, 0);
-		}
-  }
-}
-
-.create-button {
-	background-color: #006298;
-	border-style: solid;
-	border: 2px solid #006298;
-	border-radius: 4px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: bold;
-	line-height: 1;
-	text-decoration: none;
-	padding: .625rem 1rem;
-	text-decoration: none;
-	vertical-align: middle;
-	margin-top: 2rem; 
-	margin-bottom: 1rem;
-}
-
-.create-button:hover {
-	color: #ffffff;
-	background-color: #00456a;
-}
-
+@import "./scss/_mandlebrot-child";
+@import "./scss/_docs";
