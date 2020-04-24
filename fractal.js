@@ -9,7 +9,6 @@ const myCustomisedTheme = mandelbrot({
     nav: ["docs", "components"],
     panels: ["html", "resources", "info"],
     styles: [
-        "http://mega-corp.com/css/custom-mandelbrot-stylesheet.css",
         "default",
         "/docs/css/global.css"
     ],
@@ -34,6 +33,7 @@ fractal.components.set('default.preview', '@preview');
 
 /* Tell Fractal where the documentation pages will live */
 fractal.docs.set('path', __dirname + '/src/docs');
+
 
 /* Set the static HTML build destination */
 fractal.web.set('builder.dest', __dirname + '/build');
