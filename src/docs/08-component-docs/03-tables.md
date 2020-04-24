@@ -99,7 +99,7 @@ The global class, "align-right" can be used to right align items.
 </div>
 ```
 <h3>3. Table with Sort Data Columns</h3>
-Tables can include sorting behavior. Be sure to include [the script](https://bruincomponents.ucla.edu/) in your project and include the "sortTable" class name to the table class.
+Tables can include sorting behavior. Be sure to include <a href="/build/docs/installation/download.html">the script</a> in your project and include the "sortTable" class name to the table class.
 
 ```
 <div class="fixed-table">
