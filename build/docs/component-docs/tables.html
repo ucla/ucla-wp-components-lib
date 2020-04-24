@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../css/global.css?cachebust=1.2.1" type="text/css">
 
 
-<title>Accordion Documentation | UCLA Component Library</title>
+<title>Tables Documentation | UCLA Component Library</title>
 
 </head>
 <body>
@@ -54,7 +54,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Accordion Documentation</h1>
+        <h1 class="Document-title">Tables Documentation</h1>
         
 
 
@@ -74,8 +74,10 @@
     <p>Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.</p>
 <p>This site is a preview of the Bruin Components source. It’s where we develop new features and components and is not always stable. For that reason you should <strong>always</strong> reference the official Bruin Components documentation site at <a href="https://bruincomponents.ucla.edu/">bruincomponents.ucla.edu</a>.</p>
 <p><a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a></p>
-<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fixed-table"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__scroller"</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Table<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__scroller"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__wrapper"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
@@ -91,16 +93,16 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>First row third column info.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Second Row Bold Title Example<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Second Row Title<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Second row second column info.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Second row third column info.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blue-total"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Third Row Title - Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Third row second column info - Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Third row third column info - Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blue-total"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Third Row Title - Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Third row second column info + Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Third row third column info + Blue Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"yellow-total"</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Total Example - Yellow Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>99,999 - Yellow Total Row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
@@ -109,12 +111,13 @@
               <span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Table with Aligned-Right Column Data<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Table with Aligned-Right Column Data<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- global style, align-right is used below --&gt;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__scroller"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__wrapper"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
@@ -150,11 +153,12 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Table with Sort Data Columns<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Table with Sort Data Columns<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Script used within table.js is required for this feature to work correctly  --&gt;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__scroller"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sortTable"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__wrapper"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
@@ -164,40 +168,39 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">data-sort</span>=<span class="hljs-string">"string"</span>&gt;</span>Department<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- Loop array, get member details, remove br tag from 'department' index and add in blade if it exists --&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Aa<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Aa<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1942<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Strategic Communications<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Bb<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Bb<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1963<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>External Affairs<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Cc<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Cc<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1999<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Human Resources<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Dd<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Dd<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>2001<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Admissions<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Ee<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Ee<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1910<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Dentistry<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Kevin Ff<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__sticky-col"</span>&gt;</span>Name Ff<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>2020<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Strategic Communications<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
     
 
 
