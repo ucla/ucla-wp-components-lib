@@ -7,9 +7,17 @@ This site is a preview of the Bruin Components source. It's where we develop new
 
 <a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a>
 
-```
-<h1>Table</h1>
+<h2>Table Rules + Notices:</h2>
 
+1. To align text right, add global class "align-right" to th/td element(s).
+2. Table Heads (th) and first column values will be bolded.
+3. The text within the rows of "blue-total" and "yellow-total" classes will be bold.
+4. Total or distinctive columns (i.e "blue-total" and "yellow-total") at bottom should be wrapped in <tfoot> tags.
+
+<h2>3 Examples of Usage</h2>
+<h3>1. Table</h3>
+
+```
 <div class="fixed-table">
   <div class="fixed-table__scroller">
       <table class="fixed-table__wrapper">
@@ -47,10 +55,11 @@ This site is a preview of the Bruin Components source. It's where we develop new
       </table>
   </div>
 </div>
+```
+<h3>2. Table with Aligned-Right Column Data</h3>
+The global class, "align-right" can be used to right align items.
 
-<h1>Table with Aligned-Right Column Data</h1>
-<!-- global style, align-right is used below -->
-
+```
 <div class="fixed-table">
   <div class="fixed-table__scroller">
       <table class="fixed-table__wrapper">
@@ -88,10 +97,11 @@ This site is a preview of the Bruin Components source. It's where we develop new
       </table>
   </div>
 </div>
+```
+<h3>3. Table with Sort Data Columns</h3>
+Tables can include sorting behavior. Be sure to include [the script](https://bruincomponents.ucla.edu/) in your project and include the "sortTable" class name to the table class.
 
-<h1>Table with Sort Data Columns</h1>
-<!-- Script used within table.js is required for this feature to work correctly  -->
-
+```
 <div class="fixed-table">
   <div class="fixed-table__scroller">
     <table id="sortTable" class="fixed-table__wrapper">
