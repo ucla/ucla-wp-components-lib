@@ -7,7 +7,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
     skin: "black",
     nav: ["docs", "components"],
-    panels: ["html", "resources", "info"],
+    panels: ["html", "info"],
     styles: [
         "default",
         "/docs/css/global.css"

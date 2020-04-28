@@ -12,11 +12,10 @@
 @import "./utilities/_mixins/_breakpoints";
 @import "./utilities/_mixins/_gradients";
 @import "./utilities/_spacing";
-//@import "./utilities/_grid";
+@import "./utilities/_grid";
 
 // Components
 @import "./components/_accordion.scss";
 @import "./components/_button.scss";
 @import "./components/_stat-tout.scss";
 @import "./components/_table.scss";
-@import "./components/_testimonials.scss"

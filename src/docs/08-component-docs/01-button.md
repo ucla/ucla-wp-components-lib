@@ -6,30 +6,17 @@ This is a example template on how to document your component to the repository g
 
 Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.
 
-
 ```
-// Class names must be BEM http://getbem.com/
-
-// Default
-<button class="btn">
-  <span>Button Copy</span>
-</button>
-
-// Icon
-<button class="btn play">
-  <span>Icon Button</span>
-</button>
-
-// Gold
-<button class="btn--gold">
-  <span>Gold Button</span>
-</button>
-
-// Gold Icon
-<button class="btn--gold play">
-  <span>Gold Icon Button</span>
-</button>
+// Standard Button
+{{view '@button'}}
+// Standard Button with Icon
+{{view '@button--icon'}}
+// Gold Button
+{{view '@button--gold'}}
+// Gold Button with Icon
+{{view '@button--gold-icon'}}
 ```
+
 
 ## Line by Line
 

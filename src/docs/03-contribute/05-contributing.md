@@ -52,7 +52,7 @@ Pull requests are reviewed the ****** of every month.
 
 **Strategic Communications**
 
-Strategic Communications is the approver and delegator of UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Gary Stevens for more information.
+Strategic Communications is the approver and delegator of UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Strategic Communications for more information.
 
 Strategic Communications will review each component be it is approved for "Ready" status. We will look to make sure each component is on brand and follows the UCLA brand guidelines. If a new component is submitted the submitter is responsible for supplying documentation on its use. Undocumented components will not be approved for use.
 

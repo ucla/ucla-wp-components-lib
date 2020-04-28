@@ -42,7 +42,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  }
 
  function lintSassWatch() {
-   return src('src/scss/conponents/**/*.scss')
+   return src('src/scss/components/**/*.scss')
      .pipe(gulpStylelint({
        reporters: [
          {formatter: 'string', console: true}

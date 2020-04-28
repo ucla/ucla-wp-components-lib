@@ -45,3 +45,9 @@ After the ssh has been created run the following command:
 ```
 npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
 ```
+
+## Add to documentation
+
+This library is documented in the docs folder of this repository. The markdown pages follow github markdown rules.
+
+[More on Github Markdown]https://guides.github.com/features/mastering-markdown/

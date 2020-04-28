@@ -96,24 +96,24 @@ input, select {
 }
 
 /*  SECTIONS  ============================================================================= */
-.section {
+.ucla {
   clear: both;
   padding: 0px;
   margin: 0px;
 }
 
 /*  GROUPING  ============================================================================= */
-.group::before,
-.group::after {
+.campus::before,
+.campus::after {
   content: "";
   display: table;
 }
 
-.group::after {
+.campus::after {
   clear: both;
 }
 
-.group {
+.campus {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 

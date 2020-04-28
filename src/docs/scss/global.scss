@@ -4,6 +4,5 @@
 // https://fractal.build/guide/web/default-theme.html
 // These are fractal or mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 
-
-@import "./scss/_mandlebrot-child";
-@import "./scss/_docs";
+@import "./_docs";
+@import "./_mandlebrot-child";
