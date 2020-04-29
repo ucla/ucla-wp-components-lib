@@ -166,11 +166,13 @@ $(document).ready(function (){
       d.css('display');
       setTimeout(function () {
         d.stupidtable.settings.will_manually_build_table || d.stupidtable_build();
+        /*eslint-disable */
         var a = l(e),
           a = m(a, e);
         if (d.stupidtable.settings.should_redraw(e)) {
           d.children('tbody').append(a);
           var a = e.$table,
+          /*eslint-enable */
             c = e.$th,
             f = c.data('sort-dir');
           a.find('th').data('sort-dir', null).removeClass('sorting-desc sorting-asc');
@@ -213,13 +215,15 @@ $(document).ready(function (){
       a.data('stupidsort_internaltable', b);
     });
   };
-  var l = function (a) {
+  let l = function (a) {
+    /*eslint-disable */
       var b = a.$table.data('stupidsort_internaltable'),
         f = a.th_index,
         d = a.$th.data('sort-multicolumn'),
         d = d ? d.split(',') : [],
-        e = c.map(d, function (b, d) {
-          var c = a.$table.find('th'),
+        /*eslint-enable */
+        e = c.map(d, function (b) {
+          let c = a.$table.find('th'),
             e = parseInt(b, 10),
             f;
           e || 0 === e ? f = c.eq(e) : (f = c.siblings('#' + b), e = c.index(f));
@@ -229,39 +233,41 @@ $(document).ready(function (){
           };
         });
       b.sort(function (b, c) {
+        /*eslint-disable */
         for (var d = e.slice(0), g = a.compare_fn(b.columns[f], c.columns[f]); 0 === g && d.length;) {
-          var g = d[0],
+          var g = d[0], // eslint-disable-line no-use-before-define
             h = g.$e.data('sort'),
             g = (0, a.$table.data('sortFns')[h])(b.columns[g.index], c.columns[g.index]);
           d.shift();
         }
+        /*eslint-enable */
         return 0 === g ? b.index - c.index : g;
       });
       a.sort_dir !== c.fn.stupidtable.dir.ASC && b.reverse();
       return b;
     },
-    m = function(a, b) {
-      var f = c.map(a, function (a, c) {
+    m = function (a, b) {
+      let f = c.map(a, function (a, c) {
         return [
           [a.columns[b.th_index], a.$tr, c]
-        ]
+        ];
       });
       b.column = f;
       return c.map(a, function (a) {
         return a.$tr;
-      })
+      });
     },
     k = function (a, b) {
-      var f, d = b.$th,
+      let f, d = b.$th,
         e = c.fn.stupidtable.dir;
       a ? f = a : (f = a || d.data('sort-default') || e.ASC, d.data('sort-dir') && (f = d.data('sort-dir') === e.ASC ? e.DESC : e.ASC));
       return f;
     },
     h = function (a) {
-      var b = 0,
+      let b = 0,
         f = a.$th.index();
       a.$th.parents('tr').find('th').slice(0, f).each(function () {
-        var a = c(this).attr('colspan') || 1;
+        let a = c(this).attr('colspan') || 1;
         b += parseInt(a, 10);
       });
       return b;
