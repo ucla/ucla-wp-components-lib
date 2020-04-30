@@ -1,37 +1,41 @@
 .Prose {
-	max-width: 99%;
+  max-width: 44em;
 
   pre {
-		background: rgba(83, 83, 99, 0.075);
-		padding: 20px;
-		border-radius: 10px;
-		overflow-y: scroll;
+    background: rgba(83, 83, 99, 0.075);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: scroll;
 
-		code {
-			background: rgba(83, 83, 99, 0);
-		}
+    code {
+      background: rgba(83, 83, 99, 0);
+
+      &.active {
+        background:#3399ff;
+      }
+    }
   }
 }
 
 .create-button {
-	background-color: #006298;
-	border-style: solid;
-	border: 2px solid #006298;
-	border-radius: 4px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: bold;
-	line-height: 1;
-	text-decoration: none;
-	padding: .625rem 1rem;
-	text-decoration: none;
-	vertical-align: middle;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+  background-color: #006298;
+  border-style: solid;
+  border: 2px solid #006298;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .create-button:hover {
-	color: #ffffff;
-	background-color: #00456a;
+  color: #ffffff;
+  background-color: #00456a;
 }

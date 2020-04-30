@@ -1,11 +1,17 @@
 ---
 title: Tables Documentation
 ---
-Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.
+## Usability Guidelines
 
-This site is a preview of the Bruin Components source. It's where we develop new features and components and is not always stable. For that reason you should **always** reference the official Bruin Components documentation site at [bruincomponents.ucla.edu](https://bruincomponents.ucla.edu/).
+* Left align table content like text and dates for easy readability.
+* Right align complex numerical and financial data for scale of size.
+* Display headings at the top of each column (required)
+* Consider whether to define row headings for added emphasis to each line of data (optional).
 
-<a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a>
+## Accessibility Requirements
+
+* Define different sections of your table both visually and semantically. Use elements like a table header <thead>, body <tbody>, and footer <tfoot>.
+* Add further clarify to the table cell by specifying when they contain group headings <th> or data <td>.
 
 <h2>Table Rules + Notices:</h2>
 
@@ -14,14 +20,15 @@ This site is a preview of the Bruin Components source. It's where we develop new
 3. The text within the rows of "blue-total" and "yellow-total" classes will be bold.
 4. Total or distinctive columns (i.e "blue-total" and "yellow-total") at bottom should be wrapped in <tfoot> tags.
 
-<h2>3 Examples of Usage</h2>
-<h3>1. Table</h3>
+<h2>Examples of Use</h2>
+
+<h3>Simple Table</h3>
 
 ```
 {{view '@table--default'}}
 
 ```
-<h3>2. Table with Aligned-Right Column Data</h3>
+<h3>Table with Aligned-Right Column Data</h3>
 The global class, "align-right" can be used to right align items.
 
 ```
@@ -29,10 +36,20 @@ The global class, "align-right" can be used to right align items.
 
 ```
 
-<h3>3. Table with Sort Data Columns</h3>
+<h3>Sort Data Table</h3>
 Tables can include sorting behavior. Be sure to include <a href="/build/docs/installation/download.html">the script</a> in your project and include the "sortTable" class name to the table class.
 
 ```
 {{view '@table--sort'}}
 
 ```
+
+## Design Specs. and Anatomy
+![Table Anatomy](/docs/img/Table/table-anatomy.jpg)
+![Table Anatomy](/docs/img/Table/table-specs.jpg)
+
+
+## Further Reading
+
+* [Reference of table content elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+* [Link needed](https://www.w3.org/WAI/tutorials/tables/)

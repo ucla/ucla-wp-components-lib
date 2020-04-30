@@ -71,9 +71,18 @@
 
     
     
-    <p>Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.</p>
-<p>This site is a preview of the Bruin Components source. It’s where we develop new features and components and is not always stable. For that reason you should <strong>always</strong> reference the official Bruin Components documentation site at <a href="https://bruincomponents.ucla.edu/">bruincomponents.ucla.edu</a>.</p>
-<p><a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a></p>
+    <h2 id="usability-guidelines">Usability Guidelines</h2>
+<ul>
+<li>Left align table content like text and dates for easy readability.</li>
+<li>Right align complex numerical and financial data for scale of size.</li>
+<li>Display headings at the top of each column (required)</li>
+<li>Consider whether to define row headings for added emphasis to each line of data (optional).</li>
+</ul>
+<h2 id="accessibility-requirements">Accessibility Requirements</h2>
+<ul>
+<li>Define different sections of your table both visually and semantically. Use elements like a table header <thead>, body <tbody>, and footer <tfoot>.</li>
+<li>Add further clarify to the table cell by specifying when they contain group headings <th> or data <td>.</li>
+</ul>
 <h2>Table Rules + Notices:</h2>
 
 <ol>
@@ -82,8 +91,9 @@
 <li>The text within the rows of “blue-total” and “yellow-total” classes will be bold.</li>
 <li>Total or distinctive columns (i.e “blue-total” and “yellow-total”) at bottom should be wrapped in <tfoot> tags.</li>
 </ol>
-<h2>3 Examples of Usage</h2>
-<h3>1. Table</h3>
+<h2>Examples of Use</h2>
+
+<h3>Simple Table</h3>
 
 <pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fixed-table"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fixed-table__scroller"</span>&gt;</span>
@@ -123,7 +133,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-</code></pre><h3>2. Table with Aligned-Right Column Data</h3>
+</code></pre><h3>Table with Aligned-Right Column Data</h3>
 The global class, "align-right" can be used to right align items.
 
 <pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fixed-table"</span>&gt;
@@ -164,7 +174,7 @@ The global class, "align-right" can be used to right align items.
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-</code></pre><h3>3. Table with Sort Data Columns</h3>
+</code></pre><h3>Sort Data Table</h3>
 Tables can include sorting behavior. Be sure to include <a href="/build/docs/installation/download.html">the script</a> in your project and include the "sortTable" class name to the table class.
 
 <pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fixed-table"</span>&gt;
@@ -211,7 +221,15 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-</code></pre>
+</code></pre><h2 id="design-specs-and-anatomy">Design Specs. and Anatomy</h2>
+<p><img src="/docs/img/Table/table-anatomy.jpg" alt="Table Anatomy">
+<img src="/docs/img/Table/table-specs.jpg" alt="Table Anatomy"></p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Reference of table content elements</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/tables/">Link needed</a></li>
+</ul>
+
     
 
 
@@ -417,9 +435,9 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-grid">
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-layout">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Grid</span>
+                <span>Layout</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -430,8 +448,18 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../grid/grid.html" data-pjax>
+            <a class="Tree-entityLink" href="../layout/grid.html" data-pjax>
                 <span>Grid</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../layout/spacing.html" data-pjax>
+                <span>Spacing</span>
                 
             </a>
         </li>
@@ -519,6 +547,30 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../components/detail/grid.html" data-pjax>
                 <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../components/detail/spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -716,6 +768,8 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
 
 
 <script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+<script src="../js/scripts.js?cachebust=1.2.1"></script>
 
 
 

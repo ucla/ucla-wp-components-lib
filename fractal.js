@@ -12,7 +12,11 @@ const myCustomisedTheme = mandelbrot({
         "default",
         "/docs/css/global.css"
     ],
-		favicon: "/favicon.ico"
+    scripts: [
+       "default",
+       "/docs/js/scripts.js"
+    ],
+    favicon: "/favicon.ico"
 });
 
 // specify a directory to hold the theme override templates
