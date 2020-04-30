@@ -6,6 +6,7 @@ const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
 const fractal = require("./fractal");
 const eslint = require('gulp-eslint');
+const image = require('gulp-image');
 
 sass.compiler = require('node-sass');
 
@@ -38,7 +39,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  function docStyles() {
  	return src('src/docs/**/*.scss')
  		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('public/docs/css'));
+ 		.pipe(dest('build/docs'));
  }
 
  function lintSassWatch() {
@@ -59,13 +60,19 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
      }));
  }
 
- function stylesProduction() {
+ function stylesProductionPublic() {
    return src('src/scss/**/*.scss')
 	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
 		 .pipe(dest('public/css'));
  }
 
- function lintJavascript() {
+ function docStylesProduction() {
+   return src('src/docs/scss/**/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(dest('public/docs/css'));
+ }
+
+ function lintJavascriptLib() {
       return src('src/js/*.js')
           // eslint() attaches the lint output to the "eslint" property
           // of the file object so it can be used by other modules.
@@ -78,21 +85,53 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
           //.pipe(eslint.failAfterError());
   }
 
+  function lintJavascriptDoc() {
+       return src('src/docs/js/*.js')
+           // eslint() attaches the lint output to the "eslint" property
+           // of the file object so it can be used by other modules.
+           .pipe(eslint())
+           // eslint.format() outputs the lint results to the console.
+           // Alternatively use eslint.formatEach() (see Docs).
+           .pipe(eslint.format())
+           // To have the process exit with an error code (1) on
+           // lint error, return the stream and pipe to failAfterError last.
+           //.pipe(eslint.failAfterError());
+   }
+
  function watchStyles(done) {
 	 watch('src/scss/**/*.scss', series(styles, lintSassWatch)),
-	 watch('src/docs/**/*.scss', series(docStyles, docLintSassWatch));
+	 watch('src/docs/scss/**/*.scss', series(docStyles, docLintSassWatch));
 	 done();
  }
 
  function watchJavascript(done) {
-	 watch('src/js/*.js', series(lintJavascript));
+	 watch('src/js/*.js', series(lintJavascriptLib));
+   watch('src/docs/js/*.js', series(lintJavascriptDoc));
 	 done();
  }
 
-function concatJS() {
+function concatJsLibPublic() {
    return src('src/js/**.js')
      .pipe(concat('scripts.js'))
      .pipe(dest('public/js'));
+ }
+
+ function concatJsDoc() {
+    return src('src/docs/js/**.js')
+      .pipe(concat('scripts.js'))
+      .pipe(dest('public/docs/js'));
+  }
+
+ function concatImageDoc() {
+    return src('src/docs/img/**/*')
+     .pipe(image())
+     .pipe(dest('public/docs/img'));
+ }
+
+ function concatImagePublic() {
+    return src('src/components/img/**/*')
+     .pipe(image())
+     .pipe(dest('public/img'));
  }
  /**
   * Fractal tasks
@@ -142,7 +181,7 @@ function concatJS() {
 
 
 
-exports.stylesProduction = stylesProduction;
+exports.stylesProductionPublic = stylesProductionPublic;
 
 exports.watch = watchStyles;
 
@@ -155,24 +194,35 @@ exports.fractalStart = series(
 	fractalStart,
 	watchStyles,
 	watchJavascript,
-	concatJS
+  concatJsLibPublic,
+  concatJsDoc
 );
 
 exports.fractalBuild = fractalBuild;
 
 exports.default = series(
 	fractalBuild,
-	styles
+	styles,
+  concatJsLibPublic,
+  concatJsDoc
 );
 
 exports.build = series(
 	fractalBuild,
 	styles,
 	docStyles,
-	concatJS
+  concatJsLibPublic,
+  concatJsDoc,
+  concatImageDoc,
+  concatImagePublic
 );
 
 exports.production = series(
 	fractalBuild,
-	stylesProduction
+	stylesProductionPublic,
+  docStylesProduction,
+  concatJsLibPublic,
+  concatJsDoc,
+  concatImageDoc,
+  concatImagePublic
 );
