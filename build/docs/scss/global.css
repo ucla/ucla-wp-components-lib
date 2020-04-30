@@ -1,24 +1,22 @@
 /***************** STOP!!! READ THIS!! *****************/
-// These are Fractal documentation specific styles here only. DO NOT put component related styles here. Those belong in ./src/scss
-// https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
-
+/***************** STOP!!! READ THIS!! *****************/
 .Prose {
   max-width: 44em;
+}
 
-  pre {
-    background: rgba(83, 83, 99, 0.075);
-    padding: 20px;
-    border-radius: 10px;
-    overflow-y: scroll;
+.Prose pre {
+  background: rgba(83, 83, 99, 0.075);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
 
-    code {
-      background: rgba(83, 83, 99, 0);
+.Prose pre code {
+  background: rgba(83, 83, 99, 0);
+}
 
-      &.active {
-        background: #3399ff;
-      }
-    }
-  }
+.Prose pre code.active {
+  background: #3399ff;
 }
 
 .create-button {
@@ -42,4 +40,9 @@
 .create-button:hover {
   color: #ffffff;
   background-color: #00456a;
+}
+
+/***************** STOP!!! READ THIS!! *****************/
+.Header {
+  background-color: #2774AE;
 }
