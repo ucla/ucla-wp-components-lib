@@ -6,14 +6,27 @@ title: Grid
 This Bruin grid has a max of twelve columns and five breakpoints. It is a boilerplate, fully responsive grid system that is flexible and easy to use.
 
 
-Viewports | Viewport Width
------------- | -------------
-Extra Small / Mobile Devices | 480px
-Small / Mobile Devices | 600px
-Medium / Tablet devices | 768px
-Large / Desktop or laptop devices | 1024px
-Extra Large / Presentation Mode | 1280px
+Viewports | Viewport Width | SCSS Breakpoint Variable
+------------ | ------------- | -------------
+Extra Small / Mobile Devices | 480px | "xs"
+Small / Mobile Devices | 600px | "sm"
+Medium / Tablet devices | 768px | "md"
+Large / Desktop or laptop devices | 1024px | "lg"
+Extra Large / Presentation Mode | 1280px | "xl"
 
+
+### Breakpoint Examples
+```
+// CSS Example Breakpoint Usage
+@media (min-width: 768px) {
+  display: inline-block;
+}
+
+// SCSS Example Breakpoint Usage
+@media (min-width: breakpoint-min(md)) {
+  display: inline-block;
+}
+```
 
 ### Columns
 
