@@ -125,7 +125,13 @@ function concatJsLibPublic() {
  function concatImageDoc() {
     return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('public/docs/img'));
+     .pipe(dest('build/img'));
+ }
+
+ function concatFavicon() {
+    return src('src/favicon.ico')
+     .pipe(image())
+     .pipe(dest('public'));
  }
 
  function concatImagePublic() {
@@ -214,7 +220,8 @@ exports.build = series(
   concatJsLibPublic,
   concatJsDoc,
   concatImageDoc,
-  concatImagePublic
+  concatImagePublic,
+  concatFavicon
 );
 
 exports.production = series(
@@ -224,5 +231,6 @@ exports.production = series(
   concatJsLibPublic,
   concatJsDoc,
   concatImageDoc,
-  concatImagePublic
+  concatImagePublic,
+  concatFavicon
 );

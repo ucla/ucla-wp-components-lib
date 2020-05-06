@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Menu White</title>
+    <defs>
+        <path d="M8,36 L40,36 L40,32 L8,32 L8,36 Z M8,26 L40,26 L40,22 L8,22 L8,26 Z M8,12 L8,16 L40,16 L40,12 L8,12 Z" id="path-1"></path>
+    </defs>
+    <g id="Iconography" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-v2" transform="translate(-917.000000, -232.000000)">
+            <g id="Denotive-Icons" transform="translate(95.000000, 176.000000)">
+                <g id="menu" transform="translate(814.000000, 44.000000)">
+                    <polygon id="Background" points="0 0 48 0 48 48 0 48"></polygon>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#ffffff" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

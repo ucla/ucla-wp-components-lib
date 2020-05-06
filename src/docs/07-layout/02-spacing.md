@@ -22,8 +22,8 @@ Property | Sides | Size
  | | "36" = 36px
  | | "40" = 40px
  | | "48" = 48px
- | | "58" = 58px
- | | "65" = 65px
+ | | "56" = 56px
+ | | "64" = 64px
  | | "72" = 72px
 
 ### Class Examples
