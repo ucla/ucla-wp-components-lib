@@ -60,7 +60,7 @@ fractal.components.set('statuses', {
     },
     junior: {
         label: "junior",
-        description: "This compoentent has a branch that has been submitted for review by the UCLA governance team.",
+        description: "This compoentent has a branch that is currently being reviewed by the UCLA governance team.",
         color: "#0077C0"
     },
     sophmore: {
