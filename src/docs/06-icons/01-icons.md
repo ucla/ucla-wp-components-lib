@@ -7,9 +7,7 @@ This library supports icons as an extension. If you are using the UCLA WordPress
 ## Download the zip file
 <button class="create-button" href="UCLA-componentExtension-SVG-Download-.zip.zip">Download Zip</button>
 
-
 ## Denotive Icons
-
 {{view '@icons--image-denotive-arrow-down'}}
 {{view '@icons--image-denotive-arrow-left'}}
 {{view '@icons--image-denotive-arrow-right'}}
@@ -28,17 +26,14 @@ This library supports icons as an extension. If you are using the UCLA WordPress
 {{view '@icons--image-denotive-informational'}}
 
 ## Weather Icons
-
 {{view '@icons--a-image-weather'}}
 
 ## Social Icons
-
 {{view '@icons--b-image-social'}}
-
 
 ## How to Use
 
-Strategic Communications encourages the use of SVGs. All icons are available in SVG format and can be used as raw SVG code or linking to through an image.
+Strategic Communications encourages the use of the supplied ADA complaint SVG files. All icons are available in SVG format and can be used as raw SVG code or linking to through an image.
 
 
 ### Use as an image
@@ -48,7 +43,9 @@ Strategic Communications encourages the use of SVGs. All icons are available in 
 {{view '@icons--image-denotive-download'}}
 ```
 
-### Use as an SVG
+### Use as an inline SVG
+
+Inline SVGs do not require an <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very tope of your page. 
 
 {{view '@icons--svg-denotive-download'}}
 ```
