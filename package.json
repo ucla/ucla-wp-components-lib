@@ -28,6 +28,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-stylelint": "^11.0.0",
     "node-sass": "^4.13.0",
+    "semantic-release": "^17.0.7",
     "stylelint": "^13.0.0"
   },
   "scripts": {
@@ -35,7 +36,6 @@
     "build": "fractal build",
     "commit": "git-cz"
   },
-  "release-it": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
