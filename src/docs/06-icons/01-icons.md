@@ -5,7 +5,7 @@ title: Icons
 This library supports icons as an extension. If you are using the UCLA WordPress theme or plugin they are already installed on your site.
 
 ## Download the zip file
-<button class="create-button" href="UCLA-componentExtension-SVG-Download-.zip.zip">Download Zip</button>
+<a class="create-button" href="https://ucla-fractal.s3-us-west-1.amazonaws.com/UCLA-WEB-ICONS.zip">Download Zip</a>
 
 ## Denotive Icons
 {{view '@icons--image-denotive-arrow-down'}}
@@ -45,7 +45,7 @@ Strategic Communications encourages the use of the supplied ADA complaint SVG fi
 
 ### Use as an inline SVG
 
-Inline SVGs do not require an <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very tope of your page. 
+Inline SVGs do not require an <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very tope of your page.
 
 {{view '@icons--svg-denotive-download'}}
 ```

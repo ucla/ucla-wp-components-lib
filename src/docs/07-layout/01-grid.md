@@ -26,6 +26,7 @@ Extra Large / Presentation Mode | 1280px | "xl"
 @media (min-width: breakpoint-min(md)) {
   display: inline-block;
 }
+
 ```
 
 ### Columns
@@ -51,6 +52,14 @@ It has no padding or margins.
 
 // Twelve Columns Responsive EXAMPLE
 {{view '@grid--thirteen'}}
+
+```
+
+You can place columns within columns.
+```
+// Body Layout
+{{view '@grid--fourteen'}}
+
 ```
 
 
