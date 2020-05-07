@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="44px" height="38px" viewBox="0 0 44 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Warning Orange</title>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Warning</title>
     <defs>
-        <path d="M22,0 L44,38 L0,38 L22,0 Z M24,28 L20,28 L20,32 L24,32 L24,28 Z M24,16 L20,16 L20,24 L24,24 L24,16 Z" id="path-1"></path>
+        <path d="M24,0 L46,38 L2,38 L24,0 Z M26,28 L22,28 L22,32 L26,32 L26,28 Z M26,16 L22,16 L22,24 L26,24 L26,16 Z" id="path-1"></path>
     </defs>
-    <g id="Iconography" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons-v2" transform="translate(-711.000000, -316.000000)">
-            <g id="Denotive-Icons" transform="translate(95.000000, 176.000000)">
-                <g id="warning" transform="translate(616.000000, 140.000000)">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <use id="Shape" fill="#F57F17" xlink:href="#path-1"></use>
-                </g>
-            </g>
-        </g>
+    <g id="Icon/warning-orange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#F57F17" xlink:href="#path-1"></use>
     </g>
 </svg>
