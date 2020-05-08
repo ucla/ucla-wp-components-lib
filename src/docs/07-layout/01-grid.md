@@ -60,3 +60,21 @@ In order to use the column grid you must wrap the page area with the “ucla cam
 * The “campus” class forces the element to self-clear its children, a.k.a [the Clearfix hack](https://css-tricks.com/snippets/css/clear-fix/). This is used to support older browser versions.
 * The “col” class divides the row into columns. All columns except the first child have a margin-left of 1.6%.
 * The “span_x_of_x” class defines the width of the column using percentages. The second “x” has a maximum of 12. This allows the grid to be fluid at all breakpoints.
+
+```
+// Full Width
+{{view '@grid'}}
+// Two Columns
+{{view '@grid--two'}}
+// Three Columns
+{{view '@grid--three'}}
+// Twelve Columns Responsive EXAMPLE
+{{view '@grid--thirteen'}}
+```
+
+You can place columns within columns.
+
+```
+// Body Layout
+{{view '@grid--fourteen'}}
+```
