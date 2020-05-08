@@ -77,8 +77,33 @@
 
     
     
-    <h2 id="the-bruin-grid">The Bruin Grid</h2>
-<p>This Bruin grid has a max of twelve columns and five breakpoints. It is a boilerplate, fully responsive grid system that is flexible and easy to use.</p>
+    <h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Our fully responsive grid for UCLA digital properties has 12 columns and 5 breakpoints. It has been designed to easily adapt to different screen sizes and to ensure consistent layouts across devices.</p>
+<h2 id="anatomy"><strong>Anatomy</strong></h2>
+<p>The grid has three main parts: columns, gutters, and margins.</p>
+<ul>
+<li>Columns<ul>
+<li>Columns contain the content.</li>
+<li>They act as invisible guides while setting typography and aligning elements to establish a visual rhythm.</li>
+</ul>
+</li>
+<li>Gutters<ul>
+<li>Gutters are the spaces between columns.</li>
+<li>They provide breathing room around elements so your content can be easily consumed.</li>
+</ul>
+</li>
+<li>Margins<ul>
+<li>Margins are the spaces between the 1) content area and 2) the left and right edges of the screen. (We do not use top and bottom margins for our grids.)</li>
+<li>Margins define the content area from within the viewable area.</li>
+</ul>
+</li>
+</ul>
+<h2 id="specs"><strong>Specs</strong></h2>
+<!-- Pending Grid Spec Image to Be Placed Here -->
+
+<h2 id="code"><strong>Code</strong></h2>
+<h3 id="viewports-and-breakpoints"><strong>Viewports and Breakpoints</strong></h3>
+<p>We created shorthand variables for common breakpoints in the following chart.</p>
 <table>
 <thead>
 <tr>
@@ -98,12 +123,12 @@
 <td>“sm”</td>
 </tr>
 <tr>
-<td>Medium / Tablet devices</td>
+<td>Medium / Tablet Devices</td>
 <td>768px</td>
 <td>“md”</td>
 </tr>
 <tr>
-<td>Large / Desktop or laptop devices</td>
+<td>Large / Desktop or Laptop Devices</td>
 <td>1024px</td>
 <td>“lg”</td>
 </tr>
@@ -113,7 +138,7 @@
 <td>“xl”</td>
 </tr>
 </tbody></table>
-<h3 id="breakpoint-examples">Breakpoint Examples</h3>
+<h3 id="breakpoint-examples"><strong>Breakpoint Examples</strong></h3>
 <pre><code><span class="hljs-comment">// CSS Example Breakpoint Usage</span>
 @media (<span class="hljs-built_in">min</span>-<span class="hljs-built_in">width</span>: <span class="hljs-number">768</span>px) {
   <span class="hljs-built_in">display</span>: <span class="hljs-keyword">inline</span>-block;
@@ -122,62 +147,86 @@
 <span class="hljs-comment">// SCSS Example Breakpoint Usage</span>
 @media (<span class="hljs-built_in">min</span>-<span class="hljs-built_in">width</span>: breakpoint-<span class="hljs-built_in">min</span>(md)) {
   <span class="hljs-built_in">display</span>: <span class="hljs-keyword">inline</span>-block;
-}</code></pre><h3 id="columns">Columns</h3>
+}
+</code></pre><h3 id="columns"><strong>Columns</strong></h3>
 <p>In order to use the column grid you must wrap the page area with the “ucla campus” class.</p>
 <ul>
-<li>The “ucla” class splits the page horizontally.  It will help you break up rows of content or can be used as your main content wrapper.
-It has no padding or margins.</li>
-<li>The “campus” class forces the clear of children, a.k.a <a href="https://css-tricks.com/snippets/css/clear-fix/">the clearfix hack</a>. This was used to help support of older browser versions.</li>
+<li>The “ucla” class splits the page horizontally. It will help you break up rows of content or can be used as your main content wrapper. It has no padding or margins.</li>
+<li>The “campus” class forces the element to self-clear its children, a.k.a <a href="https://css-tricks.com/snippets/css/clear-fix/">the Clearfix hack</a>. This is used to support older browser versions.</li>
 <li>The “col” class divides the row into columns. All columns except the first child have a margin-left of 1.6%.</li>
-<li>the “span_x_of_x” class defines the width of the column using percentages. This allows the grid to be fluid at all breakpoints.</li>
+<li>The “span_x_of_x” class defines the width of the column using percentages. The second “x” has a maximum of 12. This allows the grid to be fluid at all breakpoints.</li>
 </ul>
 <pre><code><span class="hljs-comment">// Full Width</span>
 &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"ucla campus"</span>&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_12_of_12"</span>&gt;
-    <span class="hljs-number">1</span> of <span class="hljs-number">1</span>
+      <span class="hljs-number">1</span> of <span class="hljs-number">1</span>
     &lt;/div&gt;
 &lt;/div&gt;
 
-
-<span class="hljs-comment">// Two Colums</span>
+<span class="hljs-comment">// Two Columns</span>
 &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"ucla campus"</span>&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_1_of_2"</span>&gt;
-    <span class="hljs-number">1</span> of <span class="hljs-number">2</span>
+      <span class="hljs-number">1</span> of <span class="hljs-number">2</span>
     &lt;/div&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_1_of_2"</span>&gt;
-    <span class="hljs-number">2</span> of <span class="hljs-number">2</span>
+      <span class="hljs-number">2</span> of <span class="hljs-number">2</span>
     &lt;/div&gt;
 &lt;/div&gt;
 
-
-<span class="hljs-comment">// Three Colums</span>
+<span class="hljs-comment">// Three Columns</span>
 &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"ucla campus"</span>&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_1_of_3"</span>&gt;
-    <span class="hljs-number">1</span> of <span class="hljs-number">3</span>
+        <span class="hljs-number">1</span> of <span class="hljs-number">3</span>
     &lt;/div&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_1_of_3"</span>&gt;
-    <span class="hljs-number">2</span> of <span class="hljs-number">3</span>
+        <span class="hljs-number">2</span> of <span class="hljs-number">3</span>
     &lt;/div&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_1_of_3"</span>&gt;
-    <span class="hljs-number">3</span> of <span class="hljs-number">3</span>
+        <span class="hljs-number">3</span> of <span class="hljs-number">3</span>
     &lt;/div&gt;
 &lt;/div&gt;
-
 
 <span class="hljs-comment">// Twelve Columns Responsive EXAMPLE</span>
 &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"ucla campus"</span>&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_6_of_12"</span>&gt;
-    This <span class="hljs-keyword">is</span> column <span class="hljs-number">1</span>, that spans <span class="hljs-number">6</span> columns of <span class="hljs-number">12.</span>
+      This <span class="hljs-keyword">is</span> column <span class="hljs-number">1</span>, that spans <span class="hljs-number">6</span> columns of <span class="hljs-number">12.</span>
     &lt;/div&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_3_of_12"</span>&gt;
-    This <span class="hljs-keyword">is</span> column <span class="hljs-number">2</span>, that spans <span class="hljs-number">3</span> columns of <span class="hljs-number">12.</span>
+      This <span class="hljs-keyword">is</span> column <span class="hljs-number">2</span>, that spans <span class="hljs-number">3</span> columns of <span class="hljs-number">12.</span>
     &lt;/div&gt;
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col span_3_of_12"</span>&gt;
-    This <span class="hljs-keyword">is</span> column <span class="hljs-number">3</span>, that spans <span class="hljs-number">3</span> columns of <span class="hljs-number">12.</span>
+      This <span class="hljs-keyword">is</span> column <span class="hljs-number">3</span>, that spans <span class="hljs-number">3</span> columns of <span class="hljs-number">12.</span>
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p><a href="/components/detail/grid">MORE EXAMPLES</a></p>
+</code></pre><p>You can place columns within columns.</p>
+<pre><code><span class="hljs-comment">// Body Layout</span>
+&lt;div <span class="hljs-keyword">class</span>="<span class="hljs-symbol">ucla</span> <span class="hljs-symbol">campus</span>"&gt;
 
+  &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">col</span> <span class="hljs-symbol">span_9_of_12</span>"&gt;
+
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">ucla</span> <span class="hljs-symbol">campus</span>"&gt;
+      &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">col</span> <span class="hljs-symbol">span_12_of_12</span>"&gt;
+        <span class="hljs-symbol">Body</span> <span class="hljs-symbol">Content</span> <span class="hljs-symbol">12</span> <span class="hljs-symbol">of</span> <span class="hljs-symbol">12</span>
+      &lt;/<span class="hljs-symbol">div</span>&gt;
+    &lt;/<span class="hljs-symbol">div</span>&gt;
+
+    &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">ucla</span> <span class="hljs-symbol">campus</span>"&gt;
+      &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">col</span> <span class="hljs-symbol">span_6_of_12</span>"&gt;
+        <span class="hljs-symbol">Body</span> <span class="hljs-symbol">Content</span> <span class="hljs-symbol">6</span> <span class="hljs-symbol">of</span> <span class="hljs-symbol">6</span>
+      &lt;/<span class="hljs-symbol">div</span>&gt;
+      &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">col</span> <span class="hljs-symbol">span_6_of_12</span>"&gt;
+        <span class="hljs-symbol">Body</span> <span class="hljs-symbol">Content</span> <span class="hljs-symbol">6</span> <span class="hljs-symbol">of</span> <span class="hljs-symbol">6</span>
+      &lt;/<span class="hljs-symbol">div</span>&gt;
+    &lt;/<span class="hljs-symbol">div</span>&gt;
+
+  &lt;/<span class="hljs-symbol">div</span>&gt;
+
+  &lt;<span class="hljs-symbol">div</span> <span class="hljs-symbol">class</span>="<span class="hljs-symbol">col</span> <span class="hljs-symbol">span_3_of_12</span>"&gt;
+    <span class="hljs-symbol">Menu</span> <span class="hljs-symbol">content</span>
+  &lt;/<span class="hljs-symbol">div</span>&gt;
+
+&lt;/<span class="hljs-symbol">div</span>&gt;
+</code></pre>
     
 
 
