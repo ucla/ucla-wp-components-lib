@@ -77,66 +77,51 @@
 
     
     
-    <h1 id="spacing"><strong>Spacing</strong></h1>
-<h2 id="introduction"><strong>Introduction</strong></h2>
-<p>We use an 8-point grid to define our spacing, meaning we use multiples of 8, from 4 to 64. We define dimensions, padding, and margins of both block and inline elements. Individual elements are positioned relative to each other. Smaller components, such as iconography and typography, can align to a 4-point grid.</p>
-<h2 id="specs"><strong>Specs</strong></h2>
-<p>![Stevie’s Spacing Specs](Path TBA)</p>
-<h2 id="code"><strong>Code</strong></h2>
-<!--Removed text under “Spacing” (and “Spacing” heading itself) and placed under “Spacing Class Structure below-->
+    <h2 id="spacing">Spacing</h2>
+<p>Assign responsive margin or padding values to an element or child elements with shorthand classes. Includes support for divs, paragraghs, and html5 elements, vertical or horizontal properties. Classes are built from a default Sass map ranging from in multiples of 4 from 4px to 72px.</p>
+<h2 id="centerthe-spacing-class-structurecenter"><center>The Spacing Class Structure</center></h2>
+<center>{property}{sides}-{size}</center>
 
-<h3 id="spacing-class-structure"><strong>Spacing Class Structure</strong></h3>
-<p>We created responsive margin and padding classes that use the following shorthand for values. These classes are built from a default Sass map in multiples of 8, ranging from 4 to 64, and support divs, paragraphs, and HTML5 elements.</p>
-<p>Use this format:</p>
-<p>{property}{sides}-{breakpoint variable (optional)}-{size}</p>
-<h3 id="class-values"><strong>Class Values</strong></h3>
+<h3 id="class-values">Class Values</h3>
 <table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Sides</th>
-<th>SCSS Breakpoint Variable</th>
 <th>Size</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>“m” = Margin</td>
 <td>“t” = Top</td>
-<td>“xs”</td>
 <td>“4” = 4px</td>
 </tr>
 <tr>
-<td>“p” = Padding</td>
+<td>“p” = padding</td>
 <td>“r” = Right</td>
-<td>“sm”</td>
 <td>“8” = 8px</td>
 </tr>
 <tr>
 <td></td>
-<td>“b” = Bottom</td>
-<td>“md”</td>
+<td>“b” = bottom</td>
 <td>“12” = 12px</td>
 </tr>
 <tr>
 <td></td>
-<td>“l” = Left</td>
-<td>“lg”</td>
+<td>“l” = left</td>
 <td>“16” = 16px</td>
 </tr>
 <tr>
 <td></td>
-<td>“x” = set both *-left and *-right</td>
-<td>“xs”</td>
+<td></td>
 <td>“24” = 24px</td>
 </tr>
 <tr>
 <td></td>
-<td>“y” = set both *-top and *-bottom</td>
 <td></td>
 <td>“32” = 32px</td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td></td>
 <td>“36” = 36px</td>
@@ -144,11 +129,9 @@
 <tr>
 <td></td>
 <td></td>
-<td></td>
 <td>“40” = 40px</td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td></td>
 <td>“48” = 48px</td>
@@ -156,11 +139,9 @@
 <tr>
 <td></td>
 <td></td>
-<td></td>
 <td>“56” = 56px</td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td></td>
 <td>“64” = 64px</td>
@@ -168,11 +149,10 @@
 <tr>
 <td></td>
 <td></td>
-<td></td>
 <td>“72” = 72px</td>
 </tr>
 </tbody></table>
-<h3 id="class-examples"><strong>Class Examples</strong></h3>
+<h3 id="class-examples">Class Examples</h3>
 <table>
 <thead>
 <tr>
@@ -186,24 +166,24 @@
 </tr>
 <tr>
 <td>“ml-xl-4”</td>
-<td>{Margin}{Left}, {Extra Large Screens Only}, {4px} <br/><small>0 Margin on All Smaller Screens.</small></td>
+<td>{Margin}{Left}, {Extra Large Screens Only}, {4px}. <br/><small>0 Margin on All Smaller Screens.</small></td>
 </tr>
 <tr>
 <td>“pr-md-4”</td>
-<td>{Padding}{Right}, {Medium Screens and Above}, {4px} <br/><small>0 Padding on All Smaller Screens.</small></td>
+<td>{Padding}{Right}, {Medium Screens and above}, {4px}. <br/><small>0 Padding on All Smaller Screens.</small></td>
 </tr>
 </tbody></table>
-<h3 id="margin-use-example"><strong>Margin Use Example</strong></h3>
+<h3 id="margin-use-example">Margin Use Example</h3>
 <pre><code>&lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"mb-4"</span>&gt;This sentence has <span class="hljs-number">4</span>px <span class="hljs-keyword">of</span> margin spacing <span class="hljs-keyword">below</span> <span class="hljs-keyword">it</span>&lt;/p&gt;
 &lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"mb-12"</span>&gt;This sentence has <span class="hljs-number">12</span>px <span class="hljs-keyword">of</span> margin spacing <span class="hljs-keyword">below</span> <span class="hljs-keyword">it</span>&lt;/p&gt;
 &lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"mb-36"</span>&gt;This sentence has <span class="hljs-number">36</span>px <span class="hljs-keyword">of</span> margin spacing <span class="hljs-keyword">below</span> <span class="hljs-keyword">it</span>&lt;/p&gt;
 &lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"mb-72"</span>&gt;This sentence has <span class="hljs-number">72</span>px <span class="hljs-keyword">of</span> margin spacing <span class="hljs-keyword">below</span> <span class="hljs-keyword">it</span>&lt;/p&gt;
 &lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"mb-12 mb-md-36 mb-lg-72"</span>&gt;This sentence has <span class="hljs-number">12</span>px <span class="hljs-keyword">of</span> margin <span class="hljs-keyword">below</span> <span class="hljs-keyword">it</span> <span class="hljs-keyword">on</span> small screens, <span class="hljs-number">36</span>px <span class="hljs-keyword">of</span> margin <span class="hljs-keyword">on</span> MEDIUM size screens <span class="hljs-keyword">and</span> <span class="hljs-number">72</span>px <span class="hljs-keyword">on</span> LARGE size screens.&lt;/p&gt;
 &lt;p&gt;<span class="hljs-comment">-------------&lt;/p&gt;</span>
-</code></pre><h3 id="padding-use-example"><strong>Padding Use Example</strong></h3>
+</code></pre><h3 id="padding-use-example">Padding Use Example</h3>
 <pre><code>&lt;p <span class="hljs-built_in">class</span>=<span class="hljs-string">"pl-md-32"</span>&gt;This sentence has <span class="hljs-number">32</span>px <span class="hljs-keyword">of</span> padding spacing <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> left <span class="hljs-keyword">on</span> medium screens <span class="hljs-keyword">and</span> <span class="hljs-keyword">above</span>.&lt;/p&gt;
-</code></pre><h3 id="the-center-class"><strong>The Center Class</strong></h3>
-<p>We have a class called “mx-auto” that horizontally centers fixed-width block-level content. If the content that has display: block; and a set width, our class will set the horizontal margins to auto.</p>
+</code></pre><h3 id="the-center-class">The Center Class</h3>
+<p>We have class for horizontally centering fixed-width block level content, “mx-auto”, content that has display: block and a width set—by setting the horizontal margins to auto.</p>
 <pre><code>&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"mt-32 mx-auto"</span> style=<span class="hljs-string">"width: 250px;"</span>&gt;
   &lt;p class=<span class="hljs-string">"mb-12"</span>&gt;Centered <span class="hljs-keyword">element</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">a</span> margin top <span class="hljs-keyword">of</span> <span class="hljs-number">32</span>px. First child <span class="hljs-keyword">paragraph</span> has <span class="hljs-keyword">a</span> margin bottom <span class="hljs-keyword">of</span> <span class="hljs-number">12</span>px.&lt;/p&gt;
   &lt;p&gt;<span class="hljs-comment">-------------&lt;/p&gt;</span>
