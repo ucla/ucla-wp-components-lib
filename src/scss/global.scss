@@ -13,9 +13,12 @@
 @import "./utilities/_mixins/_gradients";
 @import "./utilities/_spacing";
 @import "./utilities/_grid";
+@import "./utilities/_typography";
 
 // Components
-@import "./components/_accordion.scss";
-@import "./components/_button.scss";
-@import "./components/_stat-tout.scss";
-@import "./components/_table.scss";
+@import "./components/_accordion";
+@import "./components/_button";
+@import "./components/_links";
+@import "./components/_lists";
+@import "./components/_stat-tout";
+@import "./components/_table";

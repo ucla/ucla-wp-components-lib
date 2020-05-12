@@ -77,9 +77,103 @@
 
     
     
-    <h3 id="typography">Typography</h3>
+    <p>In this section we cover fonts, headings, rules and type related use.</p>
+<p>Helvetica/Arial is the primary font for online work. Helvetica/Arial is required for all UCLA-branded websites. A special branded version of Helvetica is used only for the <a href="http://brand.ucla.edu/identity/logos-and-marks">department logo system</a>.</p>
 <p>The UCLA official type is Helvetica. More on the brand type <a href="http://brand.ucla.edu/identity/typography">here</a>.</p>
+<h2 id="web-considerations">Web Considerations</h2>
+<ul>
+<li>Remember that the browser, not the designer, controls the display of type. That’s why Helvetica/Arial is a good choice — these neutral type styles don’t require adjustments like extra line spacing.</li>
+<li>Headlines should always convey the content hierarchy: think of your headlines and subheads as a content outline.</li>
+<li>Use short copy and bulleted lists rather than big blocks of text. This is easier for all readers to scan, and it improves accessibility for users who depend on screen readers.</li>
+</ul>
+<!-- Headings -->
+<h1>H1 Title</h1>
 
+<pre><code><span class="hljs-comment">&lt;!--
+Desktop: font-size: 48px; line-height: 54px;
+Mobile: font-size: 36px; line-height: 50.4px; --&gt;</span>
+<span class="hljs-comment">&lt;!-- Headings --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>H1 Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre><h2>H2 Title</h2>
+
+<pre><code><span class="hljs-comment">&lt;!--
+Desktop: font-size: 36px; line-height: 50.4px;
+Mobile: font-size: 28px; line-height: 32px; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>H2 Title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</code></pre><h3>H3 Title</h3>
+
+<pre><code><span class="hljs-comment">&lt;!-- Desktop &amp; Mobile: font-size: 36px; line-height: 50.4px; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>H3 Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</code></pre><h4>H4 Title</h4>
+
+<pre><code><span class="hljs-comment">&lt;!-- Desktop &amp; Mobile: font-size: 20px; line-height: 22.5px; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>H4 Title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+</code></pre><h5>H5 Title</h5>
+
+<pre><code><span class="hljs-comment">&lt;!-- Desktop &amp; Mobile: font-size: 16px; line-height: 20px; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>H5 Title<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+</code></pre><h2 id="links">Links</h2>
+<p>Links preform an operation that links to another page that is different from the current page you are visiting. UCLA has two different inline body links for white and non white backgrounds.</p>
+<pre><code><span class="hljs-comment">&lt;!-- Standard Link --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Standard Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- White links on Blue Backgrounds --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"white"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>White Link on Blue Background<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre><h2 id="lists">Lists</h2>
+<p>UCLA brands dictates that lists are ordered with numbers or bullets in <img src="https://via.placeholder.com/15/2774AE/000000?text=+" alt="#2774AE"> <code>#2774AE</code> which is the “$ucla-blue” <a href="/docs/colors/colors">variable</a>. Examples can be found <a href="/components/detail/lists">here</a>.</p>
+<pre><code><span class="hljs-comment">&lt;!-- Unordered List --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Unordered List Body Paragrapgh--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item. A series of sentences together which make a paragraph. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item. A series of sentences together which make a paragraph. Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Ordered List --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 5<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 6<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 7<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 8<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 9<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 10<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Multi Level Unordered List --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Unordered List Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Multi Level Ordered List --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 2
+    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 2.1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 2.2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 2.3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ordered List Item 4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
     
 
 
@@ -597,21 +691,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-typography">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Typography</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
+            <a class="Tree-entityLink" href="../../components/detail/typography.html" data-pjax>
+                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -619,7 +702,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
+<span class="Status-dot" style="border-color: #00884b;" title="senior"></span>
 
 
 </div>
@@ -628,11 +711,6 @@
 
 
             </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -685,86 +763,6 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-alerts">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Alerts</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-banners">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banners</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button-and-links">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Button And Links</span>
@@ -811,47 +809,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #812990;" title="sophmore"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-cards">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Cards</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
+<span class="Status-dot" style="border-color: #0077C0;" title="junior"></span>
 
 
 </div>
@@ -909,101 +867,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-footer">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Footer</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-foms">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Foms</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-lists">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+            <a class="Tree-entityLink" href="../../components/detail/lists.html" data-pjax>
                 <span>Lists</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1011,7 +878,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
+<span class="Status-dot" style="border-color: #00884b;" title="senior"></span>
 
 
 </div>
@@ -1020,131 +887,6 @@
 
 
             </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-ribbons">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ribbons</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-social">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Social</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -1233,70 +975,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tabs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tabs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/tempalte.html" data-pjax>
-                <span>Tempalte</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #E10786;" title="freshmen"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../components/detail/template.html" data-pjax>
-                <span>Template</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #812990;" title="sophmore"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     

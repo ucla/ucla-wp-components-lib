@@ -1,0 +1,45 @@
+/*
+ * UCLA Lists styles
+ */
+
+ul {
+  list-style: none;
+  line-height: 24px;
+
+  li {
+    margin-bottom: 12px;
+
+    &::before {
+      content: "\25AA";
+      font-weight: bold;
+      color: $ucla-blue;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    li &::before {
+      content: "\25A1";
+    }
+  }
+}
+
+
+ol {
+  list-style: none;
+  counter-reset: li;
+  line-height: 24px;
+
+  li {
+    margin-bottom: 12px;
+    counter-increment: li;
+
+    &::before {
+      content: counter(li) ".";
+      color: $ucla-blue;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}

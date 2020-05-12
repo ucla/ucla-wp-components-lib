@@ -33,6 +33,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  function styles() {
  	return src('src/scss/**/*.scss')
  		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
+    .pipe(concat('ucla-lib.min.css'))
  		.pipe(dest('public/css'));
  }
 
@@ -63,6 +64,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  function stylesProductionPublic() {
    return src('src/scss/**/*.scss')
 	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
 		 .pipe(dest('public/css'));
  }
 
@@ -112,7 +114,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
 function concatJsLibPublic() {
    return src('src/js/**.js')
-     .pipe(concat('scripts.js'))
+     .pipe(concat('ucla-lib-scripts.min.js'))
      .pipe(dest('public/js'));
  }
 
@@ -184,19 +186,25 @@ function concatJsLibPublic() {
    });
  }
 
+ // gulp
+ exports.default = series(
+ 	fractalBuild,
+ 	styles,
+   concatJsLibPublic,
+   concatJsDoc
+ );
 
-
-
+// gulp styleProductionPublic
 exports.stylesProductionPublic = stylesProductionPublic;
 
-exports.watch = watchStyles;
-
+// gulp styles
 exports.styles = series(
   styles,
   docStyles
 );
 
-exports.fractalStart = series(
+// gulp watch
+exports.watch = series(
 	fractalStart,
 	watchStyles,
 	watchJavascript,
@@ -204,26 +212,19 @@ exports.fractalStart = series(
   concatJsDoc
 );
 
+// gulp fractalBuild
 exports.fractalBuild = fractalBuild;
 
-exports.default = series(
-	fractalBuild,
-	styles,
-  concatJsLibPublic,
-  concatJsDoc
-);
-
+// gulp build
 exports.build = series(
 	fractalBuild,
 	styles,
 	docStyles,
   concatJsLibPublic,
-  concatJsDoc,
-  concatImageDoc,
-  concatImagePublic,
-  concatFavicon
+  concatJsDoc
 );
 
+// gulp production
 exports.production = series(
 	fractalBuild,
 	stylesProductionPublic,
