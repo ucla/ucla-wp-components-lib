@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg role="img" aria-label="Down Arrow" class="down-arrow" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Down Arrow White</title>
-    <g id="Icon/Arrow-Down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Path-2" points="0 0 40 0 40 40 0 40"></polygon>
-        <polygon id="Path" fill="#FFFFFF" points="7.41 8.59 12 13.17 16.59 8.59 18 10 12 16 6 10"></polygon>
-    </g>
-</svg>

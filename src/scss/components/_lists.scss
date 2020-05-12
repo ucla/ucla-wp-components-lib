@@ -16,6 +16,7 @@ ul {
       display: inline-block;
       width: 1em;
       margin-left: -1em;
+      margin-right: 1.3em;
     }
 
     li &::before {
@@ -40,6 +41,7 @@ ol {
       display: inline-block;
       width: 1em;
       margin-left: -1em;
+      margin-right: 1.3em;
     }
   }
 }
