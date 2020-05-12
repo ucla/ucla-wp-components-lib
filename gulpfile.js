@@ -29,18 +29,9 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-
- function styles() {
- 	return src('src/scss/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
-    .pipe(concat('ucla-lib.min.css'))
- 		.pipe(dest('public/css'));
- }
-
- function docStyles() {
- 	return src('src/docs/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('build/docs'));
+ // For debugging, make sure gulp is installed
+ function defaultTask(cb) {
+   cb();
  }
 
  function lintSassWatch() {
@@ -71,6 +62,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  function docStylesProduction() {
    return src('src/docs/scss/**/*.scss')
     .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(concat('global.css'))
     .pipe(dest('public/docs/css'));
  }
 
@@ -101,8 +93,8 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
    }
 
  function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(styles, lintSassWatch)),
-	 watch('src/docs/scss/**/*.scss', series(docStyles, docLintSassWatch));
+	 watch('src/scss/**/*.scss', series(stylesProductionPublic, lintSassWatch)),
+	 watch('src/docs/scss/**/*.scss', series(docStylesProduction, docLintSassWatch));
 	 done();
  }
 
@@ -187,21 +179,11 @@ function concatJsLibPublic() {
  }
 
  // gulp
- exports.default = series(
- 	fractalBuild,
- 	styles,
-   concatJsLibPublic,
-   concatJsDoc
- );
+ exports.default = defaultTask
 
 // gulp styleProductionPublic
 exports.stylesProductionPublic = stylesProductionPublic;
 
-// gulp styles
-exports.styles = series(
-  styles,
-  docStyles
-);
 
 // gulp watch
 exports.watch = series(
@@ -218,8 +200,8 @@ exports.fractalBuild = fractalBuild;
 // gulp build
 exports.build = series(
 	fractalBuild,
-	styles,
-	docStyles,
+	stylesProductionPublic,
+  docStylesProduction,
   concatJsLibPublic,
   concatJsDoc
 );
