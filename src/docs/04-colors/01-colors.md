@@ -6,7 +6,7 @@ title: UCLA Web Colors
 
 UCLA official colors communicate identity and are the building blocks of accessibility. Use of the colors are a required brand element. More on the Brand colors can be found [here](http://brand.ucla.edu/identity/colors).
 
-We define the following variables in a [Sass](https://sass-lang.com/) stylesheet. Use Sass to compile it back to CSS.
+We define the following variables in a [Sass](https://sass-lang.com/) stylesheet located at `./src/scss/utilities/_colors.scss`. Use Sass to compile it back to CSS.
 
 ### Layout Colors
 
