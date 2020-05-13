@@ -55,27 +55,27 @@ fractal.components.set('statuses', {
     //Components
     senior: {
         label: "senior",
-        description: "Component is ready for use production websites and applications",
+        description: "Component is ready for use in production websites and applications.",
         color: '#00884b'
     },
     junior: {
         label: "junior",
-        description: "This compoentent has a branch that is currently being reviewed by the UCLA governance team.",
+        description: "Component has a branch that is currently under review by the UCLA governance team.",
         color: "#0077C0"
     },
     sophmore: {
         label: "sophmore",
-        description: "Component status is “Work In Progress”. This component has been reviewed at least once and there is a branch with notes from the governance team.",
+        description: "Component is a “work in progress.” Component has been reviewed at least once, and there is a branch with notes from the governance team.",
         color: "#812990"
     },
     freshman: {
         label: "freshmen",
-        description: "This component has never been submitted for review and no branch exists with notes from the governance team.",
+        description: "Component has never been submitted for review, and no branch with notes exist from the governance team.",
         color: "#E10786"
     },
     deprecated: {
         label: "deprecated",
-        description: "This component is is no longer supported in the library and is not encouraged in production websites and applications.",
+        description: "Component is no longer supported in the library and is not encouraged in production websites and applications.",
         color: "#E71C23"
     },
 });
@@ -84,12 +84,12 @@ fractal.docs.set('statuses', {
   // docs
   professor: {
       label: 'professor',
-      description: 'Documentation is ready for referencing.',
+      description: 'Documentation for corresponding component is ready for referencing.',
       color: '#00884b'
   },
   graduate: {
       label: 'graduate',
-      description: 'The related compoenent has reached senior level status and is currently being document for use.',
+      description: 'Corresponding component has reached Senior status, and component documentation is underway.',
       color: '#0077C0'
   }
 });
