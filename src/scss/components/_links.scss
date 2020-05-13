@@ -1,15 +1,3 @@
-/***************** STOP!!! READ THIS!! *****************/
-// These are mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
-// https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
-
-.Header {
-  background-color: #2774AE;
-}
-
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
 a {
   font: $font;
   color: $default-state;

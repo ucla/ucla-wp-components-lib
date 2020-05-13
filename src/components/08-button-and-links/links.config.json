@@ -1,9 +1,5 @@
 {
-	"title": "links",
-	"status": "sophmore",
-  "context": {
-		"link": {
-			"copy": "link Copy"
-		}
-  }
+	"title": "Links",
+	"status": "junior",
+  "collated": "true"
 }
