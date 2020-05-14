@@ -13,17 +13,17 @@ Clone repository and run `npm install`
 
 Run and watch locally
 ```
-gulp fractalStart
+gulp watch
 ```
 Site will be viewable at http://localhost:3000
 
 
-Generate Assets
+Generate Assets with compiles css and javascript.
 ```
 gulp build
 ```
 
-Generate Assets with Compiled CSS.
+Generate Assets with Compiled CSS, javascript, and images.
 ```
 gulp production
 ```

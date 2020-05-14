@@ -29,17 +29,9 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-
- function styles() {
- 	return src('src/scss/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('public/css'));
- }
-
- function docStyles() {
- 	return src('src/docs/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('build/docs'));
+ // For debugging, make sure gulp is installed
+ function defaultTask(cb) {
+   cb();
  }
 
  function lintSassWatch() {
@@ -63,12 +55,14 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  function stylesProductionPublic() {
    return src('src/scss/**/*.scss')
 	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
 		 .pipe(dest('public/css'));
  }
 
  function docStylesProduction() {
    return src('src/docs/scss/**/*.scss')
     .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(concat('global.css'))
     .pipe(dest('public/docs/css'));
  }
 
@@ -99,8 +93,8 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
    }
 
  function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(styles, lintSassWatch)),
-	 watch('src/docs/scss/**/*.scss', series(docStyles, docLintSassWatch));
+	 watch('src/scss/**/*.scss', series(stylesProductionPublic, lintSassWatch)),
+	 watch('src/docs/scss/**/*.scss', series(docStylesProduction, docLintSassWatch));
 	 done();
  }
 
@@ -112,7 +106,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
 function concatJsLibPublic() {
    return src('src/js/**.js')
-     .pipe(concat('scripts.js'))
+     .pipe(concat('ucla-lib-scripts.min.js'))
      .pipe(dest('public/js'));
  }
 
@@ -184,19 +178,15 @@ function concatJsLibPublic() {
    });
  }
 
+ // gulp
+ exports.default = defaultTask
 
-
-
+// gulp styleProductionPublic
 exports.stylesProductionPublic = stylesProductionPublic;
 
-exports.watch = watchStyles;
 
-exports.styles = series(
-  styles,
-  docStyles
-);
-
-exports.fractalStart = series(
+// gulp watch
+exports.watch = series(
 	fractalStart,
 	watchStyles,
 	watchJavascript,
@@ -204,26 +194,19 @@ exports.fractalStart = series(
   concatJsDoc
 );
 
+// gulp fractalBuild
 exports.fractalBuild = fractalBuild;
 
-exports.default = series(
+// gulp build
+exports.build = series(
 	fractalBuild,
-	styles,
+	stylesProductionPublic,
+  docStylesProduction,
   concatJsLibPublic,
   concatJsDoc
 );
 
-exports.build = series(
-	fractalBuild,
-	styles,
-	docStyles,
-  concatJsLibPublic,
-  concatJsDoc,
-  concatImageDoc,
-  concatImagePublic,
-  concatFavicon
-);
-
+// gulp production
 exports.production = series(
 	fractalBuild,
 	stylesProductionPublic,
