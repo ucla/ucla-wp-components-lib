@@ -58,12 +58,12 @@ fractal.components.set('statuses', {
         description: "Component is ready for use in production websites and applications.",
         color: '#007339'
     },
-    review: {
+    in_review: {
         label: "In Review",
         description: "Component has a branch that is currently under review by the UCLA governance team.",
         color: "#0077C0"
     },
-    progress: {
+    in_progress: {
         label: "In Progress",
         description: "Component is a “work in progress.” Component has been reviewed at least once, and there is a branch with notes from the governance team.",
         color: "#812990"
@@ -74,7 +74,7 @@ fractal.components.set('statuses', {
         color: "#E10786"
     },
     deprecated: {
-        label: "deprecated",
+        label: "Deprecated",
         description: "Component is no longer supported in the library and is not encouraged in production websites and applications.",
         color: "#D60000"
     },
@@ -87,7 +87,7 @@ fractal.docs.set('statuses', {
       description: 'Documentation for corresponding component is ready for referencing.',
       color: '#007339'
   },
-  progress: {
+  in_progress: {
       label: 'In Progress',
       description: 'Documentation for corresponding component is underway.',
       color: '#812990'
