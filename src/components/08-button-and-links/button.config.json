@@ -4,7 +4,7 @@
 	"variants": [
 		{
 			"name": "Icon",
-			"status": "senior",
+			"status": "ready",
 			"context": {
 				"button": {
 					"copy": "Icon Button"
@@ -13,7 +13,7 @@
 		},
 		{
 			"name": "Gold",
-			"status": "sophmore",
+			"status": "in_progress",
 			"context": {
 				"button": {
 					"copy": "Gold Button"
@@ -22,7 +22,7 @@
 		},
 		{
 			"name": "Gold Icon",
-			"status": "sophmore",
+			"status": "in_progress",
 			"context": {
 				"button": {
 					"copy": "Gold Icon Button"
@@ -30,7 +30,7 @@
     	}
 		}
 	],
-	"status": "senior",
+	"status": "ready",
   "context": {
 		"button": {
 			"copy": "Button Copy"
