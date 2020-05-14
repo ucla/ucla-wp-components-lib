@@ -46,8 +46,8 @@ fractal.web.set('builder.dest', __dirname + '/build');
 /* Specify a directory of static assets */
 fractal.web.set('static.path', __dirname + '/public');
 
-fractal.components.set('default.status', 'freshman');
-fractal.docs.set('default.status', 'graduate');
+fractal.components.set('default.status', 'submitted');
+fractal.docs.set('default.status', 'in_progress');
 //fractal.docs.set('statuses.ready.label', 'Good to go!');
 
 // fractal.js
