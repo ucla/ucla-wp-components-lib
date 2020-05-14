@@ -14,10 +14,6 @@ We want to help establish and sustain a unified brand identity across UCLA’s e
 
 By sharing UCLA’s foundation and components, we hope to eliminate the initial barriers of production for UCLA’s digital teams, and to improve the overall efficiency and quality of that process.
 
-**Who Should Use This**
-
-We encourage any person or team that is designing and/or developing a website or application for a UCLA entity to use this library.
-
 ## Component Status Types
 
 {{# componentStatuses }}{{/ componentStatuses }}
@@ -25,6 +21,10 @@ We encourage any person or team that is designing and/or developing a website or
 ## Documentation Status Types
 
 {{# documentStatuses }}{{/ documentStatuses }}
+
+**Who Should Use This**
+
+We encourage any person or team that is designing and/or developing a website or application for a UCLA entity to use this library.
 
 ## Who Can Contribute
 
