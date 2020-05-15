@@ -69,3 +69,5 @@ pipelines:
             - npx semantic-release --debug
             - export currTag=git describe --tags
             - echo currTag
+            - export currTag=$(git describe --tags)
+            - echo currTag
