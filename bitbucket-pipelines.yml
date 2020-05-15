@@ -68,4 +68,4 @@ pipelines:
             - rm -rf ./build && gulp production
             - npx semantic-release --debug
             - export currTag=$(git describe --tags)
-            - echo currTag
+            - echo '"$currTag'"
