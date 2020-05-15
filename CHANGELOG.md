@@ -1,3 +1,10 @@
+## [2.0.1](https://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v2.0.0...v2.0.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* test ([d54f334](https://bitbucket.org/uclaucomm/ucla-bruin-components/commits/d54f334c5ede562f47d4ea7612d2f2247ee2fb39))
+
 # [2.0.0](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0...v2.0.0) (2020-05-15)
 
 
