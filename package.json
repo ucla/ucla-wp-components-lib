@@ -48,7 +48,6 @@
       "feature/CL-6-semantic-versioning-research",
       "next"
     ],
-    "repositoryUrl": "https://auth@bitbucket.org/uclaucomm/ucla-bruin-components.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
