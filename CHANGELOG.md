@@ -1,3 +1,15 @@
+# [2.0.0](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0...v2.0.0) (2020-05-15)
+
+
+### Features
+
+* **testing:** teset ([e654af1](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/e654af17da2bb0399a0700582dc7cc5b1efa2dc2))
+
+
+### BREAKING CHANGES
+
+* **testing:** test to release
+
 # 1.0.0 (2020-05-15)
 
 
