@@ -67,5 +67,6 @@ pipelines:
             # Configure git to use the oauth token. This well happen when setting env variable BB_TOKEN
             - rm -rf ./build && gulp production
             - npx semantic-release --debug
+            - git describe --tags
             - export currTag=$(git describe --tags)
-            - echo '"$currTag'"
+            - echo $currTag
