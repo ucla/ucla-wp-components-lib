@@ -55,14 +55,15 @@ pipelines:
           caches:
             - node
           script:
-            # Get an oauth access token using the client credentials, parsing out the token with jq.
+            # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
             - apt-get update && apt-get install -y curl jq
-            - >
-              export BB_TOKEN=$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" \
-                https://bitbucket.org/site/oauth2/access_token \
-                -d grant_type=client_credentials -d scopes="repository"| jq --raw-output '.access_token')
-            # Configure git to use the oauth token. This well happen when setting env variable BB_TOKEN
             - npm install -g gulp
             - npm install gulp
+            # - export BB_TOKEN=$(echo “x-token-auth:”)$(curl -s -X POST -u “{CLIENT_SECRET}” https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes=”repository” | jq — raw-output ‘.access_token’)
+            # - export BB_TOKEN=$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" \
+            #     https://bitbucket.org/site/oauth2/access_token \
+            #     -d grant_type=client_credentials -d scopes="repository"| jq --raw-output '.access_token')
+            - export BB_TOKEN=$(echo “x-token-auth:”)$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes=”repository” | jq — raw-output ‘.access_token’)
+            # Configure git to use the oauth token. This well happen when setting env variable BB_TOKEN
             - rm -rf ./build && gulp production
             - npx semantic-release --debug
