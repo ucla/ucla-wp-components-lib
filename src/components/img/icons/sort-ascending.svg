@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Sort Asecending</title>
+    <g id="Icon/sort-asecending" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Bottom" fill="#666666" fill-rule="nonzero" points="16 24 24 32 32 24"></polygon>
+        <polygon id="Top" fill="#000000" transform="translate(24.000000, 16.000000) rotate(180.000000) translate(-24.000000, -16.000000) " points="16 12 24 20 32 12"></polygon>
+    </g>
+</svg>

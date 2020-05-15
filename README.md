@@ -13,17 +13,17 @@ Clone repository and run `npm install`
 
 Run and watch locally
 ```
-gulp fractalStart
+gulp watch
 ```
 Site will be viewable at http://localhost:3000
 
 
-Generate Assets
+Generate Assets with compiles css and javascript.
 ```
 gulp build
 ```
 
-Generate Assets with Compiled CSS.
+Generate Assets with Compiled CSS, javascript, and images.
 ```
 gulp production
 ```
@@ -45,3 +45,9 @@ After the ssh has been created run the following command:
 ```
 npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
 ```
+
+## Add to documentation
+
+This library is documented in the docs folder of this repository. The markdown pages follow github markdown rules.
+
+[More on Github Markdown]https://guides.github.com/features/mastering-markdown/

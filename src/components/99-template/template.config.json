@@ -1,0 +1,10 @@
+{
+	"title": "template",
+	"status": "sophmore",
+  "hidden": true,
+  "context": {
+		"template": {
+			"copy": "Template Copy"
+		}
+  }
+}

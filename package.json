@@ -6,10 +6,6 @@
   "main": "fractal.js",
   "author": "UCLA Startegic Communications",
   "homepage": "https://bitbucket.org/uclaucomm/ucla-bruin-components#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://scottiev@bitbucket.org/scottiev/ucla-bruin-components.git"
-  },
   "files": [
     "public/**/*"
   ],
@@ -19,12 +15,14 @@
   },
   "dependencies": {
     "@frctl/fractal": "^1.2.1",
+    "fractal-status-helper": "^1.0.0",
     "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-image": "^6.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-stylelint": "^11.0.0",
     "node-sass": "^4.13.0",
@@ -40,5 +38,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "branches": ["feature/CL-6-semantic-versioning-research", "next"]
   }
 }

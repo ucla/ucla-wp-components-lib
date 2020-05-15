@@ -1,0 +1,79 @@
+/***************** STOP!!! READ THIS!! *****************/
+// These are Fractal documentation specific styles here only. DO NOT put component related styles here. Those belong in ./src/scss
+// https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
+
+.Prose {
+  max-width: 44em;
+
+  pre {
+    background: rgba(83, 83, 99, 0.075);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: scroll;
+
+    code {
+      background: rgba(83, 83, 99, 0);
+
+      &.active {
+        background: #3399ff;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", "Arial", sans-serif;
+  }
+
+  h1 {
+    font-size: 54px !important;
+    line-height: 54px !important;
+  }
+
+  h2 {
+    font-size: 36px !important;
+    line-height: 50.4px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+    line-height: 27px !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+    line-height: 22.5px !important;
+  }
+
+  h5 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+
+  h6 {
+    font-size: 12.8px !important;
+    line-height: 16px !important;
+  }
+}
+
+.create-button {
+  background-color: #006298;
+  border-style: solid;
+  border: 2px solid #006298;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.create-button:hover {
+  color: #ffffff;
+  background-color: #00456a;
+}

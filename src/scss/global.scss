@@ -1,21 +1,24 @@
 // use @imports to bring in style sheets per element.
-// http://www.responsivegridsystem.com/
-// //BASE UCLA STYLES
+// BASE UCLA COMPONENET STYLES
+// These are component related styles only. DO NOT put fractal or mandlebrot theme styles here. Those belong in ./src/docs/scss
 
 
 @import "./utilities/_colors";
 @import "./utilities/_mixins/_helper";
+@import "./utilities/_helper.scss";
 @import "./utilities/_reset";
 @import "./utilities/_normalize";
 @import "./utilities/_variables";
 @import "./utilities/_mixins/_breakpoints";
 @import "./utilities/_mixins/_gradients";
 @import "./utilities/_spacing";
-//@import "./utilities/_grid";
+@import "./utilities/_grid";
+@import "./utilities/_typography";
 
 // Components
-@import "./components/_accordion.scss";
-@import "./components/_button.scss";
-@import "./components/_stat-tout.scss";
-@import "./components/_table.scss";
-@import "./components/_testimonials.scss"
+@import "./components/_accordion";
+@import "./components/_button";
+@import "./components/_links";
+@import "./components/_lists";
+@import "./components/_stat-tout";
+@import "./components/_table";

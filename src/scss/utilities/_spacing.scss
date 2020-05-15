@@ -12,18 +12,18 @@ $spacers: () !default;
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),  //4px
-    2: ($spacer * .5),   //8px
+    4: ($spacer * .25),  //4px
+    8: ($spacer * .5),   //8px
     12: ($spacer * .75),   //12px
-    3: $spacer,          //16px
-    4: ($spacer * 1.5),  //24px
-    45: ($spacer * 2),   //32px
+    16: $spacer,          //16px
+    24: ($spacer * 1.5),  //24px
+    32: ($spacer * 2),   //32px
     36: ($spacer * 2.25),   //36px
-    5: ($spacer * 2.5),  //40px
-    6: ($spacer * 3),    //48px
-    58: ($spacer * 3.625), //58px
-    65: ($spacer * 4),    //65px
-    7: ($spacer * 4.5)   //72px
+    40: ($spacer * 2.5),  //40px
+    48: ($spacer * 3),    //48px
+    56: ($spacer * 3.625), //56px
+    64: ($spacer * 4),    //64px
+    72: ($spacer * 4.5)   //72px
   ),
   $spacers
 );
@@ -109,143 +109,3 @@ $spacers: map-merge(
 
 	}
 }
-
-
-//  SCSS for columns taken from SCSS http://www.responsivegridsystem.com/
-
-/*  SECTIONS  ============================================================================= */
-// .section {
-//   clear: both;
-//   padding: 0px;
-//   margin: 0px;
-// }
-//
-// /*  GROUPING  ============================================================================= */
-// .group::before,
-// .group::after {
-//   content: "";
-//   display: table;
-// }
-//
-// .group::after {
-//   clear: both;
-// }
-//
-// .group {
-//   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-// }
-//
-// /*  GRID COLUMN SETUP   ==================================================================== */
-// .col {
-//   display: block;
-//   float: left;
-//   margin: 1% 0 1% 1.6%;
-// }
-//
-// .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-//
-// /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-// @media only screen and (max-width: 480px) {
-//   .col {
-//     margin: 1% 0 1% 0%;
-//   }
-// }
-//
-// //START decimal
-// // _decimal.scss | MIT License | gist.github.com/terkel/4373420
-//
-// // Round a number to specified digits.
-// //
-// // @param  {Number} $number A number to round
-// // @param  {Number} [$digits:0] Digits to output
-// // @param  {String} [$mode:round] (round|ceil|floor) How to round a number
-// // @return {Number} A rounded number
-// // @example
-// //     decimal-round(0.333)    => 0
-// //     decimal-round(0.333, 1) => 0.3
-// //     decimal-round(0.333, 2) => 0.33
-// //     decimal-round(0.666)    => 1
-// //     decimal-round(0.666, 1) => 0.7
-// //     decimal-round(0.666, 2) => 0.67
-// //
-// @function decimal-round ($number, $digits: 0, $mode: round) {
-//     $n: 1;
-//     // $number must be a number
-//     @if type-of($number) != number {
-//         @warn '#{ $number } is not a number.';
-//         @return $number;
-//     }
-//     // $digits must be a unitless number
-//     @if type-of($digits) != number {
-//         @warn '#{ $digits } is not a number.';
-//         @return $number;
-//     } @else if not unitless($digits) {
-//         @warn '#{ $digits } has a unit.';
-//         @return $number;
-//     }
-//     @for $i from 1 through $digits {
-//         $n: $n * 10;
-//     }
-//     @if $mode == round {
-//         @return round($number * $n) / $n;
-//     } @else if $mode == ceil {
-//         @return ceil($number * $n) / $n;
-//     } @else if $mode == floor {
-//         @return floor($number * $n) / $n;
-//     } @else {
-//         @warn '#{ $mode } is undefined keyword.';
-//         @return $number;
-//     }
-// }
-//
-// // Ceil a number to specified digits.
-// //
-// // @param  {Number} $number A number to round
-// // @param  {Number} [$digits:0] Digits to output
-// // @return {Number} A ceiled number
-// // @example
-// //     decimal-ceil(0.333)    => 1
-// //     decimal-ceil(0.333, 1) => 0.4
-// //     decimal-ceil(0.333, 2) => 0.34
-// //     decimal-ceil(0.666)    => 1
-// //     decimal-ceil(0.666, 1) => 0.7
-// //     decimal-ceil(0.666, 2) => 0.67
-// //
-// @function decimal-ceil ($number, $digits: 0) {
-//     @return decimal-round($number, $digits, ceil);
-// }
-//
-// // Floor a number to specified digits.
-// //
-// // @param  {Number} $number A number to round
-// // @param  {Number} [$digits:0] Digits to output
-// // @return {Number} A floored number
-// // @example
-// //     decimal-floor(0.333)    => 0
-// //     decimal-floor(0.333, 1) => 0.3
-// //     decimal-floor(0.333, 2) => 0.33
-// //     decimal-floor(0.666)    => 0
-// //     decimal-floor(0.666, 1) => 0.6
-// //     decimal-floor(0.666, 2) => 0.66
-// //
-// @function decimal-floor ($number, $digits: 0) {
-//     @return decimal-round($number, $digits, floor);
-// }
-// // END decimal
-//
-// // http://www.responsivegridsystem.com/going-further/
-// // @import 'decimal';  // The decimal is already above.
-//
-// $margin: 1.6%;
-//
-// @for $cols from 2 through 12 {
-// 	$span: $cols;
-// 	@while $span > 0 {
-// 		@if ($span == $cols) {
-// 			.span_#{$span}_of_#{$cols} { width: 100%; }
-// 		} @else {
-// 			.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 2, 'floor'); }
-// 		}
-// 		$span: $span - 1;
-// 	}
-// }
