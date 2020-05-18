@@ -6,9 +6,6 @@
   "main": "fractal.js",
   "author": "UCLA Startegic Communications",
   "homepage": "https://bitbucket.org/uclaucomm/ucla-bruin-components#readme",
-  "repository": {
-    "url": "https://bitbucket.org/uclaucomm/ucla-bruin-components"
-  },
   "files": [
     "public/**/*"
   ],
