@@ -67,12 +67,12 @@ pipelines:
             # - export currTag=$(git describe --tags --abbrev=0)
             # - echo $currTag
             # deploy build + public folders to S3 -- public directory should be deployed to S3 directory corresponding to tag name
-            # - pipe: atlassian/aws-s3-deploy:0.2.1
-            #   variables:
-            #     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-            #     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-            #     AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
-            #     S3_BUCKET: test-fractal/build
-                # LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+            - pipe: atlassian/aws-s3-deploy:0.2.1
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: test-fractal/build
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
             - echo ${BITBUCKET_CLONE_DIR}
             - echo ${BITBUCKET_CLONE_DIR}/build
