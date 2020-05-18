@@ -57,8 +57,7 @@ pipelines:
             # - npx semantic-release --debug
             # # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)
-            - export currTag=$"{currTag//v}"
-            - echo $currTag
+            - echo "${currTag//v}"
             # - echo $currTag
             # deploy build + public folders to S3 -- public directory should be deployed to S3 directory corresponding to tag name
             # - pipe: atlassian/aws-s3-deploy:0.2.1
