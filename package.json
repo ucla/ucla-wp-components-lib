@@ -45,8 +45,7 @@
   },
   "release": {
     "branches": [
-      "feature/CL-6-semantic-versioning-research",
-      "next"
+      {name: 'feature/CL-6-semantic-versioning-research', channel: 'beta', prerelease: 'beta'}
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
