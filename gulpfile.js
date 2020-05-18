@@ -99,8 +99,8 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  }
 
  function watchJavascript(done) {
-	 watch('src/js/*.js', series(lintJavascriptLib));
-   watch('src/docs/js/*.js', series(lintJavascriptDoc));
+	 watch('src/js/*.js', series(concatJsLibPublic, lintJavascriptLib));
+   watch('src/docs/js/*.js', series(concatJsDoc, lintJavascriptDoc));
 	 done();
  }
 

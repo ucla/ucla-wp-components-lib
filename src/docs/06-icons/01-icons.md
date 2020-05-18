@@ -1,10 +1,6 @@
 ---
 title: Icons
 ---
-# **Icons**
-
-## **Introduction**
-
 Icons in our library are provided as an extension. If you are using our UCLA theme, the icons are already conveniently installed on your site. We have also supplied the icons for download via zip file.
 
 ### **Download Icons**
