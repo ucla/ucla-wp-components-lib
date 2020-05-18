@@ -8,7 +8,7 @@
   "homepage": "https://bitbucket.org/uclaucomm/ucla-bruin-components#readme",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:uclaucomm/ucla-bruin-components.git"
+    "url": "https://bitbucket.org/uclaucomm/ucla-bruin-components.git"
   },
   "files": [
     "public/**/*"
