@@ -43,7 +43,7 @@ image: node:latest
 
 pipelines:
   branches:
-    feature/CL-6-semantic-versioning-research:
+    beta:
       - step:
           caches:
             - node
