@@ -1,0 +1,12 @@
+{
+  "branches": [
+    {name: 'feature/CL-6-semantic-versioning-research', release: true},
+    {name: 'beta', prerelease: true}
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/git"
+  ]
+}
