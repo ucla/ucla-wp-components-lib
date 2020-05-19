@@ -1,6 +1,6 @@
 {
   "branches": [
-    'development',
+    {name: 'feature/CL-6-semantic-versioning-research', release: true}
     {name: 'beta', prerelease: true}
   ],
   "plugins": [
