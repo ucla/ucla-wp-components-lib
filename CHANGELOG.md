@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2020-05-19)
+
+
+### Bug Fixes
+
+* beta branch testing ([7efe365](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/7efe365ed2f91a4f41d5ad3117400d64f135baee))
+
 # 1.0.0-beta.1 (2020-05-19)
 
 
