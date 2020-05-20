@@ -1,8 +1,6 @@
 ---
 title: Grid
 ---
-
-## **Introduction**
 Our fully responsive grid for UCLA digital properties has 12 columns and 5 breakpoints. It has been designed to easily adapt to different screen sizes and to ensure consistent layouts across devices.
 
 ## **Anatomy**
