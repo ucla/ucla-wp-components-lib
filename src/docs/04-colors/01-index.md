@@ -1,23 +1,25 @@
 ---
-title: UCLA Web Colors
+title: Colors
 ---
 
-## Web Colors
+## Colors
 
-UCLA official colors communicate identity and are the building blocks of accessibility. Use of the colors are a required brand element. More on the Brand colors can be found [here](http://brand.ucla.edu/identity/colors).
+UCLA official colors communicate identity and are the building blocks of accessibility. Use of the colors are a required brand element. Learn more about UCLA Brand colors on the [UCLA Brand Guidelines page](http://brand.ucla.edu/identity/colors).
 
 We define the following variables in a [Sass](https://sass-lang.com/) stylesheet located at `./src/scss/utilities/_colors.scss`. Use Sass to compile it back to CSS.
 
+> **NOTE**: ADA requirements, a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, and a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
+
 ### Layout Colors
 
-These are colors for the general theme. This includes a website's  background, header, and footer.
+These are colors used for backgrounds and graphic elements.
 
 Variable | Hex | Sample
 ------------ | ------------- | -------------
 `$ucla-blue` | #2774AE | ![#2774AE](https://via.placeholder.com/15/2774AE/000000?text=+)
-`$darker-blue` | #005587 | ![#005587](https://via.placeholder.com/15/005587/000000?text=+)
-`$darkest-blue` | #003B5C | ![#003B5C](https://via.placeholder.com/15/003B5C/000000?text=+)
 `$ucla-gold` | #FFD100 | ![#FFD100](https://via.placeholder.com/15/FFD100/000000?text=+)
+`$darkest-blue` | #003B5C | ![#003B5C](https://via.placeholder.com/15/003B5C/000000?text=+)
+`$darker-blue` | #005587 | ![#005587](https://via.placeholder.com/15/005587/000000?text=+)
 `$white` | #FFFFFF | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+)
 `$grey-5` | #F2F2F2 | ![#F2F2F2](https://via.placeholder.com/15/F2F2F2/000000?text=+)
 `$lightest-grey-2` | #EBEBEB | ![#EBEBEB](https://via.placeholder.com/15/EBEBEB/000000?text=+)
@@ -25,6 +27,8 @@ Variable | Hex | Sample
 `$medium-grey3` | #CCCCCC | ![#CCCCCC](https://via.placeholder.com/15/CCCCCC/000000?text=+)
 
 ### Text Colors
+
+These colors are used for text.
 
 Variable | Hex | Sample
 ------------ | ------------- | -------------
@@ -35,9 +39,9 @@ Variable | Hex | Sample
 `$grey-80` | #333 | ![#333](https://via.placeholder.com/15/333/000000?text=+)
 `$black` | #000000 | ![#000000](https://via.placeholder.com/15/000000/000000?text=+)
 
-### Interactive Colors
+### Interactive Colors - Light Background
 
-Interactive colors are used for links and buttons.
+These colors are used for interactive states of buttons, links and other interactive elements.
 
 Variable | Hex | Sample
 ------------ | ------------- | -------------
@@ -48,7 +52,7 @@ Variable | Hex | Sample
 `$disabled-state` | #757575 | ![#757575](https://via.placeholder.com/15/757575/000000?text=+)
 `$visited-state` | #5223B0 | ![#5223B0](https://via.placeholder.com/15/5223B0/000000?text=+)
 
-The following interactive colors are for link text on a dark background.
+### Interactive Colors - Dark Background
 
 Variable | Hex | Sample
 ------------ | ------------- | -------------
@@ -60,6 +64,7 @@ Variable | Hex | Sample
 `$visited-state-dark` | #CFC3F3 | ![#CFC3F3](https://via.placeholder.com/15/CFC3F3/000000?text=+)
 
 ### Denotive Colors
+These colors have specific meanings like error and success messaging.
 
 Variable | Hex | Sample
 ------------ | ------------- | -------------
@@ -68,3 +73,10 @@ Variable | Hex | Sample
 `$warning-orange` | #F57F17 | ![#F57F17](https://via.placeholder.com/15/F57F17/000000?text=+)
 `$primary-alert-blue` | #8BB8E8 | ![#8BB8E8](https://via.placeholder.com/15/8BB8E8/000000?text=+)
 `$secondary-alert-grey` | #999 | ![#999](https://via.placeholder.com/15/999/000000?text=+)
+
+### TODO:
+- convert variables to design tokens
+  - more about design tokens: https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421
+- convert color tables to swatches
+  - example: https://bits.24ways.org/docs/tokens
+  - source code here: https://github.com/24ways/frontend
