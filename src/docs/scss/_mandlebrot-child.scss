@@ -20,22 +20,22 @@ a {
   }
 
   &:active {
-    color: white;
+    //color: white;
     background: $active-state;
   }
 
   &:focus {
-    border: 1px dotted $hover-state;
-    outline: 0;
+    outline: 1px dotted $hover-state;
+    outline-offset: -4px;
   }
 
-  &:visited {
-    color: $visited-state;
-
-    &:hover {
-      color: white;
-    }
-  }
+  // &:visited {
+  //   color: $visited-state;
+  //
+  //   &:hover {
+  //     color: white;
+  //   }
+  // }
 
   &.white {
     color: white;
@@ -51,15 +51,49 @@ a {
     }
 
     &:focus {
-      border: 1px dotted white;
-      outline: 0;
+      outline: 1px dotted $hover-state;
+      outline-offset: -4px;
     }
 
-    &:visited {
-      color: white;
+    // &:visited {
+    //   color: white;
+    //
+    //   &:hover {
+    //     color: $grey-80;
+    //   }
+    // }
+  }
+}
 
-      &:hover {
-        color: $grey-80;
+.Header-button {
+  background: $default-state;
+}
+
+// Sidebar Nav
+.Frame-panel--sidebar {
+  background-color: white;
+
+  .Navigation {
+    background-color: white;
+
+    .Tree {
+      a {
+        &:hover {
+          color: $grey-80;
+        }
+      }
+
+      &-item {
+        border-bottom: 1px solid $medium-grey3;
+        background-color: white;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        &.is-closed {
+          background-color: white;
+        }
       }
     }
   }

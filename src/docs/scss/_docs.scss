@@ -55,6 +55,12 @@
   }
 }
 
+.Status {
+  &-label {
+    text-transform: none;
+  }
+}
+
 .create-button {
   background-color: #006298;
   border-style: solid;
