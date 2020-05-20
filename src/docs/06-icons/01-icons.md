@@ -35,10 +35,7 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 ## Social Icons
 {{view '@icons--b-image-social'}}
 
-## How to Use
-
-Strategic Communications encourages the use of the supplied ADA complaint SVG files. All icons are available in SVG format and can be used as raw SVG code or linking to through an image.
-
+## Code
 
 ### **Use as an Image**
 
