@@ -31,6 +31,8 @@ $cmyk-purple: #6658A6;
 $cmyk-black: #23191C;
 
 // GREYS
+$grey-5: #F2F2F2;
+$grey-8: #EBEBEB;
 $grey-10: #E5E5E5;
 $grey-40: #999;
 $grey-60: #666;
@@ -38,7 +40,7 @@ $grey-80: #333;
 
 // TEXT COLORS FROM BRAND GUIDELINES
 $grey: $grey-80;
-$lightest-grey-2: #EBEBEB;
+$lightest-grey-2: $grey-8;
 $light-grey: #E7E7E8;
 $dark-grey: #262626;
 $lightest-grey: #757575;
@@ -46,15 +48,15 @@ $lighter-grey: #454545;
 $medium-grey: #424242;
 $medium-grey2: #525252;
 $medium-grey3: #CCCCCC;
-$medium-grey4: #666666;
-$medium-gray5: #333333;
+$medium-grey4: $grey-60;
+$medium-grey5: $grey-80;
 
 // LINK STATE COLORS
 $default-state: #00598C;
 $hover-state: #0079BF;
-$active-state: #003B5C;
-$focus-state: #0079BF;
-$disabled-state: #757575;
+$active-state: $darkest-blue;
+$focus-state: $hover-state;
+$disabled-state: $lightest-grey;
 $visited-state: #5223B0;
 
 $default-state-dark: $ucla-gold;
@@ -77,14 +79,14 @@ $secondary-alert-grey: $grey-40;
 $secondary-alert-grey-10: $grey-10;
 
 // BUTTON COLORS
-$button-hover: #FFE500;
-$button-active: #FFBF0F;
+$button-hover: $hover-state-dark;
+$button-active: $active-state-dark;
 
 // OPAQUE COLORS
 $default-blue-opaque: rgba(0, 89, 140, 0.85);
 $default-blue-opaque-hover: rgba(0, 121, 191, 0.85);
 
 //Emergency Colors
-$emergency-bg: #F7CCCC;
-$emergency-bg-light: #E5E5E5;
-$emergency-border: #D60000;
+$emergency-bg: $error-red-20;
+$emergency-bg-light: $grey-10;
+$emergency-border: $error-red;
