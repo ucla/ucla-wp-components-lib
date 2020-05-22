@@ -10,7 +10,7 @@ Put the styles in between the <head> </head> tags of every page on your website.
 ```
 <head>
   // Copy Below
-  <link rel="stylesheet" href="https://d3nstw201xsr54.cloudfront.net/0.0.1/css/global.css">
+  <link rel="stylesheet" href="https://d3nstw201xsr54.cloudfront.net/0.0.1/css/ucla-lib.min.css">
   // End Copy
 </head>
 ```
@@ -21,7 +21,7 @@ Install the javascript in the footer of every page on your website.
 ```
 <footer>
   // Copy Below
-  <script type="text/javascript" src="https://d3nstw201xsr54.cloudfront.net/0.0.1/js/scripts.js"></script>
+  <script type="text/javascript" src="https://d3nstw201xsr54.cloudfront.net/0.0.1/js/ucla-lib-scripts.min.js"></script>
   // End Copy
 </footer>
 ```
