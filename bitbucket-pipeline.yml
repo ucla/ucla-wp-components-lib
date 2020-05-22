@@ -1,5 +1,7 @@
 ## Author: Kevin Ma
 
+## THIS IS STILL PENDING CHANGES
+
 ## Pipeline:
 #1) Runs semantic library to get semantic version
 #2) Deploys updated build folder in S3 (/build - PUBLIC)
