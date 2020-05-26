@@ -30,6 +30,8 @@ gulp production
 
 ## Branch / Bucket Information (BETA)
 
+The "beta" branch is deployed at https://beta-ucla-fractal.s3-us-west-1.amazonaws.com/build/index.html, while "beta-development" branch is deployed at https://beta-development-ucla-fractal.s3-us-west-1.amazonaws.com/build/index.html
+
 DURING BETA:
 
 1. "beta" - This will act as the "production" branch. Updates from the "beta-development" branch should be merged into this branch. This will trigger the deployment pipeline to deploy to the "beta" S3 bucket.
