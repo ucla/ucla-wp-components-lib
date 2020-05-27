@@ -105,7 +105,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
-                S3_BUCKET: beta-ucla-fractal/public/${currTag}/docs
+                S3_BUCKET: beta-development-ucla-fractal/public/${currTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
