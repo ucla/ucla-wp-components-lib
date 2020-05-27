@@ -72,7 +72,7 @@ pipelines:
             # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
             - apt-get update && apt-get install -y curl jq
             - npm install -g gulp
-            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token'
+            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npx semantic-release
             # # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)
