@@ -49,9 +49,9 @@ A quick overview of the current flow for BETA is as follows:
 1. Developer creates a branch from "beta-updates"
 1. Developer makes changes and commits following the "Contributing Flow"
 1. PR is reviewed and merged
-1. Upon merging from "beta-updates" to "beta-development". This will trigger the deployment pipeline to the ["beta-development" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-development-ucla-fractal/public/?region=us-west-1&tab=overview) (Development environment)
+1. Upon merging from "beta-updates" to "beta-development". This will trigger the deployment pipeline to the ["beta-development" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-development-ucla-fractal/public/?region=us-west-1&tab=overview) (Beta Development Environment)
 1. During the pipeline build, semantic release is called and upgrades version number accordingly
-1. When development updates are ready to be deployed, the "beta-development" branch should be merged into "beta" branch. This will trigger the deployment pipeline to the ["beta" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-ucla-fractal/public/?region=us-west-1&tab=overview) (Production environment)
+1. When development updates are ready to be deployed, the "beta-development" branch should be merged into "beta" branch. This will trigger the deployment pipeline to the ["beta" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-ucla-fractal/public/?region=us-west-1&tab=overview) (Beta Production Environment)
 
 ## Contributing Flow (BETA)
 
