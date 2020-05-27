@@ -1,0 +1,33 @@
+.grey-40 {
+  background: $grey-40;
+}
+
+.lightest-grey-2 {
+  background: $lightest-grey-2;
+}
+
+.light-grey {
+  background: $light-grey;
+
+  &.tall-75,
+  &.tall-65 {
+    position: relative;
+
+    .white-25,
+    .white-35 {
+      display: block;
+      position: absolute;
+      width: 100%;
+      background: $white;
+      top: 0;
+    }
+
+    .white-25 {
+      height: 25%;
+    }
+
+    .white-35 {
+      height: 35%;
+    }
+  }
+}
