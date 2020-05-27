@@ -14,7 +14,7 @@ a {
 
   &:focus {
     //border: 1px dotted $hover-state;
-    outline: 0;
+    //outline: 0;
     //margin: -1px;
   }
 
@@ -40,15 +40,15 @@ a {
     }
 
     &:focus {
-      border: 1px dotted white;
-      outline: 0;
+      //border: 1px dotted white;
+      //outline: 0;
     }
 
     &:visited {
-      color: white;
+      //color: white;
 
       &:hover {
-        color: $grey-80;
+        //color: $grey-80;
       }
     }
   }
