@@ -2,7 +2,6 @@
 // BASE UCLA COMPONENET STYLES
 // These are component related styles only. DO NOT put fractal or mandlebrot theme styles here. Those belong in ./src/docs/scss
 
-
 @import "./utilities/_colors";
 @import "./utilities/_mixins/_helper";
 @import "./utilities/_helper.scss";
@@ -14,6 +13,7 @@
 @import "./utilities/_spacing";
 @import "./utilities/_grid";
 @import "./utilities/_typography";
+@import "./utilities/_backgrounds";
 
 // Components
 @import "./components/_accordion";

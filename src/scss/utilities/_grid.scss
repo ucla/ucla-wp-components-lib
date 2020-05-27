@@ -93,6 +93,18 @@ input, select {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
+.ucla.campus {
+  display: block;
+  position: relative;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding: 0 12px;
+  }
+}
+
 /*  GRID COLUMN SETUP   ==================================================================== */
 .col {
   display: block;
@@ -106,6 +118,28 @@ input, select {
 @media only screen and (max-width: 768px) {
   .col {
     margin: 1% 0 1% 0%;
+  }
+}
+
+
+.ucla.campus {
+  display: block;
+  position: relative;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding: 0 12px;
+  }
+
+  // First child fix if you put a title above span. See example on templates/health-saftey.php
+  .first-child.col {
+    margin-left: 0;
+  }
+
+  .last-child.col {
+    margin-left: 0;
   }
 }
 
