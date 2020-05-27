@@ -55,7 +55,7 @@ A quick overview of the current flow for BETA is as follows:
 
 ## Contributing Flow (BETA)
 
-When making updates during the beta phase, please create a branch from the "beta-updates" branch.
+When making updates during the beta phase, please create a branch from the "beta" branch.
 
 To commit:
 
