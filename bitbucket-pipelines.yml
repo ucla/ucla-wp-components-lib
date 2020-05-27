@@ -61,7 +61,7 @@ pipelines:
                 S3_BUCKET: beta-ucla-fractal/public/${currTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public/docs
                 ACL: 'private'
-                EXTRA_ARGS: "--delete --acl=private --recursive"
+                EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
     beta-development:
       - step:
@@ -109,5 +109,5 @@ pipelines:
                 S3_BUCKET: beta-development-ucla-fractal/public/${currTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public/docs
                 ACL: 'private'
-                EXTRA_ARGS: "--delete --acl=private --recursive"
+                EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
