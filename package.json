@@ -19,6 +19,11 @@
     "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "cz-conventional-changelog": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-image": "^6.1.0",
@@ -29,6 +34,7 @@
   },
   "scripts": {
     "start": "fractal start --sync",
-    "build": "fractal build"
+    "build": "fractal build",
+    "commit": "changed=0 \ngit remote update && git status -uno | grep -q 'Your branch is behind' && changed=1\nif [ $changed = 1 ]; then\n    echo \"***WARNING***\n pull latest\";\nelse\n git-cz\nfi"
   }
 }

@@ -27,7 +27,7 @@ pipelines:
             # Uncomment the below and push if an error is thrown during pipeline build that one of the modules is missing
             # - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
             - npm install -g gulp
-            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq - raw-output '.access_token')
+            - export BB_TOKEN=$(echo “x-token-auth:”)$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes=”repository” | jq — raw-output ‘.access_token’)
             - npx semantic-release
             # # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)
@@ -76,7 +76,7 @@ pipelines:
             # Uncomment the below and push if an error is thrown during pipeline build that one of the modules is missing
             # - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
             - npm install -g gulp
-            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq - raw-output '.access_token')
+            - export BB_TOKEN=$(echo “x-token-auth:”)$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes=”repository” | jq — raw-output ‘.access_token’)
             - npx semantic-release
             # # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)

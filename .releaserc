@@ -1,0 +1,13 @@
+{
+  "branches": [
+    {name: 'development', release: true},
+    {name: 'beta', prerelease: true},
+    {name: 'beta-development', prerelease: true}
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/git"
+  ]
+}
