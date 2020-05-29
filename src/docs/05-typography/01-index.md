@@ -1,11 +1,11 @@
 ---
 title: Typography
 ---
-In this section we cover fonts, headings, rules and type related use.
-
-Helvetica/Arial is the primary font for online work. Helvetica/Arial is required for all UCLA-branded websites. A special branded version of Helvetica is used only for the [department logo system](http://brand.ucla.edu/identity/logos-and-marks).
+In this section we cover fonts, headings, rules, and type related use.
 
 The UCLA official type is Helvetica. More on the brand type [here](http://brand.ucla.edu/identity/typography).
+
+Helvetica and Arial are the primary font for online work. Helvetica and Arial are required for all UCLA-branded websites. A special branded version of Helvetica is used only for the [department logo system](http://brand.ucla.edu/identity/logos-and-marks).
 
 ## Web Considerations
 * Remember that the browser, not the designer, controls the display of type. That’s why Helvetica/Arial is a good choice — these neutral type styles don’t require adjustments like extra line spacing.
