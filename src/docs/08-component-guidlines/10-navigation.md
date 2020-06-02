@@ -12,17 +12,17 @@
 * Help people find what they need rather than promoting things they don't.
 * If you need to highlight things like a widely publicized report or conference, do so within the body of your website. Navigation links are intended for evergreen content.
 
-### **Accessibility Requirements**
-
-* Use the `<nav>` element and ARIA labels, e.g. "Main", "Footer", "Social", etc., to identify each distinct navigation menu of your site.
-* Insert a hidden skip nav with quick links to different parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
-
 **Further Reading**
 
 [Navigation: You Are Here](https://www.nngroup.com/articles/navigation-you-are-here/) (Nielsen Norman Group)<br>
 [Information Scent: How User Decide Where to Go Next](https://www.nngroup.com/articles/information-scent/) (Nielsen Norman Group)<br>
 [The 3-Click Rule for Navigation Is False](https://www.nngroup.com/articles/3-click-rule/) (Nielsen Norman Group)<br>
 [Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/TR/WCAG20-TECHS/G1.html) (W3)
+
+### **Accessibility Requirements**
+
+* Use the `<nav>` element and ARIA labels, e.g. "Main", "Footer", "Social", etc., to identify each distinct navigation menu of your site.
+* Insert a hidden skip nav with quick links to different parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
 
 ### **Do’s and Don’ts**
 
