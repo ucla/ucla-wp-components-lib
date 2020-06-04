@@ -146,6 +146,12 @@ function concatJsLibPublic() {
      .pipe(image())
      .pipe(dest('public/img'));
  }
+
+ function concatImageBuild() {
+    return src('src/components/img/**/*')
+     .pipe(image())
+     .pipe(dest('build/img'));
+ }
  /**
   * Fractal tasks
   */
@@ -216,7 +222,8 @@ exports.build = series(
 	stylesProductionPublic,
   docStylesLocal,
   concatJsLibPublic,
-  concatJsDoc
+  concatJsDoc,
+  concatImagePublic
 );
 
 // gulp production
@@ -227,6 +234,6 @@ exports.production = series(
   concatJsLibPublic,
   concatJsDocProd,
   concatImageDoc,
-  concatImagePublic,
+  concatImageBuild,
   concatFavicon
 );
