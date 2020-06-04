@@ -1,3 +1,10 @@
+# [1.0.0-beta-dev.2](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta-dev.1...v1.0.0-beta-dev.2) (2020-06-04)
+
+
+### Features
+
+* **typography components:** included Typography documentation and updated included style filepaths ([7c700c8](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/7c700c87886d9bfbd2db2c3d95c3920aa24e0d79))
+
 # 1.0.0-beta-dev.1 (2020-05-27)
 
 
