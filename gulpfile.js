@@ -70,7 +70,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
    return src('src/docs/scss/**/*.scss')
     .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
     .pipe(concat('global.css'))
-    .pipe(dest('public/docs/css'));
+    .pipe(dest('build/assets/docs/css'));
  }
 
  function lintJavascriptLib() {
@@ -120,20 +120,21 @@ function concatJsLibPublic() {
  function concatJsDoc() {
     return src('src/docs/js/**.js')
       .pipe(concat('scripts.js'))
-      .pipe(dest('public/docs/js'));
+      .pipe(dest('build/assets/docs/js'));
   }
 
   function concatJsDocProd() {
      return src('src/docs/js/**.js')
        .pipe(concat('scripts.js'))
-       .pipe(dest('build/docs/js'));
+       .pipe(dest('build/assets/docs/js'));
    }
 
  function concatImageDoc() {
     return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('build/img'));
+     .pipe(dest('build/assets/docs/img'));
  }
+
 
  function concatFavicon() {
     return src('src/favicon.ico')
@@ -141,16 +142,10 @@ function concatJsLibPublic() {
      .pipe(dest('public'));
  }
 
- function concatImagePublic() {
+ function concatImage() {
     return src('src/components/img/**/*')
      .pipe(image())
-     .pipe(dest('public/img'));
- }
-
- function concatImageBuild() {
-    return src('src/components/img/**/*')
-     .pipe(image())
-     .pipe(dest('build/img'));
+     .pipe(dest('build/assets/img'));
  }
  /**
   * Fractal tasks
@@ -222,8 +217,9 @@ exports.build = series(
 	stylesProductionPublic,
   docStylesLocal,
   concatJsLibPublic,
-  concatJsDoc,
-  concatImagePublic
+  concatImageDoc,
+  concatImage,
+  concatJsDoc
 );
 
 // gulp production
@@ -234,6 +230,6 @@ exports.production = series(
   concatJsLibPublic,
   concatJsDocProd,
   concatImageDoc,
-  concatImageBuild,
+  concatImage,
   concatFavicon
 );

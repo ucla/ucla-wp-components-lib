@@ -44,7 +44,7 @@ fractal.docs.set('path', __dirname + '/src/docs');
 fractal.web.set('builder.dest', __dirname + '/build');
 
 /* Specify a directory of static assets */
-fractal.web.set('static.path', __dirname + '/public');
+fractal.web.set('static.path', __dirname + '/build/assets');
 
 fractal.components.set('default.status', 'submitted');
 fractal.docs.set('default.status', 'in_progress');
