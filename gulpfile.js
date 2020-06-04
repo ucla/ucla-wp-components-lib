@@ -63,6 +63,13 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
    return src('src/docs/scss/**/*.scss')
     .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
     .pipe(concat('global.css'))
+    .pipe(dest('build/docs/css'));
+ }
+
+ function docStylesLocal() {
+   return src('src/docs/scss/**/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(concat('global.css'))
     .pipe(dest('public/docs/css'));
  }
 
@@ -115,6 +122,12 @@ function concatJsLibPublic() {
       .pipe(concat('scripts.js'))
       .pipe(dest('public/docs/js'));
   }
+
+  function concatJsDocProd() {
+     return src('src/docs/js/**.js')
+       .pipe(concat('scripts.js'))
+       .pipe(dest('build/docs/js'));
+   }
 
  function concatImageDoc() {
     return src('src/docs/img/**/*')
@@ -201,7 +214,7 @@ exports.fractalBuild = fractalBuild;
 exports.build = series(
 	fractalBuild,
 	stylesProductionPublic,
-  docStylesProduction,
+  docStylesLocal,
   concatJsLibPublic,
   concatJsDoc
 );
@@ -212,7 +225,7 @@ exports.production = series(
 	stylesProductionPublic,
   docStylesProduction,
   concatJsLibPublic,
-  concatJsDoc,
+  concatJsDocProd,
   concatImageDoc,
   concatImagePublic,
   concatFavicon
