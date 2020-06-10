@@ -6,11 +6,27 @@ title: Spacing
 
 ## **Introduction**
 
-We use an 8-point grid to define our spacing, meaning we use multiples of 8, from 4 to 64. We define dimensions, padding, and margins of both block and inline elements. Individual elements are positioned relative to each other. Smaller components, such as iconography and typography, can align to a 4-point grid.
+We use an 8-point grid to define our spacing, meaning we use multiples of 8, from 4 to 80. We define dimensions, padding, and margins of both block and inline elements. Individual elements are positioned relative to each other. Smaller components, such as iconography and typography, can align to a 4-point grid.
 
 ## **Specs**
 
-<!-- Pending Grid Spec Image to Be Placed Here -->
+### Inline Spacing Specs Illustration
+![Inline Spacing Specs](/docs/img/Spacing/inline-spacing-specs.jpg)
+
+### Spacing Inset Illustration
+![Spacing Inset Specs](/docs/img/Spacing/spacing-inset-specs.jpg)
+
+### Spacing Inset Squish Illustration
+![Spacing Inset Squish Specs](/docs/img/Spacing/spacing-inset-squish-specs.jpg)
+
+### Spacing Inset Stretch Illustration
+![Spacing Inset Squish Specs](/docs/img/Spacing/spacing-inset-stretch-specs.jpg)
+
+### Spacing Stack Illustration
+![Spacing Stack Specs](/docs/img/Spacing/spacing-stack-specs.jpg)
+
+### Stack Spacing Illustration
+![Stack Spacing Specs](/docs/img/Spacing/stack-spacing-specs.jpg)
 
 ## **Code**
 <!--Removed text under “Spacing” (and “Spacing” heading itself) and placed under “Spacing Class Structure below-->
