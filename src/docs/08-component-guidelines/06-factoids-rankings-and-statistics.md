@@ -1,5 +1,5 @@
 ---
-title: Stat Tout Documentation
+title: Factoids, Rankings, and Statistics
 ---
 Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.
 
