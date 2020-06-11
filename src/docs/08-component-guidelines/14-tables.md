@@ -45,8 +45,8 @@ Tables can include sorting behavior. Be sure to include <a href="/build/docs/ins
 ```
 
 ## Design Specs. and Anatomy
-![Table Anatomy](/docs/img/Table/table-anatomy.jpg)
-![Table Anatomy](/docs/img/Table/table-specs.jpg)
+![Table Anatomy](/build/docs/img/Table/table-anatomy.jpg)
+![Table Anatomy](/build/docs/img/Table/table-specs.jpg)
 
 
 ## Further Reading

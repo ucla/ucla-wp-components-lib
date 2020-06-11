@@ -28,7 +28,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 ## **Anatomy**
 
-![Tabs Anatomy Image](/docs/img/Tabs/tab-anatomy.jpg)
+![Tabs Anatomy Image](/build/docs/img/Tabs/tab-anatomy.jpg)
 
 1. Container (required)
 2. Active tab label (required)
@@ -39,11 +39,11 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 ## **States**
 
-![Tabs States Image](/docs/img/Tabs/tab-states.jpg)  
+![Tabs States Image](/build/docs/img/Tabs/tab-states.jpg)  
 
 ## **Specs**
 
-![Tabs Specs Image](/docs/img/Tabs/tab-specs.jpg)  
+![Tabs Specs Image](/build/docs/img/Tabs/tab-specs.jpg)  
 
 ## **Code**
 

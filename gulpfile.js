@@ -173,7 +173,7 @@ function generateDocStylesLocal() {
  function generateDocImages() {
     return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('build/assets/docs/img'));
+     .pipe(dest('build/assets/build/docs/img'));
  }
 
 // component images (i.e icons)

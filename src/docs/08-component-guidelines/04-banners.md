@@ -33,7 +33,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Anatomy**
 
-![Hero Banner Desktop Anatomy Image](/docs/img/Banners/Hero_Banner/herobanner-desktop-anatomy.jpg)
+![Hero Banner Desktop Anatomy Image](/build/docs/img/Banners/Hero_Banner/herobanner-desktop-anatomy.jpg)
 
 1. Image (required)
 1. Branded Ribbon (optional)
@@ -46,11 +46,11 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Specs**
 
-![Hero Banner Desktop Specs Image](/docs/img/Banners/Hero_Banner/herobanner-desktop-specs.jpg)
+![Hero Banner Desktop Specs Image](/build/docs/img/Banners/Hero_Banner/herobanner-desktop-specs.jpg)
 
 ### **Mobile Anatomy**
 
-![Hero Banner Mobile Anatomy Image](/docs/img/Banners/Hero_Banner/herobanner-mobile-anatomy.jpg)
+![Hero Banner Mobile Anatomy Image](/build/docs/img/Banners/Hero_Banner/herobanner-mobile-anatomy.jpg)
 
 1. Image (required)
 1. Branded Ribbon (optional)
@@ -63,7 +63,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Mobile Specs**
 
-![Hero Banner Mobile Specs Image](/docs/img/Banners/Hero_Banner/herobanner-mobile-specs.jpg)  
+![Hero Banner Mobile Specs Image](/build/docs/img/Banners/Hero_Banner/herobanner-mobile-specs.jpg)  
 
 ### **Code**
 
@@ -73,7 +73,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Anatomy**
 
-![Promo Banner Desktop Anatomy Image](/docs/img/Banners/Promo_Banner/promobanner-desktop-anatomy.jpg)
+![Promo Banner Desktop Anatomy Image](/build/docs/img/Banners/Promo_Banner/promobanner-desktop-anatomy.jpg)
 
 1. Image (required)
 1. Headline (required)
@@ -84,11 +84,11 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Specs**
 
-![Promo Banner Desktop Specs Image](/docs/img/Banners/Promo_Banner/promobanner-desktop-specs.jpg)  
+![Promo Banner Desktop Specs Image](/build/docs/img/Banners/Promo_Banner/promobanner-desktop-specs.jpg)  
 
 ### **Mobile Anatomy**
 
-![Promo Banner Mobile Anatomy Image](/docs/img/Banners/Promo_Banner/promobanner-mobile-anatomy.jpg)
+![Promo Banner Mobile Anatomy Image](/build/docs/img/Banners/Promo_Banner/promobanner-mobile-anatomy.jpg)
 
 1. Image (required)
 1. Headline (required)
@@ -100,7 +100,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Mobile Specs**
 
-![Promo Banner Mobile Specs Image](/docs/img/Banners/Promo_Banner/promobanner-mobile-specs.jpg)   
+![Promo Banner Mobile Specs Image](/build/docs/img/Banners/Promo_Banner/promobanner-mobile-specs.jpg)   
 
 ### **Code**
 
