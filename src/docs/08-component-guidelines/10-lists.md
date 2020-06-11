@@ -15,7 +15,7 @@
 
 ### **Anatomy**
 
-![Unordered List Anatomy Image](/docs/img/Lists/Unordered_List/unorderedlist-anatomy.jpg)
+![Unordered List Anatomy Image](/build/docs/img/Lists/Unordered_List/unorderedlist-anatomy.jpg)
 
 1. Tier 1 List Item (required)
 2. Bullet Icon (required)
@@ -26,7 +26,7 @@
 
 ### **Specs**
 
-![Unordered List Specs Image](/docs/img/Lists/Unordered_List/unorderedlist-specs.jpg)  
+![Unordered List Specs Image](/build/docs/img/Lists/Unordered_List/unorderedlist-specs.jpg)  
 
 ### **Code**
 
@@ -36,7 +36,7 @@
 
 ### **Anatomy**
 
-![Ordered List Anatomy Image](/docs/img/Lists/Ordered_List/orderedlist-anatomy.jpg)
+![Ordered List Anatomy Image](/build/docs/img/Lists/Ordered_List/orderedlist-anatomy.jpg)
 
 1. Tier 1 List Item (required)
 2. Order Number (required)
@@ -46,7 +46,7 @@
 
 ### **Specs**
 
-![Ordered List Specs Image](/docs/img/Lists/Ordered_List/orderedlist-specs.jpg)
+![Ordered List Specs Image](/build/docs/img/Lists/Ordered_List/orderedlist-specs.jpg)
 
 ### **Code**
 
@@ -56,7 +56,7 @@
 
 ### **Anatomy**
 
-![Definitions List Anatomy Image](/docs/img/Lists/Definitions_List/definitionslist-anatomy.jpg)
+![Definitions List Anatomy Image](/build/docs/img/Lists/Definitions_List/definitionslist-anatomy.jpg)
 
 1. List Item (required)
 2. Definition Text (required)
@@ -65,7 +65,7 @@
 
 ### **Specs**
 
-![Definitions List Specs Image](/docs/img/Lists/Definitions_List/definitionslist-specs.jpg)  
+![Definitions List Specs Image](/build/docs/img/Lists/Definitions_List/definitionslist-specs.jpg)  
 
 ### **Code**
 

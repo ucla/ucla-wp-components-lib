@@ -26,7 +26,7 @@ title: Forms
 
 ### **Anatomy**
 
-![Text Inputs Anatomy Image](/docs/img/Form/Text_Fields/textfields-anatomy.jpg)
+![Text Inputs Anatomy Image](/build/docs/img/Form/Text_Fields/textfields-anatomy.jpg)
 1. Label (required)
 2. Input Placeholder Text (optional)
 3. Container (required)
@@ -39,11 +39,11 @@ title: Forms
 
 ### **States**
 
-![Text Inputs States Image](/docs/img/Form/Text_Fields/textfields-states.jpg)
+![Text Inputs States Image](/build/docs/img/Form/Text_Fields/textfields-states.jpg)
 
 ### **Specs**
 
-![Text Inputs Specs Image](/docs/img/Form/Text_Fields/textfields-specs.jpg)  
+![Text Inputs Specs Image](/build/docs/img/Form/Text_Fields/textfields-specs.jpg)  
 
 ### **Code**
 
@@ -53,7 +53,7 @@ title: Forms
 
 ### **Anatomy**
 
-![Select Menus Anatomy Image](/docs/img/Form/Select_Menu/selectmenu-anatomy.jpg)
+![Select Menus Anatomy Image](/build/docs/img/Form/Select_Menu/selectmenu-anatomy.jpg)
 
 1. Label (required)
 2. Input Placeholder Text (optional)
@@ -66,11 +66,11 @@ title: Forms
 
 ### **States**
 
-![Select Menus States Image](/docs/img/Form/Select_Menu/selectmenu-states.jpg)  
+![Select Menus States Image](/build/docs/img/Form/Select_Menu/selectmenu-states.jpg)  
 
 ### **Specs**
 
-![Select Menus Specs Image](/docs/img/Form/Select_Menu/selectmenu-states.jpg)
+![Select Menus Specs Image](/build/docs/img/Form/Select_Menu/selectmenu-states.jpg)
 
 ### **Code**
 
@@ -80,18 +80,18 @@ title: Forms
 
 ### **Anatomy**
 
-![Checkboxes Anatomy Image](/docs/img/Form/Checkboxes/checkboxes-anatomy.jpg)
+![Checkboxes Anatomy Image](/build/docs/img/Form/Checkboxes/checkboxes-anatomy.jpg)
 
 1. Checkbox (required)
 2. Label (required)
 
 ### **States**
 
-![Checkboxes States Image](/docs/img/Form/Checkboxes/checkboxes-states.jpg)  
+![Checkboxes States Image](/build/docs/img/Form/Checkboxes/checkboxes-states.jpg)  
 
 ### **Specs**
 
-![Checkboxes Specs Image](/docs/img/Form/Checkboxes/checkboxes-specs.jpg)
+![Checkboxes Specs Image](/build/docs/img/Form/Checkboxes/checkboxes-specs.jpg)
 
 ### **Code**
 
@@ -101,7 +101,7 @@ title: Forms
 
 ### **Anatomy**
 
-![Radio Buttons Anatomy Image](/docs/img/Form/Radio_Buttons/radiobtn-anatomy.jpg)
+![Radio Buttons Anatomy Image](/build/docs/img/Form/Radio_Buttons/radiobtn-anatomy.jpg)
 
 1. Radio button (required)
 2. Label (required)
@@ -109,11 +109,11 @@ title: Forms
 
 ### **States**
 
-![Radio Buttons States Image](/docs/img/Form/Radio_Buttons/radiobtn-states.jpg)  
+![Radio Buttons States Image](/build/docs/img/Form/Radio_Buttons/radiobtn-states.jpg)  
 
 ### **Specs**
 
-![Radio Buttons Specs Image](/docs/img/Form/Radio_Buttons/radiobtn-specs.jpg)  
+![Radio Buttons Specs Image](/build/docs/img/Form/Radio_Buttons/radiobtn-specs.jpg)  
 
 ### **Code**
 
@@ -123,13 +123,13 @@ title: Forms
 
 ### **Anatomy**
 
-![Security Captcha Anatomy Image](/docs/img/Form/Captacha/captcha-anatomy.jpg)
+![Security Captcha Anatomy Image](/build/docs/img/Form/Captacha/captcha-anatomy.jpg)
 
 1. Google reCaptcha
 
 ### **Specs**
 
-![Security Captcha Specs Image](/docs/img/Form/Captacha/captcha-specs.jpg)  
+![Security Captcha Specs Image](/build/docs/img/Form/Captacha/captcha-specs.jpg)  
 
 ### **Code**
 
@@ -139,7 +139,7 @@ title: Forms
 
 ### **Anatomy**
 
-![Fieldsets and Legends Anatomy Image](/docs/img/Form/Fieldset-Legends/fieldsetlegend-anatomy.jpg)
+![Fieldsets and Legends Anatomy Image](/build/docs/img/Form/Fieldset-Legends/fieldsetlegend-anatomy.jpg)
 
 1. Legend
 2. Fieldset
@@ -147,7 +147,7 @@ title: Forms
 
 ### **Specs**
 
-![Fieldsets and Legends Specs Image](/docs/img/Form/Fieldset-Legends/fieldsetlegend-specs.jpg)  
+![Fieldsets and Legends Specs Image](/build/docs/img/Form/Fieldset-Legends/fieldsetlegend-specs.jpg)  
 
 ### **Code**
 

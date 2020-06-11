@@ -18,7 +18,7 @@ title: Ribbons
 
 ### **Anatomy**
 
-![Brand Ribbon Anatomy Image](/docs/img/Ribbons/Brand_Ribbon/brandribbon-anatomy.jpg)
+![Brand Ribbon Anatomy Image](/build/docs/img/Ribbons/Brand_Ribbon/brandribbon-anatomy.jpg)
 
 1. Text (required)
 2. Container (required)
@@ -26,7 +26,7 @@ title: Ribbons
 
 ### **Specs**
 
-![Brand Ribbon Specs Image](/docs/img/Ribbons/Brand_Ribbon/brandribbon-specs.jpg)  
+![Brand Ribbon Specs Image](/build/docs/img/Ribbons/Brand_Ribbon/brandribbon-specs.jpg)  
 
 ### **Code**
 
@@ -36,7 +36,7 @@ title: Ribbons
 
 ### **Anatomy**
 
-![Highlight Ribbon Anatomy Image](/docs/img/Ribbons/Highlight_Ribbon/highlightribbon-anatomy.jpg)
+![Highlight Ribbon Anatomy Image](/build/docs/img/Ribbons/Highlight_Ribbon/highlightribbon-anatomy.jpg)
 
 1. Text (required)
 2. Container (required)
@@ -44,7 +44,7 @@ title: Ribbons
 
 ### **Specs**
 
-![Highlight Ribbon Specs Image](/docs/img/Ribbons/Highlight_Ribbon/highlightribbon-specs.jpg)  
+![Highlight Ribbon Specs Image](/build/docs/img/Ribbons/Highlight_Ribbon/highlightribbon-specs.jpg)  
 
 ### **Code**
 

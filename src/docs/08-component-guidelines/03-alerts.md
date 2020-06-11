@@ -20,13 +20,13 @@ title: Alerts
 
 **Further Reading**
 
-[Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+[Using the alert role](https://developer.mozilla.org/en-US/build/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
 ## **Primary Alert**
 
 ### **Anatomy**
 
-![Primary Alert Anatomy Image](/docs/img/Alerts/primaryalert-anatomy.jpg)
+![Primary Alert Anatomy Image](/build/docs/img/Alerts/primaryalert-anatomy.jpg)
 
 Alert Copy (required)
 Container (required)
@@ -34,7 +34,7 @@ Container (required)
 
 ### **Specs**
 
-![Primary Alert Specs Image](/docs/img/Alerts/primaryalert-specs.jpg)  
+![Primary Alert Specs Image](/build/docs/img/Alerts/primaryalert-specs.jpg)  
 
 ### **Code**
 
@@ -44,14 +44,14 @@ Container (required)
 
 ### **Anatomy**
 
-![Secondary Alert Anatomy Image](/docs/img/Alerts/secondaryalert-anatomy.jpg)
+![Secondary Alert Anatomy Image](/build/docs/img/Alerts/secondaryalert-anatomy.jpg)
 
 Alert Copy (required)
 Container (required)
 
 ### **Specs**
 
-![Secondary Alerts Specs Image](/docs/img/Alerts/secondaryalert-specs.jpg)
+![Secondary Alerts Specs Image](/build/docs/img/Alerts/secondaryalert-specs.jpg)
 
 ### **Code**
 
@@ -61,7 +61,7 @@ Container (required)
 
 ### **Anatomy**
 
-![Success Alert Anatomy Image](/docs/img/Alerts/successalert-anatomy.jpg)
+![Success Alert Anatomy Image](/build/docs/img/Alerts/successalert-anatomy.jpg)
 
 Alert Copy (required)
 Success Icon (required)
@@ -70,7 +70,7 @@ Container (required)
 
 ### **Specs**
 
-![Success Alert Specs Image](/docs/img/Alerts/successalert-specs.jpg)
+![Success Alert Specs Image](/build/docs/img/Alerts/successalert-specs.jpg)
 
 ### **Code**
 
@@ -80,7 +80,7 @@ Container (required)
 
 ### **Anatomy**
 
-![Error Alert Anatomy Image](/docs/img/Alerts/erroralert-anatomy.jpg)
+![Error Alert Anatomy Image](/build/docs/img/Alerts/erroralert-anatomy.jpg)
 
 Alert Copy (required)
 Error Icon (required)
@@ -89,7 +89,7 @@ Container (required)
 
 ### **Specs**
 
-![Error Alert Specs Image](/docs/img/Alerts/erroralert-specs.jpg)  
+![Error Alert Specs Image](/build/docs/img/Alerts/erroralert-specs.jpg)  
 
 ### **Code**
 
@@ -99,7 +99,7 @@ Container (required)
 
 ### **Anatomy**
 
-![Warning Alert Anatomy Image](/docs/img/Alerts/warningalert-anatomy.jpg)
+![Warning Alert Anatomy Image](/build/docs/img/Alerts/warningalert-anatomy.jpg)
 
 Alert Copy (required)
 Warning Icon (required)
@@ -108,7 +108,7 @@ Container (required)
 
 ### **Specs**
 
-![Warning Alert Specs Image](/docs/img/Alerts/warningalert-specs.jpg)  
+![Warning Alert Specs Image](/build/docs/img/Alerts/warningalert-specs.jpg)  
 
 ### **Code**
 

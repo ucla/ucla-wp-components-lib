@@ -44,7 +44,7 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 ### **Anatomy**
 
-![Accordion Anatomy Image](/docs/img/Accordion/accordion-anatomy.jpg)
+![Accordion Anatomy Image](/build/docs/img/Accordion/accordion-anatomy.jpg)
 
 1. Accordion - Nth Child
 2. Title (required)
@@ -59,15 +59,15 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 ### **States**
 
-![Accordion States Image](/docs/img/Accordion/accordion-states.jpg)
+![Accordion States Image](/build/docs/img/Accordion/accordion-states.jpg)
 
 ### **Specs**
 
-![Accordion Specs Image](/docs/img/Accordion/accordion-specs.jpg)
+![Accordion Specs Image](/build/docs/img/Accordion/accordion-specs.jpg)
 
 ### **Variations***
 
-![Accordion Variations Image](/docs/img/Accordion/accordion-variations.jpg)
+![Accordion Variations Image](/build/docs/img/Accordion/accordion-variations.jpg)
 
 ### **Code**
 
@@ -79,7 +79,7 @@ Use this button to display more content or more items in a list. You should cust
 
 ### **Anatomy**
 
-![Load More Anatomy Image](/docs/img/Load_More/loadmore-anatomy.jpg)
+![Load More Anatomy Image](/build/docs/img/Load_More/loadmore-anatomy.jpg)
 
 1. Load More Label (required)
 2. Load More Number (required)
@@ -88,11 +88,11 @@ Use this button to display more content or more items in a list. You should cust
 
 ### **States**
 
-![Load More States Image](/docs/img/Load_More/loadmore-states.jpg)  
+![Load More States Image](/build/docs/img/Load_More/loadmore-states.jpg)  
 
 ### **Specs**
 
-![Load More Specs Image](/docs/img/Load_More/loadmore-specs.jpg)  
+![Load More Specs Image](/build/docs/img/Load_More/loadmore-specs.jpg)  
 
 ### **Code**
 
