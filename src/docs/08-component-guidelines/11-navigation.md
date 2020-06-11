@@ -43,7 +43,7 @@
 
 ### **Desktop Anatomy**
 
-![Header and Main Menus Desktop Anatomy Image](/build/img/Header/header-desktop-anatomy.jpg)
+![Header and Main Menus Desktop Anatomy Image](/docs/img/Header/header-desktop-anatomy.jpg)
 
 1. Global Header (required): Global header includes the UCLA logo and institutional breadcrumb.
 2. UCLA Logo (required): UCLA logo links back to ucla.edu.
@@ -58,15 +58,15 @@
 
 ### **Desktop Variations**
 
-![Header and Main Menus Desktop Variations Image](/build/img/Header/header-desktop-states.jpg)  
+![Header and Main Menus Desktop Variations Image](/docs/img/Header/header-desktop-states.jpg)  
 
 ### **Desktop Specs**
 
-![Header and Main Menus Desktop Specs Image](/build/img/Header/header-desktop-specs.jpg)
+![Header and Main Menus Desktop Specs Image](/docs/img/Header/header-desktop-specs.jpg)
 
 ### **Mobile Anatomy**
 
-![Header and Main Menus Mobile Anatomy Image](/build/img/Header/header-mobile-anatomy.jpg)
+![Header and Main Menus Mobile Anatomy Image](/docs/img/Header/header-mobile-anatomy.jpg)
 
 
 1. Global Header (required): Global header includes the UCLA logo and institutional breadcrumb.
@@ -86,11 +86,11 @@
 
 ### **Mobile States**
 
-![Header and Main Menus Mobile States Image](/build/img/Header/header-mobile-states.jpg)    
+![Header and Main Menus Mobile States Image](/docs/img/Header/header-mobile-states.jpg)    
 
 ### **Mobile Specs**
 
-![Header and Main Menus Mobile Specs Image](/build/img/Header/header-mobile-specs.jpg)
+![Header and Main Menus Mobile Specs Image](/docs/img/Header/header-mobile-specs.jpg)
 
 ### **Code**
 
@@ -104,7 +104,7 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **Anatomy**
 
-![Breadcrumbs Anatomy Image](/build/img/Breadcrumbs/breadcrumbs-anatomy.jpg)
+![Breadcrumbs Anatomy Image](/docs/img/Breadcrumbs/breadcrumbs-anatomy.jpg)
 
 1. Breadcrumb Label (required)
 2. Item Divider (required)
@@ -113,15 +113,15 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **States & Variations**
 
-![Breadcrumbs States & Variations Image](/build/img/Breadcrumbs/breadcrumbs-states.jpg)  
+![Breadcrumbs States & Variations Image](/docs/img/Breadcrumbs/breadcrumbs-states.jpg)  
 
 ### **Specs**
 
-![Breadcrumbs Specs Image](/build/img/Breadcrumbs/breadcrumb-specs.jpg)  
+![Breadcrumbs Specs Image](/docs/img/Breadcrumbs/breadcrumb-specs.jpg)  
 
 ### **Mobile Behavior**
 
-![Breadcrumbs Mobile Behavior Image](/build/img/Breadcrumbs/breadcrumb-mobile-behavior.jpg)   
+![Breadcrumbs Mobile Behavior Image](/docs/img/Breadcrumbs/breadcrumb-mobile-behavior.jpg)   
 
 ### **Code**
 
@@ -131,7 +131,7 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **Anatomy**
 
-![Side Menus Anatomy Image](/build/img/Side_Nav/sidenav-anatomy.jpg)
+![Side Menus Anatomy Image](/docs/img/Side_Nav/sidenav-anatomy.jpg)
 
 1. Nav Item Label (required)
 2. Container (required)
@@ -140,15 +140,15 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **States**
 
-![Side Menus States Image](/build/img/Side_Nav/sidenav-states.jpg)
+![Side Menus States Image](/docs/img/Side_Nav/sidenav-states.jpg)
 
 ### **Variations**
 
-![Side Menus Variations Image](/build/img/Side_Nav/sidenav-variations.jpg)
+![Side Menus Variations Image](/docs/img/Side_Nav/sidenav-variations.jpg)
 
 ### **Specs**
 
-![Side Menus Specs Image](/build/img/Side_Nav/sidenav-specs.jpg)
+![Side Menus Specs Image](/docs/img/Side_Nav/sidenav-specs.jpg)
 
 ### **Code**
 <!--Side Menus code here, if applicable-->
