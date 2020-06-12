@@ -1,17 +1,83 @@
 ---
-title: Factoids, Rankings, and Statistics
+title: Factoids, Rankings and Statistics
 ---
-Our goal is to make it easier for teams to design and develop great experiences for users across all UCLA applications.
+## Highlight an important fact, data point, or ranking
 
-This site is a preview of the Bruin Components source. It's where we develop new features and components and is not always stable. For that reason you should **always** reference the official Bruin Components documentation site at [bruincomponents.ucla.edu](https://bruincomponents.ucla.edu/).
+As an institution of higher learning and research, we have a lot of useful data and information to share with the public, and accomplishments we can tout. Use these highly visual callouts to do it.
 
-<a href="https://bruincomponents.ucla.edu/" class="create-button">Visit the Bruin Components docs</a>
+## **Usage**
+
+### **Usability Guidance**
+
+* Limit each callout to a single factoid, statistic or ranking.
+* Provide a source if the data or ranking comes from another program or institution.
+
+### **Accessibility Requirements**
+
+* Use the `<aside>` element to denote factoids and statistics as standalone content.
+
+## **Factoid**
+
+### **Anatomy**
+
+![Factoid Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-anatomy.jpg)
+
+1. Factoid Text (required)
+2. Border (required)
+3. Container (required)
+
+
+### **Specs**
+
+![Factoid Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-specs.jpg)   
+
+### **Code**
+
+<!--Factoid code here, if applicable-->
+
+## **Rankings**
+
+### **Anatomy**
+
+![Rankings Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-anatomy.jpg)
+
+1. Ranking Text (required)
+2. Descriptor Text (required)
+3. Source Text (required)
+4. Container (required)
+5. Container (required) 
+
+### **Specs**
+
+![Rankings Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-specs.jpg)  
+
+### **Code**
+
+<!--Rankings code here, if applicable-->
+
+## **Statistics**
+
+### **Anatomy**
+
+![Statistics Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-anatomy.jpg)   
+
+1. Value Text (required)
+2. Descriptor Text (required)
+3. Container Text (required)
+4. Numerator Text (required for 2 variable statistics)
+5. Parameter Text (required for 2 variable statistics)
+6. Denominator Text (required for 2 variable statistics)
+
+### **Variations**
+
+![Statistics Variations Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-variations.jpg)
+
+### **Specs**
+
+![Statistics Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-specs.jpg)  
+
+### **Code**
 
 ```
-<div class="stat-wrapper clearfix">
-  <div class="stat-tout">
-    <span class="stat-tout__number">31,000</span>
-    <span class="stat-tout__label">Undergraduate Students</span>
-  </div>
-</div>
+{{view '@statistics'}}
 ```
