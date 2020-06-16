@@ -20,7 +20,7 @@ title: Tiles
 
 ## **Anatomy**
 
-![Basic Post Tiles Anatomy Image](/build/docs/img/Tile/basictile-anatomy.jpg)
+<img class="doc-images" title="Basic Post Tiles Anatomy Image" src="/build/docs/img/Tile/basictile-anatomy.jpg"/>
 
 1. Post Text (required)
 2. Gold Bar (required)
@@ -29,11 +29,11 @@ title: Tiles
 
 ## **States**
 
-![Basic Post Tiles States Image](/build/docs/img/Tile/basictile-states.jpg)  
+<img class="doc-images" title="Basic Post Tiles States Image" src="/build/docs/img/Tile/basictile-states.jpg"/>
 
 ## **Specs**
 
-![Basic Post Tiles Specs Image](/build/docs/img/Tile/basictile-specs.jpg)  
+<img class="doc-images" title="Basic Post Tiles Specs Image" src="/build/docs/img/Tile/basictile-specs.jpg"/>
 
 
 ## **Code**

@@ -11,22 +11,22 @@ We use an 8-point grid to define our spacing, meaning we use multiples of 8, fro
 ## **Specs**
 
 ### Inline Spacing Specs Illustration
-![Inline Spacing Specs](/docs/img/Spacing/inline-spacing-specs.jpg)
+<img class="doc-images" title="Inline Spacing Specs" src="/build/docs/img/Spacing/inline-spacing-specs.jpg"/>
 
 ### Spacing Inset Illustration
-![Spacing Inset Specs](/docs/img/Spacing/spacing-inset-specs.jpg)
+<img class="doc-images" title="Spacing Inset Specs" src="/build/docs/img/Spacing/spacing-inset-specs.jpg"/>
 
 ### Spacing Inset Squish Illustration
-![Spacing Inset Squish Specs](/docs/img/Spacing/spacing-inset-squish-specs.jpg)
+<img class="doc-images" title="Spacing Inset Squish Specs" src="/build/docs/img/Spacing/spacing-inset-squish-specs.jpg"/>
 
 ### Spacing Inset Stretch Illustration
-![Spacing Inset Squish Specs](/docs/img/Spacing/spacing-inset-stretch-specs.jpg)
+<img class="doc-images" title="Spacing Inset Squish Specs" src="/build/docs/img/Spacing/spacing-inset-stretch-specs.jpg"/>
 
 ### Spacing Stack Illustration
-![Spacing Stack Specs](/docs/img/Spacing/spacing-stack-specs.jpg)
+<img class="doc-images" title="Spacing Stack Specs" src="/build/docs/img/Spacing/spacing-stack-specs.jpg"/>
 
 ### Stack Spacing Illustration
-![Stack Spacing Specs](/docs/img/Spacing/stack-spacing-specs.jpg)
+<img class="doc-images" title="Stack Spacing Specs" src="/build/docs/img/Spacing/stack-spacing-specs.jpg"/>
 
 ## **Code**
 <!--Removed text under “Spacing” (and “Spacing” heading itself) and placed under “Spacing Class Structure below-->

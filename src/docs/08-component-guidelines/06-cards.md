@@ -39,7 +39,7 @@
 
 ### **Anatomy**
 
-![Basic Card Anatomy Image](/build/docs/img/Cards/Basic_Card/basiccard-anatomy.jpg)
+<img class="doc-images" title="Basic Card Anatomy Image" src="/build/docs/img/Cards/Basic_Card/basiccard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -49,7 +49,7 @@
 
 ### **Specs**
 
-![Basic Card Specs Image](/build/docs/img/Cards/Basic_Card/basiccard-specs.jpg)  
+<img class="doc-images" title="Basic Card Specs Image" src="/build/docs/img/Cards/Basic_Card/basiccard-specs.jpg"/>
 
 ### **Code**
 
@@ -63,7 +63,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-![Event Card Anatomy Image](/build/docs/img/Cards/Event_Card/eventcard-anatomy.jpg)
+<img class="doc-images" title="Event Card Anatomy Image" src="/build/docs/img/Cards/Event_Card/eventcard-anatomy.jpg"/>
 
 1. Date (required)
 2. Image (required)
@@ -75,7 +75,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-![Event Card Specs Image](/build/docs/img/Cards/Event_Card/eventcard-specs.jpg)  
+<img class="doc-images" title="Event Card Specs Image" src="/build/docs/img/Cards/Event_Card/eventcard-specs.jpg"/>
 
 ### **Code**
 
@@ -99,7 +99,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-![Featured Story Card Anatomy Image](/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-anatomy.jpg)
+<img class="doc-images" title="Featured Story Card Anatomy Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-anatomy.jpg"/>
 
 1. Title (required)
 2. Supporting text (optional)
@@ -112,7 +112,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-![Featured Story Card Specs Image](/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-specs.jpg)  
+<img class="doc-images" title="Featured Story Card Specs Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-specs.jpg"/>
 
 ### **Code**
 
@@ -126,7 +126,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-![Story Card Anatomy Image](/build/docs/img/Cards/Story_Card/storycard-anatomy.jpg)
+<img class="doc-images" title="Story Card Anatomy Image" src="/build/docs/img/Cards/Story_Card/storycard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -136,7 +136,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-![Story Card Specs Image](/build/docs/img/Cards/Story_Card/storycard-specs.jpg)  
+<img class="doc-images" title="Story Card Specs Image" src="/build/docs/img/Cards/Story_Card/storycard-specs.jpg"/>
 
 ### **Code**
 
@@ -150,7 +150,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-![Person Card Anatomy Image](/build/docs/img/Cards/Person_Card/personcard-anatomy.jpg)
+<img class="doc-images" title="Person Card Anatomy Image" src="/build/docs/img/Cards/Person_Card/personcard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -160,7 +160,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-![Person Card Specs Image](/build/docs/img/Cards/Person_Card/personcard-specs.jpg)  
+<img class="doc-images" title="Person Card Specs Image" src="/build/docs/img/Cards/Person_Card/personcard-specs.jpg"/>
 
 ### **Code**
 
