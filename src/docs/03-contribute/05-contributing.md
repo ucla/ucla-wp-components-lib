@@ -59,10 +59,9 @@ Strategic Communications will provide feedback if a component was not approved f
 
 **OIT/DCP**
 
-OIT/DCP is the official campus ADA compliance coordinator, and a component must pass the OIT/DCP’s assessment for accessibility before it is approved and passed to the “Ready” status.
+OIT/DCP is the campus approved accessibility experts in WCAG compliance. For information on ADA compliance contact [ADA/504 compliance](https://www.ada.ucla.edu/).
 
-OIT/DCP will provide feedback if a component was not approved for use based on UCLA compliance guidelines.
-
+OIT/DCP will provide feedback on why a component was not approved for use according to the WCAG 2.0 AA compliance guidelines.
 
 ## Get Started with the Repository
 Visit the repository at the Strategic Communications Bitbucket: https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/
