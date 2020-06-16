@@ -20,7 +20,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Anatomy**
 
-![Department Footer Anatomy Image](/build/docs/img/Footer/Department_Footer/deptfooter-anatomy.jpg)
+<img class="doc-images" title="Department Footer Anatomy Image" src="/build/docs/img/Footer/Department_Footer/deptfooter-anatomy.jpg"/>
 
 1. Department Logo (required)
 2. Department Contact Information (required)
@@ -32,11 +32,11 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **States**
 
-![Department Footer States Image](/build/docs/img/Footer/Department_Footer/deptfooter-states.jpg)
+<img class="doc-images" title="Department Footer States Image" src="/build/docs/img/Footer/Department_Footer/deptfooter-states.jpg"/>
 
 ### **Specs**
 
-![Department Footer Specs Image](/build/docs/img/Footer/Department_Footer/deptfooter-specs.jpg)  
+<img class="doc-images" title="Department Footer Specs Image" src="/build/docs/img/Footer/Department_Footer/deptfooter-specs.jpg"/>
 
 ### **Code**
 
@@ -46,7 +46,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Anatomy**
 
-![Global Footer Anatomy Image](/build/docs/img/Footer/Global_Footer/globalfooter-anatomy.jpg)
+<img class="doc-images" title="Global Footer Anatomy Image" src="/build/docs/img/Footer/Global_Footer/globalfooter-anatomy.jpg"/>
 
 1. Copyright (required)
 2. Global Links (required)
@@ -55,11 +55,11 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **States**
 
-![Global Footer States Image](/build/docs/img/Footer/Global_Footer/globalfooter-states.jpg)
+<img class="doc-images" title="Global Footer States Image" src="/build/docs/img/Footer/Global_Footer/globalfooter-states.jpg"/>
 
 ### **Specs**
 
-![Global Footer Specs Image](/build/docs/img/Footer/Global_Footer/globalfooter-specs.jpg)
+<img class="doc-images" title="Global Footer Specs Image" src="/build/docs/img/Footer/Global_Footer/globalfooter-specs.jpg"/>
 
 ### **Code**
 
@@ -69,7 +69,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Anatomy**
 
-![Email Signup Anatomy Image](/build/docs/img/Footer/Email_Footer/emailsignup-anatomy.jpg)
+<img class="doc-images" title="Email Signup Anatomy Image" src="/build/docs/img/Footer/Email_Footer/emailsignup-anatomy.jpg"/>
 
 1. Heading (required)
 2. Description (optional)
@@ -81,7 +81,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Specs**
 
-![Email Signup Specs Image](/build/docs/img/Footer/Email_Footer/emailsignup-specs.jpg)  
+<img class="doc-images" title="Email Signup Specs Image" src="/build/docs/img/Footer/Email_Footer/emailsignup-specs.jpg"/>
 
 ### **Code**
 <!--Email Signup code here, if applicable-->

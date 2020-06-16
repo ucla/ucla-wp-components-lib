@@ -20,16 +20,15 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-![Factoid Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-anatomy.jpg)
+<img class="doc-images" title="Story Card Specs Image" src="/build/docs/img/Cards/Story_Card/storycard-specs.jpg"/>
 
 1. Factoid Text (required)
 2. Border (required)
 3. Container (required)
 
-
 ### **Specs**
 
-![Factoid Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-specs.jpg)   
+<img class="doc-images" title="Story Card Specs Image" src="/build/docs/img/Cards/Story_Card/storycard-specs.jpg"/>
 
 ### **Code**
 
@@ -39,17 +38,17 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-![Rankings Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-anatomy.jpg)
+<img class="doc-images" title="Rankings Anatomy Image" src="/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-anatomy.jpg"/>
 
 1. Ranking Text (required)
 2. Descriptor Text (required)
 3. Source Text (required)
 4. Container (required)
-5. Container (required) 
+5. Container (required)
 
 ### **Specs**
 
-![Rankings Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-specs.jpg)  
+<img class="doc-images" title="Rankings Specs Image" src="/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-specs.jpg"/>
 
 ### **Code**
 
@@ -59,7 +58,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-![Statistics Anatomy Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-anatomy.jpg)   
+<img class="doc-images" title="Statistics Anatomy Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-anatomy.jpg"/>
 
 1. Value Text (required)
 2. Descriptor Text (required)
@@ -70,11 +69,11 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Variations**
 
-![Statistics Variations Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-variations.jpg)
+<img class="doc-images" title="Statistics Variations Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-variations.jpg"/>
 
 ### **Specs**
 
-![Statistics Specs Image](/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-specs.jpg)  
+<img class="doc-images" title="Statistics Specs Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-specs.jpg"/>
 
 ### **Code**
 

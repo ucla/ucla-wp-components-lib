@@ -26,15 +26,15 @@ title: Alerts
 
 ### **Anatomy**
 
-![Primary Alert Anatomy Image](/build/docs/img/Alerts/primaryalert-anatomy.jpg)
+<img class="doc-images" title="Primary Alert Anatomy Image" src="/build/docs/img/Alerts/primaryalert-anatomy.jpg"/>
 
-Alert Copy (required)
-Container (required)
+1. Alert Copy (required)
+2. Container (required)
 
 
 ### **Specs**
 
-![Primary Alert Specs Image](/build/docs/img/Alerts/primaryalert-specs.jpg)  
+<img class="doc-images" title="Primary Alert Specs Image" src="/build/docs/img/Alerts/primaryalert-specs.jpg"/>
 
 ### **Code**
 
@@ -44,14 +44,14 @@ Container (required)
 
 ### **Anatomy**
 
-![Secondary Alert Anatomy Image](/build/docs/img/Alerts/secondaryalert-anatomy.jpg)
+<img class="doc-images" title="Secondary Alert Anatomy Image" src="/build/docs/img/Alerts/secondaryalert-anatomy.jpg"/>
 
 Alert Copy (required)
 Container (required)
 
 ### **Specs**
 
-![Secondary Alerts Specs Image](/build/docs/img/Alerts/secondaryalert-specs.jpg)
+<img class="doc-images" title="Secondary Alerts Specs Image" src="/build/docs/img/Alerts/secondaryalert-specs.jpg"/>
 
 ### **Code**
 
@@ -61,16 +61,16 @@ Container (required)
 
 ### **Anatomy**
 
-![Success Alert Anatomy Image](/build/docs/img/Alerts/successalert-anatomy.jpg)
+<img class="doc-images" title="Success Alert Anatomy Image" src="/build/docs/img/Alerts/successalert-anatomy.jpg"/>
 
-Alert Copy (required)
-Success Icon (required)
-Container (required)
+1. Alert Copy (required)
+2. Success Icon (required)
+3. Container (required)
 
 
 ### **Specs**
 
-![Success Alert Specs Image](/build/docs/img/Alerts/successalert-specs.jpg)
+<img class="doc-images" title="Success Alert Specs Image" src="/build/docs/img/Alerts/successalert-specs.jpg"/>
 
 ### **Code**
 
@@ -80,16 +80,16 @@ Container (required)
 
 ### **Anatomy**
 
-![Error Alert Anatomy Image](/build/docs/img/Alerts/erroralert-anatomy.jpg)
+<img class="doc-images" title="Error Alert Anatomy Image" src="/build/docs/img/Alerts/erroralert-anatomy.jpg"/>
 
-Alert Copy (required)
-Error Icon (required)
-Container (required)
+1. Alert Copy (required)
+2. Error Icon (required)
+3. Container (required)
 
 
 ### **Specs**
 
-![Error Alert Specs Image](/build/docs/img/Alerts/erroralert-specs.jpg)  
+<img class="doc-images" title="Error Alert Specs Image" src="/build/docs/img/Alerts/erroralert-specs.jpg"/>
 
 ### **Code**
 
@@ -99,16 +99,16 @@ Container (required)
 
 ### **Anatomy**
 
-![Warning Alert Anatomy Image](/build/docs/img/Alerts/warningalert-anatomy.jpg)
+<img class="doc-images" title="Warning Alert Anatomy Image" src="/build/docs/img/Alerts/warningalert-anatomy.jpg"/>
 
-Alert Copy (required)
-Warning Icon (required)
-Container (required)
+1. Alert Copy (required)
+2. Warning Icon (required)
+3. Container (required)
 
 
 ### **Specs**
 
-![Warning Alert Specs Image](/build/docs/img/Alerts/warningalert-specs.jpg)  
+<img class="doc-images" title="Warning Alert Specs Image" src="/build/docs/img/Alerts/warningalert-specs.jpg"/>
 
 ### **Code**
 

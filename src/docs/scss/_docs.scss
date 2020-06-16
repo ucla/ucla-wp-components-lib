@@ -53,3 +53,13 @@
   color: #ffffff;
   background-color: #00456a;
 }
+
+// make all document images 960px
+// per Stevie, doc images were
+// created for 960px
+
+.doc-images {
+  @media (min-width: 960px) {
+    min-width: 960px;
+  }
+}

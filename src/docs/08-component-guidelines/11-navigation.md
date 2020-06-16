@@ -43,7 +43,7 @@
 
 ### **Desktop Anatomy**
 
-![Header and Main Menus Desktop Anatomy Image](/build/docs/img/Header/header-desktop-anatomy.jpg)
+<img class="doc-images" title="Header and Main Menus Desktop Anatomy Image" src="/build/docs/img/Header/header-desktop-anatomy.jpg"/>
 
 1. Global Header (required): Global header includes the UCLA logo and institutional breadcrumb.
 2. UCLA Logo (required): UCLA logo links back to ucla.edu.
@@ -58,16 +58,15 @@
 
 ### **Desktop Variations**
 
-![Header and Main Menus Desktop Variations Image](/build/docs/img/Header/header-desktop-states.jpg)  
+<img class="doc-images" title="Header and Main Menus Desktop Variations Image" src="/build/docs/img/Header/header-desktop-states.jpg"/>
 
 ### **Desktop Specs**
 
-![Header and Main Menus Desktop Specs Image](/build/docs/img/Header/header-desktop-specs.jpg)
+<img class="doc-images" title="Header and Main Menus Desktop Specs Image" src="/build/docs/img/Header/header-desktop-specs.jpg"/>
 
 ### **Mobile Anatomy**
 
-![Header and Main Menus Mobile Anatomy Image](/build/docs/img/Header/header-mobile-anatomy.jpg)
-
+<img class="doc-images" title="Header and Main Menus Mobile Anatomy Image" src="/build/docs/img/Header/header-mobile-anatomy.jpg"/>
 
 1. Global Header (required): Global header includes the UCLA logo and institutional breadcrumb.
 2. UCLA Logo (required): UCLA logo links back to ucla.edu
@@ -86,11 +85,11 @@
 
 ### **Mobile States**
 
-![Header and Main Menus Mobile States Image](/build/docs/img/Header/header-mobile-states.jpg)    
+<img class="doc-images" title="Header and Main Menus Mobile States Image" src="/build/docs/img/Header/header-mobile-states.jpg"/>
 
 ### **Mobile Specs**
 
-![Header and Main Menus Mobile Specs Image](/build/docs/img/Header/header-mobile-specs.jpg)
+<img class="doc-images" title="Header and Main Menus Mobile Specs Image" src="/build/docs/img/Header/header-mobile-specs.jpg"/>
 
 ### **Code**
 
@@ -104,7 +103,7 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **Anatomy**
 
-![Breadcrumbs Anatomy Image](/build/docs/img/Breadcrumbs/breadcrumbs-anatomy.jpg)
+<img class="doc-images" title="Breadcrumbs Anatomy Image" src="/build/docs/img/Breadcrumbs/breadcrumbs-anatomy.jpg"/>
 
 1. Breadcrumb Label (required)
 2. Item Divider (required)
@@ -113,15 +112,15 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **States & Variations**
 
-![Breadcrumbs States & Variations Image](/build/docs/img/Breadcrumbs/breadcrumbs-states.jpg)  
+<img class="doc-images" title="Breadcrumbs States & Variations Image" src="/build/docs/img/Breadcrumbs/breadcrumbs-states.jpg"/>
 
 ### **Specs**
 
-![Breadcrumbs Specs Image](/build/docs/img/Breadcrumbs/breadcrumb-specs.jpg)  
+<img class="doc-images" title="Breadcrumbs Specs Image" src="/build/docs/img/Breadcrumbs/breadcrumb-specs.jpg"/>
 
 ### **Mobile Behavior**
 
-![Breadcrumbs Mobile Behavior Image](/build/docs/img/Breadcrumbs/breadcrumb-mobile-behavior.jpg)   
+<img class="doc-images" title="Breadcrumbs Mobile Behavior Image" src="/build/docs/img/Breadcrumbs/breadcrumb-mobile-behavior.jpg"/>
 
 ### **Code**
 
@@ -131,24 +130,23 @@ Most visitors will find your site via search engines. If searching for a topic m
 
 ### **Anatomy**
 
-![Side Menus Anatomy Image](/build/docs/img/Side_Nav/sidenav-anatomy.jpg)
+<img class="doc-images" title="Side Menus Anatomy Image" src="/build/docs/img/Side_Nav/sidenav-anatomy.jpg"/>
 
 1. Nav Item Label (required)
 2. Container (required)
 3. Active tab indicator (required)
 
-
 ### **States**
 
-![Side Menus States Image](/build/docs/img/Side_Nav/sidenav-states.jpg)
+<img class="doc-images" title="Side Menus States Image" src="/build/docs/img/Side_Nav/sidenav-states.jpg"/>
 
 ### **Variations**
 
-![Side Menus Variations Image](/build/docs/img/Side_Nav/sidenav-variations.jpg)
+<img class="doc-images" title="Side Menus Variations Image" src="/build/docs/img/Side_Nav/sidenav-variations.jpg"/>
 
 ### **Specs**
 
-![Side Menus Specs Image](/build/docs/img/Side_Nav/sidenav-specs.jpg)
+<img class="doc-images" title="Side Menus Specs Image" src="/build/docs/img/Side_Nav/sidenav-specs.jpg"/>
 
 ### **Code**
 <!--Side Menus code here, if applicable-->
