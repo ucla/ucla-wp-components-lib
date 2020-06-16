@@ -168,12 +168,19 @@ function generateDocStylesLocal() {
        .pipe(dest('build/docs/js'));
    }
 
-  // documentation images
+  // documentation images - filepaths are chosen to ensure
+  // images work both in local and prod environments
 
- function generateDocImages() {
+ function generateDocImagesLocal() {
     return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('build/assets/docs/img'));
+     .pipe(dest('build/assets/build/docs/img'));
+ }
+
+ function generateDocImagesProd() {
+    return src('src/docs/img/**/*')
+     .pipe(image())
+     .pipe(dest('build/docs/img'));
  }
 
 // component images (i.e icons)
@@ -255,7 +262,7 @@ exports.build = series(
   generateCompLibImages,
   generateDocStylesLocal,
   generateDocScriptsLocal,
-  generateDocImages,
+  generateDocImagesLocal,
   generateFaviconLocal
 );
 
@@ -267,6 +274,6 @@ exports.production = series(
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,
-  generateDocImages,
+  generateDocImagesProd,
   generateFaviconProd
 );

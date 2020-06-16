@@ -15,9 +15,9 @@ Put the styles in between the <head> </head> tags of every page on your website.
 </head>
 ```
 
-Install the javascript in the footer of every page on your website.
+Install the JavaScript in the footer of every page on your website.
 
-**The Javascript**
+**The JavaScript**
 ```
 <footer>
   // Copy Below
@@ -26,14 +26,14 @@ Install the javascript in the footer of every page on your website.
 </footer>
 ```
 
-### To install via NPM
+### Install via NPM
 
-This repository is currently private and requires an ssh key to install via NPM. To obtain access please reach out to svosburgh@stratcomm.ucla.edu
+This repository is currently private and requires an ssh key to install via NPM. To obtain access, please reach out to svosburgh@stratcomm.ucla.edu
 
-To create a bitbucket ssh key follow these instructions, https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
+To create a bitbucket ssh key, follow these instructions:
+https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
 
-After the ssh has been created run the following command:
-
+After the ssh has been created, run the following command:
 ```
 npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
 ```
