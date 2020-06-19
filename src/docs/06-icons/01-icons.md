@@ -14,7 +14,7 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 
 ### **Please Note**
 1. Extra styling with or without divs are added to better depict white icons
-1. SGV Icons: Extra div with background and display styling IS NOT REQUIRED for usage
+1. SVG Icons: Extra div with background and display styling IS NOT REQUIRED for usage
 1. IMG Icons: Extra styling attribute IS NOT required for usage
 
 ## Denotive Icons

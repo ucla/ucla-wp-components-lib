@@ -15,7 +15,7 @@
 
 ### **Anatomy**
 
-<img class="doc-images" title="Unordered List Anatomy Image" src="/build/docs/img/Lists/Unordered_List/unorderedlist-anatomy.jpg"/>
+<img class="doc-images" alt="Unordered List Anatomy Image" title="Unordered List Anatomy Image" src="/build/docs/img/Lists/Unordered_List/unorderedlist-anatomy.jpg"/>
 
 1. Tier 1 List Item (required)
 2. Bullet Icon (required)
@@ -26,7 +26,7 @@
 
 ### **Specs**
 
-<img class="doc-images" title="Unordered List Specs Image" src="/build/docs/img/Lists/Unordered_List/unorderedlist-specs.jpg"/>
+<img class="doc-images" alt="Unordered List Specs Image" title="Unordered List Specs Image" src="/build/docs/img/Lists/Unordered_List/unorderedlist-specs.jpg"/>
 
 ### **Code**
 
@@ -36,7 +36,7 @@
 
 ### **Anatomy**
 
-<img class="doc-images" title="Ordered List Anatomy Image" src="/build/docs/img/Lists/Ordered_List/orderedlist-anatomy.jpg"/>
+<img class="doc-images" alt="Ordered List Anatomy Image" title="Ordered List Anatomy Image" src="/build/docs/img/Lists/Ordered_List/orderedlist-anatomy.jpg"/>
 
 1. Tier 1 List Item (required)
 2. Order Number (required)
@@ -46,7 +46,7 @@
 
 ### **Specs**
 
-<img class="doc-images" title="Ordered List Specs Image" src="/build/docs/img/Lists/Ordered_List/orderedlist-specs.jpg"/>
+<img class="doc-images" alt="Ordered List Specs Image" title="Ordered List Specs Image" src="/build/docs/img/Lists/Ordered_List/orderedlist-specs.jpg"/>
 
 ### **Code**
 
@@ -56,7 +56,7 @@
 
 ### **Anatomy**
 
-<img class="doc-images" title="Definitions List Anatomy Image" src="/build/docs/img/Lists/Definitions_List/definitionslist-anatomy.jpg"/>
+<img class="doc-images" alt="Definitions List Anatomy Image" title="Definitions List Anatomy Image" src="/build/docs/img/Lists/Definitions_List/definitionslist-anatomy.jpg"/>
 
 1. List Item (required)
 2. Definition Text (required)
@@ -65,7 +65,7 @@
 
 ### **Specs**
 
-<img class="doc-images" title="Definitions List Specs Image" src="/build/docs/img/Lists/Definitions_List/definitionslist-specs.jpg"/>
+<img class="doc-images" alt="Definitions List Specs Image" title="Definitions List Specs Image" src="/build/docs/img/Lists/Definitions_List/definitionslist-specs.jpg"/>
 
 ### **Code**
 

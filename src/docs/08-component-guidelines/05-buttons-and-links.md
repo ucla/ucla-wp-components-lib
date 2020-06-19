@@ -73,7 +73,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Primary Button Anatomy Image" alt="Primary Button Anatomy Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-anatomy.jpg"/>
+<img class="doc-images" alt="Primary Button Anatomy Image" title="Primary Button Anatomy Image" alt="Primary Button Anatomy Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-anatomy.jpg"/>
 
 1. Button Label (required)
 2. Container (required)
@@ -82,15 +82,15 @@ Span wrapper that represents self-contained content.
 
 ### **Interactive States**
 
-<img class="doc-images" title="Primary Button Interactive States Image" alt="Primary Button Interactive States Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-states.jpg"/>
+<img class="doc-images" alt="Primary Button Interactive States Image" title="Primary Button Interactive States Image" alt="Primary Button Interactive States Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Primary Button Types Specs Image" alt="Primary Button Types Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-specs.jpg"/>
+<img class="doc-images" alt="Primary Button Types Specs Image" title="Primary Button Types Specs Image" alt="Primary Button Types Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-specs.jpg"/>
 
-<img class="doc-images" title="Primary Button Light Background Specs Image" alt="Primary Button Light Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-lgtbg-specs.jpg"/>
+<img class="doc-images" alt="Primary Button Light Background Specs Image" title="Primary Button Light Background Specs Image" alt="Primary Button Light Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-lgtbg-specs.jpg"/>
 
-<img class="doc-images" title="Primary Button Types Dark Background Specs Image" alt="Primary Button Types Dark Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-drkbg-specs.jpg"/>
+<img class="doc-images" alt="Primary Button Types Dark Background Specs Image" title="Primary Button Types Dark Background Specs Image" alt="Primary Button Types Dark Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-drkbg-specs.jpg"/>
 
 ### **Code**
 
@@ -106,7 +106,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Secondary Button Anatomy Image" alt="Secondary Button Anatomy Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-anatomy.jpg"/>
+<img class="doc-images" alt="Secondary Button Anatomy Image" title="Secondary Button Anatomy Image" alt="Secondary Button Anatomy Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-anatomy.jpg"/>
 
 1. Button Label (required)
 2. Container (required)
@@ -115,13 +115,13 @@ Span wrapper that represents self-contained content.
 
 ### **Interactive States**
 
-<img class="doc-images" title="Secondary Button Interactive States Image" alt="Secondary Button Interactive States Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-states.jpg"/>
+<img class="doc-images" alt="Secondary Button Interactive States Image" title="Secondary Button Interactive States Image" alt="Secondary Button Interactive States Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-specs.jpg"/>
+<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-specs.jpg"/>
 
-<img class="doc-images" title="Secondary Button Variations Specs Image" alt="Secondary Button Variations Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-variations-specs.jpg"/>
+<img class="doc-images" alt="Secondary Button Variations Specs Image" title="Secondary Button Variations Specs Image" alt="Secondary Button Variations Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-variations-specs.jpg"/>
 
 ### **Code**
 
@@ -136,7 +136,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Tertiary Button Anatomy Image" alt="Tertiary Button Anatomy Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-anatomy.jpg"/>
+<img class="doc-images" alt="Tertiary Button Anatomy Image" title="Tertiary Button Anatomy Image" alt="Tertiary Button Anatomy Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-anatomy.jpg"/>
 
 1. Button Label (required)
 2. Container (required)
@@ -145,13 +145,13 @@ Span wrapper that represents self-contained content.
 
 ### **Interactive States**
 
-<img class="doc-images" title="Tertiary Button Interactive States Image" alt="Tertiary Button Interactive States Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-states.jpg"/>
+<img class="doc-images" alt="Tertiary Button Interactive States Image" title="Tertiary Button Interactive States Image" alt="Tertiary Button Interactive States Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Tertiary Button States Specs Image" alt="Tertiary Button States Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-specs.jpg"/>
+<img class="doc-images" alt="Tertiary Button States Specs Image" title="Tertiary Button States Specs Image" alt="Tertiary Button States Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-specs.jpg"/>
 
-<img class="doc-images" title="Tertiary Button Variations Specs Image" alt="Tertiary Button Variations Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-variations-specs.jpg"/>
+<img class="doc-images" alt="Tertiary Button Variations Specs Image" title="Tertiary Button Variations Specs Image" alt="Tertiary Button Variations Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-variations-specs.jpg"/>
 
 ### **Code**
 
@@ -166,7 +166,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Button Group Anatomy Image" alt="Button Group Anatomy Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-anatomy.jpg"/>
+<img class="doc-images" alt="Button Group Anatomy Image" title="Button Group Anatomy Image" alt="Button Group Anatomy Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-anatomy.jpg"/>
 
 1. Left Button (required)
 2. Center Button (optional)
@@ -174,11 +174,11 @@ Span wrapper that represents self-contained content.
 
 ### **States**
 
-<img class="doc-images" title="Button Group States Image" alt="Button Group States Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-states.jpg"/>
+<img class="doc-images" alt="Button Group States Image" title="Button Group States Image" alt="Button Group States Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Button Group Specs Image" alt="Button Group Specs Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-specs.jpg"/>
+<img class="doc-images" alt="Button Group Specs Image" title="Button Group Specs Image" alt="Button Group Specs Image" src="/build/docs/img/Buttons/Button_Group/buttongroup-specs.jpg"/>
 
 ### **Code**
 
@@ -188,7 +188,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Related Links Anatomy Image" alt="Related Links Anatomy Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-anatomy.jpg"/>
+<img class="doc-images" alt="Related Links Anatomy Image" title="Related Links Anatomy Image" alt="Related Links Anatomy Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-anatomy.jpg"/>
 
 1. Button Label (required)
 2. Icon (optional)
@@ -196,11 +196,11 @@ Span wrapper that represents self-contained content.
 
 ### **States**
 
-<img class="doc-images" title="Related Links States Image" alt="Related Links States Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-states.jpg"/>
+<img class="doc-images" alt="Related Links States Image" title="Related Links States Image" alt="Related Links States Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Related Links Specs Image" alt="Related Links Specs Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-specs.jpg"/>
+<img class="doc-images" alt="Related Links Specs Image" title="Related Links Specs Image" alt="Related Links Specs Image" src="/build/docs/img/Buttons/Related_Links/relatedlinks-specs.jpg"/>
 
 ### **Code**
 
@@ -216,22 +216,22 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Inline Text Links Anatomy Image" alt="Inline Text Links Anatomy Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-anatomy.jpg"/>
+<img class="doc-images" alt="Inline Text Links Anatomy Image" title="Inline Text Links Anatomy Image" alt="Inline Text Links Anatomy Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-anatomy.jpg"/>
 
 1. Link (required)
 2. Container (on hover and active states only)
 
 ### **States**
 
-<img class="doc-images" title="Inline Text Links States Image" alt="Inline Text Links States Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-states.jpg"/>
+<img class="doc-images" alt="Inline Text Links States Image" title="Inline Text Links States Image" alt="Inline Text Links States Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Inline Text Links Specs Image" alt="Inline Text Links Specs Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-specs.jpg"/>
+<img class="doc-images" alt="Inline Text Links Specs Image" title="Inline Text Links Specs Image" alt="Inline Text Links Specs Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-specs.jpg"/>
 
 ### **Color Variations**
 
-<img class="doc-images" title="Inline Text Variations Image" alt="Inline Text Variations Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-colorvariations.jpg"/>
+<img class="doc-images" alt="Inline Text Variations Image" title="Inline Text Variations Image" alt="Inline Text Variations Image" src="/build/docs/img/Buttons/Inline_Text_Links/inlinetextlinks-colorvariations.jpg"/>
 
 ### **Code**
 
@@ -241,7 +241,7 @@ Span wrapper that represents self-contained content.
 
 ### **Anatomy**
 
-<img class="doc-images" title="Pagination Anatomy Image" alt="Pagination Anatomy Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-anatomy.jpg"/>
+<img class="doc-images" alt="Pagination Anatomy Image" title="Pagination Anatomy Image" alt="Pagination Anatomy Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-anatomy.jpg"/>
 
 1. Previous Page (required)
 2. Current Page Item (required)
@@ -250,15 +250,15 @@ Span wrapper that represents self-contained content.
 
 ### **States**
 
-<img class="doc-images" title="Pagination States Image" alt="Pagination States Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-states.jpg"/>
+<img class="doc-images" alt="Pagination States Image" title="Pagination States Image" alt="Pagination States Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
+<img class="doc-images" alt="Pagination Specs Image" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
 
 ### **Variations**
 
-<img class="doc-images" title="Pagination Variations Image" alt="Pagination Variations Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-variations.jpg"/>
+<img class="doc-images" alt="Pagination Variations Image" title="Pagination Variations Image" alt="Pagination Variations Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-variations.jpg"/>
 
 ### ***Code***
 
