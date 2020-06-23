@@ -2,10 +2,11 @@
 
 ## Pipeline:
 #1) Runs semantic library to get semantic version
-#2) Deploys updated build folder in S3 (/build - PUBLIC)
-#3) Deploys public folder in S3 (/public/x.x.x/ - PUBLIC)
-#4) Deploys docs folder in S3 (/public/x.x.x/docs/ - PRIVATE)
-#5) On success - Prints branch name and version number
+#2) Update version # in documentation (download URL) and package.json
+#3) Deploys updated build folder in S3 (/build - PUBLIC)
+#4) Deploys public folder in S3 (/public/x.x.x/ - PUBLIC)
+#5) Deploys docs folder in S3 (/public/x.x.x/docs/ - PRIVATE)
+#6) On success - Prints branch name and version number
 
 
 ## TODO
@@ -19,7 +20,7 @@ pipelines:
   branches:
     beta:
       - step:
-          name: Fractal Beta Pipeline
+          name: Fractal BETA Production
           caches:
             - node
           script:
@@ -32,6 +33,13 @@ pipelines:
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)
             - export currTag="${currTag#?}"
+            # update version # in package.json and push to repo
+            - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
+            - git add package.json
+            - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
+            - git push
+            # update version # in asset URL documentation page
+            - sed -i 's/%!CurrentVersion%!/$currTag/g' src/docs/02-installation/01-download.md
             - gulp production
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
@@ -64,10 +72,147 @@ pipelines:
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
+            # deploy icon images to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA
+                S3_BUCKET: beta-ucla-fractal/img
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
+                EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
-    beta-development:
+    # beta-development:
+    #   - step:
+    #       name: Fractal BETA Development
+    #       caches:
+    #         - node
+    #       script:
+    #         # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+    #         - apt-get update && apt-get install -y curl jq
+    #         - npm install -g gulp
+    #         - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
+    #         - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+    #         - npx semantic-release
+    #         # set current tag number -- this will be used to deploy to the correct S3 public folder
+    #         - export currTag=$(git describe --tags --abbrev=0)
+    #         - export currTag="${currTag#?}"
+    #         # update version # in package.json and push to repo
+    #         - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
+    #         - git add package.json
+    #         - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
+    #         - git push
+    #         # update version # in asset URL documentation page
+    #         - sed -i 's/%!CurrentVersion%!/$currTag/g' src/docs/02-installation/01-download.md
+    #         - gulp production
+    #         # deploy build to S3
+    #         - pipe: atlassian/aws-s3-deploy:0.4.3
+    #           variables:
+    #             AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
+    #             AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
+    #             AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
+    #             S3_BUCKET: beta-development-ucla-fractal/build
+    #             LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+    #             ACL: 'public-read'
+    #             EXTRA_ARGS: "--delete"
+    #         # deploy public to S3 w/ read-access -- public directory will deployed to S3 directory corresponding to tag name
+    #         - pipe: atlassian/aws-s3-deploy:0.4.3
+    #           variables:
+    #             AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
+    #             AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
+    #             AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
+    #             S3_BUCKET: beta-development-ucla-fractal/public/${currTag}
+    #             LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
+    #             ACL: 'public-read'
+    #             EXTRA_ARGS: "--exclude=/public/docs/"
+    #             EXTRA_ARGS: "--delete"
+    #         # deploy public/docs to S3 and set to private
+    #         - pipe: atlassian/aws-s3-deploy:0.4.3
+    #           variables:
+    #             AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
+    #             AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
+    #             AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
+    #             S3_BUCKET: beta-development-ucla-fractal/build/docs
+    #             LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
+    #             ACL: 'private'
+    #             EXTRA_ARGS: "--delete"
+    #         # deploy icon images to S3
+    #         - pipe: atlassian/aws-s3-deploy:0.4.3
+    #           variables:
+    #             AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
+    #             AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
+    #             AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
+    #             S3_BUCKET: beta-development-ucla-fractal/img
+    #             LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
+    #             EXTRA_ARGS: "--delete"
+    #         - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
+    master:
       - step:
-          name: Fractal Beta-Development Pipeline
+          name: Fractal Production
+          caches:
+            - node
+          script:
+            # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+            - apt-get update && apt-get install -y curl jq
+            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
+            - npm install -g gulp
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npx semantic-release
+            # set current tag number -- this will be used to deploy to the correct S3 public folder
+            - export currTag=$(git describe --tags --abbrev=0)
+            - export currTag="${currTag#?}"
+            # update version # in package.json and push to repo
+            - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
+            - git add package.json
+            - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
+            - git push
+            # update version # in asset URL documentation page
+            - sed -i 's/%!CurrentVersion%!/$currTag/g' src/docs/02-installation/01-download.md
+            - gulp production
+            # deploy build to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: ucla-fractal/build
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+                ACL: 'public-read'
+                EXTRA_ARGS: "--delete"
+            # deploy public to S3 w/ read-access -- public directory will deployed to S3 directory corresponding to tag name
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: ucla-fractal/public/${currTag}
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
+                ACL: 'public-read'
+                EXTRA_ARGS: "--exclude=/public/docs/"
+                EXTRA_ARGS: "--delete"
+            # deploy public/docs to S3 and set to private
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: ucla-fractal/build/docs
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
+                ACL: 'private'
+                EXTRA_ARGS: "--delete"
+            # deploy icon images to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: ucla-fractal/img
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
+                EXTRA_ARGS: "--delete"
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
+    development:
+      - step:
+          name: Fractal Development
           caches:
             - node
           script:
@@ -77,27 +222,34 @@ pipelines:
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
             - npx semantic-release
-            # # set current tag number -- this will be used to deploy to the correct S3 public folder
+            # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export currTag=$(git describe --tags --abbrev=0)
             - export currTag="${currTag#?}"
+            # update version # in package.json and push to repo
+            - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
+            - git add package.json
+            - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
+            - git push
+            # update version # in asset URL documentation page
+            - sed -i 's/%!CurrentVersion%!/$currTag/g' src/docs/02-installation/01-download.md
             - gulp production
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
-                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
-                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
-                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
-                S3_BUCKET: beta-development-ucla-fractal/build
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: ucla-fractal-dev/build
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
             # deploy public to S3 w/ read-access -- public directory will deployed to S3 directory corresponding to tag name
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
-                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
-                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
-                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
-                S3_BUCKET: beta-development-ucla-fractal/public/${currTag}
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: ucla-fractal-dev/public/${currTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
@@ -105,11 +257,20 @@ pipelines:
             # deploy public/docs to S3 and set to private
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
-                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_BETA_DEV
-                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_BETA_DEV
-                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_BETA_DEV
-                S3_BUCKET: beta-development-ucla-fractal/build/docs
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: ucla-fractal-dev/build/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
+                EXTRA_ARGS: "--delete"
+            # deploy icon images to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: ucla-fractal-dev/img
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
