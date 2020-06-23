@@ -11,44 +11,50 @@ Icons in our library are provided as an extension. If you are using our UCLA the
 ### **Accessibility Requirements**
 The supplied icons are ADA compliant. Strategic Communications strongly encourages using these for your UCLA website or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files.
 
+
+### **Please Note**
+1. Extra styling with or without divs are added to better depict white icons
+1. SVG Icons: Extra div with background and display styling IS NOT REQUIRED for usage
+1. IMG Icons: Extra styling attribute IS NOT required for usage
+
 ## Denotive Icons
-{{view '@icons--image-denotive-arrow-down'}}
-{{view '@icons--image-denotive-arrow-left'}}
-{{view '@icons--image-denotive-arrow-right'}}
-{{view '@icons--image-denotive-arrow-up'}}
-{{view '@icons--image-denotive-forward'}}
-{{view '@icons--image-denotive-close'}}
-{{view '@icons--image-denotive-download'}}
-{{view '@icons--image-denotive-external-link'}}
-{{view '@icons--image-denotive-menu'}}
-{{view '@icons--image-denotive-sort'}}
-{{view '@icons--image-denotive-time'}}
-{{view '@icons--image-denotive-play'}}
-{{view '@icons--image-denotive-search'}}
-{{view '@icons--image-denotive-clear'}}
-{{view '@icons--image-denotive-form-submission'}}
-{{view '@icons--image-denotive-informational'}}
+{{view '@denotive-icons--image-arrow-down'}}
+{{view '@denotive-icons--image-arrow-left'}}
+{{view '@denotive-icons--image-arrow-right'}}
+{{view '@denotive-icons--image-arrow-up'}}
+{{view '@denotive-icons--image-forward'}}
+{{view '@denotive-icons--image-close'}}
+{{view '@denotive-icons--image-download'}}
+{{view '@denotive-icons--image-external-link'}}
+{{view '@denotive-icons--image-menu'}}
+{{view '@denotive-icons--image-sort'}}
+{{view '@denotive-icons--image-time'}}
+{{view '@denotive-icons--image-play'}}
+{{view '@denotive-icons--image-search'}}
+{{view '@denotive-icons--image-clear'}}
+{{view '@denotive-icons--image-form-submission'}}
+{{view '@denotive-icons--image-informational'}}
 
 ## Weather Icons
-{{view '@icons--a-image-weather'}}
+{{view '@weather-icons--image'}}
 
 ## Social Icons
-{{view '@icons--b-image-social'}}
+{{view '@social-icons--image'}}
 
 ## Code
 
 ### **Use as an Image**
 
-{{view '@icons--image-denotive-download'}}
+{{view '@denotive-icons--image-download'}}
 ```
-{{view '@icons--image-denotive-download'}}
+{{view '@denotive-icons--image-download'}}
 ```
 
 ### **Use as Inline SVG**
 
 Inline SVGs do not require a <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very top of your page.
 
-{{view '@icons--svg-denotive-download'}}
+{{view '@denotive-icons--svg-download'}}
 ```
-{{view '@icons--svg-denotive-download'}}
+{{view '@denotive-icons--svg-download'}}
 ```

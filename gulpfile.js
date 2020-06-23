@@ -34,6 +34,32 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
    cb();
  }
 
+ function generateFaviconLocal() {
+    return src('src/favicon.ico')
+     .pipe(image())
+     .pipe(dest('build'));
+ }
+
+ function generateFaviconProd() {
+    return src('src/favicon.ico')
+     .pipe(image())
+     .pipe(dest('build'));
+ }
+
+ // watchers
+
+ function watchStyles(done) {
+	 watch('src/scss/**/*.scss', series(generateCompLibStylesLocal, lintSassWatch)),
+	 watch('src/docs/scss/**/*.scss', series(generateDocStylesLocal, docLintSassWatch));
+	 done();
+ }
+
+ function watchJavascript(done) {
+	 watch('src/js/*.js', series(generateCompLibScriptsLocal, lintJavascriptLib));
+   watch('src/docs/js/*.js', series(generateDocScriptsLocal, lintJavascriptDoc));
+	 done();
+ }
+
  function lintSassWatch() {
    return src('src/scss/components/**/*.scss')
      .pipe(gulpStylelint({
@@ -52,19 +78,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
      }));
  }
 
- function stylesProductionPublic() {
-   return src('src/scss/**/*.scss')
-	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-     .pipe(concat('ucla-lib.min.css'))
-		 .pipe(dest('public/css'));
- }
-
- function docStylesProduction() {
-   return src('src/docs/scss/**/*.scss')
-    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-    .pipe(concat('global.css'))
-    .pipe(dest('public/docs/css'));
- }
+  // linters
 
  function lintJavascriptLib() {
       return src('src/js/*.js')
@@ -92,47 +106,91 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
            //.pipe(eslint.failAfterError());
    }
 
- function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(stylesProductionPublic, lintSassWatch)),
-	 watch('src/docs/scss/**/*.scss', series(docStylesProduction, docLintSassWatch));
-	 done();
+// component library styles
+
+ function generateCompLibStylesLocal() {
+   return src('src/scss/**/*.scss')
+	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
+     .pipe(dest('build/assets/css'))
  }
 
- function watchJavascript(done) {
-	 watch('src/js/*.js', series(concatJsLibPublic, lintJavascriptLib));
-   watch('src/docs/js/*.js', series(concatJsDoc, lintJavascriptDoc));
-	 done();
+ function generateCompLibStylesProd() {
+   return src('src/scss/**/*.scss')
+	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
+     .pipe(dest('build/css'))
+		 .pipe(dest('public/css'));
  }
 
-function concatJsLibPublic() {
+ // component library scripts
+
+ function generateCompLibScriptsLocal() {
+    return src('src/js/**.js')
+      .pipe(concat('ucla-lib-scripts.min.js'))
+      .pipe(dest('build/assets/js'));
+  }
+
+ function generateCompLibScriptsProd() {
    return src('src/js/**.js')
      .pipe(concat('ucla-lib-scripts.min.js'))
+     .pipe(dest('build/js'))
      .pipe(dest('public/js'));
  }
 
- function concatJsDoc() {
+// documentation styles
+
+function generateDocStylesLocal() {
+  return src('src/docs/scss/**/*.scss')
+   .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+   .pipe(concat('global.css'))
+   .pipe(dest('build/assets/docs/css'));
+}
+
+ function generateDocStylesProd() {
+   return src('src/docs/scss/**/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(concat('global.css'))
+    .pipe(dest('build/docs/css'));
+ }
+
+ // documentation scripts
+
+ function generateDocScriptsLocal() {
     return src('src/docs/js/**.js')
       .pipe(concat('scripts.js'))
-      .pipe(dest('public/docs/js'));
+      .pipe(dest('build/assets/docs/js'));
   }
 
- function concatImageDoc() {
+  function generateDocScriptsProd() {
+     return src('src/docs/js/**.js')
+       .pipe(concat('scripts.js'))
+       .pipe(dest('build/docs/js'));
+   }
+
+  // documentation images - filepaths are chosen to ensure
+  // images work both in local and prod environments
+
+ function generateDocImagesLocal() {
     return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('build/img'));
+     .pipe(dest('build/assets/build/docs/img'));
  }
 
- function concatFavicon() {
-    return src('src/favicon.ico')
+ function generateDocImagesProd() {
+    return src('src/docs/img/**/*')
      .pipe(image())
-     .pipe(dest('public'));
+     .pipe(dest('build/docs/img'));
  }
 
- function concatImagePublic() {
+// component images (i.e icons)
+
+ function generateCompLibImages() {
     return src('src/components/img/**/*')
      .pipe(image())
-     .pipe(dest('public/img'));
+     .pipe(dest('build/assets/img'));
  }
+
  /**
   * Fractal tasks
   */
@@ -178,42 +236,44 @@ function concatJsLibPublic() {
    });
  }
 
- // gulp
- exports.default = defaultTask
+// gulp
+exports.default = defaultTask
 
 // gulp styleProductionPublic
-exports.stylesProductionPublic = stylesProductionPublic;
+exports.generateCompLibStylesLocal = generateCompLibStylesLocal;
 
+// gulp fractalBuild
+exports.fractalBuild = fractalBuild;
 
 // gulp watch
 exports.watch = series(
 	fractalStart,
 	watchStyles,
 	watchJavascript,
-  concatJsLibPublic,
-  concatJsDoc
+  generateCompLibScriptsLocal,
+  generateDocScriptsLocal
 );
-
-// gulp fractalBuild
-exports.fractalBuild = fractalBuild;
 
 // gulp build
 exports.build = series(
 	fractalBuild,
-	stylesProductionPublic,
-  docStylesProduction,
-  concatJsLibPublic,
-  concatJsDoc
+	generateCompLibStylesLocal,
+  generateCompLibScriptsLocal,
+  generateCompLibImages,
+  generateDocStylesLocal,
+  generateDocScriptsLocal,
+  generateDocImagesLocal,
+  generateFaviconLocal
 );
 
 // gulp production
 exports.production = series(
 	fractalBuild,
-	stylesProductionPublic,
-  docStylesProduction,
-  concatJsLibPublic,
-  concatJsDoc,
-  concatImageDoc,
-  concatImagePublic,
-  concatFavicon
+	generateCompLibStylesProd,
+  generateCompLibScriptsProd,
+  generateCompLibImages,
+  generateDocStylesProd,
+  generateDocScriptsProd,
+  generateDocImagesProd,
+  generateFaviconProd
 );

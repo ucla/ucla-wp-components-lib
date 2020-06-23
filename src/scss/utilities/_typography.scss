@@ -61,8 +61,27 @@ p {
   em {
     font-style: italic;
   }
+}
 
-  delete {
-    text-decoration: line-through;
-  }
+.lead-in {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.legal {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: #333;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
 }
