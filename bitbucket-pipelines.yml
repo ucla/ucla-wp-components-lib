@@ -34,11 +34,15 @@ pipelines:
             - export currTag=$(git describe --tags --abbrev=0)
             - export currTag="${currTag#?}"
             # update version # in package.json and push to repo
+            - echo "ls before package.json change"
+            - ls
             - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
             - git add package.json
             - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
             - git push
             # update version # in asset URL documentation page
+            - echo "ls before documentation version change"
+            - ls
             - sed -i 's/%!CurrentVersion%!/$currTag/g' src/docs/02-installation/01-download.md
             - gulp production
             # deploy build to S3
