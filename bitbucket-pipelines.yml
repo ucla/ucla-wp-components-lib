@@ -37,9 +37,9 @@ pipelines:
             - echo "ls before package.json change"
             - ls
             - jq --arg currTag $currTag '.version = $currTag' package.json|sponge package.json
-            - git add package.json
-            - git commit -m "[skip ci] Current tag upgraded to ${currTag}"
-            - git push
+            - git add package.json package-lock.json
+            - set +e git commit -m "[skip ci] Current tag upgraded to ${currTag}"
+            - git push set -e
             # update version # in asset URL documentation page
             - echo "ls before documentation version change"
             - ls
