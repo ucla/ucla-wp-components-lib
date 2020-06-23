@@ -25,7 +25,7 @@ pipelines:
             - node
           script:
             # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
-            - apt-get update && apt-get install -y curl jq
+            - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
