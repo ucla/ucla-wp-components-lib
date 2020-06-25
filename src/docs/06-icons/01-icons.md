@@ -18,42 +18,34 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 1. IMG Icons: Extra styling attribute IS NOT required for usage
 
 ## Denotive Icons
-{{view '@image--arrow-down'}}
-{{view '@image--arrow-left'}}
-{{view '@image--arrow-right'}}
-{{view '@image--arrow-up'}}
-{{view '@image--forward'}}
-{{view '@image--close'}}
-{{view '@image--download'}}
-{{view '@image--external-link'}}
-{{view '@image--menu'}}
-{{view '@image--sort'}}
-{{view '@image--time'}}
-{{view '@image--play'}}
-{{view '@image--search'}}
-{{view '@image--clear'}}
-{{view '@image--form-submission'}}
+{{view '@denotive-image'}}
 
 ## Weather Icons
-{{view '@weather-icons--image'}}
+{{view '@weather-image'}}
 
 ## Social Icons
-{{view '@social-icons--image'}}
+{{view '@social-image'}}
 
 ## Code
 
 ### **Use as an Image**
 
-{{view '@image--download'}}
+<img alt="download" src="/img/icons/download-black.svg">
+<img alt="download" src="/img/icons/download-white.svg" style="background: #2774AE">
+<img alt="download" src="/img/icons/download-defaultblue.svg">
+
 ```
-{{view '@image--download'}}
+<!-- Download -->
+<img alt="download" src="/img/icons/download-black.svg">
+<img alt="download" src="/img/icons/download-white.svg" style="background: #2774AE">
+<img alt="download" src="/img/icons/download-defaultblue.svg">
 ```
 
 ### **Use as Inline SVG**
 
 Inline SVGs do not require a <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very top of your page.
 
-{{view '@denotive-icons--svg-download'}}
+{{view '@denotive-svg--download'}}
 ```
-{{view '@denotive-icons--svg-download'}}
+{{view '@denotive-svg--download'}}
 ```
