@@ -1,54 +1,116 @@
 a {
   font: $font;
-  color: $default-state;
 
-  &:hover {
-    color: white;
-    background: $hover-state;
-  }
+  // link used for light backgrounds
+  &.link {
+    color: $default-state;
 
-  &:active {
-    color: white;
-    background: $active-state;
-  }
-
-  &:focus {
-    //border: 1px dotted $hover-state;
-    //outline: 0;
-    //margin: -1px;
-  }
-
-  &:visited {
-    // color: $visited-state;
+    &:visited {
+      color: $visited-state;
+    }
 
     &:hover {
-      // color: white;
+      color: white;
+      background: $hover-state;
+    }
+
+    &:active {
+      color: white;
+      background: $active-state;
+    }
+
+    &:focus {
+      outline: 1px dotted $default-state;
     }
   }
 
-  &.white {
-    color: white;
+  // link used for dark backgrounds
+  &.white-link {
+    color: $white;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:focus {
+      outline: 1px dotted $white;
+      color: $white;
+    }
 
     &:hover {
-      color: $grey-80;
+      color: $medium-gray5;
       background: $hover-state-dark;
     }
 
     &:active {
-      color: $grey-80;
+      color: $medium-gray5;
       background: $active-state-dark;
     }
+  }
+}
 
-    &:focus {
-      //border: 1px dotted white;
-      //outline: 0;
+// Related Links
+
+.related-links {
+  border-bottom: 1px solid $emergency-bg-light;
+  padding-inline-start: 0;
+
+  li {
+    position: relative;
+    border-top: 1px solid $emergency-bg-light;
+    margin: 0;
+
+    // remove comp library's default bullet styling
+    &::before {
+      content: "";
+      margin-left: 0;
+      display: block;
     }
 
-    &:visited {
-      //color: white;
+    a {
+      line-height: 1.5rem;
+      color: $default-state;
+      text-decoration: none;
+      display: block;
+      padding: 12px 80px 12px 16px;
+      font-weight: bold;
+
+      &:focus {
+        background-color: $white;
+        color: $default-state;
+        outline: 1px dotted $default-state;
+        outline-offset: -3px;
+      }
+
+      &:hover, &:active {
+        color: $white;
+      }
 
       &:hover {
-        //color: $grey-80;
+        background-color: $hover-state;
+      }
+
+      &:active {
+        background-color: $active-state;
+      }
+
+      &.ext-link {
+        &::after {
+          content: '';
+          background: url('../img/icons/external-link-defaultblue.svg');
+          background-size: contain;
+          width: 24px;
+          height: 24px;
+          display: block;
+          position: absolute;
+          right: 24px;
+          top: calc(50% - 11px);
+        }
+
+        &:hover::after {
+          background: url('../img/icons/external-link-white.svg');
+          background-size: contain;
+        }
       }
     }
   }

@@ -45,12 +45,12 @@ Property | Sides | SCSS Breakpoint Variable | Size
  | "l" = Left | "lg" |  "16" = 16px
  | "x" = set both *-left and *-right | "xs" | "24" = 24px
  | "y" = set both *-top and *-bottom | | "32" = 32px
- | | | "36" = 36px
- | | | "40" = 40px
- | | | "48" = 48px
- | | | "56" = 56px
  | | | "64" = 64px
- | | | "72" = 72px
+ | | | "80" = 80px
+ | | |
+ | | |
+ | | |
+ | | |
 
 ### **Class Examples**
  Class Example | Spacing Size
