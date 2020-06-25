@@ -12,9 +12,9 @@
 
 **Further Reading**
 
-[Cards](https://inclusive-components.design/cards/) (Inclusive Components)<br>
-[5 Tips for Writing Headlines That Convert](https://www.nngroup.com/articles/headings-pickup-lines/) (Nielsen Norman Group)<br>
-[First 2 Words: A Signal for the Scanning Eye](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/) (Nielsen Norman Group)
+* [Cards](https://inclusive-components.design/cards/) (Inclusive Components)
+* [5 Tips for Writing Headlines That Convert](https://www.nngroup.com/articles/headings-pickup-lines/) (Nielsen Norman Group)
+* [First 2 Words: A Signal for the Scanning Eye](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/) (Nielsen Norman Group)
 
 ### **Accessibility Requirements**
 
@@ -99,20 +99,19 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Featured Story Card Anatomy Image" title="Featured Story Card Anatomy Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-anatomy.jpg"/>
+<img class="doc-images" alt="Featured Story Card Anatomy Image" title="Featured Story Card Anatomy Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-anatomy.jpg"/>
 
 1. Title (required)
 2. Supporting text (optional)
 3. Source (optional)
 4. Text Container (required)
-5. Source (optional)
-6. Image (optional)
-7. Background (required)
+5. Image (optional)
+6. Background (required)
 
 
 ### **Specs**
 
-<img class="doc-images" alt="Featured Story Card Specs Image" title="Featured Story Card Specs Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-specs.jpg"/>
+<img class="doc-images" alt="Featured Story Card Specs Image" title="Featured Story Card Specs Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-specs.jpg"/>
 
 ### **Code**
 

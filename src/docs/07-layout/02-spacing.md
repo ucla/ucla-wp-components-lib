@@ -25,15 +25,12 @@ We use an 8-point grid to define our spacing, meaning we use multiples of 8, fro
 ### Spacing Stack Illustration
 <img class="doc-images" alt="Spacing Stack Specs" title="Spacing Stack Specs" src="/build/docs/img/Spacing/spacing-stack-specs.jpg"/>
 
-### Stack Spacing Illustration
-<img class="doc-images" alt="Stack Spacing Specs" title="Stack Spacing Specs" src="/build/docs/img/Spacing/stack-spacing-specs.jpg"/>
-
 ## **Code**
 <!--Removed text under “Spacing” (and “Spacing” heading itself) and placed under “Spacing Class Structure below-->
 
 ### **Spacing Class Structure**
 
-We created responsive margin and padding classes that use the following shorthand for values. These classes are built from a default Sass map in multiples of 8, ranging from 4 to 64, and support divs, paragraphs, and HTML5 elements.
+We created responsive margin and padding classes that use the following shorthand for values. These classes are built from a default Sass map in multiples of 8, ranging from 4 to 80, and support divs, paragraphs, and HTML5 elements.
 
 Use this format:
 
@@ -71,7 +68,7 @@ Property | Sides | SCSS Breakpoint Variable | Size
 
 ### **Padding Use Example**
 ```
-{{view '@spacing--two'}}
+{{view '@spacing--padding'}}
 ```
 
 ### **The Center Class**
@@ -79,5 +76,5 @@ Property | Sides | SCSS Breakpoint Variable | Size
 We have a class called “mx-auto” that horizontally centers fixed-width block-level content. If the content that has display: block; and a set width, our class will set the horizontal margins to auto.
 
 ```
-{{view '@spacing--three'}}
+{{view '@spacing--center'}}
 ```

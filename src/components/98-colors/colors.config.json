@@ -105,7 +105,7 @@
       }, {
         "name": "Visited",
         "variable": "$visited-state-dark",
-        "hex": "#CFC3F3"
+        "hex": "#FFFFFF"
     }],
     "denotive": [{
         "name": "Error",
@@ -127,10 +127,6 @@
         "name": "Secondary Alert",
         "variable": "$secondary-alert-grey",
         "hex": "#999"
-      }, {
-        "name": "Visited",
-        "variable": "$visited-state-dark",
-        "hex": "#CFC3F3"
-    }]
+      }]
   }
 }
