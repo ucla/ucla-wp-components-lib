@@ -20,7 +20,7 @@ title: Alerts
 
 **Further Reading**
 
-[Using the alert role](https://developer.mozilla.org/en-US/build/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* [Using the alert role](https://developer.mozilla.org/en-US/build/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
 ## **Primary Alert**
 
@@ -46,8 +46,8 @@ title: Alerts
 
 <img class="doc-images" alt="Secondary Alert Anatomy Image" title="Secondary Alert Anatomy Image" src="/build/docs/img/Alerts/secondaryalert-anatomy.jpg"/>
 
-Alert Copy (required)
-Container (required)
+1. Alert Copy (required)
+2. Container (required)
 
 ### **Specs**
 

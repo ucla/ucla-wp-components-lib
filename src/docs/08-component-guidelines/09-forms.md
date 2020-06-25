@@ -71,7 +71,7 @@ title: Forms
 
 ### **Specs**
 
-<img class="doc-images" alt="Select Menus Specs Image" title="Select Menus Specs Image" src="/build/docs/img/Form/Select_Menu/selectmenu-states.jpg"/>
+<img class="doc-images" alt="Select Menus Specs Image" title="Select Menus Specs Image" src="/build/docs/img/Form/Select_Menu/selectmenu-specs.jpg"/>
 
 ### **Code**
 

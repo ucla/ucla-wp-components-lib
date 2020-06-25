@@ -1,5 +1,5 @@
 ---
-title: Forms
+title: Social
 ---
 ## Display links to official social channels or embed related content
 
@@ -59,7 +59,7 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Social Links Anatomy Image" title="Social Links Anatomy Image" src="build/docs/img/Social_Post_Tile/sociallinks-anatomy.jpg"/>
+<img class="doc-images" alt="Social Links Anatomy Image" title="Social Links Anatomy Image" src="/build/docs/img/Social_Post_Tile/sociallinks-anatomy.jpg"/>
 
 1. Social Media Icon (required)
 2. Container (required)

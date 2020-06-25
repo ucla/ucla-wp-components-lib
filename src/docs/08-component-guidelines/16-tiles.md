@@ -22,7 +22,7 @@ title: Tiles
 
 <img class="doc-images" alt="Basic Post Tiles Anatomy Image" title="Basic Post Tiles Anatomy Image" src="/build/docs/img/Tile/basictile-anatomy.jpg"/>
 
-1. Post Text (required)
+1. Tile Label (required)
 2. Gold Bar (required)
 3. Container (required)
 4. Photo (Required)

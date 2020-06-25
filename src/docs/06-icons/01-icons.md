@@ -18,22 +18,21 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 1. IMG Icons: Extra styling attribute IS NOT required for usage
 
 ## Denotive Icons
-{{view '@denotive-icons--image-arrow-down'}}
-{{view '@denotive-icons--image-arrow-left'}}
-{{view '@denotive-icons--image-arrow-right'}}
-{{view '@denotive-icons--image-arrow-up'}}
-{{view '@denotive-icons--image-forward'}}
-{{view '@denotive-icons--image-close'}}
-{{view '@denotive-icons--image-download'}}
-{{view '@denotive-icons--image-external-link'}}
-{{view '@denotive-icons--image-menu'}}
-{{view '@denotive-icons--image-sort'}}
-{{view '@denotive-icons--image-time'}}
-{{view '@denotive-icons--image-play'}}
-{{view '@denotive-icons--image-search'}}
-{{view '@denotive-icons--image-clear'}}
-{{view '@denotive-icons--image-form-submission'}}
-{{view '@denotive-icons--image-informational'}}
+{{view '@image--arrow-down'}}
+{{view '@image--arrow-left'}}
+{{view '@image--arrow-right'}}
+{{view '@image--arrow-up'}}
+{{view '@image--forward'}}
+{{view '@image--close'}}
+{{view '@image--download'}}
+{{view '@image--external-link'}}
+{{view '@image--menu'}}
+{{view '@image--sort'}}
+{{view '@image--time'}}
+{{view '@image--play'}}
+{{view '@image--search'}}
+{{view '@image--clear'}}
+{{view '@image--form-submission'}}
 
 ## Weather Icons
 {{view '@weather-icons--image'}}
@@ -45,9 +44,9 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 
 ### **Use as an Image**
 
-{{view '@denotive-icons--image-download'}}
+{{view '@image--download'}}
 ```
-{{view '@denotive-icons--image-download'}}
+{{view '@image--download'}}
 ```
 
 ### **Use as Inline SVG**
