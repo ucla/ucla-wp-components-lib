@@ -93,6 +93,7 @@ pipelines:
                 echo $currTag
                 echo $updateTag
                 echo "TAG UPGRADED"
+                git push --delete origin $updateTag
               else
                 echo $currTag
                 echo $updateTag
