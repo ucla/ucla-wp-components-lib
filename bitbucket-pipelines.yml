@@ -88,13 +88,12 @@ pipelines:
                 EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
             # delete tag after deploying changes, so tag can be used for production
-            - if [$updateTag != $currTag]
-              then
-                echo "TAG UPGRADED"
-                # git push --delete origin $updateTag
-            - if [$updateTag == $currTag]
-              then
-                echo "TAG DID NOT UPGRADE"
+            - 'if [$updateTag != $currTag]
+                    then
+                       echo "TAG UPGRADED"
+                   else
+                     echo "TAG DID NOT UPGRADE"
+                   fi'
     # master:
     #   - step:
     #       name: Fractal Production
