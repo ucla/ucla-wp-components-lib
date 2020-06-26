@@ -30,10 +30,12 @@ pipelines:
             - npm install -g gulp
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
             - export currTag=$(git describe --tags --abbrev=0)
+            - echo $currTag
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
             - export updateTag="${updateTag#?}"
+            - echo $updateTag
             # update version # in package.json
             - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
             # update version # in asset URL documentation page
@@ -88,7 +90,8 @@ pipelines:
             # delete tag after deploying changes, so tag can be used for production
             - if [$updateTag != $currTag]
               then
-                git push --delete origin $updateTag
+                echo "TAG UPGRADED"
+                # git push --delete origin $updateTag
             - if [$updateTag == $currTag]
               then
                 echo "TAG DID NOT UPGRADE"
