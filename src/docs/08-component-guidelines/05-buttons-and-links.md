@@ -86,7 +86,7 @@ Span wrapper that represents self-contained content.
 
 ### **Specs**
 
-<img class="doc-images" alt="Primary Button Types Specs Image" title="Primary Button Types Specs Image" alt="Primary Button Types Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-specs.jpg"/>
+<img class="doc-images" alt="Primary Button Types Specs Image" title="Primary Button Types Specs Image" alt="Primary Button Types Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-types-specs.jpg"/>
 
 <img class="doc-images" alt="Primary Button Light Background Specs Image" title="Primary Button Light Background Specs Image" alt="Primary Button Light Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-lgtbg-specs.jpg"/>
 
@@ -119,7 +119,7 @@ Span wrapper that represents self-contained content.
 
 ### **Specs**
 
-<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-specs.jpg"/>
+<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-states-specs.jpg"/>
 
 <img class="doc-images" alt="Secondary Button Variations Specs Image" title="Secondary Button Variations Specs Image" alt="Secondary Button Variations Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-variations-specs.jpg"/>
 
@@ -149,7 +149,7 @@ Span wrapper that represents self-contained content.
 
 ### **Specs**
 
-<img class="doc-images" alt="Tertiary Button States Specs Image" title="Tertiary Button States Specs Image" alt="Tertiary Button States Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-specs.jpg"/>
+<img class="doc-images" alt="Tertiary Button States Specs Image" title="Tertiary Button States Specs Image" alt="Tertiary Button States Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-states-specs.jpg"/>
 
 <img class="doc-images" alt="Tertiary Button Variations Specs Image" title="Tertiary Button Variations Specs Image" alt="Tertiary Button Variations Specs Image" src="/build/docs/img/Buttons/Tertiary_Button/tertiarybtn-variations-specs.jpg"/>
 
@@ -252,13 +252,13 @@ Span wrapper that represents self-contained content.
 
 <img class="doc-images" alt="Pagination States Image" title="Pagination States Image" alt="Pagination States Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-states.jpg"/>
 
-### **Specs**
-
-<img class="doc-images" alt="Pagination Specs Image" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
-
 ### **Variations**
 
 <img class="doc-images" alt="Pagination Variations Image" title="Pagination Variations Image" alt="Pagination Variations Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-variations.jpg"/>
+
+### **Specs**
+
+<img class="doc-images" alt="Pagination Specs Image" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
 
 ### ***Code***
 

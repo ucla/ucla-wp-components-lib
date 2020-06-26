@@ -55,7 +55,9 @@ Accordions provide a space-saving technique for displaying content on your viewp
 7. Accordion - Last Child (required)
 8. Bottom Border (required)
 
+### **Variations**
 
+<img class="doc-images" alt="Accordion Variations Image" title="Accordion Variations Image" src="/build/docs/img/Accordion/accordion-variations.jpg"/>
 
 ### **States**
 
@@ -64,10 +66,6 @@ Accordions provide a space-saving technique for displaying content on your viewp
 ### **Specs**
 
 <img class="doc-images" alt="Accordion Specs Image" title="Accordion Specs Image" src="/build/docs/img/Accordion/accordion-specs.jpg"/>
-
-### **Variations***
-
-<img class="doc-images" alt="Accordion Variations Image" title="Accordion Variations Image" src="/build/docs/img/Accordion/accordion-variations.jpg"/>
 
 ### **Code**
 
@@ -92,7 +90,7 @@ Use this button to display more content or more items in a list. You should cust
 
 ### **Specs**
 
-<img class="doc-images" alt="Load More Specs Image" title="Load More Specs Image" src="/build/docs/img/Load_More/loadmore-specs.jpg"/> 
+<img class="doc-images" alt="Load More Specs Image" title="Load More Specs Image" src="/build/docs/img/Load_More/loadmore-specs.jpg"/>
 
 ### **Code**
 

@@ -24,7 +24,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 **Further Readings**
 
-[ARIA tab role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role) (Mozilla)
+* [ARIA tab role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role) (Mozilla)
 
 ## **Anatomy**
 
