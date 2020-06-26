@@ -90,8 +90,13 @@ pipelines:
             # delete tag after deploying changes, so tag can be used for production
             - >
               if [ $updateTag != $currTag ]; then
+                echo $currTag
+                echo $updateTag
                 echo "TAG UPGRADED"
               else
+                echo $currTag
+                echo $updateTag
+                echo "TAG UPGRADED"
                 echo "TAG NOT UPGRADED"
               fi
     # master:
