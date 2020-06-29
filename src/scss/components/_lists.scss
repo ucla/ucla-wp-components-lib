@@ -7,7 +7,7 @@ ul {
   line-height: 24px;
 
   li {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 
     &::before {
       content: "\25AA";
@@ -21,6 +21,10 @@ ul {
     li &::before {
       content: "\25A1";
     }
+
+    ol, ul {
+      margin-top: 16px;
+    }
   }
 }
 
@@ -31,7 +35,7 @@ ol {
   line-height: 24px;
 
   li {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     counter-increment: li;
 
     &::before {
@@ -41,6 +45,10 @@ ol {
       width: 1em;
       margin-left: -1em;
       margin-right: 1.3em;
+    }
+
+    ol, ul {
+      margin-top: 16px;
     }
   }
 }

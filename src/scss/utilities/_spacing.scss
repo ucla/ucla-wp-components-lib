@@ -9,21 +9,26 @@
 $spacer: 1rem !default;
 $spacers: () !default;
 
+// To include more variations for the grid,
+// uncomment/add to the spacers list below
+
 $spacers: map-merge(
   (
     0: 0,
+    2: ($spacer * .125),  //2px
     4: ($spacer * .25),  //4px
     8: ($spacer * .5),   //8px
     12: ($spacer * .75),   //12px
     16: $spacer,          //16px
     24: ($spacer * 1.5),  //24px
     32: ($spacer * 2),   //32px
-    36: ($spacer * 2.25),   //36px
-    40: ($spacer * 2.5),  //40px
-    48: ($spacer * 3),    //48px
-    56: ($spacer * 3.625), //56px
+    // 36: ($spacer * 2.25),   //36px
+    // 40: ($spacer * 2.5),  //40px
+    // 48: ($spacer * 3),    //48px
+    // 56: ($spacer * 3.625), //56px
     64: ($spacer * 4),    //64px
-    72: ($spacer * 4.5)   //72px
+    // 72: ($spacer * 4.5)   //72px
+    80: ($spacer * 4.75),    //64px
   ),
   $spacers
 );

@@ -1,93 +1,90 @@
 ---
 title: Contributing Documentation
 ---
-We are a UCLA web community with a governance process that can be learned about in the documentation site of this website. Our goal is to make it easier for UCLA teams to design and develop great experiences for users across all UCLA applications. You do not have to be a developer to voice your opinion, but you will need some tech skill to contribute code. To join the discussion on what is needed please head to our forum. The below documentation is for developers and code contributors.
+This site is the official library for UCLA branded components and documentation on how to use them. As a proactive UCLA web community, we are always striving to improve and expand our library, with a governance process for reviewing contributed components. Anyone may contribute a component to the UCLA Web Component Library.
 
-This site is a preview of the Bruin Components and how to use them. This is also where we develop new features and components. In this documentation we keep track of status [types](/docs/01-introduction/03-status-types.md). If you're familiar with open source projects then you will be very familiar with this process. If not, please follow our principles and process closely and with a little bit of practice, you will learn to contribute and carry this knowledge into other projects.
+In this documentation we keep track of [status types](/build/index.html). If you’re familiar with open source projects then you will be familiar with this process. If not, please follow our principles and process closely and with a little bit of practice, you will learn to contribute and carry this knowledge into other projects. To join the discussion on what’s needed, please head to our forum.
 
-These component are to be used on official university websites.
+These components are to be used on official university websites and applications.
 
-## Contributing
+# **Contributing**
 
-### Principles
+## **Core Principles**
 
-**Be clear.**
+**Problem-Solving**
 
-Make design decisions based on user needs. Design interfaces that help our users accomplish their goals quickly and easily.
+We anticipate that there will likely be use cases we haven’t come across yet. We appreciate contributions based on current user and developer needs and insights into future needs.
 
-**Be flexible.**
+**Flexibility**
 
-Our design system is for all types of IU applications, even ones that have yet to be imagined. We need to design and build for flexibility.
+Embrace the unknowns. Design and develop with flexibility in mind. Done is better than perfect.
 
-**Be productive.**
+**Accessibility**
 
-Done is better than perfect. Iteration is only half the battle. Testing with users could reveal issues or questions we didn’t anticipate.
+ADA compliance is required legally, and as a trusted educational institute, it is our responsibility to uphold accessibility standards. All branches must first pass an ADA compliance assessment before being merged into the master branch.
 
-**Be ADA Compliant.**
-
-As an organization we need to be ADA compliant. All branches that are merged into the master branch must be ADA complaint.
-
-### The Process
+## **The Process**
 
 **Step One**
 
-Find an issue to resolve an issue. Please review our issue board, [here](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/), to find an issue that needs solving.
+See which issues currently need to be resolved. Please review our [issue board](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/). We use Bitbucket for our repository.
 
 **Step Two**
 
-Create your issue branch on the development repository [here](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/).
+Create your issue branch on the ["campus" repository](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/).
 
 **Step Three**
 
-Code!! Make sure to follow the principles of our contributing guidelines listed above.
+Code! Make sure to follow the principles of our contributing guidelines listed above.
 
-**Step Three**
+**Step Four**
 
-Once your code follows the guidelines above you can create a pull request for you branch to be merged into the master repository. Out UCLA components library governance team will review and get back to you with feedback. Remember, most pull requests do not get accepted on first try and our governance team tests in all major web browsers and devices. It is important to work with our governance team and follow the principals.
+Write the documentation for your component. Use either Component Documentation [Template 1](https://docs.google.com/document/d/1ZTx27t_yjLnQ4HxEh5SuEyjEMzJ-OzgjxwrcqSpLlxM/edit) (used for [Tables](/build/docs/component-guidelines/tables.html)) or [Template 2](https://docs.google.com/document/d/1skG3eTt6nktdypZFRUwMFJThjb5jEzVAgMjNJX5A1ks/edit) (used for [Buttons](/build/docs/component-guidelines/buttons-and-links.html)).
 
-### Pull Request Review
+**Step Five**
 
-Pull requests are reviewed the ****** of every month.
+Once your code is ready for approval, you can create a pull request for your branch to be merged into the master repository. Our UCLA Web Components Library governance team will review your request and provide you with feedback. It is important to work with our governance team and follow the principles. Our governance team will test your component on all major web browsers and devices. Most pull requests will not get accepted on your first try, but we strongly encourage you to implement the feedback notes and try again!
 
+## **Pull Request Review**
+
+Pull requests are reviewed the *TBD* of every month.
 
 **Strategic Communications**
 
-Strategic Communications is the approver and delegator of UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Strategic Communications for more information.
+Strategic Communications is the steward and approver of the UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Strategic Communications.
 
-Strategic Communications will review each component be it is approved for "Ready" status. We will look to make sure each component is on brand and follows the UCLA brand guidelines. If a new component is submitted the submitter is responsible for supplying documentation on its use. Undocumented components will not be approved for use.
+Strategic Communications will review each component before it is approved for “[Ready](/build/index.html)” status. Each component must be on brand and follow the [UCLA brand guidelines](http://brand.ucla.edu/). The component submitter is responsible for supplying documentation on its use. Undocumented components will not be approved.
 
-Strategic Communications will provide feedback on why a component was not approved for use according to the brand UCLA brand guidelines.
+Strategic Communications will provide feedback if a component was not approved for use based on UCLA brand guidelines.
 
+**OIT/DCP**
 
-**OIT/DCPs**
+OIT/DCP is the campus approved accessibility experts in WCAG compliance. For information on ADA compliance contact [ADA/504 compliance](https://www.ada.ucla.edu/).
 
-OIT/DCP is the campus approved ada compliance coordinator and has approved each component with the status "Ready".
-
-OIT/DCP will provide feedback on why a component was not approved for use according to the brand UCLA compliance guidelines.
-
+OIT/DCP will provide feedback on why a component was not approved for use according to the WCAG 2.0 AA compliance guidelines.
 
 ## Get Started with the Repository
-Visit the Repo at Strategic Communications BitBucket. https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/
+Visit the repository at the Strategic Communications Bitbucket: https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/
 
-This library was built on [Fractal](https:/fractal.build).
+This library was built on [Fractal](https://fractal.build).
 
 Clone repository and run `npm install`
 
 Additional steps may be required to install gulp.
 
-once installed locally use terminal to run the website and watch the code. The linters should be reading error free.
+Once installed locally, use terminal to run the website and watch the code. The linters should be reading error free.
 ```
-gulp fractalStart
+gulp watch
 ```
 Site will be viewable at http://localhost:3000
 
 
-Generate Assets
+Generate Local Assets
 ```
 gulp build
 ```
 
-Generate Assets with Compiled CSS.
+Generate Production Assets
 ```
 gulp production
 ```

@@ -10,61 +10,6 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
 }
 
-a {
-  font: $font;
-  color: $default-state;
-
-  &:hover {
-    color: white;
-    background: $hover-state;
-  }
-
-  &:active {
-    //color: white;
-    background: $active-state;
-  }
-
-  &:focus {
-    outline: 1px dotted $hover-state;
-    outline-offset: -4px;
-  }
-
-  // &:visited {
-  //   color: $visited-state;
-  //
-  //   &:hover {
-  //     color: white;
-  //   }
-  // }
-
-  &.white {
-    color: white;
-
-    &:hover {
-      color: $grey-80;
-      background: $hover-state-dark;
-    }
-
-    &:active {
-      color: $grey-80;
-      background: $active-state-dark;
-    }
-
-    &:focus {
-      outline: 1px dotted $hover-state;
-      outline-offset: -4px;
-    }
-
-    // &:visited {
-    //   color: white;
-    //
-    //   &:hover {
-    //     color: $grey-80;
-    //   }
-    // }
-  }
-}
-
 .Header-button {
   background: $default-state;
 }

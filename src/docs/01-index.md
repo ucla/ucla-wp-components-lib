@@ -3,7 +3,7 @@ title: About the UCLA Web Component Library
 ---
 Welcome to the UCLA Web Component Library.
 
-The foundation for UCLA’s digital brand can be found here. We’ve developed a library of components, along with thoughtfully articulated guidelines, documentation, and code to assist campus partners in designing and developing robust and accessible experiences across all UCLA websites and applications.
+The digital application of UCLA’s brand can be found here. We’ve developed a library of components, along with thoughtfully articulated guidelines, documentation, and code to assist campus partners in designing and developing robust and accessible experiences across all UCLA websites and applications.
 
 Our goal is to provide flexible resources and tools for any person or team who contributes to UCLA's diverse and substantial digital infrastructure.
 

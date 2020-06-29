@@ -6,10 +6,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 36px;
-  line-height: 50.4px;
+  line-height: 40.5px;
 
   @media (min-width: breakpoint-min(md)) {
-    font-size: 54px;
+    font-size: 48px;
     line-height: 54px;
   }
 }
@@ -20,7 +20,7 @@ h2 {
 
   @media (min-width: breakpoint-min(md)) {
     font-size: 36px;
-    line-height: 50.4px;
+    line-height: 40.5px;
   }
 }
 
@@ -61,8 +61,35 @@ p {
   em {
     font-style: italic;
   }
+}
 
-  delete {
-    text-decoration: line-through;
-  }
+.lead {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.body-copy-small {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: #333;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.mark-text {
+  background: #FFF0A5
+}
+
+.insert-text {
+  background: #DAEBFE
 }

@@ -6,8 +6,12 @@
 /***************** STOP!!! READ THIS!! *****************/
 // These are fractal or mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 
-@import "./_variables";
-@import "./_colors";
+// Using styles from the component pages since they are identical
+@import "./../../scss/utilities/_colors";
+@import "./../../scss/utilities/_variables";
+@import "./../../scss/utilities/_typography";
+@import "./../../scss/utilities/_mixins/_breakpoints";
+@import "./../../scss/components/_links";
 @import "./_colors-docs";
 @import "./_docs";
 @import "./_mandlebrot-child";

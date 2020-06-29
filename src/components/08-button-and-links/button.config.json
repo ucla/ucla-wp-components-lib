@@ -1,40 +1,5 @@
 {
 	"title": "Buttons",
   "collated": "true",
-  
-	"variants": [
-		{
-			"name": "Icon",
-			"status": "ready",
-			"context": {
-				"button": {
-					"copy": "Icon Button"
-				}
-    	}
-		},
-		{
-			"name": "Gold",
-			"status": "in_progress",
-			"context": {
-				"button": {
-					"copy": "Gold Button"
-				}
-    	}
-		},
-		{
-			"name": "Gold Icon",
-			"status": "in_progress",
-			"context": {
-				"button": {
-					"copy": "Gold Icon Button"
-				}
-    	}
-		}
-	],
-	"status": "ready",
-  "context": {
-		"button": {
-			"copy": "Button Copy"
-		}
-  }
+	"status": "ready"
 }
