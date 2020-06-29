@@ -90,11 +90,10 @@ pipelines:
             # delete tag after deploying changes, so tag can be used for production
             - >
               if [ v"$updateTag" != $currTag ]; then
-                git push --delete origin $updateTag
+                git push --delete origin v"$updateTag"
               else
                 echo "The tag was not upgraded, so tag deletion was skipped."
               fi
-              
     # master:
     #   - step:
     #       name: Fractal Production
