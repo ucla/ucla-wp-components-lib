@@ -1,6 +1,6 @@
 {
   "branches": [
-    {name: 'pending', release: false},
+    {name: 'pending', release: true},
     {name: 'main', prerelease: beta},
     {name: 'development', prerelease: beta}
   ],
