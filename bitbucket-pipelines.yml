@@ -94,6 +94,7 @@ pipelines:
               else
                 echo "The tag was not upgraded, so tag deletion was skipped."
               fi
+              
     # master:
     #   - step:
     #       name: Fractal Production
