@@ -89,9 +89,10 @@ pipelines:
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
             # delete tag after deploying changes, so tag can be used for production
             - >
-              if [ $updateTag != $currTag ]; then
+              if [ v"$updateTag" != $currTag ]; then
                 echo $currTag
                 echo $updateTag
+                echo v"$updateTag"
                 echo "TAG UPGRADED"
                 git push --delete origin $updateTag
               else
