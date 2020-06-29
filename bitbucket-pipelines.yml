@@ -120,7 +120,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents/build/${updateTag}
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
@@ -130,7 +130,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents/public/${updateTag}
+                S3_BUCKET: dev-webcomponents.ucla.edu/public/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
@@ -141,7 +141,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents/build/${updateTag}/docs
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
@@ -151,7 +151,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents/img
+                S3_BUCKET: dev-webcomponents.ucla.edu/img
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
