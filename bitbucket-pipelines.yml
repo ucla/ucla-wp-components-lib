@@ -7,8 +7,6 @@
 #4) Deploys public folder in S3 (/public/x.x.x/)
 #5) Deploys docs styles folder in S3 (/build/x.x.x/docs/)
 #6) Deploys icon assets to root of S3
-#7) If in development branch and new tag is created, delete the tag
-#7) (to allow multiple changes to development and to keep version# in sync with production)
 
 ## TODO
 #1) Only deploy updated files
@@ -55,7 +53,7 @@ pipelines:
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
-            # deploy public to S3 w/ read-access -- public directory will deployed to S3 directory corresponding to tag name
+            # deploy public to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
@@ -66,7 +64,7 @@ pipelines:
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
                 EXTRA_ARGS: "--delete"
-            # deploy public/docs to S3 and set to private
+            # deploy public/docs to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
@@ -96,14 +94,9 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
-            - export currTag=$(git describe --tags --abbrev=0)
-            - echo $currTag
-            - npx semantic-release
-            # set current tag number -- this will be used to deploy to the correct S3 public folder
+            # set current tag number -- this will be used to update version #s in doc and package.json
             - export updateTag=$(git describe --tags --abbrev=0)
             - export updateTag="${updateTag#?}"
-            - echo $updateTag
             # update version # in package.json
             - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
             # update version # in asset URL documentation page
@@ -120,28 +113,28 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
-            # deploy public to S3 w/ read-access -- public directory will deployed to S3 directory corresponding to tag name
+            # deploy public to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/public/${updateTag}
+                S3_BUCKET: dev-webcomponents.ucla.edu/public/
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
                 EXTRA_ARGS: "--delete"
-            # deploy public/docs to S3 and set to private
+            # deploy public/docs to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}/docs
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
@@ -155,10 +148,3 @@ pipelines:
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
-            # delete tag after deploying changes
-            - >
-              if [ v"$updateTag" != $currTag ]; then
-                git push --delete origin v"$updateTag"
-              else
-                echo "The tag was not upgraded, so tag deletion was skipped."
-              fi
