@@ -15,6 +15,7 @@
 #2) Invalidate CDN urls on pipeline success (manually update @ https://console.aws.amazon.com/cloudfront/home?#distribution-settings:EUU3JRBWPI1HQ)
 #3) Only invalidate updated files
 
+
 image: node:latest
 
 pipelines:
