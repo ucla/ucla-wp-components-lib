@@ -90,16 +90,9 @@ pipelines:
             # delete tag after deploying changes, so tag can be used for production
             - >
               if [ v"$updateTag" != $currTag ]; then
-                echo $currTag
-                echo $updateTag
-                echo v"$updateTag"
-                echo "TAG UPGRADED"
                 git push --delete origin $updateTag
               else
-                echo $currTag
-                echo $updateTag
-                echo "TAG UPGRADED"
-                echo "TAG NOT UPGRADED"
+                echo "The tag was not upgraded, so tag deletion was skipped."
               fi
     # master:
     #   - step:
