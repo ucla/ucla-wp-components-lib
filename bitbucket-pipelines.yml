@@ -113,7 +113,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/
+                S3_BUCKET: dev-webcomponents.ucla.edu/build
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
@@ -123,7 +123,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/public/
+                S3_BUCKET: dev-webcomponents.ucla.edu/public
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
