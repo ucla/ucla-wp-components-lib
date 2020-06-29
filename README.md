@@ -31,34 +31,31 @@ gulp production
 
 ## Branch / Bucket Information (BETA)
 
-The "beta" branch is deployed at https://beta-ucla-fractal.s3-us-west-1.amazonaws.com/build/index.html, while "beta-development" branch is deployed at https://beta-development-ucla-fractal.s3-us-west-1.amazonaws.com/build/index.html
+The "main" branch is deployed at the S3 bucket [here](https://s3.console.aws.amazon.com/s3/buckets/webcomponents.ucla.edu/?region=us-west-1), while "development" branch is deployed [here](https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents.ucla.edu/?region=us-west-1)
 
 DURING BETA:
 
-1. "beta" - This will act as the "production" branch. Updates from the "beta-development" branch should be merged into this branch. This will trigger the deployment pipeline to deploy to the "beta" S3 bucket.
+1. "main" - This is the "production" branch. Approved releases from the "development" branch should be merged into this branch. Changes in this branch triggers the pipeline to deploy to the "webcomponents.ucla.edu" S3 bucket. Campus partners/developers should create their branch based off of this since this branch will include the most up-to-date reviewed updates.
 
-1. "beta-development" - This will act as the "development" branch. Updates from the "beta-updates" branch should be merged into this branch. This will trigger the deployment pipeline to the "beta-development" S3 bucket. Semantic versioning will be upgraded during pipeline build.
+1. "development" - This is the "development" branch. Approved releases from the "campus" branch should be merged into this branch. This will trigger the deployment pipeline to the "dev-webcomponents.ucla.edu" S3 bucket.
 
-1. "beta-updates" - Developers should create their branch based off of this branch and merge to this branch when making updates. Once satisfied, reviewers should merge this branch into "beta-development". This branch is necessary so that we aren't upgrading version numbers for every single update made by contributors (i.e upgrading version number once per sprint release vs. upgrading version number for each update made during a sprint).
+1. "campus" - Campus partners/developers should send a PR for their updates into this branch. Once approved, reviewers should merge this branch into "development" branch.
 
 ## Semantic Versioning Automation (BETA)
 
 Semantic Versioning is automated with the [semantic-release](https://github.com/semantic-release/semantic-release) library. This library will check the project's commit messages during the pipeline build to upgrade version numbers accordingly.
 
-A quick overview of the current flow for BETA is as follows:
-
-1. Developer creates a branch from "beta"
-1. Following the "Contributing Flow", the developer makes changes, commits and push changes to the "beta-updates" branch
-1. PR is reviewed and merged
-1. Merging from "beta-updates" to "beta-development" will trigger the deployment pipeline to the ["beta-development" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-development-ucla-fractal/public/?region=us-west-1&tab=overview) (Beta Development Environment)
-1. During the pipeline build, semantic release is called and upgrades version number accordingly
-1. When development updates are ready to be deployed, the "beta-development" branch should be merged into "beta" branch. This will trigger the deployment pipeline to the ["beta" S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/beta-ucla-fractal/public/?region=us-west-1&tab=overview) (Beta Production Environment)
-
 ## Contributing Flow (BETA)
 
-When making updates during the beta phase, please create a branch from the "beta" branch.
+1. Developer creates a branch from "main" branch
+1. Following the "Contributing Flow", the campus partner/developer makes changes, commits and push changes to the "campus" branch (regular `git add`, `git commit -m` and `git push` flow should be used)
+1. PR is reviewed, tags are checked, and branch is merged into "campus" branch
+1. On development release day (schedule TBA), reviewers will release the updates from "campus" branch by merging the branch to "development" (`npm run commit` workflow should be used).
+1. On production release day (schedule TBA), reviewers will release the updates from "development" branch by merging the branch to "main"
 
-To commit:
+## Reviewer Notes
+
+When merging approved updates from "campus" branch, please follow the following commiting flow:
 
 1. `git add .`
 1. `npm run commit`  <!-- Answer questions to generate commit message -->
