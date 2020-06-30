@@ -83,7 +83,7 @@ pipelines:
                 S3_BUCKET: webcomponents.ucla.edu/img
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
-            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
     development:
       - step:
           name: Web Components Development
@@ -147,4 +147,4 @@ pipelines:
                 S3_BUCKET: dev-webcomponents.ucla.edu/img
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
-            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> ${updateTag} <=="
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
