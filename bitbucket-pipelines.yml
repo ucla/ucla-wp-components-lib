@@ -99,13 +99,11 @@ pipelines:
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
             - export updateTag="${updateTag#?}"
-            # update version # in package.json
-            - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
             # update version # in asset URL documentation page
             - sed -i "s/%!CurrentVersion%!/"$updateTag"/g" src/docs/02-installation/01-download.md
             - gulp production
             # add updated package.json and compiled public assets
-            - git add package.json package-lock.json public/*
+            - git add public/*
             - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
             - git push
             - set -e
