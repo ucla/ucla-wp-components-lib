@@ -24,7 +24,7 @@
     background-size: contain;
   }
 
-  &--primary {
+  &--lightbg {
     background: $default-state;
     color: $white;
 
@@ -50,7 +50,7 @@
   }
 
   // primary-dark button styling
-  &--gold {
+  &--darkbg {
     color: black;
     background: $ucla-gold;
 

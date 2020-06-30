@@ -66,4 +66,4 @@ Text about code
 Code
 
 ## Note:
-1. To make more specific styling edits to images in documentation, please use the "img" HTML tag instead of the markdown's image syntax (i.e ```<img class="classToBeEditedInStyleSheet" title="Title" src="/build/docs/img/RestOfFilePath"/>```)
+1. To make more specific styling edits to images in documentation, please use the "img" HTML tag instead of the markdown's image syntax (i.e ```<img class="classToBeEditedInStyleSheet" title="Title" src="/build/%!CurrentVersion%!/docs/img/RestOfFilePath"/>```)

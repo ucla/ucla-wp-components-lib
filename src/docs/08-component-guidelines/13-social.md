@@ -25,7 +25,7 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Social Post Tiles Anatomy Image" title="Social Post Tiles Anatomy Image" src="/build/docs/img/Social_Post_Tile/socialposttile-anatomy.jpg"/>
+<img class="doc-images" alt="Social Post Tiles Anatomy Image" title="Social Post Tiles Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/socialposttile-anatomy.jpg"/>
 
 1. Post Text (required)
 2. Handle and Time Stamp (required)
@@ -37,19 +37,19 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **States**
 
-<img class="doc-images" alt="Social Post Tiles States Image" title="Social Post Tiles States Image" src="/build/docs/img/Social_Post_Tile/socialposttile-states.jpg"/>
+<img class="doc-images" alt="Social Post Tiles States Image" title="Social Post Tiles States Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/socialposttile-states.jpg"/>
 
 ### **With Photo States**
 
-<img class="doc-images" alt="Social Post Tiles with Photo States Image" title="Social Post Tiles with Photo States Image" src="/build/docs/img/Social_Post_Tile/socialposttile-withphoto-states.jpg"/>
+<img class="doc-images" alt="Social Post Tiles with Photo States Image" title="Social Post Tiles with Photo States Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/socialposttile-withphoto-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Social Post Tiles Specs Image" title="Social Post Tiles Specs Image" src="/build/docs/img/Social_Post_Tile/socialposttile-specs.jpg"/>
+<img class="doc-images" alt="Social Post Tiles Specs Image" title="Social Post Tiles Specs Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/socialposttile-specs.jpg"/>
 
 ### **With Photo Specs**
 
-<img class="doc-images" alt="Social Post Tiles with Photo Specs Image" title="Social Post Tiles with Photo Specs Image" src="/build/docs/img/Social_Post_Tile/socialposttile-withphoto-states.jpg"/>
+<img class="doc-images" alt="Social Post Tiles with Photo Specs Image" title="Social Post Tiles with Photo Specs Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/socialposttile-withphoto-states.jpg"/>
 
 ### **Code**
 
@@ -59,18 +59,18 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Social Links Anatomy Image" title="Social Links Anatomy Image" src="/build/docs/img/Social_Post_Tile/sociallinks-anatomy.jpg"/>
+<img class="doc-images" alt="Social Links Anatomy Image" title="Social Links Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/sociallinks-anatomy.jpg"/>
 
 1. Social Media Icon (required)
 2. Container (required)
 
 ### **States**
 
-<img class="doc-images" alt="Social Links States Image" title="Social Links States Image" src="/build/docs/img/Social_Post_Tile/sociallinks-states.jpg"/>
+<img class="doc-images" alt="Social Links States Image" title="Social Links States Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/sociallinks-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Social Links Specs Image" title="Social Links Specs Image" src="/build/docs/img/Social_Post_Tile/sociallinks-specs.jpg"/>
+<img class="doc-images" alt="Social Links Specs Image" title="Social Links Specs Image" src="/build/%!CurrentVersion%!/docs/img/Social_Post_Tile/sociallinks-specs.jpg"/>
 
 ### **Code**
 

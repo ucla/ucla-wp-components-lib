@@ -20,7 +20,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Factoid Anatomy Image" title="Factoid Anatomy Image" src="/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-anatomy.jpg"/>
+<img class="doc-images" alt="Factoid Anatomy Image" title="Factoid Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-anatomy.jpg"/>
 
 1. Factoid Text (required)
 2. Border (required)
@@ -28,7 +28,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Specs**
 
-<img class="doc-images" alt="Factoid Specs Image" title="Factoid Specs Image" src="/build/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-specs.jpg"/>
+<img class="doc-images" alt="Factoid Specs Image" title="Factoid Specs Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Factoids/factoid-specs.jpg"/>
 
 ### **Code**
 
@@ -38,7 +38,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Rankings Anatomy Image" title="Rankings Anatomy Image" src="/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-anatomy.jpg"/>
+<img class="doc-images" alt="Rankings Anatomy Image" title="Rankings Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-anatomy.jpg"/>
 
 1. Ranking Text (required)
 2. Descriptor Text (required)
@@ -48,7 +48,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Specs**
 
-<img class="doc-images" alt="Rankings Specs Image" title="Rankings Specs Image" src="/build/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-specs.jpg"/>
+<img class="doc-images" alt="Rankings Specs Image" title="Rankings Specs Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Rankings/ranking-specs.jpg"/>
 
 ### **Code**
 
@@ -58,7 +58,7 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Statistics Anatomy Image" title="Statistics Anatomy Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-anatomy.jpg"/>
+<img class="doc-images" alt="Statistics Anatomy Image" title="Statistics Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-anatomy.jpg"/>
 
 1. Value Text (required)
 2. Descriptor Text (required)
@@ -69,11 +69,11 @@ As an institution of higher learning and research, we have a lot of useful data 
 
 ### **Variations**
 
-<img class="doc-images" alt="Statistics Variations Image" title="Statistics Variations Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-variations.jpg"/>
+<img class="doc-images" alt="Statistics Variations Image" title="Statistics Variations Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-variations.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Statistics Specs Image" title="Statistics Specs Image" src="/build/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-specs.jpg"/>
+<img class="doc-images" alt="Statistics Specs Image" title="Statistics Specs Image" src="/build/%!CurrentVersion%!/docs/img/Factoids-Rankings-Statistics/Statistics/statistic-specs.jpg"/>
 
 ### **Code**
 

@@ -27,4 +27,4 @@ We encourage any person or team that is designing and/or developing a website or
 
 ## **Who Can Contribute**
 
-We embody UCLA’s inclusive values and welcome anyone who wants to support this library’s continuing development. Please see our [Contributing](/build/docs/contribute/contributing.html) section for further details and specific guidelines.
+We embody UCLA’s inclusive values and welcome anyone who wants to support this library’s continuing development. Please see our [Contributing](/build/%!CurrentVersion%!/docs/contribute/contributing.html) section for further details and specific guidelines.

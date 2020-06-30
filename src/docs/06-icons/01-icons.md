@@ -4,7 +4,7 @@ title: Icons
 Icons in our library are provided as an extension. If you are using our UCLA theme, the icons are already conveniently installed on your site. We have also supplied the icons for download via zip file.
 
 ### **Download Icons**
-<a class="create-button" href="https://ucla-fractal.s3-us-west-1.amazonaws.com/UCLA-WEB-ICONS.zip">Download Icons Zip File</a>
+<a class="create-button" href="/UCLA-WEB-ICONS.zip">Download Icons Zip File</a>
 
 ## **Usage**
 

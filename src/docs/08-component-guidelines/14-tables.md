@@ -21,7 +21,7 @@ title: Tables
 * [W3 Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/)
 
 ### **Anatomy**
-<img class="doc-images" alt="Table Anatomy" title="Table Anatomy" src="/build/docs/img/Table/table-anatomy.jpg"/>
+<img class="doc-images" alt="Table Anatomy" title="Table Anatomy" src="/build/%!CurrentVersion%!/docs/img/Table/table-anatomy.jpg"/>
 
 1. Table Header Row (optional)
 2. Table Header Column (optional)
@@ -33,10 +33,10 @@ title: Tables
 
 
 ### **Specs**
-<img class="doc-images" alt="Table Specs" title="Table Specs" src="/build/docs/img/Table/table-specs.jpg"/>
+<img class="doc-images" alt="Table Specs" title="Table Specs" src="/build/%!CurrentVersion%!/docs/img/Table/table-specs.jpg"/>
 
 ## **Mobile Behavior**
-<img class="doc-images" alt="Table Mobile Behavior" title="Table Mobile Behavior" src="/build/docs/img/Table/table-mobilebehavior.jpg"/>
+<img class="doc-images" alt="Table Mobile Behavior" title="Table Mobile Behavior" src="/build/%!CurrentVersion%!/docs/img/Table/table-mobilebehavior.jpg"/>
 
 ## **Code**
 
@@ -64,7 +64,7 @@ The global class, "align-right" can be used to right align items.
 ```
 
 #### **Sort Data Table**
-Tables can include sorting behavior. Be sure to include <a href="/build/docs/installation/download.html">the script</a> in your project and include the "sortTable" class name to the table class.
+Tables can include sorting behavior. Be sure to include <a href="/build/%!CurrentVersion%!/docs/installation/download.html">the script</a> in your project and include the "sortTable" class name to the table class.
 
 ```
 {{view '@table--sort'}}

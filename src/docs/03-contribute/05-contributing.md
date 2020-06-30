@@ -3,7 +3,7 @@ title: Contributing Documentation
 ---
 This site is the official library for UCLA branded components and documentation on how to use them. As a proactive UCLA web community, we are always striving to improve and expand our library, with a governance process for reviewing contributed components. Anyone may contribute a component to the UCLA Web Component Library.
 
-In this documentation we keep track of [status types](/build/index.html). If you’re familiar with open source projects then you will be familiar with this process. If not, please follow our principles and process closely and with a little bit of practice, you will learn to contribute and carry this knowledge into other projects. To join the discussion on what’s needed, please head to our forum.
+In this documentation we keep track of [status types](/build/%!CurrentVersion%!/index.html). If you’re familiar with open source projects then you will be familiar with this process. If not, please follow our principles and process closely and with a little bit of practice, you will learn to contribute and carry this knowledge into other projects. To join the discussion on what’s needed, please head to our forum.
 
 These components are to be used on official university websites and applications.
 
@@ -39,7 +39,7 @@ Code! Make sure to follow the principles of our contributing guidelines listed a
 
 **Step Four**
 
-Write the documentation for your component. Use either Component Documentation [Template 1](https://docs.google.com/document/d/1ZTx27t_yjLnQ4HxEh5SuEyjEMzJ-OzgjxwrcqSpLlxM/edit) (used for [Tables](/build/docs/component-guidelines/tables.html)) or [Template 2](https://docs.google.com/document/d/1skG3eTt6nktdypZFRUwMFJThjb5jEzVAgMjNJX5A1ks/edit) (used for [Buttons](/build/docs/component-guidelines/buttons-and-links.html)).
+Write the documentation for your component. Use either Component Documentation [Template 1](https://docs.google.com/document/d/1ZTx27t_yjLnQ4HxEh5SuEyjEMzJ-OzgjxwrcqSpLlxM/edit) (used for [Tables](/build/%!CurrentVersion%!/docs/component-guidelines/tables.html)) or [Template 2](https://docs.google.com/document/d/1skG3eTt6nktdypZFRUwMFJThjb5jEzVAgMjNJX5A1ks/edit) (used for [Buttons](/build/%!CurrentVersion%!/docs/component-guidelines/buttons-and-links.html)).
 
 **Step Five**
 
@@ -53,7 +53,7 @@ Pull requests are reviewed the *TBD* of every month.
 
 Strategic Communications is the steward and approver of the UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Strategic Communications.
 
-Strategic Communications will review each component before it is approved for “[Ready](/build/index.html)” status. Each component must be on brand and follow the [UCLA brand guidelines](http://brand.ucla.edu/). The component submitter is responsible for supplying documentation on its use. Undocumented components will not be approved.
+Strategic Communications will review each component before it is approved for “[Ready](/build/%!CurrentVersion%!/index.html)” status. Each component must be on brand and follow the [UCLA brand guidelines](http://brand.ucla.edu/). The component submitter is responsible for supplying documentation on its use. Undocumented components will not be approved.
 
 Strategic Communications will provide feedback if a component was not approved for use based on UCLA brand guidelines.
 

@@ -39,7 +39,7 @@
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Basic Card Anatomy Image" title="Basic Card Anatomy Image" src="/build/docs/img/Cards/Basic_Card/basiccard-anatomy.jpg"/>
+<img class="doc-images" alt="Basic Card Anatomy Image" title="Basic Card Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Basic_Card/basiccard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -49,7 +49,7 @@
 
 ### **Specs**
 
-<img class="doc-images" alt="Basic Card Specs Image" title="Basic Card Specs Image" src="/build/docs/img/Cards/Basic_Card/basiccard-specs.jpg"/>
+<img class="doc-images" alt="Basic Card Specs Image" title="Basic Card Specs Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Basic_Card/basiccard-specs.jpg"/>
 
 ### **Code**
 
@@ -63,7 +63,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Event Card Anatomy Image" title="Event Card Anatomy Image" src="/build/docs/img/Cards/Event_Card/eventcard-anatomy.jpg"/>
+<img class="doc-images" alt="Event Card Anatomy Image" title="Event Card Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Event_Card/eventcard-anatomy.jpg"/>
 
 1. Date (required)
 2. Image (required)
@@ -75,7 +75,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-<img class="doc-images" alt="Event Card Specs Image" title="Event Card Specs Image" src="/build/docs/img/Cards/Event_Card/eventcard-specs.jpg"/>
+<img class="doc-images" alt="Event Card Specs Image" title="Event Card Specs Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Event_Card/eventcard-specs.jpg"/>
 
 ### **Code**
 
@@ -99,7 +99,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Featured Story Card Anatomy Image" title="Featured Story Card Anatomy Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-anatomy.jpg"/>
+<img class="doc-images" alt="Featured Story Card Anatomy Image" title="Featured Story Card Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-anatomy.jpg"/>
 
 1. Title (required)
 2. Supporting text (optional)
@@ -111,7 +111,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-<img class="doc-images" alt="Featured Story Card Specs Image" title="Featured Story Card Specs Image" src="/build/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-specs.jpg"/>
+<img class="doc-images" alt="Featured Story Card Specs Image" title="Featured Story Card Specs Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Featured_Story_Card/featuredstorycard-desktop-specs.jpg"/>
 
 ### **Code**
 
@@ -125,7 +125,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Story Card Anatomy Image" title="Story Card Anatomy Image" src="/build/docs/img/Cards/Story_Card/storycard-anatomy.jpg"/>
+<img class="doc-images" alt="Story Card Anatomy Image" title="Story Card Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Story_Card/storycard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -135,7 +135,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-<img class="doc-images" alt="Story Card Specs Image" title="Story Card Specs Image" src="/build/docs/img/Cards/Story_Card/storycard-specs.jpg"/>
+<img class="doc-images" alt="Story Card Specs Image" title="Story Card Specs Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Story_Card/storycard-specs.jpg"/>
 
 ### **Code**
 
@@ -149,7 +149,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Person Card Anatomy Image" title="Person Card Anatomy Image" src="/build/docs/img/Cards/Person_Card/personcard-anatomy.jpg"/>
+<img class="doc-images" alt="Person Card Anatomy Image" title="Person Card Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Person_Card/personcard-anatomy.jpg"/>
 
 1. Image (optional)
 2. Title (required)
@@ -159,7 +159,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Specs**
 
-<img class="doc-images" alt="Person Card Specs Image" title="Person Card Specs Image" src="/build/docs/img/Cards/Person_Card/personcard-specs.jpg"/>
+<img class="doc-images" alt="Person Card Specs Image" title="Person Card Specs Image" src="/build/%!CurrentVersion%!/docs/img/Cards/Person_Card/personcard-specs.jpg"/>
 
 ### **Code**
 

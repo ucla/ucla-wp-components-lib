@@ -20,13 +20,13 @@ title: Alerts
 
 **Further Reading**
 
-* [Using the alert role](https://developer.mozilla.org/en-US/build/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* [Using the alert role](https://developer.mozilla.org/en-US/build/%!CurrentVersion%!/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
 ## **Primary Alert**
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Primary Alert Anatomy Image" title="Primary Alert Anatomy Image" src="/build/docs/img/Alerts/primaryalert-anatomy.jpg"/>
+<img class="doc-images" alt="Primary Alert Anatomy Image" title="Primary Alert Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/primaryalert-anatomy.jpg"/>
 
 1. Alert Copy (required)
 2. Container (required)
@@ -34,7 +34,7 @@ title: Alerts
 
 ### **Specs**
 
-<img class="doc-images" alt="Primary Alert Specs Image" title="Primary Alert Specs Image" src="/build/docs/img/Alerts/primaryalert-specs.jpg"/>
+<img class="doc-images" alt="Primary Alert Specs Image" title="Primary Alert Specs Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/primaryalert-specs.jpg"/>
 
 ### **Code**
 
@@ -44,14 +44,14 @@ title: Alerts
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Secondary Alert Anatomy Image" title="Secondary Alert Anatomy Image" src="/build/docs/img/Alerts/secondaryalert-anatomy.jpg"/>
+<img class="doc-images" alt="Secondary Alert Anatomy Image" title="Secondary Alert Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/secondaryalert-anatomy.jpg"/>
 
 1. Alert Copy (required)
 2. Container (required)
 
 ### **Specs**
 
-<img class="doc-images" alt="Secondary Alerts Specs Image" title="Secondary Alerts Specs Image" src="/build/docs/img/Alerts/secondaryalert-specs.jpg"/>
+<img class="doc-images" alt="Secondary Alerts Specs Image" title="Secondary Alerts Specs Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/secondaryalert-specs.jpg"/>
 
 ### **Code**
 
@@ -61,7 +61,7 @@ title: Alerts
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Success Alert Anatomy Image" title="Success Alert Anatomy Image" src="/build/docs/img/Alerts/successalert-anatomy.jpg"/>
+<img class="doc-images" alt="Success Alert Anatomy Image" title="Success Alert Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/successalert-anatomy.jpg"/>
 
 1. Alert Copy (required)
 2. Success Icon (required)
@@ -70,7 +70,7 @@ title: Alerts
 
 ### **Specs**
 
-<img class="doc-images" alt="Success Alert Specs Image" title="Success Alert Specs Image" src="/build/docs/img/Alerts/successalert-specs.jpg"/>
+<img class="doc-images" alt="Success Alert Specs Image" title="Success Alert Specs Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/successalert-specs.jpg"/>
 
 ### **Code**
 
@@ -80,7 +80,7 @@ title: Alerts
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Error Alert Anatomy Image" title="Error Alert Anatomy Image" src="/build/docs/img/Alerts/erroralert-anatomy.jpg"/>
+<img class="doc-images" alt="Error Alert Anatomy Image" title="Error Alert Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/erroralert-anatomy.jpg"/>
 
 1. Alert Copy (required)
 2. Error Icon (required)
@@ -89,7 +89,7 @@ title: Alerts
 
 ### **Specs**
 
-<img class="doc-images" alt="Error Alert Specs Image" title="Error Alert Specs Image" src="/build/docs/img/Alerts/erroralert-specs.jpg"/>
+<img class="doc-images" alt="Error Alert Specs Image" title="Error Alert Specs Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/erroralert-specs.jpg"/>
 
 ### **Code**
 
@@ -99,7 +99,7 @@ title: Alerts
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Warning Alert Anatomy Image" title="Warning Alert Anatomy Image" src="/build/docs/img/Alerts/warningalert-anatomy.jpg"/>
+<img class="doc-images" alt="Warning Alert Anatomy Image" title="Warning Alert Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/warningalert-anatomy.jpg"/>
 
 1. Alert Copy (required)
 2. Warning Icon (required)
@@ -108,7 +108,7 @@ title: Alerts
 
 ### **Specs**
 
-<img class="doc-images" alt="Warning Alert Specs Image" title="Warning Alert Specs Image" src="/build/docs/img/Alerts/warningalert-specs.jpg"/>
+<img class="doc-images" alt="Warning Alert Specs Image" title="Warning Alert Specs Image" src="/build/%!CurrentVersion%!/docs/img/Alerts/warningalert-specs.jpg"/>
 
 ### **Code**
 
