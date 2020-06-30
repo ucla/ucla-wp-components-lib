@@ -94,7 +94,9 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            # set current tag number -- this will be used to update version #s in doc and package.json
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npx semantic-release
+            # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
             - export updateTag="${updateTag#?}"
             # update version # in package.json
@@ -113,7 +115,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
@@ -123,7 +125,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/public
+                S3_BUCKET: dev-webcomponents.ucla.edu/public/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
@@ -134,7 +136,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/docs
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
@@ -147,4 +149,4 @@ pipelines:
                 S3_BUCKET: dev-webcomponents.ucla.edu/img
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
                 EXTRA_ARGS: "--delete"
-            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $currTag <=="
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> ${updateTag} <=="
