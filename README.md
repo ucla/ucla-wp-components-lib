@@ -24,6 +24,7 @@ Generate Assets with compiles css and javascript.
 gulp build
 ```
 
+
 Generate Assets with Compiled CSS, javascript, and images.
 ```
 gulp production
@@ -50,12 +51,12 @@ Semantic Versioning is automated with the [semantic-release](https://github.com/
 1. Developer creates a branch from "main" branch
 1. Following the "Contributing Flow", the campus partner/developer makes changes, commits and push changes to the "campus" branch (regular `git add`, `git commit -m` and `git push` flow should be used)
 1. PR is reviewed, tags are checked, and branch is merged into "campus" branch
-1. On development release day (schedule TBA), reviewers will release the updates from "campus" branch by merging the branch to "development" (`npm run commit` workflow should be used).
-1. On production release day (schedule TBA), reviewers will release the updates from "development" branch by merging the branch to "main"
+1. On development release day (schedule TBA), reviewers will release the updates from "campus" branch by merging the branch to "development"
+1. On production release day (schedule TBA), reviewers will release the updates from "development" branch by merging the branch to "main" (`npm run commit` workflow should be used).
 
 ## Reviewer Notes
 
-When merging approved updates from "campus" branch, please follow the following commiting flow:
+When merging approved updates from "development" branch to "main" branch, please follow the following commiting flow:
 
 1. `git add .`
 1. `npm run commit`  <!-- Answer questions to generate commit message -->
