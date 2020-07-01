@@ -112,7 +112,7 @@ pipelines:
             - export updateTag=$(git describe --tags --abbrev=0)
             - export updateTag="${updateTag#?}"
             # update version # in asset URL documentation page
-            - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
+            # - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
             # add updated package.json and compiled public assets
