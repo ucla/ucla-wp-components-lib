@@ -1,0 +1,52 @@
+.blockquote-wrapper {
+  .blockquote {
+    display: block;
+    border-left: 4px solid $ucla-blue;
+    padding: 0 0 0 32px;
+    margin: 24px 24px 0;
+
+    &__quote {
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+      margin-bottom: 16px;
+      color: $medium-grey5;
+    }
+
+    &__citation {
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+      color: $medium-grey4;
+      max-width: 212px;
+
+      @media (min-width: breakpoint-min(md)) {
+        max-width: 312px;
+      }
+    }
+
+    @media only screen and (min-width: breakpoint-min(md)) {
+      width: calc((100%/2) - (24px/2));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (min-width: breakpoint-min(lg)) {
+      width: calc((100%/3) - (48px/3));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 24px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

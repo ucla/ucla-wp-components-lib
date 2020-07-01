@@ -1,13 +1,11 @@
-/* html5reset.css - 01/11/2011 */
+/**** UCLA html5reset.css ****/
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+b, i, dl, dt, dd, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
@@ -19,10 +17,6 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-}
-
-body {
-  line-height: 1;
 }
 
 article,aside,details,figcaption,figure,
@@ -67,54 +61,48 @@ mark {
   font-weight: bold;
 }
 
-del {
-  text-decoration: line-through;
-}
-
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid $medium-grey3;
-  margin: 1em 0;
-  padding: 0;
-}
 
 input, select {
   vertical-align: middle;
 }
 
 /*  SECTIONS  ============================================================================= */
-.section {
+.ucla {
   clear: both;
   padding: 0px;
   margin: 0px;
 }
 
 /*  GROUPING  ============================================================================= */
-.group::before,
-.group::after {
+.campus::before,
+.campus::after {
   content: "";
   display: table;
 }
 
-.group::after {
+.campus::after {
   clear: both;
 }
 
-.group {
+.campus {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.ucla.campus {
+  display: block;
+  position: relative;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding: 0 12px;
+  }
 }
 
 /*  GRID COLUMN SETUP   ==================================================================== */
@@ -130,6 +118,28 @@ input, select {
 @media only screen and (max-width: 768px) {
   .col {
     margin: 1% 0 1% 0%;
+  }
+}
+
+
+.ucla.campus {
+  display: block;
+  position: relative;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding: 0 12px;
+  }
+
+  // First child fix if you put a title above span. See example on templates/health-saftey.php
+  .first-child.col {
+    margin-left: 0;
+  }
+
+  .last-child.col {
+    margin-left: 0;
   }
 }
 

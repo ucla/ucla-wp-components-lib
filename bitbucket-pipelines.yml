@@ -1,47 +1,174 @@
-# This is a build configuration for PHP.
-# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
-# Only use spaces to indent your .yml configuration
-# -----
+## Author: Kevin Ma
 
-# Specify a docker image from Docker Hub as your build environment
-# All of your pipelines scripts will be executed within this docker image.
-# image: php:7.2-cli
+## Pipeline:
+#1) Runs semantic library to get semantic version
+#2) Update version # in documentation (download URL) and package.json
+#3) Deploys version's build folder in S3 (/build/x.x.x/)
+#4) Deploys public folder in S3 (/public/x.x.x/)
+#5) Deploys docs styles folder in S3 (/build/x.x.x/docs/)
+#6) Deploys icon assets to root of S3
+#7) Make and deploy index.html used to redirect users to the most updated docs
+
+## TODO
+#1) Only deploy updated files
+#2) Invalidate CDN urls on pipeline success (manually update @ https://console.aws.amazon.com/cloudfront/home?#distribution-settings:EUU3JRBWPI1HQ)
+#3) Only invalidate updated files
+
+
+image: node:latest
 
 pipelines:
   branches:
-    '{master}':
+    main:
       - step:
-          name: Fractal Build
-          image: atlassian/default-image:2
+          name: Web Components Production
           caches:
             - node
           script:
-            - npm install
+            # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+            - apt-get update && apt-get install -y curl jq moreutils
+            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - gulp
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npx semantic-release
+            # set current tag number -- this will be used to deploy to the correct S3 public folder
+            - export updateTag=$(git describe --tags --abbrev=0)
+            - export updateTag="${updateTag#?}"
+            # update version # in package.json
+            - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
+            # update version # in asset URL documentation page
+            - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
-            - apt-get update
-            - apt-get install -y zip
-            - zip -r application.zip .
-            - pipe: atlassian/aws-code-deploy:0.2.9
+            # add updated package.json and compiled public assets
+            - git add package.json package-lock.json public/*
+            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
+            - git push
+            - set -e
+            # deploy build to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
-                AWS_ACCESS_KEY_ID: 'AKIAX3FU5UAQSFPXDSBO'
-                AWS_SECRET_ACCESS_KEY: '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'
-                AWS_DEFAULT_REGION: 'us-west-2'
-                APPLICATION_NAME: deployment-components
-                S3_BUCKET: deployment-ucla-components
-                COMMAND: 'upload'
-                ZIP_FILE: 'application.zip'
-                DEPLOYMENT_GROUP: componentsDeploy
-            - pipe: atlassian/aws-code-deploy:0.2.9
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: webcomponents.ucla.edu/build/${updateTag}
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+                ACL: 'public-read'
+                EXTRA_ARGS: "--delete"
+            # deploy public to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
-                AWS_ACCESS_KEY_ID: 'AKIAX3FU5UAQSFPXDSBO'
-                AWS_SECRET_ACCESS_KEY: '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'
-                AWS_DEFAULT_REGION: 'us-west-2'
-                APPLICATION_NAME: deployment-components
-                DEPLOYMENT_GROUP: componentsDeploy
-                S3_BUCKET: deployment-ucla-components
-                COMMAND: 'deploy'
-                WAIT: 'true'
-                IGNORE_APPLICATION_STOP_FAILURES: 'true'
-                FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: webcomponents.ucla.edu/public/${updateTag}
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
+                ACL: 'public-read'
+                EXTRA_ARGS: "--exclude=/public/docs/"
+                EXTRA_ARGS: "--delete"
+            # deploy public/docs to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: webcomponents.ucla.edu/build/${updateTag}/docs
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
+                ACL: 'private'
+                EXTRA_ARGS: "--delete"
+            # deploy icon images to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: webcomponents.ucla.edu/img
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
+                EXTRA_ARGS: "--delete"
+            - mkdir redirection
+            - touch ./redirection/index.html
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: webcomponents.ucla.edu
+                LOCAL_PATH: ./redirection
+                EXTRA_ARGS: "--website-redirect=https://webcomponents.ucla.edu/build/${updateTag}/index.html"
+            - rm -rf ./redirection
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
+    development:
+      - step:
+          name: Web Components Development
+          caches:
+            - node
+          script:
+            # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+            - apt-get update && apt-get install -y curl jq moreutils
+            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
+            - npm install -g gulp
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npx semantic-release
+            # set current tag number -- this will be used to deploy to the correct S3 public folder
+            - export updateTag=$(git describe --tags --abbrev=0)
+            - export updateTag="${updateTag#?}"
+            # update version # in asset URL documentation page
+            - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
+            - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
+            - gulp production
+            # add updated package.json and compiled public assets
+            - git add public/*
+            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
+            - git push
+            - set -e
+            # deploy build to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+                ACL: 'public-read'
+                EXTRA_ARGS: "--delete"
+            # deploy public to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: dev-webcomponents.ucla.edu/public/${updateTag}
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
+                ACL: 'public-read'
+                EXTRA_ARGS: "--exclude=/public/docs/"
+                EXTRA_ARGS: "--delete"
+            # deploy public/docs to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}/docs
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
+                ACL: 'private'
+                EXTRA_ARGS: "--delete"
+            # deploy icon images to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: dev-webcomponents.ucla.edu/img
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img/icons
+                EXTRA_ARGS: "--delete"
+            - mkdir redirection
+            - touch ./redirection/index.html
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: dev-webcomponents.ucla.edu
+                LOCAL_PATH: ./redirection
+                EXTRA_ARGS: "--website-redirect=https://s3-us-west-1.amazonaws.com/dev-webcomponents.ucla.edu/build/${updateTag}/index.html"
+            - rm -rf ./redirection
+            - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="

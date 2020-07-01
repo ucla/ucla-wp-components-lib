@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Information</title>
+    <g id="Icon/information-lighterdefaultblue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M24,4 C12.96,4 4,12.96 4,24 C4,35.04 12.96,44 24,44 C35.04,44 44,35.04 44,24 C44,12.96 35.04,4 24,4 Z M26,34 L22,34 L22,22 L26,22 L26,34 Z M26,18 L22,18 L22,14 L26,14 L26,18 Z" id="Shape" fill="#8BB8E8"></path>
+    </g>
+</svg>

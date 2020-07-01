@@ -1,0 +1,45 @@
+/***************** STOP!!! READ THIS!! *****************/
+// These are mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
+// https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
+
+.Header {
+  background-color: #2774AE;
+}
+
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.Header-button {
+  background: $default-state;
+}
+
+// Sidebar Nav
+.Frame-panel--sidebar {
+  background-color: white;
+
+  .Navigation {
+    background-color: white;
+
+    .Tree {
+      a {
+        &:hover {
+          color: $grey-80;
+        }
+      }
+
+      &-item {
+        border-bottom: 1px solid $medium-grey3;
+        background-color: white;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        &.is-closed {
+          background-color: white;
+        }
+      }
+    }
+  }
+}

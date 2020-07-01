@@ -1,64 +1,13 @@
-/*******
-
-FIXED FIRST ROW Table component
-
-TABLE RULES:
-1. To align text right add class "fixed-table__text-right" to td element.
-2. NUMBERS MUST be aligned right using class="fixed-table__text-right".
-3. Total or distinctive columns at bottom should be wrapped in <tfoot> tags.
-
-HTML structure:
-
-<div class="fixed-table">
-  <div class="fixed-table__scroller">
-      <table class="fixed-table__wrapper">
-          <thead>
-              <tr>
-                <th class="fixed-table__sticky-col">Column One Title</th>
-                <th>Column Two Title</th>
-                <th>Column Three Title</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td class="fixed-table__sticky-col">First Row Title</td>
-                <td class="fixed-table__text-right">First row second column info. Text right example.</td>
-                <td>First row third column info.</td>
-              </tr>
-              <tr>
-                <td class="fixed-table__sticky-col">Second Row Bold Title Example</td>
-                <td>Second row second column info.</td>
-                <td>Second row third column info.</td>
-              </tr>
-              <tr class="blue-total">
-                <td class="fixed-table__sticky-col">Third Row Title</td>
-                <td>Third row second column info.</td>
-                <td>Third row third column info.</td>
-              </tr>
-              <tfoot>
-                <tr class="yellow-total">
-                  <td  class="fixed-table__sticky-col">Total Example</td>
-                  <td class="fixed-table__text-right">99,999</td>
-                  <td class="fixed-table__text-right">99,999</td>
-                </tr>
-              </tfoot>
-          </tbody>
-      </table>
-  </div>
-</div>
-
-Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
-*******/
-
 .fixed-table {
   position: relative;
   width: 100%;
+  overflow: hidden;
 
   &__scroller {
-    margin-left: 40%; /* If you change this line you must also change the nested class ".fixed-table__sticy-col" width to match. */
+    margin-left: calc(36% + 16px); /* If you change this line you must also change the nested class ".fixed-table__sticky-col" width to match. */
     overflow-x: auto;
     overflow-y: visible;
-    padding-bottom: 5px;
+    //padding-bottom: 5px;
 
     @media (min-width: breakpoint-min(md)) {
       overflow-x: visible;
@@ -77,8 +26,8 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
         line-height: 0.75rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: $medium-grey4;
-        padding: 12px 16px 8px;
+        color: $medium-grey5;
+        padding: 8px 16px;
         word-wrap: break-word;
         text-align: left;
 
@@ -129,7 +78,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
         font-size: 0.8rem;
         line-height: 1rem;
         color: $grey-80;
-        padding: 12px 16px 8px;
+        padding: 8px 16px;
         word-wrap: break-word;
       }
     }
@@ -154,8 +103,8 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
       td {
         font-size: 0.8rem;
         line-height: 1rem;
-        color: $grey-80;
-        padding: 12px 16px 8px;
+        color: $medium-grey5;
+        padding: 8px 16px;
         word-wrap: break-word;
       }
     }
@@ -174,15 +123,6 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
       }
     }
 
-    tr td:nth-child(1) {
-      position: absolute;
-      font-weight: normal;
-
-      @media (min-width: breakpoint-min(md)) {
-        width: 34%;
-      }
-    }
-
     tr th:nth-child(1) {
       width: 34%;
     }
@@ -195,7 +135,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
       &::before, &::after {
         content: '\25E4';
         font-size: 6px;
-        color: $grey-40;
+        color: $medium-grey5;
         display: block;
         position: absolute;
         left: 18px;
@@ -227,7 +167,7 @@ Responsive Table JSFiddle: https://jsfiddle.net/zinoui/BmLpV/
     left: 0;
     position: absolute;
     top: auto;
-    width: 40%; /* If you change this line change you must also change the parent class ".fixed-table__scroller" margin-left to match. */
+    width: 36%; /* If you change this line change you must also change the parent class ".fixed-table__scroller" margin-left to match. */
     overflow-y: scroll;
     font-weight: bold;
 

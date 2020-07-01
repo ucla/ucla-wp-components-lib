@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Error</title>
+    <defs>
+        <path d="M24,4 C12.96,4 4,12.96 4,24 C4,35.04 12.96,44 24,44 C35.04,44 44,35.04 44,24 C44,12.96 35.04,4 24,4 Z M26,34 L22,34 L22,30 L26,30 L26,34 Z M26,26 L22,26 L22,14 L26,14 L26,26 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/error-red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#D60000" xlink:href="#path-1"></use>
+    </g>
+</svg>

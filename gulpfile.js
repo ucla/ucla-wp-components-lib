@@ -6,6 +6,7 @@ const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
 const fractal = require("./fractal");
 const eslint = require('gulp-eslint');
+const image = require('gulp-image');
 
 sass.compiler = require('node-sass');
 
@@ -28,21 +29,39 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-
- function styles() {
- 	return src('src/scss/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('public/css'));
+ // For debugging, make sure gulp is installed
+ function defaultTask(cb) {
+   cb();
  }
 
- function docStyles() {
- 	return src('src/docs/**/*.scss')
- 		.pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
- 		.pipe(dest('public/docs/css'));
+ function generateFaviconLocal() {
+    return src('src/favicon.ico')
+     .pipe(image())
+     .pipe(dest('build'));
+ }
+
+ function generateFaviconProd() {
+    return src('src/favicon.ico')
+     .pipe(image())
+     .pipe(dest('build'));
+ }
+
+ // watchers
+
+ function watchStyles(done) {
+	 watch('src/scss/**/*.scss', series(generateCompLibStylesLocal, lintSassWatch)),
+	 watch('src/docs/scss/**/*.scss', series(generateDocStylesLocal, docLintSassWatch));
+	 done();
+ }
+
+ function watchJavascript(done) {
+	 watch('src/js/*.js', series(generateCompLibScriptsLocal, lintJavascriptLib));
+   watch('src/docs/js/*.js', series(generateDocScriptsLocal, lintJavascriptDoc));
+	 done();
  }
 
  function lintSassWatch() {
-   return src('src/scss/conponents/**/*.scss')
+   return src('src/scss/components/**/*.scss')
      .pipe(gulpStylelint({
        reporters: [
          {formatter: 'string', console: true}
@@ -59,13 +78,9 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
      }));
  }
 
- function stylesProduction() {
-   return src('src/scss/**/*.scss')
-	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-		 .pipe(dest('public/css'));
- }
+  // linters
 
- function lintJavascript() {
+ function lintJavascriptLib() {
       return src('src/js/*.js')
           // eslint() attaches the lint output to the "eslint" property
           // of the file object so it can be used by other modules.
@@ -78,22 +93,104 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
           //.pipe(eslint.failAfterError());
   }
 
- function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(styles, lintSassWatch)),
-	 watch('src/docs/**/*.scss', series(docStyles, docLintSassWatch));
-	 done();
+  function lintJavascriptDoc() {
+       return src('src/docs/js/*.js')
+           // eslint() attaches the lint output to the "eslint" property
+           // of the file object so it can be used by other modules.
+           .pipe(eslint())
+           // eslint.format() outputs the lint results to the console.
+           // Alternatively use eslint.formatEach() (see Docs).
+           .pipe(eslint.format())
+           // To have the process exit with an error code (1) on
+           // lint error, return the stream and pipe to failAfterError last.
+           //.pipe(eslint.failAfterError());
+   }
+
+// component library styles
+
+ function generateCompLibStylesLocal() {
+   return src('src/scss/**/*.scss')
+	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
+     .pipe(dest('build/assets/css'))
  }
 
- function watchJavascript(done) {
-	 watch('src/js/*.js', series(lintJavascript));
-	 done();
+ function generateCompLibStylesProd() {
+   return src('src/scss/**/*.scss')
+	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+     .pipe(concat('ucla-lib.min.css'))
+     .pipe(dest('build/css'))
+		 .pipe(dest('public/css'));
  }
 
-function concatJS() {
+ // component library scripts
+
+ function generateCompLibScriptsLocal() {
+    return src('src/js/**.js')
+      .pipe(concat('ucla-lib-scripts.min.js'))
+      .pipe(dest('build/assets/js'));
+  }
+
+ function generateCompLibScriptsProd() {
    return src('src/js/**.js')
-     .pipe(concat('scripts.js'))
+     .pipe(concat('ucla-lib-scripts.min.js'))
+     .pipe(dest('build/js'))
      .pipe(dest('public/js'));
  }
+
+// documentation styles
+
+function generateDocStylesLocal() {
+  return src('src/docs/scss/**/*.scss')
+   .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+   .pipe(concat('global.css'))
+   .pipe(dest('build/assets/docs/css'));
+}
+
+ function generateDocStylesProd() {
+   return src('src/docs/scss/**/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+    .pipe(concat('global.css'))
+    .pipe(dest('build/docs/css'));
+ }
+
+ // documentation scripts
+
+ function generateDocScriptsLocal() {
+    return src('src/docs/js/**.js')
+      .pipe(concat('scripts.js'))
+      .pipe(dest('build/assets/docs/js'));
+  }
+
+  function generateDocScriptsProd() {
+     return src('src/docs/js/**.js')
+       .pipe(concat('scripts.js'))
+       .pipe(dest('build/docs/js'));
+   }
+
+  // documentation images - filepaths are chosen to ensure
+  // images work both in local and prod environments
+
+ function generateDocImagesLocal() {
+    return src('src/docs/img/**/*')
+     .pipe(image())
+     .pipe(dest('build/assets/build/docs/img'));
+ }
+
+ function generateDocImagesProd() {
+    return src('src/docs/img/**/*')
+     .pipe(image())
+     .pipe(dest('build/docs/img'));
+ }
+
+// component images (i.e icons)
+
+ function generateCompLibImages() {
+    return src('src/components/img/**/*')
+     .pipe(image())
+     .pipe(dest('build/assets/img'));
+ }
+
  /**
   * Fractal tasks
   */
@@ -139,40 +236,44 @@ function concatJS() {
    });
  }
 
+// gulp
+exports.default = defaultTask
 
+// gulp styleProductionPublic
+exports.generateCompLibStylesLocal = generateCompLibStylesLocal;
 
+// gulp fractalBuild
+exports.fractalBuild = fractalBuild;
 
-exports.stylesProduction = stylesProduction;
-
-exports.watch = watchStyles;
-
-exports.styles = series(
-  styles,
-  docStyles
-);
-
-exports.fractalStart = series(
+// gulp watch
+exports.watch = series(
 	fractalStart,
 	watchStyles,
 	watchJavascript,
-	concatJS
+  generateCompLibScriptsLocal,
+  generateDocScriptsLocal
 );
 
-exports.fractalBuild = fractalBuild;
-
-exports.default = series(
-	fractalBuild,
-	styles
-);
-
+// gulp build
 exports.build = series(
 	fractalBuild,
-	styles,
-	docStyles,
-	concatJS
+	generateCompLibStylesLocal,
+  generateCompLibScriptsLocal,
+  generateCompLibImages,
+  generateDocStylesLocal,
+  generateDocScriptsLocal,
+  generateDocImagesLocal,
+  generateFaviconLocal
 );
 
+// gulp production
 exports.production = series(
 	fractalBuild,
-	stylesProduction
+	generateCompLibStylesProd,
+  generateCompLibScriptsProd,
+  generateCompLibImages,
+  generateDocStylesProd,
+  generateDocScriptsProd,
+  generateDocImagesProd,
+  generateFaviconProd
 );
