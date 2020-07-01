@@ -169,6 +169,6 @@ pipelines:
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
                 S3_BUCKET: dev-webcomponents.ucla.edu
                 LOCAL_PATH: ./redirection
-                EXTRA_ARGS: "--website-redirect=https://s3-us-west-1.amazonaws.com/dev-webcomponents.ucla.edu/build/${updateTag}/index.html"
+                EXTRA_ARGS: "--website-redirect=http://dev-webcomponents.ucla.edu.s3-us-west-1.amazonaws.com/build/${updateTag}/index.html"
             - rm -rf ./redirection
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
