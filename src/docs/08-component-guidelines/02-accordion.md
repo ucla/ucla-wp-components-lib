@@ -63,9 +63,13 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 <img class="doc-images" alt="Accordion States Image" title="Accordion States Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-states.jpg"/>
 
-### **Specs**
+### **Desktop Specs**
 
-<img class="doc-images" alt="Accordion Specs Image" title="Accordion Specs Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-specs.jpg"/>
+<img class="doc-images" alt="Accordion Desktop Specs Image" title="Accordion Specs Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-specs.jpg"/>
+
+### **Mobile Specs**
+
+<img class="doc-images" alt="Accordion Mobile Specs Image" title="Accordion Specs Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-specs-mobile.jpg"/>
 
 ### **Code**
 
