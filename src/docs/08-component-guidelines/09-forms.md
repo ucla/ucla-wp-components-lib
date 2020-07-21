@@ -165,11 +165,11 @@ title: Forms
 
 ## **Error Handling**
 
-To trigger errors, the "hasError" class name should be included in the inputs's parent div. This feature is currently only available for the "select" and "text" inputs.
+* To trigger errors, the "hasError" class name should be appended to the inputs's parent div. This feature is currently only available for the "select" and "text" inputs.
 
-Our script library includes a function that can be used to dynamically append error class names to these divs.
+* Our script library includes a function that can be used to dynamically append error class names to these divs and show corresponding error messages. The function looks for 2 parameters, (1) the name of the input and (2) error message to be shown.
 
-Before checking and triggering errors, please use the "clearErrors" function to clear the form of previous errors.
+* Before checking and triggering errors, you should use the "clearErrors" function to clear the form of previous errors. This function looks for the form DOM object to be passed in to work correctly.
 
 ### **Code**
 ```
