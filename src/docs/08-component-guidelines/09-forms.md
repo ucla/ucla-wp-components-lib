@@ -48,7 +48,9 @@ title: Forms
 
 ### **Code**
 
-<!--Text Inputs code here, if applicable-->
+```
+{{view '@forms--text'}}
+```
 
 ## **Select Menus**
 
@@ -75,7 +77,9 @@ title: Forms
 
 ### **Code**
 
-<!--Select Menus code here, if applicable-->
+```
+{{view '@forms--select-menu'}}
+```
 
 ## **Checkboxes**
 
@@ -96,8 +100,9 @@ title: Forms
 
 ### **Code**
 
-<!--Checkboxes code here, if applicable-->
-
+```
+{{view '@forms--checkbox'}}
+```
 ## **Radio Buttons**
 
 ### **Anatomy**
@@ -118,7 +123,9 @@ title: Forms
 
 ### **Code**
 
-<!--Radio Buttons code here, if applicable-->
+```
+{{view '@forms--radio'}}
+```
 
 ## **Security Captcha**
 
@@ -152,4 +159,6 @@ title: Forms
 
 ### **Code**
 
-<!--Fieldsets and Legends code here, if applicable-->
+```
+{{view '@forms--fieldset-legend'}}
+```

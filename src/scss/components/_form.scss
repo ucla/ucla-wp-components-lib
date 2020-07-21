@@ -1,3 +1,66 @@
+.text, .radio, .select, .checkbox {
+  margin-bottom: 8px;
+}
+
+// Text Input Styling
+
+.text {
+  &__label, &__input, &__help, &__error {
+    display: block;
+  }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: $medium-grey5;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    background: $lightest-grey-2;
+    background-size: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 24px 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 2px;
+    color: $medium-grey4;
+  }
+
+  &.full-width > .text__input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__help {
+    display: block;
+    color: $medium-grey4;
+    margin-top: 8px;
+  }
+
+  &__error {
+    display: none;
+  }
+
+  &.error {
+    & > .text__input {
+      border: 1px solid red;
+    }
+
+    & > .text__error {
+      display: block;
+      color: $error-red;
+      margin-top: 8px;
+    }
+  }
+}
+
 // Select Menu Styling
 
 .select {
@@ -82,12 +145,12 @@
     }
 
     &:focus {
-      outline: none;
-      border: 1px dotted black;
+      outline-style: dotted;
+      outline-offset: 1px;
     }
 
     &:active, &:checked:active {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+      outline-offset: -1px;
     }
 
     &:checked {
@@ -98,20 +161,29 @@
     }
 
     &:checked::after {
-      background-image: url(./../img/icons/arrow-down-white.svg);
+      background-image: url(./../img/icons/checkmark-white.svg);
       background-size: 10px 10px;
       display: inline-block;
       width: 10px;
       height: 10px;
       content: "";
     }
+
+    &:checked {
+      background-color: $active-state;
+      border: 1px solid #adb8c0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+      padding: 0 4px;
+    }
   }
 }
 
 // Radio Styling
+
 .radio {
   &__input {
-    -webkit-appearance: none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
     display: inline-block;
     height: 24px;
@@ -132,60 +204,34 @@
     }
 
     &:checked::after {
-      // background-image: url(./../img/icons/arrow-down-white.svg);
-      // background-size: 13px;
-      // display: inline-block;
-      // width: 10px;
-      // height: 10px;
-      // content: "";
-      // border: 5px solid white;
-      // box-shadow: 0 0 3px 0 #ddd;
+      background-image: url(./../img/icons/radio-bullet-icon.svg);
+      background-size: 25px 25px;
+      background-repeat: none;
+      background-position: 50%;
+      display: inline-block;
+      content: "";
+      width: 22px;
+      height: 22px;
     }
 
     &:focus {
-      // outline: none;
-      // box-shadow: 0 0 10px green;
+      outline-style: dotted;
+      outline-offset: 1px;
     }
   }
 }
 
-.radio-item {
-  display: inline-block;
-  position: relative;
-  padding: 0 6px;
-  margin: 10px 0 0;
-}
+// fieldset and Legened Styling
 
-.radio-item input[type='radio'] {
-  display: none;
-}
+.fieldset {
+  border: 1px solid #808080;
+  padding: 32px;
 
-.radio-item label {
-  color: #666;
-  font-weight: normal;
-}
-
-.radio-item label::before {
-  content: " ";
-  display: inline-block;
-  position: relative;
-  top: 5px;
-  margin: 0 5px 0 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 11px;
-  border: 2px solid #004c97;
-  background-color: transparent;
-}
-
-.radio-item input[type=radio]:checked + label::after {
-  border-radius: 11px;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 11px;
-  left: 12px;
-  content: " ";
-  display: block;
-  background: #004c97;
+  &__legend {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22.5px;
+    color: $medium-grey5;
+    padding: 0 4px;
+  }
 }

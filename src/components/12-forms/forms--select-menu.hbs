@@ -1,3 +1,18 @@
+<!-- Select Menu Only -->
+<div class="select">
+  <label class="select__label" for="example_selection">Label</label>
+  <select class="select__menu" name="example_selection">
+    <option class="select__placeholder" disabled selected>Make a selection</option>
+    <option class="select__option" value="Epsum">Epsum factorial non deposit quid</option>
+    <option class="select__option" value="Pro">Pro quo hic escorol olypian</option>
+    <option class="select__option" value="Et">Et gorilla congolium sic</option>
+    <option class="select__option" value="Ad">Ad nauseum souvlaki ignitus carborundum</option>
+  </select>
+  <span class="select__help">Helpful text goes here</span>
+  <span class="select__error">Error message hidden</span>
+</div>
+
+<!-- Select Menu in Form -->
 <form class="example-form-short">
   <div class="select">
     <label class="select__label" for="example_selection">Label</label>
@@ -14,8 +29,9 @@
   <button class="btn btn--lightbg">Submit To Trigger Error</button>
 </form>
 
+<!-- Full Width Select Menu in Form -->
 <form class="example-form-full-width">
-  <div class="select full-width" style="width: 800px; max-width: 100%;">
+  <div class="select full-width" style="width: 600px; max-width: 100%;">
     <label class="select__label" for="example_selection-fullwidth">Full-width Label and Dropdown Menu</label>
     <select class="select__menu" name="example_selection-fullwidth">
       <option class="select__placeholder" disabled selected>Make a selection</option>
@@ -31,10 +47,10 @@
   <button class="btn btn--lightbg">Submit To Trigger Error</button>
 </form>
 
+<!-- Example Error Handling -->
 <script>
   $(document).ready(function (){
 
-    // Example Error Handling
     $(".example-form-short").submit(function(e){
       e.preventDefault();
       // Example error returned from server
@@ -46,7 +62,7 @@
           for ( key in errorsArr[i] ) {
             var inputFieldName = key;
             var inputErrorMessage = errorsArr[i][key];
-            // call library function to update error message and show error message
+            // call UCLA Script Library function to update error message and show error message
             triggerErrors(inputFieldName, inputErrorMessage);
           }
         }
@@ -64,7 +80,7 @@
           for ( key in errorsArr[i] ) {
             var inputFieldName = key;
             var inputErrorMessage = errorsArr[i][key];
-            // call library function to update error message and show error message
+            // call UCLA Script Library function to update error message and show error message
             triggerErrors(inputFieldName, inputErrorMessage);
           }
         }

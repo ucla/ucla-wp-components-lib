@@ -1,26 +1,27 @@
-<!-- Form with all current inputs -->
+<!-- Fieldset Legend Only -->
+<fieldset class="fieldset">
+  <legend class="fieldset__legend">Legened Element</legend>
+</fieldset>
 
-<form class="example-form">
-  <!-- Field Legend -->
+<!-- Fieldset with Form Inputs -->
+<form>
   <fieldset class="fieldset">
     <legend class="fieldset__legend">Legened Element</legend>
-    <!-- Text Input -->
+    <!-- text input -->
     <div class="text full-width">
       <label class="text__label" for="example_textinput">Label</label>
       <input class="text__input" type="text" name="example_textinput" placeholder="Type something">
       <span class="text__error">Error message is hidden</span>
     </div>
-    <!-- Radio Input -->
     <div class="radio">
       <input class="radio__input" type="radio" name="radio" value="radio1">
       <label class="radio__label" for="">Radio 1</label>
       <input class="radio__input" type="radio" name="radio" value="radio2">
       <label class="radio__label" for="">Radio 2</label>
     </div>
-    <!-- Select Menu -->
     <div class="select full-width">
-      <label class="select__label" for="example_selection">Full-width Label and Dropdown Menu</label>
-      <select class="select__menu" name="example_selection">
+      <label class="select__label" for="example_selection-fullwidth">Full-width Label and Dropdown Menu</label>
+      <select class="select__menu" name="example_selection-fullwidth">
         <option class="select__placeholder" disabled selected>Make a selection</option>
         <option class="select__option" value="Epsum">Epsum factorial non deposit quid</option>
         <option class="select__option" value="Pro">Pro quo hic escorol olypian</option>
@@ -31,36 +32,9 @@
       <span class="select__help">Helpful text goes here</span>
       <span class="select__error">Error message is hidden</span>
     </div>
-    <!-- Checkbox -->
     <div class="checkbox">
       <input type="checkbox" class="checkbox__input" name="example_checkbox"/>
       <label class="checkbox__label" for="example_checkbox">Textbox label</label>
     </div>
-    <button class="btn btn--lightbg">Submit To Trigger Error</button>
   </fieldset>
 </form>
-
-<script>
-  $(document).ready(function (){
-
-    // Example Error Handling
-    $(".example-form").submit(function(e){
-      e.preventDefault();
-      // Example error returned from server
-      var jsonReturned = { "errors": [{"example_textinput": "Error message here"}, {"example_selection": "This is not a valid selection"}] };
-      var errorsArr = jsonReturned.errors;
-      // Example parsing of JSON data
-      if (errorsArr.length) {
-        for ( var i = 0 ; i < errorsArr.length; i++ ) {
-          for ( key in errorsArr[i] ) {
-            var inputFieldName = key;
-            var inputErrorMessage = errorsArr[i][key];
-            // call UCLA Script Library function to update error message and show error message
-            triggerErrors(inputFieldName, inputErrorMessage);
-          }
-        }
-      }
-    })
-
-  })
-</script>
