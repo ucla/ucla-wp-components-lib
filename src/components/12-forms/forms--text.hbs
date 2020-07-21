@@ -1,7 +1,7 @@
 <!-- Text Input Only -->
 <div class="text">
-  <label class="text__label" for="example_textinput">Label</label>
-  <input class="text__input" type="text" name="example_textinput">
+  <label class="text__label" for="solo_textinput">Label</label>
+  <input class="text__input" type="text" name="solo_textinput">
   <span class="text__help">Helpful text goes here</span>
   <span class="text__error">Error message is hidden</span>
 </div>
@@ -44,7 +44,7 @@
             var inputFieldName = key;
             var inputErrorMessage = errorsArr[i][key];
             // call UCLA Script Library function to update error message and show error message
-            triggerErrors(inputFieldName, inputErrorMessage);
+            triggerError(inputFieldName, inputErrorMessage);
           }
         }
       }
@@ -62,7 +62,7 @@
             var inputFieldName = key;
             var inputErrorMessage = errorsArr[i][key];
             // call UCLA Script Library function to update error message and show error message
-            triggerErrors(inputFieldName, inputErrorMessage);
+            triggerError(inputFieldName, inputErrorMessage);
           }
         }
       }

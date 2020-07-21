@@ -46,6 +46,9 @@
     // Example Error Handling
     $(".example-form").submit(function(e){
       e.preventDefault();
+      // call UCLA Script Library function to clear previous error messages
+      // BE SURE TO PASS IN THE FORM (this)
+      clearErrors(this);
       // Example error returned from server
       var jsonReturned = { "errors": [{"example_textinput": "Error message here"}, {"example_selection": "This is not a valid selection"}] };
       var errorsArr = jsonReturned.errors;
@@ -56,7 +59,7 @@
             var inputFieldName = key;
             var inputErrorMessage = errorsArr[i][key];
             // call UCLA Script Library function to update error message and show error message
-            triggerErrors(inputFieldName, inputErrorMessage);
+            triggerError(inputFieldName, inputErrorMessage);
           }
         }
       }

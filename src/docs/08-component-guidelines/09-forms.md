@@ -162,3 +162,71 @@ title: Forms
 ```
 {{view '@forms--fieldset-legend'}}
 ```
+
+## **Error Handling**
+
+To trigger errors, the "hasError" class name should be included in the inputs's parent div. This feature is currently only available for the "select" and "text" inputs.
+
+Our script library includes a function that can be used to dynamically append error class names to these divs.
+
+Before checking and triggering errors, please use the "clearErrors" function to clear the form of previous errors.
+
+### **Code**
+```
+<form class="example-form">
+<!-- this select class does not have an error -->
+  <div class="select">
+    <label class="select__label" for="solo_selection">Label</label>
+    <select class="select__menu" name="solo_selection">
+      <option class="select__placeholder" disabled selected>Make a selection</option>
+    </select>
+    <span class="select__help">Helpful text goes here</span>
+    <span class="select__error"></span>
+  </div>
+  <!-- this text input class does not have an error -->
+  <div class="text">
+    <label class="text__label" for="example_textinput">Label</label>
+    <input class="text__input" type="text" name="example_textinput">
+    <span class="text__help">Helpful text goes here</span>
+    <span class="text__error"></span>
+  </div>
+</form>
+
+<script>
+  $('.example-form').submit(function(e) {
+    e.preventDefault();
+
+    // call UCLA script function to clear previous errors
+    // "this" or form DOM object must be passed as a parameter
+    clearErrors(this);
+
+    // call UCLA function to trigger error to input name and append error messages
+    triggerError('solo_selection', 'This solo selection has an error');
+    triggerError('example_textinput', 'This text input has an error');
+    })
+</script>
+```
+
+### **Example of HTML After Errors are Triggered**
+```
+<form class="example-form">
+<!-- this select has an error -->
+  <div class="select hasError">
+    <label class="select__label" for="solo_selection">Label</label>
+    <select class="select__menu" name="solo_selection">
+      <option class="select__placeholder" disabled selected>Make a selection</option>
+    </select>
+    <span class="select__help">Helpful text goes here</span>
+    <!-- The error message has been updated -->
+    <span class="select__error">This solo selection has an error</span>
+  </div>
+  <!-- this text input class has an error -->
+  <div class="text hasError">
+    <label class="text__label" for="example_textinput">Label</label>
+    <input class="text__input" type="text" name="example_textinput">
+    <span class="text__help">Helpful text goes here</span>
+    <!-- The error message has been updated -->
+    <span class="text__error">This text input has an error</span>
+  </div>
+</form>
+```
