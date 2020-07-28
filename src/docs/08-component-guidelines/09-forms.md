@@ -26,7 +26,7 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Text Inputs Anatomy Image" title="Text Inputs Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Text_Fields/textfields-anatomy.jpg"/>
+<img class="doc-images" alt="Text Inputs Anatomy Image" title="Text Inputs Anatomy Image" src="/build/docs/img/Form/Text_Fields/textfields-anatomy.jpg"/>
 
 1. Label (required)
 2. Input Placeholder Text (optional)
@@ -40,11 +40,11 @@ title: Forms
 
 ### **States**
 
-<img class="doc-images" alt="Text Inputs States Image" title="Text Inputs States Image" src="/build/%!CurrentVersion%!/docs/img/Form/Text_Fields/textfields-states.jpg"/>
+<img class="doc-images" alt="Text Inputs States Image" title="Text Inputs States Image" src="/build/docs/img/Form/Text_Fields/textfields-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Text Inputs Specs Image" title="Text Inputs Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Text_Fields/textfields-specs.jpg"/>
+<img class="doc-images" alt="Text Inputs Specs Image" title="Text Inputs Specs Image" src="/build/docs/img/Form/Text_Fields/textfields-specs.jpg"/>
 
 ### **Code**
 
@@ -56,7 +56,7 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Select Menus Anatomy Image" title="Select Menus Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Select_Menu/selectmenu-anatomy.jpg"/>
+<img class="doc-images" alt="Select Menus Anatomy Image" title="Select Menus Anatomy Image" src="/build/docs/img/Form/Select_Menu/selectmenu-anatomy.jpg"/>
 
 1. Label (required)
 2. Input Placeholder Text (optional)
@@ -69,11 +69,11 @@ title: Forms
 
 ### **States**
 
-<img class="doc-images" alt="Select Menus States Image" title="Select Menus States Image" src="/build/%!CurrentVersion%!/docs/img/Form/Select_Menu/selectmenu-states.jpg"/>
+<img class="doc-images" alt="Select Menus States Image" title="Select Menus States Image" src="/build/docs/img/Form/Select_Menu/selectmenu-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Select Menus Specs Image" title="Select Menus Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Select_Menu/selectmenu-specs.jpg"/>
+<img class="doc-images" alt="Select Menus Specs Image" title="Select Menus Specs Image" src="/build/docs/img/Form/Select_Menu/selectmenu-specs.jpg"/>
 
 ### **Code**
 
@@ -85,18 +85,18 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Checkboxes Anatomy Image" title="Checkboxes Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Checkboxes/checkboxes-anatomy.jpg"/>
+<img class="doc-images" alt="Checkboxes Anatomy Image" title="Checkboxes Anatomy Image" src="/build/docs/img/Form/Checkboxes/checkboxes-anatomy.jpg"/>
 
 1. Checkbox (required)
 2. Label (required)
 
 ### **States**
 
-<img class="doc-images" alt="Checkboxes States Image" title="Checkboxes States Image" src="/build/%!CurrentVersion%!/docs/img/Form/Checkboxes/checkboxes-states.jpg"/>
+<img class="doc-images" alt="Checkboxes States Image" title="Checkboxes States Image" src="/build/docs/img/Form/Checkboxes/checkboxes-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Checkboxes Specs Image" title="Checkboxes Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Checkboxes/checkboxes-specs.jpg"/>
+<img class="doc-images" alt="Checkboxes Specs Image" title="Checkboxes Specs Image" src="/build/docs/img/Form/Checkboxes/checkboxes-specs.jpg"/>
 
 ### **Code**
 
@@ -107,7 +107,7 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Radio Buttons Anatomy Image" title="Radio Buttons Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Radio_Buttons/radiobtn-anatomy.jpg"/>
+<img class="doc-images" alt="Radio Buttons Anatomy Image" title="Radio Buttons Anatomy Image" src="/build/docs/img/Form/Radio_Buttons/radiobtn-anatomy.jpg"/>
 
 1. Radio button (required)
 2. Label (required)
@@ -115,11 +115,11 @@ title: Forms
 
 ### **States**
 
-<img class="doc-images" alt="Radio Buttons States Image" title="Radio Buttons States Image" src="/build/%!CurrentVersion%!/docs/img/Form/Radio_Buttons/radiobtn-states.jpg"/>
+<img class="doc-images" alt="Radio Buttons States Image" title="Radio Buttons States Image" src="/build/docs/img/Form/Radio_Buttons/radiobtn-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Radio Buttons Specs Image" title="Radio Buttons Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Radio_Buttons/radiobtn-specs.jpg"/>
+<img class="doc-images" alt="Radio Buttons Specs Image" title="Radio Buttons Specs Image" src="/build/docs/img/Form/Radio_Buttons/radiobtn-specs.jpg"/>
 
 ### **Code**
 
@@ -131,13 +131,13 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Security Captcha Anatomy Image" title="Security Captcha Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Captacha/captcha-anatomy.jpg"/>
+<img class="doc-images" alt="Security Captcha Anatomy Image" title="Security Captcha Anatomy Image" src="/build/docs/img/Form/Captacha/captcha-anatomy.jpg"/>
 
 1. Google reCaptcha
 
 ### **Specs**
 
-<img class="doc-images" alt="Security Captcha Specs Image" title="Security Captcha Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Captacha/captcha-specs.jpg"/>
+<img class="doc-images" alt="Security Captcha Specs Image" title="Security Captcha Specs Image" src="/build/docs/img/Form/Captacha/captcha-specs.jpg"/>
 
 ### **Code**
 
@@ -147,7 +147,7 @@ title: Forms
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Fieldsets and Legends Anatomy Image" title="Fieldsets and Legends Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Form/Fieldset-Legends/fieldsetlegend-anatomy.jpg"/>
+<img class="doc-images" alt="Fieldsets and Legends Anatomy Image" title="Fieldsets and Legends Anatomy Image" src="/build/docs/img/Form/Fieldset-Legends/fieldsetlegend-anatomy.jpg"/>
 
 1. Legend
 2. Fieldset
@@ -155,7 +155,7 @@ title: Forms
 
 ### **Specs**
 
-<img class="doc-images" alt="Fieldsets and Legends Specs Image" title="Fieldsets and Legends Specs Image" src="/build/%!CurrentVersion%!/docs/img/Form/Fieldset-Legends/fieldsetlegend-specs.jpg"/>
+<img class="doc-images" alt="Fieldsets and Legends Specs Image" title="Fieldsets and Legends Specs Image" src="/build/docs/img/Form/Fieldset-Legends/fieldsetlegend-specs.jpg"/>
 
 ### **Code**
 
