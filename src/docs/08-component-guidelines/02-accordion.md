@@ -44,7 +44,7 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Accordion Anatomy Image" title="Accordion Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-anatomy.jpg"/>
+<img class="doc-images" alt="Accordion Anatomy Image" title="Accordion Anatomy Image" src="/build/docs/img/Accordion/accordion-anatomy.jpg"/>
 
 1. Accordion - Nth Child
 2. Title (required)
@@ -57,19 +57,19 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 ### **Variations**
 
-<img class="doc-images" alt="Accordion Variations Image" title="Accordion Variations Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-variations.jpg"/>
+<img class="doc-images" alt="Accordion Variations Image" title="Accordion Variations Image" src="/build/docs/img/Accordion/accordion-variations.jpg"/>
 
 ### **States**
 
-<img class="doc-images" alt="Accordion States Image" title="Accordion States Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-states.jpg"/>
+<img class="doc-images" alt="Accordion States Image" title="Accordion States Image" src="/build/docs/img/Accordion/accordion-states.jpg"/>
 
 ### **Desktop Specs**
 
-<img class="doc-images" alt="Accordion Desktop Specs Image" title="Accordion Specs Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-specs.jpg"/>
+<img class="doc-images" alt="Accordion Desktop Specs Image" title="Accordion Specs Image" src="/build/docs/img/Accordion/accordion-specs.jpg"/>
 
 ### **Mobile Specs**
 
-<img class="doc-images" alt="Accordion Mobile Specs Image" title="Accordion Specs Image" src="/build/%!CurrentVersion%!/docs/img/Accordion/accordion-specs-mobile.jpg"/>
+<img class="doc-images" alt="Accordion Mobile Specs Image" title="Accordion Specs Image" src="/build/docs/img/Accordion/accordion-specs-mobile.jpg"/>
 
 ### **Code**
 
@@ -81,7 +81,7 @@ Use this button to display more content or more items in a list. You should cust
 
 ### **Anatomy**
 
-<img class="doc-images" alt="Load More Anatomy Image" title="Load More Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Load_More/loadmore-anatomy.jpg"/>
+<img class="doc-images" alt="Load More Anatomy Image" title="Load More Anatomy Image" src="/build/docs/img/Load_More/loadmore-anatomy.jpg"/>
 
 1. Load More Label (required)
 2. Load More Number (required)
@@ -90,11 +90,11 @@ Use this button to display more content or more items in a list. You should cust
 
 ### **States**
 
-<img class="doc-images" alt="Load More States Image" title="Load More States Image" src="/build/%!CurrentVersion%!/docs/img/Load_More/loadmore-states.jpg"/>
+<img class="doc-images" alt="Load More States Image" title="Load More States Image" src="/build/docs/img/Load_More/loadmore-states.jpg"/>
 
 ### **Specs**
 
-<img class="doc-images" alt="Load More Specs Image" title="Load More Specs Image" src="/build/%!CurrentVersion%!/docs/img/Load_More/loadmore-specs.jpg"/>
+<img class="doc-images" alt="Load More Specs Image" title="Load More Specs Image" src="/build/docs/img/Load_More/loadmore-specs.jpg"/>
 
 ### **Code**
 

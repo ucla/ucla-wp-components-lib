@@ -36,6 +36,8 @@ pipelines:
             - export updateTag="${updateTag#?}"
             # update version # in package.json
             - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
+            # Add '%!CurrentVersion%!' filter
+            - gulp addVersionFilter
             # update version # in asset URL documentation page
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
@@ -113,6 +115,7 @@ pipelines:
             - export updateTag="${updateTag#?}"
             # update version # in asset URL documentation page
             # - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
+            - gulp addImageFilterStrs
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
             # add updated package.json and compiled public assets
@@ -126,7 +129,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}
+                S3_BUCKET: dev-webcomponents-ucla-edu/build/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
                 ACL: 'public-read'
                 EXTRA_ARGS: "--delete"
@@ -136,7 +139,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/public/${updateTag}
+                S3_BUCKET: dev-webcomponents-ucla-edu/public/${updateTag}
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/public
                 ACL: 'public-read'
                 EXTRA_ARGS: "--exclude=/public/docs/"
@@ -147,7 +150,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/build/${updateTag}/docs
+                S3_BUCKET: dev-webcomponents-ucla-edu/build/${updateTag}/docs
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build/docs
                 ACL: 'private'
                 EXTRA_ARGS: "--delete"
@@ -157,7 +160,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu/img
+                S3_BUCKET: dev-webcomponents-ucla-edu/img
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
@@ -167,8 +170,8 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
-                S3_BUCKET: dev-webcomponents.ucla.edu
+                S3_BUCKET: dev-webcomponents-ucla-edu
                 LOCAL_PATH: ./redirection
-                EXTRA_ARGS: "--website-redirect=http://dev-webcomponents.ucla.edu.s3-us-west-1.amazonaws.com/build/${updateTag}/index.html"
+                EXTRA_ARGS: "--website-redirect=http://dev-webcomponents-ucla-edu.s3-us-west-1.amazonaws.com/build/${updateTag}/index.html"
             - rm -rf ./redirection
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
