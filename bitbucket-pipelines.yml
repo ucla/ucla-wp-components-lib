@@ -36,8 +36,8 @@ pipelines:
             - export updateTag="${updateTag#?}"
             # update version # in package.json
             - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
-            # Add '%!CurrentVersion%!' filter
-            - gulp addVersionFilter
+            # add %!CurrentVersion%! string filter
+            - gulp addImageFilterStrs
             # update version # in asset URL documentation page
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
@@ -115,6 +115,7 @@ pipelines:
             - export updateTag="${updateTag#?}"
             # update version # in asset URL documentation page
             # - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
+            # add %!CurrentVersion%! string filter
             - gulp addImageFilterStrs
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             - gulp production
