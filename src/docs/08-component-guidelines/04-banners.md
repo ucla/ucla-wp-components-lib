@@ -33,7 +33,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Anatomy**
 
-<img class="doc-images" alt="Hero Banner Desktop Anatomy Image" title="Hero Banner Desktop Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Hero_Banner/herobanner-desktop-anatomy.jpg"/>
+<img class="doc-images" alt="Hero Banner Desktop Anatomy Image" title="Hero Banner Desktop Anatomy Image" src="/build/docs/img/Banners/Hero_Banner/herobanner-desktop-anatomy.jpg"/>
 
 1. Image (required)
 1. Branded Ribbon (optional)
@@ -46,11 +46,11 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Specs**
 
-<img class="doc-images" alt="Hero Banner Desktop Specs Image" title="Hero Banner Desktop Specs Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Hero_Banner/herobanner-desktop-specs.jpg"/>
+<img class="doc-images" alt="Hero Banner Desktop Specs Image" title="Hero Banner Desktop Specs Image" src="/build/docs/img/Banners/Hero_Banner/herobanner-desktop-specs.jpg"/>
 
 ### **Mobile Anatomy**
 
-<img class="doc-images" alt="Hero Banner Mobile Anatomy Image" title="Hero Banner Mobile Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Hero_Banner/herobanner-mobile-anatomy.jpg"/>
+<img class="doc-images" alt="Hero Banner Mobile Anatomy Image" title="Hero Banner Mobile Anatomy Image" src="/build/docs/img/Banners/Hero_Banner/herobanner-mobile-anatomy.jpg"/>
 
 1. Image (required)
 1. Branded Ribbon (optional)
@@ -63,7 +63,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Mobile Specs**
 
-<img class="doc-images" alt="Hero Banner Mobile Specs Image" title="Hero Banner Mobile Specs Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Hero_Banner/herobanner-mobile-specs.jpg"/>
+<img class="doc-images" alt="Hero Banner Mobile Specs Image" title="Hero Banner Mobile Specs Image" src="/build/docs/img/Banners/Hero_Banner/herobanner-mobile-specs.jpg"/>
 
 ### **Code**
 
@@ -73,7 +73,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Anatomy**
 
-<img class="doc-images" alt="Promo Banner Desktop Anatomy Image" title="Promo Banner Desktop Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Promo_Banner/promobanner-desktop-anatomy.jpg"/>
+<img class="doc-images" alt="Promo Banner Desktop Anatomy Image" title="Promo Banner Desktop Anatomy Image" src="/build/docs/img/Banners/Promo_Banner/promobanner-desktop-anatomy.jpg"/>
 
 1. Image (required)
 1. Headline (required)
@@ -84,11 +84,11 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Desktop Specs**
 
-<img class="doc-images" alt="Promo Banner Desktop Specs Image" title="Promo Banner Desktop Specs Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Promo_Banner/promobanner-desktop-specs.jpg"/>
+<img class="doc-images" alt="Promo Banner Desktop Specs Image" title="Promo Banner Desktop Specs Image" src="/build/docs/img/Banners/Promo_Banner/promobanner-desktop-specs.jpg"/>
 
 ### **Mobile Anatomy**
 
-<img class="doc-images" alt="Promo Banner Mobile Anatomy Image" title="Promo Banner Mobile Anatomy Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Promo_Banner/promobanner-mobile-anatomy.jpg"/>
+<img class="doc-images" alt="Promo Banner Mobile Anatomy Image" title="Promo Banner Mobile Anatomy Image" src="/build/docs/img/Banners/Promo_Banner/promobanner-mobile-anatomy.jpg"/>
 
 1. Image (required)
 1. Headline (required)
@@ -100,7 +100,7 @@ There are generally three ways to approach content in a hero banner:
 
 ### **Mobile Specs**
 
-<img class="doc-images" alt="Promo Banner Mobile Specs Image" title="Promo Banner Mobile Specs Image" src="/build/%!CurrentVersion%!/docs/img/Banners/Promo_Banner/promobanner-mobile-specs.jpg"/>
+<img class="doc-images" alt="Promo Banner Mobile Specs Image" title="Promo Banner Mobile Specs Image" src="/build/docs/img/Banners/Promo_Banner/promobanner-mobile-specs.jpg"/>
 
 ### **Code**
 

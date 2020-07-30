@@ -7,6 +7,8 @@ const gulpStylelint = require('gulp-stylelint');
 const fractal = require("./fractal");
 const eslint = require('gulp-eslint');
 const image = require('gulp-image');
+const replace = require('gulp-replace');
+const merge = require('merge-stream');
 
 sass.compiler = require('node-sass');
 
@@ -191,6 +193,38 @@ function generateDocStylesLocal() {
      .pipe(dest('build/assets/img'));
  }
 
+// Strip/Rebuild Images with %!CurrentVersion%! String filter
+
+// For Local - Remove filter string
+ function removeImageSrcFilterLocal() {
+   var firstLevelDocs = src('src/docs/*.md')
+   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+   .pipe(dest('src/docs'))
+   var secondLevelDocs = src('src/docs/*/*.md')
+   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+   .pipe(dest('src/docs'))
+   var thirdLevelDocs = src('src/docs/*/*/*.md')
+   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+   .pipe(dest('src/docs'))
+   return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+ }
+
+// For Dev & Prod Environments- Add filter string
+ function addImageSrcFilterProd() {
+   var firstLevelDocs = src('src/docs/*.md')
+   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+   .pipe(dest('src/docs'))
+   var secondLevelDocs = src('src/docs/*/*.md')
+   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+   .pipe(dest('src/docs'))
+   var thirdLevelDocs = src('src/docs/*/*/*.md')
+   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+   .pipe(dest('src/docs'))
+   return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+ }
+
+//
+
  /**
   * Fractal tasks
   */
@@ -263,7 +297,8 @@ exports.build = series(
   generateDocStylesLocal,
   generateDocScriptsLocal,
   generateDocImagesLocal,
-  generateFaviconLocal
+  generateFaviconLocal,
+  removeImageSrcFilterLocal
 );
 
 // gulp production
@@ -277,3 +312,6 @@ exports.production = series(
   generateDocImagesProd,
   generateFaviconProd
 );
+
+// gulp addImageFilterStrs - used in Production Pipeline
+exports.addImageFilterStrs = addImageSrcFilterProd;
