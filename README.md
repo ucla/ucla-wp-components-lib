@@ -1,6 +1,6 @@
-# UCLA FRACTAL Components Library
+# UCLA Web Components Library
 
-## This readme is for Developers and the Governance team.
+## This README is for Developers and the Governance team.
 
 This components library was built on the Fractal technology and is continually in development.
 
@@ -8,26 +8,21 @@ This components library was built on the Fractal technology and is continually i
 
 ## Getting started
 
-Clone repository and run `npm install`
+1. Clone respository and run `npm install`
+1. Run `gulp build`
+1. Run `gulp watch`
+1. Navigate to http://localhost:3000
 
+## Gulp Tasks
 
-Run and watch locally
-```
-gulp watch
-```
-Site will be viewable at http://localhost:3000
+| Task | Description |
+|-|-|
+| build | Build Fractal framework, build expanded styling and scripts for both documentation and components library, and remove string filters (used for production versioning) |
+| watch | Start Fractal development web server, watch for styling and script changes for both the documentation and components library, and run linters for both the documentation and components library |
+| *production | Build Fractal framework and build compressed styling and scripts for both documentation and components library |
+| *addImageFilterStrs | Add filter string for images |
 
-
-Generate Assets with compiles css and javascript.
-```
-gulp build
-```
-
-
-Generate Assets with Compiled CSS, javascript, and images.
-```
-gulp production
-```
+ *used in production builds and should only be used locally to test behaviors expected in production
 
 ## Branch / Bucket Information (BETA)
 
@@ -60,6 +55,8 @@ Semantic Versioning Automation requires commit messages to follow "Angular" comm
 1. `git add <filenames or all>`
 1. `npm run commit`  <!-- Answer questions to generate Angular commit message -->
 1. `git push`
+
+After the initial push, if additional work is to committed and pushed from the same branch, contributers can just follow the regular `git add` and `git commit` flow.
 
 ## Commit Message Automation Questions (BETA)
 
