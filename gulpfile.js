@@ -134,7 +134,7 @@ function generateCompLibScriptsLocal() {
 }
 
 function generateCompLibScriptsProd() {
-  return src('src/js/**.js')
+  var compScript = src('src/js/**.js')
   .pipe(concat('ucla-lib-scripts.js'))
   .pipe(minify({
     ext:{
@@ -142,7 +142,10 @@ function generateCompLibScriptsProd() {
       min: '.min.js'
     }
   }))
-  .pipe(dest('public/js', 'build/assets/js'));
+  .pipe(dest('public/js'));
+  var docScript = src('public/js/ucla-lib-scripts.min.js')
+  .pipe(dest('build/js'));
+  return merge(compScript, docScript)
 }
 
 // documentation styles
