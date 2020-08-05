@@ -43,6 +43,9 @@ DURING BETA:
 1. "campus" - Campus partners/developers should create their update branches and send PRs for their updates to merge into this branch. Once approved, reviewers should merge this branch into "development" branch.
 
 ## Directory Hierarchy
+
+Documentation includes usage of Markdown files. Click here to see [More on Github Markdown]https://guides.github.com/features/mastering-markdown/
+
 ```
 /
 ├─ build # Static Website Output
@@ -104,19 +107,3 @@ When running `npm run commit`, a prompt with the below questions will appear in 
 - wip - Default status "Work In Progress"
 
 More on status can be found here, https://fractal.build/guide/core-concepts/statuses.html#default-statuses.
-
-## To install via NPM
-
-This repository is currently private and requires an ssh key to install via NPM. To create a bitbucket ssh key follow these instructions, https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
-
-After the ssh has been created run the following command:
-
-```
-npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
-```
-
-## Add to documentation
-
-This library is documented in the docs folder of this repository. The markdown pages follow github markdown rules.
-
-[More on Github Markdown]https://guides.github.com/features/mastering-markdown/
