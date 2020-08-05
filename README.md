@@ -43,7 +43,8 @@ DURING BETA:
 1. "campus" - Campus partners/developers should create their update branches and send PRs for their updates to merge into this branch. Once approved, reviewers should merge this branch into "development" branch.
 
 ## Directory Hierarchy
-
+```
+/
 ├─ build # Static Website Output
 ├─ public # Library Styles
 └─ src/ # Source Code
@@ -59,7 +60,7 @@ DURING BETA:
    └─ scss/  # Stylesheets for components
       ├─ components/ # Component stylesheets
       └─ utilities/ # Utilities stylesheets
-
+```
 ## Contributing Flow (BETA)
 
 1. Developer creates a branch based off of the "campus" branch
