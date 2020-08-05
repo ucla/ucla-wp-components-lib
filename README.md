@@ -24,9 +24,15 @@ This components library was built on the Fractal technology and is continually i
 
  *used in production builds and should only be used locally to test behaviors expected in production
 
-## Branch / Bucket Information (BETA)
+## Bucket / Cloud URL / CDN Information (BETA)
 
-The "main" branch is deployed at the S3 bucket [here](https://s3.console.aws.amazon.com/s3/buckets/webcomponents.ucla.edu/?region=us-west-1), while "development" branch is deployed at the S3 bucket [here](https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents.ucla.edu/?region=us-west-1)
+| Branch | Cloud URL | S3 Bucket URL |
+|-|-|-|
+| main | https://webcomponents.ucla.edu | https://s3.console.aws.amazon.com/s3/buckets/webcomponents.ucla.edu/?region=us-west-1 |
+| development | http://dev-webcomponents-ucla-edu.s3-website-us-west-1.amazonaws.com | https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents.ucla.edu/?region=us-west-1 |
+| campus | not setup | not setup |
+
+## Branch Info (BETA)
 
 DURING BETA:
 
@@ -36,6 +42,25 @@ DURING BETA:
 
 1. "campus" - Campus partners/developers should create their update branches and send PRs for their updates to merge into this branch. Once approved, reviewers should merge this branch into "development" branch.
 
+## Directory Hierarchy
+```
+/
+├─ build # Static Website Output
+├─ public # Library Styles
+└─ src/ # Source Code
+   ├─ components/    # Components Code
+   │    ├─ xx-components/  # contains markdown files that renders the component views
+   │    ├─ img/  # contains icon images
+   ├─ docs/      # Documentation Code
+   │  ├─ xx-documentation/  # contains markdown files that renders the documentation
+   │  ├─ img/ # contains images used for documentations (i.e spec and states images)
+   │  ├─ js/  # JS scripts for documentation
+   │  └─ scss # Stylesheets
+   ├─ js/  # JS scripts for components
+   └─ scss/  # Stylesheets for components
+      ├─ components/ # Component stylesheets
+      └─ utilities/ # Utilities stylesheets
+```
 ## Contributing Flow (BETA)
 
 1. Developer creates a branch based off of the "campus" branch
