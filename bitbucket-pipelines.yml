@@ -29,7 +29,7 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
@@ -108,7 +108,7 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)

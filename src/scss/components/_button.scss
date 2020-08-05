@@ -20,7 +20,7 @@
     content: '';
     width: 15px;
     height: 15px;
-    background: url('../img/icons/play-white.svg');
+    background: url('/img/icons/play-white.svg');
     background-size: contain;
   }
 
@@ -106,12 +106,12 @@
     }
 
     &.play:hover::before {
-      background: url('../img/icons/play-white.svg');
+      background: url('/img/icons/play-white.svg');
       background-size: contain;
     }
 
     &.play::before {
-      background: url('../img/icons/play-defaultblue.svg');
+      background: url('/img/icons/play-defaultblue.svg');
       background-size: contain;
     }
   }
@@ -145,12 +145,12 @@
     }
 
     &.play:hover::before {
-      background: url('../img/icons/play-white.svg');
+      background: url('/img/icons/play-white.svg');
       background-size: contain;
     }
 
     &.play::before {
-      background: url('../img/icons/play-defaultblue.svg');
+      background: url('/img/icons/play-defaultblue.svg');
       background-size: contain;
     }
   }
