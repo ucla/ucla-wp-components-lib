@@ -21,13 +21,13 @@ Embrace the unknowns. Design and develop with flexibility in mind. Done is bette
 
 **Accessibility**
 
-ADA compliance is required legally, and as a trusted educational institute, it is our responsibility to uphold accessibility standards. All branches must first pass an ADA compliance assessment before being merged into the master branch.
+ADA compliance is required legally, and as a trusted educational institute, it is our responsibility to uphold accessibility standards. All branches must first pass an ADA compliance assessment before being merged into the main branch.
 
 ## **The Process**
 
 **Step One**
 
-See which issues currently need to be resolved. Please review our [issue board](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/). We use Bitbucket for our repository.
+See which issues currently need to be resolved. Please review our [issue board](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/main/). We use Bitbucket for our repository.
 
 **Step Two**
 
@@ -68,23 +68,16 @@ Visit the repository at the Strategic Communications Bitbucket: https://bitbucke
 
 This library was built on [Fractal](https://fractal.build).
 
-Clone repository and run `npm install`
+1. Clone respository and run `npm install`
+1. Run `gulp build`
+1. Run `gulp watch`
+1. Navigate to http://localhost:3000
 
-Additional steps may be required to install gulp.
+## Gulp Tasks
 
-Once installed locally, use terminal to run the website and watch the code. The linters should be reading error free.
-```
-gulp watch
-```
-Site will be viewable at http://localhost:3000
-
-
-Generate Local Assets
-```
-gulp build
-```
-
-Generate Production Assets
-```
-gulp production
-```
+| Task | Description |
+|-|-|
+| build | Build Fractal framework, build expanded styling and scripts for both documentation and components library, and remove string filters (used for production versioning) |
+| watch | Start Fractal development web server, watch for styling and script changes for both the documentation and components library, and run linters for both the documentation and components library |
+| *production | Build Fractal framework and build compressed styling and scripts for both documentation and components library |
+| *addImageFilterStrs | Add filter string for images |

@@ -9,7 +9,7 @@ const eslint = require('gulp-eslint');
 const image = require('gulp-image');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
-
+const minify = require('gulp-minify');
 sass.compiler = require('node-sass');
 
 /*
@@ -32,198 +32,201 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * configuration option set above.
  */
  // For debugging, make sure gulp is installed
- function defaultTask(cb) {
-   cb();
- }
+function defaultTask(cb) {
+  cb();
+}
 
- function generateFaviconLocal() {
-    return src('src/favicon.ico')
-     .pipe(image())
-     .pipe(dest('build'));
- }
+function generateFaviconLocal() {
+  return src('src/favicon.ico')
+  .pipe(image())
+  .pipe(dest('build'));
+}
 
- function generateFaviconProd() {
-    return src('src/favicon.ico')
-     .pipe(image())
-     .pipe(dest('build'));
- }
+function generateFaviconProd() {
+  return src('src/favicon.ico')
+  .pipe(image())
+  .pipe(dest('build'));
+}
 
- // watchers
+// watchers
 
- function watchStyles(done) {
-	 watch('src/scss/**/*.scss', series(generateCompLibStylesLocal, lintSassWatch)),
-	 watch('src/docs/scss/**/*.scss', series(generateDocStylesLocal, docLintSassWatch));
-	 done();
- }
+function watchStyles(done) {
+  watch('src/scss/**/*.scss', series(generateCompLibStylesLocal, lintSassWatch)),
+  watch('src/docs/scss/**/*.scss', series(generateDocStylesLocal, docLintSassWatch));
+  done();
+}
 
- function watchJavascript(done) {
-	 watch('src/js/*.js', series(generateCompLibScriptsLocal, lintJavascriptLib));
-   watch('src/docs/js/*.js', series(generateDocScriptsLocal, lintJavascriptDoc));
-	 done();
- }
+function watchJavascript(done) {
+  watch('src/js/*.js', series(generateCompLibScriptsLocal, lintJavascriptLib));
+  watch('src/docs/js/*.js', series(generateDocScriptsLocal, lintJavascriptDoc));
+  done();
+}
 
- function lintSassWatch() {
-   return src('src/scss/components/**/*.scss')
-     .pipe(gulpStylelint({
-       reporters: [
-         {formatter: 'string', console: true}
-       ]
-     }));
- }
+function lintSassWatch() {
+  return src('src/scss/components/**/*.scss')
+  .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }));
+}
 
- function docLintSassWatch() {
-   return src('src/docs/**/*.scss')
-     .pipe(gulpStylelint({
-       reporters: [
-         {formatter: 'string', console: true}
-       ]
-     }));
- }
+function docLintSassWatch() {
+  return src('src/docs/**/*.scss')
+  .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }));
+}
 
-  // linters
+// linters
 
- function lintJavascriptLib() {
-      return src('src/js/*.js')
-          // eslint() attaches the lint output to the "eslint" property
-          // of the file object so it can be used by other modules.
-          .pipe(eslint())
-          // eslint.format() outputs the lint results to the console.
-          // Alternatively use eslint.formatEach() (see Docs).
-          .pipe(eslint.format())
-          // To have the process exit with an error code (1) on
-          // lint error, return the stream and pipe to failAfterError last.
-          //.pipe(eslint.failAfterError());
-  }
+function lintJavascriptLib() {
+  return src('src/js/*.js')
+  // eslint() attaches the lint output to the "eslint" property
+  // of the file object so it can be used by other modules.
+  .pipe(eslint())
+  // eslint.format() outputs the lint results to the console.
+  // Alternatively use eslint.formatEach() (see Docs).
+  .pipe(eslint.format())
+  // To have the process exit with an error code (1) on
+  // lint error, return the stream and pipe to failAfterError last.
+  //.pipe(eslint.failAfterError());
+}
 
-  function lintJavascriptDoc() {
-       return src('src/docs/js/*.js')
-           // eslint() attaches the lint output to the "eslint" property
-           // of the file object so it can be used by other modules.
-           .pipe(eslint())
-           // eslint.format() outputs the lint results to the console.
-           // Alternatively use eslint.formatEach() (see Docs).
-           .pipe(eslint.format())
-           // To have the process exit with an error code (1) on
-           // lint error, return the stream and pipe to failAfterError last.
-           //.pipe(eslint.failAfterError());
-   }
+function lintJavascriptDoc() {
+  return src('src/docs/js/*.js')
+  // eslint() attaches the lint output to the "eslint" property
+  // of the file object so it can be used by other modules.
+  .pipe(eslint())
+  // eslint.format() outputs the lint results to the console.
+  // Alternatively use eslint.formatEach() (see Docs).
+  .pipe(eslint.format())
+  // To have the process exit with an error code (1) on
+  // lint error, return the stream and pipe to failAfterError last.
+  //.pipe(eslint.failAfterError());
+}
 
 // component library styles
 
- function generateCompLibStylesLocal() {
-   return src('src/scss/**/*.scss')
-	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-     .pipe(concat('ucla-lib.min.css'))
-     .pipe(dest('build/assets/css'))
- }
+function generateCompLibStylesLocal() {
+  return src('src/scss/**/*.scss')
+  .pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
+  .pipe(concat('ucla-lib.min.css'))
+  .pipe(dest('build/assets/css'))
+}
 
- function generateCompLibStylesProd() {
-   return src('src/scss/**/*.scss')
-	 	 .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-     .pipe(concat('ucla-lib.min.css'))
-     .pipe(dest('build/css'))
-		 .pipe(dest('public/css'));
- }
+function generateCompLibStylesProd() {
+  return src('src/scss/**/*.scss')
+ 	.pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+  .pipe(concat('ucla-lib.min.css'))
+  .pipe(dest('build/css'))
+  .pipe(dest('public/css'));
+}
 
- // component library scripts
+// component library scripts
 
- function generateCompLibScriptsLocal() {
-    return src('src/js/**.js')
-      .pipe(concat('ucla-lib-scripts.min.js'))
-      .pipe(dest('build/assets/js'));
-  }
+function generateCompLibScriptsLocal() {
+  return src('src/js/**.js')
+  .pipe(concat('ucla-lib-scripts.min.js'))
+  .pipe(dest('build/assets/js'));
+}
 
- function generateCompLibScriptsProd() {
-   return src('src/js/**.js')
-     .pipe(concat('ucla-lib-scripts.min.js'))
-     .pipe(dest('build/js'))
-     .pipe(dest('public/js'));
- }
+function generateCompLibScriptsProd() {
+  return src('src/js/**.js')
+  .pipe(concat('ucla-lib-scripts.js'))
+  .pipe(minify({
+    ext:{
+      src: '.js',
+      min: '.min.js'
+    }
+  }))
+  .pipe(dest('public/js', 'build/assets/js'));
+}
 
 // documentation styles
 
 function generateDocStylesLocal() {
   return src('src/docs/scss/**/*.scss')
-   .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-   .pipe(concat('global.css'))
-   .pipe(dest('build/assets/docs/css'));
+  .pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
+  .pipe(concat('global.css'))
+  .pipe(dest('build/assets/docs/css'));
 }
 
- function generateDocStylesProd() {
-   return src('src/docs/scss/**/*.scss')
-    .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-    .pipe(concat('global.css'))
-    .pipe(dest('build/docs/css'));
- }
+function generateDocStylesProd() {
+  return src('src/docs/scss/**/*.scss')
+  .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
+  .pipe(concat('global.css'))
+  .pipe(dest('build/docs/css'));
+}
 
- // documentation scripts
+// documentation scripts
 
- function generateDocScriptsLocal() {
-    return src('src/docs/js/**.js')
-      .pipe(concat('scripts.js'))
-      .pipe(dest('build/assets/docs/js'));
-  }
+function generateDocScriptsLocal() {
+  return src('src/docs/js/**.js')
+  .pipe(concat('scripts.js'))
+  .pipe(dest('build/assets/docs/js'));
+}
 
-  function generateDocScriptsProd() {
-     return src('src/docs/js/**.js')
-       .pipe(concat('scripts.js'))
-       .pipe(dest('build/docs/js'));
-   }
+function generateDocScriptsProd() {
+  return src('src/docs/js/**.js')
+  .pipe(concat('scripts.js'))
+  .pipe(dest('build/docs/js'));
+}
 
-  // documentation images - filepaths are chosen to ensure
-  // images work both in local and prod environments
+// documentation images - filepaths are chosen to ensure
+// images work both in local and prod environments
 
- function generateDocImagesLocal() {
-    return src('src/docs/img/**/*')
-     .pipe(image())
-     .pipe(dest('build/assets/build/docs/img'));
- }
+function generateDocImagesLocal() {
+  return src('src/docs/img/**/*')
+  .pipe(image())
+  .pipe(dest('build/assets/build/docs/img'));
+}
 
- function generateDocImagesProd() {
-    return src('src/docs/img/**/*')
-     .pipe(image())
-     .pipe(dest('build/docs/img'));
- }
+function generateDocImagesProd() {
+  return src('src/docs/img/**/*')
+  .pipe(image())
+  .pipe(dest('build/docs/img'));
+}
 
 // component images (i.e icons)
 
- function generateCompLibImages() {
-    return src('src/components/img/**/*')
-     .pipe(image())
-     .pipe(dest('build/assets/img'));
- }
+function generateCompLibImages() {
+  return src('src/components/img/**/*')
+  .pipe(image())
+  .pipe(dest('build/assets/img'));
+}
 
 // Strip/Rebuild Images with %!CurrentVersion%! String filter
 
 // For Local - Remove filter string
- function removeImageSrcFilterLocal() {
-   var firstLevelDocs = src('src/docs/*.md')
-   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-   .pipe(dest('src/docs'))
-   var secondLevelDocs = src('src/docs/*/*.md')
-   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-   .pipe(dest('src/docs'))
-   var thirdLevelDocs = src('src/docs/*/*/*.md')
-   .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-   .pipe(dest('src/docs'))
-   return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
- }
+function removeImageSrcFilterLocal() {
+  var firstLevelDocs = src('src/docs/*.md')
+  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+  .pipe(dest('src/docs'))
+  var secondLevelDocs = src('src/docs/*/*.md')
+  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+  .pipe(dest('src/docs'))
+  var thirdLevelDocs = src('src/docs/*/*/*.md')
+  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+  .pipe(dest('src/docs'))
+  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+}
 
 // For Dev & Prod Environments- Add filter string
- function addImageSrcFilterProd() {
-   var firstLevelDocs = src('src/docs/*.md')
-   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-   .pipe(dest('src/docs'))
-   var secondLevelDocs = src('src/docs/*/*.md')
-   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-   .pipe(dest('src/docs'))
-   var thirdLevelDocs = src('src/docs/*/*/*.md')
-   .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-   .pipe(dest('src/docs'))
-   return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
- }
-
-//
+function addImageSrcFilterProd() {
+  var firstLevelDocs = src('src/docs/*.md')
+  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+  .pipe(dest('src/docs'))
+  var secondLevelDocs = src('src/docs/*/*.md')
+  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+  .pipe(dest('src/docs'))
+  var thirdLevelDocs = src('src/docs/*/*/*.md')
+  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+  .pipe(dest('src/docs'))
+  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+}
 
  /**
   * Fractal tasks
@@ -239,15 +242,15 @@ function generateDocStylesLocal() {
 	 * This task will also log any errors to the console.
 	 */
 
-	function fractalStart() {
-	  const server = fractal.web.server({
-	    sync: true
-	  });
-	  server.on("error", err => logger.error(err.message));
-	  return server.start().then(() => {
-	    logger.success(`Fractal server is now running at ${server.url}`);
-	  });
-	}
+function fractalStart() {
+  const server = fractal.web.server({
+    sync: true
+  });
+  server.on("error", err => logger.error(err.message));
+  return server.start().then(() => {
+    logger.success(`Fractal server is now running at ${server.url}`);
+  });
+}
 
 	/*
  * Run a static export of the project web UI.
@@ -259,16 +262,16 @@ function generateDocStylesLocal() {
  * configuration option set above.
  */
 
- function fractalBuild() {
-   const builder = fractal.web.builder();
-   builder.on("progress", (completed, total) =>
-     logger.update(`Exported ${completed} of ${total} items`, "info")
-   );
-   builder.on("error", err => logger.error(err.message));
-   return builder.build().then(() => {
-     logger.success("Fractal build completed!");
-   });
- }
+function fractalBuild() {
+  const builder = fractal.web.builder();
+  builder.on("progress", (completed, total) =>
+    logger.update(`Exported ${completed} of ${total} items`, "info")
+  );
+  builder.on("error", err => logger.error(err.message));
+    return builder.build().then(() => {
+      logger.success("Fractal build completed!");
+    });
+}
 
 // gulp
 exports.default = defaultTask
