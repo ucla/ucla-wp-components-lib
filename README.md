@@ -44,7 +44,7 @@ DURING BETA:
 
 ## Directory Hierarchy
 
-Documentation includes usage of Markdown files. Click here to see [More on Github Markdown]https://guides.github.com/features/mastering-markdown/
+Documentation includes usage of Markdown files. Click here to see [More on Github Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ```
 /
