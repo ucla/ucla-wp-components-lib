@@ -4,13 +4,13 @@ title: Download Components
 
 ### CDN
 
-Put the styles in between the <head> </head> tags of every page on your website.
+Put the styles in between the `<head>` tags of every page on your website.
 
 **The Styles**
 ```
 <head>
   // Copy Below
-  <link rel="stylesheet" href="https://d3nstw201xsr54.cloudfront.net/%!CurrentVersion%!/css/ucla-lib.min.css">
+  <link rel="stylesheet" href="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/css/ucla-lib.min.css">
   // End Copy
 </head>
 ```
@@ -21,7 +21,7 @@ Install the JavaScript in the footer of every page on your website.
 ```
 <footer>
   // Copy Below
-  <script type="text/javascript" src="https://d3nstw201xsr54.cloudfront.net/%!CurrentVersion%!/js/ucla-lib-scripts.min.js"></script>
+  <script type="text/javascript" src="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/js/ucla-lib-scripts.min.js"></script>
   // End Copy
 </footer>
 ```
