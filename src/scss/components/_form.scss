@@ -86,7 +86,7 @@
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
-    background: $lightest-grey-2 url('../img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
+    background: $lightest-grey-2 url('/img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: 16px;
     line-height: 24px;
@@ -168,7 +168,7 @@
     }
 
     &:checked::after {
-      background-image: url(./../img/icons/checkmark-white.svg);
+      background-image: url("/img/icons/checkmark-white.svg");
       background-size: 10px 10px;
       display: inline-block;
       width: 10px;
@@ -211,7 +211,7 @@
     }
 
     &:checked::after {
-      background-image: url(./../img/icons/radio-bullet-icon.svg);
+      background-image: url("/img/icons/radio-bullet-icon.svg");
       background-size: 25px 25px;
       background-repeat: none;
       background-position: 50%;

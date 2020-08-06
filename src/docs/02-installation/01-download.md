@@ -1,6 +1,7 @@
 ---
 title: Download Components
 ---
+This repository is available for official UCLA websites only. Your domain must be a subdomain of [ucla.edu](https://ucla.edu) and have been created through the 411 domain policy. For more information please reach out to the Strategic Communications department.
 
 ### CDN
 
@@ -25,20 +26,3 @@ Install the JavaScript in the footer of every page on your website.
   // End Copy
 </footer>
 ```
-
-### Install via NPM
-
-This repository is currently private and requires an ssh key to install via NPM. To obtain access, please reach out to svosburgh@stratcomm.ucla.edu
-
-To create a bitbucket ssh key, follow these instructions:
-https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
-
-After the ssh has been created, run the following command:
-```
-npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
-```
-
-
-## Further Resources
-
-Help Forum To Be Determined.
