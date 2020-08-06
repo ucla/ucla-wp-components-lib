@@ -115,6 +115,7 @@ function generateCompLibStylesLocal() {
   .pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
   .pipe(concat('ucla-lib.min.css'))
   .pipe(dest('build/assets/css'))
+  .pipe(dest('public/css'));
 }
 
 function generateCompLibStylesProd() {
@@ -130,7 +131,8 @@ function generateCompLibStylesProd() {
 function generateCompLibScriptsLocal() {
   return src('src/js/**.js')
   .pipe(concat('ucla-lib-scripts.min.js'))
-  .pipe(dest('build/assets/js'));
+  .pipe(dest('build/assets/js'))
+  .pipe(dest('public/js'));
 }
 
 function generateCompLibScriptsProd() {
