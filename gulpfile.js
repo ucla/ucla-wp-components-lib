@@ -11,6 +11,7 @@ const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const minify = require('gulp-minify');
 sass.compiler = require('node-sass');
+const zip = require('gulp-zip');
 
 /*
  * Configure a Fractal instance.
@@ -151,8 +152,13 @@ function generateCompLibScriptsProd () {
   return merge(compScript, docScript);
 }
 
+// component library zip file
 
-
+function generateCompLibZip () {
+  return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
+    .pipe(zip('ucla-components.zip'))
+    .pipe(dest('public'));
+}
 
 // documentation styles
 
@@ -318,6 +324,7 @@ exports.production = series(
   fractalBuild,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
+  generateCompLibZip,
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,
