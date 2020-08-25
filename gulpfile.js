@@ -12,6 +12,7 @@ const merge = require('merge-stream');
 const minify = require('gulp-minify');
 sass.compiler = require('node-sass');
 const zip = require('gulp-zip');
+const del = require('del');
 
 /*
  * Configure a Fractal instance.
@@ -115,7 +116,7 @@ function lintJavascriptDoc () {
 function generateCompLibStylesLocal () {
   return src('src/scss/**/*.scss')
     .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(concat('ucla-lib.min.css'))
+    .pipe(concat('ucla-lib.css'))
     .pipe(dest('build/assets/css'))
     .pipe(dest('public/css'));
 }
@@ -131,33 +132,53 @@ function generateCompLibStylesProd () {
 // component library scripts
 
 function generateCompLibScriptsLocal () {
-  return src('src/js/**.js')
-    .pipe(concat('ucla-lib-scripts.min.js'))
+  return src('src/js/*.js')
+    .pipe(concat('ucla-lib-scripts.js'))
     .pipe(dest('build/assets/js'))
     .pipe(dest('public/js'));
 }
 
 function generateCompLibScriptsProd () {
-  let compScript = src('src/js/**.js')
+  return src('src/js/**/*.js')
     .pipe(concat('ucla-lib-scripts.js'))
     .pipe(minify({
       ext: {
         src: '.js',
         min: '.min.js'
-      }
+      },
     }))
-    .pipe(dest('public/js'));
-  let docScript = src('public/js/ucla-lib-scripts.min.js')
+    .pipe(dest('public/js'))
     .pipe(dest('build/js'));
-  return merge(compScript, docScript);
 }
 
 // component library zip file
 
 function generateCompLibZip () {
+  console.log('Creating ZIP file...');
   return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
     .pipe(zip('ucla-components.zip'))
     .pipe(dest('public'));
+}
+
+// clean unnecessary files
+
+function cleanMinified () {
+  console.log('Cleaning minified...');
+  return del([
+    'public/js/*.min.js',
+    'public/css/*.min.css',
+    'public/*.zip'
+  ]);
+}
+
+function cleanExpanded () {
+  console.log('Cleaning expanded...');
+  return del([
+    'public/js/*.js',
+    '!public/js/*.min.js',
+    'public/css/*.css',
+    '!public/css/*.min.css'
+  ]);
 }
 
 // documentation styles
@@ -205,7 +226,7 @@ function generateDocImagesProd () {
     .pipe(dest('build/docs/img'));
 }
 
-// component images (i.e icons)
+// component images (ie. icons)
 
 function generateCompLibImages () {
   return src('src/components/img/**/*')
@@ -303,6 +324,7 @@ exports.watch = series(
   watchStyles,
   watchJavascript,
   generateCompLibScriptsLocal,
+  cleanMinified,
   generateDocScriptsLocal
 );
 
@@ -311,6 +333,7 @@ exports.build = series(
   fractalBuild,
   generateCompLibStylesLocal,
   generateCompLibScriptsLocal,
+  cleanMinified,
   generateCompLibImages,
   generateDocStylesLocal,
   generateDocScriptsLocal,
@@ -322,9 +345,12 @@ exports.build = series(
 // gulp production
 exports.production = series(
   fractalBuild,
+  generateCompLibStylesLocal,
+  generateCompLibScriptsLocal,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
   generateCompLibZip,
+  cleanExpanded,
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,
