@@ -260,7 +260,7 @@ Span wrapper that represents self-contained content.
 
 <img class="doc-images" alt="Pagination Specs Image" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
 
-### ***Code***
+### **Code**
 
 ```
 <ul class="pager">

@@ -48,4 +48,8 @@ title: Ribbons
 
 ### **Code**
 
-<!--Highlight Ribbon code here, if applicable-->
+```
+<div class="ribbon">15 of the 20 largest fires in California history have occurred since 2000.</div>
+
+<div class="ribbon ribbon--highlight">85 percent of undergraduates enroll in the College</div>
+```
