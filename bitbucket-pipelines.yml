@@ -42,6 +42,9 @@ pipelines:
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
             - gulp generateCompLibScriptsLocal
+            # update component script and style file extensions
+            - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+            - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
             - git add package.json package-lock.json public/*
@@ -122,6 +125,9 @@ pipelines:
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
             - gulp generateCompLibScriptsLocal
+            # update component script and style file extensions
+            - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+            - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
             - git add public/*

@@ -4,13 +4,15 @@ const { src, series, dest, parallel, watch, task } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
-const fractal = require("./fractal");
+const fractal = require('./fractal');
 const eslint = require('gulp-eslint');
 const image = require('gulp-image');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const minify = require('gulp-minify');
 sass.compiler = require('node-sass');
+const zip = require('gulp-zip');
+const del = require('del');
 
 /*
  * Configure a Fractal instance.
@@ -31,78 +33,79 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
- // For debugging, make sure gulp is installed
-function defaultTask(cb) {
+
+// For debugging, make sure gulp is installed
+function defaultTask (cb) {
   cb();
 }
 
-function generateFaviconLocal() {
+function generateFaviconLocal () {
   return src('src/favicon.ico')
-  .pipe(image())
-  .pipe(dest('build'));
+    .pipe(image())
+    .pipe(dest('build'));
 }
 
-function generateFaviconProd() {
+function generateFaviconProd () {
   return src('src/favicon.ico')
-  .pipe(image())
-  .pipe(dest('build'));
+    .pipe(image())
+    .pipe(dest('build'));
 }
 
 // watchers
 
-function watchStyles(done) {
+function watchStyles (done) {
   watch('src/scss/**/*.scss', series(generateCompLibStylesLocal, lintSassWatch)),
   watch('src/docs/scss/**/*.scss', series(generateDocStylesLocal, docLintSassWatch));
   done();
 }
 
-function watchJavascript(done) {
+function watchJavascript (done) {
   watch('src/js/*.js', series(generateCompLibScriptsLocal, lintJavascriptLib));
   watch('src/docs/js/*.js', series(generateDocScriptsLocal, lintJavascriptDoc));
   done();
 }
 
-function lintSassWatch() {
+function lintSassWatch () {
   return src('src/scss/components/**/*.scss')
-  .pipe(gulpStylelint({
-    reporters: [
-      {formatter: 'string', console: true}
-    ]
-  }));
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
 }
 
-function docLintSassWatch() {
+function docLintSassWatch () {
   return src('src/docs/**/*.scss')
-  .pipe(gulpStylelint({
-    reporters: [
-      {formatter: 'string', console: true}
-    ]
-  }));
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
 }
 
 // linters
 
-function lintJavascriptLib() {
+function lintJavascriptLib () {
   return src('src/js/*.js')
   // eslint() attaches the lint output to the "eslint" property
   // of the file object so it can be used by other modules.
-  .pipe(eslint())
+    .pipe(eslint())
   // eslint.format() outputs the lint results to the console.
   // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format())
+    .pipe(eslint.format());
   // To have the process exit with an error code (1) on
   // lint error, return the stream and pipe to failAfterError last.
   //.pipe(eslint.failAfterError());
 }
 
-function lintJavascriptDoc() {
+function lintJavascriptDoc () {
   return src('src/docs/js/*.js')
   // eslint() attaches the lint output to the "eslint" property
   // of the file object so it can be used by other modules.
-  .pipe(eslint())
+    .pipe(eslint())
   // eslint.format() outputs the lint results to the console.
   // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format())
+    .pipe(eslint.format());
   // To have the process exit with an error code (1) on
   // lint error, return the stream and pipe to failAfterError last.
   //.pipe(eslint.failAfterError());
@@ -110,154 +113,179 @@ function lintJavascriptDoc() {
 
 // component library styles
 
-function generateCompLibStylesLocal() {
+function generateCompLibStylesLocal () {
   return src('src/scss/**/*.scss')
-  .pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
-  .pipe(concat('ucla-lib.min.css'))
-  .pipe(dest('build/assets/css'))
-  .pipe(dest('public/css'));
+    .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(concat('ucla-lib.css'))
+    .pipe(dest('build/assets/css'))
+    .pipe(dest('public/css'));
 }
 
-function generateCompLibStylesProd() {
+function generateCompLibStylesProd () {
   return src('src/scss/**/*.scss')
- 	.pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-  .pipe(concat('ucla-lib.min.css'))
-  .pipe(dest('build/css'))
-  .pipe(dest('public/css'));
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(concat('ucla-lib.min.css'))
+    .pipe(dest('build/css'))
+    .pipe(dest('public/css'));
 }
 
 // component library scripts
 
-function generateCompLibScriptsLocal() {
-  return src('src/js/**.js')
-  .pipe(concat('ucla-lib-scripts.min.js'))
-  .pipe(dest('build/assets/js'))
-  .pipe(dest('public/js'));
+function generateCompLibScriptsLocal () {
+  return src('src/js/*.js')
+    .pipe(concat('ucla-lib-scripts.js'))
+    .pipe(dest('build/assets/js'))
+    .pipe(dest('public/js'));
 }
 
-function generateCompLibScriptsProd() {
-  var compScript = src('src/js/**.js')
-  .pipe(concat('ucla-lib-scripts.js'))
-  .pipe(minify({
-    ext:{
-      src: '.js',
-      min: '.min.js'
-    }
-  }))
-  .pipe(dest('public/js'));
-  var docScript = src('public/js/ucla-lib-scripts.min.js')
-  .pipe(dest('build/js'));
-  return merge(compScript, docScript)
+function generateCompLibScriptsProd () {
+  return src('src/js/**/*.js')
+    .pipe(concat('ucla-lib-scripts.js'))
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+    }))
+    .pipe(dest('public/js'))
+    .pipe(dest('build/js'));
+}
+
+// component library zip file
+
+function generateCompLibZip () {
+  return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
+    .pipe(zip('ucla-components.zip'))
+    .pipe(dest('public'));
+}
+
+// clean unnecessary files
+
+function cleanMinified () {
+  return del([
+    'public/js/*.min.js',
+    'public/css/*.min.css',
+    'public/*.zip'
+  ]);
+}
+
+function cleanExpanded () {
+  return del([
+    'public/js/*.js',
+    '!public/js/*.min.js',
+    'public/css/*.css',
+    '!public/css/*.min.css'
+  ]);
 }
 
 // documentation styles
 
-function generateDocStylesLocal() {
+function generateDocStylesLocal () {
   return src('src/docs/scss/**/*.scss')
-  .pipe(sass.sync({outputStyle: 'expanded'}).on("error", sass.logError))
-  .pipe(concat('global.css'))
-  .pipe(dest('build/assets/docs/css'));
+    .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(concat('global.css'))
+    .pipe(dest('build/assets/docs/css'));
 }
 
-function generateDocStylesProd() {
+function generateDocStylesProd () {
   return src('src/docs/scss/**/*.scss')
-  .pipe(sass.sync({outputStyle: 'compressed'}).on("error", sass.logError))
-  .pipe(concat('global.css'))
-  .pipe(dest('build/docs/css'));
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(concat('global.css'))
+    .pipe(dest('build/docs/css'));
 }
 
 // documentation scripts
 
-function generateDocScriptsLocal() {
+function generateDocScriptsLocal () {
   return src('src/docs/js/**.js')
-  .pipe(concat('scripts.js'))
-  .pipe(dest('build/assets/docs/js'));
+    .pipe(concat('scripts.js'))
+    .pipe(dest('build/assets/docs/js'));
 }
 
-function generateDocScriptsProd() {
+function generateDocScriptsProd () {
   return src('src/docs/js/**.js')
-  .pipe(concat('scripts.js'))
-  .pipe(dest('build/docs/js'));
+    .pipe(concat('scripts.js'))
+    .pipe(dest('build/docs/js'));
 }
 
 // documentation images - filepaths are chosen to ensure
 // images work both in local and prod environments
 
-function generateDocImagesLocal() {
+function generateDocImagesLocal () {
   return src('src/docs/img/**/*')
-  .pipe(image())
-  .pipe(dest('build/assets/build/docs/img'));
+    .pipe(image())
+    .pipe(dest('build/assets/build/docs/img'));
 }
 
-function generateDocImagesProd() {
+function generateDocImagesProd () {
   return src('src/docs/img/**/*')
-  .pipe(image())
-  .pipe(dest('build/docs/img'));
+    .pipe(image())
+    .pipe(dest('build/docs/img'));
 }
 
-// component images (i.e icons)
+// component images (ie. icons)
 
-function generateCompLibImages() {
+function generateCompLibImages () {
   return src('src/components/img/**/*')
-  .pipe(image())
-  .pipe(dest('build/assets/img'));
+    .pipe(image())
+    .pipe(dest('build/assets/img'));
 }
 
 // Strip/Rebuild Images with %!CurrentVersion%! String filter
 
 // For Local - Remove filter string
-function removeImageSrcFilterLocal() {
-  var firstLevelDocs = src('src/docs/*.md')
-  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-  .pipe(dest('src/docs'))
-  var secondLevelDocs = src('src/docs/*/*.md')
-  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-  .pipe(dest('src/docs'))
-  var thirdLevelDocs = src('src/docs/*/*/*.md')
-  .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
-  .pipe(dest('src/docs'))
-  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+function removeImageSrcFilterLocal () {
+  let firstLevelDocs = src('src/docs/*.md')
+    .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+    .pipe(dest('src/docs'));
+  let secondLevelDocs = src('src/docs/*/*.md')
+    .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+    .pipe(dest('src/docs'));
+  let thirdLevelDocs = src('src/docs/*/*/*.md')
+    .pipe(replace('src="/build/%!CurrentVersion%!/', 'src="/build/'))
+    .pipe(dest('src/docs'));
+  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs);
 }
 
 // For Dev & Prod Environments- Add filter string
-function addImageSrcFilterProd() {
-  var firstLevelDocs = src('src/docs/*.md')
-  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-  .pipe(dest('src/docs'))
-  var secondLevelDocs = src('src/docs/*/*.md')
-  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-  .pipe(dest('src/docs'))
-  var thirdLevelDocs = src('src/docs/*/*/*.md')
-  .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
-  .pipe(dest('src/docs'))
-  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs)
+function addImageSrcFilterProd () {
+  let firstLevelDocs = src('src/docs/*.md')
+    .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+    .pipe(dest('src/docs'));
+  let secondLevelDocs = src('src/docs/*/*.md')
+    .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+    .pipe(dest('src/docs'));
+  let thirdLevelDocs = src('src/docs/*/*/*.md')
+    .pipe(replace('src="/build/', 'src="/build/%!CurrentVersion%!/'))
+    .pipe(dest('src/docs'));
+  return merge(firstLevelDocs, secondLevelDocs, thirdLevelDocs);
 }
 
- /**
-  * Fractal tasks
+/*
+ * Fractal tasks
+ */
+
+/*
+  * Start the Fractal server
+  *
+  * In this example we are passing the option 'sync: true' which means that it will
+  * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
+  * Obviously this is completely optional!
+  *
+  * This task will also log any errors to the console.
   */
 
-	/*
-	 * Start the Fractal server
-	 *
-	 * In this example we are passing the option 'sync: true' which means that it will
-	 * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
-	 * Obviously this is completely optional!
-	 *
-	 * This task will also log any errors to the console.
-	 */
-
-function fractalStart() {
+function fractalStart () {
   const server = fractal.web.server({
     sync: true
   });
-  server.on("error", err => logger.error(err.message));
+  server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
   });
 }
 
-	/*
+/*
  * Run a static export of the project web UI.
  *
  * This task will report on progress using the 'progress' event emitted by the
@@ -267,19 +295,19 @@ function fractalStart() {
  * configuration option set above.
  */
 
-function fractalBuild() {
+function fractalBuild () {
   const builder = fractal.web.builder();
-  builder.on("progress", (completed, total) =>
-    logger.update(`Exported ${completed} of ${total} items`, "info")
+  builder.on('progress', (completed, total) =>
+    logger.update(`Exported ${completed} of ${total} items`, 'info')
   );
-  builder.on("error", err => logger.error(err.message));
-    return builder.build().then(() => {
-      logger.success("Fractal build completed!");
-    });
+  builder.on('error', err => logger.error(err.message));
+  return builder.build().then(() => {
+    logger.success('Fractal build completed!');
+  });
 }
 
 // gulp
-exports.default = defaultTask
+exports.default = defaultTask;
 
 // gulp styleProductionPublic
 exports.generateCompLibStylesLocal = generateCompLibStylesLocal;
@@ -292,18 +320,20 @@ exports.fractalBuild = fractalBuild;
 
 // gulp watch
 exports.watch = series(
-	fractalStart,
-	watchStyles,
-	watchJavascript,
+  fractalStart,
+  watchStyles,
+  watchJavascript,
   generateCompLibScriptsLocal,
+  cleanMinified,
   generateDocScriptsLocal
 );
 
 // gulp build
 exports.build = series(
-	fractalBuild,
-	generateCompLibStylesLocal,
+  fractalBuild,
+  generateCompLibStylesLocal,
   generateCompLibScriptsLocal,
+  cleanMinified,
   generateCompLibImages,
   generateDocStylesLocal,
   generateDocScriptsLocal,
@@ -314,9 +344,13 @@ exports.build = series(
 
 // gulp production
 exports.production = series(
-	fractalBuild,
-	generateCompLibStylesProd,
+  fractalBuild,
+  generateCompLibStylesLocal,
+  generateCompLibScriptsLocal,
+  generateCompLibStylesProd,
   generateCompLibScriptsProd,
+  generateCompLibZip,
+  cleanExpanded,
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,

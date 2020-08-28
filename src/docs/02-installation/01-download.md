@@ -26,3 +26,7 @@ Install the JavaScript in the footer of every page on your website.
   // End Copy
 </footer>
 ```
+
+**ZIP Download**
+
+[Download ZIP](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip)
