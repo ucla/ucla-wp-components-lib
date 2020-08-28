@@ -97,7 +97,7 @@ Span wrapper that represents self-contained content.
 ```
 <a href="#" class="btn">Primary Button</a>
 
-//With Icon
+<!-- With Icon -->
 <a href="#" class="btn icon-btn icon-btn--download">Primary Button</a>﻿
 
 ```
@@ -128,7 +128,7 @@ Span wrapper that represents self-contained content.
 ```
 <a href="#" class="btn btn--secondary">Secondary Button</a>
 
-//With Icon
+<!-- With Icon -->
 <a href="#" class="btn btn--secondary icon-btn icon-btn--internal">Secondary Button</a>
 ```
 
@@ -158,7 +158,7 @@ Span wrapper that represents self-contained content.
 ```
 <a href="#" class="btn btn--tertiary">Tertiary Button</a>
 
-//With Icon
+<!-- With Icon -->
 <a href="#" class="btn btn--tertiary icon-btn icon-btn--play">Tertiary Button</a>﻿
 ```
 
@@ -260,7 +260,7 @@ Span wrapper that represents self-contained content.
 
 <img class="doc-images" alt="Pagination Specs Image" title="Pagination Specs Image" alt="Pagination Specs Image" src="/build/docs/img/Buttons/Pagination_Button/pagination-specs.jpg"/>
 
-### ***Code***
+### **Code**
 
 ```
 <ul class="pager">

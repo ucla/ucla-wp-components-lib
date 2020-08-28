@@ -284,6 +284,9 @@ exports.default = defaultTask
 // gulp styleProductionPublic
 exports.generateCompLibStylesLocal = generateCompLibStylesLocal;
 
+// Generate Lib Script - To be used in CI prior to exectuing production task
+exports.generateCompLibScriptsLocal = generateCompLibScriptsLocal;
+
 // gulp fractalBuild
 exports.fractalBuild = fractalBuild;
 
