@@ -30,7 +30,9 @@ title: Ribbons
 
 ### **Code**
 
-<!--Brand Ribbon code here, if applicable-->
+```
+{{ view '@ribbons--brand' }}
+```
 
 ## **Highlight Ribbon**
 
@@ -48,4 +50,6 @@ title: Ribbons
 
 ### **Code**
 
-<!--Highlight Ribbon code here, if applicable-->
+```
+{{ view '@ribbons--highlight' }}
+```
