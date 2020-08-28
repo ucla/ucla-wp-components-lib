@@ -154,7 +154,6 @@ function generateCompLibScriptsProd () {
 // component library zip file
 
 function generateCompLibZip () {
-  console.log('Creating ZIP file...');
   return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
     .pipe(zip('ucla-components.zip'))
     .pipe(dest('public'));
@@ -163,7 +162,6 @@ function generateCompLibZip () {
 // clean unnecessary files
 
 function cleanMinified () {
-  console.log('Cleaning minified...');
   return del([
     'public/js/*.min.js',
     'public/css/*.min.css',
@@ -172,7 +170,6 @@ function cleanMinified () {
 }
 
 function cleanExpanded () {
-  console.log('Cleaning expanded...');
   return del([
     'public/js/*.js',
     '!public/js/*.min.js',
