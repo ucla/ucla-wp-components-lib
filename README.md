@@ -4,14 +4,14 @@
 
 This components library was built on the Fractal technology and is continually in development.
 
-**Read the Fractal documentation at http://fractal.build/guide.**
+**Read the Fractal documentation at [http://fractal.build/guide](http://fractal.build/guide).**
 
 ## Getting started
 
 1. Clone respository and run `npm install`
 1. Run `gulp build`
 1. Run `gulp watch`
-1. Navigate to http://localhost:3000
+1. Navigate to [http://localhost:3000](http://localhost:3000m)
 
 ## Gulp Tasks
 
@@ -44,7 +44,7 @@ DURING BETA:
 
 ## Directory Hierarchy
 
-Documentation includes usage of Markdown files. Click here to see [More on Github Markdown](https://guides.github.com/features/mastering-markdown/)
+Documentation includes usage of Markdown files. Click here to see [more on Github Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ```
 /
@@ -96,7 +96,7 @@ When running `npm run commit`, a prompt with the below questions will appear in 
 4. Provide a longer description of the change - (if any) Include more details of changes made
 5. Are there any breaking changes? - Yes, if this update will break usage of the library previous to this update
 6. (If "Yes" from #5) A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself - Include details on what will break from this commit
-7. If "Yes" from #5) Describe the breaking changes - (If any) Include more details on what will break from this commit
+7. (If "Yes" from #5) Describe the breaking changes - (If any) Include more details on what will break from this commit
 8. Does this change affect any open issues? - Yes, if this change was assigned through a JIRA ticket (StratComm Team) or change is to fix an issue from our issue board
 9. (If "Yes" from #8) Add issue references - Include JIRA ticket number or link to issue board
 
@@ -106,7 +106,7 @@ When running `npm run commit`, a prompt with the below questions will appear in 
 - Prototype - Component is in review
 - wip - Default status "Work In Progress"
 
-More on status can be found here, https://fractal.build/guide/core-concepts/statuses.html#default-statuses.
+More on status can be found [here](https://fractal.build/guide/core-concepts/statuses.html#default-statuses).
 
 ## Notes
 * This project's documentation and component public library in production environment is deployed behind Cloudfront CDN. To see updates instantly after updates have been to production, you must manually invalidate the files. See the distribution page for the documentation [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:E3BKWM01VHPJ5I) or for the public library [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:EUU3JRBWPI1HQ). For more on "how to invalidate" see the AWS docs [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html).
