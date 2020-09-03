@@ -10,10 +10,10 @@ We define the following variables in a [Sass](https://sass-lang.com/) stylesheet
 
 > **NOTE**: ADA compliance requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, and a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
 
-- [Layout Colors](/build/%!CurrentVersion%!/docs/colors/layout)
-- [Text Colors](/build/%!CurrentVersion%!/docs/colors/text)
-- [Interactive Colors - Light Background](/build/%!CurrentVersion%!/docs/colors/interactive-light)
-- [Interactive Colors - Dark Background](/build/%!CurrentVersion%!/docs/colors/interactive-dark)
-- [Denotive Colors](/build/%!CurrentVersion%!/docs/colors/denotive)
+- [Layout Colors](./colors/layout)
+- [Text Colors](./colors/text)
+- [Interactive Colors - Light Background](./colors/interactive-light)
+- [Interactive Colors - Dark Background](./colors/interactive-dark)
+- [Denotive Colors](./colors/denotive)
 
 **For more information about contributing to Colors, see README file at `./src/components/98-colors/README.md`**
