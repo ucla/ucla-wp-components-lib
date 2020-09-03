@@ -16,7 +16,8 @@
   "dependencies": {
     "@frctl/fractal": "^1.2.1",
     "fractal-status-helper": "^1.0.0",
-    "gulp-eslint": "^6.0.0"
+    "gulp-eslint": "^6.0.0",
+    "gulp-zip": "^5.0.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
