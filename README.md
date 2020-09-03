@@ -29,7 +29,7 @@ This components library was built on the Fractal technology and is continually i
 | Branch | Cloud URL | S3 Bucket URL |
 |-|-|-|
 | main | https://webcomponents.ucla.edu | https://s3.console.aws.amazon.com/s3/buckets/webcomponents.ucla.edu/?region=us-west-1 |
-| development | http://dev-webcomponents-ucla-edu.s3-website-us-west-1.amazonaws.com | https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents.ucla.edu/?region=us-west-1 |
+| development | http://dev-webcomponents-ucla-edu.s3-website-us-west-1.amazonaws.com | https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents-ucla-edu/?region=us-west-1 |
 | campus | not setup | not setup |
 
 ## Branch Info (BETA)
