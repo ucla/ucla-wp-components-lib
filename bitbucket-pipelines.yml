@@ -29,7 +29,7 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
@@ -42,6 +42,9 @@ pipelines:
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
             - gulp generateCompLibScriptsLocal
+            # update component script and style file extensions
+            - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+            - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
             - git add package.json package-lock.json public/*
@@ -110,7 +113,7 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
-            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
@@ -122,6 +125,9 @@ pipelines:
             - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
             - gulp generateCompLibScriptsLocal
+            # update component script and style file extensions
+            - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+            - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
             - git add public/*

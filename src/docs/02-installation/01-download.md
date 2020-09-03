@@ -26,3 +26,7 @@ Install the JavaScript in the footer of every page on your website.
   // End Copy
 </footer>
 ```
+
+### Zip Download
+
+Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.
