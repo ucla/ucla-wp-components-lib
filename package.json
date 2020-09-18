@@ -14,9 +14,10 @@
     "email": "svosburgh@stratcomm.ucla.edu"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.2.1",
+    "@frctl/fractal": "^1.3.0",
     "fractal-status-helper": "^1.0.0",
-    "gulp-eslint": "^6.0.0"
+    "gulp-eslint": "^6.0.0",
+    "gulp-zip": "^5.0.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",

@@ -30,3 +30,10 @@ Install the JavaScript in the footer of every page on your website.
 ### Zip Download
 
 Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.
+
+### Install via NPM
+
+Run the following command at the root directory of your project:
+```
+npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
+```
