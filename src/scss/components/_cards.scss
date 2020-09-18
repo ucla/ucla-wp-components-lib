@@ -405,6 +405,10 @@ The spans in the tier 2 stories are for styling purposes.
 
       @media (max-width: breakpoint-max(md)) {
         width: 100%;
+        // remove margins and set padding with values
+        // so grey background is applied to the whole element
+        padding: 0 24px 24px 0;
+        margin: 0;
       }
 
       &:nth-child(3n) {
@@ -426,6 +430,12 @@ The spans in the tier 2 stories are for styling purposes.
 
     &-card-grey {
       background: $grey-5;
+
+      & > a > .story__secondary-title {
+        @media (max-width: breakpoint-max(md)) {
+          background: $grey-5;
+        }
+      }
     }
 
     &-content {
@@ -496,7 +506,8 @@ The spans in the tier 2 stories are for styling purposes.
       background: white;
 
       @media (max-width: breakpoint-max(sm)) {
-        width: 101%;
+        margin: 0;
+        width: 100%;
       }
 
       @media (min-width: breakpoint-min(md)) {
