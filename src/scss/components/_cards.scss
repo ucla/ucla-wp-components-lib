@@ -30,9 +30,9 @@
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: 24px;
     font-weight: bold;
-    line-height: 1.41rem;
+    line-height: 27px;
     margin-bottom: 24px;
   }
 
@@ -42,8 +42,8 @@
 
   &__description {
     margin-bottom: 24px;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 16px;
+    line-height: 24px;
     color: $medium-grey5;
     max-height: 300px;
 
@@ -132,9 +132,9 @@
   &__title {
     color: $default-state;
     margin: 24px 24px 0;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: bold;
-    line-height: 1.41rem;
+    line-height: 22.5px;
   }
 
   &-icon {
@@ -183,6 +183,7 @@
       left: 0;
 
       .small-block {
+        margin-top: 9px;
         display: inline-block;
       }
     }
@@ -206,7 +207,7 @@
     &__time,
     &__location {
       margin-bottom: 8px;
-      font-size: 0.8rem;
+      font-size: 12.8px;
       font-weight: bold;
       color: $medium-grey4;
 
@@ -221,22 +222,14 @@
 
     &__description {
       margin-bottom: 8px;
-      font-size: 0.8rem;
-      line-height: 1rem;
+      font-size: 16px;
+      line-height: 24px;
       color: $medium-grey5;
       max-height: 300px;
 
       &:last-child {
         margin-bottom: 0px;
       }
-    }
-
-    .tags {
-      position: absolute;
-      bottom: 24px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: $darker-blue;
     }
   }
 
@@ -407,7 +400,7 @@ The spans in the tier 2 stories are for styling purposes.
         width: 100%;
         // remove margins and set padding with values
         // so grey background is applied to the whole element
-        padding: 0 24px 24px 0;
+        padding: 12px 24px;
         margin: 0;
       }
 
@@ -432,9 +425,7 @@ The spans in the tier 2 stories are for styling purposes.
       background: $grey-5;
 
       & > a > .story__secondary-title {
-        @media (max-width: breakpoint-max(md)) {
-          background: $grey-5;
-        }
+        background: $grey-5;
       }
     }
 
@@ -453,7 +444,7 @@ The spans in the tier 2 stories are for styling purposes.
       }
 
       @media (min-width: breakpoint-min(lg)) {
-        padding: 0 24px 0;
+        padding: 0 32px 0;
       }
     }
 
@@ -503,7 +494,6 @@ The spans in the tier 2 stories are for styling purposes.
       color: $default-state;
       margin: 0 16px;
       outline: none;
-      background: white;
 
       @media (max-width: breakpoint-max(sm)) {
         margin: 0;
@@ -594,6 +584,10 @@ The spans in the tier 2 stories are for styling purposes.
     background: $grey-5;
   }
 
+  &-grey > &__info-wrapper {
+    background: $grey-5;
+  }
+
   &__image {
     height: auto;
     position: relative;
@@ -610,7 +604,7 @@ The spans in the tier 2 stories are for styling purposes.
     }
   }
 
-  &__info-wrapper-grey, &__info-wrapper {
+  &__info-wrapper {
     position: relative;
     bottom: 32px;
     background: $white;
@@ -622,28 +616,24 @@ The spans in the tier 2 stories are for styling purposes.
     }
   }
 
-  &__info-wrapper-grey {
-    background: $grey-5;
-  }
-
   &__name {
     color: $default-state;
-    font-size: 1.25rem;
-    line-height: 1.125;
+    font-size: 24px;
+    line-height: 27px;
     margin-bottom: 8px;
   }
 
   &__department {
     color: $medium-grey4;
-    font-size: 1.125rem;
-    line-height: 1.25;
+    font-size: 18px;
+    line-height: 22.5px;
     margin-bottom: 12px;
   }
 
   &__description {
     margin-bottom: 8px;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 16px;
+    line-height: 24px;
     color: $medium-grey5;
     max-height: 300px;
 
