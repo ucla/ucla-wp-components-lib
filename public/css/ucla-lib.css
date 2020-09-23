@@ -5141,6 +5141,8 @@ p em {
   height: 15px;
   background: url("/img/icons/play-white.svg");
   background-size: contain;
+  background-position: 0 -1px;
+  vertical-align: middle;
 }
 
 .btn--lightbg {
@@ -5540,6 +5542,60 @@ ol li::before {
 
 ol li ol, ol li ul {
   margin-top: 16px;
+}
+
+.ribbon span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #2774AE;
+  display: inline-block;
+  padding: 8px 4px 2px 4px;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.ribbon span.first {
+  padding-left: 8px;
+}
+
+.ribbon span.last {
+  padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .ribbon span {
+    font-size: 3rem;
+    padding: 12px 6px 3px 6px;
+    margin-bottom: 2px;
+  }
+  .ribbon span.first {
+    padding-left: 12px;
+  }
+  .ribbon span.last {
+    padding-right: 12px;
+  }
+}
+
+.ribbon--highlight span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: none;
+  line-height: 1;
+  color: #333333;
+  background: #FFD100;
+  display: inline-block;
+  padding: 12px 3px 6px 3px;
+  margin-bottom: 2px;
+}
+
+.ribbon--highlight span.first {
+  padding-left: 12px;
+}
+
+.ribbon--highlight span.last {
+  padding-right: 12px;
 }
 
 .stat-wrapper {
