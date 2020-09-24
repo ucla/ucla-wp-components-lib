@@ -6,6 +6,7 @@
   border: 2px solid transparent;
   line-height: 1.25;
   cursor: pointer;
+  display: inline-block;
 
   &:focus {
     outline: none;
@@ -203,11 +204,12 @@
   li {
     display: inline;
 
-    & a {
+    & a, & button {
       text-decoration: none;
       padding: 3px 8px;
       color: $default-state;
-      border-radius: 2px;
+      border: none;
+      background: white;
 
       &:hover {
         color: $white;
@@ -233,6 +235,7 @@
       // unboxed class specific styling
       &.current {
         color: $lightest-grey;
+        border-color: $lightest-grey;
 
         &:hover {
           color: $white;
@@ -252,7 +255,7 @@
 
   // boxed class specific styling
   &.boxed {
-    & li a {
+    & li a, & li button {
       padding: 7px 12px;
       border-width: 2px;
       border-style: solid;
