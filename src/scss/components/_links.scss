@@ -1,8 +1,13 @@
-a {
-  font: $font;
+// Specificity is added this way so that links automatically inherit
+// styling without needing to include class names.
+// This is important since some CMSs make adding classnames to links
+// more difficult
+// Anchor tags used in other components with differing stylesmay need
+// to override these styling rules by means of increased CSS specificity
 
-  // link used for light backgrounds
-  &.link {
+.ucla.campus {
+  // links on light backgrounds
+  a {
     color: $default-state;
 
     &:visited {
@@ -23,9 +28,8 @@ a {
       outline: 1px dotted $default-state;
     }
   }
-
-  // link used for dark backgrounds
-  &.white-link {
+  // links on dark backgrounds
+  & .white-link {
     color: $white;
 
     &:visited {
@@ -47,69 +51,68 @@ a {
       background: $active-state-dark;
     }
   }
-}
 
-// Related Links
+  // Related Links
+  .related-links {
+    border-bottom: 1px solid $emergency-bg-light;
+    padding-inline-start: 0;
 
-.related-links {
-  border-bottom: 1px solid $emergency-bg-light;
-  padding-inline-start: 0;
+    li {
+      position: relative;
+      border-top: 1px solid $emergency-bg-light;
+      margin: 0;
 
-  li {
-    position: relative;
-    border-top: 1px solid $emergency-bg-light;
-    margin: 0;
+      // remove comp library's default bullet styling
+      &::before {
+        content: "";
+        margin-left: 0;
+        display: block;
+      }
 
-    // remove comp library's default bullet styling
-    &::before {
-      content: "";
-      margin-left: 0;
-      display: block;
-    }
-
-    a {
-      line-height: 1.5rem;
-      color: $default-state;
-      text-decoration: none;
-      display: block;
-      padding: 12px 80px 12px 16px;
-      font-weight: bold;
-
-      &:focus {
-        background-color: $white;
+      a {
+        line-height: 1.5rem;
         color: $default-state;
-        outline: 1px dotted $default-state;
-        outline-offset: -3px;
-      }
+        text-decoration: none;
+        display: block;
+        padding: 12px 80px 12px 16px;
+        font-weight: bold;
 
-      &:hover, &:active {
-        color: $white;
-      }
-
-      &:hover {
-        background-color: $hover-state;
-      }
-
-      &:active {
-        background-color: $active-state;
-      }
-
-      &.ext-link {
-        &::after {
-          content: '';
-          background: url('../img/icons/external-link-defaultblue.svg');
-          background-size: contain;
-          width: 24px;
-          height: 24px;
-          display: block;
-          position: absolute;
-          right: 24px;
-          top: calc(50% - 11px);
+        &:focus {
+          background-color: $white;
+          color: $default-state;
+          outline: 1px dotted $default-state;
+          outline-offset: -3px;
         }
 
-        &:hover::after {
-          background: url('../img/icons/external-link-white.svg');
-          background-size: contain;
+        &:hover, &:active {
+          color: $white;
+        }
+
+        &:hover {
+          background-color: $hover-state;
+        }
+
+        &:active {
+          background-color: $active-state;
+        }
+
+        &.ext-link {
+          &::after {
+            content: '';
+            background: url('../img/icons/external-link-defaultblue.svg');
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: block;
+            position: absolute;
+            right: 24px;
+            top: calc(50% - 11px);
+          }
+
+          &:hover::after {
+            background: url('../img/icons/external-link-white.svg');
+            background-size: contain;
+          }
         }
       }
     }
