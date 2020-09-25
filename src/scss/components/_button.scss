@@ -1,223 +1,97 @@
-.btn {
-  padding: 12px 16px 8px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 2px;
-  border: 2px solid transparent;
-  line-height: 1.25;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-
-  &.play::before {
+.ucla.campus {
+  & .btn {
+    padding: 12px 16px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    line-height: 1.25;
+    cursor: pointer;
     display: inline-block;
-    content: '';
-    width: 15px;
-    height: 15px;
-    background: url('/img/icons/play-white.svg');
-    background-size: contain;
-    background-position: 0 -1px;
-    vertical-align: middle;
-  }
-
-  &--lightbg {
-    background: $default-state;
-    color: $white;
-
-    &:hover {
-      background: $hover-state;
-    }
 
     &:focus {
-      background: $focus-state;
-      outline: 1px dotted $white;
-      outline-offset: -3px;
-    }
-
-    &:active {
-      background: $active-state;
       outline: none;
     }
 
     &:disabled {
-      background: $disabled-state;
-      color: $white;
-    }
-  }
-
-  // primary-dark button styling
-  &--darkbg {
-    color: black;
-    background: $ucla-gold;
-
-    &:hover {
-      background: $hover-state-dark;
-    }
-
-    &:focus {
-      background: $focus-state-dark;
-      outline: 1px dotted $white;
-      outline-offset: -3px;
-    }
-
-    &:active {
-      background: $active-state-dark;
-      outline: none;
-    }
-
-    &:disabled {
-      background: $disabled-state-dark;
-    }
-  }
-
-  &--secondary {
-    background: $white;
-    color: $default-state;
-    border: 2px solid $default-state;
-
-    &:hover {
-      background: $hover-state;
-      border-color: $hover-state;
-      color: $white;
-    }
-
-
-    &:focus {
-      background: $focus-state;
-      outline: 1px dotted $white;
-      outline-offset: -3px;
-      color: $white;
-    }
-
-    &:active {
-      background: $active-state;
-      color: $white;
-      outline: none;
-    }
-
-    &:disabled {
-      border-color: $disabled-state;
-      color: $disabled-state;
-      background: $white;
-    }
-
-    &.play:hover::before {
-      background: url('/img/icons/play-white.svg');
-      background-size: contain;
+      cursor: not-allowed;
     }
 
     &.play::before {
-      background: url('/img/icons/play-defaultblue.svg');
-      background-size: contain;
-    }
-  }
-
-  &--tertiary {
-    background: transparent;
-    color: $default-state;
-
-    &:hover {
-      background: $hover-state;
-      color: $white;
-    }
-
-    &:focus {
-      background: $focus-state;
-      outline: 1px dotted $white;
-      outline-offset: -3px;
-      color: $white;
-    }
-
-    &:active {
-      background: $active-state;
-      color: $white;
-      outline: none;
-    }
-
-
-    &:disabled {
-      color: $disabled-state;
-      background: transparent;
-    }
-
-    &.play:hover::before {
+      display: inline-block;
+      content: '';
+      width: 15px;
+      height: 15px;
       background: url('/img/icons/play-white.svg');
       background-size: contain;
+      background-position: 0 -1px;
+      vertical-align: middle;
     }
 
-    &.play::before {
-      background: url('/img/icons/play-defaultblue.svg');
-      background-size: contain;
-    }
-  }
-
-  &--group {
-    &-left, &-center, &-right {
-      background: $white;
-      color: $default-state;
-      border: 2px solid $default-state;
+    &--lightbg {
+      background: $default-state;
+      color: $white;
 
       &:hover {
-        color: $white;
-        border-color: $hover-state;
         background: $hover-state;
       }
 
       &:focus {
-        color: $white;
         background: $focus-state;
         outline: 1px dotted $white;
         outline-offset: -3px;
       }
 
       &:active {
-        color: $white;
         background: $active-state;
-        border-color: $active-state;
         outline: none;
       }
 
       &:disabled {
         background: $disabled-state;
-        border-color: $disabled-state;
         color: $white;
       }
     }
-  }
-}
 
-.pagination {
-  padding-inline-start: 0;
-  // remove comp library's default bullets
-  li::before {
-    content: "";
-  }
-
-  // boxed and unboxed shared styling
-  li {
-    display: inline;
-
-    & a {
-      text-decoration: none;
-      padding: 3px 8px;
-      color: $default-state;
-      border-radius: 2px;
+    // primary-dark button styling
+    &--darkbg {
+      color: black;
+      background: $ucla-gold;
 
       &:hover {
-        color: $white;
-        background: $hover-state;
-        border-color: $hover-state;
+        background: $hover-state-dark;
       }
 
       &:focus {
+        background: $focus-state-dark;
+        outline: 1px dotted $white;
+        outline-offset: -3px;
+      }
+
+      &:active {
+        background: $active-state-dark;
+        outline: none;
+      }
+
+      &:disabled {
+        background: $disabled-state-dark;
+      }
+    }
+
+    &--secondary {
+      background: $white;
+      color: $default-state;
+      border: 2px solid $default-state;
+
+      &:hover {
+        background: $hover-state;
+        border-color: $hover-state;
+        color: $white;
+      }
+
+
+      &:focus {
         background: $focus-state;
-        border-color: $focus-state;
         outline: 1px dotted $white;
         outline-offset: -3px;
         color: $white;
@@ -225,48 +99,181 @@
 
       &:active {
         background: $active-state;
-        border-color: $active-state;
         color: $white;
         outline: none;
       }
 
-      // unboxed class specific styling
-      &.current {
-        color: $lightest-grey;
+      &:disabled {
+        border-color: $disabled-state;
+        color: $disabled-state;
+        background: $white;
+      }
+
+      &.play:hover::before {
+        background: url('/img/icons/play-white.svg');
+        background-size: contain;
+      }
+
+      &.play::before {
+        background: url('/img/icons/play-defaultblue.svg');
+        background-size: contain;
+      }
+    }
+
+    &--tertiary {
+      background: transparent;
+      color: $default-state;
+
+      &:hover {
+        background: $hover-state;
+        color: $white;
+      }
+
+      &:focus {
+        background: $focus-state;
+        outline: 1px dotted $white;
+        outline-offset: -3px;
+        color: $white;
+      }
+
+      &:active {
+        background: $active-state;
+        color: $white;
+        outline: none;
+      }
+
+
+      &:disabled {
+        color: $disabled-state;
+        background: transparent;
+      }
+
+      &.play:hover::before {
+        background: url('/img/icons/play-white.svg');
+        background-size: contain;
+      }
+
+      &.play::before {
+        background: url('/img/icons/play-defaultblue.svg');
+        background-size: contain;
+      }
+    }
+
+    &--group {
+      background: transparent;
+
+      &-left, &-center, &-right {
+        background: $white;
+        color: $default-state;
+        border: 2px solid $default-state;
 
         &:hover {
           color: $white;
           border-color: $hover-state;
+          background: $hover-state;
         }
 
         &:focus {
           color: $white;
+          background: $focus-state;
+          outline: 1px dotted $white;
+          outline-offset: -3px;
         }
 
         &:active {
+          color: $white;
+          background: $active-state;
           border-color: $active-state;
+          outline: none;
+        }
+
+        &:disabled {
+          background: $disabled-state;
+          border-color: $disabled-state;
+          color: $white;
         }
       }
     }
   }
 
-  // boxed class specific styling
-  &.boxed {
-    & li a {
-      padding: 7px 12px;
-      border-width: 2px;
-      border-style: solid;
+  & .pagination {
+    padding-inline-start: 0;
+    // remove comp library's default bullets
+    li::before {
+      content: "";
     }
 
-    & .current {
-      color: $lightest-grey;
+    // boxed and unboxed shared styling
+    li {
+      display: inline;
 
-      &:hover {
-        color: $white;
+      & a, & button {
+        text-decoration: none;
+        padding: 3px 8px;
+        color: $default-state;
+        border: none;
+        background: white;
+
+        &:hover {
+          color: $white;
+          background: $hover-state;
+          border-color: $hover-state;
+        }
+
+        &:focus {
+          background: $focus-state;
+          border-color: $focus-state;
+          outline: 1px dotted $white;
+          outline-offset: -3px;
+          color: $white;
+        }
+
+        &:active {
+          background: $active-state;
+          border-color: $active-state;
+          color: $white;
+          outline: none;
+        }
+
+        // unboxed class specific styling
+        &.current {
+          color: $lightest-grey;
+          border-color: $lightest-grey;
+
+          &:hover {
+            color: $white;
+            border-color: $hover-state;
+          }
+
+          &:focus {
+            color: $white;
+          }
+
+          &:active {
+            border-color: $active-state;
+          }
+        }
+      }
+    }
+
+    // boxed class specific styling
+    &.boxed {
+      & li a, & li button {
+        padding: 7px 12px;
+        border-width: 2px;
+        border-style: solid;
       }
 
-      &:focus {
-        color: $white;
+      & .current {
+        color: $lightest-grey;
+
+        &:hover {
+          color: $white;
+        }
+
+        &:focus {
+          color: $white;
+        }
       }
     }
   }
