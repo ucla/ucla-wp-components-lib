@@ -93,13 +93,28 @@ Span wrapper that represents self-contained content.
 <img class="doc-images" alt="Primary Button Types Dark Background Specs Image" title="Primary Button Types Dark Background Specs Image" alt="Primary Button Types Dark Background Specs Image" src="/build/docs/img/Buttons/Primary_Button/primarybtn-drkbg-specs.jpg"/>
 
 ### **Code**
+```
+{{ view '@button--primary' }}
+```
 
 ```
-<a href="#" class="btn">Primary Button</a>
+{{ view '@button--primary-disabled' }}
+```
 
-<!-- With Icon -->
-<a href="#" class="btn icon-btn icon-btn--download">Primary Button</a>﻿
+```
+{{ view '@button--primary-icon' }}
+```
 
+```
+{{ view '@button--darkbg' }}
+```
+
+```
+{{ view '@button--darkbg-disabled' }}
+```
+
+```
+{{ view '@button--darkbg-icon' }}
 ```
 
 ## **Secondary Button**
@@ -126,10 +141,15 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-<a href="#" class="btn btn--secondary">Secondary Button</a>
+{{ view '@button--secondary' }}
+```
 
-<!-- With Icon -->
-<a href="#" class="btn btn--secondary icon-btn icon-btn--internal">Secondary Button</a>
+```
+{{ view '@button--secondary-disabled' }}
+```
+
+```
+{{ view '@button--secondary-icon' }}
 ```
 
 ## **Tertiary Button**
@@ -156,10 +176,15 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-<a href="#" class="btn btn--tertiary">Tertiary Button</a>
+{{ view '@button--tertiary' }}
+```
 
-<!-- With Icon -->
-<a href="#" class="btn btn--tertiary icon-btn icon-btn--play">Tertiary Button</a>﻿
+```
+{{ view '@button--tertiary-disabled' }}
+```
+
+```
+{{ view '@button--tertiary-icon' }}
 ```
 
 ## **Button Group**
@@ -182,7 +207,13 @@ Span wrapper that represents self-contained content.
 
 ### **Code**
 
-<!--Button Group code here, if applicable-->
+```
+{{ view '@button--group' }}
+```
+
+```
+{{ view '@button--group-disabled' }}
+```
 
 ## **Related Links**
 
@@ -205,11 +236,7 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-<ul class="list--link-icon ">
-    <li><a href="/home" class="icon-link icon-link--internal">This is an Internal Link</a></li>
-    <li><a href="http://ucla.edu" class="icon-link icon-link--external">This is an External Link</a></li>
-    <li><a href="/sites/all/files/document.pdf" class="icon-link icon-link--download">This is a Link to a Download (pdf)</a></li>
-</ul>
+{{ view '@links--related-links' }}
 ```
 
 ## **Inline Text Links**
@@ -235,7 +262,9 @@ Span wrapper that represents self-contained content.
 
 ### **Code**
 
-<!--Inline Text Link code here, if applicable-->
+```
+{{ view '@links--inline' }}
+```
 
 ## **Pagination**
 
@@ -263,15 +292,5 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-<ul class="pager">
-  <li class="pager__item pager__prev"><a href="#">« Prev</a></li>
-  <li class="pager__item pager__item--current"><a href="#">1</a></li>
-  <li class="pager__item"><a href="#">2</a></li>
-  <li class="pager__item"><a href="#">3</a></li>
-  <li class="pager__item"><a href="#">4</a></li>
-  <li class="pager__item"><a href="#">5</a></li>
-  <li class="pager__item"><a href="#">6</a></li>
-  <li class="pager__item"><a href="#">7</a></li>
-  <li class="pager__item pager__next"><a href="#">» Next</a></li>
-</ul>
+{{ view '@button--pagination' }}
 ```
