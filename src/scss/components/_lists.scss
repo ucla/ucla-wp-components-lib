@@ -1,54 +1,70 @@
-/*
- * UCLA Lists styles
- */
-
 ul {
   list-style: none;
   line-height: 24px;
+  padding-left: 28.5px;
 
+  // First level list item
   li {
     margin-bottom: 16px;
 
     &::before {
       content: "\25AA";
-      font-weight: bold;
       color: $ucla-blue;
-      display: inline-block;
-      width: 1em;
+      width: 3em;
       margin-left: -18px;
+      padding-right: 13px;
     }
-
+    // Second level list item/lists
     li &::before {
       content: "\25A1";
     }
 
     ol, ul {
       margin-top: 16px;
+      padding-left: 20px;
+
+      li {
+        padding-left: 0;
+
+        &::before {
+          font-size: 9px;
+        }
+      }
     }
   }
 }
-
 
 ol {
   list-style: none;
   counter-reset: li;
   line-height: 24px;
+  padding-left: 5px;
 
+  // First level list item
   li {
     margin-bottom: 16px;
     counter-increment: li;
+    padding-left: 24px;
 
     &::before {
-      content: counter(li) ".";
+      content: "." counter(li);
       color: $ucla-blue;
       display: inline-block;
       width: 1em;
-      margin-left: -1em;
-      margin-right: 1.3em;
+      margin-left: -1.5em;
+      margin-right: 0.5em;
+      text-align: right;
+      direction: rtl;
     }
 
+    // Second level lists
     ol, ul {
+      padding-left: 20px;
       margin-top: 16px;
+
+      li {
+        padding-left: 0;
+      }
     }
   }
 }
