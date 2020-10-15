@@ -47,6 +47,11 @@
         outline: none;
       }
 
+      &:visited {
+        background: $default-state;
+        color: $white;
+      }
+
       &:disabled {
         background: $disabled-state;
         color: $white;
@@ -73,6 +78,11 @@
         outline: none;
       }
 
+      &:visited {
+        color: black;
+        background: $ucla-gold;
+      }
+
       &:disabled {
         background: $disabled-state-dark;
       }
@@ -89,7 +99,6 @@
         color: $white;
       }
 
-
       &:focus {
         background: $focus-state;
         outline: 1px dotted $white;
@@ -101,6 +110,12 @@
         background: $active-state;
         color: $white;
         outline: none;
+      }
+
+      &:visited {
+        background: $white;
+        color: $default-state;
+        border: 2px solid $default-state;
       }
 
       &:disabled {
@@ -142,6 +157,10 @@
         outline: none;
       }
 
+      &:visited {
+        background: transparent;
+        color: $default-state;
+      }
 
       &:disabled {
         color: $disabled-state;
@@ -185,6 +204,12 @@
           background: $active-state;
           border-color: $active-state;
           outline: none;
+        }
+
+        &:visited {
+          background: $white;
+          color: $default-state;
+          border: 2px solid $default-state;
         }
 
         &:disabled {
@@ -235,6 +260,12 @@
           outline: none;
         }
 
+        &:visited {
+          color: $default-state;
+          border: none;
+          background: white;
+        }
+
         // unboxed class specific styling
         &.current {
           color: $lightest-grey;
@@ -251,6 +282,11 @@
 
           &:active {
             border-color: $active-state;
+          }
+
+          &:visited {
+            color: $lightest-grey;
+            border-color: $lightest-grey;
           }
         }
       }
@@ -273,6 +309,10 @@
 
         &:focus {
           color: $white;
+        }
+
+        &:visited {
+          color: $lightest-grey;
         }
       }
     }
