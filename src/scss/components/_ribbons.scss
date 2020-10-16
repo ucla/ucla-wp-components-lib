@@ -15,12 +15,12 @@
 
   @media (min-width: breakpoint-min(md)) {
     font-size: 3rem;
-    padding: 6px 6px 2px 12px;
+    padding: 8px 4px 4px 12px;
     margin-bottom: 2px;
 
-    &.first { padding-left: 12px; }
+    &.first { padding-left: 8px; }
 
-    &.last { padding-right: 12px; }
+    &.last { padding-right: 8px; }
   }
 }
 
