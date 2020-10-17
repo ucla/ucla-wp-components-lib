@@ -8,6 +8,7 @@
     line-height: 1.25;
     cursor: pointer;
     display: inline-block;
+    text-decoration: none;
 
     &:focus {
       outline: none;
@@ -32,6 +33,11 @@
       background: $default-state;
       color: $white;
 
+      &:visited {
+        background: $default-state;
+        color: $white;
+      }
+
       &:hover {
         background: $hover-state;
       }
@@ -47,11 +53,6 @@
         outline: none;
       }
 
-      &:visited {
-        background: $default-state;
-        color: $white;
-      }
-
       &:disabled {
         background: $disabled-state;
         color: $white;
@@ -63,8 +64,14 @@
       color: black;
       background: $ucla-gold;
 
+      &:visited {
+        color: black;
+        background: $ucla-gold;
+      }
+
       &:hover {
         background: $hover-state-dark;
+        color: black;
       }
 
       &:focus {
@@ -78,11 +85,6 @@
         outline: none;
       }
 
-      &:visited {
-        color: black;
-        background: $ucla-gold;
-      }
-
       &:disabled {
         background: $disabled-state-dark;
       }
@@ -92,6 +94,12 @@
       background: $white;
       color: $default-state;
       border: 2px solid $default-state;
+
+      &:visited {
+        background: $white;
+        color: $default-state;
+        border: 2px solid $default-state;
+      }
 
       &:hover {
         background: $hover-state;
@@ -110,12 +118,6 @@
         background: $active-state;
         color: $white;
         outline: none;
-      }
-
-      &:visited {
-        background: $white;
-        color: $default-state;
-        border: 2px solid $default-state;
       }
 
       &:disabled {
@@ -139,6 +141,11 @@
       background: transparent;
       color: $default-state;
 
+      &:visited {
+        background: transparent;
+        color: $default-state;
+      }
+
       &:hover {
         background: $hover-state;
         color: $white;
@@ -155,11 +162,6 @@
         background: $active-state;
         color: $white;
         outline: none;
-      }
-
-      &:visited {
-        background: transparent;
-        color: $default-state;
       }
 
       &:disabled {
@@ -186,6 +188,12 @@
         color: $default-state;
         border: 2px solid $default-state;
 
+        &:visited {
+          background: $white;
+          color: $default-state;
+          border: 2px solid $default-state;
+        }
+
         &:hover {
           color: $white;
           border-color: $hover-state;
@@ -204,12 +212,6 @@
           background: $active-state;
           border-color: $active-state;
           outline: none;
-        }
-
-        &:visited {
-          background: $white;
-          color: $default-state;
-          border: 2px solid $default-state;
         }
 
         &:disabled {
@@ -239,6 +241,12 @@
         border: none;
         background: white;
 
+        &:visited {
+          color: $default-state;
+          border: none;
+          background: white;
+        }
+
         &:hover {
           color: $white;
           background: $hover-state;
@@ -260,16 +268,15 @@
           outline: none;
         }
 
-        &:visited {
-          color: $default-state;
-          border: none;
-          background: white;
-        }
-
         // unboxed class specific styling
         &.current {
           color: $lightest-grey;
           border-color: $lightest-grey;
+
+          &:visited {
+            color: $lightest-grey;
+            border-color: $lightest-grey;
+          }
 
           &:hover {
             color: $white;
@@ -282,11 +289,6 @@
 
           &:active {
             border-color: $active-state;
-          }
-
-          &:visited {
-            color: $lightest-grey;
-            border-color: $lightest-grey;
           }
         }
       }
@@ -303,16 +305,16 @@
       & .current {
         color: $lightest-grey;
 
+        &:visited {
+          color: $lightest-grey;
+        }
+
         &:hover {
           color: $white;
         }
 
         &:focus {
           color: $white;
-        }
-
-        &:visited {
-          color: $lightest-grey;
         }
       }
     }
