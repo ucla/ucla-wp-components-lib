@@ -3,6 +3,17 @@ title: Headings
 ---
 These are heading styles. Font-style should be bold for these headers.
 
+### **Do’s and Don’ts**
+
+#### **Do’s**
+
+* Use the correct header tags when possible
+* Use the respective "h1" - "h5" classnames to inherit respective header styles (i.e with CMS that makes it hard to customize HTML semantics)
+
+#### **Don’ts**
+
+* Don't use "h1" - "h5" classnames to incorrectly alter styles astray from the brand guidelines
+
 {{view '@typography--h1'}}
 ```
 <!--
