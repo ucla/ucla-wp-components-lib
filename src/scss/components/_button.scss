@@ -44,8 +44,8 @@
 
       &:focus {
         background: $focus-state;
-        outline: 1px dotted $white;
-        outline-offset: -3px;
+        outline: 1px dotted $hover-state;
+        outline-offset: 2px;
       }
 
       &:active {
@@ -77,7 +77,7 @@
       &:focus {
         background: $focus-state-dark;
         outline: 1px dotted $white;
-        outline-offset: -3px;
+        outline-offset: 2px;
       }
 
       &:active {
@@ -109,8 +109,8 @@
 
       &:focus {
         background: $focus-state;
-        outline: 1px dotted $white;
-        outline-offset: -3px;
+        outline: 1px dotted $hover-state;
+        outline-offset: 2px;
         color: $white;
       }
 
@@ -153,8 +153,8 @@
 
       &:focus {
         background: $focus-state;
-        outline: 1px dotted $white;
-        outline-offset: -3px;
+        outline: 1px dotted $hover-state;
+        outline-offset: 2px;
         color: $white;
       }
 
@@ -203,8 +203,8 @@
         &:focus {
           color: $white;
           background: $focus-state;
-          outline: 1px dotted $white;
-          outline-offset: -3px;
+          outline: 1px dotted $hover-state;
+          outline-offset: 2px;
         }
 
         &:active {
@@ -256,8 +256,8 @@
         &:focus {
           background: $focus-state;
           border-color: $focus-state;
-          outline: 1px dotted $white;
-          outline-offset: -3px;
+          outline: 1px dotted $hover-state;
+          outline-offset: 2px;
           color: $white;
         }
 
