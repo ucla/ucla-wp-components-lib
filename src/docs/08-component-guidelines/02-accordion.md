@@ -40,7 +40,7 @@ Accordions provide a space-saving technique for displaying content on your viewp
 * Don't nest the primary sections of a page in accordions, nest only the secondary topics.
 * Don't use accordions when additional or related content should have a separate page, due to the length of content or when visibility is needed in navigation and search engines.
 
-## **Accordion**
+## **Accordion (Desktop)**
 
 ### **Anatomy**
 
@@ -63,11 +63,34 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 <img class="doc-images" alt="Accordion States Image" title="Accordion States Image" src="/build/docs/img/Accordion/accordion-states.jpg"/>
 
-### **Desktop Specs**
+### **Specs**
 
 <img class="doc-images" alt="Accordion Desktop Specs Image" title="Accordion Specs Image" src="/build/docs/img/Accordion/accordion-specs.jpg"/>
 
-### **Mobile Specs**
+## **Accordion (Mobile)**
+
+### **Anatomy**
+
+<img class="doc-images" alt="Accordion Anatomy Image" title="Accordion Anatomy Image" src="/build/docs/img/Accordion/accordion-anatomy-mobile.jpg"/>
+
+1. Accordion - Nth Child
+2. Title (required)
+3. Icon (required)
+4. Top Border (required)
+5. Container (required)
+6. Content (required)
+7. Accordion - Last Child (required)
+8. Bottom Border (required)
+
+### **Variations**
+
+<img class="doc-images" alt="Accordion Variations Image" title="Accordion Variations Image" src="/build/docs/img/Accordion/accordion-variations-mobile.jpg"/>
+
+### **States**
+
+<img class="doc-images" alt="Accordion States Image" title="Accordion States Image" src="/build/docs/img/Accordion/accordion-states-mobile.jpg"/>
+
+### **Specs**
 
 <img class="doc-images" alt="Accordion Mobile Specs Image" title="Accordion Specs Image" src="/build/docs/img/Accordion/accordion-specs-mobile.jpg"/>
 
