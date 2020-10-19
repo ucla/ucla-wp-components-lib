@@ -8,7 +8,7 @@ These are heading styles. Font-style should be bold for these headers.
 #### **Do’s**
 
 * Use the correct header tags when possible
-* Use the respective "h1" - "h5" classnames to inherit respective header styles (i.e with CMS that makes it hard to customize HTML semantics)
+* Use the respective "h1" - "h6" classnames to inherit respective header styles (i.e with CMS that makes it hard to customize HTML semantics)
 
 #### **Don’ts**
 
