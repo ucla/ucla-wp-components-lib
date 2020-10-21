@@ -29,6 +29,7 @@
       vertical-align: middle;
     }
 
+    // primary-light button styling
     &--lightbg {
       background: $default-state;
       color: $white;
@@ -88,8 +89,14 @@
       &:disabled {
         background: $disabled-state-dark;
       }
+
+      &.play::before {
+        background: url('/img/icons/play-black.svg');
+        background-size: contain;
+      }
     }
 
+    // secondary button styling
     &--secondary {
       background: $white;
       color: $default-state;
@@ -109,7 +116,8 @@
 
       &:focus {
         background: $focus-state;
-        outline: 1px dotted $hover-state;
+        border-color: $focus-state;
+        outline: 1px dotted $focus-state;
         outline-offset: 2px;
         color: $white;
       }
@@ -126,7 +134,8 @@
         background: $white;
       }
 
-      &.play:hover::before {
+      &.play:hover::before,
+      &.play:focus::before {
         background: url('/img/icons/play-white.svg');
         background-size: contain;
       }
@@ -137,6 +146,7 @@
       }
     }
 
+    // tertiary button styling
     &--tertiary {
       background: transparent;
       color: $default-state;
@@ -169,7 +179,8 @@
         background: transparent;
       }
 
-      &.play:hover::before {
+      &.play:hover::before,
+      &.play:focus::before {
         background: url('/img/icons/play-white.svg');
         background-size: contain;
       }
@@ -180,6 +191,7 @@
       }
     }
 
+    // button group styling
     &--group {
       background: transparent;
 
