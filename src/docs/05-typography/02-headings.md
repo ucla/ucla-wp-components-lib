@@ -12,7 +12,8 @@ These are heading styles. Font-style should be bold for these headers.
 
 #### **Don’ts**
 
-* Don't use "h1" - "h5" classnames to incorrectly alter styles astray from the brand guidelines
+* Don't use "h1" - "h6" classnames to incorrectly alter styles astray from the brand guidelines
+
 
 {{view '@typography--h1'}}
 ```
