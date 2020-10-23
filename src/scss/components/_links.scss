@@ -96,10 +96,10 @@
           background-color: $active-state;
         }
 
-        &.ext-link {
+        &.related-links--external {
           &::after {
             content: '';
-            background: url('../img/icons/external-link-defaultblue.svg');
+            background: url('/img/icons/external-link-defaultblue.svg');
             background-size: contain;
             width: 24px;
             height: 24px;
@@ -110,7 +110,26 @@
           }
 
           &:hover::after {
-            background: url('../img/icons/external-link-white.svg');
+            background: url('/img/icons/external-link-white.svg');
+            background-size: contain;
+          }
+        }
+
+        &.related-links--download {
+          &::after {
+            content: '';
+            background: url('/img/icons/download-defaultblue.svg');
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: block;
+            position: absolute;
+            right: 24px;
+            top: calc(50% - 11px);
+          }
+
+          &:hover::after {
+            background: url('/img/icons/download-white.svg');
             background-size: contain;
           }
         }
