@@ -8,7 +8,7 @@
 //  Basic Cards //  Basic Cards //  Basic Cards
 //  Basic Cards //  Basic Cards //  Basic Cards
 
-.basic-card, .basic-card-grey {
+.basic-card, .basic-card-grey, .basic-card-gray {
   display: inline-block;
   background: $white;
   margin: 32px 2% 0 0;
@@ -20,6 +20,7 @@
   }
 
   &__image {
+    display: block;
     width: 100%;
     height: auto;
 
@@ -58,7 +59,7 @@
   }
 }
 
-.basic-card-grey > .basic-card__info-wrapper {
+.basic-card-grey > .basic-card__info-wrapper, .basic-card-gray > .basic-card__info-wrapper {
   background: $grey-5;
 }
 
@@ -421,7 +422,7 @@ The spans in the tier 2 stories are for styling purposes.
       }
     }
 
-    &-card-grey {
+    &-card-grey, &-card-gray {
       background: $grey-5;
 
       & > a > .story__secondary-title {
@@ -568,7 +569,7 @@ The spans in the tier 2 stories are for styling purposes.
 //  Person Cards //  Person Cards //  Person Cards
 //  Person Cards //  Person Cards //  Person Cards
 
-.person-card, .person-card-grey {
+.person-card, .person-card-grey, .person-card-gray {
   height: auto;
   display: inline-block;
   position: relative;
@@ -580,11 +581,11 @@ The spans in the tier 2 stories are for styling purposes.
     margin: 0 16px 32px;
   }
 
-  &-grey > &__info-wrapper {
+  &-grey > &__info-wrapper, &-gray > &__info-wrapper {
     background: $grey-5;
   }
 
-  &-grey > &__info-wrapper {
+  &-grey > &__info-wrapper, &-gray > &__info-wrapper {
     background: $grey-5;
   }
 
