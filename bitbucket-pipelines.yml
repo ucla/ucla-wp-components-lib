@@ -49,10 +49,9 @@ pipelines:
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
-            - git add package.json package-lock.json public/*
-            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
+            - git add public/* package.json package-lock.json
+            - git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}"
             - git push
-            - set -e
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
@@ -95,6 +94,7 @@ pipelines:
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
+            # redirection to most current version hack
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
@@ -135,9 +135,8 @@ pipelines:
             - gulp production
             # add updated package.json and compiled public assets
             - git add public/*
-            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
+            - git commit -m "[skip ci] Auto production build during CI"
             - git push
-            - set -e
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
@@ -180,6 +179,7 @@ pipelines:
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
+            # redirection to most current version hack
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
