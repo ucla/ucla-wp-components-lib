@@ -24,7 +24,7 @@ This components library was built on the Fractal technology and is continually i
 
  *used in production builds and should only be used locally to test behaviors expected in production
 
-## Bucket / Cloud URL / CDN Information (BETA)
+## Bucket + Cloud(S3) URLs (BETA)
 
 | Branch | Cloud URL | S3 Bucket URL |
 |-|-|-|
@@ -41,6 +41,10 @@ DURING BETA:
 1. "development" - This is the "development" branch. Approved releases from the "campus" branch should be merged into this branch. This will trigger the deployment pipeline to the "dev-webcomponents.ucla.edu" S3 bucket.
 
 1. "campus" - Campus partners/developers should create their update branches and send PRs for their updates to merge into this branch. Once approved, reviewers should merge this branch into "development" branch.
+
+## CDN Distribution and Invalidation Information (BETA)
+* This project's documentation and component public library in production environment is deployed behind Cloudfront CDN. To see updates instantly after updates have been to production, you must manually invalidate the files. See the distribution page for the documentation [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:E3BKWM01VHPJ5I) or for the public library [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:EUU3JRBWPI1HQ). For more on "how to invalidate" see the AWS docs [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html).
+* A CDN distribution and DNS configuration have not been configured for the development environment public library. That means the URLs to the public library shown in the "Download" page in development will not work. To view the public styles and scripts, please navigate to the URL in the [S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents-ucla-edu/public/?region=us-west-1&tab=overview). The path looks similar to this - http://dev-webcomponents-ucla-edu.s3-us-west-1.amazonaws.com/public/x.x.x/css/ucla-lib.min.css
 
 ## Directory Hierarchy
 
@@ -107,7 +111,3 @@ When running `npm run commit`, a prompt with the below questions will appear in 
 - wip - Default status "Work In Progress"
 
 More on status can be found [here](https://fractal.build/guide/core-concepts/statuses.html#default-statuses).
-
-## Notes
-* This project's documentation and component public library in production environment is deployed behind Cloudfront CDN. To see updates instantly after updates have been to production, you must manually invalidate the files. See the distribution page for the documentation [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:E3BKWM01VHPJ5I) or for the public library [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:EUU3JRBWPI1HQ). For more on "how to invalidate" see the AWS docs [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html).
-* A CDN distribution and DNS configuration have not been configured for the development environment public library. That means the URLs to the public library shown in the "Download" page in development will not work. To view the public styles and scripts, please navigate to the URL in the [S3 bucket](https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents-ucla-edu/public/?region=us-west-1&tab=overview). The path looks similar to this - http://dev-webcomponents-ucla-edu.s3-us-west-1.amazonaws.com/public/x.x.x/css/ucla-lib.min.css
