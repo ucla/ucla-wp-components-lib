@@ -1,6 +1,6 @@
 {
   "name": "ucla-bruin-components",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.5",
   "description": "UCLA Bruin Component Library, not ready for production use.",
   "license": "BSD-3-Clause",
   "main": "fractal.js",
