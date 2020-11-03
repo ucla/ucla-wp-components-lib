@@ -29,6 +29,8 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
+            # rebuild to skip node-sass in linux env error
+            - npm rebuild node-sass
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
@@ -47,10 +49,9 @@ pipelines:
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
-            - git add package.json package-lock.json public/*
-            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
+            - git add public/* package.json package-lock.json
+            - git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}"
             - git push
-            - set -e
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
@@ -93,6 +94,7 @@ pipelines:
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
+            # redirection to most current version hack
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
@@ -113,6 +115,8 @@ pipelines:
             - apt-get update && apt-get install -y curl jq moreutils
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
+            # rebuild to skip node-sass in linux env error
+            - npm rebuild node-sass
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
@@ -129,11 +133,6 @@ pipelines:
             - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
-            # add updated package.json and compiled public assets
-            - git add public/*
-            - set +e git commit -m "[skip ci] Current tag upgraded to ${updateTag}"
-            - git push
-            - set -e
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
@@ -176,6 +175,7 @@ pipelines:
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
+            # redirection to most current version hack
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV

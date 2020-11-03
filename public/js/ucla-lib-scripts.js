@@ -75,9 +75,9 @@ $(document).ready(function () {
 });
 
 // IMPORTANT: ensure these values are consistent with _ribbons.scss and _variables.scss
-const padding_desktop = 12;
+const padding_desktop = 10;
 const padding_mobile = 8;
-const padding_highlight = 12;
+const padding_highlight = 10;
 const breakpoint_min = 768;
 
 $(document).ready(() => {
@@ -155,6 +155,7 @@ function adjustPadding () {
     }));
   });
 };
+
 // stupidtable
 (function (c) {
   c.fn.stupidtable = function (a) {
