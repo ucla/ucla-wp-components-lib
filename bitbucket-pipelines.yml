@@ -117,7 +117,9 @@ pipelines:
             - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
             - npm install -g gulp
             # rebuild to skip node-sass in linux env error
+            - npm ls node-sass
             - npm rebuild node-sass
+            - npm ls node-sass
             - npm install -g semantic-release
             - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
