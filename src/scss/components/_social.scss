@@ -2,12 +2,13 @@
 .social-links--blue {
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  a:hover {
+  a {
     height: 48px;
     width: 48px;
-    background-color: $hover-state;
+    margin: 2px;
     border-radius: 2px;
   }
 
@@ -18,60 +19,75 @@
 }
 
 .social-links {
-  .social-links--facebook {
-    background: url("/img/icons/social-icons/facebook-color.svg");
+  a:hover {
+    background-color: $hover-state;
+  }
 
-    &:hover {
+  a:focus {
+    outline: 1px dotted $focus-state;
+  }
+
+  a:active {
+    background-color: $active-state;
+  }
+
+  a:hover,
+  a:active {
+    .social-links--facebook {
       background: url("/img/icons/social-icons/facebook-white.svg");
     }
+
+    .social-links--twitter {
+      background: url("/img/icons/social-icons/twitter-white.svg");
+    }
+
+    .social-links--instagram {
+      background: url("/img/icons/social-icons/instagram-white.svg");
+    }
+
+    .social-links--snapchat {
+      background: url("/img/icons/social-icons/snapchat-white.svg");
+    }
+
+    .social-links--linkedin {
+      background: url("/img/icons/social-icons/linkedin-white.svg");
+    }
+
+    .social-links--youtube {
+      background: url("/img/icons/social-icons/youtube-white.svg");
+    }
+
+    .social-links--tiktok {
+      background: url("/img/icons/social-icons/tiktok-white.svg");
+    }
+  }
+
+  .social-links--facebook {
+    background: url("/img/icons/social-icons/facebook-color.svg");
   }
 
   .social-links--twitter {
     background: url("/img/icons/social-icons/twitter-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/twitter-white.svg");
-    }
   }
 
   .social-links--instagram {
     background: url("/img/icons/social-icons/instagram-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/instagram-white.svg");
-    }
   }
 
   .social-links--snapchat {
     background: url("/img/icons/social-icons/snapchat-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/snapchat-white.svg");
-    }
   }
 
   .social-links--linkedin {
     background: url("/img/icons/social-icons/linkedin-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/linkedin-white.svg");
-    }
   }
 
   .social-links--youtube {
     background: url("/img/icons/social-icons/youtube-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/youtube-white.svg");
-    }
   }
 
   .social-links--tiktok {
     background: url("/img/icons/social-icons/tiktok-color.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/tiktok-white.svg");
-    }
   }
 }
 
@@ -82,59 +98,155 @@
     background-color: $hover-state-dark;
   }
 
-  .social-links--facebook {
-    background: url("/img/icons/social-icons/facebook-white.svg");
+  a:focus {
+    outline: 1px dotted $white;
+  }
 
-    &:hover {
+  a:active {
+    background-color: $active-state-dark;
+  }
+
+  a:hover,
+  a:active {
+    .social-links--facebook {
       background: url("/img/icons/social-icons/facebook-black.svg");
     }
+
+    .social-links--twitter {
+      background: url("/img/icons/social-icons/twitter-black.svg");
+    }
+
+    .social-links--instagram {
+      background: url("/img/icons/social-icons/instagram-black.svg");
+    }
+
+    .social-links--snapchat {
+      background: url("/img/icons/social-icons/snapchat-black.svg");
+    }
+
+    .social-links--linkedin {
+      background: url("/img/icons/social-icons/linkedin-black.svg");
+    }
+
+    .social-links--youtube {
+      background: url("/img/icons/social-icons/youtube-black.svg");
+    }
+
+    .social-links--tiktok {
+      background: url("/img/icons/social-icons/tiktok-black.svg");
+    }
+  }
+
+  .social-links--facebook {
+    background: url("/img/icons/social-icons/facebook-white.svg");
   }
 
   .social-links--twitter {
     background: url("/img/icons/social-icons/twitter-white.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/twitter-black.svg");
-    }
   }
 
   .social-links--instagram {
     background: url("/img/icons/social-icons/instagram-white.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/instagram-black.svg");
-    }
   }
 
   .social-links--snapchat {
     background: url("/img/icons/social-icons/snapchat-white.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/snapchat-black.svg");
-    }
   }
 
   .social-links--linkedin {
     background: url("/img/icons/social-icons/linkedin-white.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/linkedin-black.svg");
-    }
   }
 
   .social-links--youtube {
     background: url("/img/icons/social-icons/youtube-white.svg");
-
-    &:hover {
-      background: url("/img/icons/social-icons/youtube-black.svg");
-    }
   }
 
   .social-links--tiktok {
     background: url("/img/icons/social-icons/tiktok-white.svg");
+  }
+}
 
-    &:hover {
-      background: url("/img/icons/social-icons/tiktok-black.svg");
+.social-feed {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-tile {
+  width: 276px;
+  height: 276px;
+  margin: 0 24px 24px 0;
+  background-color: $ucla-blue;
+
+  a:hover {
+    background: $hover-state;
+  }
+
+  a:focus {
+    background: $focus-state;
+    outline: 1px dotted $focus-state;
+    outline-offset: 2px;
+  }
+
+  a:active {
+    background: $active-state;
+  }
+
+  a {
+    position: relative;
+    width: 276px;
+    height: 276px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .social-tile__text,
+  .social-tile__info {
+    color: $white;
+  }
+
+  .social-tile__text {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-height: 152px;
+    padding: 24px;
+    padding-bottom: 24px;
+    padding-bottom: 0px;
+    overflow: hidden;
+  }
+
+  .social-tile__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0px 24px 24px 24px;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: bold;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    background-size: cover;
+    bottom: 16px;
+    right: 16px;
+    height: 48px;
+    width: 48px;
+  }
+
+  &--instagram {
+    a::after {
+      background: url("/img/icons/social-icons/instagram-white.svg");
+    }
+  }
+
+  &--twitter {
+    a::after {
+      background: url("/img/icons/social-icons/twitter-white.svg");
     }
   }
 }
