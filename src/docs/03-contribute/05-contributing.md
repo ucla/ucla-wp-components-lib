@@ -27,37 +27,56 @@ ADA compliance is required legally, and as a trusted educational institute, it i
 
 **Step One**
 
-See which issues currently need to be resolved. Please review our [issue board](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/main/). We use Bitbucket for our repository.
+Create a new issue that you have found or see which issues currently need to be resolved. Please review our [open issues board](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open). We use Bitbucket for our repository.
 
 **Step Two**
 
-Create your issue branch on the ["campus" repository](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/).
+We require UCLA Campus members to branch from the ["campus"](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/) branch on the repository. Please select if you are fixing a bug or creating a new feature that you would like to reviewed. We ask that you prefix your branch name with "CL-".
+
+For a full understanding of the branches on this repository please see the root level readme file. For a more in depth look at branching on Bitbucket please see the [bitbucket support page](https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/).
 
 **Step Three**
 
-Code! Make sure to follow the principles of our contributing guidelines listed above.
+Code! If this is your first time working in this repository, there is a [process for installing locally](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/). Expected knowledge of how to use NPM is required. Please read the root level readme for more information or scroll down and read the "Get started with the Repository" section below. All edits from campus should be made in the "src" folder. There are two questions you will be asked about the code when it comes time to make a pull request.
+
+1. What does this code do?
+2. Does the code require comments so others will understand its use?
 
 **Step Four**
 
-Write the documentation for your component. Use either Component Documentation [Template 1](https://docs.google.com/document/d/1ZTx27t_yjLnQ4HxEh5SuEyjEMzJ-OzgjxwrcqSpLlxM/edit) (used for [Tables](/build/%!CurrentVersion%!/docs/component-guidelines/tables.html)) or [Template 2](https://docs.google.com/document/d/1skG3eTt6nktdypZFRUwMFJThjb5jEzVAgMjNJX5A1ks/edit) (used for [Buttons](/build/%!CurrentVersion%!/docs/component-guidelines/buttons-and-links.html)).
+Since we are a community, we need to think about how others will be able to use or benefit from every addition to the library. There are two questions you will be asked about the documentation or benefit when it comes time to make a pull request.
+
+1. Does this pull request require documentation for non-developers to use and is that documentation included?
+2. How does this improve the build or community effort?
+
+If your addition needs documentation, we have provided some templates to get you started. Please select the best fitting template for your addition that we have created.
+
+[Template 1](https://docs.google.com/document/d/1ZTx27t_yjLnQ4HxEh5SuEyjEMzJ-OzgjxwrcqSpLlxM/edit) (used for [Tables](/build/%!CurrentVersion%!/docs/component-guidelines/tables.html))
+
+[Template 2](https://docs.google.com/document/d/1skG3eTt6nktdypZFRUwMFJThjb5jEzVAgMjNJX5A1ks/edit) (used for [Buttons](/build/%!CurrentVersion%!/docs/component-guidelines/buttons-and-links.html))
 
 **Step Five**
 
-Once your code is ready for approval, you can create a pull request for your branch to be merged into the master repository. Our UCLA Web Components Library governance team will review your request and provide you with feedback. It is important to work with our governance team and follow the principles. Our governance team will test your component on all major web browsers and devices. Most pull requests will not get accepted on your first try, but we strongly encourage you to implement the feedback notes and try again!
+Once the above steps have been followed and considered, it is time to create a pull request that can be reviewed. Strategic Communications will review your request and provide you with feedback. After Strategic Communications has approved the PR, it will be passed on to the DCP and reviewed for ADA compliance. It is rare that pull requests get accepted on the first try, but we strongly encourage you to implement the feedback notes and try again! This collaboration is important to ensure this libraries success and ease of use for the community.
 
 ## **Pull Request Review**
 
-Pull requests are reviewed the *TBD* of every month.
+Pull requests are reviewed every Wednesday at 1pm, in the order it was received. We do not guarantee your PR will be reviewed the Wednesday after it was submitted.
 
-**Strategic Communications**
+**What Strategic Communications Looks For**
 
 Strategic Communications is the steward and approver of the UCLA mark in marketing and advertising over delegated UCLA domains. For more information see policy 110 or contact Strategic Communications.
 
-Strategic Communications will review each component before it is approved for “[Ready](/build/%!CurrentVersion%!/index.html)” status. Each component must be on brand and follow the [UCLA brand guidelines](http://brand.ucla.edu/). The component submitter is responsible for supplying documentation on its use. Undocumented components will not be approved.
+Strategic Communications will review each component before it is approved for “[Ready](/build/%!CurrentVersion%!/index.html)” status. Each component must be on brand and follow the [UCLA brand guidelines](http://brand.ucla.edu/). The component submitter is responsible for supplying documentation on its use if needed. We will ask the following questions on your PR submission.
 
-Strategic Communications will provide feedback if a component was not approved for use based on UCLA brand guidelines.
+1. What does this code do?
+2. Does the code require comments so others will understand its use?
+3. Does this pull request require documentation for non-developers to use and is that documentation included?
+4. How does this improve the build or community effort?
 
-**OIT/DCP**
+Strategic Communications will provide feedback if a component was not approved for use based on UCLA brand guidelines and needs of the community.
+
+**What OIT/DCP Looks For**
 
 OIT/DCP is the campus approved accessibility experts in WCAG compliance. For information on ADA compliance contact [ADA/504 compliance](https://www.ada.ucla.edu/).
 

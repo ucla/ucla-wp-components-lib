@@ -35,5 +35,5 @@ Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-c
 
 Run the following command at the root directory of your project:
 ```
-npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components.git --save
+npm install ssh://bitbucket.org/uclaucomm/ucla-bruin-components#main --save
 ```
