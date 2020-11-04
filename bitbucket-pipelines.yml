@@ -31,7 +31,8 @@ pipelines:
             - npm install -g gulp
             # rebuild to skip node-sass in linux env error
             - npm rebuild node-sass
-            - npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
+            - npm install -g semantic-release
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
@@ -117,7 +118,8 @@ pipelines:
             - npm install -g gulp
             # rebuild to skip node-sass in linux env error
             - npm rebuild node-sass
-            - npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
+            - npm install -g semantic-release
+            - npm install @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/release-notes-generator gulp-minify gulp-zip del
             - npx semantic-release
             # set current tag number -- this will be used to deploy to the correct S3 public folder
             - export updateTag=$(git describe --tags --abbrev=0)
