@@ -15,7 +15,7 @@
 #3) Only invalidate updated files
 
 
-image: node:latest
+image: node:14.15.0
 
 pipelines:
   branches:
