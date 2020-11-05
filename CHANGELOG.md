@@ -1,4 +1,4 @@
-# [1.0.0-dev-beta.6](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.5...v1.0.0-dev-beta.6) (2020-10-27)
+# [1.0.0-beta.6](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2020-10-28)
 
 
 ### Features
