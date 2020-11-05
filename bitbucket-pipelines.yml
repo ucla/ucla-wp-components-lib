@@ -47,7 +47,8 @@ pipelines:
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
             # add updated package.json and compiled public assets
-            - git add public/* package.json package-lock.json
+            - git add package.json package-lock.json
+            - git add -f public/*
             - git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}"
             - git push
             # deploy build to S3
