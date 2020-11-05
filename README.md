@@ -106,6 +106,7 @@ When running `npm run commit`, a prompt with the below questions will appear in 
 
 ## Component Status Types
 
+
 - Ready - Component is ready for production sites
 - Prototype - Component is in review
 - wip - Default status "Work In Progress"
