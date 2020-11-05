@@ -1,3 +1,5 @@
 /node_modules
 /build
 **/.DS_Store
+/public/css/ucla-lib.css
+/public/js/ucla-lib-scripts.js
