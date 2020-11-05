@@ -153,19 +153,19 @@ function generateCompLibScriptsProd () {
 
 // component library zip file
 
-function generateCompLibZip () {
-  return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
-    .pipe(zip('ucla-components.zip'))
-    .pipe(dest('public'));
-}
+// function generateCompLibZip () {
+//   return src(['public/**/*.css', 'public/**/*.js'], {base: 'public/'})
+//     .pipe(zip('ucla-components.zip'))
+//     .pipe(dest('public'));
+// }
 
 // clean unnecessary files
 
 function cleanMinified () {
   return del([
     'public/js/*.min.js',
-    'public/css/*.min.css',
-    'public/*.zip'
+    'public/css/*.min.css'
+    // 'public/*.zip'
   ]);
 }
 
@@ -349,7 +349,7 @@ exports.production = series(
   generateCompLibScriptsLocal,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
-  generateCompLibZip,
+  // generateCompLibZip,
   cleanExpanded,
   generateCompLibImages,
   generateDocStylesProd,
