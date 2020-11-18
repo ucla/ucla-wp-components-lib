@@ -97,11 +97,6 @@ Span wrapper that represents self-contained content.
 {{ view '@button--primary' }}
 ```
 
-```
-{{ view '@button--darkbg' }}
-```
-
-
 ## **Secondary Button**
 
 ### **Anatomy**
