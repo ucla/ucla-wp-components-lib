@@ -17,15 +17,16 @@
     cursor: not-allowed;
   }
 
-  &.play::before {
+  &.icon--play::before {
     display: inline-block;
-    content: '';
-    width: 15px;
-    height: 15px;
-    background: url('/img/icons/play-white.svg');
+    content: "";
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background: url("/img/icons/play-white.svg");
     background-size: contain;
     background-position: 0 -1px;
-    vertical-align: middle;
   }
 
   // primary-light button styling
@@ -89,9 +90,10 @@
       background: $disabled-state-dark;
     }
 
-    &.play::before {
-      background: url('/img/icons/play-black.svg');
+    &.icon--play::before {
+      background: url("/img/icons/play-black.svg");
       background-size: contain;
+      background-position: 0 -1px;
     }
   }
 
@@ -132,17 +134,6 @@
       color: $disabled-state;
       background: $white;
     }
-
-    &.play:hover::before,
-    &.play:focus::before {
-      background: url('/img/icons/play-white.svg');
-      background-size: contain;
-    }
-
-    &.play::before {
-      background: url('/img/icons/play-defaultblue.svg');
-      background-size: contain;
-    }
   }
 
   // tertiary button styling
@@ -177,27 +168,39 @@
       color: $disabled-state;
       background: transparent;
     }
+  }
 
-    &.play:hover::before,
-    &.play:focus::before {
-      background: url('/img/icons/play-white.svg');
+  &--secondary,
+  &--tertiary {
+    &.icon--play:hover::before,
+    &.icon--play:focus::before {
+      background: url("/img/icons/play-white.svg");
       background-size: contain;
+      background-position: 0 -1px;
     }
 
-    &.play::before {
-      background: url('/img/icons/play-defaultblue.svg');
+    &.icon--play::before {
+      background: url("/img/icons/play-defaultblue.svg");
       background-size: contain;
+      background-position: 0 -1px;
     }
   }
 
-  // button group styling
+  /*** Button Group Styling ***/
   &--group {
     background: transparent;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 2px;
 
-    &-left, &-center, &-right {
+    &-left,
+    &-center,
+    &-right {
       background: $white;
       color: $default-state;
       border: 2px solid $default-state;
+      border-radius: 0px;
 
       &:visited {
         background: $white;
@@ -213,6 +216,7 @@
 
       &:focus {
         color: $white;
+        border-color: $focus-state;
         background: $focus-state;
         outline: 1px dotted $hover-state;
         outline-offset: 2px;
@@ -231,30 +235,47 @@
         color: $white;
       }
     }
+
+    // Outer corners should be rounded
+    &-left {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    &-right {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
   }
 }
 
-.pagination {
+// Pagination Styling
+.pagination,
+.pagination--boxed {
   padding-inline-start: 0;
   // remove comp library's default bullets
   li::before {
-    content: "";
+    content: none;
   }
+
+  display: flex;
+  gap: 2px;
 
   // boxed and unboxed shared styling
   li {
     display: inline;
 
-    & a, & button {
+    & .page {
       text-decoration: none;
-      padding: 3px 8px;
+      padding: 7px 12px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: transparent;
       color: $default-state;
-      border: none;
       background: white;
 
       &:visited {
         color: $default-state;
-        border: none;
         background: white;
       }
 
@@ -278,55 +299,38 @@
         color: $white;
         outline: none;
       }
-
-      // unboxed class specific styling
-      &.current {
-        color: $lightest-grey;
-        border-color: $lightest-grey;
-
-        &:visited {
-          color: $lightest-grey;
-          border-color: $lightest-grey;
-        }
-
-        &:hover {
-          color: $white;
-          border-color: $hover-state;
-        }
-
-        &:focus {
-          color: $white;
-        }
-
-        &:active {
-          border-color: $active-state;
-        }
-      }
-    }
-  }
-
-  // boxed class specific styling
-  &.boxed {
-    & li a, & li button {
-      padding: 7px 12px;
-      border-width: 2px;
-      border-style: solid;
     }
 
-    & .current {
+    & .page--current {
       color: $lightest-grey;
 
       &:visited {
         color: $lightest-grey;
+        border-color: $lightest-grey;
       }
 
       &:hover {
         color: $white;
+        border-color: $hover-state;
       }
 
       &:focus {
         color: $white;
       }
+
+      &:active {
+        border-color: $active-state;
+      }
     }
+  }
+}
+
+// boxed class specific styling
+.pagination--boxed {
+  li .page {
+    padding: 7px 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $default-state;
   }
 }
