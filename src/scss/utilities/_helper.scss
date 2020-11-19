@@ -9,6 +9,19 @@
 .align-right {
   text-align: right;
 }
+
+/*
+ * Justify (use with flex elements)
+ */
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
 /*
  * Hide visually and from screen readers
  */

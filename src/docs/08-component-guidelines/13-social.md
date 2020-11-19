@@ -53,7 +53,9 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **Code**
 
-<!--Social Post Tiles code here, if applicable-->
+```
+{{ view '@social--post-tiles' }}
+```
 
 ## **Social Links**
 
@@ -74,4 +76,6 @@ If you embed content from social channels on your website, we recommend displayi
 
 ### **Code**
 
-<!--Social Links code here, if applicable-->
+```
+{{ view '@social--links' }}
+```

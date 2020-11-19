@@ -51,7 +51,7 @@ If your button controls interaction within a page, use the button element with a
 
 Button wrapper that represents self-contained content.
 ```
-<button class="btn"><button>
+<button class="btn"></button>
 ```
 
 Span wrapper that represents self-contained content.
@@ -97,26 +97,6 @@ Span wrapper that represents self-contained content.
 {{ view '@button--primary' }}
 ```
 
-```
-{{ view '@button--primary-disabled' }}
-```
-
-```
-{{ view '@button--primary-icon' }}
-```
-
-```
-{{ view '@button--darkbg' }}
-```
-
-```
-{{ view '@button--darkbg-disabled' }}
-```
-
-```
-{{ view '@button--darkbg-icon' }}
-```
-
 ## **Secondary Button**
 
 ### **Anatomy**
@@ -144,13 +124,6 @@ Span wrapper that represents self-contained content.
 {{ view '@button--secondary' }}
 ```
 
-```
-{{ view '@button--secondary-disabled' }}
-```
-
-```
-{{ view '@button--secondary-icon' }}
-```
 
 ## **Tertiary Button**
 
@@ -179,14 +152,6 @@ Span wrapper that represents self-contained content.
 {{ view '@button--tertiary' }}
 ```
 
-```
-{{ view '@button--tertiary-disabled' }}
-```
-
-```
-{{ view '@button--tertiary-icon' }}
-```
-
 ## **Button Group**
 
 ### **Anatomy**
@@ -211,9 +176,6 @@ Span wrapper that represents self-contained content.
 {{ view '@button--group' }}
 ```
 
-```
-{{ view '@button--group-disabled' }}
-```
 
 ## **Related Links**
 
