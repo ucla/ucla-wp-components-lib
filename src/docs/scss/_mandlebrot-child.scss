@@ -43,3 +43,26 @@ body {
     }
   }
 }
+
+// Fill in Status Dots
+.Status-dot {
+  &[title='Ready'] {
+    background-color: #007339;
+  }
+
+  &[title='In Review'] {
+    background-color: #0077C0;
+  }
+
+  &[title='In Progress'] {
+    background-color: #812990;
+  }
+
+  &[title='Submitted'] {
+    background-color: #E10786;
+  }
+
+  &[title='Deprecated'] {
+    background-color: #D60000;
+  }
+}
