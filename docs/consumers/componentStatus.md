@@ -8,4 +8,4 @@
 
 To see more details please see the [Web Components Home Page](https://webcomponents.ucla.edu/).
 
-- [Go Back to Main README](../README.md)
+- [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)

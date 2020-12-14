@@ -21,4 +21,4 @@ Documentation includes usage of Markdown files. Click here to see [more on Githu
       └─ utilities/ # Utilities stylesheets
 ```
 
-- [Go Back to Main README](../README.md)
+ - [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)

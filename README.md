@@ -13,8 +13,8 @@ Our goal is to provide flexible resources and tools for any person or team who c
 **Maintenance:** Strategic Communications
 
 ### For Consumers
-- [Component Design and Code Documentation](https://webcomponents.ucla.edu/)
-- [How To Include Library in Your Web Project](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/installation/download.html)
+- [Component Design, Code Documentation and Example Usage (Website)](https://webcomponents.ucla.edu/)
+- [How To Include Library in Your Web Project (Website)](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/installation/download.html)
 - [Components Status](./docs/consumers/componentStatus.md)
 
 ### For Development Contributors
@@ -22,7 +22,7 @@ Our goal is to provide flexible resources and tools for any person or team who c
 - [Learn How To Contribute](./docs/contributors/howToContribute.md)
 - [Project Directory Hierarchy](./docs/contributors/projectHierarchy.md)
 
-Have questions on how to consume or contribute to this library? Please reach out to:
+#### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
 - Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
 - Kevin Ma (Web Developer) - kma@stratcomm.ucla.edu
 - Allison Lu (Web Developer/Lead QA) - alu@stratcomm.ucla.edu

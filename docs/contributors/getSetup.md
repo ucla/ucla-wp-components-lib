@@ -16,4 +16,4 @@
 
  *used in production builds and should only be used locally to test behaviors expected in production
 
- - [Go Back to Main README](../README.md)
+ - [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)
