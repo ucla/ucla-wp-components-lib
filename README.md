@@ -22,7 +22,7 @@ Our goal is to provide flexible resources and tools for any person or team who c
 - [Learn How To Contribute](./docs/contributors/howToContribute.md)
 - [Project Directory Hierarchy](./docs/contributors/projectHierarchy.md)
 
-Questions on how to consume or contribute to this library?
+Have questions on how to consume or contribute to this library? Please reach out to:
 - Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
 - Kevin Ma (Web Developer) - kma@stratcomm.ucla.edu
 - Allison Lu (Web Developer/Lead QA) - alu@stratcomm.ucla.edu

@@ -16,6 +16,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.3.0",
     "fractal-status-helper": "^1.0.0",
+    "fs": "0.0.1-security",
     "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
@@ -41,7 +42,8 @@
   "scripts": {
     "start": "fractal start --sync",
     "build": "fractal build",
-    "commit": "git tag -d $(git tag -l) \nchanged=0 \ngit remote update && git status -uno | grep -q 'Your branch is behind' && changed=1\nif [ $changed = 1 ]; then\n    echo \"***WARNING***\n pull latest\";\nelse\n git-cz\nfi"
+    "update": "node createcommit.js && git add lastcommit.txt",
+    "commit": "npm run update \n git add git tag -d $(git tag -l) \nchanged=0 \ngit remote update && git status -uno | grep -q 'Your branch is behind' && changed=1\nif [ $changed = 1 ]; then\n    echo \"***WARNING***\n pull latest\";\nelse\n git-cz\nfi"
   },
   "config": {
     "commitizen": {
