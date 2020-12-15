@@ -8,11 +8,12 @@ Our goal is to provide flexible resources and tools for any person or team who c
 
 **Project Built with:** [Fractal Component Library](https://fractal.build/)
 
-**Host:** AWS S3 + CloudFront CDN
+**Hosting With:** AWS S3 + CloudFront CDN
 
-**Maintenance:** Strategic Communications
+**Maintained By:** Strategic Communications
 
 ### For Consumers
+- [How To Navigate the Website](./docs/consumers/navigatingSite.md)
 - [Component Design, Code Documentation and Example Usage (Website)](https://webcomponents.ucla.edu/)
 - [How To Include Library in Your Web Project (Website)](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/installation/download.html)
 - [Components Status](./docs/consumers/componentStatus.md)
