@@ -4,7 +4,7 @@ The landing page will include a brief overview of the project.
 
 [Installation](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/installation/download.html) and [Contribution](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/contribute/contributing.html) notes are also included on the webpage.
 
-The website is then broken down into 2 parts:
+## The website is then broken down into 2 parts:
 1. Documentation
 1. Components
 
