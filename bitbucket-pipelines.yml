@@ -49,8 +49,8 @@ pipelines:
             # add updated package.json and compiled public assets
             - git add package.json package-lock.json
             - git add -f public/*
-            - git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}"
-            - git push
+            - set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}" set -e
+            - set +e git push set -e
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
