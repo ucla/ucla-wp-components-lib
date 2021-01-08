@@ -1,33 +1,48 @@
-/* Default alert box styling */
-.alert {
-  padding: 16px 16px 16px 37px;
-  border-width: 4px;
-  border-style: solid;
-
+.alert__ {
   /* Specific alert styles */
-  &.primary {
-    border-color: #8BB8E8;
+  &primary {
+    padding: 16px 16px 16px 37px;
+    border-width: 4px;
+    border-style: solid;
+    line-height: 24px;
+    border-color: $lighter-blue;
   }
 
-  &.secondary {
+  &secondary {
+    padding: 16px 16px 16px 37px;
+    border-width: 4px;
+    border-style: solid;
+    line-height: 24px;
     border-color: #979797;
   }
 
-  &.success {
+  &success {
+    padding: 16px 16px 16px 37px;
+    border-width: 4px;
+    border-style: solid;
+    line-height: 24px;
     background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: #007339;
+    border-color: $success-green;
   }
 
-  &.error {
+  &error {
+    padding: 16px 16px 16px 37px;
+    border-width: 4px;
+    border-style: solid;
+    line-height: 24px;
     background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: #D60000;
+    border-color: $error-red;
   }
 
-  &.warning {
+  &warning {
+    padding: 16px 16px 16px 37px;
+    border-width: 4px;
+    border-style: solid;
+    line-height: 24px;
     background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: #F57F17;
+    border-color: $warning-orange;
   }
 }
