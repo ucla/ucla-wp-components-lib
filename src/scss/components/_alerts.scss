@@ -1,0 +1,33 @@
+/* Default alert box styling */
+.alert {
+  padding: 16px 16px 16px 37px;
+  border-width: 4px;
+  border-style: solid;
+
+  /* Specific alert styles */
+  &.primary {
+    border-color: #8BB8E8;
+  }
+
+  &.secondary {
+    border-color: #979797;
+  }
+
+  &.success {
+    background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: #007339;
+  }
+
+  &.error {
+    background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: #D60000;
+  }
+
+  &.warning {
+    background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: #F57F17;
+  }
+}
