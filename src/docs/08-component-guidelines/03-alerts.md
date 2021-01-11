@@ -11,6 +11,7 @@ title: Alerts
 * Use alerts to validate steps taken by users or denote a system change.
 * Use alerts sparingly. Show one at a time to avoid overwhelming users.
 * Be polite and encouraging, and inform users how to respond to or fix a problem.
+* In code, be sure to include the default "alert" classname. This will allow the element to inherit default alert styles.
 
 ### **Accessibility Requirements**
 
@@ -20,7 +21,7 @@ title: Alerts
 
 **Further Reading**
 
-* [Using the alert role](https://developer.mozilla.org/en-US/build/%!CurrentVersion%!/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* [Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
 ## **Primary Alert**
 
@@ -38,7 +39,9 @@ title: Alerts
 
 ### **Code**
 
-<!--Primary Alert code here, if applicable-->
+```
+{{view '@alerts--primary'}}
+```
 
 ## **Secondary Alert**
 
@@ -55,7 +58,9 @@ title: Alerts
 
 ### **Code**
 
-<!--Secondary Alert code here, if applicable-->
+```
+{{view '@alerts--secondary'}}
+```
 
 ## **Success Alert**
 
@@ -74,7 +79,9 @@ title: Alerts
 
 ### **Code**
 
-<!--Success Alert code here, if applicable-->
+```
+{{view '@alerts--success'}}
+```
 
 ## **Error Alert**
 
@@ -93,7 +100,9 @@ title: Alerts
 
 ### **Code**
 
-<!--Error Alert code here, if applicable-->
+```
+{{view '@alerts--error'}}
+```
 
 ## **Warning Alert**
 
@@ -112,4 +121,6 @@ title: Alerts
 
 ### **Code**
 
-<!--Warning Alert code here, if applicable-->
+```
+{{view '@alerts--warning'}}
+```
