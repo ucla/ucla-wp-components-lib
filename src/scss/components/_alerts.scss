@@ -6,27 +6,27 @@
   line-height: 24px;
 
   /* Specific Alert Styles */
-  &__primary {
+  &--primary {
     border-color: $lighter-blue;
   }
 
-  &__secondary {
+  &--secondary {
     border-color: #979797;
   }
 
-  &__success {
+  &--success {
     background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $success-green;
   }
 
-  &__error {
+  &--error {
     background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $error-red;
   }
 
-  &__warning {
+  &--warning {
     background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $warning-orange;
