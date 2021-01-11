@@ -1,46 +1,32 @@
-.alert__ {
-  /* Specific alert styles */
-  &primary {
-    padding: 16px 16px 16px 37px;
-    border-width: 4px;
-    border-style: solid;
-    line-height: 24px;
+.alert {
+  /* Default Alerts Styling */
+  padding: 16px 16px 16px 37px;
+  border-width: 4px;
+  border-style: solid;
+  line-height: 24px;
+
+  /* Specific Alert Styles */
+  &__primary {
     border-color: $lighter-blue;
   }
 
-  &secondary {
-    padding: 16px 16px 16px 37px;
-    border-width: 4px;
-    border-style: solid;
-    line-height: 24px;
+  &__secondary {
     border-color: #979797;
   }
 
-  &success {
-    padding: 16px 16px 16px 37px;
-    border-width: 4px;
-    border-style: solid;
-    line-height: 24px;
+  &__success {
     background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $success-green;
   }
 
-  &error {
-    padding: 16px 16px 16px 37px;
-    border-width: 4px;
-    border-style: solid;
-    line-height: 24px;
+  &__error {
     background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $error-red;
   }
 
-  &warning {
-    padding: 16px 16px 16px 37px;
-    border-width: 4px;
-    border-style: solid;
-    line-height: 24px;
+  &__warning {
     background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
     border-color: $warning-orange;
