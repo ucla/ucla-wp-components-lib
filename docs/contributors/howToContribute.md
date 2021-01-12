@@ -7,4 +7,16 @@
 5. Create a [pull request](https://bitbucket.org/uclaucomm/ucla-bruin-components/pull-requests/new) and answer the questions to the best of knowledge
 6. The review process will be begin and feedback (if any), will be added the pull request.
 
+# How to Submit Issues
+
+Follow the format below for issue descriptions.
+
+>## Description:
+>
+>## To do:
+>
+>## To reproduce:
+
+<br>
+
  - [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)
