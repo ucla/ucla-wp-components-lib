@@ -1,3 +1,54 @@
-<button class="btn">
-  <span>{{ button.copy }}</span>
-</button>
+<div class="tabs">
+  <div role="tablist" aria-label="content-tabs">
+    <button role="tab"
+            aria-selected="true"
+            aria-controls="panel-01-tab"
+            id="panel-01"
+            class="btn tablinks">
+      Panel 1
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="panel-02-tab"
+            id="panel-02"
+            class="btn tablinks"
+            tabindex="-1">
+      Panel 2
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="panel-03-tab"
+            id="panel-03"
+            class="btn tablinks"
+            tabindex="-1"
+            data-deletable="">
+      Panel 3
+    </button>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="panel-01-tab"
+       aria-labelledby="panel-01">
+    <p>
+      Panel 01 content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem neque, pulvinar ac bibendum eget, hendrerit a dolor. Nulla nec ex nulla. <a href="#">Link example</a>.
+    </p>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="panel-02-tab"
+       aria-labelledby="panel-02"
+       hidden="">
+    <p>
+      Nam quis tellus eu sapien euismod rutrum non sit amet leo. Suspendisse molestie, nulla vel tempus ultricies, felis nibh elementum augue, ac feugiat elit est id tellus.
+    </p>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="panel-03-tab"
+       aria-labelledby="panel-03"
+       hidden="">
+    <p>
+      Mauris tincidunt nisl lacus, non accumsan ex dapibus sed. Nullam tortor ipsum, venenatis vel hendrerit eu, tempor a metus. Ut posuere est sodales, mattis neque eget, eleifend neque. Nam diam felis, semper ut nisi ut, rhoncus fringilla nunc.
+    </p>
+  </div>
+</div>
