@@ -15,6 +15,7 @@ title: Alerts
 ### **Code Guidance**
 
 * Be sure to include the default "alert" classname additional to a specific "alert" classname. This will allow the element to inherit default alert styles. Please see code examples below.
+* Adding the "inline-block" classname to an alert element will allow for usage of an alert element that does not take the full width of the container.
 
 ### **Accessibility Requirements**
 
