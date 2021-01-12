@@ -20,7 +20,7 @@ title: Alerts
 
 **Further Reading**
 
-* [Using the alert role](https://developer.mozilla.org/en-US/build/%!CurrentVersion%!/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* [Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
 ## **Primary Alert**
 
