@@ -57,7 +57,7 @@
     }
   }
 
-  /* .tabcontent are the tab panels containing content: Event cards, tables */
+  /* .tabcontent are the tab panels containing content */
   .tabcontent {
     position: relative;
     z-index: 2;
@@ -71,7 +71,6 @@
     p {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 48px;
 
       // Add styles to links
       a {

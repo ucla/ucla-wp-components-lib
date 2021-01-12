@@ -254,10 +254,4 @@ $(document).ready(function (){
     };
   }());
 
-  // Simulate click first tab on page load
-  // $('document').ready(function () {
-  //     setTimeout(function () {
-  //         $(".tablinks:first-child").trigger('click');
-  //     }, 10);
-  // });
 });
