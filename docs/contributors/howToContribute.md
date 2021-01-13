@@ -5,7 +5,7 @@
 3. After making your changes, commit your changes (Please be sure to add a commit message that will clearly underline the changes being made).
 4. Push your branch and changes to the remote repo
 5. Create a [pull request](https://bitbucket.org/uclaucomm/ucla-bruin-components/pull-requests/new) and answer the questions to the best of knowledge
-6. The review process will be begin and feedback (if any), will be added the pull request.
+6. The review process will begin and feedback (if any) will be added to the pull request.
 
 # How to Submit Issues
 
