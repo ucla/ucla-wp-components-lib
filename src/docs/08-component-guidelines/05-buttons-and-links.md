@@ -16,6 +16,10 @@
 * [Writing Hyperlinks: Salient, Descriptive, Start with Keyword](https://www.nngroup.com/articles/writing-links/) (Nielsen Norman Group)
 * [Learn More Links: You Can Do Better](https://www.nngroup.com/articles/learn-more-links/) (Nielsen Norman Group)
 
+### **Code Guidance**
+* Be sure to include the default "ucla" classname for links. This will allow the element to inherit default link styles.
+    * Adding the "campus" classname will allow for grid layout.
+
 ### **Accessibility Requirements**
 
 * Write button labels so they make sense without reading the copy around them so they are accessible to screen readers.
