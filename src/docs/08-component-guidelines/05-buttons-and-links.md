@@ -17,7 +17,7 @@
 * [Learn More Links: You Can Do Better](https://www.nngroup.com/articles/learn-more-links/) (Nielsen Norman Group)
 
 ### **Code Guidance**
-* Be sure to include the default "ucla" classname for links. This will allow the element to inherit default link styles.
+* Be sure to include the minimum parent class "ucla" in the containers for your links. This will allow the element to inherit default link styles.
     * Adding the "campus" classname will allow for grid layout.
 
 ### **Accessibility Requirements**
