@@ -55,8 +55,15 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 ### JavaScript
 
-```
-$(document).ready(function (){
+The following script is required for the tabs component to work. Find the file at `/src/js/tabs.js`.
+
+The script does the following:
+- resets width of tab buttons and wraps button text if the width is greater than the container
+- binds tab, back tab, and arrow keys to event listeners
+- applies automatic activation of tab panels when corresponding tab receives focus
+- applies focus on correct elements
+
+```$(document).ready(function (){
 
   /*
   *   This content is licensed according to the W3C Software License at
@@ -66,6 +73,7 @@ $(document).ready(function (){
     let tablist = document.querySelectorAll('[role="tablist"]')[0];
     let tabs;
     let panels;
+    let delay = determineDelay();
 
     // Exit the script if tablist is not defined (on any page where exists no tablist)
     if (!tablist) {
@@ -90,9 +98,7 @@ $(document).ready(function (){
       up: 38,
       right: 39,
       down: 40,
-      delete: 46,
-      enter: 13,
-      space: 32
+      delete: 46
     };
 
     // Add or subtract depending on key pressed
@@ -154,12 +160,12 @@ $(document).ready(function (){
       case keys.end:
         event.preventDefault();
         // Activate last tab
-        focusLastTab();
+        activateTab(tabs[tabs.length - 1]);
         break;
       case keys.home:
         event.preventDefault();
         // Activate first tab
-        focusFirstTab();
+        activateTab(tabs[0]);
         break;
 
       // Up and down are in keydown
@@ -182,10 +188,6 @@ $(document).ready(function (){
         break;
       case keys.delete:
         determineDeletable(event);
-        break;
-      case keys.enter:
-      case keys.space:
-        activateTab(event.target);
         break;
       };
     };
@@ -220,6 +222,10 @@ $(document).ready(function (){
     function switchTabOnArrowPress (event) {
       let pressed = event.keyCode;
 
+      for (x = 0; x < tabs.length; x++) {
+        tabs[x].addEventListener('focus', focusEventHandler);
+      };
+
       if (direction[pressed]) {
         let target = event.target;
         if (target.index !== undefined) {
@@ -229,7 +235,7 @@ $(document).ready(function (){
           else if (pressed === keys.left || pressed === keys.up) {
             focusLastTab();
           }
-          else if (pressed === keys.right || pressed === keys.down) {
+          else if (pressed === keys.right || pressed == keys.down) {
             focusFirstTab();
           };
         };
@@ -264,6 +270,7 @@ $(document).ready(function (){
       for (t = 0; t < tabs.length; t++) {
         tabs[t].setAttribute('tabindex', '-1');
         tabs[t].setAttribute('aria-selected', 'false');
+        tabs[t].removeEventListener('focus', focusEventHandler);
       };
 
       for (p = 0; p < panels.length; p++) {
@@ -271,12 +278,12 @@ $(document).ready(function (){
       };
     };
 
-    // Make a guess
+    // Focus first tab
     function focusFirstTab () {
       tabs[0].focus();
     };
 
-    // Make a guess
+    // Focus last tab
     function focusLastTab () {
       tabs[tabs.length - 1].focus();
     };
@@ -310,9 +317,44 @@ $(document).ready(function (){
       target.parentElement.removeChild(target);
       panel.parentElement.removeChild(panel);
     };
+
+    // Determine whether there should be a delay
+    // when user navigates with the arrow keys
+    function determineDelay () {
+      let hasDelay = tablist.hasAttribute('data-delay');
+      let delay = 0;
+
+      if (hasDelay) {
+        let delayValue = tablist.getAttribute('data-delay');
+        if (delayValue) {
+          delay = delayValue;
+        }
+        else {
+          // If no value is specified, default to 300ms
+          delay = 300;
+        };
+      };
+
+      return delay;
+    };
+
+    //
+    function focusEventHandler (event) {
+      let target = event.target;
+
+      setTimeout(checkTabFocus, delay, target);
+    };
+
+    // Only activate tab on focus if it still has focus after the delay
+    function checkTabFocus (target) {
+      focused = document.activeElement;
+
+      if (target === focused) {
+        activateTab(target, false);
+      };
+    };
+
   }());
-
 });
-
 
 ```
