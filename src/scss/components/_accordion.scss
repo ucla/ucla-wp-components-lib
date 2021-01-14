@@ -212,3 +212,111 @@
 //     }
 //   }
 // }
+.accordion {
+  display: block;
+  padding: 0px 22px 0px;
+  max-width: 776px;
+
+  &__title {
+    border: 0;
+    border-top: 1px solid $grey-10;
+    width: 100%;
+    text-align: left;
+    color: $default-state;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: bold;
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0);
+    margin-top: 1px;
+    padding: 8px 32px 8px 16px;
+
+    &:focus {
+      outline-style: dotted;
+    }
+
+    &:hover, &.active {
+      background: $default-state;
+      color: $white;
+      cursor: pointer;
+
+      &::after {
+        background: url("/img/icons/arrow-down-white.svg");
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        right: 15px;
+        top: 7px;
+        width: 26px;
+        height: 26px;
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        &::after {
+          right: 24px;
+          top: 15px;
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    &.active {
+      &::after {
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background: url("/img/icons/arrow-down-defaultblue.svg");
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      right: 15px;
+      top: 7px;
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (min-width: breakpoint-min(md)) {
+      font-size: 24px;
+      padding: 22px 64px 18px 16px;
+
+      &::after {
+        background-size: contain;
+        right: 24px;
+        top: 15px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 16px;
+
+    &.show-me {
+      display: block;
+    }
+  }
+
+  &.last {
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid $grey-10;
+    }
+  }
+}

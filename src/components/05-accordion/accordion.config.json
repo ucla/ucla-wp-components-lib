@@ -1,11 +1,11 @@
 {
-	"title": "Accordion",
-	"hidden": true,
-	"status": "in_progress",
+  "title": "Accordion",
+  "hidden": false,
+  "status": "in_progress",
   "context": {
-		"dropdown": {
-			"title": "Principles of Community",
-			"content": "UCLA is an institution firmly rooted in its land-grant mission of teaching, research and public service. The campus community is committed to discovery and innovation, creative and collaborative achievements, debate and critical inquiry, in an open and inclusive environment that nurtures the growth and development of all faculty, students, administration and staff."
-		}
+    "dropdown": {
+	  "title": "Title",
+	  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus sed tellus id ullamcorper. In iaculis dolor vitae urna mattis, vel pellentesque dui semper. Sed dignissim, lorem eget tincidunt sollicitudin, nulla nibh gravida arcu, a fringilla turpis risus id eros. Aliquam lobortis iaculis nunc. Integer imperdiet lacus eget arcu aliquam volutpat. Integer molestie consequat facilisis. Nam dui odio, hendrerit porttitor elit ac, auctor tristique dui. Proin a bibendum sem, ac laoreet neque. Vestibulum elit sem, tincidunt eu lorem at, ullamcorper gravida nulla. Phasellus nec ex eros. Donec at odio eget turpis luctus euismod. Fusce mi ex, tincidunt nec accumsan fringilla, tincidunt venenatis ex. Praesent hendrerit quis dolor hendrerit tristique. Quisque ut metus turpis."
+    }
   }
 }

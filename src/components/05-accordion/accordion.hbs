@@ -1,13 +1,44 @@
-<div class="section-wrapper accordion">
+<section class="accordion mt-16">
+	<dl>
+        <button class="accordion__title" aria-expanded="false">
+        	<dt>{{ dropdown.title }}</dt>
+        </button>
 
-	<h2 class="accordion__title">
-		<button id="accordion1id" class="accordion__title-button" type="button" aria-expanded="true" aria-controls="sect1">
-			{{ dropdown.title }}
-		</button>
-	</h2>
+        <dd class="accordion__content"> 
+            <p>         
+        		{{ dropdown.content }}
+        	</p>
+        </dd>         
 
-	<div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion__content grey-bk">
-			{{ dropdown.content }}
-	</div>
+    </dl>    
+</section>
 
-</div>
+<section class="accordion">
+	<dl>
+        <button class="accordion__title" aria-expanded="false">
+        	<dt>{{ dropdown.title }}</dt>
+        </button>
+
+        <dd class="accordion__content"> 
+            <p>         
+        		{{ dropdown.content }}
+        	</p>
+        </dd>         
+
+    </dl>    
+</section>
+
+<section class="accordion last mb-16">
+	<dl>
+        <button class="accordion__title" aria-expanded="false">
+        	<dt>{{ dropdown.title }}</dt>
+        </button>
+
+        <dd class="accordion__content"> 
+            <p>         
+        		{{ dropdown.content }}
+        	</p>
+        </dd>         
+
+    </dl>    
+</section>
