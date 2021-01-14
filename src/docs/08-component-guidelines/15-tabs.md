@@ -21,6 +21,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 * Use the button `<button>` element for tabs with ARIA `role="tab"` and `aria-selected="true"` or `"false"`.
 * Use the button `<button>` element if tabs change the content view within the same page.
 * Use the anchor `<a>` element if tabs link to other pages with a unique URL.
+* Ensure component is keyboard accessible. User should be able to focus on tabs with right/left arrows.
 
 **Further Readings**
 
