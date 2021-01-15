@@ -1,15 +1,18 @@
-// override base styles for ul and li
-ul li.tile::before {
-  content: "";
-  margin-left: 0;
-  padding-right: 0;
-}
+// override base styles for unordered lists and list items
+ul {
+  &.tile__section {
+    padding-left: 0;
+  }
 
-ul.tile__section {
-  padding-left: 0;
+  li.tile::before {
+    content: "";
+    margin-left: 0;
+    padding-right: 0;
+  }
 }
 
 // TODO: remove .campus selector after merging in latest from develop branch. this was modified in CL issue 20
+// override base styles for anchor tags
 .ucla.campus a.tile__link {
   &:link {
     background-color: rgba(0, 89, 140, 0.85); //must be rgba to set opacity for bg only
@@ -28,16 +31,26 @@ ul.tile__section {
 // end base styles override
 
 .tile {
-  &__image {
-    background: $default-state url("/img/examples/tile-example.jpg") no-repeat center;
+  // all descendents of tile should have white text color
+  & * {
+    color: $white;
+  }
+
+  // basic tile background is solid blue
+  &__background {
+    background: $default-state;
     display: block;
     margin: 0 auto;
-    background-size: cover;
 
     @media (min-width: breakpoint-min(md)) {
       $tile-width: 276px; // desired tile max-width
 
       max-width: $tile-width;
+    }
+
+    // add variations on the tile background with the background shorthand property
+    &--royce {
+      background: $default-state url("/img/examples/tile-example.jpg") no-repeat center / cover;
     }
   }
 
@@ -47,45 +60,38 @@ ul.tile__section {
     $tile-px: 32px; // padding left and right
     $tile-pb: 16px; // padding bottom
 
-    position: relative;
     display: block;
-    margin: 0 auto;
-    padding: $tile-pt $tile-px $tile-pb;
-    // height: 500px; //arbitrarily large value
     height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
-    // max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
+    margin: 0 auto;
     overflow: hidden;
+    padding: $tile-pt $tile-px $tile-pb;
+    position: relative;
 
     @media (min-width: breakpoint-min(md)) {
-      $tile-height: 184px; // desired tile height
-      $tile-pt: 32px; // padding top
-      $tile-pb: 60px; // padding bottom
+      $tile-height: 184px;
+      $tile-pt: 32px;
+      $tile-pb: 60px;
 
-      padding: $tile-pt $tile-px $tile-pb;
-      // max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
       height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
+      padding: $tile-pt $tile-px $tile-pb;
     }
 
-    // select all descendents of tile__link and set text color to white
-    & * {
-      color: $white;
-    }
-  }
-
-  &__title {
-    line-height: 30px;
-
+    // decorative yellow bar
     &::before {
-      display: block;
-      content: "";
-      width: 40px;
-      height: 4px;
       background: $ucla-gold;
-      margin-bottom: 12px;
+      content: "";
+      display: block;
+      height: 4px;
+      margin: 0 0 12px;
+      width: 40px;
 
       @media (min-width: breakpoint-min(md)) {
-        margin-bottom: 28px;
+        margin: 0 0 28px;
       }
+    }
+
+    &__title {
+      line-height: 30px;
     }
   }
 }
