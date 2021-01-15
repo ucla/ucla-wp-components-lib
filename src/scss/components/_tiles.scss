@@ -13,6 +13,7 @@ ul.tile__section {
 .ucla.campus a.tile__link {
   &:link {
     background-color: rgba(0, 89, 140, 0.85); //must be rgba to set opacity for bg only
+    text-decoration: none;
   }
 
   &:hover,
@@ -27,8 +28,6 @@ ul.tile__section {
 // end base styles override
 
 .tile {
-  background-color: red;
-
   &__image {
     background: $default-state url("/img/examples/tile-example.jpg") no-repeat center;
     display: block;
@@ -44,30 +43,49 @@ ul.tile__section {
 
   &__link {
     $tile-height: 108px; // desired tile height
-    $tile-px: 10px; // padding left and right
-    $tile-pt: 10px; // padding top
-    $tile-pb: 10px; // padding bottom
+    $tile-pt: 16px; // padding top
+    $tile-px: 32px; // padding left and right
+    $tile-pb: 16px; // padding bottom
 
-    text-decoration: none;
+    position: relative;
     display: block;
     margin: 0 auto;
-    height: 500px; //arbitrarily large value
-    max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
     padding: $tile-pt $tile-px $tile-pb;
+    // height: 500px; //arbitrarily large value
+    height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
+    // max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
+    overflow: hidden;
 
     @media (min-width: breakpoint-min(md)) {
       $tile-height: 184px; // desired tile height
-      $tile-px: 32px; // padding left and right
       $tile-pt: 32px; // padding top
       $tile-pb: 60px; // padding bottom
 
-      max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
       padding: $tile-pt $tile-px $tile-pb;
+      // max-height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
+      height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
     }
 
-    h3 {
+    // select all descendents of tile__link and set text color to white
+    & * {
       color: $white;
-      line-height: 30px;
+    }
+  }
+
+  &__title {
+    line-height: 30px;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 40px;
+      height: 4px;
+      background: $ucla-gold;
+      margin-bottom: 12px;
+
+      @media (min-width: breakpoint-min(md)) {
+        margin-bottom: 28px;
+      }
     }
   }
 }
