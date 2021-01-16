@@ -96,6 +96,10 @@ Accordions provide a space-saving technique for displaying content on your viewp
 
 ### **Code**
 
+```
+{{view '@accordion'}}
+```
+
 <!--Existing “section-wrapper accordion” code on Fractal-->
 
 ## **Load More**
@@ -122,3 +126,7 @@ Use this button to display more content or more items in a list. You should cust
 ### **Code**
 
 <!--Load More code here, if applicable-->
+
+```
+{{view '@load-more'}}
+```

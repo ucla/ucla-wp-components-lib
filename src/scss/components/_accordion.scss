@@ -154,3 +154,33 @@
     }
   }
 }
+
+//load more code
+.load-more {
+  &.btn {
+    border: 2px solid $default-state;
+    background: $white;
+    padding: 12px 16px 8px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $default-state;
+
+    &:hover {
+      background: $hover-state;
+      border-color: $hover-state;
+      color: $white;
+    }
+
+    &:active {
+      background: $active-state;
+      border-color: $active-state;
+      color: $white;
+    }
+
+    &:focus {
+      background: $focus-state;
+      border-color: $focus-state;
+      color: $white;
+    }
+  }
+}
