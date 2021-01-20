@@ -1,0 +1,103 @@
+/*************************************
+  Tabbed card section
+************************************/
+
+/* .tabs is the container for tab buttons and tab panels */
+.tabs {
+  @media (min-width: breakpoint-min(md)) {
+    max-width: 776px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid $grey-10;
+  }
+
+  /* container for tab buttons */
+  div[role="tablist"] {
+    white-space: nowrap;
+    border-bottom: 1px solid $grey-10;
+
+    @media (min-width: breakpoint-min(xl)) {
+      overflow: hidden;
+    }
+  }
+
+  /* .tablinks are buttons controlling which panel displays */
+  .tablinks {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    padding: 8px 16px 12px;
+    color: $default-state;
+    font-weight: bold;
+    background: none;
+    border-bottom: 4px solid transparent; // invisible border so hover state doesn't move button element
+
+    /* when button is active */
+    &[aria-selected="true"] {
+      color: $grey-80;
+      border-bottom: 4px solid $ucla-gold;
+    }
+
+    &:hover {
+      color: $hover-state;
+      border-bottom: 4px solid $hover-state;
+    }
+
+    &:focus {
+      color: $focus-state;
+      outline: 1px dotted $focus-state;
+      outline-offset: -2px;
+    }
+
+    &:active {
+      color: $grey-80;
+      border-bottom: 4px solid $ucla-gold;
+    }
+  }
+
+  /* .tabcontent are the tab panels containing content */
+  .tabcontent {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      outline: 1px dotted $focus-state;
+      outline-offset: -2px;
+    }
+
+    // Sometimes tabcontent will have paragraph content
+    p {
+      font-size: 16px;
+      line-height: 24px;
+
+      // Add styles to links
+      a {
+        text-decoration: underline;
+        color: $default-state;
+
+        &:visited {
+          color: $visited-state;
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $hover-state;
+        }
+
+        &:focus {
+          color: $white;
+          background-color: $focus-state;
+          outline: 1px dotted $focus-state;
+          outline-offset: 2px;
+        }
+
+        &:active {
+          color: $white;
+          background-color: $active-state;
+        }
+      }
+    }
+  }
+}
