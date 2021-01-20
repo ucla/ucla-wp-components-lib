@@ -72,7 +72,7 @@
     }
 
     &:hover, &.active {
-      background: $default-state;
+      background: $hover-state;
       color: $white;
       cursor: pointer;
 
@@ -81,18 +81,18 @@
         background-position: center;
         background-size: contain;
         position: absolute;
-        right: 15px;
-        top: 7px;
-        width: 26px;
-        height: 26px;
+        right: 16px;
+        top: 8px;
+        width: 24px;
+        height: 24px;
       }
 
       @media (min-width: breakpoint-min(md)) {
         &::after {
-          right: 24px;
-          top: 15px;
-          width: 35px;
-          height: 35px;
+          right: 16px;
+          top: 16px;
+          width: 32px;
+          height: 32px;
         }
       }
     }
@@ -113,10 +113,10 @@
       background-position: center;
       background-size: contain;
       position: absolute;
-      right: 15px;
-      top: 7px;
-      width: 26px;
-      height: 26px;
+      right: 16px;
+      top: 8px;
+      width: 24px;
+      height: 24px;
     }
 
     @media (min-width: breakpoint-min(md)) {
@@ -125,10 +125,10 @@
 
       &::after {
         background-size: contain;
-        right: 24px;
-        top: 15px;
-        width: 35px;
-        height: 35px;
+        right: 16px;
+        top: 16px;
+        width: 32px;
+        height: 32px;
       }
     }
 
@@ -140,13 +140,14 @@
   &__content {
     display: none;
     padding: 16px;
+    padding-bottom: 32px;
 
     &.show-me {
       display: block;
     }
   }
 
-  &.last {
+  &.accordion-last {
     &::after {
       content: "";
       display: block;
@@ -171,15 +172,15 @@
       color: $white;
     }
 
-    &:active {
-      background: $active-state;
-      border-color: $active-state;
-      color: $white;
-    }
-
     &:focus {
       background: $focus-state;
       border-color: $focus-state;
+      color: $white;
+    }
+
+    &:active {
+      background: $active-state;
+      border-color: $active-state;
       color: $white;
     }
   }

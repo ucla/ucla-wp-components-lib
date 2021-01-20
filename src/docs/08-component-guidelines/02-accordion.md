@@ -20,10 +20,13 @@ Accordions provide a space-saving technique for displaying content on your viewp
 * [Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/) (Nielsen Norman Group)
 * [Accessible accordions & disclosure widgets](https://github.com/scottaohara/a11y_accordions) (The A11Y Project)
 
+### **Code Guidance**
+
+* Be sure include a class of `accordion-last` on the last element of your accordion.
+
 ### **Accessibility Requirements**
 
-* Treat accordions like headings and buttons. Headings describe the content beneath and buttons denote an interactive state.
-* Use `<h3>` or `<h4>` or smaller headings with a nested `<button>` element.
+* Use `<dl>` with a nested `<button>` element.
 * Only display one load more button per page or differentiate load more button text so screen readers can differentiate for non-sighted users.
 * Apply ARIA roles so accordions are tab-able.
 * Apply ARIA states to denote open headings and panels.
