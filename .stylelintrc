@@ -88,7 +88,7 @@
     "selector-pseudo-element-colon-notation": "double",
     "selector-type-case": "lower",
     "unit-case": "lower",
-    "unit-whitelist": ["deg", "dpi", "dppx", "em", "px", "rem", "s", "vh", "%"],
+    "unit-allowed-list": ["deg", "dpi", "dppx", "em", "px", "rem", "s", "vh", "%"],
     "value-list-comma-space-after": "always",
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
