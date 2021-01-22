@@ -1,17 +1,20 @@
+/*
+
+  STAT TOUTS
+
+
+*/
+
+
+// .stat-set is the container for multiple stat touts across
+.stat-set {
+  @media (min-width: breakpoint-min(md)) {
+    display: flex;
+  }
+}
+
+// .stat-wrapper is the container for individual stat touts
 .stat-wrapper {
-  /* Use the .stat-tout class for VERTICAL stat touts
-
-	Example HTML structure (from Facts & Figures):
-
-	<div class="stat-wrapper clearfix">
-		<div class="stat-tout">
-			<span class="stat-tout__number">31,000</span>
-			<span class="stat-tout__label">Undergraduate Students</span>
-		</div>
-	</div>
-
-	*/
-
   .stat-tout {
     display: block;
     border-left: 4px solid $ucla-gold;
@@ -58,11 +61,12 @@
       display: block;
       margin-bottom: 8px;
 
+      // Target spans wrapping "out of"
       // For multiple variable stat touts
       & > span {
         font-size: 18px;
         vertical-align: middle;
-        margin: 0 -8px;
+        margin: 0 -5px;
       }
     }
 
