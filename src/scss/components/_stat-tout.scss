@@ -21,6 +21,34 @@
     @media (min-width: breakpoint-min(md)) {
       display: inline-block;
     }
+
+    /*
+      Handle wrapping for two and three across
+    */
+    @media only screen and (min-width: breakpoint-min(md)) {
+      // width: calc((100%/2) - (24px/2));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (min-width: breakpoint-min(lg)) {
+      // width: calc((100%/3) - (48px/3));
+      float: left;
+      margin-right: 24px;
+
+      &:nth-child(2n) {
+        margin-right: 24px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
     // .number and .label are spans
     &__number {
       font-size: 54px;
@@ -29,6 +57,13 @@
       font-weight: bold;
       display: block;
       margin-bottom: 8px;
+
+      // For multiple variable stat touts
+      & > span {
+        font-size: 18px;
+        vertical-align: middle;
+        margin: 0 -8px;
+      }
     }
 
     &__label {
@@ -51,6 +86,16 @@
       }
     }
 
+    &__source {
+      display: block;
+      font-size: 12.8px;
+      font-weight: bold;
+      font-style: italic;
+      color: $grey-60;
+      padding-top: 8px;
+      line-height: 16px;
+    }
+
     &--wide {
       width: 100%;
       border-bottom: 4px solid $ucla-gold;
@@ -58,28 +103,26 @@
       margin-bottom: 48px;
     }
 
-    @media only screen and (min-width: breakpoint-min(md)) {
-      width: calc((100%/2) - (24px/2));
-      float: left;
-      margin-right: 24px;
+    /*
+      Inline stat touts
+    */
+    &--inline {
+      @media (min-width: breakpoint-min(lg)) {
+        display: flex;
+        align-items: stretch;
+        padding-bottom: 16px;
 
-      &:nth-child(2n) {
-        margin-right: 0;
+        .stat-tout__number {
+          margin-right: 16px;
+        }
+
+        .stat-tout__label {
+          display: block;
+          margin-top: 20px;
+          max-width: inherit;
+        }
       }
     }
 
-    @media only screen and (min-width: breakpoint-min(lg)) {
-      width: calc((100%/3) - (48px/3));
-      float: left;
-      margin-right: 24px;
-
-      &:nth-child(2n) {
-        margin-right: 24px;
-      }
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
   }
 }
