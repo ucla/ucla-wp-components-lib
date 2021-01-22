@@ -1,0 +1,34 @@
+.alert {
+  /* Default Alerts Styling */
+  padding: 16px 16px 16px 37px;
+  border-width: 4px;
+  border-style: solid;
+  line-height: 24px;
+
+  /* Specific Alert Styles */
+  &--primary {
+    border-color: $lighter-blue;
+  }
+
+  &--secondary {
+    border-color: #979797;
+  }
+
+  &--success {
+    background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: $success-green;
+  }
+
+  &--error {
+    background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: $error-red;
+  }
+
+  &--warning {
+    background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
+    background-size: 24px 24px;
+    border-color: $warning-orange;
+  }
+}
