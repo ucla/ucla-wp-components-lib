@@ -1,12 +1,23 @@
-/*
+/*************************************
+************************************
 
-  STAT TOUTS
+Statistic touts are visual callouts used to highlight an important fact, data point, or ranking.
+
+TABLE OF CONTENTS:
+1. The container for multiple stat touts: .stat-set
+2. Individual stat touts
+    a. Number (value text)
+    b. Label (descriptor text)
+    c. Source text
+3. Variations
+    a. Inline
+
+*************************************
+************************************/
 
 
-*/
-
-
-// .stat-set is the container for multiple stat touts across
+// .stat-set is the container required for multiple stat touts across
+// This handles responsiveness of more than one stat tout across 
 .stat-set {
   @media (min-width: breakpoint-min(md)) {
     display: flex;
@@ -18,48 +29,21 @@
   .stat-tout {
     display: block;
     border-left: 4px solid $ucla-gold;
-    padding: 6px 0 38px 32px;
+    padding: 6px 0 16px 32px;
     margin: 24px 24px 0;
 
     @media (min-width: breakpoint-min(md)) {
       display: inline-block;
     }
 
-    /*
-      Handle wrapping for two and three across
-    */
-    @media only screen and (min-width: breakpoint-min(md)) {
-      // width: calc((100%/2) - (24px/2));
-      float: left;
-      margin-right: 24px;
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-    }
-
-    @media only screen and (min-width: breakpoint-min(lg)) {
-      // width: calc((100%/3) - (48px/3));
-      float: left;
-      margin-right: 24px;
-
-      &:nth-child(2n) {
-        margin-right: 24px;
-      }
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
-
-    // .number and .label are spans
+    // "Value text" appears on the left of a stat tout
+    // e.g. #9, $1 billion, 45%
     &__number {
       font-size: 54px;
       line-height: 4rem;
       color: $grey-80;
       font-weight: bold;
       display: block;
-      margin-bottom: 8px;
 
       // Target spans wrapping "out of"
       // For multiple variable stat touts
@@ -70,6 +54,8 @@
       }
     }
 
+    // "Descriptor text" appears on the right of a stat tout
+    // This gives context to value tect
     &__label {
       font-size: 24px;
       line-height: 24px;
@@ -80,16 +66,10 @@
       @media (min-width: breakpoint-min(md)) {
         max-width: 312px;
       }
-
-      &--grey {
-        color: $medium-grey4;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        font-weight: bold;
-        display: block;
-      }
     }
 
+    // Source text is required for Rankings that have a source
+    // e.g. Forbes (2019), U.S. News & World Report (2018)
     &__source {
       display: block;
       font-size: 12.8px;
@@ -100,21 +80,15 @@
       line-height: 16px;
     }
 
-    &--wide {
-      width: 100%;
-      border-bottom: 4px solid $ucla-gold;
-      padding-bottom: 24px;
-      margin-bottom: 48px;
-    }
+    /************
+      Variation: inline stat touts
 
-    /*
-      Inline stat touts
-    */
+      Note: inline stat touts appear stacked on mobile widths.
+    *************/
     &--inline {
       @media (min-width: breakpoint-min(lg)) {
         display: flex;
         align-items: stretch;
-        padding-bottom: 16px;
 
         .stat-tout__number {
           margin-right: 16px;
