@@ -1,5 +1,4 @@
-// TODO: remove .campus selector after merging in latest from develop branch. this was modified in CL issue 20
-.ucla.campus {
+.ucla {
   // override base styles for anchor tags
   a.tile__link {
     &:link {
@@ -19,6 +18,7 @@
 }
 // end base styles override
 
+// define a mixin to help set tile section grid
 @mixin setTileColumns($tile-columns) {
   // section width determines the max number of tiles per row
   $section-width: calc((#{$tile-width} + #{$tile-space-between}) * #{$tile-columns});
@@ -28,6 +28,7 @@
   }
 }
 
+// set default specs
 $tile-space-between: 18px;
 $tile-width: 276px;
 
