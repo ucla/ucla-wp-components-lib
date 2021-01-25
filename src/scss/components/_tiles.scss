@@ -1,36 +1,76 @@
-// override base styles for unordered lists and list items
-ul {
-  &.tile__section {
-    padding-left: 0;
-  }
-
-  li.tile::before {
-    content: "";
-    margin-left: 0;
-    padding-right: 0;
-  }
-}
-
 // TODO: remove .campus selector after merging in latest from develop branch. this was modified in CL issue 20
-// override base styles for anchor tags
-.ucla.campus a.tile__link {
-  &:link {
-    background-color: rgba(0, 89, 140, 0.85); //must be rgba to set opacity for bg only
-    text-decoration: none;
-  }
+.ucla.campus {
+  // override base styles for anchor tags
+  a.tile__link {
+    &:link {
+      background-color: rgba(0, 89, 140, 0.85); //must be rgba to set opacity for bg only
+      text-decoration: none;
+    }
 
-  &:hover,
-  &:focus {
-    background-color: rgba(0, 121, 191, 0.85);
-  }
+    &:hover,
+    &:focus {
+      background-color: rgba(0, 121, 191, 0.85);
+    }
 
-  &:active {
-    background-color: rgba(0, 59, 92, 0.85);
+    &:active {
+      background-color: rgba(0, 59, 92, 0.85);
+    }
   }
 }
 // end base styles override
 
+@mixin setTileColumns($tile-columns) {
+  // section width determines the max number of tiles per row
+  $section-width: calc((#{$tile-width} + #{$tile-space-between}) * #{$tile-columns});
+
+  @media (min-width: breakpoint-min(md)) {
+    max-width: $section-width;
+  }
+}
+
+$tile-space-between: 18px;
+$tile-width: 276px;
+
 .tile {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (min-width: breakpoint-min(md)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &--col-1 {
+      @include setTileColumns(1);
+    }
+
+    &--col-2 {
+      @include setTileColumns(2);
+    }
+
+    &--col-3 {
+      @include setTileColumns(3);
+    }
+
+    &--col-4 {
+      @include setTileColumns(4);
+    }
+
+    &--centered {
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+
+  display: flex;
+  margin: 1% 0;
+
+  @media (min-width: breakpoint-min(md)) {
+    margin: 1% calc(#{$tile-space-between} / 2);
+  }
+
   // all descendents of tile should have white text color
   & * {
     color: $white;
@@ -39,59 +79,63 @@ ul {
   // basic tile background is solid blue
   &__background {
     background: $default-state;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
 
     @media (min-width: breakpoint-min(md)) {
-      $tile-width: 276px; // desired tile max-width
-
       max-width: $tile-width;
     }
 
     // add variations on the tile background with the background shorthand property
     &--royce {
-      background: $default-state url("/img/examples/tile-example.jpg") no-repeat center / cover;
+      background: $default-state url("../img/examples/tile-example-1.jpg") no-repeat center / cover;
+    }
+
+    &--students {
+      background: $default-state url("../img/examples/tile-example-2.jpg") no-repeat center / cover;
+    }
+
+    &--events {
+      background: $default-state url("../img/examples/tile-example-3.jpg") no-repeat center / cover;
     }
   }
 
   &__link {
-    $tile-height: 108px; // desired tile height
+    $tile-height: 108px; // desired tile height - mobile
     $tile-pt: 16px; // padding top
     $tile-px: 32px; // padding left and right
     $tile-pb: 16px; // padding bottom
 
     display: block;
     height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
-    margin: 0 auto;
     overflow: hidden;
     padding: $tile-pt $tile-px $tile-pb;
-    position: relative;
+    width: 100%;
 
     @media (min-width: breakpoint-min(md)) {
-      $tile-height: 184px;
+      $tile-height: 188px; // desired tile height - desktop
       $tile-pt: 32px;
-      $tile-pb: 60px;
+      $tile-pb: 64px;
 
       height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
       padding: $tile-pt $tile-px $tile-pb;
     }
 
-    // decorative yellow bar
+    // Gold Bar (required)
     &::before {
       background: $ucla-gold;
       content: "";
       display: block;
       height: 4px;
-      margin: 0 0 12px;
+      margin: 16px 0 12px;
       width: 40px;
 
       @media (min-width: breakpoint-min(md)) {
         margin: 0 0 28px;
       }
     }
+  }
 
-    &__title {
-      line-height: 30px;
-    }
+  &__title {
+    line-height: 30px;
   }
 }
