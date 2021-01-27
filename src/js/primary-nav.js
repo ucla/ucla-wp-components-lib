@@ -64,6 +64,13 @@ $(document).ready(function (){
     }, 100);
   });
 
+  //on mouse out of sublist reset
+  $('#nav-main .nav-primary__sublist').mouseout(function () {
+    $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
+  });
+
 
 
 
