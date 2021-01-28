@@ -30,7 +30,7 @@
     li {
       margin: 0;
       min-width: 100%;
-      border-bottom: 1px solid $grey-10;
+      border-bottom: 1px solid $medium-grey3;
 
       /* Style li(s) above 1024px */
       @media (min-width: breakpoint-min(lg)) {
@@ -91,6 +91,21 @@
   }
 
   &__item {
+    a {
+      &.current-page {
+        border-left: 4px solid $ucla-gold;
+        padding-left: 20px;
+      }
+    }
+
+    .nav-primary__sublist {
+      a {
+        &.current-page {
+          padding-left: 44px;
+        }
+      }
+    }
+
     @media (min-width: breakpoint-min(lg)) {
       padding-right: 10px;
 
@@ -116,15 +131,13 @@
         .nav-primary__item {
           padding-right: 0px;
 
-          @media (min-width: breakpoint-min(lg)) {
-            a {
-              &.current-page {
-                border-left: 4px solid $ucla-gold;
-                padding-left: 12px;
+          a {
+            &.current-page {
+              border-left: 4px solid $ucla-gold;
+              padding-left: 12px;
 
-                &::before {
-                  display: none;
-                }
+              &::before {
+                display: none;
               }
             }
           }
@@ -202,6 +215,8 @@
       }
 
       &:first-child {
+        border-top: 1px solid $medium-grey3;
+
         @media (min-width: breakpoint-min(lg)) {
           border-top: 1px solid $grey-10;
         }
@@ -218,6 +233,11 @@
 
     .nav-primary__link {
       padding: 14px 24px 14px 48px;
+      background-color: $lightest-grey-2;
+
+      @media (min-width: breakpoint-min(lg)) {
+        background-color: $white;
+      }
     }
   }
 
@@ -294,7 +314,7 @@
   a {
     color: $default-state;
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.333rem;
     text-decoration: none;
     background: $white;
@@ -302,6 +322,7 @@
 
     @media (min-width: breakpoint-min(lg)) {
       padding: 8px 16px 16px;
+      font-size: 1.125rem;
     }
   }
 }
