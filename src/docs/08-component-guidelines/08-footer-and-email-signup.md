@@ -41,7 +41,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 ### **Code**
 
 ```
-{{view '@footer--department'}}
+{{view '@footer-and-email-signup--department'}}
 ```
 
 ## **Global Footer**
@@ -66,7 +66,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 ### **Code**
 
 ```
-{{view '@footer--global'}}
+{{view '@footer-and-email-signup--global'}}
 ```
 
 ## **Email Signup**
@@ -90,5 +90,5 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 ### **Code**
 
 ```
-{{view '@footer--email'}}
+{{view '@footer-and-email-signup--email'}}
 ```
