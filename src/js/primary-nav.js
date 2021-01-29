@@ -133,24 +133,4 @@ $(document).ready(function (){
 
   }
 
-  /* ---------------- add mobile tabbing controls -------------- */
-  /*function addMobileTabs () {
-
-    //keypress focus
-    $(document).keydown(function (e) {
-
-      let keyCode = e.keyCode || e.which;
-
-      //tab key was pressed
-      if (keyCode === 9) {
-      }
-
-      //enter was pressed
-      if (keyCode === 13) {
-      }
-
-    });
-
-  }*/
-
 });

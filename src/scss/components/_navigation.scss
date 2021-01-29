@@ -2,6 +2,8 @@
     Primary Main navigation
   ------------------------------------*/
 .nav-primary {
+  position: relative;
+
   /* The main list of navigation links. */
   &__list {
     margin: 0;
@@ -323,6 +325,111 @@
     @media (min-width: breakpoint-min(lg)) {
       padding: 8px 16px 16px;
       font-size: 1.125rem;
+    }
+  }
+
+  /* Search Desktop */
+  .search-desktop {
+    display: none;
+
+    @media (min-width: breakpoint-min(lg)) {
+      display: inline-block;
+      height: 44px;
+      width: 56px;
+      position: relative;
+      top: -1px;
+    }
+
+    #search-button {
+      display: none;
+
+      &:hover {
+        background: #0079BF;
+        cursor: pointer;
+
+        svg {
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        display: block;
+        height: 44px;
+        width: 56px;
+        background: #FFFFFF;
+        -webkit-appearance: none;
+        border: 0;
+      }
+    }
+
+    #block-search {
+      @media (min-width: breakpoint-min(lg)) {
+        display: none;
+        background: #FFFFFF;
+        padding: 17px 32px 15px 32px;
+        border: 1px solid #CCCCCC;
+
+        &.is-active {
+          display: block;
+          position: absolute;
+        }
+      }
+
+      .search-form {
+        display: block;
+        position: relative;
+
+        &::before {
+          display: block;
+          content: ' ';
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          background-image: url(/img/icons/search-grey60.svg);
+          background-position: center;
+          background-size: contain;
+          margin: 12px;
+          background-size: cover;
+          z-index: 2;
+        }
+
+        label {
+          width: 100%;
+          display: block;
+          position: inherit;
+
+          @media (min-width: breakpoint-min(lg)) {
+            display: inline-block;
+            width: 91%;
+            margin: 0;
+            border: 1px solid #333;
+          }
+
+          input {
+            width: 100%;
+            padding: 11px 12px 11px 38px;
+            background: #EBEBEB;
+            border: 0;
+            -webkit-appearance: none;
+          }
+        }
+
+        .search-submit {
+          display: none;
+
+          @media (min-width: breakpoint-min(lg)) {
+            display: inline-block;
+            width: 8%;
+            padding: 12px !important;
+            -webkit-appearance: none;
+            background: #00598C;
+            color: #FFFFFF;
+            border: 0px;
+            border-radius: 0 2px 2px 0;
+            margin-left: -5px;
+          }
+        }
+      }
     }
   }
 }
