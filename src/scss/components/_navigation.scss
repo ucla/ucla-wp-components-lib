@@ -352,6 +352,14 @@
         }
       }
 
+      &.is-active {
+        background: #0079BF;
+
+        svg {
+          filter: brightness(0) invert(1);
+        }
+      }
+
       @media (min-width: breakpoint-min(lg)) {
         display: block;
         height: 44px;
