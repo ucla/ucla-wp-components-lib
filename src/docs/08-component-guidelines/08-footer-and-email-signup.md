@@ -40,7 +40,9 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Code**
 
-<!--Department Footer code here, if applicable-->
+```
+{{view '@footer--department'}}
+```
 
 ## **Global Footer**
 
@@ -63,7 +65,9 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 
 ### **Code**
 
-<!--Global Footer code here, if applicable-->
+```
+{{view '@footer--global'}}
+```
 
 ## **Email Signup**
 
@@ -84,4 +88,7 @@ Treat the footer as your toolbox. You don't need to include lots of links, but t
 <img class="doc-images" alt="Email Signup Specs Image" title="Email Signup Specs Image" src="/build/docs/img/Footer/Email_Footer/emailsignup-specs.jpg"/>
 
 ### **Code**
-<!--Email Signup code here, if applicable-->
+
+```
+{{view '@footer--email'}}
+```

@@ -1,0 +1,611 @@
+.footer {
+  &__dept, &__global {
+    padding: 40px 18px;
+
+    @media only screen and (min-width: breakpoint-min(sm)) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media only screen and (min-width: breakpoint-min(md)) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media only screen and (min-width: breakpoint-min(lrg)) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  // "Department Footer" - See top blue footer
+
+  &__dept {
+    background: $ucla-blue;
+    color: $white;
+    font-weight: bold;
+
+    &--logo {
+      display: block;
+      height: auto;
+      margin-bottom: 32px;
+
+      @media only screen and (min-width: breakpoint-min(xs)) {
+        max-width: 50%;
+      }
+
+      @media only screen and (min-width: breakpoint-min(md)) {
+        max-width: 25%;
+      }
+
+      @media only screen and (min-width: breakpoint-min(xl)) {
+        max-width: 18%;
+      }
+    }
+
+    &--info, &--links {
+      display: block;
+
+      @media only screen and (min-width: 1064px) {
+        display: inline-block;
+      }
+    }
+
+    &--links {
+      vertical-align: top;
+      width: 70%;
+
+      @media only screen and (min-width: 1075px) {
+        float: right;
+      }
+
+      @media only screen and (max-width: 1069px) {
+        width: 74%;
+      }
+
+      // reset default margin, padding and bullet styles
+      ul {
+        margin-top: 0;
+        margin-right: 24px;
+        padding-left: 0;
+        vertical-align: top;
+        width: 15%;
+
+        @media only screen and (min-width: 1064px) {
+          display: inline-block;
+        }
+
+        & li {
+          margin-bottom: 2px;
+          font-size: 16px;
+
+          & a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+              background: $hover-state-dark;
+            }
+
+            &:focus {
+              outline: 1px dotted $white;
+            }
+
+            &:active {
+              background: $active-state-dark;
+            }
+          }
+
+          &:not(:first-child) {
+            font-size: 12px;
+          }
+
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    &--info {
+      margin-right: 24px;
+    }
+
+    &--contact {
+      margin-bottom: 12px;
+
+      p {
+        color: $white;
+        font-size: 14px;
+      }
+      // Spacing between address and phone number
+      & p:nth-child(2) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--social {
+      height: 24px;
+      max-height: 100%;
+      margin-bottom: 12px;
+
+      @media only screen and (min-width: breakpoint-min(md)) {
+        margin-bottom: 12px;
+      }
+
+      & a {
+        margin-right: 4px;
+
+        &:focus {
+          outline: 1px dotted $white;
+        }
+      }
+
+      &-facebook {
+        background: url("/img/icons/social-icons/facebook-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/facebook-black.svg");
+        }
+      }
+
+      &-twitter {
+        background: url("/img/icons/social-icons/twitter-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/twitter-black.svg");
+        }
+      }
+
+      &-instagram {
+        background: url("/img/icons/social-icons/instagram-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/instagram-black.svg");
+        }
+      }
+
+      &-snapchat {
+        background: url("/img/icons/social-icons/snapchat-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/snapchat-black.svg");
+        }
+      }
+
+      &-linkedin {
+        background: url("/img/icons/social-icons/linkedin-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/linkedin-black.svg");
+        }
+      }
+
+      &-youtube {
+        background: url("/img/icons/social-icons/youtube-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/youtube-black.svg");
+        }
+      }
+
+      &-tiktok {
+        background: url("/img/icons/social-icons/tiktok-white.svg");
+
+        &:hover {
+          background: $hover-state-dark url("/img/icons/social-icons/tiktok-black.svg");
+        }
+      }
+
+      &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
+        max-height: 100%;
+        width: 24px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-size: 24px;
+        }
+
+        &:active {
+          background-color: $active-state-dark;
+        }
+      }
+    }
+  }
+
+  // "Global" Footer Styles - See bottom white footer
+
+  &__global {
+    &--copyright, &--links, &--social {
+      width: 100%;
+      display: block;
+      vertical-align: top;
+      font-size: 12.8px;
+      width: 100%;
+
+      @media only screen and (min-width: 1156px) {
+        width: 33%;
+      }
+
+      @media only screen and (min-width: 1075px) {
+        display: inline-block;
+      }
+    }
+
+    &--copyright, &--links {
+      margin-bottom: 12px;
+
+      @media only screen and (min-width: 1156px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &--links {
+      ul {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
+
+        & li {
+          margin-bottom: 0;
+          display: block;
+
+          &::before {
+            content: none;
+          }
+
+          &:nth-child(2) {
+            margin: 0;
+
+            @media only screen and (min-width: 1156px) {
+              margin-left: 32px;
+              margin-right: 32px;
+            }
+          }
+
+          & a {
+            font-weight: bold;
+            text-decoration: none;
+            color: $default-state;
+
+            &:hover {
+              background: $hover-state;
+              color: $white;
+            }
+
+            &:active {
+              background: $active-state;
+            }
+
+            &:focus {
+              outline: 1px dotted $hover-state;
+            }
+          }
+
+          @media only screen and (min-width: 1156px) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &--social {
+      margin-top: -5px;
+      text-align: left;
+
+      @media only screen and (min-width: 1156px) {
+        float: right;
+        text-align: right;
+      }
+
+      a, svg {
+        vertical-align: top;
+        max-height: 40px;
+      }
+
+      a:focus {
+        outline: 1px dotted $hover-state;
+      }
+
+      &-facebook {
+        background: url("/img/icons/social-icons/facebook-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/facebook-white.svg");
+        }
+      }
+
+      &-twitter {
+        background: url("/img/icons/social-icons/twitter-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/twitter-white.svg");
+        }
+      }
+
+      &-instagram {
+        background: url("/img/icons/social-icons/instagram-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/instagram-white.svg");
+        }
+      }
+
+      &-snapchat {
+        background: url("/img/icons/social-icons/snapchat-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/snapchat-white.svg");
+        }
+      }
+
+      &-linkedin {
+        background: url("/img/icons/social-icons/linkedin-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/linkedin-white.svg");
+        }
+      }
+
+      &-youtube {
+        background: url("/img/icons/social-icons/youtube-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/youtube-white.svg");
+        }
+      }
+
+      &-tiktok {
+        background: url("/img/icons/social-icons/tiktok-color.svg");
+
+        &:hover {
+          background: $hover-state url("/img/icons/social-icons/tiktok-white.svg");
+        }
+      }
+
+      &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
+        max-height: 100%;
+        width: 40px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-size: 40px;
+          background-repeat: no-repeat;
+        }
+
+        &:active {
+          background-color: $active-state;
+        }
+      }
+    }
+  }
+}
+
+// "Email Signup"
+
+.email {
+  background: $darker-blue;
+  padding: 40px 18px;
+
+  @media only screen and (min-width: breakpoint-min(sm)) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media only screen and (min-width: breakpoint-min(md)) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media only screen and (min-width: breakpoint-min(lrg)) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__heading, &__description, &__form, &__legal-text, &__legal-link, &__legal-link:visited, &__legal-link:link {
+    color: $white;
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    display: block;
+    padding: 0px;
+    margin-bottom: 22px;
+    vertical-align: top;
+
+    @media (min-width: breakpoint-min(lg)) {
+      display: table-cell;
+      padding: 0 12px;
+      margin-bottom: 0;
+    }
+
+    &-text {
+      box-sizing: border-box;
+      padding: 12px 30px 12px 12px;
+      width: 100%;
+      height: 48px;
+      border: none;
+      font-size: 1rem;
+      background-color: $darkest-blue;
+      opacity: 1;
+      border-radius: 2px;
+      color: $white;
+      margin-top: 6px;
+
+      &::placeholder {
+        color: $medium-grey3;
+      }
+
+      &:focus {
+        outline: 1px dotted $white;
+        outline-offset: -3px;
+      }
+
+      &.checked {
+        background-image: url('/img/Success.svg') !important;
+        background-repeat: no-repeat;
+        background-size: auto !important;
+        background-position: 96% 51%;
+
+        @media (min-width: breakpoint-min(md)) {
+          background-position: 98% 50%;
+        }
+      }
+
+      &.error {
+        background-image: url('/img/Error.svg') !important;
+        background-repeat: no-repeat;
+        background-size: auto !important;
+        background-position: 98% 50%;
+        border: 2px solid $ucla-gold;
+      }
+    }
+
+    &-submit {
+      background-color: $ucla-gold;
+      height: 48px;
+      border: none;
+      border-radius: 2px;
+      color: $grey-80;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      width: 100%;
+      margin-top: 6px;
+      position: relative;
+      top: 0px;
+      max-width: 120px;
+
+      @media (min-width: breakpoint-min(lg)) {
+        margin-top: 0px;
+        top: 23px;
+        max-width: none;
+      }
+
+      &:hover {
+        @include fix-mobile-button-color-hover($ucla-gold, $button-hover);
+      }
+
+      &:active {
+        background-color: $button-active;
+      }
+
+      &:focus {
+        background-color: $button-hover;
+      }
+    }
+
+    &-container {
+      display: block;
+      padding: 0;
+      width: 100%;
+      margin-bottom: 24px;
+
+      @media (min-width: breakpoint-min(lg)) {
+        display: table;
+      }
+    }
+
+    &-label {
+      font-weight: bold;
+      display: block;
+    }
+
+    &-email {
+      width: auto;
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 28.32%;
+        padding-left: 0;
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        input[type="text"] {
+          max-width: 520px;
+        }
+      }
+    }
+
+    &-firstname {
+      width: auto;
+
+      @media (min-width: breakpoint-min(md)) {
+        width: 256px;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 23.89%;
+        display: table-cell;
+      }
+    }
+
+    &-lastname {
+      width: auto;
+
+      @media (min-width: breakpoint-min(md)) {
+        width: 256px;
+        display: inline-block;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 24.34%;
+        display: table-cell;
+      }
+    }
+
+    &-zipcode {
+      width: auto;
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 12.04%;
+      }
+
+      input[name="Zip"] {
+        max-width: 120px;
+        clear: both;
+      }
+    }
+
+    &-button {
+      width: auto;
+      padding-right: 0;
+      position: relative;
+      margin-bottom: 8px;
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 11.53%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__legal-text {
+    font-size: 0.8rem;
+    line-height: 18px;
+  }
+
+  &__legal-link {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
