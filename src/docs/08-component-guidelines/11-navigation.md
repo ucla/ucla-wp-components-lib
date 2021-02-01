@@ -93,6 +93,10 @@
 
 ### **Code**
 
+```
+{{view '@primary-navigation'}}
+```
+
 <!--Headers and Main Menus code here, if applicable-->
 
 ## **Breadcrumbs**

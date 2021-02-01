@@ -41,6 +41,8 @@ $(document).ready(function (){
 
     let secondLevelNav = $('li.has-child > ul');
 
+    desktopSubmenuResize ();
+
     if ($(this).hasClass('is-active')) {
       $('.search-block-form').removeClass('is-active');
       $(this).removeClass('is-active');
@@ -64,6 +66,21 @@ $(document).ready(function (){
 
     }
   });
+
+  /* Select the size on load or reset the size of the submenu for dekstop only. Resize the submenu when
+  ================================================================= */
+  function desktopSubmenuResize () {
+    let w = $('.nav-primary').width() - 70,
+      negOffset = (w + 10) * -1;
+
+    //Add the width off the header wrap to the search dropdown
+    $('.search-block-form').css({ // <a class="has-child--link">
+      'width': w,
+      'margin-left': negOffset
+    });
+    console.log(w); // For Debuggin' Only
+    console.log('reached');
+  }
 
 
 
