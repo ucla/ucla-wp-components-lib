@@ -1,5 +1,14 @@
 <nav id="nav-main" class="nav-primary " aria-label="Main Menu">
   <ul class="nav-primary__list">
+  	<li>
+  	  <form role="search" method="get" class="search-form" action="https://covid-19.ucla.edu/" id="menu-search">
+		<label>
+		  <span class="screen-reader-text visuallyhidden">Search for:</span>
+		  <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+		</label>
+		<input type="submit" class="search-submit" value="Search">
+	  </form>
+  	</li>
     <li class="nav-primary__item nav-primary__link--has-children">
       <a class="nav-primary__link current-page" href="#">Nav Item</a>
       <button class="nav-primary__toggle" aria-label="toggle"></button>
@@ -83,7 +92,7 @@
 
         <div class="search-block-form search-mobile" data-drupal-selector="search-block-form" id="block-search" role="search" style="width: 873px; margin-left: -882px;">
 
-          <form role="search" method="get" class="search-form" action="https://covid-19.ucla.edu/" id="menu-search">
+          <form role="search" method="get" class="search-form" action="#" id="menu-search">
             <label>
 	          <span class="screen-reader-text visuallyhidden">Search for:</span>
 		      <input type="search" class="search-field" placeholder="Search …" value="" name="s">
