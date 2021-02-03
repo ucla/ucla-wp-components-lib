@@ -22,14 +22,14 @@ title: Tiles
 * The tiles will be left-aligned by default. To center align, use the modifier class `tile__section--centered` at the same level as `tile__section`.
 
 #### Tile
-* A tile's background will be solid blue by default and should be used on light backgrounds. For background image variations, add a background modifier class to the stylesheet and at the same level as the `tile__background` class. Some examples of modifier classes include `tile__background--royce`, `tile__background--students` and `tile__background--events`.
+* A tile's background will be solid blue by default and should be used on light backgrounds. For background image variations, add a background modifier class to the stylesheet and at the same level as the `tile__background` class.
+    * Some examples of modifier classes include: `tile__background--royce`, `tile__background--students` and `tile__background--events`.
 
 ### **Accessibility Requirements**
 
 * Link the tile's headline, heading or title to provide the most succinct description to screen readers and search engines. Both technologies use links to understand and navigate document structure.
 * Avoid using generic headlines like "read more" or "view details".
-* Write [alt text](https://webaim.org/techniques/alttext/) for any background images you include.
-* For tiles with background images set, place the alt text in the aria-label attribute.
+* For tiles with background images set, write [alternative text](https://webaim.org/techniques/alttext/) and place it in the `aria-label` attribute.
 * Only use one link per tile.
 * Avoid using multiple tiles in a row that direct to the same link destination.
 * Avoid relying on the background image to convey important information. The user should be able to have the same experience with or without the image.
