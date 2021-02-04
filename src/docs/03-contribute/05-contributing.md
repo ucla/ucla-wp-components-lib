@@ -31,7 +31,7 @@ Create a new issue that you have found or see which issues currently need to be 
 
 **Step Two**
 
-We require UCLA Campus members to branch from the [campus](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/) branch on the repository. Please select if you are fixing a bug or creating a new feature that you would like to reviewed. We ask that you prefix your branch name with "CL-".
+We require UCLA Campus members to branch from the [campus](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/) branch on the repository. Please select if you are fixing a bug or creating a new feature that you would like to reviewed. We ask that you prefix your branch name with `"CL-"`.
 
 For a full understanding of the branches on this repository please see the root level readme file. For a more in depth look at branching on Bitbucket please see the [Bitbucket support page](https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/).
 
