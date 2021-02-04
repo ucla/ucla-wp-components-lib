@@ -22,6 +22,7 @@ Our goal is to provide flexible resources and tools for any person or team who c
 - [Get Local Environment Setup](./docs/contributors/getSetup.md)
 - [Learn How To Contribute](./docs/contributors/howToContribute.md)
 - [Project Directory Hierarchy](./docs/contributors/projectHierarchy.md)
+- [Getting Started with Fractal](https://fractal.build/guide/getting-started.html)
 
 #### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
 - Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
