@@ -29,8 +29,7 @@ TABLE OF CONTENTS:
   .stat-tout {
     display: block;
     border-left: 4px solid $ucla-gold;
-    padding: 6px 0 16px 32px;
-    margin: 24px 24px 0;
+    padding: 16px 24px 16px 28px;
 
     @media (min-width: breakpoint-min(md)) {
       display: inline-block;
@@ -40,10 +39,11 @@ TABLE OF CONTENTS:
     // e.g. #9, $1 billion, 45%
     &__number {
       font-size: 54px;
-      line-height: 4rem;
-      color: $grey-80;
+      line-height: 48px;
+      color: $medium-grey5;
       font-weight: bold;
       display: block;
+      margin-bottom: 8px;
 
       // Target spans wrapping "out of"
       // For multiple variable stat touts
@@ -55,13 +55,14 @@ TABLE OF CONTENTS:
     }
 
     // "Descriptor text" appears on the right of a stat tout
-    // This gives context to value tect
+    // This gives context to value text, or stand-alone as a word-only factoid
     &__label {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 24px;
       font-weight: bold;
       display: block;
       max-width: 212px;
+      color: $medium-grey5;
 
       @media (min-width: breakpoint-min(md)) {
         max-width: 312px;
@@ -92,11 +93,15 @@ TABLE OF CONTENTS:
 
         .stat-tout__number {
           margin-right: 16px;
+          margin-bottom: 8px;
+
+          @media (min-width: breakpoint-min(lg)) {
+            margin-bottom: 0;
+          }
         }
 
         .stat-tout__label {
           display: block;
-          margin-top: 20px;
           max-width: inherit;
         }
       }
