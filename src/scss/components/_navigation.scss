@@ -410,20 +410,12 @@
       top: -1px;
     }
 
-    #search-button {
+    .nav-primary__search-desktop-button {
       display: none;
 
       &:hover {
         background: #0079BF;
         cursor: pointer;
-
-        svg {
-          filter: brightness(0) invert(1);
-        }
-      }
-
-      &.is-active {
-        background: #0079BF;
 
         svg {
           filter: brightness(0) invert(1);
@@ -437,17 +429,25 @@
         background: #FFFFFF;
         -webkit-appearance: none;
         border: 0;
+
+        &--is-active {
+          background: #0079BF;
+
+          svg {
+            filter: brightness(0) invert(1);
+          }
+        }
       }
     }
 
-    #block-search {
+    .nav-primary__search-block-form {
       @media (min-width: breakpoint-min(lg)) {
         display: none;
         background: #FFFFFF;
         padding: 17px 32px 15px 32px;
         border: 1px solid #CCCCCC;
 
-        &.is-active {
+        &--is-active {
           display: block;
           position: absolute;
         }
