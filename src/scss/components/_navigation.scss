@@ -47,7 +47,7 @@
         border-bottom: 0;
 
         &:hover {
-          /* Keep top level item hover state when inside child elements */
+          /* Keep top level item hover state when inside child elesearch-iconts */
           & > .nav-primary__link {
             background: $hover-state;
             color: $white;
@@ -333,8 +333,8 @@
   }
 
   /* Search Form */
-  .search-mobile, .search-desktop {
-    .search-form {
+  &__search-mobile, &__search-desktop {
+    .nav-primary__search-form {
       display: block;
       position: relative;
 
@@ -373,7 +373,7 @@
         }
       }
 
-      .search-submit {
+      .nav-primary__search-submit {
         display: none;
 
         @media (min-width: breakpoint-min(lg)) {
@@ -392,14 +392,14 @@
   }
 
   /* Search Mobile */
-  .search-mobile {
+  &__search-mobile {
     @media (min-width: breakpoint-min(lg)) {
       display: none;
     }
   }
 
   /* Search Desktop */
-  .search-desktop {
+  &__search-desktop {
     display: none;
 
     @media (min-width: breakpoint-min(lg)) {
