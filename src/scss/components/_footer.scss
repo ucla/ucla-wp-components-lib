@@ -1,20 +1,9 @@
 .footer {
   &__dept, &__global {
-    padding: 40px 18px;
-
-    @media only screen and (min-width: breakpoint-min(sm)) {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
+    padding: 32px 24px;
 
     @media only screen and (min-width: breakpoint-min(md)) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-
-    @media only screen and (min-width: breakpoint-min(lrg)) {
-      padding-left: 40px;
-      padding-right: 40px;
+      padding: 40px;
     }
   }
 
@@ -53,14 +42,11 @@
 
     &--links {
       vertical-align: top;
-      width: 70%;
 
-      @media only screen and (min-width: 1075px) {
-        float: right;
-      }
-
-      @media only screen and (max-width: 1069px) {
-        width: 74%;
+      &-wrapper {
+        @media only screen and (min-width: breakpoint-min(md)) {
+          display: inline-block;
+        }
       }
 
       // reset default margin, padding and bullet styles
@@ -69,15 +55,12 @@
         margin-right: 24px;
         padding-left: 0;
         vertical-align: top;
-        width: 15%;
-
-        @media only screen and (min-width: 1064px) {
-          display: inline-block;
-        }
+        width: auto;
+        display: inline-block;
 
         & li {
           margin-bottom: 2px;
-          font-size: 16px;
+          font-size: 1rem;
 
           & a {
             color: $white;
@@ -85,6 +68,7 @@
 
             &:hover {
               background: $hover-state-dark;
+              color: $black;
             }
 
             &:focus {
@@ -97,7 +81,7 @@
           }
 
           &:not(:first-child) {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
 
           &::before {
@@ -109,6 +93,10 @@
 
     &--info {
       margin-right: 24px;
+
+      @media only screen and (min-width: breakpoint-min(lrg)) {
+        max-width: 25%;
+      }
     }
 
     &--contact {
@@ -118,8 +106,30 @@
         color: $white;
         font-size: 14px;
       }
+
+      a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+          background: $hover-state-dark;
+          color: $black;
+        }
+
+        &:focus {
+          outline: 1px dotted $white;
+        }
+
+        &:active {
+          background: $active-state-dark;
+        }
+      }
       // Spacing between address and phone number
       & p:nth-child(2) {
+        margin-bottom: 14px;
+      }
+
+      @media only screen and (min-width: breakpoint-mid(md)) {
         margin-bottom: 12px;
       }
     }
@@ -127,10 +137,11 @@
     &--social {
       height: 24px;
       max-height: 100%;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
 
       @media only screen and (min-width: breakpoint-min(md)) {
-        margin-bottom: 12px;
+        margin-bottom: 14px;
+        height: 32px;
       }
 
       & a {
@@ -138,6 +149,7 @@
 
         &:focus {
           outline: 1px dotted $white;
+          border-radius: 2px;
         }
       }
 
@@ -202,6 +214,7 @@
         width: 24px;
         background-size: 24px;
         background-repeat: no-repeat;
+        border-radius: 2px;
 
         &:hover {
           background-size: 24px;
@@ -210,6 +223,15 @@
         &:active {
           background-color: $active-state-dark;
         }
+
+        @media only screen and (min-width: breakpoint-min(md)) {
+          width: 32px;
+          background-size: 32px;
+
+          &:hover {
+            background-size: 32px;
+          }
+        }
       }
     }
   }
@@ -217,6 +239,13 @@
   // "Global" Footer Styles - See bottom white footer
 
   &__global {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 1157px) {
+      display: block;
+    }
+
     &--copyright, &--links, &--social {
       width: 100%;
       display: block;
@@ -224,21 +253,24 @@
       font-size: 12.8px;
       width: 100%;
 
-      @media only screen and (min-width: 1156px) {
+      @media only screen and (min-width: 1175px) {
         width: 33%;
-      }
-
-      @media only screen and (min-width: 1075px) {
         display: inline-block;
       }
     }
 
-    &--copyright, &--links {
-      margin-bottom: 12px;
+    &--copyright {
+      order: 2;
+      line-height: 24px;
 
-      @media only screen and (min-width: 1156px) {
-        margin-bottom: 0;
+      @media only screen and (max-width: 1175px) {
+        margin-bottom: 24px;
+        line-height: 18px;
       }
+    }
+
+    &--links {
+      order: 3;
     }
 
     &--links {
@@ -293,10 +325,16 @@
     &--social {
       margin-top: -5px;
       text-align: left;
+      order: 1;
 
-      @media only screen and (min-width: 1156px) {
+      @media only screen and (min-width: 1175px) {
         float: right;
         text-align: right;
+      }
+
+      @media only screen and (max-width: 1174px) {
+        margin-top: 0;
+        margin-bottom: 24px;
       }
 
       a, svg {
@@ -369,6 +407,7 @@
         width: 40px;
         background-size: 40px;
         background-repeat: no-repeat;
+        border-radius: 2px;
 
         &:hover {
           background-size: 40px;
@@ -387,21 +426,10 @@
 
 .email {
   background: $darker-blue;
-  padding: 40px 18px;
-
-  @media only screen and (min-width: breakpoint-min(sm)) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+  padding: 32px 24px;
 
   @media only screen and (min-width: breakpoint-min(md)) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media only screen and (min-width: breakpoint-min(lrg)) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px;
   }
 
   &__heading, &__description, &__form, &__legal-text, &__legal-link, &__legal-link:visited, &__legal-link:link {
@@ -497,16 +525,14 @@
         max-width: none;
       }
 
-      &:hover {
-        @include fix-mobile-button-color-hover($ucla-gold, $button-hover);
-      }
-
       &:active {
         background-color: $button-active;
       }
 
       &:focus {
         background-color: $button-hover;
+        outline: 1px dotted $white;
+        outline-offset: 1px;
       }
     }
 
@@ -605,7 +631,16 @@
     text-decoration: underline;
 
     &:hover {
-      text-decoration: none;
+      background: $hover-state-dark;
+      color: $black;
+    }
+
+    &:focus {
+      outline: 1px dotted $white;
+    }
+
+    &:active {
+      background: $active-state-dark;
     }
   }
 }
