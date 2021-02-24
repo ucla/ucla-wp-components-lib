@@ -4,13 +4,13 @@ Documentation includes usage of Markdown files. Click here to see [more on Githu
 
 ```
 /
-├─ build # Static Website Output
+├─ docs # Development-specific documentation that appears on Bitbucket
 ├─ public # Library Styles
 └─ src/ # Source Code
    ├─ components/    # Components Code
    │    ├─ xx-components/  # contains markdown files that renders the component views
    │    ├─ img/  # contains icon images
-   ├─ docs/      # Documentation Code
+   ├─ docs/      # Documentation Code that appears on website
    │  ├─ xx-documentation/  # contains markdown files that renders the documentation
    │  ├─ img/ # contains images used for documentations (i.e spec and states images)
    │  ├─ js/  # JS scripts for documentation
@@ -21,4 +21,6 @@ Documentation includes usage of Markdown files. Click here to see [more on Githu
       └─ utilities/ # Utilities stylesheets
 ```
 
- - [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)
+---
+
+:arrow_left: [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)

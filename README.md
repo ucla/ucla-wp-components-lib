@@ -1,4 +1,4 @@
-# UCLA Web Components Library
+# :school_satchel: :nut_and_bolt: UCLA Web Components Library
 
 Welcome to the UCLA Web Component Library.
 
@@ -12,17 +12,23 @@ Our goal is to provide flexible resources and tools for any person or team who c
 
 **Maintained By:** Strategic Communications
 
-### For Consumers
+---
+
+### :pencil: For Consumers
 - [How To Navigate the Website](./docs/consumers/navigatingSite.md)
 - [Component Design, Code Documentation and Example Usage (Website)](https://webcomponents.ucla.edu/)
 - [How To Include Library in Your Web Project (Website)](https://webcomponents.ucla.edu/build/1.0.0-beta.7/docs/installation/download.html)
 - [Components Status](./docs/consumers/componentStatus.md)
 
-### For Development Contributors
+---
+
+### :computer: For Development Contributors
 - [Get Local Environment Setup](./docs/contributors/getSetup.md)
 - [Learn How To Contribute](./docs/contributors/howToContribute.md)
 - [Project Directory Hierarchy](./docs/contributors/projectHierarchy.md)
 - [Getting Started with Fractal](https://fractal.build/guide/getting-started.html)
+
+---
 
 #### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
 - Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
