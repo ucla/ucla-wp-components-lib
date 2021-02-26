@@ -185,4 +185,23 @@ $(document).ready(function (){
 
   }
 
+
+
+
+
+  /*-------------------------------------------------------------------------------------
+    HAMBURGER FUNCTIONALITY
+  -------------------------------------------------------------------------------------*/
+  let $hamburgerBtn = $('.hamburger');
+
+  $hamburgerBtn.bind('click', function () {
+
+    //if not active add class active
+    if (!$(this).hasClass('hamburger--is-active')) {
+      $(this).addClass('hamburger--is-active');
+    } else {
+      $(this).removeClass('hamburger--is-active');
+    }
+  });
+
 });
