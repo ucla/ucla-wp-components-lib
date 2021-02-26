@@ -27,6 +27,8 @@ $(document).ready(function (){
     if (windowWidth >= breakpoint) {
       $sublistItem.addClass('nav-primary__sublist--hidden');
       $toggle.removeClass('is-open');
+      $('.hamburger').removeClass('hamburger--is-active');
+      $('.nav-primary').removeClass('nav-primary--is-active');
     }
   }
 
@@ -78,8 +80,6 @@ $(document).ready(function (){
       'width': w,
       'margin-left': negOffset
     });
-    console.log(w); // For Debuggin' Only
-    console.log('reached');
   }
 
 
@@ -193,14 +193,19 @@ $(document).ready(function (){
     HAMBURGER FUNCTIONALITY
   -------------------------------------------------------------------------------------*/
   let $hamburgerBtn = $('.hamburger');
+  let $primaryNav = $('.nav-primary');
 
   $hamburgerBtn.bind('click', function () {
 
     //if not active add class active
     if (!$(this).hasClass('hamburger--is-active')) {
+
       $(this).addClass('hamburger--is-active');
+      $primaryNav.addClass('nav-primary--is-active');
     } else {
+
       $(this).removeClass('hamburger--is-active');
+      $primaryNav.removeClass('nav-primary--is-active');
     }
   });
 
