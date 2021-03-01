@@ -11,6 +11,7 @@
 * Prioritize the needs of site users over internal stakeholders. Navigation is for site users, not your Dean or Vice Chancellor.
 * Help people find what they need rather than promoting things they don't.
 * If you need to highlight things like a widely publicized report or conference, do so within the body of your website. Navigation links are intended for evergreen content.
+* Adding the class `nav-primary__link--current-page` to `nav-primary__link` anchor tag will create the yellow border to the item.
 
 **Further Reading**
 
