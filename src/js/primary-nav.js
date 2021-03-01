@@ -29,6 +29,9 @@ $(document).ready(function (){
       $toggle.removeClass('is-open');
       $('.hamburger').removeClass('hamburger--is-active');
       $('.nav-primary').removeClass('nav-primary--is-active');
+      enableMenuTab();
+    } else {
+      disableMenuTab ();
     }
   }
 
@@ -129,8 +132,8 @@ $(document).ready(function (){
 
   /* ---------- Reset all the tabbing and styles ---------- */
   function resetTabs () {
-    $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
-    $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
+    //$('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
+    //$('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $(document).unbind('keydown');
   }
@@ -202,11 +205,28 @@ $(document).ready(function (){
 
       $(this).addClass('hamburger--is-active');
       $primaryNav.addClass('nav-primary--is-active');
+      enableMenuTab();
+
     } else {
 
       $(this).removeClass('hamburger--is-active');
       $primaryNav.removeClass('nav-primary--is-active');
+      disableMenuTab();
     }
   });
+
+  //disable tabbing for the mobile menu
+  function disableMenuTab () {
+    $('.nav-primary__link').attr('tabindex', '-1');
+    $('.nav-primary__toggle').attr('tabindex', '-1');
+    $('.nav-primary__search-field').attr('tabindex', '-1');
+  }
+
+  //enable the tabbing for the mobile menu
+  function enableMenuTab () {
+    $('.nav-primary__link').attr('tabindex', '0');
+    $('.nav-primary__toggle').attr('tabindex', '0');
+    $('.nav-primary__search-field').attr('tabindex', '0');
+  }
 
 });
