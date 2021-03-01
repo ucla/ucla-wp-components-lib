@@ -31,9 +31,9 @@ Create a new issue that you have found or see which issues currently need to be 
 
 **Step Two**
 
-We require UCLA Campus members to branch from the ["campus"](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/) branch on the repository. Please select if you are fixing a bug or creating a new feature that you would like to reviewed. We ask that you prefix your branch name with "CL-".
+We require UCLA Campus members to branch from the [campus](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/) branch on the repository. Please select if you are fixing a bug or creating a new feature that you would like to reviewed. We ask that you prefix your branch name with `"CL-"`.
 
-For a full understanding of the branches on this repository please see the root level readme file. For a more in depth look at branching on Bitbucket please see the [bitbucket support page](https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/).
+For a full understanding of the branches on this repository please see the root level readme file. For a more in depth look at branching on Bitbucket please see the [Bitbucket support page](https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/).
 
 **Step Three**
 
@@ -83,7 +83,7 @@ OIT/DCP is the campus approved accessibility experts in WCAG compliance. For inf
 OIT/DCP will provide feedback on why a component was not approved for use according to the WCAG 2.0 AA compliance guidelines.
 
 ## Get Started with the Repository
-Visit the repository at the Strategic Communications Bitbucket: https://bitbucket.org/uclaucomm/ucla-bruin-components/src/master/
+Visit the repository at the Strategic Communications Bitbucket: https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/
 
 This library was built on [Fractal](https://fractal.build).
 
