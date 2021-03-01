@@ -124,6 +124,16 @@ $(document).ready(function (){
     $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
+    $('#nav-main').find('.nav-primary__link--has-children').attr('aria-expanded', 'false');
+  });
+
+  //Set aria labels for the primary navigation
+  $('#nav-main .nav-primary__link--has-children').mouseover(function () {
+    $(this).attr('aria-expanded', 'true');
+  });
+
+  $('#nav-main .nav-primary__link--has-children').mouseout(function () {
+    $(this).attr('aria-expanded', 'false');
   });
 
 
@@ -157,6 +167,7 @@ $(document).ready(function (){
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
 
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
+            $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
           }
         }, 50);
       }
@@ -180,6 +191,9 @@ $(document).ready(function (){
 
             //add a tabindex of 0
             $dropdown.find('.nav-primary__link').attr('tabindex', '0');
+
+            //set aria expanded to true
+            $focus.parent().attr('aria-expanded', 'true');
           }
         }
       }
