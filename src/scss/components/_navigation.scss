@@ -1,9 +1,116 @@
 /*------------------------------------
+    Header Logo
+  ------------------------------------*/
+.header-logo {
+  background-color: $ucla-blue;
+  padding: 8px 24px;
+  max-height: 48px;
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding: 12px 24px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__wrap {
+    display: block;
+    max-width: 1176px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    display: inline-block;
+    height: 24px;
+    margin-right: 13px;
+  }
+
+  .breadcrumb {
+    position: relative;
+    top: 5px;
+    width: calc(100% - 100px);
+  }
+}
+
+/*------------------------------------
+    Breadcrumb
+  ------------------------------------*/
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  overflow-y: scroll;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: inline-block;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    border-radius: 1px;
+
+    a {
+      text-decoration: none;
+      color: $default-state;
+
+      &:hover {
+        background-color: $hover-state;
+        color: $white;
+      }
+    }
+
+    &::before {
+      content: '/';
+      display: inline;
+      padding: 0 8px;
+      margin: 0;
+      font-weight: normal;
+      color: #949494;
+    }
+  }
+
+  &--white {
+    color: $white;
+
+    .breadcrumb__item {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: $hover-state-dark;
+          color: $medium-grey5;
+        }
+      }
+
+      &::before {
+        color: $white;
+      }
+    }
+  }
+}
+
+/*------------------------------------
     Navigation Container
   ------------------------------------*/
 #menu {
   display: block;
   position: relative;
+  width: 100%;
+
+  @media (min-width: breakpoint-min(lg)) {
+    width: auto;
+  }
 
   .nav-primary {
     right: -100%;
@@ -29,6 +136,57 @@
 
     @media (min-width: breakpoint-min(lg)) {
       display: none;
+    }
+  }
+}
+
+/*------------------------------------
+    Secondary navigation
+  ------------------------------------*/
+.nav-secondary {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1.286;
+    font-weight: bold;
+    color: $default-state;
+    display: block;
+    padding: 8px 16px;
+    margin-left: 2px;
+    border-radius: 2px;
+
+    &:hover {
+      color: $white;
+      background-color: $hover-state;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $active-state;
+    }
+
+    &:focus {
+      outline: 1px dotted $hover-state;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $default-state;
     }
   }
 }

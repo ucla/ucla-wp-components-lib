@@ -1,5 +1,25 @@
-<nav id="menu">
-  {{ view '@button--hamburger' }}
+<header id="header">
 
-  {{ view '@navigation--primary' }}
-</nav>
+  <div class="header-logo">
+    <div class="header-logo__wrap">
+      <a href="https://www.ucla.edu/">
+        <img class="header-logo__image" src="/img/icons/ucla_logo_white.svg" alt="UCLA Logo" />
+      </a>
+
+      <ul class="breadcrumb breadcrumb--white">
+        <li class="breadcrumb__item">
+          <a href="#">College</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a href="#">School</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <nav id="menu">
+    {{ view '@button--hamburger' }}
+
+    {{ view '@navigation--primary' }}
+  </nav>
+</header>
