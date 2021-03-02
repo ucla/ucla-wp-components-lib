@@ -1,10 +1,44 @@
 /*------------------------------------
+    Navigation Container
+  ------------------------------------*/
+#menu {
+  display: block;
+  position: relative;
+
+  .nav-primary {
+    right: -100%;
+    top: 40px;
+    position: relative;
+
+    @media (min-width: breakpoint-min(lg)) {
+      top: 0px;
+    }
+
+    &--is-active {
+      right: 0%;
+
+      @media (min-width: breakpoint-min(lg)) {
+        right: 0;
+      }
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 0px;
+
+    @media (min-width: breakpoint-min(lg)) {
+      display: none;
+    }
+  }
+}
+
+/*------------------------------------
     Primary Main navigation
   ------------------------------------*/
 .nav-primary {
   position: relative;
   border-top: 1px solid $medium-grey3;
-  right: -100%;
   transition: right 0.5s ease;
 
   @media (min-width: breakpoint-min(lg)) {
@@ -334,14 +368,6 @@
     @media (min-width: breakpoint-min(lg)) {
       padding: 8px 16px 16px;
       font-size: 1.125rem;
-    }
-  }
-
-  &--is-active {
-    right: 0%;
-
-    @media (min-width: breakpoint-min(lg)) {
-      right: 0;
     }
   }
 

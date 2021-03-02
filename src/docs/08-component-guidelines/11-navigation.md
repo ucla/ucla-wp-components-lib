@@ -95,7 +95,7 @@
 ### **Code**
 
 ```
-{{view '@primary-navigation'}}
+{{view '@navigation'}}
 ```
 
 <!--Headers and Main Menus code here, if applicable-->
