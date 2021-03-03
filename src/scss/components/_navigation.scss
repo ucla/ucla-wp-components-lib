@@ -1,4 +1,11 @@
 /*------------------------------------
+    Header
+  ------------------------------------*/
+#header {
+  border-bottom: 1px solid $grey-10;
+}
+
+/*------------------------------------
     Header Logo
   ------------------------------------*/
 .header-logo {
@@ -100,6 +107,56 @@
   }
 }
 
+/*--------------------------------------
+    Site Name
+  ------------------------------------*/
+.site-name {
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 1.125rem;
+
+  a {
+    text-decoration: none;
+    color: $medium-grey5;
+    display: block;
+    margin-bottom: 32px;
+  }
+}
+
+/*--------------------------------------
+    Header Wrap
+  ------------------------------------*/
+.header-wrap {
+  display: block;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 24px 24px 0px;
+  position: relative;
+  top: 1px;
+
+  &::after {
+    content: '';
+    display: block;
+  }
+
+  .site-name {
+    float: left;
+    width: 50%;
+  }
+
+  #menu-secondary {
+    float: right;
+    width: 50%;
+    position: relative;
+
+    .nav-secondary {
+      float: right;
+      position: relative;
+      top: -6px;
+    }
+  }
+}
+
 /*------------------------------------
     Navigation Container
   ------------------------------------*/
@@ -116,9 +173,14 @@
     right: -100%;
     top: 40px;
     position: relative;
+    width: 100%;
 
     @media (min-width: breakpoint-min(lg)) {
       top: 0px;
+    }
+
+    &__list {
+      float: right;
     }
 
     &--is-active {
@@ -240,7 +302,7 @@
         min-width: inherit;
         flex-basis: auto;
         align-self: flex-end;
-        border: 1px solid $white;
+        border: 1px solid none;
         border-bottom: 0;
 
         &:hover {
@@ -520,7 +582,6 @@
     font-size: 1rem;
     line-height: 1.333rem;
     text-decoration: none;
-    background: $white;
     padding: 14px 24px;
 
     @media (min-width: breakpoint-min(lg)) {
