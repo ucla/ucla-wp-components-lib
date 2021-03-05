@@ -1,22 +1,16 @@
 // /*******
-// 1. Accordion is a mobile only feature. Accordians are fully expanded on screens above 768px.
-// 2. Grey backgrounds are a mobile only feature.
-// 3. Numbers in IDs and aria-controls and aria-labelledby must be consecutive.
-//    (i.e. first one is id="accordion1id" second one is id="accordion2id" and so on.)
 //
 //    HTML structure:
 //
-//    1. Accordion main wrapper (wraps #2 and content after [i.e faculty cards in leadership page])
-//    2. Accordion title section and a button (used as a drop down mobile for mobile)
+//    1. Accordion main wrapper (wraps #2 and content after)
+//    2. Accordion title section and a button (used as a drop down)
 //    3. Accordion content section
 //
 //    Code:
 //
-//    1. Accordion Main Wrapper - Should include 'section-wrapper accordion' class names - <div class="section-wrapper accordion">
-//
-//    2. Accordion - Each accordion includes (letters denote levels of nesting):
-//     a. h2 class - <h2 class="accordion__title">
-//      b. button for accordion - <button id="accordion1id"...> <NAME OF SECTION> </button>
+//    1. Accordion Main Wrapper - Should include 'accordion' class names - <div class="accordion">
+//    2. The title section for the accordion
+//    3. The content of the accordion goes inside here
 //
 //    Example case for the accordion:
 //
@@ -32,11 +26,6 @@
 //      </dl>
 //    </section>
 //
-// See examples on:
-// - Alumni & Student Honors Page
-// - Terms of Use
-// - Accessibility
-// - Site Information
 //
 // Further documentation on ADA compliant accordions
 // - https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
