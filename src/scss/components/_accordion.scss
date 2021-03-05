@@ -20,18 +20,17 @@
 //
 //    Example case for the accordion:
 //
-//    <div class="section-wrapper accordion">       <!-- 1. Accordion main wrapper -->
-//
-//      <h2 class="accordion__title">       <!-- 2. Accordion title section and button -->
-//        <button id="accordion1id" class="accordion__title-button" type="button" aria-expanded="true" aria-controls="sect1">
-//          <TITLE HERE (i.e. Fields Medal in Mathematics)>
+//    <section class="accordion">       <!-- 1. Accordion main wrapper -->
+//      <dl>
+//        <button class="accordion__title" aria-expanded="false">      <!-- 2. Accordion title section and button -->
+//          <dt>Title</dt>
 //        </button>
-//      </h2>
 //
-//      <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion__content"> <!-- 3. Accordion content section -->
+//        <dd class="accordion__content"> <!-- 3. Accordion content section -->
 //          <p>Add content here</p>
-//      </div>
-//    </div>
+//        </dd>
+//      </dl>
+//    </section>
 //
 // See examples on:
 // - Alumni & Student Honors Page
@@ -176,6 +175,8 @@
       background: $focus-state;
       border-color: $focus-state;
       color: $white;
+      outline: 1px dotted $focus-state;
+      outline-offset: 2px;
     }
 
     &:active {
