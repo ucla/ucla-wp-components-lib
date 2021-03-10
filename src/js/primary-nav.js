@@ -211,14 +211,23 @@ $(document).ready(function (){
   -------------------------------------------------------------------------------------*/
   let $hamburgerBtn = $('.hamburger');
   let $primaryNav = $('.nav-primary');
+  let $header = $('#header');
 
   $hamburgerBtn.bind('click', function () {
+
+    let height;
 
     //if not active add class active
     if (!$(this).hasClass('hamburger--is-active')) {
 
       $(this).addClass('hamburger--is-active');
       $primaryNav.addClass('nav-primary--is-active');
+      height = Number($header.height());
+
+      if ( height > 105 ) {
+        console.log(height);
+      }
+
       enableMenuTab();
 
     } else {
