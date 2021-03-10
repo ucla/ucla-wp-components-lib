@@ -19,6 +19,7 @@ $(document).ready(function (){
   // Run evaluation on page resize
   $(window).resize(function () {
     evalNav($(window).width());
+    mobileNavPosition($(window).width(), breakpoint);
   });
 
   // Hide open mobile sub navs above browser width 1024px
@@ -215,19 +216,13 @@ $(document).ready(function (){
 
   $hamburgerBtn.bind('click', function () {
 
-    let height;
-
     //if not active add class active
     if (!$(this).hasClass('hamburger--is-active')) {
 
       $(this).addClass('hamburger--is-active');
       $primaryNav.addClass('nav-primary--is-active');
-      height = Number($header.height());
 
-      if ( height > 105 ) {
-        console.log(height);
-      }
-
+      mobileNavPosition ();
       enableMenuTab();
 
     } else {
@@ -237,6 +232,25 @@ $(document).ready(function (){
       disableMenuTab();
     }
   });
+
+  //check if the mobile nav needs to be repositioned.
+  function mobileNavPosition (windowWidth, breakpoint) {
+
+    let $primaryNav = $('.nav-primary');
+    let height;
+
+    height = Number($header.height());
+
+    if (windowWidth >= breakpoint) {
+      $primaryNav.removeAttr('style');
+    } else {
+      if (height > 105) {
+        $primaryNav.css({'top': '71px'});
+      } else {
+        $primaryNav.removeAttr('style');
+      }
+    }
+  }
 
   //disable tabbing for the mobile menu
   function disableMenuTab () {
@@ -252,4 +266,11 @@ $(document).ready(function (){
     $('.nav-primary__search-field').attr('tabindex', '0');
   }
 
+
+
+
+
+  /*-------------------------------------------------------------------------------------
+    BREADCRUMB FUNCTIONALITY
+  -------------------------------------------------------------------------------------*/
 });

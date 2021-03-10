@@ -53,6 +53,11 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   display: inline-block;
+  width: calc(100% - 5px);
+
+  @media (min-width: breakpoint-min(lg)) {
+    width: 100%;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -128,11 +133,17 @@
       position: absolute;
       width: 5px;
       height: 24px;
-      top: 6px;
-      right: 5px;
-      background: white;
-      background: rgb(39, 116, 174);
-      background: linear-gradient(90deg, rgba(39, 116, 174, 0) 0%, rgba(39, 116, 174, 1) 84%, rgba(39, 116, 174, 1) 100%);
+      top: 0px;
+      right: 4px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 84%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    &.white {
+      &::after {
+        background: rgb(39, 116, 174);
+        background: linear-gradient(90deg, rgba(39, 116, 174, 0) 0%, rgba(39, 116, 174, 1) 84%, rgba(39, 116, 174, 1) 100%);
+      }
     }
   }
 }
@@ -183,6 +194,7 @@
     @media (min-width: breakpoint-min(lg)) {
       width: 50%;
       margin-left: 0px;
+      margin-bottom: 0px;
     }
 
     a {
@@ -226,12 +238,14 @@
 
   .nav-primary {
     right: -100%;
-    top: 40px;
+    top: 43px;
     position: relative;
     width: 100%;
+    z-index: 100;
 
     @media (min-width: breakpoint-min(lg)) {
       top: 0px;
+      z-index: 100;
     }
 
     &__list {
@@ -344,7 +358,11 @@
 
     li {
       list-style: none;
-      background: #FFFFFF;
+      background: $white;
+
+      @media (min-width: breakpoint-min(lg)) {
+        background: none;
+      }
 
       &::before {
         content: "";
@@ -532,6 +550,7 @@
     @media (min-width: breakpoint-min(lg)) {
       position: absolute;
       width: 20rem;
+      top: 44px;
     }
 
     &--open {
