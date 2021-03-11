@@ -273,4 +273,12 @@ $(document).ready(function (){
   /*-------------------------------------------------------------------------------------
     BREADCRUMB FUNCTIONALITY
   -------------------------------------------------------------------------------------*/
+  $('.breadcrumb').each(function () {
+
+    if ($(this).hasClass('breadcrumb--white')) {
+      $(this).after('<span class="breadcrumb--fade white"></span>');
+    } else {
+      $(this).after('<span class="breadcrumb--fade"></span>');
+    }
+  });
 });
