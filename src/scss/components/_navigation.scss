@@ -628,6 +628,11 @@
       }
     }
 
+    &:active {
+      background: $active-state;
+      color: $white;
+    }
+
     &--has-children {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -641,7 +646,7 @@
       @media (min-width: breakpoint-min(lg)) {
         display: inline-block;
         position: relative;
-        padding-right: 10px;
+        padding-right: 2px;
 
         .nav-primary__link {
           &:hover {
@@ -662,7 +667,7 @@
             width: 1em;
             background: url("/img/icons/arrow-right-defaultblue.svg") no-repeat center;
             background-size: 24px;
-            margin-left: 1em;
+            margin-left: 6px;
             transform: rotate(90deg);
           }
         }
@@ -877,6 +882,10 @@
         background-color: $white;
       }
     }
+  }
+
+  &:active {
+    background-color: $active-state;
   }
 
   &__box {
