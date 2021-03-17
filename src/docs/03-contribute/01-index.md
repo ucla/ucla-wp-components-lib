@@ -23,33 +23,37 @@ If you want to elevate an issue:
 - **Upvote** an issue to show your support, then leave any thoughts or feedback in the comments.
 - **Watch** an issue to keep track of future discussion and progress.
 ​
+
 ### Step 2 - Create a new issue
 ​
 If you don’t see a suggestion or issue similar to your own, [create a new issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues/new). Write a clear title and summarize the reason for your issue in the description. The more information you can provide, the better equipped we’ll be to evaluate your recommendation.
 ​
 Please select options from these menus as well:
 ​
-####Kind
+#### **Kind**
 - **Bug**: Fix errors in an existing component or documentation
 - **Enhancement**: Improve or add to existing code, design, or documentation
 - **Proposal**: Recommend or submit new features or components
 ​
-####Priority
+
+#### **Priority**
 - **Trivial**: Little importance or value
 - **Minor**: Lesser importance, seriousness, or significance
 - **Major**: Important, serious, significant
 - **Critical**: Emergency deployment, i.e. security, extreme visual defects
 - **Blocker**: Other issues are currently stopping this issue from moving forward
-​
-####Component
+
+#### **Component**
 - **Accessibility**:
 - **Code**:
 - **Design**:
 - **Documentation**:
+
 ​
-####Milestone
+#### **Milestone**
 (To be determined)
 ​
+
 ### Step 3 - Submit supporting work
 *(Optional but strongly recommended)*
 ​
@@ -63,6 +67,7 @@ Once you select or create an issue, we encourage you to share any supporting wor
 ​
 You can also attach screen shots or small image files directly to your issue to help other people preview your examples or work.
 ​
+
 ### Step 4 - Solicit feedback
 ​
 Now is a good time to share your work or recommendation with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS). Share your work, collect feedback, and gather support for your issue.
@@ -83,6 +88,7 @@ Committee members will also review submissions to ensure compliance with:
 - UCLA’s visual brand guidelines
 ​
 ​
+
 ### Step 6 - Submit revisions or final work
 ​
 Submit revisions to work or documentation, if requested by committees in charge of review.
@@ -93,7 +99,7 @@ Submit revisions to work or documentation, if requested by committees in charge 
 Before your feature or enhancement can be added to the library, we need documentation to support it. Help us write the first draft. We have [templates and existing documentation](/build/%!CurrentVersion%!/docs/component-guidelines/documentation-templates/component-documentation-template-1.html) you can reference.
 ​
 ---
-​
+
 ## Review and approval
 ​
 Issues and enhancement requests will be reviewed by Strategic Communications and a cross-campus committee of volunteers.
