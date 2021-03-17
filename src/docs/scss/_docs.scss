@@ -2,6 +2,11 @@
 // These are Fractal documentation specific styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
 
+.Document-title {
+  font-size: 48px;
+  line-height: 54px;
+}
+
 .Prose {
   max-width: 44em;
 
