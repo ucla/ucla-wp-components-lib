@@ -3,11 +3,11 @@ title: Web Component Library
 ---
 The Web Components Library is the digital application of UCLA’s brand. It contains a suite of components, guidelines and code to assist you in designing and developing websites and web applications for UCLA.
 
-Our goal is to:
+Our goals are to:
 
-- Create a more cohesive experience and unified brand for our users
-- Support campus teams who want to efficiently create web experiences that follow brand grandlines, web standards, and accessibility guidelines
-- Invite members of campus to [contribute](/build/%!CurrentVersion%!/docs/contribute/contributing.html) and help us thoughtfully improve expand the library to serve the needs of campus
+- Create a more cohesive experience and unified brand for end users
+- Support campus teams who want to create web experiences that follow brand guidelines, web standards, and accessibility guidelines
+- Invite members of campus to [contribute](/build/%!CurrentVersion%!/docs/contribute.html) and help us thoughtfully improve expand the library to serve the needs of campus
 
 ## Core Principles
 
