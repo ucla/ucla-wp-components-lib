@@ -1,4 +1,4 @@
-We invite anyone at UCLA to recommend features and contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html), and steps outlined below.
+We invite anyone at UCLA to recommend features and contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html), and steps outlined below.
 
 We also encourage you to join our Slack channel. It's a great place to ask questions, discuss ideas, and share contributions with others. If you haven't done so already, sign up for [UCLA Slack](http://ucla.slack.com) workspace and add yourself to our channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS).
 
@@ -23,26 +23,31 @@ If you don’t see a suggestion or issue similar to your own, [create a new issu
 
 Please select options from these menus as well:
 
-#### Kind
+##### Kind
 - **Bug**: Fix errors in an existing component or documentation
 - **Enhancement**: Improve or add to existing code, design, or documentation
 - **Proposal**: Recommend or submit new features or components
 
-#### Priority
+##### Priority
 - **Trivial**: Little importance or value
 - **Minor**: Lesser importance, seriousness, or significance
 - **Major**: Important, serious, significant
 - **Critical**: Emergency deployment, i.e. security, extreme visual defects
 - **Blocker**: Other issues are currently stopping this issue from moving forward
 
-#### Component
-- **Accessibility**:
+##### Component
+- **Accessibility**: Fixing or enhancing a component for ADA compliance
 - **Code**:
 - **Design**:
 - **Documentation**:
 
-#### Milestone
-(To be determined)
+##### Milestone (for approved
+- **New Issue**:
+- **Work In Progress**:
+- **Needs Review**:
+- **Design & Code Review**:
+- **Accessibility Review**:
+- **Deployed**:
 
 ### Step 3 - Submit supporting work
 *(Optional but strongly recommended)*
