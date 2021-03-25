@@ -170,7 +170,7 @@ $(document).ready(function (){
           else if (pressed === keys.left || pressed === keys.up) {
             focusLastTab();
           }
-          else if (pressed === keys.right || pressed == keys.down) {
+          else if (pressed === keys.right || pressed === keys.down) {
             focusFirstTab();
           };
         };
@@ -256,10 +256,12 @@ $(document).ready(function (){
     // Determine whether there should be a delay
     // when user navigates with the arrow keys
     function determineDelay () {
-      let hasDelay = tablist.hasAttribute('data-delay');
+      let hasDelay = Boolean.TRUE === tablist.getAttribute('data-delay');
       let delay = 0;
 
-      if (hasDelay) {
+      console.log(hasDelay);
+
+      if (hasDelay === TRUE) {
         let delayValue = tablist.getAttribute('data-delay');
         if (delayValue) {
           delay = delayValue;
