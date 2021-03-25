@@ -259,8 +259,6 @@ $(document).ready(function (){
       let hasDelay = Boolean.TRUE === tablist.getAttribute('data-delay');
       let delay = 0;
 
-      console.log(hasDelay);
-
       if (hasDelay === TRUE) {
         let delayValue = tablist.getAttribute('data-delay');
         if (delayValue) {
