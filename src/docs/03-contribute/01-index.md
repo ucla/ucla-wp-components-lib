@@ -1,18 +1,6 @@
----
-title: Contributing Overview
----
+We invite anyone at UCLA to recommend features and contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html), and steps outlined below.
 
-## Who can contribute
-
-We invite anyone at UCLA to recommend features and contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/#core-principles) and [process for contributing](#process-for-contributing) below.
-
----
-
-## Join our community
-
-Join  our Slack community to discuss ideas and contributions with our community. If you haven't done so already, sign into the [UCLA Slack](http://ucla.slack.com) workspace. Then add yourself to our channel ([#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS)).
-
----
+We also encourage you to join our Slack channel. It's a great place to ask questions, discuss ideas, and share contributions with others. If you haven't done so already, sign up for [UCLA Slack](http://ucla.slack.com) workspace and add yourself to our channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS).
 
 ## How to contribute
 
@@ -31,11 +19,35 @@ If you want to elevate an issue:
 
 ### Step 2 - Create a new issue
 
-If you don’t see a suggestion or issue similar to your own, [create a new issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues/new). Designate your kind of issue as a:
+If you don’t see a suggestion or issue similar to your own, [create a new issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues/new). Write a clear title and summarize the reason for your issue in the description. The more information you can provide, the better equipped we’ll be to evaluate your recommendation.
 
-- **Bug** to fix errors in an existing component or documentation
-- **Enhancement** to improve or add to existing code, design, or documentation
-- **Proposal** to recommend or submit new features or components
+Please select options from these menus as well:
+
+##### Kind
+- **Bug**: Fix errors in an existing component or documentation
+- **Enhancement**: Improve or add to existing code, design, or documentation
+- **Proposal**: Recommend or submit new features or components
+
+##### Priority
+- **Trivial**: Little importance or value
+- **Minor**: Lesser importance, seriousness, or significance
+- **Major**: Important, serious, significant
+- **Critical**: Emergency deployment, i.e. security, extreme visual defects
+- **Blocker**: Other issues are currently stopping this issue from moving forward
+
+##### Component
+- **Accessibility**: Fixing or enhancing a component for ADA compliance
+- **Code**:
+- **Design**:
+- **Documentation**:
+
+##### Milestone (for approved
+- **New Issue**:
+- **Work In Progress**:
+- **Needs Review**:
+- **Design & Code Review**:
+- **Accessibility Review**:
+- **Deployed**:
 
 ### Step 3 - Submit supporting work
 *(Optional but strongly recommended)*
@@ -50,15 +62,9 @@ Once you select or create an issue, we encourage you to share any supporting wor
 
 You can also attach screen shots or small image files directly to your issue to help other people preview your examples or work.
 
-Tips:
-
-- Make sure to explain the use case and functionality for your new or revised component. How does this improve the build or community effort?
-- If submitting code, please include comments so others will understand it’s use.
-
-
 ### Step 4 - Solicit feedback
 
-Now is a good time to share your work or recommendation with people in our Slack channel. Share your work, collect feedback, and gather support for your issue.
+Now is a good time to share your work or recommendation with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS). Share your work, collect feedback, and gather support for your issue.
 
 
 ### Step 5 - Committee review
@@ -67,8 +73,6 @@ Various committee members will review issues every few weeks for inclusion in th
 
 - **Bugs** will be evaluated primarily based on priority.
 - **Enhancements** and **Proposals** will be evaluated on popularity in the issues board and widespread utility for campus.
-
-The more information or justification you can provide for your issue, the better equipped we’ll be to make informed decisions.
 
 Committee members will also review submissions to ensure compliance with:
 
@@ -80,14 +84,12 @@ Committee members will also review submissions to ensure compliance with:
 
 ### Step 6 - Submit revisions or final work
 
-Submit revisions to work or documentation, if requested by committee.
+Submit revisions to work or documentation, if requested by committees in charge of review.
 
 
 ### Step 7 - Write documentation
 
 Before your feature or enhancement can be added to the library, we need documentation to support it. Help us write the first draft. We have [templates and existing documentation](/build/%!CurrentVersion%!/docs/component-guidelines/documentation-templates/component-documentation-template-1.html) you can reference.
-
----
 
 ## Review and approval
 
@@ -100,9 +102,6 @@ If the committee reviews and accepts your proposal or enhancement, you’ll also
 ### What if my proposal is not accepted?
 
 No worries! Remember the component library is a base set of components geared towards helping you build common website patterns quickly, efficiently and on brand. It won’t cover every need for every department. You are always able to add or revise components on your own websites to fit specific needs or requirements your department or division may have.
-
-
----
 
 ## Accessibility
 
