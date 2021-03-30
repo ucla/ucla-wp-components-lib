@@ -102,6 +102,8 @@ $(document).ready(function (){
   //set the tabbing functionality
   if (windowWidth >= breakpoint) {
     addDesktopTabs ();
+  } else {
+    addMobileTabs ();
   }
 
   //On Resize
@@ -116,6 +118,7 @@ $(document).ready(function (){
         addDesktopTabs ();
       } else {
         resetTabs ();
+        addMobileTabs ();
       }
     }, 100);
   });
@@ -143,8 +146,6 @@ $(document).ready(function (){
 
   /* ---------- Reset all the tabbing and styles ---------- */
   function resetTabs () {
-    //$('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
-    //$('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $(document).unbind('keydown');
   }
@@ -162,7 +163,7 @@ $(document).ready(function (){
 
         setTimeout(function () {
 
-          let $focus = $(':focus');
+          let $focus = $(':focus'), $dropdown;
 
           //if this is a top level nav or the focus is not a primary nav item
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
@@ -170,37 +171,65 @@ $(document).ready(function (){
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
             $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
           }
-        }, 50);
-      }
 
-      //arrow down was pressed
-      if (keyCode === 40) {
+          //if this is a primary navigation item
+          if ($focus.hasClass('nav-primary__link')) {
 
-        //get the focused element
-        let $focus = $(':focus'), $dropdown;
+            $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
 
-        //if this is a primary navigation item
-        if ($focus.hasClass('nav-primary__link')) {
+            //has a dropdown
+            if ($dropdown.length > 0) {
 
-          $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
+              //Show the dropdown
+              $dropdown.show();
 
-          //has a dropdown
-          if ($dropdown.length > 0) {
+              //add a tabindex of 0
+              $dropdown.find('.nav-primary__link').attr('tabindex', '0');
 
-            //Show the dropdown
-            $dropdown.show();
-
-            //add a tabindex of 0
-            $dropdown.find('.nav-primary__link').attr('tabindex', '0');
-
-            //set aria expanded to true
-            $focus.parent().attr('aria-expanded', 'true');
+              //set aria expanded to true
+              $focus.parent().attr('aria-expanded', 'true');
+            }
           }
-        }
+        }, 50);
       }
 
     });
 
+  }
+
+  /* --------------add mobile tabbing controls------------ */
+  function addMobileTabs () {
+    //keypress focus
+    $(document).keydown(function (e) {
+
+      let keyCode = e.keyCode || e.which;
+
+      //tab key was pressed
+      if (keyCode === 9) {
+
+        setTimeout(function () {
+
+          let $focus = $(':focus');
+          let $hamburgerBtn = $('.hamburger');
+          let $primaryNav = $('.nav-primary');
+
+          //if this is a top level primary navigation
+          if ($focus.parent().parent('.nav-primary__list').length > 0) {
+            $toggle.removeClass('is-open');
+            $sublistItem.addClass('nav-primary__sublist--hidden');
+          }
+
+          //if this is not a primary navigation item
+          if (!($focus.hasClass('nav-primary__link') || $focus.hasClass('nav-primary__toggle') || $focus.hasClass('nav-primary__search-field'))) {
+            $hamburgerBtn.removeClass('hamburger--is-active');
+            $primaryNav.removeClass('nav-primary--is-active');
+            disableMenuTab();
+          }
+
+        }, 50);
+      }
+
+    });
   }
 
 
