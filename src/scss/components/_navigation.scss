@@ -94,6 +94,10 @@
         background-color: $hover-state;
         color: $white;
       }
+
+      &:focus {
+        outline: 1px dotted $hover-state;
+      }
     }
 
     &::before {
