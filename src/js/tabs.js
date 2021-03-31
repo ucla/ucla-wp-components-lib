@@ -170,7 +170,7 @@ $(document).ready(function (){
           else if (pressed === keys.left || pressed === keys.up) {
             focusLastTab();
           }
-          else if (pressed === keys.right || pressed == keys.down) {
+          else if (pressed === keys.right || pressed === keys.down) {
             focusFirstTab();
           };
         };
