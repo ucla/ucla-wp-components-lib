@@ -193,6 +193,25 @@ $(document).ready(function (){
         }, 50);
       }
 
+      //escape key was pressed
+      if (keyCode === 27) {
+
+        setTimeout(function () {
+
+          let $focus = $(':focus');
+
+          //close the dropdowns
+          $('.nav-primary__list .nav-primary__sublist').attr('style', '');
+          $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
+
+          //if this is a nav item
+          if ($focus.parent().parent('.nav-primary__sublist').length > 0) {
+            $focus.parent().parent().parent('.nav-primary__item').find('a').focus();
+          }
+        }, 50);
+      }
+
+
     });
 
   }
@@ -227,6 +246,19 @@ $(document).ready(function (){
           }
 
         }, 50);
+      }
+
+      //escape key was pressed
+      if (keyCode === 27) {
+
+        let $hamburgerBtn = $('.hamburger');
+
+        console.log('escape mobile');
+
+        if ($hamburgerBtn.hasClass('hamburger--is-active')) {
+          $hamburgerBtn.trigger('click');
+          $hamburgerBtn.focus();
+        }
       }
 
     });
