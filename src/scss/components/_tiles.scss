@@ -102,7 +102,7 @@ $tile-width: 276px;
 
   &__link {
     $tile-height: 108px; // desired tile height - mobile
-    $tile-pt: 16px; // padding top
+    $tile-pt: 0; // padding top
     $tile-px: 32px; // padding left and right
     $tile-pb: 16px; // padding bottom
 
@@ -114,6 +114,7 @@ $tile-width: 276px;
 
     @media (min-width: breakpoint-min(md)) {
       $tile-height: 188px; // desired tile height - desktop
+      $tile-pt: 16px;
       $tile-pt: 32px;
       $tile-pb: 64px;
 
