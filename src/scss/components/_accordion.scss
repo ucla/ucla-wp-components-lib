@@ -1,43 +1,31 @@
 // /*******
-// 1. Accordion is a mobile only feature. Accordians are fully expanded on screens above 768px.
-// 2. Grey backgrounds are a mobile only feature.
-// 3. Numbers in IDs and aria-controls and aria-labelledby must be consecutive.
-//    (i.e. first one is id="accordion1id" second one is id="accordion2id" and so on.)
 //
 //    HTML structure:
 //
-//    1. Accordion main wrapper (wraps #2 and content after [i.e faculty cards in leadership page])
-//    2. Accordion title section and a button (used as a drop down mobile for mobile)
+//    1. Accordion main wrapper (wraps #2 and content after)
+//    2. Accordion title section and a button (used as a drop down)
 //    3. Accordion content section
 //
 //    Code:
 //
-//    1. Accordion Main Wrapper - Should include 'section-wrapper accordion' class names - <div class="section-wrapper accordion">
-//
-//    2. Accordion - Each accordion includes (letters denote levels of nesting):
-//     a. h2 class - <h2 class="accordion__title">
-//      b. button for accordion - <button id="accordion1id"...> <NAME OF SECTION> </button>
+//    1. Accordion Main Wrapper - Should include 'accordion' class names - <div class="accordion">
+//    2. The title section for the accordion
+//    3. The content of the accordion goes inside here
 //
 //    Example case for the accordion:
 //
-//    <div class="section-wrapper accordion">       <!-- 1. Accordion main wrapper -->
-//
-//      <h2 class="accordion__title">       <!-- 2. Accordion title section and button -->
-//        <button id="accordion1id" class="accordion__title-button" type="button" aria-expanded="true" aria-controls="sect1">
-//          <TITLE HERE (i.e. Fields Medal in Mathematics)>
+//    <section class="accordion">       <!-- 1. Accordion main wrapper -->
+//      <dl>
+//        <button class="accordion__title" aria-expanded="false">      <!-- 2. Accordion title section and button -->
+//          <dt>Title</dt>
 //        </button>
-//      </h2>
 //
-//      <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion__content"> <!-- 3. Accordion content section -->
+//        <dd class="accordion__content"> <!-- 3. Accordion content section -->
 //          <p>Add content here</p>
-//      </div>
-//    </div>
+//        </dd>
+//      </dl>
+//    </section>
 //
-// See examples on:
-// - Alumni & Student Honors Page
-// - Terms of Use
-// - Accessibility
-// - Site Information
 //
 // Further documentation on ADA compliant accordions
 // - https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
@@ -46,169 +34,144 @@
 // - role = region - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role
 // *******/
 //
-// .accordion {
-//   padding: 48px 24px 48px 24px;
-//   transition: 0.5s;
-//
-//   @media (min-width: breakpoint-min(md)) {
-//     padding: 48px 35px 48px 35px !important;
-//     display: inline-block;
-//   }
-//
-//   &.show-me {
-//     padding: 48px 24px;
-//     transition: 0.5s;
-//
-//     @media (min-width: breakpoint-min(md)) {
-//       padding: 48px 35px 48px 35px !important;
-//     }
-//   }
-//
-//   &__title {
-//     display: block;
-//     position: relative;
-//     width: 100%;
-//     margin: 0 auto;
-//     max-width: 1200px;
-//
-//     @media (min-width: breakpoint-min(sm)) {
-//       padding-left: 0;
-//       width: 100%;
-//       margin-left: auto !important;
-//     }
-//
-//     &:hover {
-//       .accordion__title-arrow,
-//       .accordion__title-arrow.flip {
-//         background: $hover-state;
-//       }
-//     }
-//
-//     &:focus {
-//       border-color: $hover-state;
-//     }
-//
-//     &-button {
-//       background: rgba(0, 0, 0, 0);
-//       border: 0;
-//       outline: 0;
-//       padding: 0 29px 0 0;
-//       text-align: left;
-//       font-weight: bold;
-//       font-size: 2.25rem;
-//       line-height: 2.53rem;
-//       word-break: break-word;
-//
-//       &:hover {
-//         cursor: pointer;
-//
-//         @media (min-width: breakpoint-min(md)) {
-//           cursor: default;
-//         }
-//       }
-//
-//       &:focus {
-//         outline-offset: -1px;
-//         outline: 1px dotted $hover-state;
-//       }
-//
-//       &:visited {
-//         outline: 0;
-//       }
-//
-//       &:disabled {
-//         color: black;
-//       }
-//     }
-//   }
-//
-//   /* img tag is turned into svg using jquery */
-//   &__title-arrow {
-//     background: $default-state;
-//     position: absolute;
-//     color: $white;
-//     right: 0;
-//     transform: rotate(0deg);
-//     //transition: 0.5s;
-//     z-index: 9;
-//     border-radius: 2px;
-//     bottom: 5px;
-//
-//     &:hover {
-//       cursor: pointer;
-//     }
-//
-//     &:focus {
-//       outline-offset: -3px;
-//       background: $ucla-blue;
-//       outline: 1px dotted $hover-state;
-//     }
-//
-//     @media (min-width: breakpoint-min(md)) {
-//       display: none;
-//     }
-//
-//     polygon#Path {
-//       fill: $white;
-//     }
-//
-//     &.flip {
-//       transform: rotate(180deg);
-//       //transition: 0.5s;
-//       background: $default-state;
-//     }
-//   }
-//
-//   &__content {
-//     display: block;
-//     height: 0;
-//     transition: 0.5s;
-//     position: relative;
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     overflow: hidden;
-//     opacity: 0;
-//
-//     //always show content on desktop
-//     @media (min-width: breakpoint-min(md)) {
-//       opacity: 1 !important;
-//       height: auto;
-//       margin-top: 20px;
-//       overflow: visible;
-//       position: relative;
-//     }
-//
-//     &.grey-bk {
-//       background: $lightest-grey-2;
-//       width: calc(100% + 48px);
-//       margin-left: -24px;
-//       padding: 0 24px;
-//       margin-bottom: 20px;
-//       transition: 0.5s;
-//
-//       @media (min-width: breakpoint-min(md)) {
-//         padding-top: 50px;
-//         width: calc(100% + 70px);
-//         margin-left: -35px;
-//         padding-bottom: 20px;
-//       }
-//     }
-//
-//     &.show-me {
-//       transition: 0.5s;
-//       height: auto;
-//       overflow: visible;
-//       opacity: 1;
-//       padding-top: 20px;
-//
-//       @media (min-width: breakpoint-min(md)) {
-//         padding-top: 30px;
-//       }
-//
-//       &.grey-bk {
-//         margin-bottom: 0;
-//         transition: 0.5s;
-//       }
-//     }
-//   }
-// }
+.accordion {
+  display: block;
+  padding: 0px 22px 0px;
+  max-width: 776px;
+
+  &__title {
+    border: 0;
+    border-top: 1px solid $grey-10;
+    width: 100%;
+    text-align: left;
+    color: $default-state;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: bold;
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0);
+    margin-top: 1px;
+    padding: 8px 32px 8px 16px;
+
+    &:focus {
+      outline-style: dotted;
+    }
+
+    &:hover, &.active {
+      background: $hover-state;
+      color: $white;
+      cursor: pointer;
+
+      &::after {
+        background: url("/img/icons/arrow-down-white.svg");
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        right: 16px;
+        top: 8px;
+        width: 24px;
+        height: 24px;
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        &::after {
+          right: 16px;
+          top: 16px;
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    &.active {
+      &::after {
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background: url("/img/icons/arrow-down-defaultblue.svg");
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      right: 16px;
+      top: 8px;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: breakpoint-min(md)) {
+      font-size: 24px;
+      padding: 22px 64px 18px 16px;
+
+      &::after {
+        background-size: contain;
+        right: 16px;
+        top: 16px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 16px;
+    padding-bottom: 32px;
+
+    &.show-me {
+      display: block;
+    }
+  }
+
+  &.accordion-last {
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid $grey-10;
+    }
+  }
+}
+
+//load more code
+.load-more {
+  &.btn {
+    border: 2px solid $default-state;
+    background: $white;
+    padding: 12px 16px 8px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $default-state;
+
+    &:hover {
+      background: $hover-state;
+      border-color: $hover-state;
+      color: $white;
+    }
+
+    &:focus {
+      background: $focus-state;
+      border-color: $focus-state;
+      color: $white;
+      outline: 1px dotted $focus-state;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      background: $active-state;
+      border-color: $active-state;
+      color: $white;
+    }
+  }
+}
