@@ -1,3 +1,11 @@
+# [1.0.0-dev-beta.11](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.10...v1.0.0-dev-beta.11) (2021-04-06)
+
+
+### Features
+
+* **accordion, primary navigation:** added Accordion and Primary Navigation Component ([3bf151d](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/3bf151dcaacf7b4fab1682e97b26bf7590e2823d)), closes [#6](http://bitbucket.org/uclaucomm/ucla-bruin-components/issue/6) [#8](http://bitbucket.org/uclaucomm/ucla-bruin-components/issue/8)
+* **primary navigation, grid:** primary Nav Escape and Grid Spacing ([60e36bd](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/60e36bd680ff6def1b14118b9d09632176527a3b))
+
 # [1.0.0-dev-beta.10](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.9...v1.0.0-dev-beta.10) (2021-03-16)
 
 
