@@ -163,7 +163,7 @@ $(document).ready(function (){
 
         setTimeout(function () {
 
-          let $focus = $(':focus'), $dropdown;
+          let $focus = $(':focus')/*, $dropdown*/;
 
           //if this is a top level nav or the focus is not a primary nav item
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
@@ -173,7 +173,7 @@ $(document).ready(function (){
           }
 
           //if this is a primary navigation item
-          if ($focus.hasClass('nav-primary__link')) {
+          /*if ($focus.hasClass('nav-primary__link')) {
 
             $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
 
@@ -189,8 +189,34 @@ $(document).ready(function (){
               //set aria expanded to true
               $focus.parent().attr('aria-expanded', 'true');
             }
-          }
+          }*/
         }, 50);
+      }
+
+      //arrow down was pressed
+      if (keyCode === 40 || keyCode === 13) {
+
+        //get the focused element
+        let $focus = $(':focus'), $dropdown;
+
+        //if this is a primary navigation item
+        if ($focus.hasClass('nav-primary__link')) {
+
+          $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
+
+          //has a dropdown
+          if ($dropdown.length > 0) {
+
+            //Show the dropdown
+            $dropdown.show();
+
+            //add a tabindex of 0
+            $dropdown.find('.nav-primary__link').attr('tabindex', '0');
+
+            //set aria expanded to true
+            $focus.parent().attr('aria-expanded', 'true');
+          }
+        }
       }
 
       //escape key was pressed
