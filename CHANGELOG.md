@@ -1,3 +1,10 @@
+# [1.0.0-beta.10](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-04-14)
+
+
+### Bug Fixes
+
+* **grid, typography:** fix spacing ([b6b56dc](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/b6b56dc3cae624fc70deb83c1b3b3b1718c4d6c9))
+
 # [1.0.0-dev-beta.12](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.11...v1.0.0-dev-beta.12) (2021-04-14)
 
 
