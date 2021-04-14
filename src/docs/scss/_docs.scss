@@ -2,6 +2,11 @@
 // These are Fractal documentation specific styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
 
+.Document-title {
+  font-size: 48px;
+  line-height: 54px;
+}
+
 .Prose {
   max-width: 44em;
 
@@ -11,6 +16,20 @@
     padding: 20px;
     border-radius: 10px;
     overflow-y: scroll;
+
+    // style scroll bars for long blocks of code
+    &::-webkit-scrollbar {
+      width: 10px;
+
+      &-track {
+        background-color: $light-grey;
+      }
+
+      &-thumb {
+        border-radius: 5px;
+        background-color: $ucla-blue;
+      }
+    }
 
     code {
       background: rgba(83, 83, 99, 0);
