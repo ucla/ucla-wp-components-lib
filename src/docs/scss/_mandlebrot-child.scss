@@ -1,3 +1,5 @@
+@use "../../scss/utilities/colors";
+
 /***************** STOP!!! READ THIS!! *****************/
 // These are mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
@@ -11,7 +13,7 @@ body {
 }
 
 .Header-button {
-  background: $default-state;
+  background: colors.$default-state;
 }
 
 // Sidebar Nav
@@ -24,12 +26,12 @@ body {
     .Tree {
       a {
         &:hover {
-          color: $grey-80;
+          color: colors.$grey-80;
         }
       }
 
       &-item {
-        border-bottom: 1px solid $medium-grey3;
+        border-bottom: 1px solid colors.$medium-grey3;
         background-color: white;
 
         &:last-of-type {
