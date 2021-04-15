@@ -1,3 +1,10 @@
+# [1.0.0-dev-beta.13](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.12...v1.0.0-dev-beta.13) (2021-04-15)
+
+
+### Bug Fixes
+
+* **tab.js:** fix CDN Javascript Error ([93bba5b](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/93bba5be1c38b9638387d3b7ebe105b60964c4eb))
+
 # [1.0.0-dev-beta.12](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.11...v1.0.0-dev-beta.12) (2021-04-14)
 
 
