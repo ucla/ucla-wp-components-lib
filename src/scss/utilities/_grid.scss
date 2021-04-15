@@ -1,3 +1,6 @@
+@use "_mixins/breakpoints";
+@use "colors";
+
 /**** UCLA html5reset.css ****/
 
 html, body, div, span, object, iframe,
@@ -49,14 +52,14 @@ a {
 /* change colours to suit your needs */
 ins {
   background-color: #ff9;
-  color: $black;
+  color: colors.$black;
   text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
   background-color: #ff9;
-  color: $black;
+  color: colors.$black;
   font-style: italic;
   font-weight: bold;
 }
@@ -100,7 +103,7 @@ input, select {
   margin: 0 auto;
   padding: 0 24px;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     padding: 0 12px;
   }
 }
@@ -129,7 +132,7 @@ input, select {
   margin: 0 auto;
   padding: 0 24px;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     padding: 0 12px;
   }
 

@@ -1,3 +1,7 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/_mixins/helper";
+@use "../utilities/colors";
+
 .fixed-table {
   position: relative;
   width: 100%;
@@ -9,7 +13,7 @@
     overflow-y: visible;
     //padding-bottom: 5px;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       overflow-x: visible;
       margin-left: 0;
     }
@@ -26,7 +30,7 @@
         line-height: 0.75rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: $medium-grey5;
+        color: colors.$medium-grey5;
         padding: 8px 16px;
         word-wrap: break-word;
         text-align: left;
@@ -41,7 +45,7 @@
       .fixed-table__sticky-col {
         margin-top: -24px;
 
-        @media (min-width: breakpoint-min(md)) {
+        @media (min-width: breakpoints.breakpoint-min(md)) {
           margin-top: 0;
         }
       }
@@ -50,23 +54,23 @@
     tbody {
       & > tr:nth-child(odd),
       & > tr:nth-child(odd) td:nth-child(1) {
-        background-color: $lightest-grey-2;
+        background-color: colors.$lightest-grey-2;
       }
 
       & > tr:nth-child(even),
       & > tr:nth-child(even) td:nth-child(1) {
-        background-color: $white;
+        background-color: colors.$white;
       }
 
       & > tr.blue-total,
       & > tr.blue-total td:nth-child(1) {
-        background-color: $lightest-blue;
+        background-color: colors.$lightest-blue;
         font-weight: bold;
       }
 
       & > tr.yellow-total,
       & > tr.yellow-total td:nth-child(1) {
-        background-color: $ucla-gold;
+        background-color: colors.$ucla-gold;
         font-weight: bold;
 
         & > td {
@@ -77,7 +81,7 @@
       td {
         font-size: 0.8rem;
         line-height: 1rem;
-        color: $grey-80;
+        color: colors.$grey-80;
         padding: 8px 16px;
         word-wrap: break-word;
       }
@@ -86,13 +90,13 @@
     tfoot {
       & > tr.blue-total,
       & > tr.blue-total td:nth-child(1) {
-        background-color: $lightest-blue;
+        background-color: colors.$lightest-blue;
         font-weight: bold;
       }
 
       & > tr.yellow-total,
       & > tr.yellow-total td:nth-child(1) {
-        background-color: $ucla-gold;
+        background-color: colors.$ucla-gold;
         font-weight: bold;
 
         & > td {
@@ -103,7 +107,7 @@
       td {
         font-size: 0.8rem;
         line-height: 1rem;
-        color: $medium-grey5;
+        color: colors.$medium-grey5;
         padding: 8px 16px;
         word-wrap: break-word;
       }
@@ -118,7 +122,7 @@
     tr th:nth-child(1) {
       position: absolute;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         position: relative;
       }
     }
@@ -135,7 +139,7 @@
       &::before, &::after {
         content: '\25E4';
         font-size: 6px;
-        color: $medium-grey5;
+        color: colors.$medium-grey5;
         display: block;
         position: absolute;
         left: 18px;
@@ -143,22 +147,22 @@
         width: 6px;
         height: 9px;
 
-        @include transform ( rotate(45deg) );
+        @include helper.transform ( rotate(45deg) );
       }
 
       &::after {
         left: 16px;
         top: 16px;
 
-        @include transform ( rotate(225deg) );
+        @include helper.transform ( rotate(225deg) );
       }
 
       &.sorting-asc {
-        &::after { color: $default-state; }
+        &::after { color: colors.$default-state; }
       }
 
       &.sorting-desc {
-        &::before { color: $default-state; }
+        &::before { color: colors.$default-state; }
       }
     }
   }
@@ -171,7 +175,7 @@
     overflow-y: scroll;
     font-weight: bold;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       min-width: 300px;
       position: relative;
     }
@@ -182,16 +186,16 @@
     height: 8px;
 
     &-track {
-      box-shadow: inset 0 -1px 0 0 $grey-10, inset 0 1px 0 0 $grey-10;
+      box-shadow: inset 0 -1px 0 0 colors.$grey-10, inset 0 1px 0 0 colors.$grey-10;
       border-radius: 4px;
     }
 
     &-thumb {
-      background: $default-state;
+      background: colors.$default-state;
       border-radius: 4px;
 
       &:hover {
-        background: $hover-state;
+        background: colors.$hover-state;
       }
     }
   }
