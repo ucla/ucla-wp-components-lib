@@ -1,3 +1,10 @@
+# [1.0.0-dev-beta.14](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.13...v1.0.0-dev-beta.14) (2021-04-15)
+
+
+### Bug Fixes
+
+* **tab.js:** console Error Fix ([6062280](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/60622808ebc54c3bebc16d3cff64ab2e75247fcb))
+
 # [1.0.0-dev-beta.13](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.12...v1.0.0-dev-beta.13) (2021-04-15)
 
 
