@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 # [1.0.0-beta.11](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-04-15)
+=======
+# [1.0.0-dev-beta.13](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.12...v1.0.0-dev-beta.13) (2021-04-15)
+>>>>>>> development
 
 
 ### Bug Fixes
 
 * **tab.js:** fix CDN Javascript Error ([93bba5b](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/93bba5be1c38b9638387d3b7ebe105b60964c4eb))
 
+<<<<<<< HEAD
 # [1.0.0-beta.10](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-04-14)
 
 
@@ -12,6 +17,8 @@
 
 * **grid, typography:** fix spacing ([b6b56dc](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/b6b56dc3cae624fc70deb83c1b3b3b1718c4d6c9))
 
+=======
+>>>>>>> development
 # [1.0.0-dev-beta.12](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.11...v1.0.0-dev-beta.12) (2021-04-14)
 
 

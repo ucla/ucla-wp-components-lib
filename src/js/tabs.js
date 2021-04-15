@@ -256,21 +256,25 @@ $(document).ready(function (){
     // Determine whether there should be a delay
     // when user navigates with the arrow keys
     function determineDelay () {
-      let hasDelay = Boolean.TRUE === tablist.getAttribute('data-delay');
-      let delay = 0;
+      window.onload = function () {
+        let hasDelay = tablist.hasAttribute('data-delay');
+        let delay = 0;
 
-      if (hasDelay === TRUE) {
-        let delayValue = tablist.getAttribute('data-delay');
-        if (delayValue) {
-          delay = delayValue;
-        }
-        else {
-          // If no value is specified, default to 300ms
-          delay = 300;
+        if (hasDelay) {
+          let delayValue = tablist.getAttribute('data-delay');
+          if (delayValue) {
+            delay = delayValue;
+          }
+          else {
+            // If no value is specified, default to 300ms
+            delay = 300;
+          };
         };
+
+        return delay;
       };
 
-      return delay;
+
     };
 
     //
