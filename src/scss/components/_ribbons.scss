@@ -1,9 +1,12 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+
 .ribbon span {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: $white;
-  background: $ucla-blue;
+  color: colors.$white;
+  background: colors.$ucla-blue;
   display: inline-block;
   padding: 8px 4px 6px 4px;
   margin-bottom: 2px;
@@ -13,7 +16,7 @@
 
   &.last { padding-right: 8px; }
 
-  @media (min-width: breakpoint-min(md)) {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: 3rem;
     padding: 8px 4px 4px 12px;
     margin-bottom: 2px;
@@ -29,8 +32,8 @@
   font-weight: bold;
   text-transform: none;
   line-height: 1;
-  color: $medium-grey5;
-  background: $ucla-gold;
+  color: colors.$medium-grey5;
+  background: colors.$ucla-gold;
   display: inline-block;
   padding: 12px 3px 6px 3px;
   margin-bottom: 2px;

@@ -1,3 +1,5 @@
+@use "../utilities/colors";
+
 ul {
   list-style: none;
   line-height: 24px;
@@ -9,7 +11,7 @@ ul {
 
     &::before {
       content: "\25AA";
-      color: $ucla-blue;
+      color: colors.$ucla-blue;
       width: 3em;
       margin-left: -18px;
       padding-right: 13px;
@@ -48,7 +50,7 @@ ol {
 
     &::before {
       content: "." counter(li);
-      color: $ucla-blue;
+      color: colors.$ucla-blue;
       display: inline-block;
       width: 1em;
       margin-left: -1.5em;

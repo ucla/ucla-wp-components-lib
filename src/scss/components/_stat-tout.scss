@@ -1,3 +1,6 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+
 /*************************************
 ************************************
 
@@ -19,7 +22,7 @@ TABLE OF CONTENTS:
 // .stat-set is the container required for multiple stat touts across
 // This handles responsiveness of more than one stat tout across
 .stat-set {
-  @media (min-width: breakpoint-min(md)) {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
     display: flex;
   }
 }
@@ -28,10 +31,10 @@ TABLE OF CONTENTS:
 .stat-wrapper {
   .stat-tout {
     display: block;
-    border-left: 4px solid $ucla-gold;
+    border-left: 4px solid colors.$ucla-gold;
     padding: 16px 24px 16px 28px;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       display: inline-block;
     }
 
@@ -40,7 +43,7 @@ TABLE OF CONTENTS:
     &__number {
       font-size: 54px;
       line-height: 48px;
-      color: $medium-grey5;
+      color: colors.$medium-grey5;
       font-weight: bold;
       display: block;
       margin-bottom: 8px;
@@ -62,9 +65,9 @@ TABLE OF CONTENTS:
       font-weight: bold;
       display: block;
       max-width: 212px;
-      color: $medium-grey5;
+      color: colors.$medium-grey5;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         max-width: 312px;
       }
     }
@@ -76,7 +79,7 @@ TABLE OF CONTENTS:
       font-size: 12.8px;
       font-weight: bold;
       font-style: italic;
-      color: $grey-60;
+      color: colors.$grey-60;
       padding-top: 8px;
       line-height: 16px;
     }
@@ -87,7 +90,7 @@ TABLE OF CONTENTS:
       Note: inline stat touts appear stacked on mobile widths.
     *************/
     &--inline {
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: flex;
         align-items: stretch;
 
@@ -95,7 +98,7 @@ TABLE OF CONTENTS:
           margin-right: 16px;
           margin-bottom: 8px;
 
-          @media (min-width: breakpoint-min(lg)) {
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
             margin-bottom: 0;
           }
         }
