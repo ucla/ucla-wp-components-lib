@@ -1,3 +1,10 @@
+# [1.0.0-beta.12](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-04-15)
+
+
+### Bug Fixes
+
+* **tab.js:** console Error Fix ([6062280](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/60622808ebc54c3bebc16d3cff64ab2e75247fcb))
+
 <<<<<<< HEAD
 # [1.0.0-beta.11](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-04-15)
 =======
