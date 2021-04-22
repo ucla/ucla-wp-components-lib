@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Arrow Down</title>
-    <g id="Icon/arrow-down-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Path" fill="#000000" points="14.82 17.18 24 26.34 33.18 17.18 36 20 24 32 12 20"></polygon>
-    </g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+   <title>Arrow Down</title>
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+</style>
+<path class="st0" d="M14.8,17.2l9.2,9.2l9.2-9.2L36,20L24,32L12,20L14.8,17.2z"/>
 </svg>
