@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Arrow Left</title>
-    <g id="Icon/arrow-left-baseline-defaultblue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Shape" fill="#00598C" transform="translate(23.410000, 20.000000) scale(-1, 1) translate(-23.410000, -20.000000) " points="16 29.18 25.16 20 16 10.82 18.82 8 30.82 20 18.82 32"></polygon>
-    </g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+   <title>Arrow Left</title>
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#00598C;}
+</style>
+<path class="st0" d="M30.8,29.2L21.7,20l9.2-9.2L28,8L16,20l12,12L30.8,29.2z"/>
 </svg>

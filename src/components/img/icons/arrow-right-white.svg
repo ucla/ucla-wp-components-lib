@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Arrow Right</title>
-    <g id="Icon/arrow-right-white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Background" points="0 0 48 0 48 48 0 48"></polygon>
-        <polygon id="Shape" fill="#FFFFFF" points="18 33.18 26.6531714 24 18 14.82 20.6639676 12 32 24 20.6639676 36"></polygon>
-    </g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+   <title>Arrow Right</title>
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<g>
+	<path class="st0" d="M0,0h48v48H0V0z"/>
+	<path class="st1" d="M18,33.2l8.7-9.2L18,14.8l2.7-2.8L32,24L20.7,36L18,33.2z"/>
+</g>
 </svg>
