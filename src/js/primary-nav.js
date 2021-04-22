@@ -9,6 +9,13 @@ $(document).ready(function (){
 
   // Show nav children on click of toggle
   $toggle.on('click', function () {
+
+    if ($(this).hasClass('is-open')) {
+      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
+    } else {
+      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
+    }
+
     $(this).siblings('.nav-primary__sublist').toggleClass('nav-primary__sublist--hidden');
     $(this).toggleClass('is-open');
   });
@@ -128,16 +135,23 @@ $(document).ready(function (){
     $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
-    $('#nav-main').find('.nav-primary__link--has-children').attr('aria-expanded', 'false');
+    $('#nav-main').find('.nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
   });
 
   //Set aria labels for the primary navigation
   $('#nav-main .nav-primary__link--has-children').mouseover(function () {
-    $(this).attr('aria-expanded', 'true');
+    $(this).find('.nav-primary__sublist').attr('aria-expanded', 'true');
+    $(this).find('.nav-primary__sublist').removeClass('nav-primary__sublist--hidden');
   });
 
-  $('#nav-main .nav-primary__link--has-children').mouseout(function () {
-    $(this).attr('aria-expanded', 'false');
+  $('#nav-main .nav-primary__link--has-children').mouseleave(function () {
+
+    let $this = $(this);
+
+    $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
+    setTimeout(function () {
+      $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
+    }, 50);
   });
 
 
@@ -169,27 +183,9 @@ $(document).ready(function (){
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
 
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
-            $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
+            $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
           }
 
-          //if this is a primary navigation item
-          /*if ($focus.hasClass('nav-primary__link')) {
-
-            $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
-
-            //has a dropdown
-            if ($dropdown.length > 0) {
-
-              //Show the dropdown
-              $dropdown.show();
-
-              //add a tabindex of 0
-              $dropdown.find('.nav-primary__link').attr('tabindex', '0');
-
-              //set aria expanded to true
-              $focus.parent().attr('aria-expanded', 'true');
-            }
-          }*/
         }, 50);
       }
 
@@ -214,7 +210,7 @@ $(document).ready(function (){
             $dropdown.find('.nav-primary__link').attr('tabindex', '0');
 
             //set aria expanded to true
-            $focus.parent().attr('aria-expanded', 'true');
+            $focus.parent().find('.nav-primary__sublist').attr('aria-expanded', 'true');
           }
         }
       }
@@ -228,7 +224,7 @@ $(document).ready(function (){
 
           //close the dropdowns
           $('.nav-primary__list .nav-primary__sublist').attr('style', '');
-          $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
+          $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
 
           //if this is a nav item
           if ($focus.parent().parent('.nav-primary__sublist').length > 0) {
@@ -278,12 +274,22 @@ $(document).ready(function (){
       if (keyCode === 27) {
 
         let $hamburgerBtn = $('.hamburger');
-
-        console.log('escape mobile');
+        let $focus = $(':focus');
 
         if ($hamburgerBtn.hasClass('hamburger--is-active')) {
-          $hamburgerBtn.trigger('click');
-          $hamburgerBtn.focus();
+
+          //if this is the children level focus
+          if ($focus.parent().parent().hasClass('nav-primary__sublist')) {
+
+            $focus.parent().parent().parent().find('.nav-primary__toggle').trigger('click');
+            $focus.parent().parent().parent().find('.nav-primary__toggle').focus();
+
+          } else {
+
+            //if this is the children level focus
+            $hamburgerBtn.trigger('click');
+            $hamburgerBtn.focus();
+          }
         }
       }
 

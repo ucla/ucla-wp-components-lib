@@ -424,9 +424,11 @@
 
           /* Show child links on hover of parents container */
           & > ul {
-            display: block;
+            /* display: block; */
             margin-top: 0;
             z-index: 820;
+            /* opacity: 1;
+            transition-delay: 0.5s; */
           }
         }
       }
@@ -695,6 +697,7 @@
     line-height: 1.333rem;
     text-decoration: none;
     padding: 14px 24px;
+    cursor: pointer;
 
     @media (min-width: breakpoint-min(lg)) {
       padding: 8px 16px 16px;
