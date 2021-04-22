@@ -1,3 +1,5 @@
+# Contribute
+
 We invite anyone at UCLA to recommend features and contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html), and steps outlined below.
 
 We also encourage you to join our Slack channel. It's a great place to ask questions, discuss ideas, and share contributions with others. If you haven't done so already, sign up for [UCLA Slack](http://ucla.slack.com) workspace and add yourself to our channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS).
