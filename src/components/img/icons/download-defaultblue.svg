@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Download</title>
-    <g id="Icon/download-defaultblue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M24,4 C35.045695,4 44,12.954305 44,24 C44,35.045695 35.045695,44 24,44 C12.954305,44 4,35.045695 4,24 C4,12.954305 12.954305,4 24,4 Z M24,7 C14.6111593,7 7,14.6111593 7,24 C7,33.3888407 14.6111593,41 24,41 C33.3888407,41 41,33.3888407 41,24 C41,14.6111593 33.3888407,7 24,7 Z M25.6666667,10.6666667 L25.6666667,30.95 L34.9833333,21.65 L37.3333333,24 L24,37.3333333 L10.6666667,24 L13.0333333,21.6333333 L22.3333333,30.95 L22.3333333,10.6666667 L25.6666667,10.6666667 Z" id="Combined-Shape" fill="#00598C"></path>
-    </g>
+<svg width="48px" height="48px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+   <title>Download</title>
+<style type="text/css">
+	.st0-blue{fill-rule:evenodd;clip-rule:evenodd;fill:#00598C;}
+</style>
+<path class="st0-blue" d="M24,4c11,0,20,9,20,20s-9,20-20,20S4,35,4,24S13,4,24,4z M24,7C14.6,7,7,14.6,7,24s7.6,17,17,17s17-7.6,17-17
+	S33.4,7,24,7z M25.7,10.7V31l9.3-9.3l2.3,2.4L24,37.3L10.7,24l2.4-2.4l9.3,9.3V10.7H25.7z"/>
 </svg>
