@@ -1,3 +1,5 @@
+@use "../utilities/colors";
+
 .btn {
   padding: 12px 16px 8px;
   font-size: 16px;
@@ -31,63 +33,63 @@
 
   // primary-light button styling
   &--lightbg {
-    background: $default-state;
-    color: $white;
+    background: colors.$default-state;
+    color: colors.$white;
 
     &:visited {
-      background: $default-state;
-      color: $white;
+      background: colors.$default-state;
+      color: colors.$white;
     }
 
     &:hover {
-      background: $hover-state;
+      background: colors.$hover-state;
     }
 
     &:focus {
-      background: $focus-state;
-      outline: 1px dotted $hover-state;
+      background: colors.$focus-state;
+      outline: 1px dotted colors.$hover-state;
       outline-offset: 2px;
     }
 
     &:active {
-      background: $active-state;
+      background: colors.$active-state;
       outline: none;
     }
 
     &:disabled {
-      background: $disabled-state;
-      color: $white;
+      background: colors.$disabled-state;
+      color: colors.$white;
     }
   }
 
   // primary-dark button styling
   &--darkbg {
     color: black;
-    background: $ucla-gold;
+    background: colors.$ucla-gold;
 
     &:visited {
       color: black;
-      background: $ucla-gold;
+      background: colors.$ucla-gold;
     }
 
     &:hover {
-      background: $hover-state-dark;
+      background: colors.$hover-state-dark;
       color: black;
     }
 
     &:focus {
-      background: $focus-state-dark;
-      outline: 1px dotted $white;
+      background: colors.$focus-state-dark;
+      outline: 1px dotted colors.$white;
       outline-offset: 2px;
     }
 
     &:active {
-      background: $active-state-dark;
+      background: colors.$active-state-dark;
       outline: none;
     }
 
     &:disabled {
-      background: $disabled-state-dark;
+      background: colors.$disabled-state-dark;
     }
 
     &.icon--play::before {
@@ -99,73 +101,73 @@
 
   // secondary button styling
   &--secondary {
-    background: $white;
-    color: $default-state;
-    border: 2px solid $default-state;
+    background: colors.$white;
+    color: colors.$default-state;
+    border: 2px solid colors.$default-state;
 
     &:visited {
-      background: $white;
-      color: $default-state;
-      border: 2px solid $default-state;
+      background: colors.$white;
+      color: colors.$default-state;
+      border: 2px solid colors.$default-state;
     }
 
     &:hover {
-      background: $hover-state;
-      border-color: $hover-state;
-      color: $white;
+      background: colors.$hover-state;
+      border-color: colors.$hover-state;
+      color: colors.$white;
     }
 
     &:focus {
-      background: $focus-state;
-      border-color: $focus-state;
-      outline: 1px dotted $focus-state;
+      background: colors.$focus-state;
+      border-color: colors.$focus-state;
+      outline: 1px dotted colors.$focus-state;
       outline-offset: 2px;
-      color: $white;
+      color: colors.$white;
     }
 
     &:active {
-      background: $active-state;
-      color: $white;
+      background: colors.$active-state;
+      color: colors.$white;
       outline: none;
     }
 
     &:disabled {
-      border-color: $disabled-state;
-      color: $disabled-state;
-      background: $white;
+      border-color: colors.$disabled-state;
+      color: colors.$disabled-state;
+      background: colors.$white;
     }
   }
 
   // tertiary button styling
   &--tertiary {
     background: transparent;
-    color: $default-state;
+    color: colors.$default-state;
 
     &:visited {
       background: transparent;
-      color: $default-state;
+      color: colors.$default-state;
     }
 
     &:hover {
-      background: $hover-state;
-      color: $white;
+      background: colors.$hover-state;
+      color: colors.$white;
     }
 
     &:focus {
-      background: $focus-state;
-      outline: 1px dotted $hover-state;
+      background: colors.$focus-state;
+      outline: 1px dotted colors.$hover-state;
       outline-offset: 2px;
-      color: $white;
+      color: colors.$white;
     }
 
     &:active {
-      background: $active-state;
-      color: $white;
+      background: colors.$active-state;
+      color: colors.$white;
       outline: none;
     }
 
     &:disabled {
-      color: $disabled-state;
+      color: colors.$disabled-state;
       background: transparent;
     }
   }
@@ -197,42 +199,42 @@
     &-left,
     &-center,
     &-right {
-      background: $white;
-      color: $default-state;
-      border: 2px solid $default-state;
+      background: colors.$white;
+      color: colors.$default-state;
+      border: 2px solid colors.$default-state;
       border-radius: 0px;
 
       &:visited {
-        background: $white;
-        color: $default-state;
-        border: 2px solid $default-state;
+        background: colors.$white;
+        color: colors.$default-state;
+        border: 2px solid colors.$default-state;
       }
 
       &:hover {
-        color: $white;
-        border-color: $hover-state;
-        background: $hover-state;
+        color: colors.$white;
+        border-color: colors.$hover-state;
+        background: colors.$hover-state;
       }
 
       &:focus {
-        color: $white;
-        border-color: $focus-state;
-        background: $focus-state;
-        outline: 1px dotted $hover-state;
+        color: colors.$white;
+        border-color: colors.$focus-state;
+        background: colors.$focus-state;
+        outline: 1px dotted colors.$hover-state;
         outline-offset: 2px;
       }
 
       &:active {
-        color: $white;
-        background: $active-state;
-        border-color: $active-state;
+        color: colors.$white;
+        background: colors.$active-state;
+        border-color: colors.$active-state;
         outline: none;
       }
 
       &:disabled {
-        background: $disabled-state;
-        border-color: $disabled-state;
-        color: $white;
+        background: colors.$disabled-state;
+        border-color: colors.$disabled-state;
+        color: colors.$white;
       }
     }
 
@@ -271,55 +273,55 @@
       border-width: 2px;
       border-style: solid;
       border-color: transparent;
-      color: $default-state;
+      color: colors.$default-state;
       background: white;
 
       &:visited {
-        color: $default-state;
+        color: colors.$default-state;
         background: white;
       }
 
       &:hover {
-        color: $white;
-        background: $hover-state;
-        border-color: $hover-state;
+        color: colors.$white;
+        background: colors.$hover-state;
+        border-color: colors.$hover-state;
       }
 
       &:focus {
-        background: $focus-state;
-        border-color: $focus-state;
-        outline: 1px dotted $hover-state;
+        background: colors.$focus-state;
+        border-color: colors.$focus-state;
+        outline: 1px dotted colors.$hover-state;
         outline-offset: 2px;
-        color: $white;
+        color: colors.$white;
       }
 
       &:active {
-        background: $active-state;
-        border-color: $active-state;
-        color: $white;
+        background: colors.$active-state;
+        border-color: colors.$active-state;
+        color: colors.$white;
         outline: none;
       }
     }
 
     & .page--current {
-      color: $lightest-grey;
+      color: colors.$lightest-grey;
 
       &:visited {
-        color: $lightest-grey;
-        border-color: $lightest-grey;
+        color: colors.$lightest-grey;
+        border-color: colors.$lightest-grey;
       }
 
       &:hover {
-        color: $white;
-        border-color: $hover-state;
+        color: colors.$white;
+        border-color: colors.$hover-state;
       }
 
       &:focus {
-        color: $white;
+        color: colors.$white;
       }
 
       &:active {
-        border-color: $active-state;
+        border-color: colors.$active-state;
       }
     }
   }
@@ -331,6 +333,6 @@
     padding: 7px 12px;
     border-width: 2px;
     border-style: solid;
-    border-color: $default-state;
+    border-color: colors.$default-state;
   }
 }

@@ -2,33 +2,33 @@
 // BASE UCLA COMPONENET STYLES
 // These are component related styles only. DO NOT put fractal or mandlebrot theme styles here. Those belong in ./src/docs/scss
 
-@import "./utilities/_colors";
-@import "./utilities/_mixins/_helper";
-@import "./utilities/_helper.scss";
-@import "./utilities/_reset";
-@import "./utilities/_normalize";
-@import "./utilities/_variables";
-@import "./utilities/_mixins/_breakpoints";
-@import "./utilities/_mixins/_gradients";
-@import "./utilities/_spacing";
-@import "./utilities/_grid";
-@import "./utilities/_typography";
-@import "./utilities/_backgrounds";
+@use "./utilities/_colors";
+@use "./utilities/_mixins/_helper";
+@use "./utilities/_helper.scss" as helper2;
+@use "./utilities/_reset";
+@use "./utilities/_normalize";
+@use "./utilities/_variables";
+@use "./utilities/_mixins/_breakpoints";
+@use "./utilities/_mixins/_gradients";
+@use "./utilities/_spacing";
+@use "./utilities/_grid";
+@use "./utilities/_typography";
+@use "./utilities/_backgrounds";
 
 // Components
-@import "./components/_alerts";
-@import "./components/_accordion";
-@import "./components/_blockquote";
-@import "./components/_button";
-@import "./components/_cards";
-@import "./components/_footer";
-@import "./components/_form";
-@import "./components/_links";
-@import "./components/_lists";
-@import "./components/_ribbons";
-@import "./components/_social";
-@import "./components/_stat-tout";
-@import "./components/_table";
-@import "./components/_tabs";
-@import "./components/_navigation";
-@import "./components/_tiles";
+@use "./components/_alerts";
+@use "./components/_accordion";
+@use "./components/_blockquote";
+@use "./components/_button";
+@use "./components/_cards";
+@use "./components/_footer";
+@use "./components/_form";
+@use "./components/_links";
+@use "./components/_lists";
+@use "./components/_ribbons";
+@use "./components/_social";
+@use "./components/_stat-tout";
+@use "./components/_table";
+@use "./components/_tabs";
+@use "./components/_navigation";
+@use "./components/_tiles";
