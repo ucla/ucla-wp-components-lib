@@ -17,7 +17,7 @@ BEM stands for Blocks, Elements, and Modifiers. We are using the BEM naming conv
   - Block names consist of Latin letters, digits, and dashes.
 
 ## HTML
-- Any DOM node can be a block if it accepts a class name.
+  - Any DOM node can be a block if it accepts a class name.
 ```
 <div class="block">...</div>
 ```
@@ -67,7 +67,7 @@ BEM stands for Blocks, Elements, and Modifiers. We are using the BEM naming conv
 ```
 
 ## HTML
-- Add modifier to block/element DOM node as extra class name.
+  - Add modifier to block/element DOM node as extra class name.
 ```
 <div class="block block--mod">...</div>
 ```
