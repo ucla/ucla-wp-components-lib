@@ -5,8 +5,8 @@
 ## Table of Contents
 
 * [Block](#markdown-header-block)
-* [Element](#markdown-element)
-* [Modifier](#markdown-modifier)
+* [Element](#markdown-header-element)
+* [Modifier](#markdown-header-modifier)
 
 ---
 BEM stands for Blocks, Elements, and Modifiers. We are using the BEM naming convention for classes. A linter has been installed for scripts and scss to help ensure quality. Strict BEM naming rules can be found on the [BEM documentation site.](http://getbem.com/naming/)
