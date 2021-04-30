@@ -1,3 +1,5 @@
+@use "../utilities/colors";
+
 .alert {
   /* Default Alerts Styling */
   padding: 16px 16px 16px 37px;
@@ -7,7 +9,7 @@
 
   /* Specific Alert Styles */
   &--primary {
-    border-color: $lighter-blue;
+    border-color: colors.$lighter-blue;
   }
 
   &--secondary {
@@ -17,18 +19,18 @@
   &--success {
     background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: $success-green;
+    border-color: colors.$success-green;
   }
 
   &--error {
     background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: $error-red;
+    border-color: colors.$error-red;
   }
 
   &--warning {
     background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
     background-size: 24px 24px;
-    border-color: $warning-orange;
+    border-color: colors.$warning-orange;
   }
 }
