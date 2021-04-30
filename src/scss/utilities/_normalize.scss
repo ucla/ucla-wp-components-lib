@@ -1,3 +1,5 @@
+@use "colors";
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -337,12 +339,12 @@ html {
  */
 
 ::-moz-selection {
-    background: $lightest-blue;
+    background: colors.$lightest-blue;
     text-shadow: none;
 }
 
 ::selection {
-    background: $lightest-blue;
+    background: colors.$lightest-blue;
     text-shadow: none;
 }
 
@@ -354,7 +356,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid $grey-10;
+    border-top: 1px solid colors.$grey-10;
     margin: 1em 0;
     padding: 0;
 }
