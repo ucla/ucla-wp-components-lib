@@ -1,3 +1,7 @@
+@use "../../scss/utilities/_mixins/breakpoints";
+@use "../../scss/utilities/colors";
+@use "../../scss/utilities/variables";
+
 /***************** STOP!!! READ THIS!! *****************/
 // These are Fractal documentation specific styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
@@ -22,12 +26,12 @@
       width: 10px;
 
       &-track {
-        background-color: $light-grey;
+        background-color: colors.$light-grey;
       }
 
       &-thumb {
         border-radius: 5px;
-        background-color: $ucla-blue;
+        background-color: colors.$ucla-blue;
       }
     }
 
@@ -47,16 +51,16 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: $grey-80;
+    color: colors.$grey-80;
     font-weight: bold;
-    font-family: $font;
+    font-family: variables.$font;
   }
 
   h1 {
     font-size: 36px;
     line-height: 40.5px;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: 48px;
       line-height: 54px;
     }
@@ -66,7 +70,7 @@
     font-size: 28px;
     line-height: 32px;
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: 36px;
       line-height: 40.5px;
     }

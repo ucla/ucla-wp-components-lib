@@ -1,3 +1,5 @@
+@use "../utilities/colors";
+
 //=== SOCIAL MEDIA LINKS ===//
 .social-links-container,
 .social-links-container--blue {
@@ -21,30 +23,30 @@
 
 .social-links-container {
   a:hover {
-    background-color: $hover-state;
+    background-color: colors.$hover-state;
   }
 
   a:focus {
-    outline: 1px dotted $focus-state;
+    outline: 1px dotted colors.$focus-state;
   }
 
   a:active {
-    background-color: $active-state;
+    background-color: colors.$active-state;
   }
 
   &--blue {
-    background-color: $ucla-blue;
+    background-color: colors.$ucla-blue;
 
     a:hover {
-      background-color: $hover-state-dark;
+      background-color: colors.$hover-state-dark;
     }
 
     a:focus {
-      outline: 1px dotted $white;
+      outline: 1px dotted colors.$white;
     }
 
     a:active {
-      background-color: $active-state-dark;
+      background-color: colors.$active-state-dark;
     }
   }
 
@@ -161,7 +163,7 @@
   width: 276px;
   height: 276px;
   margin: 0 24px 24px 0;
-  background-color: $ucla-blue;
+  background-color: colors.$ucla-blue;
 
   a {
     position: relative;
@@ -171,17 +173,17 @@
     text-decoration: none;
 
     &:hover {
-      background: $hover-state;
+      background: colors.$hover-state;
     }
 
     &:focus {
-      background: $focus-state;
-      outline: 1px dotted $focus-state;
+      background: colors.$focus-state;
+      outline: 1px dotted colors.$focus-state;
       outline-offset: 2px;
     }
 
     &:active {
-      background: $active-state;
+      background: colors.$active-state;
     }
   }
 
@@ -193,7 +195,7 @@
 
   &__text,
   &__info {
-    color: $white;
+    color: colors.$white;
   }
 
   &__text {
