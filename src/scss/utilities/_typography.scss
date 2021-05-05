@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6 {
   color: colors.$grey-80;
   font-weight: bold;
   font-family: variables.$font;
+  padding-bottom: 16px;
 }
 
 h1, .h1 {
@@ -58,6 +59,7 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: colors.$grey-80;
+  padding-bottom: 16px;
 
   strong {
     font-size: bold;
