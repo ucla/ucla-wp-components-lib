@@ -1,7 +1,7 @@
 ---
 title: Icons
 ---
-Icons in our library are provided as an extension. If you are using our UCLA theme, the icons are already conveniently installed on your site. We have also supplied the icons for download via zip file.
+Icons in our library are provided as an extension. If you are using our UCLA WordPress theme, the icons are conveniently installed on your site. We have also supplied the icons for download via zip file.
 
 ### **Download Icons**
 <a class="create-button" href="/UCLA-WEB-ICONS.zip">Download Icons Zip File</a>
@@ -9,7 +9,7 @@ Icons in our library are provided as an extension. If you are using our UCLA the
 ## **Usage**
 
 ### **Accessibility Requirements**
-The supplied icons are ADA compliant. Strategic Communications strongly encourages using these for your UCLA website or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files.
+The supplied icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of light weight SVGs for UCLA websites or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files. For more information on how icons are created and reviewed, open any of the svg files in text editor.
 
 
 ### **Please Note**
@@ -30,9 +30,9 @@ The supplied icons are ADA compliant. Strategic Communications strongly encourag
 
 ### **Use as an Image**
 
-<img alt="download" src="/img/icons/download-black.svg">
-<img alt="download" src="/img/icons/download-white.svg" style="background: #2774AE">
-<img alt="download" src="/img/icons/download-defaultblue.svg">
+<img alt="download" src="/img/icons/denotive/download--black.svg">
+<img alt="download" src="/img/icons/denotive/download--white.svg" style="background: #2774AE">
+<img alt="download" src="/img/icons/denotive/download--blue.svg">
 
 ```
 <!-- Download -->
