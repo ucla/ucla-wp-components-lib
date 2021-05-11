@@ -1,17 +1,19 @@
+@use "colors";
+
 .grey-40 {
-  background: $grey-40;
+  background: colors.$grey-40;
 }
 
 .ucla-blue {
-  background: $ucla-blue;
+  background: colors.$ucla-blue;
 }
 
 .lightest-grey-2 {
-  background: $lightest-grey-2;
+  background: colors.$lightest-grey-2;
 }
 
 .light-grey {
-  background: $light-grey;
+  background: colors.$light-grey;
 
   &.tall-75,
   &.tall-65 {
@@ -22,7 +24,7 @@
       display: block;
       position: absolute;
       width: 100%;
-      background: $white;
+      background: colors.$white;
       top: 0;
     }
 

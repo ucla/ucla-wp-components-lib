@@ -1,19 +1,22 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+
 /*------------------------------------
     Header
   ------------------------------------*/
 #header {
-  border-bottom: 1px solid $grey-10;
+  border-bottom: 1px solid colors.$grey-10;
 
   a {
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
   }
 
   .header-logo {
     a {
       &:focus {
-        outline: 1px dotted $white;
+        outline: 1px dotted colors.$white;
       }
     }
   }
@@ -23,11 +26,11 @@
     Header Logo
   ------------------------------------*/
 .header-logo {
-  background-color: $ucla-blue;
+  background-color: colors.$ucla-blue;
   padding: 8px 24px;
   max-height: 48px;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     padding: 12px 24px;
   }
 
@@ -69,7 +72,7 @@
   display: inline-block;
   width: calc(100% - 5px);
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     width: 100%;
   }
 
@@ -88,15 +91,15 @@
 
     a {
       text-decoration: none;
-      color: $default-state;
+      color: colors.$default-state;
 
       &:hover {
-        background-color: $hover-state;
-        color: $white;
+        background-color: colors.$hover-state;
+        color: colors.$white;
       }
 
       &:focus {
-        outline: 1px dotted $hover-state;
+        outline: 1px dotted colors.$hover-state;
       }
     }
 
@@ -117,21 +120,21 @@
   }
 
   &--white {
-    color: $white;
+    color: colors.$white;
     position: relative;
 
     .breadcrumb__item {
       a {
-        color: $white;
+        color: colors.$white;
 
         &:hover {
-          background-color: $hover-state-dark;
-          color: $medium-grey5;
+          background-color: colors.$hover-state-dark;
+          color: colors.$medium-grey5;
         }
       }
 
       &::before {
-        color: $white;
+        color: colors.$white;
       }
     }
   }
@@ -142,7 +145,7 @@
     width: 0px;
     height: 25px;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: none;
     }
 
@@ -177,7 +180,7 @@
 
   a {
     text-decoration: none;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     display: block;
   }
 }
@@ -194,7 +197,7 @@
   top: 1px;
   min-height: 41px;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     padding: 24px 24px 0px;
     min-height: auto;
   }
@@ -209,7 +212,7 @@
     width: 75%;
     margin-left: 24px;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       width: 50%;
       margin-left: 0px;
       margin-bottom: 0px;
@@ -218,7 +221,7 @@
     a {
       margin-bottom: 0px;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         margin-bottom: 32px;
       }
     }
@@ -230,7 +233,7 @@
     position: relative;
     display: none;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: block;
     }
 
@@ -250,7 +253,7 @@
   position: relative;
   width: 100%;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     width: auto;
   }
 
@@ -261,7 +264,7 @@
     width: 100%;
     z-index: 100;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       top: 0px;
       z-index: 100;
     }
@@ -273,7 +276,7 @@
       left: 0;
       top: 0;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: auto;
         position: relative;
         left: auto;
@@ -284,7 +287,7 @@
     &--is-active {
       right: 0%;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         right: 0;
       }
     }
@@ -296,7 +299,7 @@
     bottom: -31px;
     margin-right: 24px;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: none;
       margin-right: 0px;
     }
@@ -327,29 +330,29 @@
     font-size: 0.875rem;
     line-height: 1.286;
     font-weight: bold;
-    color: $default-state;
+    color: colors.$default-state;
     display: block;
     padding: 8px 16px;
     margin-left: 2px;
     border-radius: 2px;
 
     &:hover {
-      color: $white;
-      background-color: $hover-state;
+      color: colors.$white;
+      background-color: colors.$hover-state;
     }
 
     &:active {
-      color: $white;
-      background-color: $active-state;
+      color: colors.$white;
+      background-color: colors.$active-state;
     }
 
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
 
     &--active {
-      color: $white;
-      background-color: $default-state;
+      color: colors.$white;
+      background-color: colors.$default-state;
     }
   }
 }
@@ -359,10 +362,10 @@
   ------------------------------------*/
 .nav-primary {
   position: relative;
-  border-top: 1px solid $medium-grey3;
+  border-top: 1px solid colors.$medium-grey3;
   transition: right 0.5s ease;
 
-  @media (min-width: breakpoint-min(lg)) {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
     float: left;
     left: 0%;
     border-top: none;
@@ -376,9 +379,9 @@
 
     li {
       list-style: none;
-      background: $white;
+      background: colors.$white;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         background: none;
       }
 
@@ -391,7 +394,7 @@
     }
 
     /* Make the navigation a flexbox above 1024px */
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -401,10 +404,10 @@
     li {
       margin: 0;
       min-width: 100%;
-      border-bottom: 1px solid $medium-grey3;
+      border-bottom: 1px solid colors.$medium-grey3;
 
       /* Style li(s) above 1024px */
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         min-width: inherit;
         flex-basis: auto;
         align-self: flex-end;
@@ -414,8 +417,8 @@
         &:hover {
           /* Keep top level item hover state when inside child elesearch-iconts */
           & > .nav-primary__link {
-            background: $hover-state;
-            color: $white;
+            background: colors.$hover-state;
+            color: colors.$white;
 
             &::after {
               filter: brightness(0) invert(1);
@@ -449,11 +452,11 @@
 
         a {
           display: block;
-          background-color: $grey-10;
+          background-color: colors.$grey-10;
 
           /* Unset child link styles above 1024px */
-          @media (min-width: breakpoint-min(lg)) {
-            background-color: $white;
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            background-color: colors.$white;
             padding-left: 1rem;
           }
         }
@@ -464,7 +467,7 @@
   &__item {
     a {
       &.nav-primary__link--current-page {
-        border-left: 4px solid $ucla-gold;
+        border-left: 4px solid colors.$ucla-gold;
         padding-left: 20px;
       }
     }
@@ -477,7 +480,7 @@
       }
     }
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       padding-right: 10px;
 
       a {
@@ -491,7 +494,7 @@
             width: calc(100% - 32px);
             height: 4px;
             position: absolute;
-            background: $ucla-gold;
+            background: colors.$ucla-gold;
             top: 35px;
             left: 16px;
           }
@@ -504,7 +507,7 @@
 
           a {
             &.nav-primary__link--current-page {
-              border-left: 4px solid $ucla-gold;
+              border-left: 4px solid colors.$ucla-gold;
               padding-left: 12px;
 
               &::before {
@@ -518,9 +521,9 @@
   }
 
   &__toggle {
-    background-color: $white;
+    background-color: colors.$white;
     border: 0;
-    border-left: 1px solid $grey-10;
+    border-left: 1px solid colors.$grey-10;
     width: 3.2em;
     margin-left: auto;
 
@@ -535,7 +538,7 @@
     }
 
     &:hover {
-      background-color: $hover-state;
+      background-color: colors.$hover-state;
 
       &::after {
         filter: brightness(0) invert(1);
@@ -544,7 +547,7 @@
 
     &:focus {
       outline-offset: -0.25rem;
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
 
     &::after {
@@ -556,7 +559,7 @@
       background-size: 24px;
     }
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: none;
     }
   }
@@ -565,7 +568,7 @@
   &__sublist {
     width: 100%;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       position: absolute;
       width: 20rem;
       top: 44px;
@@ -577,8 +580,8 @@
 
     /* TODO refactor this to .nav-primary__list li>ul li */
     .nav-primary__item {
-      @media (min-width: breakpoint-min(lg)) {
-        border: 1px solid $grey-10;
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        border: 1px solid colors.$grey-10;
         border-top: 0;
 
         a {
@@ -587,28 +590,28 @@
       }
 
       &:first-child {
-        border-top: 1px solid $medium-grey3;
+        border-top: 1px solid colors.$medium-grey3;
 
-        @media (min-width: breakpoint-min(lg)) {
-          border-top: 1px solid $grey-10;
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-top: 1px solid colors.$grey-10;
         }
       }
 
       &:last-child {
         border-bottom: 0;
 
-        @media (min-width: breakpoint-min(lg)) {
-          border-bottom: 1px solid $grey-10;
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-bottom: 1px solid colors.$grey-10;
         }
       }
     }
 
     .nav-primary__link {
       padding: 14px 24px 14px 48px;
-      background-color: $lightest-grey-2;
+      background-color: colors.$lightest-grey-2;
 
-      @media (min-width: breakpoint-min(lg)) {
-        background-color: $white;
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        background-color: colors.$white;
       }
     }
   }
@@ -619,22 +622,22 @@
     display: block;
 
     &:hover {
-      background: $hover-state;
-      color: $white;
+      background: colors.$hover-state;
+      color: colors.$white;
     }
 
     &:focus {
       outline-offset: -0.25rem;
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         outline-offset: -0.25rem;
       }
     }
 
     &:active {
-      background: $active-state;
-      color: $white;
+      background: colors.$active-state;
+      color: colors.$white;
     }
 
     &--has-children {
@@ -647,7 +650,7 @@
         flex: 1;
       }
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: inline-block;
         position: relative;
         padding-right: 2px;
@@ -689,14 +692,14 @@
 
   /* All primary nav links */
   a {
-    color: $default-state;
+    color: colors.$default-state;
     font-weight: bold;
     font-size: 1rem;
     line-height: 1.333rem;
     text-decoration: none;
     padding: 14px 24px;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       padding: 8px 16px 16px;
       font-size: 1.125rem;
     }
@@ -727,7 +730,7 @@
         display: block;
         position: inherit;
 
-        @media (min-width: breakpoint-min(lg)) {
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
           display: inline-block;
           width: 91%;
           margin: 0;
@@ -759,7 +762,7 @@
       .nav-primary__search-submit {
         display: none;
 
-        @media (min-width: breakpoint-min(lg)) {
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
           display: inline-block;
           width: 8%;
           padding: 12px !important;
@@ -776,7 +779,7 @@
 
   /* Search Mobile */
   &__search-mobile {
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: none;
     }
   }
@@ -785,7 +788,7 @@
   &__search-desktop {
     display: none;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: inline-block;
       height: 44px;
       width: 56px;
@@ -805,7 +808,7 @@
         }
       }
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: block;
         height: 44px;
         width: 56px;
@@ -824,7 +827,7 @@
     }
 
     .nav-primary__search-block-form {
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: none;
         background: #FFFFFF;
         padding: 17px 32px 15px 32px;
@@ -868,28 +871,28 @@
 
   &:focus {
     outline-offset: -0.25rem;
-    outline: 1px dotted $hover-state;
+    outline: 1px dotted colors.$hover-state;
   }
 
   &:hover {
     opacity: 1;
-    background: $ucla-blue;
+    background: colors.$ucla-blue;
 
     .hamburger__inner {
-      background-color: $white;
+      background-color: colors.$white;
 
       &::before {
-        background-color: $white;
+        background-color: colors.$white;
       }
 
       &::after {
-        background-color: $white;
+        background-color: colors.$white;
       }
     }
   }
 
   &:active {
-    background-color: $active-state;
+    background-color: colors.$active-state;
   }
 
   &__box {
@@ -905,7 +908,7 @@
     transition-property: transform;
     width: 16px;
     height: 2px;
-    background: $ucla-blue;
+    background: colors.$ucla-blue;
     border-radius: 0px;
     position: absolute;
     display: block;
@@ -918,7 +921,7 @@
       display: block;
       width: 16px;
       height: 2px;
-      background: $ucla-blue;
+      background: colors.$ucla-blue;
       border-radius: 0px;
     }
 

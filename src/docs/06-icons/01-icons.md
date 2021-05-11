@@ -9,7 +9,13 @@ Icons in our library are provided as an extension. If you are using our UCLA Wor
 ## **Usage**
 
 ### **Accessibility Requirements**
-The supplied icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of light weight SVGs for UCLA websites or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files. For more information on how icons are created and reviewed, open any of the svg files in text editor.
+The supplied icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of light weight SVGs for UCLA websites or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files. Icons have been created and reviewed according to the known needs of the university.
+
+1. Export as SVG version1.1 to convert SVG to inline styles.
+2. IDs removed have been removed to prevent duplicate IDs per page in case icon is used more than once per page.
+4. Classes updated to BEM naming convention.
+5. Inline titles tags added to the SVG.
+6. DCP has reviewed the icon with a screen reader.
 
 
 ### **Please Note**

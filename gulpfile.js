@@ -10,7 +10,7 @@ const image = require('gulp-image');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const minify = require('gulp-minify');
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 const zip = require('gulp-zip');
 const del = require('del');
 
