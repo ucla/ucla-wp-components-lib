@@ -140,18 +140,31 @@ $(document).ready(function (){
 
   //Set aria labels for the primary navigation
   $('#nav-main .nav-primary__link--has-children').mouseover(function () {
-    $(this).find('.nav-primary__sublist').attr('aria-expanded', 'true');
-    $(this).find('.nav-primary__sublist').removeClass('nav-primary__sublist--hidden');
+
+    windowWidth = $(window).width();
+
+    //if this is desktop
+    if (windowWidth >= breakpoint) {
+
+      $(this).find('.nav-primary__sublist').attr('aria-expanded', 'true');
+      $(this).find('.nav-primary__sublist').removeClass('nav-primary__sublist--hidden');
+    }
   });
 
   $('#nav-main .nav-primary__link--has-children').mouseleave(function () {
 
     let $this = $(this);
 
-    $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
-    setTimeout(function () {
-      $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
-    }, 50);
+    windowWidth = $(window).width();
+
+    //if this is desktop
+    if (windowWidth >= breakpoint) {
+
+      $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
+      setTimeout(function () {
+        $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
+      }, 50);
+    }
   });
 
 
