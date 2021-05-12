@@ -151,49 +151,49 @@
       &-facebook {
         &:hover {
           content: url("/img/icons/social-icons/facebook-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-twitter {
         &:hover {
           content: url("/img/icons/social-icons/twitter-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-instagram {
         &:hover {
           content: url("/img/icons/social-icons/instagram-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-snapchat {
         &:hover {
           content: url("/img/icons/social-icons/snapchat-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-linkedin {
         &:hover {
           content: url("/img/icons/social-icons/linkedin-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-youtube {
         &:hover {
           content: url("/img/icons/social-icons/youtube-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
       &-tiktok {
         &:hover {
           content: url("/img/icons/social-icons/tiktok-black.svg");
-          background: colors.$focus-state-dark;
+          background: colors.$hover-state-dark;
         }
       }
 
@@ -347,49 +347,49 @@
       &-facebook {
         &:hover {
           content: url("/img/icons/social-icons/facebook-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-twitter {
         &:hover {
           content: url("/img/icons/social-icons/twitter-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-instagram {
         &:hover {
           content: url("/img/icons/social-icons/instagram-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-snapchat {
         &:hover {
           content: url("/img/icons/social-icons/snapchat-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-linkedin {
         &:hover {
           content: url("/img/icons/social-icons/linkedin-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-youtube {
         &:hover {
           content: url("/img/icons/social-icons/youtube-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
       &-tiktok {
         &:hover {
           content: url("/img/icons/social-icons/tiktok-white.svg");
-          background: colors.$focus-state;
+          background: colors.$hover-state;
         }
       }
 
@@ -401,6 +401,7 @@
         border-radius: 2px;
         position: relative;
 		display: inline-block;
+		text-decoration: none;
 
         &:hover {
           background-size: 48px;
