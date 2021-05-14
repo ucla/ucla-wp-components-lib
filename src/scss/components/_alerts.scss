@@ -2,11 +2,22 @@
 
 .alert {
   /* Default Alerts Styling */
-  padding: 16px 16px 16px 37px;
+  padding: 16px 16px 16px 16px;
   border-width: 4px;
   border-style: solid;
   line-height: 24px;
 
+  img {
+	float: left;
+    width: 24px;
+    height: 24px;
+	margin-right: 8px;
+  }
+  
+  figcaption {
+	margin-left: 32px;
+  }
+  
   /* Specific Alert Styles */
   &--primary {
     border-color: colors.$lighter-blue;
@@ -17,20 +28,14 @@
   }
 
   &--success {
-    background: white url("/img/icons/success-green.svg") no-repeat 8px 50%;
-    background-size: 24px 24px;
     border-color: colors.$success-green;
   }
 
   &--error {
-    background: white url("/img/icons/error-red.svg") no-repeat 8px 50%;
-    background-size: 24px 24px;
     border-color: colors.$error-red;
   }
 
   &--warning {
-    background: white url("/img/icons/warning-orange.svg") no-repeat 8px 50%;
-    background-size: 24px 24px;
     border-color: colors.$warning-orange;
   }
 }
