@@ -30,6 +30,18 @@
     background-size: contain;
     background-position: 0 -1px;
   }
+  
+  &.icon--link::after {
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 8px;
+    background: url("/img/icons/external-link-white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
 
   // primary-light button styling
   &--lightbg {
@@ -94,6 +106,12 @@
 
     &.icon--play::before {
       background: url("/img/icons/play-black.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+	
+	&.icon--link::after {
+      background: url("/img/icons/external-link-black.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
@@ -183,6 +201,19 @@
 
     &.icon--play::before {
       background: url("/img/icons/play-defaultblue.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+	
+	&.icon--link:hover::after,
+    &.icon--link:focus::after {
+      background: url("/img/icons/external-link-white.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+	
+	&.icon--link::after {
+      background: url("/img/icons/external-link-defaultblue.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
