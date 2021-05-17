@@ -30,7 +30,7 @@
     background-size: contain;
     background-position: 0 -1px;
   }
-  
+
   &.icon--link::after {
     display: inline-block;
     content: "";
@@ -109,8 +109,8 @@
       background-size: contain;
       background-position: 0 -1px;
     }
-	
-	&.icon--link::after {
+
+    &.icon--link::after {
       background: url("/img/icons/external-link-black.svg");
       background-size: contain;
       background-position: 0 -1px;
@@ -204,15 +204,15 @@
       background-size: contain;
       background-position: 0 -1px;
     }
-	
-	&.icon--link:hover::after,
+
+    &.icon--link:hover::after,
     &.icon--link:focus::after {
       background: url("/img/icons/external-link-white.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
-	
-	&.icon--link::after {
+
+    &.icon--link::after {
       background: url("/img/icons/external-link-defaultblue.svg");
       background-size: contain;
       background-position: 0 -1px;
