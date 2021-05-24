@@ -1,3 +1,10 @@
+# [1.0.0-beta.13](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-05-24)
+
+
+### Bug Fixes
+
+* **component:** update cards and svg ([44d48ab](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/44d48ab787ce58713eb36006460a5a669d017b58))
+
 # [1.0.0-dev-beta.15](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.14...v1.0.0-dev-beta.15) (2021-05-24)
 
 
