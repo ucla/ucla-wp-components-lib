@@ -26,7 +26,8 @@ Our goal is to provide flexible resources and tools for any person or team who c
 - [Get Local Environment Setup](./docs/contributors/getSetup.md)
 - [Learn How To Contribute](./docs/contributors/howToContribute.md)
 - [Project Directory Hierarchy](./docs/contributors/projectHierarchy.md)
-- [Getting Started with Fractal](https://fractal.build/guide/getting-started.html)
+- [Documentation On How to Build With Fractal](https://fractal.build/guide/documentation/)
+- [Using BEM Naming Convention](./docs/contributors/namingConvention.md)
 
 ---
 
