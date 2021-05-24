@@ -18,7 +18,7 @@ This document contains possible features, improvements, and maintenance items fo
 - [ ] Establish Governance team
 - [x] Create contribution documentation for designers
 - Complete component builds from design team and get reviewed by DCP:
-  - [ ] Accordion - `Internal PR`
+  - [x] Accordion
   - [ ] Alerts - `DCP to review`  
   - [ ] Banners - `To do`
   - [x] Buttons and Links

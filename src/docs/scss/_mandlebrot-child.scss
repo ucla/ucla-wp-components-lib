@@ -16,6 +16,27 @@ body {
   background: colors.$default-state;
 }
 
+// Hyperlinks
+a {
+  color: #00598C;
+}
+
+// Sidebar hyperlinks
+a.Tree-entityLink {
+  font-weight: bold;
+}
+
+// CSS display code
+.hljs-number, .hljs-attr {
+  color: #1D832F !important;
+}
+
+// HTML and CSS display code comments
+.hljs-comment {
+  color: #636363 !important;
+}
+
+
 // Sidebar Nav
 .Frame-panel--sidebar {
   background-color: white;
