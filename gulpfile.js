@@ -227,7 +227,9 @@ function generateDocImagesProd () {
 
 function generateCompLibImages () {
   return src('src/components/img/**/*')
-    .pipe(image())
+    .pipe(image({
+      svgo: ['--disable', 'removeDoctype', '--disable', 'removeTitle', '--disable', 'removeUselessStrokeAndFill', '--disable', 'removeViewBox', '--disable', 'inlineStyles', '--disable', 'removeComments'],
+    }))
     .pipe(dest('build/assets/img'));
 }
 
