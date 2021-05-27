@@ -1,7 +1,7 @@
 {
   "title": "Accordion",
   "hidden": false,
-  "status": "in_progress",
+  "status": "ready",
   "context": {
     "dropdown": {
 	  "title": "Title",

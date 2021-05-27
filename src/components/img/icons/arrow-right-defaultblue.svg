@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Arrow Right</title>
-    <g id="Icon/arrow-right-defaultblue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Background" points="0 0 48 0 48 48 0 48"></polygon>
-        <polygon id="Shape" fill="#00598C" points="18 33.18 26.6531714 24 18 14.82 20.6639676 12 32 24 20.6639676 36"></polygon>
-    </g>
-</svg>
