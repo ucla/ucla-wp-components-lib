@@ -1,4 +1,5 @@
 @use "_mixins/breakpoints";
+@use "_mixins/helper";
 @use "colors";
 @use "variables";
 
@@ -99,9 +100,24 @@ p {
 }
 
 .mark-text {
-  background: #FFF0A5
+  background: #FFF0A5;
 }
 
 .insert-text {
-  background: #DAEBFE
+  background: #DAEBFE;
 }
+
+.has-white-text {
+  color: colors.$white;
+
+  @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
+
+  > div,
+  > aside {
+    @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
+  }
+}
+
+// .text-white {
+//   color: colors.$white;
+// }
