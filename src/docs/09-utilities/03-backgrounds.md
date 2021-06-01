@@ -2,7 +2,7 @@
 title: Backgrounds
 ---
 
-You can set the background of any element using the `has-background-*` class. Using the background utility class will not change the color of text. Please use the text utility class `.has-text-white` when necessary.
+You can set the background of any element using the `has-background-*` class. Using the background utility class will not change the color of text. Please use the text utility class `.has-white-text` when necessary.
 
 Available background utilities |  Hex color
 ------------ | -------------
