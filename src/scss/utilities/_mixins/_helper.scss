@@ -113,3 +113,15 @@
     }
   }
 }
+
+@mixin is-white-text() {
+  > h1, h2, h3, h4, h5, h6,
+  p, span,
+  tr th, //table column heads
+  dt, //accordion buttons
+  li::before, // ucla lists
+  .stat-tout__label, .stat-tout__number, .stat-tout__source // stat-touts
+  {
+    color: colors.$white;
+  }
+}
