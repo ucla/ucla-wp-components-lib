@@ -149,51 +149,44 @@
 
 
       &-facebook {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/facebook--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-twitter {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/twitter--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-instagram {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/instagram--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-snapchat {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/snapchat--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-linkedin {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/linkedin--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-youtube {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/youtube--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
       &-tiktok {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/tiktok--black.svg");
-          background: colors.$hover-state-dark;
         }
       }
 
@@ -217,10 +210,11 @@
 
         &:hover {
           background-size: 48px;
+          background: colors.$hover-state-dark;
         }
 
         &:active {
-          background-color: colors.$active-state-dark;
+          background: colors.$active-state-dark;
         }
 
         @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
@@ -345,52 +339,46 @@
 
 
       &-facebook {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/facebook--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-twitter {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/twitter--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-instagram {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/instagram--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-snapchat {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/snapchat--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-linkedin {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/linkedin--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-youtube {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/youtube--white.svg");
-          background: colors.$hover-state;
         }
       }
 
       &-tiktok {
-        &:hover {
+        &:hover, &:active {
           content: url("/img/icons/social/tiktok--white.svg");
-          background: colors.$hover-state;
         }
+
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
@@ -406,11 +394,11 @@
         &:hover {
           background-size: 48px;
           background-repeat: no-repeat;
+          background: colors.$hover-state;
         }
 
         &:active {
-          background-color: colors.$active-state;
-          outline: 1px dotted colors.$hover-state;
+          background: colors.$active-state;
         }
 
         &:focus {
