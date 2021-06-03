@@ -1,6 +1,6 @@
 @use "../utilities/colors";
 
-ul.ucla {
+.ucla-list--bulleted {
   list-style: none;
   line-height: 24px;
   padding-left: 28.5px;
@@ -21,7 +21,7 @@ ul.ucla {
       content: "\25A1";
     }
 
-    ol, ul {
+    .ucla-list--bulleted, --numbered {
       margin-top: 16px;
       padding-left: 20px;
 
@@ -36,7 +36,7 @@ ul.ucla {
   }
 }
 
-ol.ucla {
+.ucla-list--numbered {
   list-style: none;
   counter-reset: li;
   line-height: 24px;
@@ -60,7 +60,7 @@ ol.ucla {
     }
 
     // Second level lists
-    ol, ul {
+    .ucla-list--bulleted, --numbered {
       padding-left: 20px;
       margin-top: 16px;
 
