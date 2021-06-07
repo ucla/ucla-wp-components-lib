@@ -364,6 +364,29 @@ The spans in the tier 2 stories are for styling purposes.
       line-height: 1.25rem;
       font-weight: bold;
       line-height: 1.25;
+
+      & > .link {
+        color: colors.$default-state;
+        text-decoration: none;
+
+        &:hover {
+          background-color: colors.$hover-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
+
+        &:active {
+          background-color: colors.$active-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
+
+        &:focus {
+          background-color: colors.$focus-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
+      }
     }
   } // end &__featured
 
@@ -564,8 +587,27 @@ The spans in the tier 2 stories are for styling purposes.
         bottom: 0;
       }
 
-      a {
-        text-decoration: underline;
+      & > a.link {
+        color: colors.$default-state;
+        text-decoration: none;
+
+        &:hover {
+          background-color: colors.$hover-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
+
+        &:active {
+          background-color: colors.$active-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
+
+        &:focus {
+          background-color: colors.$focus-state;
+          color: colors.$white;
+          text-decoration: none;
+        }
       }
     }
   } // end &__secondary
