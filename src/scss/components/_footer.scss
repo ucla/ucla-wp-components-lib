@@ -138,101 +138,91 @@
     }
 
     &--social {
-      height: 24px;
+      height: 48px;
       max-height: 100%;
       margin-bottom: 14px;
 
       @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
         margin-bottom: 14px;
-        height: 32px;
+        height: 48px;
       }
 
-      & a {
-        margin-right: 4px;
-
-        &:focus {
-          outline: 1px dotted colors.$white;
-          border-radius: 2px;
-        }
-      }
 
       &-facebook {
-        background: url("/img/icons/social-icons/facebook-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/facebook-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/facebook--black.svg");
         }
       }
 
       &-twitter {
-        background: url("/img/icons/social-icons/twitter-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/twitter-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/twitter--black.svg");
         }
       }
 
       &-instagram {
-        background: url("/img/icons/social-icons/instagram-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/instagram-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/instagram--black.svg");
         }
       }
 
       &-snapchat {
-        background: url("/img/icons/social-icons/snapchat-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/snapchat-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/snapchat--black.svg");
         }
       }
 
       &-linkedin {
-        background: url("/img/icons/social-icons/linkedin-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/linkedin-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/linkedin--black.svg");
         }
       }
 
       &-youtube {
-        background: url("/img/icons/social-icons/youtube-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/youtube-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/youtube--black.svg");
         }
       }
 
       &-tiktok {
-        background: url("/img/icons/social-icons/tiktok-white.svg");
-
-        &:hover {
-          background: colors.$hover-state-dark url("/img/icons/social-icons/tiktok-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/tiktok--black.svg");
         }
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
         max-height: 100%;
-        width: 24px;
-        background-size: 24px;
+        width: 48px;
+        background-size: 48px;
         background-repeat: no-repeat;
         border-radius: 2px;
+        display: inline-block;
+        position: relative;
+
+        & span {
+          position: relative;
+        }
+
+        &:focus {
+          outline: 1px dotted colors.$white;
+          border-radius: 2px;
+        }
 
         &:hover {
-          background-size: 24px;
+          background-size: 48px;
+          background: colors.$hover-state-dark;
         }
 
         &:active {
-          background-color: colors.$active-state-dark;
+          background: colors.$active-state-dark;
         }
 
         @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-          width: 32px;
-          background-size: 32px;
+          width: 48px;
+          background-size: 48px;
 
           &:hover {
-            background-size: 32px;
+            background-size: 48px;
           }
         }
       }
@@ -340,85 +330,79 @@
         margin-bottom: 24px;
       }
 
-      a, svg {
+
+      a, div {
         vertical-align: top;
-        max-height: 40px;
+        max-height: 48px;
+        display: inline-block;
       }
 
-      a:focus {
-        outline: 1px dotted colors.$hover-state;
-      }
 
       &-facebook {
-        background: url("/img/icons/social-icons/facebook-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/facebook-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/facebook--white.svg");
         }
       }
 
       &-twitter {
-        background: url("/img/icons/social-icons/twitter-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/twitter-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/twitter--white.svg");
         }
       }
 
       &-instagram {
-        background: url("/img/icons/social-icons/instagram-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/instagram-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/instagram--white.svg");
         }
       }
 
       &-snapchat {
-        background: url("/img/icons/social-icons/snapchat-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/snapchat-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/snapchat--white.svg");
         }
       }
 
       &-linkedin {
-        background: url("/img/icons/social-icons/linkedin-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/linkedin-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/linkedin--white.svg");
         }
       }
 
       &-youtube {
-        background: url("/img/icons/social-icons/youtube-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/youtube-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/youtube--white.svg");
         }
       }
 
       &-tiktok {
-        background: url("/img/icons/social-icons/tiktok-color.svg");
-
-        &:hover {
-          background: colors.$hover-state url("/img/icons/social-icons/tiktok-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/tiktok--white.svg");
         }
+
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
         max-height: 100%;
-        width: 40px;
-        background-size: 40px;
+        width: 48px;
+        background-size: 48px;
         background-repeat: no-repeat;
         border-radius: 2px;
+        position: relative;
+		display: inline-block;
+		text-decoration: none;
 
         &:hover {
-          background-size: 40px;
+          background-size: 48px;
           background-repeat: no-repeat;
+          background: colors.$hover-state;
         }
 
         &:active {
-          background-color: colors.$active-state;
+          background: colors.$active-state;
+        }
+
+        &:focus {
+          outline: 1px dotted colors.$hover-state;
         }
       }
     }
