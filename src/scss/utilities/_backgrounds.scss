@@ -1,39 +1,22 @@
 @use "colors";
 
-.grey-40 {
+// Background Utilities
+.has-background-grey-40 {
   background: colors.$grey-40;
 }
 
-.ucla-blue {
-  background: colors.$ucla-blue;
-}
-
-.lightest-grey-2 {
+.has-background-lightest-grey-2 {
   background: colors.$lightest-grey-2;
 }
 
-.light-grey {
+.has-background-light-grey {
   background: colors.$light-grey;
+}
 
-  &.tall-75,
-  &.tall-65 {
-    position: relative;
+.has-background-ucla-blue {
+  background: colors.$ucla-blue;
+}
 
-    .white-25,
-    .white-35 {
-      display: block;
-      position: absolute;
-      width: 100%;
-      background: colors.$white;
-      top: 0;
-    }
-
-    .white-25 {
-      height: 25%;
-    }
-
-    .white-35 {
-      height: 35%;
-    }
-  }
+.has-background-white {
+  background: colors.$white;
 }
