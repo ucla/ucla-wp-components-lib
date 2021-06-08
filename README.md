@@ -36,4 +36,4 @@ Our goal is to provide flexible resources and tools for any person or team who c
 - Kevin Ma (Web Developer) - kma@stratcomm.ucla.edu
 - Allison Lu (Web Developer/Lead QA) - alu@stratcomm.ucla.edu
 
-Internal Project Maintainers (aka StratComm-ers), please see documentation [here](./docs/internal/tableofcontents.md). 
+Internal Project Maintainers (aka StratComm-ers), please see documentation [here](./docs/internal/tableofcontents.md).
