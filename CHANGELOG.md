@@ -1,3 +1,10 @@
+# [1.0.0-beta.14](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-06-08)
+
+
+### Features
+
+* **component:** cards and spacing ([5baaebb](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/5baaebb3fee99f6932ba766b0442dbd020772d71))
+
 # [1.0.0-dev-beta.16](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.15...v1.0.0-dev-beta.16) (2021-06-08)
 
 
