@@ -32,7 +32,10 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 
 ### **Code**
 
-<!--Unordered List code here, if applicable-->
+```
+{{ view '@lists--unordered-lists' }}
+```
+
 
 ## **Ordered List**
 
@@ -44,7 +47,7 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 2. Order Number (required)
 3. List Item Text (required)
 4. List Item Link (optional)
-5. Tier 2 List Item (optional)  
+5. Tier 2 List Item (optional)
 
 ### **Specs**
 
@@ -52,7 +55,9 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 
 ### **Code**
 
-<!--Ordered List code here, if applicable-->
+```
+{{ view '@lists--ordered-lists' }}
+```
 
 ## **Definitions List**
 
