@@ -37,15 +37,54 @@ $spacers: map.merge(
   $spacers
 );
 
-// Margin and Padding
+// Margin and Padding classes for GLOBAL screen size
+// set key value pairs for margin and padding
+@each $prop, $abbrev in (margin: m, padding: p) {
+  
+  // loop through the spacers we've set
+  @each $size, $length in $spacers {
+
+    // loop through top, right, bottom, left and auto
+    .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+// Margin and Padding classes for BREAKPOINT screen size
+// Call the breakpoints from _mixin/_breakpoints.scss
 @each $breakpoint in map.keys(variables.$grid-breakpoints) {
+  // Include the breakpoint mixins
 	@include breakpoints.media-breakpoint-up($breakpoint) {
 
+    // Set the breakpoint variable to $infix
 		$infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
 
+    // set key value pairs for margin and padding
 		@each $prop, $abbrev in (margin: m, padding: p) {
+
+      // loop through the spacers we've set
 			@each $size, $length in $spacers {
 
+        // loop through top, right, bottom, left and auto
 				.#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
 
 				.#{$abbrev}t#{$infix}-#{$size},

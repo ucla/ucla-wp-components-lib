@@ -8,7 +8,7 @@
   border: 2px solid transparent;
   line-height: 1.25;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   text-decoration: none;
 
   &:focus {
@@ -20,13 +20,27 @@
   }
 
   &.icon--play::before {
-    display: inline-block;
+    flex-shrink: 0;
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
     margin-right: 8px;
-    background: url("/img/icons/play-white.svg");
+    margin-left: -8px;
+    background: url("/img/icons/denotive/play--white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--link::after {
+    flex-shrink: 0;
+    content: "";
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: -8px;
+    background: url("/img/icons/denotive/external-link--white.svg");
     background-size: contain;
     background-position: 0 -1px;
   }
@@ -93,7 +107,13 @@
     }
 
     &.icon--play::before {
-      background: url("/img/icons/play-black.svg");
+      background: url("/img/icons/denotive/play--black.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+
+    &.icon--link::after {
+      background: url("/img/icons/denotive/external-link--black.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
@@ -176,13 +196,26 @@
   &--tertiary {
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background: url("/img/icons/play-white.svg");
+      background: url("/img/icons/denotive/play--white.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
 
     &.icon--play::before {
-      background: url("/img/icons/play-defaultblue.svg");
+      background: url("/img/icons/denotive/play--blue.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+
+    &.icon--link:hover::after,
+    &.icon--link:focus::after {
+      background: url("/img/icons/denotive/external-link--white.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+
+    &.icon--link::after {
+      background: url("/img/icons/denotive/external-link--blue.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
