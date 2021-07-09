@@ -146,9 +146,16 @@
   &-icon {
     &__time {
       display: inline-block;
-      content: "";
-      background: url(/img/icons/time-grey60.svg);
-      background-size: contain;
+      width: 16px;
+      height: 16px;
+      margin-bottom: -1.5px;
+      margin-left: 1px;
+      margin-right: 6px;
+      vertical-align: bottom;
+    }
+
+    &__location {
+      display: inline-block;
       width: 16px;
       height: 16px;
       margin-bottom: -1.5px;
@@ -159,9 +166,6 @@
 
     &__play {
       display: inline-block;
-      content: "";
-      background: url(/img/icons/play-grey.svg);
-      background-size: contain;
       width: 15px;
       height: 15px;
       margin-bottom: 0px;
