@@ -118,8 +118,8 @@ Span wrapper that represents self-contained content.
 
 ### **Specs**
 
-<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-states-specs.jpg"/>
-
+<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-lightbkgd-states-specs.jpg"/>
+<img class="doc-images" alt="Secondary Button States Specs Image" title="Secondary Button States Specs Image" alt="Secondary Button States Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-darkbkgd-states-specs.jpg"/>
 <img class="doc-images" alt="Secondary Button Variations Specs Image" title="Secondary Button Variations Specs Image" alt="Secondary Button Variations Specs Image" src="/build/docs/img/Buttons/Secondary_Button/secondarybtn-variations-specs.jpg"/>
 
 ### **Code**
