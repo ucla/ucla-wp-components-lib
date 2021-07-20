@@ -1,3 +1,17 @@
+# [1.0.0-beta.15](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-07-20)
+
+
+### Bug Fixes
+
+* new button, social tiles reconfig, doc and readme updates ([17c189a](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/17c189a9b9b217a69d92fee46b30a0f45baf9605))
+
+
+### BREAKING CHANGES
+
+* Social tiles have been reconfigured
+
+58, 62
+
 <<<<<<< HEAD
 # [1.0.0-beta.14](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-06-08)
 
