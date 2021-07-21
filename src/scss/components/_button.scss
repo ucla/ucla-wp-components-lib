@@ -27,7 +27,7 @@
     vertical-align: middle;
     margin-right: 8px;
     margin-left: -8px;
-    background: url("/img/icons/denotive/play--white.svg");
+    background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--white.svg");
     background-size: contain;
     background-position: 0 -1px;
   }
@@ -40,7 +40,7 @@
     vertical-align: middle;
     margin-left: 8px;
     margin-right: -8px;
-    background: url("/img/icons/denotive/external-link--white.svg");
+    background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--white.svg");
     background-size: contain;
     background-position: 0 -1px;
   }
@@ -107,13 +107,13 @@
     }
 
     &.icon--play::before {
-      background: url("/img/icons/denotive/play--black.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--black.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
 
     &.icon--link::after {
-      background: url("/img/icons/denotive/external-link--black.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--black.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
@@ -121,40 +121,133 @@
 
   // secondary button styling
   &--secondary {
-    background: colors.$white;
-    color: colors.$default-state;
-    border: 2px solid colors.$default-state;
-
-    &:visited {
-      background: colors.$white;
+    // secondary-light button styling
+    &--lightbg {
+      background: transparent;
       color: colors.$default-state;
       border: 2px solid colors.$default-state;
+
+      &.icon--play:hover::before,
+      &.icon--play:focus::before {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--white.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &.icon--play::before {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--blue.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &.icon--link:hover::after,
+      &.icon--link:focus::after {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--white.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &.icon--link::after {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--blue.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &:visited {
+        background: transparent;
+        color: colors.$default-state;
+        border: 2px solid colors.$default-state;
+      }
+
+      &:hover {
+        background: colors.$hover-state;
+        border-color: colors.$hover-state;
+        color: colors.$white;
+      }
+
+      &:focus {
+        background: colors.$focus-state;
+        border-color: transparent;
+        outline: 1px dotted colors.$focus-state;
+        outline-offset: 2px;
+        color: colors.$white;
+      }
+
+      &:active {
+        background: colors.$active-state;
+        color: colors.$white;
+      }
+
+      &:disabled {
+        border-color: colors.$disabled-state;
+        color: colors.$disabled-state;
+        background: colors.$white;
+      }
     }
 
-    &:hover {
-      background: colors.$hover-state;
-      border-color: colors.$hover-state;
+    // secondary-dark button styling
+    &--darkbg {
+      background: transparent;
       color: colors.$white;
-    }
+      border: 2px solid colors.$white;
 
-    &:focus {
-      background: colors.$focus-state;
-      border-color: colors.$focus-state;
-      outline: 1px dotted colors.$focus-state;
-      outline-offset: 2px;
-      color: colors.$white;
-    }
+      &.icon--play:hover::before,
+      &.icon--play:focus::before {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--black.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
 
-    &:active {
-      background: colors.$active-state;
-      color: colors.$white;
-      outline: none;
-    }
+      &.icon--play::before {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--white.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
 
-    &:disabled {
-      border-color: colors.$disabled-state;
-      color: colors.$disabled-state;
-      background: colors.$white;
+      &.icon--link:hover::after,
+      &.icon--link:focus::after {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--black.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &.icon--link::after {
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--white.svg");
+        background-size: contain;
+        background-position: 0 -1px;
+      }
+
+      &:visited {
+        background: transparent;
+        color: colors.$white;
+        border: 2px solid colors.$white;
+      }
+
+      &:hover {
+        background: colors.$hover-state-dark;
+        border-color: colors.$hover-state-dark;
+        color: colors.$black;
+      }
+
+      &:focus {
+        background: colors.$focus-state-dark;
+        border-color: transparent;
+        outline: 1px dotted colors.$white;
+        outline-offset: 2px;
+        color: colors.$black;
+      }
+
+      &:active {
+        background: colors.$active-state-dark;
+        color: colors.$black;
+        border: 2px solid colors.$active-state-dark;
+      }
+
+      &:disabled {
+        color: colors.$disabled-state-dark;
+        background: transparent;
+        border-color: colors.$disabled-state-dark;
+      }
     }
   }
 
@@ -162,6 +255,19 @@
   &--tertiary {
     background: transparent;
     color: colors.$default-state;
+
+    &.icon--play:hover::before,
+    &.icon--play:focus::before {
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--white.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
+
+    &.icon--play::before {
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--blue.svg");
+      background-size: contain;
+      background-position: 0 -1px;
+    }
 
     &:visited {
       background: transparent;
@@ -190,32 +296,29 @@
       color: colors.$disabled-state;
       background: transparent;
     }
-  }
 
-  &--secondary,
-  &--tertiary {
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background: url("/img/icons/denotive/play--white.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--white.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
 
     &.icon--play::before {
-      background: url("/img/icons/denotive/play--blue.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/play--blue.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
 
     &.icon--link:hover::after,
     &.icon--link:focus::after {
-      background: url("/img/icons/denotive/external-link--white.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--white.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
 
     &.icon--link::after {
-      background: url("/img/icons/denotive/external-link--blue.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/external-link--blue.svg");
       background-size: contain;
       background-position: 0 -1px;
     }

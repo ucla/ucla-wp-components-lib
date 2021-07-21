@@ -378,7 +378,6 @@
         &:hover, &:active {
           content: url("/img/icons/social/tiktok--white.svg");
         }
-
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
@@ -388,8 +387,8 @@
         background-repeat: no-repeat;
         border-radius: 2px;
         position: relative;
-		display: inline-block;
-		text-decoration: none;
+        display: inline-block;
+        text-decoration: none;
 
         &:hover {
           background-size: 48px;
