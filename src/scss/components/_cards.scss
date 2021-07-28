@@ -116,7 +116,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #0079BF;
+        background: colors.$hover-state;
       }
 
       span {
@@ -127,7 +127,7 @@
     }
 
     &:focus {
-      outline: 1px dotted #0079BF;
+      outline: 1px dotted colors.$focus-state;
     }
 
     &:hover {
