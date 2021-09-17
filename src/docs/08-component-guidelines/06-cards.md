@@ -57,7 +57,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 
 ```
-{{view '@cards--basic'}}
+{{view '@cards'}}
 ```
 
 ## **Event Card**
@@ -142,10 +142,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Code**
 
-Use the `<article>` element to denote your card as a standalone element within the body of your page. Story cards should be included within a parent "section" or "div" tag with the class, "story__secondary" and a grandparent "section" or "div" tag with the class, "story".
-
-A Featured Story Card (shown in the section above) can be included before story cards. A Story Card's background will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "story__secondary-card" class to "story__secondary-card-grey".
-
+Use the `<article>` element to denote your card as a standalone element within the body of your page. 
 
 ```
 {{view '@cards--story'}}
