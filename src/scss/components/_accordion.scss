@@ -62,13 +62,13 @@
       outline-style: dotted;
     }
 
-    &:hover, &.active {
+    &:hover, &:active {
       background: colors.$hover-state;
       color: colors.$white;
       cursor: pointer;
 
       &::after {
-        background: url("/img/icons/arrow-down-white.svg");
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--white.svg");
         background-position: center;
         background-size: contain;
         position: absolute;
@@ -100,7 +100,7 @@
     &::after {
       display: block;
       content: "";
-      background: url("/img/icons/arrow-down-defaultblue.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--blue.svg");
       background-position: center;
       background-size: contain;
       position: absolute;
