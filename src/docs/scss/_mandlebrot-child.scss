@@ -1,3 +1,5 @@
+@use "../../scss/utilities/colors";
+
 /***************** STOP!!! READ THIS!! *****************/
 // These are mandlebrot theme styles here only. DO NOT put component related styles here. Those belong in ./src/scss
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
@@ -11,8 +13,29 @@ body {
 }
 
 .Header-button {
-  background: $default-state;
+  background: colors.$default-state;
 }
+
+// Hyperlinks
+a {
+  color: #00598C;
+}
+
+// Sidebar hyperlinks
+a.Tree-entityLink {
+  font-weight: bold;
+}
+
+// CSS display code
+.hljs-number, .hljs-attr {
+  color: #1D832F !important;
+}
+
+// HTML and CSS display code comments
+.hljs-comment {
+  color: #636363 !important;
+}
+
 
 // Sidebar Nav
 .Frame-panel--sidebar {
@@ -24,12 +47,12 @@ body {
     .Tree {
       a {
         &:hover {
-          color: $grey-80;
+          color: colors.$grey-80;
         }
       }
 
       &-item {
-        border-bottom: 1px solid $medium-grey3;
+        border-bottom: 1px solid colors.$medium-grey3;
         background-color: white;
 
         &:last-of-type {

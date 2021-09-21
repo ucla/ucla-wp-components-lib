@@ -179,6 +179,33 @@ $(document).ready(function (){
     $(document).unbind('keydown');
   }
 
+
+  /* =======
+  - Screen readers and keyboards read html from top to bottom. When pressing tab all browser will jump to the next link in the top to bottom order.
+  - All added events change what the browser does by default. Add events only when necessary to fit the design.
+  - When adding an keybinding event, add it in the order that it is found in the html. (i.e. - Skip nav is at the top of the html page so goes first in the order.)
+
+
+  This is the basic keydown function that creates specific events to help guide keyboard users.
+  Find your keydown number - https://keycode.info/
+
+  // If object is selectable and is in focus
+  if ($('.class-name').is(':focus')) {
+
+    // if the tab key is pressed while the object is focused
+    if (evts.keyCode === 9) {
+
+      // Preform an action when the specific key is pressed
+      event.preventDefault(); // May require override of default event
+      $(element).prev('li').children('a').focus();
+    }
+
+  // Repeat again for element further down the html chain.
+  } else if ($('.class-name').is(':focus')){
+
+    // Repeat speceific key event action
+
+  }
   /* --------------add dekstop tabbing controls------------ */
   function addDesktopTabs () {
 

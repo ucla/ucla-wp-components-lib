@@ -1,4 +1,6 @@
-ul {
+@use "../utilities/colors";
+
+.ucla-list--bulleted {
   list-style: none;
   line-height: 24px;
   padding-left: 28.5px;
@@ -9,7 +11,7 @@ ul {
 
     &::before {
       content: "\25AA";
-      color: $ucla-blue;
+      color: colors.$ucla-blue;
       width: 3em;
       margin-left: -18px;
       padding-right: 13px;
@@ -19,7 +21,7 @@ ul {
       content: "\25A1";
     }
 
-    ol, ul {
+    .ucla-list--bulleted, .ucla-list--numbered {
       margin-top: 16px;
       padding-left: 20px;
 
@@ -34,7 +36,7 @@ ul {
   }
 }
 
-ol {
+.ucla-list--numbered {
   list-style: none;
   counter-reset: li;
   line-height: 24px;
@@ -48,7 +50,7 @@ ol {
 
     &::before {
       content: "." counter(li);
-      color: $ucla-blue;
+      color: colors.$ucla-blue;
       display: inline-block;
       width: 1em;
       margin-left: -1.5em;
@@ -58,7 +60,7 @@ ol {
     }
 
     // Second level lists
-    ol, ul {
+    .ucla-list--bulleted, .ucla-list--numbered {
       padding-left: 20px;
       margin-top: 16px;
 

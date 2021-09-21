@@ -1,3 +1,5 @@
+@use "../colors";
+
 /*
  * Helper utilities
  * Mixins and utilities that are globally used
@@ -80,34 +82,46 @@
 // Reusable pseudo-classes for the anchor tag
 @mixin pseudo-classes() {
   &:link {
-    color: $default-state;
+    color: colors.$default-state;
   }
 
   &:focus {
-    color: $focus-state;
-    outline: 1px dotted $focus-state;
+    color: colors.$focus-state;
+    outline: 1px dotted colors.$focus-state;
   }
 
   &:hover {
-    background-color: $hover-state;
+    background-color: colors.$hover-state;
   }
 
   &:hover, &:active {
-    color: $white;
+    color: colors.$white;
     text-decoration: none;
   }
 
   &:active {
-    background-color: $active-state;
-    color: $white;
+    background-color: colors.$active-state;
+    color: colors.$white;
     outline: none;
   }
 
   &:visited {
-    color: $visited-state;
+    color: colors.$visited-state;
 
     &:hover {
-      color: $white;
+      color: colors.$white;
     }
+  }
+}
+
+@mixin is-white-text() {
+  > h1, h2, h3, h4, h5, h6,
+  p, span,
+  tr th, //table column heads
+  dt, //accordion buttons
+  li::before, // ucla lists
+  .stat-tout__label, .stat-tout__number, .stat-tout__source // stat-touts
+  {
+    color: colors.$white;
   }
 }

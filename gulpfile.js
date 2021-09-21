@@ -10,7 +10,7 @@ const image = require('gulp-image');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const minify = require('gulp-minify');
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 const zip = require('gulp-zip');
 const del = require('del');
 
@@ -227,7 +227,9 @@ function generateDocImagesProd () {
 
 function generateCompLibImages () {
   return src('src/components/img/**/*')
-    .pipe(image())
+    .pipe(image({
+      svgo: ['--disable', 'removeDoctype', '--disable', 'removeTitle', '--disable', 'removeUselessStrokeAndFill', '--disable', 'removeViewBox', '--disable', 'inlineStyles', '--disable', 'removeComments'],
+    }))
     .pipe(dest('build/assets/img'));
 }
 
@@ -347,10 +349,11 @@ exports.production = series(
   fractalBuild,
   generateCompLibStylesLocal,
   generateCompLibScriptsLocal,
+  generateCompLibStylesLocal,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
   // generateCompLibZip,
-  cleanExpanded,
+  //cleanExpanded,
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,

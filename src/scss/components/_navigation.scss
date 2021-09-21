@@ -1,19 +1,23 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/_mixins/helper";
+@use "../utilities/colors";
+
 /*------------------------------------
     Header
   ------------------------------------*/
 #header {
-  border-bottom: 1px solid $grey-10;
+  border-bottom: 1px solid colors.$grey-10;
 
   a {
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
   }
 
   .header-logo {
     a {
       &:focus {
-        outline: 1px dotted $white;
+        outline: 1px dotted colors.$white;
       }
     }
   }
@@ -23,7 +27,7 @@
     Header Logo
   ------------------------------------*/
 .header-logo {
-  background-color: $ucla-blue;
+  background-color: colors.$ucla-blue;
   padding: 8px 24px;
   max-height: 48px;
 
@@ -88,15 +92,15 @@
 
     a {
       text-decoration: none;
-      color: $default-state;
+      color: colors.$default-state;
 
       &:hover {
-        background-color: $hover-state;
-        color: $white;
+        background-color: colors.$hover-state;
+        color: colors.$white;
       }
 
       &:focus {
-        outline: 1px dotted $hover-state;
+        outline: 1px dotted colors.$hover-state;
       }
     }
 
@@ -117,21 +121,21 @@
   }
 
   &--white {
-    color: $white;
+    color: colors.$white;
     position: relative;
 
     .breadcrumb__item {
       a {
-        color: $white;
+        color: colors.$white;
 
         &:hover {
-          background-color: $hover-state-dark;
-          color: $medium-grey5;
+          background-color: colors.$hover-state-dark;
+          color: colors.$medium-grey5;
         }
       }
 
       &::before {
-        color: $white;
+        color: colors.$white;
       }
     }
   }
@@ -177,7 +181,7 @@
 
   a {
     text-decoration: none;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     display: block;
   }
 }
@@ -327,29 +331,29 @@
     font-size: 0.875rem;
     line-height: 1.286;
     font-weight: bold;
-    color: $default-state;
+    color: colors.$default-state;
     display: block;
     padding: 8px 16px;
     margin-left: 2px;
     border-radius: 2px;
 
     &:hover {
-      color: $white;
-      background-color: $hover-state;
+      color: colors.$white;
+      background-color: colors.$hover-state;
     }
 
     &:active {
-      color: $white;
-      background-color: $active-state;
+      color: colors.$white;
+      background-color: colors.$active-state;
     }
 
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
 
     &--active {
-      color: $white;
-      background-color: $default-state;
+      color: colors.$white;
+      background-color: colors.$default-state;
     }
   }
 }
@@ -359,7 +363,7 @@
   ------------------------------------*/
 .nav-primary {
   position: relative;
-  border-top: 1px solid $medium-grey3;
+  border-top: 1px solid colors.$medium-grey3;
   transition: right 0.5s ease;
 
   @media (min-width: breakpoint-min(lg)) {
@@ -376,7 +380,7 @@
 
     li {
       list-style: none;
-      background: $white;
+      background: colors.$white;
 
       @media (min-width: breakpoint-min(lg)) {
         background: none;
@@ -401,7 +405,7 @@
     li {
       margin: 0;
       min-width: 100%;
-      border-bottom: 1px solid $medium-grey3;
+      border-bottom: 1px solid colors.$medium-grey3;
 
       /* Style li(s) above 1024px */
       @media (min-width: breakpoint-min(lg)) {
@@ -414,8 +418,8 @@
         &:hover {
           /* Keep top level item hover state when inside child elesearch-iconts */
           & > .nav-primary__link {
-            background: $hover-state;
-            color: $white;
+            background: colors.$hover-state;
+            color: colors.$white;
 
             &::after {
               filter: brightness(0) invert(1);
@@ -448,11 +452,11 @@
 
         a {
           display: block;
-          background-color: $grey-10;
+          background-color: colors.$grey-10;
 
           /* Unset child link styles above 1024px */
           @media (min-width: breakpoint-min(lg)) {
-            background-color: $white;
+            background-color: colors.$white;
             padding-left: 1rem;
           }
         }
@@ -463,7 +467,7 @@
   &__item {
     a {
       &.nav-primary__link--current-page {
-        border-left: 4px solid $ucla-gold;
+        border-left: 4px solid colors.$ucla-gold;
         padding-left: 20px;
       }
     }
@@ -490,7 +494,7 @@
             width: calc(100% - 32px);
             height: 4px;
             position: absolute;
-            background: $ucla-gold;
+            background: colors.$ucla-gold;
             top: 35px;
             left: 16px;
           }
@@ -509,7 +513,7 @@
 
           a {
             &.nav-primary__link--current-page {
-              border-left: 4px solid $ucla-gold;
+              border-left: 4px solid colors.$ucla-gold;
               padding-left: 12px;
 
               &::before {
@@ -523,9 +527,9 @@
   }
 
   &__toggle {
-    background-color: $white;
+    background-color: colors.$white;
     border: 0;
-    border-left: 1px solid $grey-10;
+    border-left: 1px solid colors.$grey-10;
     width: 3.2em;
     margin-left: auto;
 
@@ -540,7 +544,7 @@
     }
 
     &:hover {
-      background-color: $hover-state;
+      background-color: colors.$hover-state;
 
       &::after {
         filter: brightness(0) invert(1);
@@ -549,7 +553,7 @@
 
     &:focus {
       outline-offset: -0.25rem;
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
     }
 
     &::after {
@@ -593,7 +597,7 @@
     /* TODO refactor this to .nav-primary__list li>ul li */
     .nav-primary__item {
       @media (min-width: breakpoint-min(lg)) {
-        border: 1px solid $grey-10;
+        border: 1px solid colors.$grey-10;
         border-top: 0;
 
         a {
@@ -602,10 +606,10 @@
       }
 
       &:first-child {
-        border-top: 1px solid $medium-grey3;
+        border-top: 1px solid colors.$medium-grey3;
 
         @media (min-width: breakpoint-min(lg)) {
-          border-top: 1px solid $grey-10;
+          border-top: 1px solid colors.$grey-10;
         }
       }
 
@@ -613,17 +617,17 @@
         border-bottom: 0;
 
         @media (min-width: breakpoint-min(lg)) {
-          border-bottom: 1px solid $grey-10;
+          border-bottom: 1px solid colors.$grey-10;
         }
       }
     }
 
     .nav-primary__link {
       padding: 14px 24px 14px 48px;
-      background-color: $lightest-grey-2;
+      background-color: colors.$lightest-grey-2;
 
       @media (min-width: breakpoint-min(lg)) {
-        background-color: $white;
+        background-color: colors.$white;
       }
     }
   }
@@ -634,13 +638,13 @@
     display: block;
 
     &:hover {
-      background: $hover-state;
-      color: $white;
+      background: colors.$hover-state;
+      color: colors.$white;
     }
 
     &:focus {
       outline-offset: -0.25rem;
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
 
       @media (min-width: breakpoint-min(lg)) {
         outline-offset: -0.25rem;
@@ -648,8 +652,8 @@
     }
 
     &:active {
-      background: $active-state;
-      color: $white;
+      background: colors.$active-state;
+      color: colors.$white;
     }
 
     &--has-children {
@@ -698,7 +702,7 @@
 
   /* All primary nav links */
   a {
-    color: $default-state;
+    color: colors.$default-state;
     font-weight: bold;
     font-size: 1rem;
     line-height: 1.333rem;
@@ -836,7 +840,7 @@
           }
 
           &:focus {
-            outline: 1px dotted $white;
+            outline: 1px dotted colors.$white;
           }
         }
       }
@@ -880,28 +884,28 @@
 
   &:focus {
     outline-offset: -0.25rem;
-    outline: 1px dotted $hover-state;
+    outline: 1px dotted colors.$hover-state;
   }
 
   &:hover {
     opacity: 1;
-    background: $ucla-blue;
+    background: colors.$ucla-blue;
 
     .hamburger__inner {
-      background-color: $white;
+      background-color: colors.$white;
 
       &::before {
-        background-color: $white;
+        background-color: colors.$white;
       }
 
       &::after {
-        background-color: $white;
+        background-color: colors.$white;
       }
     }
   }
 
   &:active {
-    background-color: $active-state;
+    background-color: colors.$active-state;
   }
 
   &__box {
@@ -917,7 +921,7 @@
     transition-property: transform;
     width: 16px;
     height: 2px;
-    background: $ucla-blue;
+    background: colors.$ucla-blue;
     border-radius: 0px;
     position: absolute;
     display: block;
@@ -930,7 +934,7 @@
       display: block;
       width: 16px;
       height: 2px;
-      background: $ucla-blue;
+      background: colors.$ucla-blue;
       border-radius: 0px;
     }
 

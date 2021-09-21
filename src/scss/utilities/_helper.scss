@@ -1,3 +1,5 @@
+@use "colors";
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -134,7 +136,7 @@
     *:before,
     *:after {
         background: transparent !important;
-        color: $black !important; /* Black prints faster */
+        color: colors.$black !important; /* Black prints faster */
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
@@ -169,7 +171,7 @@
 
     pre,
     blockquote {
-        border: 1px solid $grey-40;
+        border: 1px solid colors.$grey-40;
         page-break-inside: avoid;
     }
 

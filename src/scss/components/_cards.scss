@@ -1,3 +1,7 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/_mixins/helper";
+@use "../utilities/colors";
+
 // ~Styles for Cards~ //
 // 1) Basic Cards
 // 2) Event Cards
@@ -10,11 +14,11 @@
 
 .basic-card, .basic-card-grey, .basic-card-gray {
   display: inline-block;
-  background: $white;
+  background: colors.$white;
   margin: 32px 2% 0 0;
   vertical-align: top;
 
-  @media only screen and (min-width: breakpoint-min(sm)) {
+  @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
     max-width: 376px;
     margin: 32px 2% 0 0;
   }
@@ -24,7 +28,7 @@
     width: 100%;
     height: auto;
 
-    @media only screen and (min-width: breakpoint-min(sm)) {
+    @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       max-width: 376px;
       max-height: 250px;
     }
@@ -34,7 +38,6 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 27px;
-    margin-bottom: 24px;
   }
 
   &__info-wrapper {
@@ -42,10 +45,9 @@
   }
 
   &__description {
-    margin-bottom: 24px;
     font-size: 16px;
     line-height: 24px;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     max-height: 300px;
 
     &:last-child {
@@ -55,12 +57,15 @@
 
   &__buttons {
     margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-gap: 4px;
+    justify-items: start;
+    margin-left: -8px;
   }
 }
 
 .basic-card-grey > .basic-card__info-wrapper, .basic-card-gray > .basic-card__info-wrapper {
-  background: $grey-5;
+  background: colors.$grey-5;
 }
 
 //  Event Cards //  Event Cards //  Event Cards
@@ -71,25 +76,24 @@
   width: 100%;
   height: auto;
   margin: 16px 0 0;
-  display: inline-block;
   position: relative;
-  background: $white;
-  vertical-align: top;
+  background: colors.$white;
 
-  @media only screen and (min-width: breakpoint-min(sm)) {
+  @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
     max-width: 276px;
     margin: 40px 2% 0 0;
   }
 
   &:focus {
-    outline: 1px dotted $focus-state;
+    outline: 1px dotted colors.$focus-state;
   }
 
   &__image {
     width: 100%;
     height: auto;
+    position: relative;
 
-    @media only screen and (min-width: breakpoint-min(sm)) {
+    @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       max-width: 276px;
       max-height: 184px;
     }
@@ -98,40 +102,56 @@
   &__link {
     text-decoration: none;
 
-    span {
-      &:hover {
-        background-color: $hover-state;
-        color: $white;
+
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+
+      &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 184px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: colors.$hover-state;
+      }
+
+      span {
+        background-color: colors.$hover-state;
+        color: colors.$white;
         text-decoration: none;
       }
     }
 
     &:focus {
-      outline: 1px dotted #0079BF;
+      outline: 1px dotted colors.$focus-state;
     }
 
     &:hover {
-      color: $default-state;
+      color: colors.$default-state;
       background-color: transparent;
 
       &:visited {
-        background-color: $visited-state;
-        color: $visited-state;
+        background-color: colors.$visited-state;
+        color: colors.$visited-state;
         text-decoration: none;
       }
     }
 
     &:focus, &:active {
       span {
-        color: $white;
-        outline: 1px dotted $focus-state;
-        background-color: $active-state;
+        color: colors.$white;
+        outline: 1px dotted colors.$focus-state;
+        background-color: colors.$active-state;
       }
     }
   }
 
   &__title {
-    color: $default-state;
+    color: colors.$default-state;
     margin: 24px 24px 0;
     font-size: 20px;
     font-weight: bold;
@@ -140,12 +160,19 @@
 
   &-icon {
     &__time {
-      display: inline-block;
-      content: "";
-      background: url(/img/icons/time-grey60.svg);
-      background-size: contain;
       width: 16px;
       height: 16px;
+      margin-top: -1.5px;
+      margin-bottom: -1.5px;
+      margin-left: 1px;
+      margin-right: 6px;
+      vertical-align: bottom;
+    }
+
+    &__location {
+      width: 16px;
+      height: 16px;
+      margin-top: -1.5px;
       margin-bottom: -1.5px;
       margin-left: 1px;
       margin-right: 6px;
@@ -153,12 +180,9 @@
     }
 
     &__play {
-      display: inline-block;
-      content: "";
-      background: url(/img/icons/play-grey.svg);
-      background-size: contain;
       width: 15px;
       height: 15px;
+      margin-top: -1.5px;
       margin-bottom: 0px;
       margin-left: 1.25px;
       margin-right: 6px;
@@ -169,7 +193,7 @@
   &-info {
     display: block;
     padding: 8px 24px 24px 24px;
-    background: $white;
+    background: colors.$white;
 
     &__date {
       position: absolute;
@@ -177,8 +201,8 @@
       max-width: 100px;
       height: 44px;
       padding: 8px 12px;
-      background: $ucla-gold;
-      color: $grey-80;
+      background: colors.$ucla-gold;
+      color: colors.$grey-80;
       font-weight: bold;
       top: 0;
       left: 0;
@@ -206,11 +230,13 @@
     }
 
     &__time,
-    &__location {
+    &__location,
+    &__play {
+      display: inline-flex;
       margin-bottom: 8px;
       font-size: 12.8px;
       font-weight: bold;
-      color: $medium-grey4;
+      color: colors.$medium-grey4;
 
       img {
         display: inline;
@@ -225,7 +251,7 @@
       margin-bottom: 8px;
       font-size: 16px;
       line-height: 24px;
-      color: $medium-grey5;
+      color: colors.$medium-grey5;
       max-height: 300px;
 
       &:last-child {
@@ -237,417 +263,7 @@
   &:first-child {
     margin-top: 0px;
 
-    @media only screen and (min-width: breakpoint-min(sm)) {
-      margin-top: 40px;
-    }
-  }
-}
-
-//  Story //  Story //  Story
-//  Story //  Story //  Story
-//  Story //  Story //  Story
-
-/**********
-I. "Featured" Heading
-
-II. Tier 1 story
-  a. list of story (for accessibility)
-    b. link to story
-      - image
-    c. content wrapper
-      - title
-        * link to story
-      - description/blurb
-      - source
-
-III. Tier 2 stories
-  a. list of stories (for accessibility)
-    b. link to story
-      - image/thumbnail
-      - story title
-        * span for the title text
-    c. content wrapper
-      - description/blurb
-      - source
-
-* Note about wrapping both the image and heading in an anchor tag: this is for accessibility to avoid redundant links with the same destination. Otherwise, when a screenreader iterates through the page, it will read out the links twice.
-
-The spans in the tier 2 stories are for styling purposes.
-
-***********/
-
-.story {
-  margin-bottom: 0;
-  padding: 0 10px;
-
-  @media (min-width: breakpoint-min(xl)) {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
-  /***************
-    .story__featured is the top story that appears first, above the secondary stories.
-    On mobile, the entire story card has 100% viewport width.
-    On desktop, the story title, description, and source appear in a white overlay above the image.
-  ****************/
-
-  &__featured {
-    float: left;
-
-    @media (min-width: breakpoint-min(lg)) {
-      position: relative;
-      width: 100%;
-    }
-
-    &-card {
-      min-height: 540px;
-
-      @media (min-width: breakpoint-min(xl)) {
-        width: 100%;
-        margin-bottom: 0;
-      }
-    }
-
-    &-content {
-      margin: 0 25px;
-      padding: 32px;
-      position: relative;
-      top: -24px;
-      background-color: $white;
-
-      @media (min-width: breakpoint-min(lg)) {
-        margin: 0;
-        width: 576px;
-        position: absolute;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        transform: translateY(100%);
-      }
-    }
-
-    &-image {
-      width: 100%;
-      height: auto;
-
-      @media (min-width: breakpoint-min(lg)) {
-        width: 776px;
-        height: 517px;
-        float: right;
-      }
-    }
-
-    &-title {
-      font-size: 2.25rem;
-      line-height: 1.125;
-      margin-bottom: 16px;
-
-      & > .link {
-        color: $default-state;
-        text-decoration: none;
-      }
-    }
-
-    &-blurb {
-      margin: 0 0 16px;
-      line-height: 1.5;
-    }
-
-    &-source {
-      line-height: 1.25rem;
-      font-weight: bold;
-      line-height: 1.25;
-    }
-  } // end &__featured
-
-
-  /***************
-  .story__secondary include the secondary stories that appear below the top featured story.
-  On mobile, all stories appear in one column, stacked.
-  On desktop, stories appear in a 1x3 grid.
-  ****************/
-
-  &__secondary {
-    margin: 0 24px;
-
-    @media (min-width: breakpoint-min(md)) {
-      margin: 0 auto;
-    }
-
-    @media (min-width: breakpoint-min(lg)) {
-      padding-top: 24px;
-    }
-
-    &-card, &-card-grey {
-      position: relative;
-      margin: 0 24px 24px 0;
-      padding-left: 0px;
-      display: inline-block;
-      vertical-align: top;
-
-      @media (min-width: breakpoint-min(md)) {
-        padding-left: 38px;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        padding-left: 0px;
-        min-height: 540px;
-        width: calc((100% - 58px)/3);
-      }
-
-      @media (max-width: breakpoint-max(md)) {
-        width: 100%;
-
-        /* remove margins and set padding with values
-        so grey background is applied to the whole element */
-        margin: 0;
-        padding: 12px 24px;
-      }
-
-      &:nth-child(3n) {
-        @media (min-width: breakpoint-min(lg)) {
-          margin-right: 0;
-        }
-      }
-
-      a {
-        outline: none;
-
-        &:focus .story__secondary-title-text {
-          outline: auto;
-          outline-style: dotted;
-          outline-width: thin;
-        }
-      }
-    }
-
-    &-card-grey, &-card-gray {
-      background: $grey-5;
-
-      & > a > .story__secondary-title {
-        background: $grey-5;
-      }
-    }
-
-    &-content {
-      box-sizing: border-box;
-      width: 100%;
-
-      @media (max-width: breakpoint-max(sm)) {
-        float: left;
-        width: 61%;
-      }
-
-      @media (min-width: breakpoint-max(sm)) and (max-width: breakpoint-max(md)) {
-        float: left;
-        width: 65%;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        padding: 0 32px 0;
-      }
-    }
-
-    a {
-      text-decoration: none; // remove underline from title link
-    }
-
-    &-image {
-      height: auto;
-      width: 100%;
-      max-width: 72px;
-
-      @media (min-width: breakpoint-min(md)) {
-        margin-bottom: 28px;
-        max-width: 168px;
-        margin-bottom: 29px;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        max-width: 376px;
-        max-height: 282px;
-        min-width: 100%;
-        margin-bottom: 0;
-      }
-
-      &-wrapper {
-        margin-right: 12px;
-        max-width: 377px;
-        float: left;
-
-        @media (min-width: breakpoint-min(md)) {
-          display: block;
-          margin-right: 40px;
-        }
-
-        @media (min-width: breakpoint-min(lg)) {
-          float: none;
-          width: 100%;
-          min-width: 100%;
-        }
-      }
-    }
-
-    &-title {
-      font-size: 1rem;
-      line-height: 1.125rem;
-      color: $default-state;
-      margin: 0 16px;
-      outline: none;
-
-      @media (max-width: breakpoint-max(sm)) {
-        margin: 0;
-        width: 100%;
-      }
-
-      @media (min-width: breakpoint-min(md)) {
-        font-size: 1.5rem;
-        line-height: 1.6875rem;
-        padding-right: 24px;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        padding: 16px;
-        background: white;
-        position: relative;
-        bottom: 16px;
-      }
-
-      &-text {
-        /*
-        pseudo-classes() is a SASS mixin located at src/scss/utilities/_mixins/_helper.scss
-
-        This was created because both the image and title are wrapped in the anchor element, but &-title is more specifically a span. Instead of duplicating the anchor link pseudo-classes, we can use a mixin.
-        */
-        @include pseudo-classes();
-
-        @media (min-width: breakpoint-min(lg)) {
-          top: 24px;
-        }
-      }
-    } // end &-title
-
-    &-blurb {
-      font-size: 0.8rem;
-      line-height: 1rem;
-      margin: 12px 0;
-
-      @media (min-width: breakpoint-min(md)) {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        margin-top: 0;
-        margin-bottom: 24px;
-      }
-    }
-
-    &-source {
-      font-size: 0.8rem;
-      line-height: 0.875rem;
-      font-weight: bold;
-      margin: 12px 0;
-
-      @media (min-width: breakpoint-min(md)) {
-        position: relative;
-        font-size: 1rem;
-        line-height: 1.25rem;
-      }
-
-      @media (min-width: breakpoint-min(lg)) {
-        position: absolute;
-        bottom: 0;
-      }
-
-      a {
-        text-decoration: underline;
-      }
-    }
-  } // end &__secondary
-}
-
-//  Person Cards //  Person Cards //  Person Cards
-//  Person Cards //  Person Cards //  Person Cards
-//  Person Cards //  Person Cards //  Person Cards
-
-.person-card, .person-card-grey, .person-card-gray {
-  height: auto;
-  display: inline-block;
-  position: relative;
-  background: $white;
-  vertical-align: top;
-
-  @media only screen and (min-width: breakpoint-min(xs)) {
-    max-width: 276px;
-    margin: 0 16px 32px;
-  }
-
-  &-grey > &__info-wrapper, &-gray > &__info-wrapper {
-    background: $grey-5;
-  }
-
-  &-grey > &__info-wrapper, &-gray > &__info-wrapper {
-    background: $grey-5;
-  }
-
-  &__image {
-    height: auto;
-    position: relative;
-    z-index: 1;
-
-    @media only screen and (max-width: breakpoint-max(xs)) {
-      width: 100%;
-    }
-
-    @media only screen and (min-width: breakpoint-min(xs)) {
-      width: 160px;
-      height: 160px;
-      padding-left: 32px;
-    }
-  }
-
-  &__info-wrapper {
-    position: relative;
-    bottom: 32px;
-    background: $white;
-    z-index: 0;
-    padding: 64px 32px 32px;
-
-    @media only screen and (min-width: breakpoint-min(xs)) and (max-width: breakpoint-min(sm)) {
-      max-width: 192px;
-    }
-  }
-
-  &__name {
-    color: $default-state;
-    font-size: 24px;
-    line-height: 27px;
-    margin-bottom: 8px;
-  }
-
-  &__department {
-    color: $medium-grey4;
-    font-size: 18px;
-    line-height: 22.5px;
-    margin-bottom: 12px;
-  }
-
-  &__description {
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 24px;
-    color: $medium-grey5;
-    max-height: 300px;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
-
-  &:first-child {
-    margin-top: 0px;
-
-    @media only screen and (min-width: breakpoint-min(sm)) {
+    @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       margin-top: 40px;
     }
   }

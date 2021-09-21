@@ -1,3 +1,5 @@
+@use "../utilities/colors";
+
 .text, .radio, .select, .checkbox {
   margin-bottom: 8px;
 }
@@ -13,7 +15,7 @@
     display: block;
     font-size: 16px;
     line-height: 24px;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -23,17 +25,17 @@
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
-    background: $lightest-grey-2;
+    background: colors.$lightest-grey-2;
     background-size: 24px;
     font-size: 16px;
     line-height: 24px;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
-    color: $medium-grey4;
+    color: colors.$medium-grey4;
 
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
       outline-offset: 1px;
     }
   }
@@ -45,7 +47,7 @@
 
   &__help {
     display: block;
-    color: $medium-grey4;
+    color: colors.$medium-grey4;
     margin-top: 8px;
   }
 
@@ -60,7 +62,7 @@
 
     & > .text__error {
       display: block;
-      color: $error-red;
+      color: colors.$error-red;
       margin-top: 8px;
     }
   }
@@ -73,7 +75,7 @@
     display: block;
     font-size: 16px;
     line-height: 24px;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -86,21 +88,21 @@
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
-    background: $lightest-grey-2 url('/img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
+    background: colors.$lightest-grey-2 url('/img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: 16px;
     line-height: 24px;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
-    color: $medium-grey4;
+    color: colors.$medium-grey4;
 
     &::-ms-expand {
       display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
     }
 
     &:focus {
-      outline: 1px dotted $hover-state;
+      outline: 1px dotted colors.$hover-state;
       outline-offset: 1px;
     }
 
@@ -111,7 +113,7 @@
 
   &__help {
     display: block;
-    color: $medium-grey4;
+    color: colors.$medium-grey4;
     margin-top: 8px;
   }
 
@@ -128,7 +130,7 @@
 
     & > .select__error {
       display: block;
-      color: $error-red;
+      color: colors.$error-red;
       margin-top: 8px;
     }
   }
@@ -148,7 +150,7 @@
     margin-right: 12px; // should be 16px but subtracted 4 from default label/input spacing
 
     &:hover {
-      background: $hover-state;
+      background: colors.$hover-state;
     }
 
     &:focus {
@@ -161,7 +163,7 @@
     }
 
     &:checked {
-      background-color: $active-state;
+      background-color: colors.$active-state;
       border: 1px solid #adb8c0;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
       padding: 0 4px;
@@ -177,7 +179,7 @@
     }
 
     &:checked {
-      background-color: $active-state;
+      background-color: colors.$active-state;
       border: 1px solid #adb8c0;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
       padding: 0 4px;
@@ -201,13 +203,13 @@
     margin-right: 11px; // should be 16px but subtracted 5 from default label/input spacing
 
     &:hover {
-      background: $hover-state;
-      border-color: $hover-state;
+      background: colors.$hover-state;
+      border-color: colors.$hover-state;
     }
 
     &:checked {
-      background: $active-state;
-      border-color: $active-state;
+      background: colors.$active-state;
+      border-color: colors.$active-state;
     }
 
     &:checked::after {
@@ -238,7 +240,7 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 22.5px;
-    color: $medium-grey5;
+    color: colors.$medium-grey5;
     padding: 0 4px;
   }
 }

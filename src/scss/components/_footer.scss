@@ -1,8 +1,11 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+
 .footer {
   &__dept, &__global {
     padding: 32px 24px;
 
-    @media only screen and (min-width: breakpoint-min(md)) {
+    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
       padding: 40px;
     }
   }
@@ -10,8 +13,8 @@
   // "Department Footer" - See top blue footer
 
   &__dept {
-    background: $ucla-blue;
-    color: $white;
+    background: colors.$ucla-blue;
+    color: colors.$white;
     font-weight: bold;
 
     &--logo {
@@ -19,15 +22,15 @@
       height: auto;
       margin-bottom: 32px;
 
-      @media only screen and (min-width: breakpoint-min(xs)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(xs)) {
         max-width: 50%;
       }
 
-      @media only screen and (min-width: breakpoint-min(md)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
         max-width: 25%;
       }
 
-      @media only screen and (min-width: breakpoint-min(xl)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(xl)) {
         max-width: 18%;
       }
     }
@@ -44,7 +47,7 @@
       vertical-align: top;
 
       &-wrapper {
-        @media only screen and (min-width: breakpoint-min(md)) {
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
           display: inline-block;
         }
       }
@@ -63,20 +66,20 @@
           font-size: 1rem;
 
           & a {
-            color: $white;
+            color: colors.$white;
             text-decoration: none;
 
             &:hover {
-              background: $hover-state-dark;
-              color: $black;
+              background: colors.$hover-state-dark;
+              color: colors.$black;
             }
 
             &:focus {
-              outline: 1px dotted $white;
+              outline: 1px dotted colors.$white;
             }
 
             &:active {
-              background: $active-state-dark;
+              background: colors.$active-state-dark;
             }
           }
 
@@ -94,7 +97,7 @@
     &--info {
       margin-right: 24px;
 
-      @media only screen and (min-width: breakpoint-min(lrg)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(lrg)) {
         max-width: 25%;
       }
     }
@@ -103,25 +106,25 @@
       margin-bottom: 12px;
 
       p {
-        color: $white;
+        color: colors.$white;
         font-size: 14px;
       }
 
       a {
-        color: $white;
+        color: colors.$white;
         text-decoration: none;
 
         &:hover {
-          background: $hover-state-dark;
-          color: $black;
+          background: colors.$hover-state-dark;
+          color: colors.$black;
         }
 
         &:focus {
-          outline: 1px dotted $white;
+          outline: 1px dotted colors.$white;
         }
 
         &:active {
-          background: $active-state-dark;
+          background: colors.$active-state-dark;
         }
       }
       // Spacing between address and phone number
@@ -135,101 +138,91 @@
     }
 
     &--social {
-      height: 24px;
+      height: 48px;
       max-height: 100%;
       margin-bottom: 14px;
 
-      @media only screen and (min-width: breakpoint-min(md)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
         margin-bottom: 14px;
-        height: 32px;
+        height: 48px;
       }
 
-      & a {
-        margin-right: 4px;
-
-        &:focus {
-          outline: 1px dotted $white;
-          border-radius: 2px;
-        }
-      }
 
       &-facebook {
-        background: url("/img/icons/social-icons/facebook-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/facebook-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/facebook--black.svg");
         }
       }
 
       &-twitter {
-        background: url("/img/icons/social-icons/twitter-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/twitter-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/twitter--black.svg");
         }
       }
 
       &-instagram {
-        background: url("/img/icons/social-icons/instagram-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/instagram-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/instagram--black.svg");
         }
       }
 
       &-snapchat {
-        background: url("/img/icons/social-icons/snapchat-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/snapchat-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/snapchat--black.svg");
         }
       }
 
       &-linkedin {
-        background: url("/img/icons/social-icons/linkedin-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/linkedin-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/linkedin--black.svg");
         }
       }
 
       &-youtube {
-        background: url("/img/icons/social-icons/youtube-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/youtube-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/youtube--black.svg");
         }
       }
 
       &-tiktok {
-        background: url("/img/icons/social-icons/tiktok-white.svg");
-
-        &:hover {
-          background: $hover-state-dark url("/img/icons/social-icons/tiktok-black.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/tiktok--black.svg");
         }
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
         max-height: 100%;
-        width: 24px;
-        background-size: 24px;
+        width: 48px;
+        background-size: 48px;
         background-repeat: no-repeat;
         border-radius: 2px;
+        display: inline-block;
+        position: relative;
+
+        & span {
+          position: relative;
+        }
+
+        &:focus {
+          outline: 1px dotted colors.$white;
+          border-radius: 2px;
+        }
 
         &:hover {
-          background-size: 24px;
+          background-size: 48px;
+          background: colors.$hover-state-dark;
         }
 
         &:active {
-          background-color: $active-state-dark;
+          background: colors.$active-state-dark;
         }
 
-        @media only screen and (min-width: breakpoint-min(md)) {
-          width: 32px;
-          background-size: 32px;
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+          width: 48px;
+          background-size: 48px;
 
           &:hover {
-            background-size: 32px;
+            background-size: 48px;
           }
         }
       }
@@ -299,19 +292,19 @@
           & a {
             font-weight: bold;
             text-decoration: none;
-            color: $default-state;
+            color: colors.$default-state;
 
             &:hover {
-              background: $hover-state;
-              color: $white;
+              background: colors.$hover-state;
+              color: colors.$white;
             }
 
             &:active {
-              background: $active-state;
+              background: colors.$active-state;
             }
 
             &:focus {
-              outline: 1px dotted $hover-state;
+              outline: 1px dotted colors.$hover-state;
             }
           }
 
@@ -337,85 +330,78 @@
         margin-bottom: 24px;
       }
 
-      a, svg {
+
+      a, div {
         vertical-align: top;
-        max-height: 40px;
+        max-height: 48px;
+        display: inline-block;
       }
 
-      a:focus {
-        outline: 1px dotted $hover-state;
-      }
 
       &-facebook {
-        background: url("/img/icons/social-icons/facebook-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/facebook-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/facebook--white.svg");
         }
       }
 
       &-twitter {
-        background: url("/img/icons/social-icons/twitter-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/twitter-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/twitter--white.svg");
         }
       }
 
       &-instagram {
-        background: url("/img/icons/social-icons/instagram-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/instagram-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/instagram--white.svg");
         }
       }
 
       &-snapchat {
-        background: url("/img/icons/social-icons/snapchat-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/snapchat-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/snapchat--white.svg");
         }
       }
 
       &-linkedin {
-        background: url("/img/icons/social-icons/linkedin-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/linkedin-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/linkedin--white.svg");
         }
       }
 
       &-youtube {
-        background: url("/img/icons/social-icons/youtube-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/youtube-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/youtube--white.svg");
         }
       }
 
       &-tiktok {
-        background: url("/img/icons/social-icons/tiktok-color.svg");
-
-        &:hover {
-          background: $hover-state url("/img/icons/social-icons/tiktok-white.svg");
+        &:hover, &:active {
+          content: url("/img/icons/social/tiktok--white.svg");
         }
       }
 
       &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
         max-height: 100%;
-        width: 40px;
-        background-size: 40px;
+        width: 48px;
+        background-size: 48px;
         background-repeat: no-repeat;
         border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
 
         &:hover {
-          background-size: 40px;
+          background-size: 48px;
           background-repeat: no-repeat;
+          background: colors.$hover-state;
         }
 
         &:active {
-          background-color: $active-state;
+          background: colors.$active-state;
+        }
+
+        &:focus {
+          outline: 1px dotted colors.$hover-state;
         }
       }
     }
@@ -425,15 +411,15 @@
 // "Email Signup"
 
 .email {
-  background: $darker-blue;
+  background: colors.$darker-blue;
   padding: 32px 24px;
 
-  @media only screen and (min-width: breakpoint-min(md)) {
+  @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
     padding: 40px;
   }
 
   &__heading, &__description, &__form, &__legal-text, &__legal-link, &__legal-link:visited, &__legal-link:link {
-    color: $white;
+    color: colors.$white;
   }
 
   &__heading {
@@ -454,7 +440,7 @@
     margin-bottom: 22px;
     vertical-align: top;
 
-    @media (min-width: breakpoint-min(lg)) {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: table-cell;
       padding: 0 12px;
       margin-bottom: 0;
@@ -467,18 +453,18 @@
       height: 48px;
       border: none;
       font-size: 1rem;
-      background-color: $darkest-blue;
+      background-color: colors.$darkest-blue;
       opacity: 1;
       border-radius: 2px;
-      color: $white;
+      color: colors.$white;
       margin-top: 6px;
 
       &::placeholder {
-        color: $medium-grey3;
+        color: colors.$medium-grey3;
       }
 
       &:focus {
-        outline: 1px dotted $white;
+        outline: 1px dotted colors.$white;
         outline-offset: -3px;
       }
 
@@ -488,7 +474,7 @@
         background-size: auto !important;
         background-position: 96% 51%;
 
-        @media (min-width: breakpoint-min(md)) {
+        @media (min-width: breakpoints.breakpoint-min(md)) {
           background-position: 98% 50%;
         }
       }
@@ -498,16 +484,16 @@
         background-repeat: no-repeat;
         background-size: auto !important;
         background-position: 98% 50%;
-        border: 2px solid $ucla-gold;
+        border: 2px solid colors.$ucla-gold;
       }
     }
 
     &-submit {
-      background-color: $ucla-gold;
+      background-color: colors.$ucla-gold;
       height: 48px;
       border: none;
       border-radius: 2px;
-      color: $grey-80;
+      color: colors.$grey-80;
       cursor: pointer;
       text-align: center;
       text-decoration: none;
@@ -519,19 +505,19 @@
       top: 0px;
       max-width: 120px;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         margin-top: 0px;
         top: 23px;
         max-width: none;
       }
 
       &:active {
-        background-color: $button-active;
+        background-color: colors.$button-active;
       }
 
       &:focus {
-        background-color: $button-hover;
-        outline: 1px dotted $white;
+        background-color: colors.$button-hover;
+        outline: 1px dotted colors.$white;
         outline-offset: 1px;
       }
     }
@@ -542,25 +528,24 @@
       width: 100%;
       margin-bottom: 24px;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: table;
       }
     }
 
     &-label {
-      font-weight: bold;
       display: block;
     }
 
     &-email {
       width: auto;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: 28.32%;
         padding-left: 0;
       }
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         input[type="text"] {
           max-width: 520px;
         }
@@ -570,13 +555,13 @@
     &-firstname {
       width: auto;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         width: 256px;
         display: inline-block;
         margin-right: 5px;
       }
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: 23.89%;
         display: table-cell;
       }
@@ -585,12 +570,12 @@
     &-lastname {
       width: auto;
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         width: 256px;
         display: inline-block;
       }
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: 24.34%;
         display: table-cell;
       }
@@ -599,7 +584,7 @@
     &-zipcode {
       width: auto;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: 12.04%;
       }
 
@@ -615,7 +600,7 @@
       position: relative;
       margin-bottom: 8px;
 
-      @media (min-width: breakpoint-min(lg)) {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
         width: 11.53%;
         margin-bottom: 0;
       }
@@ -631,16 +616,16 @@
     text-decoration: underline;
 
     &:hover {
-      background: $hover-state-dark;
-      color: $black;
+      background: colors.$hover-state-dark;
+      color: colors.$black;
     }
 
     &:focus {
-      outline: 1px dotted $white;
+      outline: 1px dotted colors.$white;
     }
 
     &:active {
-      background: $active-state-dark;
+      background: colors.$active-state-dark;
     }
   }
 }

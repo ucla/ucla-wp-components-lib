@@ -1,3 +1,6 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+
 // /*******
 //
 //    HTML structure:
@@ -41,10 +44,10 @@
 
   &__title {
     border: 0;
-    border-top: 1px solid $grey-10;
+    border-top: 1px solid colors.$grey-10;
     width: 100%;
     text-align: left;
-    color: $default-state;
+    color: colors.$default-state;
     font-size: 1rem;
     line-height: 24px;
     font-weight: bold;
@@ -59,13 +62,13 @@
       outline-style: dotted;
     }
 
-    &:hover, &.active {
-      background: $hover-state;
-      color: $white;
+    &:hover, &:active {
+      background: colors.$hover-state;
+      color: colors.$white;
       cursor: pointer;
 
       &::after {
-        background: url("/img/icons/arrow-down-white.svg");
+        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--white.svg");
         background-position: center;
         background-size: contain;
         position: absolute;
@@ -75,7 +78,7 @@
         height: 24px;
       }
 
-      @media (min-width: breakpoint-min(md)) {
+      @media (min-width: breakpoints.breakpoint-min(md)) {
         &::after {
           right: 16px;
           top: 16px;
@@ -97,7 +100,7 @@
     &::after {
       display: block;
       content: "";
-      background: url("/img/icons/arrow-down-defaultblue.svg");
+      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--blue.svg");
       background-position: center;
       background-size: contain;
       position: absolute;
@@ -107,7 +110,7 @@
       height: 24px;
     }
 
-    @media (min-width: breakpoint-min(md)) {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: 24px;
       padding: 22px 64px 18px 16px;
 
@@ -139,7 +142,7 @@
     &::after {
       content: "";
       display: block;
-      border-bottom: 1px solid $grey-10;
+      border-bottom: 1px solid colors.$grey-10;
     }
   }
 }
@@ -147,31 +150,31 @@
 //load more code
 .load-more {
   &.btn {
-    border: 2px solid $default-state;
-    background: $white;
+    border: 2px solid colors.$default-state;
+    background: colors.$white;
     padding: 12px 16px 8px;
     font-size: 1rem;
     line-height: 1.25rem;
-    color: $default-state;
+    color: colors.$default-state;
 
     &:hover {
-      background: $hover-state;
-      border-color: $hover-state;
-      color: $white;
+      background: colors.$hover-state;
+      border-color: colors.$hover-state;
+      color: colors.$white;
     }
 
     &:focus {
-      background: $focus-state;
-      border-color: $focus-state;
-      color: $white;
-      outline: 1px dotted $focus-state;
+      background: colors.$focus-state;
+      border-color: colors.$focus-state;
+      color: colors.$white;
+      outline: 1px dotted colors.$focus-state;
       outline-offset: 2px;
     }
 
     &:active {
-      background: $active-state;
-      border-color: $active-state;
-      color: $white;
+      background: colors.$active-state;
+      border-color: colors.$active-state;
+      color: colors.$white;
     }
   }
 }

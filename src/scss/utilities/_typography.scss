@@ -1,7 +1,12 @@
+@use "_mixins/breakpoints";
+@use "_mixins/helper";
+@use "colors";
+@use "variables";
+
 h1, h2, h3, h4, h5, h6 {
-  color: $grey-80;
+  color: colors.$grey-80;
   font-weight: bold;
-  font-family: $font;
+  font-family: variables.$font;
   padding-bottom: 16px;
 }
 
@@ -10,7 +15,7 @@ h1, .h1 {
   line-height: 40.5px;
   font-weight: bold;
 
-  @media (min-width: breakpoint-min(md)) {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: 48px;
     line-height: 54px;
   }
@@ -21,7 +26,7 @@ h2, .h2 {
   line-height: 32px;
   font-weight: bold;
 
-  @media (min-width: breakpoint-min(md)) {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: 36px;
     line-height: 40.5px;
   }
@@ -54,7 +59,7 @@ h6, .h6 {
 p {
   font-size: 16px;
   line-height: 24px;
-  color: $grey-80;
+  color: colors.$grey-80;
   padding-bottom: 16px;
 
   strong {
@@ -95,9 +100,20 @@ p {
 }
 
 .mark-text {
-  background: #FFF0A5
+  background: #FFF0A5;
 }
 
 .insert-text {
-  background: #DAEBFE
+  background: #DAEBFE;
+}
+
+.has-white-text {
+  color: colors.$white;
+
+  @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
+
+  > div,
+  > aside {
+    @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
+  }
 }
