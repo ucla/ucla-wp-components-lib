@@ -424,11 +424,8 @@
 
           /* Show child links on hover of parents container */
           & > ul {
-            /* display: block; */
             margin-top: 0;
             z-index: 820;
-            /* opacity: 1;
-            transition-delay: 0.5s; */
           }
         }
       }
@@ -500,6 +497,12 @@
         }
       }
 
+      &:hover {
+        .nav-primary__toggle {
+          filter: brightness(0) invert(1);
+        }
+      }
+
       .nav-primary__sublist {
         .nav-primary__item {
           padding-right: 0px;
@@ -559,7 +562,17 @@
     }
 
     @media (min-width: breakpoint-min(lg)) {
-      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      width: 2em;
+      cursor: pointer;
+
+      &:hover {
+        background: none;
+      }
     }
   }
 
@@ -654,6 +667,7 @@
         position: relative;
         padding-right: 2px;
 
+
         .nav-primary__link {
           &:hover {
             border-bottom: 1px;
@@ -666,15 +680,8 @@
           display: flex;
           align-items: center;
 
-          &::after {
-            content: "";
-            display: block;
-            height: 1em;
-            width: 1em;
-            background: url("/img/icons/arrow-right-defaultblue.svg") no-repeat center;
-            background-size: 24px;
-            margin-left: 6px;
-            transform: rotate(90deg);
+          &.nav-primary__link {
+            padding-right: 40px;
           }
         }
       }
@@ -808,6 +815,11 @@
         }
       }
 
+      &:focus {
+        outline-offset: -0.25rem;
+        outline: 1px dotted #0079BF;
+      }
+
       @media (min-width: breakpoint-min(lg)) {
         display: block;
         height: 44px;
@@ -821,6 +833,10 @@
 
           svg {
             filter: brightness(0) invert(1);
+          }
+
+          &:focus {
+            outline: 1px dotted $white;
           }
         }
       }
@@ -837,13 +853,6 @@
           display: block;
           position: absolute;
         }
-      }
-    }
-
-    .nav-primary__search-desktop-button {
-      &:focus {
-        outline-offset: -0.25rem;
-        outline: 1px dotted #0079BF;
       }
     }
   }

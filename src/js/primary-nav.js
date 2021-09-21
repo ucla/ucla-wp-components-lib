@@ -10,10 +10,10 @@ $(document).ready(function (){
   // Show nav children on click of toggle
   $toggle.on('click', function () {
 
-    if ($(this).hasClass('is-open')) {
-      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
-    } else {
+    if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
+    } else {
+      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
     }
 
     $(this).siblings('.nav-primary__sublist').toggleClass('nav-primary__sublist--hidden');
@@ -164,6 +164,8 @@ $(document).ready(function (){
       setTimeout(function () {
         $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
       }, 50);
+
+      $toggle.removeClass('is-open');
     }
   });
 
@@ -197,13 +199,15 @@ $(document).ready(function (){
 
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
             $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+            $toggle.removeClass('is-open');
+            $sublistItem.addClass('nav-primary__sublist--hidden');
           }
 
         }, 50);
       }
 
       //arrow down was pressed
-      if (keyCode === 40 || keyCode === 13) {
+      if (keyCode === 40) {
 
         //get the focused element
         let $focus = $(':focus'), $dropdown;
@@ -238,6 +242,8 @@ $(document).ready(function (){
           //close the dropdowns
           $('.nav-primary__list .nav-primary__sublist').attr('style', '');
           $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+          $toggle.removeClass('is-open');
+          $('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
 
           //if this is a nav item
           if ($focus.parent().parent('.nav-primary__sublist').length > 0) {
