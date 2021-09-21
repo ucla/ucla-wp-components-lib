@@ -1,146 +1,71 @@
 @use "../utilities/_mixins/breakpoints";
+@use "../utilities/_mixins/helper";
 @use "../utilities/colors";
 
-.ucla {
-  // override base styles for anchor tags
-  a.tile__link {
-    &:link {
-      background-color: rgba(0, 89, 140, 0.85); //must be rgba to set opacity for bg only
-      text-decoration: none;
-    }
+.tile {
+  display: inline-block;
+  position: relative;
+  width: 276px;
+  max-width: 276px;
+  height: 188px;
 
-    &:hover,
-    &:focus {
-      background-color: rgba(0, 121, 191, 0.85);
+  &__link {
+    width: calc(100% -32px);
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    color: colors.$white;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    padding-left: 32px;
+    background: colors.$ucla-blue;
+
+    &:hover {
+      background: colors.$hover-state;
     }
 
     &:active {
-      background-color: rgba(0, 59, 92, 0.85);
-    }
-  }
-}
-// end base styles override
-
-// define a mixin to help set tile section grid
-@mixin setTileColumns($tile-columns) {
-  // section width determines the max number of tiles per row
-  $section-width: calc((#{$tile-width} + #{$tile-space-between}) * #{$tile-columns});
-
-  @media (min-width: breakpoints.breakpoint-min(md)) {
-    max-width: $section-width;
-  }
-}
-
-// set default specs
-$tile-space-between: 18px;
-$tile-width: 276px;
-
-.tile {
-  &__section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    @media (min-width: breakpoints.breakpoint-min(md)) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      background: colors.$active-state;
     }
 
-    &--col-1 {
-      @include setTileColumns(1);
+    &:focus {
+      outline: 1px dotted colors.$hover-state;
+      outline-offset: 2px;
+      background: colors.$hover-state;
     }
 
-    &--col-2 {
-      @include setTileColumns(2);
-    }
-
-    &--col-3 {
-      @include setTileColumns(3);
-    }
-
-    &--col-4 {
-      @include setTileColumns(4);
-    }
-
-    &--centered {
-      margin: 0 auto;
-      justify-content: center;
-    }
-  }
-
-  display: flex;
-  margin: 1% 0;
-
-  @media (min-width: breakpoints.breakpoint-min(md)) {
-    margin: 1% calc(#{$tile-space-between} / 2);
-  }
-
-  // all descendents of tile should have white text color
-  & * {
-    color: colors.$white;
-  }
-
-  // basic tile background is solid blue
-  &__background {
-    background: colors.$default-state;
-    width: 100%;
-
-    @media (min-width: breakpoints.breakpoint-min(md)) {
-      max-width: $tile-width;
-    }
-
-    // add variations on the tile background with the background shorthand property
-    &--royce {
-      background: colors.$default-state url("../img/examples/tile-example-1.jpg") no-repeat center / cover;
-    }
-
-    &--students {
-      background: colors.$default-state url("../img/examples/tile-example-2.jpg") no-repeat center / cover;
-    }
-
-    &--events {
-      background: colors.$default-state url("../img/examples/tile-example-3.jpg") no-repeat center / cover;
-    }
-  }
-
-  &__link {
-    $tile-height: 108px; // desired tile height - mobile
-    $tile-pt: 0; // padding top
-    $tile-px: 32px; // padding left and right
-    $tile-pb: 16px; // padding bottom
-
-    display: block;
-    height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
-    overflow: hidden;
-    padding: $tile-pt $tile-px $tile-pb;
-    width: 100%;
-
-    @media (min-width: breakpoints.breakpoint-min(md)) {
-      $tile-height: 188px; // desired tile height - desktop
-      $tile-pt: 16px;
-      $tile-pt: 32px;
-      $tile-pb: 64px;
-
-      height: calc(#{$tile-height} - #{$tile-pt} - #{$tile-pb});
-      padding: $tile-pt $tile-px $tile-pb;
-    }
-
-    // Gold Bar (required)
     &::before {
-      background: colors.$ucla-gold;
-      content: "";
       display: block;
-      height: 4px;
-      margin: 16px 0 12px;
+      content: "";
       width: 40px;
+      height: 4px;
+      background: colors.$ucla-gold;
+      margin: 32px 0 28px;
+    }
+  }
 
-      @media (min-width: breakpoints.breakpoint-min(md)) {
-        margin: 0 0 28px;
+  &.short {
+    height: 108px;
+
+    .tile__link {
+      &::before {
+        display: block;
+        content: "";
+        width: 40px;
+        height: 4px;
+        background: colors.$ucla-gold;
+        margin: 16px 0 12px;
       }
     }
   }
 
-  &__title {
-    line-height: 30px;
+  img {
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
