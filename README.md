@@ -33,6 +33,5 @@ Our goal is to provide flexible resources and tools for any person or team who c
 
 #### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
 - Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
-- Allison Lu (Web Developer/Lead QA) - alu@stratcomm.ucla.edu
 
-Internal Project Maintainers (aka StratComm-ers), please see documentation [here](./docs/internal/tableofcontents.md).
+Internal Project Maintainers, please see documentation [here](./docs/internal/tableofcontents.md).
