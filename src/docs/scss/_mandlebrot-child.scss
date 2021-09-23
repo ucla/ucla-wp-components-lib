@@ -51,6 +51,13 @@ a.Tree-entityLink {
         }
       }
 
+      &-title {
+        color: colors.$black;
+        font-size: 32px;
+        letter-spacing: 0.1px;
+        text-transform: capitalize;
+      }
+
       &-item {
         border-bottom: 1px solid colors.$medium-grey3;
         background-color: white;
