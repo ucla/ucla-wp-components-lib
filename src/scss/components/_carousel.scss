@@ -77,13 +77,36 @@
     -webkit-appearance: none;
     border: 0;
     margin: 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
 
     &--prev {
       transform: rotate(180deg); /* Equal to rotateZ(45deg) */
     }
 
-    svg path {
-      fill: colors.$white;
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: colors.$white;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: colors.$ucla-gold;
+      color: colors.$black;
+
+      svg path {
+        fill: colors.$black;
+      }
+    }
+
+    &:focus {
+      outline: 1px dotted colors.$active-state;
+      outline-offset: 1px
     }
   }
 
@@ -128,6 +151,31 @@
           outline: 1px dotted colors.$focus-state;
         }
       }
+    }
+  }
+
+  &__play,
+  &__pause {
+    background: colors.$ucla-blue;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 2px;
+    margin: 1px;
+    color: colors.$white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 3px;
+
+    &:hover {
+      cursor: pointer;
+      background: colors.$ucla-gold;
+      color: colors.$black;
+    }
+
+    &:focus {
+      outline: 1px dotted colors.$active-state;
+      outline-offset: 1px
     }
   }
 

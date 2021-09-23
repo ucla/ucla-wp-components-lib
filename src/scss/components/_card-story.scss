@@ -107,7 +107,9 @@
 
   &__secondary-card {
     width: 100%;
+    min-width: 376px;
     max-width: 376px;
+    //background: colors.$white;
 
     &-image {
       height: auto;
@@ -157,6 +159,7 @@
       height: auto;
       width: 100%;
       max-width: 376px;
+      color: colors.$default-state;
 
       &::before {
         display: none;

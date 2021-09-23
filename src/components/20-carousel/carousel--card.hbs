@@ -4,7 +4,7 @@
 			<ul class="splide__list">
 				<li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-white">
              <a class="story__secondary-card-link" href="#">
                  <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                  <p class="story__secondary-card-date">September 02, 2021</p>
@@ -19,7 +19,7 @@
         </li>
 				<li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-lightest-grey-2">
             <a class="story__secondary-card-link" href="#">
                 <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                 <p class="story__secondary-card-date">September 02, 2021</p>
@@ -34,7 +34,7 @@
         </li>
 				<li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-white">
             <a class="story__secondary-card-link" href="#">
                 <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                 <p class="story__secondary-card-date">September 02, 2021</p>
@@ -50,7 +50,7 @@
 
         <li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-lightest-grey-2">
              <a class="story__secondary-card-link" href="#">
                  <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                  <p class="story__secondary-card-date">September 02, 2021</p>
@@ -65,7 +65,7 @@
         </li>
 				<li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-white">
             <a class="story__secondary-card-link" href="#">
                 <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                 <p class="story__secondary-card-date">September 02, 2021</p>
@@ -80,7 +80,7 @@
         </li>
 				<li class="splide__slide">
 
-          <article class="story__secondary-card">
+          <article class="story__secondary-card has-background-lightest-grey-2">
             <a class="story__secondary-card-link" href="#">
                 <img class="story__secondary-card-image" src="/img/examples/story-danielle.jpg" alt="Danielle Dupuy, assistant director of the Ralph J. Bunche Center for African American Studies" />
                 <p class="story__secondary-card-date">September 02, 2021</p>
@@ -100,6 +100,14 @@
 
 <script>
   new Splide( "#example-card", {
-    fixedWidth: "33.3%",
+    perPage: 3,
+    breakpoints: {
+  		768: {
+  			perPage: 2,
+  		},
+      600: {
+  			perPage: 1,
+  		},
+  	}
   } ).mount();
 </script>

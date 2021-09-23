@@ -4,7 +4,7 @@ title: Carousel
 
 ## Description
 
-This carousel is has been forked from [SplideJs](https://splidejs.com) and themed to fit the needs of UCLA. The SplideJS carousel was chosen for its high accessibility support and its ability to be modified. SplideJS supports images, captions, video, grids and a wide variety of features. For additional support beyond this documentation please look to the SplideJS documentation.
+This carousel has been forked from [SplideJs](https://splidejs.com) and themed to fit the needs of UCLA. The SplideJS carousel was chosen for its high accessibility support and its ability to be modified. SplideJS supports images, captions, video, grids and a wide variety of features. For additional support beyond this documentation please look to the SplideJS documentation.
 
 ## **Usage**
 

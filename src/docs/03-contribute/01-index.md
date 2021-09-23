@@ -46,7 +46,7 @@ The assignee is for self only to let others know you are working on the issue.
 - **Design**: Makes design more usable, extensible, user centered, or brand compliant
 - **Documentation**: Makes the instructions for components more clear, helpful, or concise
 
-##### Milestone 
+##### Milestone
 - **To Do**: Issue has been created.
 - **Work In Progress**: Campus contributor has indicated they’ll work on it. If the issue becomes stale, it can be moved back “To Do”.
 - **Design Review**: Proposal is being evaluated for compliance with design criteria and inclusion in the library.
