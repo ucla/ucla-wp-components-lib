@@ -37,36 +37,43 @@ a.Tree-entityLink {
 }
 
 // Sidebar Nav
-.Frame-panel--sidebar {
-  background-color: white;
+.Frame {
+  &-body {
+    margin-right: 0;
+    width: 100%;
+  }
 
-  .Navigation {
+  &-panel--sidebar {
     background-color: white;
 
-    .Tree {
-      a {
-        &:hover {
-          color: colors.$grey-80;
-        }
-      }
+    .Navigation {
+      background-color: white;
 
-      &-title {
-        color: colors.$black;
-        font-size: 26px;
-        letter-spacing: 0.1px;
-        text-transform: capitalize;
-      }
-
-      &-item {
-        border-bottom: 1px solid colors.$medium-grey3;
-        background-color: white;
-
-        &:last-of-type {
-          border-bottom: 0;
+      .Tree {
+        a {
+          &:hover {
+            color: colors.$grey-80;
+          }
         }
 
-        &.is-closed {
+        &-title {
+          color: colors.$black;
+          font-size: 26px;
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+        }
+
+        &-item {
+          border-bottom: 1px solid colors.$medium-grey3;
           background-color: white;
+
+          &:last-of-type {
+            border-bottom: 0;
+          }
+
+          &.is-closed {
+            background-color: white;
+          }
         }
       }
     }

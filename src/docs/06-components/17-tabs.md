@@ -1,7 +1,7 @@
 ---
 title: Tabs
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](/build/docs/img/bitbucket-icon-white.png) Report an Issue</a>
 <a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
 Navigate content within a page or section of your site. Tabs provide the ability to navigate different views or facets of the same content. For example, on one tab you could show a list of cards while another contains paragraphs of text. Rather than listing those views in your navigation, you could divide them into tabs.
