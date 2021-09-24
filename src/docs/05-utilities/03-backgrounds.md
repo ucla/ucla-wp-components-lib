@@ -1,6 +1,8 @@
 ---
 title: Backgrounds
 ---
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
 You can set the background of any element using the `has-background-*` class. Using the background utility class will not change the color of text. Please use the text utility class `.has-white-text` when necessary.
 
