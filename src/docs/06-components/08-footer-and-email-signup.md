@@ -1,6 +1,9 @@
 ---
 title: Foot and Email Signup
 ---
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+
 Display your signature, contact information, and links to practical information. Treat the footer as your toolbox. You don't need to include lots of links, but the ones you do include should be utilitarian and helpful.
 
 ### **Usability Guidance**

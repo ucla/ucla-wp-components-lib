@@ -114,7 +114,7 @@ code {
   border-style: solid;
   border: 2px solid #006298;
   border-radius: 4px;
-  color: #fff;
+  color: colors.$white;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
@@ -123,19 +123,29 @@ code {
   padding: 0.625rem 1rem;
   text-decoration: none;
   vertical-align: middle;
-  margin-top: 2rem;
+  //margin-top: 2rem;
   margin-bottom: 1rem;
-}
 
-.create-button:hover {
-  color: #ffffff;
-  background-color: #00456a;
+  &.small {
+    font-size: 12px;
+    padding: 0.425rem 0.75rem;
+
+    img {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &:hover {
+    color: colors.$white;
+    background-color: #00456a;
+  }
 }
 
 // make all document images 960px
 // per Stevie, doc images were
 // created for 960px
-
 .doc-images {
   @media (min-width: 960px) {
     min-width: 960px;

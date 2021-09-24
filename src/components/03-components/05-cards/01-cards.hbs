@@ -1,15 +1,14 @@
 <article class="basic-card">
   <img class="basic-card__image" src="/img/examples/event-card-example-1.jpg" alt="Two children on their phones under the blankets">
   <div class="basic-card__info-wrapper">
-    <h1 class="basic-card__title"><span>How do parents embrace technology for kids, but prevent it from ruling the household?</span></h1>
-    <p class="basic-card__description">With schools closed and remote learning the norm, how many hours of digital technology are acceptable for kids, and how much is too much? Can parents control when kids use tec…</p>
+    <h1 class="basic-card__title"><span>{{ title }}</span></h1>
+    <p class="basic-card__description">{{ description }}</p>
     <div class="basic-card__buttons">
-      <button class="btn btn--tertiary">
-        CTA 1
-      </button>
-      <button class="btn btn--tertiary">
-        CTA 2
-      </button>
+      {{#each button}}
+        <button class="btn btn--tertiary">
+          {{ cta-title }}
+        </button>
+      {{/each}}
     </div>
   </div>
 </article>
@@ -17,15 +16,14 @@
 <article class="basic-card-grey">
   <img class="basic-card__image" src="/img/examples/event-card-example-1.jpg" alt="Two children on their phones under the blankets">
   <div class="basic-card__info-wrapper">
-    <h1 class="basic-card__title"><span>How do parents embrace technology for kids, but prevent it from ruling the household?</span></h1>
-    <p class="basic-card__description">With schools closed and remote learning the norm, how many hours of digital technology are acceptable for kids, and how much is too much? Can parents control when kids use tec…</p>
+    <h1 class="basic-card__title"><span>{{ title }}</span></h1>
+    <p class="basic-card__description">{{ description }}</p>
     <div class="basic-card__buttons">
-      <button class="btn btn--tertiary">
-        CTA 1
-      </button>
-      <button class="btn btn--tertiary">
-        CTA 2
-      </button>
+      {{#each button}}
+        <button class="btn btn--tertiary">
+          {{ cta-title }}
+        </button>
+      {{/each}}
     </div>
   </div>
 </article>

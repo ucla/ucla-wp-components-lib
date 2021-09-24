@@ -1,13 +1,10 @@
 ---
 title: Component Documentation Template 1
 ---
-# **Component Name**
-
-## Component quick description
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
 Introduction sentence 1 about component (optional). Introduction sentence 2 about component (optional).
-
-## **Usage**
 
 ### **Usability Guidance**
 
@@ -40,24 +37,6 @@ Introduction sentence 1 about component (optional). Introduction sentence 2 abou
 
 * List Item 1
 * List Item 2
-
-## **Anatomy**
-
-![Anatomy Image](File Path to Anatomy Image)
-
-Text about anatomy
-
-## **States**
-
-![States Image](File Path to States Image)
-
-Text about states
-
-## **Specs**
-
-![Specs Image](File Path to Specs Image)
-
-Text about specs
 
 ## **Code**
 

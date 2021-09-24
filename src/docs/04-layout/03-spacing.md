@@ -1,6 +1,8 @@
 ---
 title: Spacing
 ---
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
 We use an 8-point grid to define our spacing, meaning we use multiples of 8, from 4 to 80. We define dimensions, padding, and margins of both block and inline elements. Individual elements are positioned relative to each other. Smaller components, such as iconography and typography, can align to a 4-point grid.
 

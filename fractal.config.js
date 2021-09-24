@@ -8,7 +8,21 @@ const FractalStatusHelper = require('fractal-status-helper')(fractal);
 
 const myCustomisedTheme = mandelbrot({
     skin: "black",
-    nav: ["docs", "components"],
+    information: [
+        {
+            label: 'Version',
+            value: require('./package.json').version,
+        },
+        {
+            label: 'Built on',
+            value: new Date(),
+            type: 'time',
+            format: (value) => {
+                return value.toLocaleDateString('en');
+            },
+        },
+    ],
+    nav: ["docs", "components", "information"],
     panels: ["html", "info"],
     styles: [
         "default",
@@ -103,3 +117,18 @@ fractal.docs.engine(require('@frctl/handlebars')({
 }));
 
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+
+
+var config = {
+    description: 'Lists components in the project'
+};
+
+function listComponents(args, done){
+    const app = this.fractal;
+    for (let item of app.components.flatten()) {
+        this.log(`${item.handle} - ${item.status.label}`);
+    }
+    done();
+};
+
+fractal.cli.command('list-components', listComponents, config); // register the command

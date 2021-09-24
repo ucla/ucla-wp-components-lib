@@ -1,9 +1,10 @@
 ---
 title: Tabs
 ---
-## Navigate content within a page or section of your site
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
-Tabs provide the ability to navigate different views or facets of the same content. For example, on one tab you could show a list of cards while another contains paragraphs of text. Rather than listing those views in your navigation, you could divide them into tabs.
+Navigate content within a page or section of your site. Tabs provide the ability to navigate different views or facets of the same content. For example, on one tab you could show a list of cards while another contains paragraphs of text. Rather than listing those views in your navigation, you could divide them into tabs.
 
 Tabs can represent static pages or dynamic views of one page, with a single or multiple URL for each view. UCLA's tabs have been forked from and themed for our uses from the [W3.org tab examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html).
 

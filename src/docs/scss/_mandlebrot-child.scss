@@ -36,7 +36,6 @@ a.Tree-entityLink {
   color: #636363 !important;
 }
 
-
 // Sidebar Nav
 .Frame-panel--sidebar {
   background-color: white;
@@ -53,7 +52,7 @@ a.Tree-entityLink {
 
       &-title {
         color: colors.$black;
-        font-size: 32px;
+        font-size: 26px;
         letter-spacing: 0.1px;
         text-transform: capitalize;
       }
@@ -71,6 +70,19 @@ a.Tree-entityLink {
         }
       }
     }
+  }
+}
+
+.Frame-panel--sidebar .Navigation .Navigation-group:nth-of-type(3) .Tree {
+  &-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &-title {
+    font-size: 16px;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
   }
 }
 

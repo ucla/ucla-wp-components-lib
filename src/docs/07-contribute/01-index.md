@@ -1,6 +1,9 @@
 ---
 title: Contribute
 ---
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+
 This component library is an opensource project governed by the UCLA Strategic Communications and ITS departments. We invite anyone at UCLA to recommend features, contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html).
 
 
@@ -23,17 +26,35 @@ Note: **Watch** an issue to keep track of future discussion and progress.
 
 If you don’t see a suggestion or issue similar to your own, [create a new issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues/new). Write a clear title and summarize the reason for your issue in the description. The more information you can provide, the better equipped we’ll be to evaluate your recommendation.
 
-Select the create Issue button and select options from these menus that best fit your issue:
+Select the create Issue button and select the dropdown from the following options that best fit your issue:
+
+<table>
+<tr>
+<td style="vertical-align:top;width:50%">
 
 | Select Assignee |
 | ------------ |
 | For office use only. |
+
+| Select Milestone |
+| ------------ |
+| For Office use Only, set self as default. |
+
+</td>
+<td style="vertical-align:top;width:50%">
 
 | Select Kind |
 | ------------ |
 | - **Bug**: Fix errors in existing code, design, or documentation
 - **Enhancement**: Improve or add to existing code, design, or documentation
 - **Proposal**: Submit or recommend new components or features for inclusion in the library |
+
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td style="vertical-align:top;width:50%">
 
 | Select Priority |
 | ------------ |
@@ -43,6 +64,9 @@ Select the create Issue button and select options from these menus that best fit
 - **Critical**: Extreme defect or security issue, address ASAP
 - **Blocker**: This issue is currently stopping other tasks from moving forward. |
 
+</td>
+<td style="vertical-align:top;width:50%">
+
 | Select Component |
 | ------------ |
 | - **Accessibility**: Fixes or enhances a component for ADA compliance
@@ -50,9 +74,9 @@ Select the create Issue button and select options from these menus that best fit
 - **Design**: Makes design more usable, extensible, user centered, or brand compliant
 - **Documentation**: Makes the instructions for components more clear, helpful, or concise |
 
-| Select Milestone |
-| ------------ |
-| For Office use Only, set self as default. |
+</td>
+</tr>
+</table>
 
 ## Step 2 - Submit supporting work for feedback
 

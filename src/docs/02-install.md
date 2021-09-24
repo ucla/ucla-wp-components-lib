@@ -1,6 +1,9 @@
 ---
 title: Download Components
 ---
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">Report an Issue</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+
 This repository is available for official UCLA websites only. Your domain must be a subdomain of [ucla.edu](https://ucla.edu) and have been created through the [411 domain policy](http://www.adminpolicies.ucla.edu/APP/Number/411.0).
 
 ### Install with CDN
