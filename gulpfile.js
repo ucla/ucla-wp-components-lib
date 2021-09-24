@@ -181,14 +181,14 @@ function cleanExpanded () {
 // documentation styles
 
 function generateDocStylesLocal () {
-  return src('src/docs/scss/**/*.scss')
+  return src(['src/docs/scss/**/*.scss', 'src/docs/scss/ucla-lib.css'])
     .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(concat('global.css'))
     .pipe(dest('build/assets/docs/css'));
 }
 
 function generateDocStylesProd () {
-  return src('src/docs/scss/**/*.scss')
+  return src(['src/docs/scss/**/*.scss', 'src/docs/scss/ucla-lib.css'])
     .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('global.css'))
     .pipe(dest('build/docs/css'));
@@ -197,13 +197,13 @@ function generateDocStylesProd () {
 // documentation scripts
 
 function generateDocScriptsLocal () {
-  return src('src/docs/js/**.js')
+  return src(['src/docs/js/**.js', 'src/docs/js/jquery.js', 'src/docs/js/ucla-lib-scripts.js'])
     .pipe(concat('scripts.js'))
     .pipe(dest('build/assets/docs/js'));
 }
 
 function generateDocScriptsProd () {
-  return src('src/docs/js/**.js')
+  return src(['src/docs/js/**.js', 'src/docs/js/jquery.js', 'src/docs/js/ucla-lib-scripts.js'])
     .pipe(concat('scripts.js'))
     .pipe(dest('build/docs/js'));
 }
