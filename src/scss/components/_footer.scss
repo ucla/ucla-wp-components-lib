@@ -228,188 +228,123 @@
       }
     }
   }
+}
 
-  // "Global" Footer Styles - See bottom white footer
+//global footer area
+.global-foot {
+  .social-links-container {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: -8px;
 
-  &__global {
-    display: flex;
-    flex-direction: column;
-
-    @media only screen and (min-width: 1157px) {
-      display: block;
+    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+      justify-content: center;
+      margin-left: 0;
     }
+  }
 
-    &--copyright, &--links, &--social {
-      width: 100%;
-      display: block;
-      vertical-align: top;
-      font-size: 12.8px;
-      width: 100%;
-
-      @media only screen and (min-width: 1175px) {
-        width: 33%;
-        display: inline-block;
-      }
-    }
+  &__legal {
+    display: block;
+    width: 100%;
+    font-size: 13px;
 
     &--copyright {
-      order: 2;
-      line-height: 24px;
+      display: block;
+      width: 225px;
+      font-size: 13px;
+      line-height: 18px;
 
-      @media only screen and (max-width: 1175px) {
-        margin-bottom: 24px;
-        line-height: 18px;
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        width: 100%;
+        text-align: center;
+      }
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        display: inline-block;
+        width: 30%;
+        text-align: left;
       }
     }
 
-    &--links {
-      order: 3;
-    }
+    &--list {
+      padding-inline-start: 0;
 
-    &--links {
-      ul {
-        margin-bottom: 0;
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
         margin-top: 0;
-        padding-left: 0;
-
-        & li {
-          margin-bottom: 0;
-          display: block;
-
-          &::before {
-            content: none;
-          }
-
-          &:nth-child(2) {
-            margin: 0;
-
-            @media only screen and (min-width: 1156px) {
-              margin-left: 32px;
-              margin-right: 32px;
-            }
-          }
-
-          & a {
-            font-weight: bold;
-            text-decoration: none;
-            color: colors.$default-state;
-
-            &:hover {
-              background: colors.$hover-state;
-              color: colors.$white;
-            }
-
-            &:active {
-              background: colors.$active-state;
-            }
-
-            &:focus {
-              outline: 1px dotted colors.$hover-state;
-            }
-          }
-
-          @media only screen and (min-width: 1156px) {
-            display: inline-block;
-          }
-        }
       }
-    }
 
-    &--social {
-      margin-top: -5px;
-      text-align: left;
-      order: 1;
-
-      @media only screen and (min-width: 1175px) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
         float: right;
-        text-align: right;
+        width: 63%;
       }
 
-      @media only screen and (max-width: 1174px) {
-        margin-top: 0;
-        margin-bottom: 24px;
+      &-item {
+        list-style: none;
+        line-height: 32px;
       }
+    }
 
+    &--link {
+      text-decoration: none;
+      color: colors.$ucla-blue;
+      font-weight: bold;
+    }
+  }
+}
 
-      a, div {
-        vertical-align: top;
-        max-height: 48px;
-        display: inline-block;
-      }
+// Comp lib override
+#footer {
+  .email {
+    padding: 40px 0;
+  }
 
-
-      &-facebook {
-        &:hover, &:active {
-          content: url("/img/icons/social/facebook--white.svg");
-        }
-      }
-
-      &-twitter {
-        &:hover, &:active {
-          content: url("/img/icons/social/twitter--white.svg");
-        }
-      }
-
-      &-instagram {
-        &:hover, &:active {
-          content: url("/img/icons/social/instagram--white.svg");
-        }
-      }
-
-      &-snapchat {
-        &:hover, &:active {
-          content: url("/img/icons/social/snapchat--white.svg");
-        }
-      }
-
-      &-linkedin {
-        &:hover, &:active {
-          content: url("/img/icons/social/linkedin--white.svg");
-        }
-      }
-
-      &-youtube {
-        &:hover, &:active {
-          content: url("/img/icons/social/youtube--white.svg");
-        }
-      }
-
-      &-tiktok {
-        &:hover, &:active {
-          content: url("/img/icons/social/tiktok--white.svg");
-        }
-      }
-
-      &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
-        max-height: 100%;
-        width: 48px;
-        background-size: 48px;
-        background-repeat: no-repeat;
-        border-radius: 2px;
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
+  .li-links {
+    a {
+      &:visited {
+        color: colors.$white !important;
 
         &:hover {
-          background-size: 48px;
-          background-repeat: no-repeat;
-          background: colors.$hover-state;
+          color: colors.$grey-80 !important;
         }
+      }
+    }
+  }
 
-        &:active {
-          background: colors.$active-state;
-        }
+  .global-foot__legal--list {
+    a {
+      &:visited {
+        color: colors.$ucla-blue;
+      }
 
-        &:focus {
-          outline: 1px dotted colors.$hover-state;
-        }
+      &:hover {
+        color: colors.$white;
+      }
+    }
+  }
+
+  .copy__link-a.dark {
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+
+    @media only screen and (min-width: breakpoint-min(md)) {
+      display: inline-block;
+    }
+
+    &:visited {
+      color: colors.$ucla-blue;
+
+      &:hover {
+        color: colors.$white;
       }
     }
   }
 }
 
 // "Email Signup"
-
 .email {
   background: colors.$darker-blue;
   padding: 32px 24px;
