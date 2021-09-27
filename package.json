@@ -33,7 +33,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^11.0.0",
-    "gulp-zip": "^5.0.2",
+    "gulp-zip": "^5.1.0",
     "merge-stream": "^2.0.0",
     "sass": "^1.32.12",
     "semantic-release": "^17.1.2",
