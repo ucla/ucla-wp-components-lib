@@ -22,7 +22,7 @@ const myCustomisedTheme = mandelbrot({
             },
         },
     ],
-    nav: ["docs", "components", "information"],
+    nav: ["search", "docs", "components", "information"],
     panels: ["html", "info"],
     styles: [
         "default",

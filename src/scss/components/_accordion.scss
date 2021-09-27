@@ -1,42 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
 
-// /*******
-//
-//    HTML structure:
-//
-//    1. Accordion main wrapper (wraps #2 and content after)
-//    2. Accordion title section and a button (used as a drop down)
-//    3. Accordion content section
-//
-//    Code:
-//
-//    1. Accordion Main Wrapper - Should include 'accordion' class names - <div class="accordion">
-//    2. The title section for the accordion
-//    3. The content of the accordion goes inside here
-//
-//    Example case for the accordion:
-//
-//    <section class="accordion">       <!-- 1. Accordion main wrapper -->
-//      <dl>
-//        <button class="accordion__title" aria-expanded="false">      <!-- 2. Accordion title section and button -->
-//          <dt>Title</dt>
-//        </button>
-//
-//        <dd class="accordion__content"> <!-- 3. Accordion content section -->
-//          <p>Add content here</p>
-//        </dd>
-//      </dl>
-//    </section>
-//
-//
-// Further documentation on ADA compliant accordions
-// - https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
-// Other Resources
-// - aria-labelledby - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-// - role = region - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role
-// *******/
-//
 .accordion {
   display: block;
   padding: 0px 22px 0px;
