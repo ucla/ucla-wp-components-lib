@@ -1,5 +1,6 @@
 # path/to/project/root/.eslintignore
 # /node_modules/* and /bower_components/* in the project root are ignored by default
 
-# Ignore 
+# Ignore
 src/js/vendor/*
+src/docs/js/jquery.js

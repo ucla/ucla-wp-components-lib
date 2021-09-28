@@ -197,7 +197,7 @@ function generateDocStylesProd () {
 // documentation scripts
 
 function generateDocScriptsLocal () {
-  return src('src/docs/js/**.js')
+  return src(['src/docs/js/**.js'])
     .pipe(concat('scripts.js'))
     .pipe(dest('build/assets/docs/js'));
 }
