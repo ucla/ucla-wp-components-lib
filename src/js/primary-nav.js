@@ -9,6 +9,13 @@ $(document).ready(function (){
 
   // Show nav children on click of toggle
   $toggle.on('click', function () {
+
+    if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
+      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
+    } else {
+      $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
+    }
+
     $(this).siblings('.nav-primary__sublist').toggleClass('nav-primary__sublist--hidden');
     $(this).toggleClass('is-open');
   });
@@ -128,16 +135,38 @@ $(document).ready(function (){
     $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
-    $('#nav-main').find('.nav-primary__link--has-children').attr('aria-expanded', 'false');
+    $('#nav-main').find('.nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
   });
 
   //Set aria labels for the primary navigation
   $('#nav-main .nav-primary__link--has-children').mouseover(function () {
-    $(this).attr('aria-expanded', 'true');
+
+    windowWidth = $(window).width();
+
+    //if this is desktop
+    if (windowWidth >= breakpoint) {
+
+      $(this).find('.nav-primary__sublist').attr('aria-expanded', 'true');
+      $(this).find('.nav-primary__sublist').removeClass('nav-primary__sublist--hidden');
+    }
   });
 
-  $('#nav-main .nav-primary__link--has-children').mouseout(function () {
-    $(this).attr('aria-expanded', 'false');
+  $('#nav-main .nav-primary__link--has-children').mouseleave(function () {
+
+    let $this = $(this);
+
+    windowWidth = $(window).width();
+
+    //if this is desktop
+    if (windowWidth >= breakpoint) {
+
+      $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
+      setTimeout(function () {
+        $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
+      }, 50);
+
+      $toggle.removeClass('is-open');
+    }
   });
 
 
@@ -150,6 +179,33 @@ $(document).ready(function (){
     $(document).unbind('keydown');
   }
 
+
+  /* =======
+  - Screen readers and keyboards read html from top to bottom. When pressing tab all browser will jump to the next link in the top to bottom order.
+  - All added events change what the browser does by default. Add events only when necessary to fit the design.
+  - When adding an keybinding event, add it in the order that it is found in the html. (i.e. - Skip nav is at the top of the html page so goes first in the order.)
+
+
+  This is the basic keydown function that creates specific events to help guide keyboard users.
+  Find your keydown number - https://keycode.info/
+
+  // If object is selectable and is in focus
+  if ($('.class-name').is(':focus')) {
+
+    // if the tab key is pressed while the object is focused
+    if (evts.keyCode === 9) {
+
+      // Preform an action when the specific key is pressed
+      event.preventDefault(); // May require override of default event
+      $(element).prev('li').children('a').focus();
+    }
+
+  // Repeat again for element further down the html chain.
+  } else if ($('.class-name').is(':focus')){
+
+    // Repeat speceific key event action
+
+  }
   /* --------------add dekstop tabbing controls------------ */
   function addDesktopTabs () {
 
@@ -163,34 +219,44 @@ $(document).ready(function (){
 
         setTimeout(function () {
 
-          let $focus = $(':focus'), $dropdown;
+          let $focus = $(':focus')/*, $dropdown*/;
 
           //if this is a top level nav or the focus is not a primary nav item
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
 
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
-            $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
+            $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+            $toggle.removeClass('is-open');
+            $sublistItem.addClass('nav-primary__sublist--hidden');
           }
 
-          //if this is a primary navigation item
-          if ($focus.hasClass('nav-primary__link')) {
-
-            $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
-
-            //has a dropdown
-            if ($dropdown.length > 0) {
-
-              //Show the dropdown
-              $dropdown.show();
-
-              //add a tabindex of 0
-              $dropdown.find('.nav-primary__link').attr('tabindex', '0');
-
-              //set aria expanded to true
-              $focus.parent().attr('aria-expanded', 'true');
-            }
-          }
         }, 50);
+      }
+
+      //arrow down was pressed
+      if (keyCode === 40) {
+
+        //get the focused element
+        let $focus = $(':focus'), $dropdown;
+
+        //if this is a primary navigation item
+        if ($focus.hasClass('nav-primary__link')) {
+
+          $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist');
+
+          //has a dropdown
+          if ($dropdown.length > 0) {
+
+            //Show the dropdown
+            $dropdown.show();
+
+            //add a tabindex of 0
+            $dropdown.find('.nav-primary__link').attr('tabindex', '0');
+
+            //set aria expanded to true
+            $focus.parent().find('.nav-primary__sublist').attr('aria-expanded', 'true');
+          }
+        }
       }
 
       //escape key was pressed
@@ -202,7 +268,9 @@ $(document).ready(function (){
 
           //close the dropdowns
           $('.nav-primary__list .nav-primary__sublist').attr('style', '');
-          $('#nav-main .nav-primary__link--has-children').attr('aria-expanded', 'false');
+          $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+          $toggle.removeClass('is-open');
+          $('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
 
           //if this is a nav item
           if ($focus.parent().parent('.nav-primary__sublist').length > 0) {
@@ -252,12 +320,22 @@ $(document).ready(function (){
       if (keyCode === 27) {
 
         let $hamburgerBtn = $('.hamburger');
-
-        console.log('escape mobile');
+        let $focus = $(':focus');
 
         if ($hamburgerBtn.hasClass('hamburger--is-active')) {
-          $hamburgerBtn.trigger('click');
-          $hamburgerBtn.focus();
+
+          //if this is the children level focus
+          if ($focus.parent().parent().hasClass('nav-primary__sublist')) {
+
+            $focus.parent().parent().parent().find('.nav-primary__toggle').trigger('click');
+            $focus.parent().parent().parent().find('.nav-primary__toggle').focus();
+
+          } else {
+
+            //if this is the children level focus
+            $hamburgerBtn.trigger('click');
+            $hamburgerBtn.focus();
+          }
         }
       }
 

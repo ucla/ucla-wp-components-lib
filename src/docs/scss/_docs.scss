@@ -11,6 +11,12 @@
   line-height: 54px;
 }
 
+code {
+  background: rgba(83, 83, 99, 0.075);
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
 .Prose {
   max-width: 44em;
 
@@ -105,31 +111,43 @@
 
 .create-button {
   background-color: #006298;
-  border-style: solid;
-  border: 2px solid #006298;
-  border-radius: 4px;
-  color: #fff;
+  border-radius: 6px;
+  color: colors.$white;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
-  padding: 0.625rem 1rem;
+  padding: 12px 16px;
   text-decoration: none;
   vertical-align: middle;
-  margin-top: 2rem;
   margin-bottom: 1rem;
-}
 
-.create-button:hover {
-  color: #ffffff;
-  background-color: #00456a;
+  &.small {
+    font-size: 12px;
+    padding: 8px 10px;
+
+    img {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &:hover {
+    color: colors.$white;
+    background: colors.$hover-state;
+  }
+
+  &:focus {
+    outline: 1px dotted colors.$focus-state;
+    outline-offset: 1px;
+  }
 }
 
 // make all document images 960px
 // per Stevie, doc images were
 // created for 960px
-
 .doc-images {
   @media (min-width: 960px) {
     min-width: 960px;

@@ -4,7 +4,7 @@ const { src, series, dest, parallel, watch, task } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
-const fractal = require('./fractal');
+const fractal = require('./fractal.config');
 const eslint = require('gulp-eslint');
 const image = require('gulp-image');
 const replace = require('gulp-replace');
@@ -197,7 +197,7 @@ function generateDocStylesProd () {
 // documentation scripts
 
 function generateDocScriptsLocal () {
-  return src('src/docs/js/**.js')
+  return src(['src/docs/js/**.js'])
     .pipe(concat('scripts.js'))
     .pipe(dest('build/assets/docs/js'));
 }
@@ -349,10 +349,11 @@ exports.production = series(
   fractalBuild,
   generateCompLibStylesLocal,
   generateCompLibScriptsLocal,
+  generateCompLibStylesLocal,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
   // generateCompLibZip,
-  cleanExpanded,
+  //cleanExpanded,
   generateCompLibImages,
   generateDocStylesProd,
   generateDocScriptsProd,

@@ -36,34 +36,61 @@ a.Tree-entityLink {
   color: #636363 !important;
 }
 
-
 // Sidebar Nav
-.Frame-panel--sidebar {
-  background-color: white;
+.Frame {
+  &-body {
+    margin-right: 0;
+    width: 100%;
+  }
 
-  .Navigation {
+  &-panel--sidebar {
     background-color: white;
 
-    .Tree {
-      a {
-        &:hover {
-          color: colors.$grey-80;
-        }
-      }
+    .Navigation {
+      background-color: white;
 
-      &-item {
-        border-bottom: 1px solid colors.$medium-grey3;
-        background-color: white;
-
-        &:last-of-type {
-          border-bottom: 0;
+      .Tree {
+        a {
+          &:hover {
+            color: colors.$grey-80;
+          }
         }
 
-        &.is-closed {
+        &-title {
+          color: colors.$black;
+          font-size: 26px;
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+        }
+
+        &-item {
+          border-bottom: 1px solid colors.$medium-grey3;
           background-color: white;
+
+          &:last-of-type {
+            border-bottom: 0;
+          }
+
+          &.is-closed {
+            background-color: white;
+          }
         }
       }
     }
+  }
+}
+
+// The Information title in the left hand menu
+.Frame-panel--sidebar .Navigation .Navigation-group:nth-of-type(4) .Tree {
+  &-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &-title {
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
   }
 }
 
