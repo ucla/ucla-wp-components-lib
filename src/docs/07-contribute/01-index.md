@@ -8,7 +8,7 @@ This component library is an opensource project governed by the UCLA Strategic C
 
 
 **UCLA Component Library Repository**<br/>
-[https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)
+<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/">Bitbucket Repository</a>
 
 ## Step 1 - Choose A or B.
 
@@ -38,7 +38,7 @@ Select the create Issue button and select the dropdown from the following option
 
 | Select Milestone |
 | ------------ |
-| For Office use Only, set self as default. |
+| For office use only, set self as default. |
 
 </td>
 <td style="vertical-align:top;width:50%">
