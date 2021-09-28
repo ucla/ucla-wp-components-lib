@@ -1,6 +1,6 @@
 {
 	"title": "Tile",
-	"status": "in_progress",
+	"status": "ready",
   "context": {
        "title": "Basic tile, 32 char. max suggested"
   }
