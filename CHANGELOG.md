@@ -1,3 +1,10 @@
+# [1.0.0-beta.16](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2021-09-28)
+
+
+### Bug Fixes
+
+* bug fix ([27d2017](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/27d2017ab5367823e94303e9719eb8ffc640613e))
+
 # [1.0.0-beta.15](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-07-20)
 
 
