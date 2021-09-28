@@ -32,6 +32,6 @@ Our goal is to provide flexible resources and tools for any person or team who c
 ---
 
 #### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
-- Scott Vosburgh (Senior Web Developer) - svosburgh@stratcomm.ucla.edu
-
+[ Report an Issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open)
+[Join the Slack Discussion](https://ucla.slack.com/archives/G01KJ3GJKHS)
 Internal Project Maintainers, please see documentation [here](./docs/internal/tableofcontents.md).
