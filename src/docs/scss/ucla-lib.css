@@ -9813,7 +9813,7 @@ li .ucla-list--bulleted li::before {
 
 .tile__link {
   display: block;
-  height: calc(108px - 0 - 16px);
+  height: calc(108px - 16px);
   overflow: hidden;
   padding: 0 32px 16px;
   width: 100%
