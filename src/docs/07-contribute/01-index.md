@@ -34,11 +34,11 @@ Select the create Issue button and select the dropdown from the following option
 
 | Select Assignee |
 | ------------ |
-| For office use only. |
+| For office use only, set self as default. |
 
 | Select Milestone |
 | ------------ |
-| For office use only, set self as default. |
+| For office use only. |
 
 </td>
 <td style="vertical-align:top;width:50%">

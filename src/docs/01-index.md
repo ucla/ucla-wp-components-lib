@@ -14,11 +14,11 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
     Goals
   </button>
   <!-- Button Two -->
-  <button id="panel-02" class="btn tablinks" role="tab" aria-selected="true" aria-controls="panel-02-tab" tabindex="-1">
+  <button id="panel-02" class="btn tablinks" role="tab" aria-selected="false" aria-controls="panel-02-tab" tabindex="-1">
     Core Principles
   </button>
   <!-- Button Three -->
-  <button id="panel-03" class="btn tablinks" role="tab" aria-selected="true" aria-controls="panel-03-tab" tabindex="-1">
+  <button id="panel-03" class="btn tablinks" role="tab" aria-selected="false" aria-controls="panel-03-tab" tabindex="-1">
     Visual Guidance
   </button>
   <!-- Button Four -->

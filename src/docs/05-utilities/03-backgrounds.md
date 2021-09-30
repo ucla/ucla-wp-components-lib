@@ -10,7 +10,7 @@ Available class utilities |  Hex color
 ------------ | -------------
 .has-background-grey-40 | #999999
 .has-background-lightest-grey-2 | #EBEBEB
-.has-background-ligh-grey | #E7E7E8
+.has-background-light-grey | #E7E7E8
 .has-background-ucla-blue | #2774AE
 .has-background-white | #FFFFFF
 

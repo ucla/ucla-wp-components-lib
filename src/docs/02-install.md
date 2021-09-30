@@ -26,7 +26,7 @@ Place in between your sites head tags
 </head>
 ```
 
-2. Put the `<script>` reference tag between the `<footer>` tags of your website. Replace `%!CurrentVersion%!` version with the version you site in this sites URL.
+2. Put the `<script>` reference tag between the `<footer>` tags of your website.
 
 ```
 // Copy below
