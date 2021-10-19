@@ -6,7 +6,7 @@ title: Grid
 
 Our fully responsive grid for UCLA digital properties has 12 columns and 5 breakpoints. It has been designed to easily adapt to different screen sizes and to ensure consistent layouts across devices.
 
-The grid has three main parts: **columns**, **gutters**, and **margins**.
+The grid has three main parts: **columns**, **gutters** and **margins**.
 
 * **Columns**
   * Columns contain the content.
@@ -20,10 +20,13 @@ The grid has three main parts: **columns**, **gutters**, and **margins**.
 
 ### **Viewports and Breakpoints**
 
+We have defined commonly used breakpoints to make development for all screen sizes more efficient. These variables are used through our grid and spacing class names.
+
 We created shorthand variables for common breakpoints in the following chart.
 
 Viewports | Viewport Width | SCSS Breakpoint Variable
 ------------ | ------------- | -------------
+n/a | 0px | "na"
 Extra Small / Mobile Devices | 480px | "xs"
 Small / Mobile Devices | 600px | "sm"
 Medium / Tablet Devices | 768px | "md"
