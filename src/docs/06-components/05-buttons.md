@@ -4,7 +4,7 @@ title: Buttons
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
 <a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
-Buttons draw attention to important actions, content or next steps. Button tags, `<button>`, are used for internal pages actions. Links, or `<a>` tags, are used for linking to an external page.
+Buttons draw attention to important actions, content or next steps. Button tags, `<button>`, are used for internal page actions. Links, or `<a>` tags, are used for linking to an external page.
 
 ## **Usage**
 <div class="tabs">
@@ -98,25 +98,28 @@ Span wrapper that represents self-contained content.
 
 ## **Secondary Button**
 
-
+### **Code**
 
 ```
 {{ view '@button--secondary' }}
 ```
 
-
+## **Tertiary Button**
+### **Code**
 
 ```
 {{ view '@button--tertiary' }}
 ```
 
-
+## **Button Group**
+### **Code**
 
 ```
 {{ view '@button--group' }}
 ```
 
 
+## **Links**
 ### **Code**
 
 ```
@@ -130,6 +133,7 @@ Span wrapper that represents self-contained content.
 {{ view '@links--inline' }}
 ```
 
+## **Pagination Button**
 ### **Code**
 
 ```
