@@ -32,7 +32,7 @@ Buttons draw attention to important actions, content or next steps. Button tags,
 * [Writing Hyperlinks: Salient, Descriptive, Start with Keyword](https://www.nngroup.com/articles/writing-links/) (Nielsen Norman Group)
 * [Learn More Links: You Can Do Better](https://www.nngroup.com/articles/learn-more-links/) (Nielsen Norman Group)
     </div>
-    <div tabindex="0" role="tabpanel" id="panel-02-tab" aria-labelledby="panel-02" class="tabcontent">
+    <div tabindex="0" role="tabpanel" id="panel-02-tab" aria-labelledby="panel-02" hidden="" class="tabcontent">
 <br/>
 * Write button labels so they make sense without reading the copy around them so they are accessible to screen readers.
 * Don’t write button labels that are generic or not specific to the content being presented.
