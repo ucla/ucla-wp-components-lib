@@ -12,6 +12,6 @@ Variable | Viewport Width | Viewports
 `na` | 0px | n/a
 `xs` | 480px | Extra Small / Mobile Devices
 `sm` | 600px | Small / Mobile Devices
-`md` | 768px | Medium / Tablet devices
-`lg` | 1024px | Large / Desktop or laptop devices
+`md` | 768px | Medium / Tablet Devices
+`lg` | 1024px | Large / Desktop or Laptop Devices
 `xl` | 1280px | Extra Large / Presentation Mode

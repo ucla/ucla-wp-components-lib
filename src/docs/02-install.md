@@ -16,7 +16,7 @@ CDN is the recommended type of installation.
 // Copy below
 <link rel="stylesheet" href="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/css/ucla-lib.min.css">
 ```
-Place in between your sites head tags
+Place code in between your site’s `<head>` tags.
 
 ```
 <head>
@@ -33,7 +33,7 @@ Place in between your sites head tags
 <script type="text/javascript" src="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/js/ucla-lib-scripts.min.js"></script>
 ```
 
-Place in between your site footer tags
+Place code in between your site’s `<footer>` tags.
 ```
 <footer>
   // After the  opening footer tag.
