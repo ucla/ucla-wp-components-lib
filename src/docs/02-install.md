@@ -10,7 +10,7 @@ This repository is available for official UCLA websites only. Your domain must b
 
 CDN is the recommended type of installation.
 
-1. Put the `<link>` reference tag between the `<head>` tags of your website. Previous versions will continue to be stored on the CDN network.
+1. Put the `<link>` reference tag between the `<head>` tags of your website. Previous versions will continue to be stored on the content delivery network(CDN).
 
 ```
 // Copy below
