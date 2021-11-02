@@ -9,7 +9,7 @@
   vertical-align: top;
 
   @media only screen and (min-width: breakpoints.breakpoint-min(xs)) {
-    max-width: 276px;
+    max-width: 376px;
     margin: 0 16px 32px;
   }
 
@@ -35,7 +35,6 @@
     background: colors.$white;
     z-index: 0;
     padding: 64px 32px 32px;
-    max-width: 192px;
   }
 
   &__name {
