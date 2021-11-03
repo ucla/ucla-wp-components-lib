@@ -6,6 +6,8 @@ title: Cards
 
 Preview articles, topics, and events in a visual way.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Use plain language when writing headlines and descriptions.

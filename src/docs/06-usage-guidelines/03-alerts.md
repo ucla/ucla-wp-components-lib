@@ -6,6 +6,8 @@ title: Alerts
 
 Notify users of an important change or new piece of information.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Use alerts to validate steps taken by users or denote a system change.

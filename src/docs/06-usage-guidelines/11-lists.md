@@ -1,12 +1,12 @@
 ---
-title: Links
+title: Lists
 ---
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
 <a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
-Display a single list of items in a quick, scannable format
+Display a single list of items in a quick, scannable format. The UCLA brands dictates that lists are ordered with numbers or bullets in ![#2774AE](https://via.placeholder.com/15/2774AE/000000?text=+) `#2774AE` which is the "$ucla-blue" [variable](/build/%!CurrentVersion%!/docs/colors/layout). Examples can be found [here](/build/%!CurrentVersion%!/components/detail/lists.html).
 
-The UCLA brands dictates that lists are ordered with numbers or bullets in ![#2774AE](https://via.placeholder.com/15/2774AE/000000?text=+) `#2774AE` which is the "$ucla-blue" [variable](/build/%!CurrentVersion%!/docs/colors/layout). Examples can be found [here](/build/%!CurrentVersion%!/components/detail/lists.html).
+## **Usage**
 
 ### **Usability Guidance**
 
@@ -24,7 +24,6 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 ```
 {{ view '@lists--unordered-lists' }}
 ```
-
 
 ## **Ordered List**
 

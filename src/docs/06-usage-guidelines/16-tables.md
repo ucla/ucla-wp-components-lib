@@ -6,6 +6,8 @@ title: Tables
 
 Compactly display complex data in columns and rows
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Left-align table content like text and dates for easy readability.

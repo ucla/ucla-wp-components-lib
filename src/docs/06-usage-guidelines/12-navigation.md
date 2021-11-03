@@ -1,10 +1,12 @@
 ---
-title: Ribbons
+title: Navigation
 ---
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
 <a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
-Use a ribbon title to add visual hierarchy.
+Preview and navigate priority topics on your site
+
+## **Usage**
 
 ### **Usability Guidance**
 
@@ -12,7 +14,7 @@ Use a ribbon title to add visual hierarchy.
 * Use succinct labels of 1-2 words in length for each navigation link.
 * Use universal language everyone understands.
 * Consult web analytics to understand which topics matter most to your visitors.
-* Prioritize the needs of site users over co-workers. Navigation is for site users, not the Vice Chancellor or director.
+* Prioritize the needs of site users over co-workers. Navigation is for site users, not the vice chancellor or director.
 * Help people find what they need rather than promoting things they don't.
 * If you need to highlight things like a widely publicized report or conference, do so within the body of your website. Navigation links are intended for evergreen content.
 * Adding the class `nav-primary__link--current-page` to `nav-primary__link` anchor tag will create the yellow border to the item.

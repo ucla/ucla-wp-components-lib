@@ -6,6 +6,8 @@ title: Tile
 
 Large, descriptive link with optional ambient image.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Use plain language when writing headlines and descriptions.

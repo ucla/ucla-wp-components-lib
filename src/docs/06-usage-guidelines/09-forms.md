@@ -6,6 +6,8 @@ title: Forms
 
 Collect information from users or filter content with form select and search fields.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Tell people why you're collecting their information and what you're going to do with it.

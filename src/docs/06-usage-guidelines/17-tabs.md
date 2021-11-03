@@ -8,6 +8,8 @@ Navigate content within a page or section of your site. Tabs provide the ability
 
 Tabs can represent static pages or dynamic views of one page, with a single or multiple URL for each view. UCLA's tabs have been forked from and themed for our uses from the [W3.org tab examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html).
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Limit to 2-6 tabs within each page or section.

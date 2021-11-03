@@ -6,6 +6,8 @@ title: Social
 
 Display links to official social channels or embed related content.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 Follow best practices in social media content and marketing:

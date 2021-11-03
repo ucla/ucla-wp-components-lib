@@ -34,12 +34,12 @@ Buttons draw attention to important actions, content or next steps. Button tags,
     </div>
     <div tabindex="0" role="tabpanel" id="panel-02-tab" aria-labelledby="panel-02" hidden="" class="tabcontent">
 <br/>
-
 * Write button labels so they make sense without reading the copy around them so they are accessible to screen readers.
 * Don’t write button labels that are generic or not specific to the content being presented.
 * Avoid more than one instance of generic text like "Read More". Screen readers can't disambiguate multiple buttons with the same or similar text.
 * Do use the button color scheme provided. It is ADA compliant.
 * Link headlines in Story Cards or Event Cards rather than adding buttons with generic text.
+<br/><br/>
 
 ### **Code Guidance**
 * Be sure to include the minimum parent class "ucla" in the containers for your links. This will allow the element to inherit default link styles.

@@ -6,6 +6,8 @@ title: Ribbons
 
 Highlight important ideas or brand tag lines.
 
+## **Usage**
+
 ### **Usability Guidance**
 
 * Limit 1-2 ribbons per page and focus on your most important message.
