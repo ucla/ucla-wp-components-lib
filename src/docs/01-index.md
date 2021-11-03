@@ -33,8 +33,8 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
 <h2>Our goals are to:</h2>
 
 - Create a more cohesive experience and unified brand for end users
-- Support campus teams who want to create web experiences that follow brand guidelines, web standards, and accessibility guidelines
-- Invite members of campus to [contribute](/build/%!CurrentVersion%!/docs/contribute.html) and help us thoughtfully improve expand the library to serve the needs of campus
+- Support campus teams who want to create web experiences that follow brand guidelines, web standards and accessibility guidelines
+- Invite members of campus to [contribute](/build/%!CurrentVersion%!/docs/contribute.html) and help us thoughtfully improve and expand the library to serve the needs of campus
 
 </div>
 
@@ -44,7 +44,7 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
 <h2>Core Principles</h2>
 
 ### Support common needs
-Our goal is to thoughtfully expand and improve the component library to support the most common needs on campus. Before recommending an enhancement or component, we encourage you to consider the utility to other designers, developers, and end users. In a place as diverse and large as UCLA, it’s a challenge to anticipate what other people need. We always appreciate contributions based on pattern research, insights into user needs, industry trends, and usability standards.
+Our goal is to thoughtfully improve and expand the component library to support the most common needs on campus. Before recommending an enhancement or component, we encourage you to consider the utility to other designers, developers, and end users. In a place as diverse and large as UCLA, it’s a challenge to anticipate what other people need. We always appreciate contributions based on pattern research, insights into user needs, industry trends, and usability standards.
 
 ### Design for flexibility
 People will use components to address design problems in different ways. When suggesting an enhancement or new component, think about all the ways in which it might be used. Specify the minimum requirements for that component to function, and then define optional add-ons based on different use cases. Design and develop with flexibility in mind.
