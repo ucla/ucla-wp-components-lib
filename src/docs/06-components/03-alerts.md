@@ -14,7 +14,7 @@ Notify users of an important change or new piece of information.
 
 ### **Code Guidance**
 
-* Be sure to include the default "alert" classname additional to a specific "alert" classname. This will allow the element to inherit default alert styles.
+* Be sure to include the default "alert" classname in addition to a specific "alert" classname. This will allow the element to inherit default alert styles.
 * Alerts will take the full width of the container.
 * Adding the "inline-block" classname to an alert element will allow for usage of an alert element that only takes the width of the text content of the alert.
 
@@ -26,7 +26,7 @@ Notify users of an important change or new piece of information.
 
 **Further Reading**
 
-* [Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* [Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role) (Mozilla)
 
 ## **Primary Alert**
 
