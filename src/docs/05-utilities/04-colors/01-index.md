@@ -2,7 +2,7 @@
 title: Colors
 ---
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+<a class="create-button small" href="https://ucla.slack.com/archives/C01TW0HVB0Q">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
 
 UCLA official colors communicate our brand identity and are the building blocks of accessibility. Use of these colors are a required brand element. Learn more about UCLA brand colors on the [UCLA Brand Guidelines page](http://brand.ucla.edu/identity/colors).
 

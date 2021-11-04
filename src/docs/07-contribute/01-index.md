@@ -1,8 +1,7 @@
 ---
 title: Contribute
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{view '@support'}}
 
 This component library is an opensource project governed by the UCLA Strategic Communications and ITS departments. We invite anyone at UCLA to recommend features, contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html), [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html).
 
@@ -86,7 +85,7 @@ Once you select or create an issue, we strongly recommend you share any supporti
 - Screenshots, design files, or sketches (Box, Dropbox, Adobe Cloud, Sketch Cloud, Figma, InVision, etc.)
 - Documentation (Google Drive, Box, Evernote, etc.) suggesting new content or edits to existing documentation
 
-**Solicit feedback!** Now is a good time to share your work or recommendation with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/G01KJ3GJKHS). Share your work, collect feedback, and gather support for your issue.
+**Solicit feedback!** Now is a good time to share your work or recommendation with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/C01TW0HVB0Q). Share your work, collect feedback, and gather support for your issue.
 
 
 ## Step 3 - Develop Code and Documentation

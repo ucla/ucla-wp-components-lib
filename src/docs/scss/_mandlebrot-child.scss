@@ -40,41 +40,40 @@ a.Tree-entityLink {
 .Frame {
   &-body {
     margin-right: 0;
-    width: 100%;
   }
 
   &-panel--sidebar {
     background-color: white;
+  }
+}
 
-    .Navigation {
+.Navigation {
+  background-color: white;
+
+  .Tree {
+    a {
+      &:hover {
+        color: colors.$grey-80;
+      }
+    }
+
+    &-title {
+      color: colors.$black;
+      font-size: 26px;
+      letter-spacing: 0.1px;
+      text-transform: capitalize;
+    }
+
+    &-item {
+      border-bottom: 1px solid colors.$medium-grey3;
       background-color: white;
 
-      .Tree {
-        a {
-          &:hover {
-            color: colors.$grey-80;
-          }
-        }
+      &:last-of-type {
+        border-bottom: 0;
+      }
 
-        &-title {
-          color: colors.$black;
-          font-size: 26px;
-          letter-spacing: 0.1px;
-          text-transform: capitalize;
-        }
-
-        &-item {
-          border-bottom: 1px solid colors.$medium-grey3;
-          background-color: white;
-
-          &:last-of-type {
-            border-bottom: 0;
-          }
-
-          &.is-closed {
-            background-color: white;
-          }
-        }
+      &.is-closed {
+        background-color: white;
       }
     }
   }
