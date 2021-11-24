@@ -1,17 +1,16 @@
 'use strict';
 
 const { src, series, dest, parallel, watch, task } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const gulpStylelint = require('gulp-stylelint');
 const fractal = require('./fractal.config');
 const eslint = require('gulp-eslint');
-const image = require('gulp-image');
+//const image = require('gulp-image');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const minify = require('gulp-minify');
-sass.compiler = require('sass');
-const zip = require('gulp-zip');
+//const zip = require('gulp-zip');
 const del = require('del');
 
 /*
@@ -336,11 +335,11 @@ exports.build = series(
   generateCompLibStylesLocal,
   generateCompLibScriptsLocal,
   cleanMinified,
-  generateCompLibImages,
   generateDocStylesLocal,
   generateDocScriptsLocal,
-  generateDocImagesLocal,
-  generateFaviconLocal,
+  //generateCompLibImages,
+  //generateDocImagesLocal,
+  //generateFaviconLocal,
   removeImageSrcFilterLocal
 );
 
@@ -352,13 +351,13 @@ exports.production = series(
   generateCompLibStylesLocal,
   generateCompLibStylesProd,
   generateCompLibScriptsProd,
+  generateDocStylesProd,
+  generateDocScriptsProd
   // generateCompLibZip,
   //cleanExpanded,
-  generateCompLibImages,
-  generateDocStylesProd,
-  generateDocScriptsProd,
-  generateDocImagesProd,
-  generateFaviconProd
+  //generateCompLibImages,
+  //generateDocImagesProd,
+  //generateFaviconProd
 );
 
 // gulp addImageFilterStrs - used in Production Pipeline
