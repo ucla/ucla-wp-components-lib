@@ -336,11 +336,11 @@ exports.build = series(
   generateCompLibScriptsLocal,
   cleanMinified,
   generateDocStylesLocal,
-  generateDocScriptsLocal,
+  generateDocScriptsLocal
   //generateCompLibImages,
   //generateDocImagesLocal,
   //generateFaviconLocal,
-  removeImageSrcFilterLocal
+  //removeImageSrcFilterLocal
 );
 
 // gulp production
