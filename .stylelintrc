@@ -1,12 +1,12 @@
 {
-  "ignoreFiles": './resources/assets/sass/utilities/**/*.scss',
+  "extends": "stylelint-config-standard-scss",
   "rules": {
     "at-rule-empty-line-before": [ "always", {
-      except: [
+      "except": [
         "blockless-after-same-name-blockless",
         "first-nested"
       ],
-      ignore: ["after-comment"],
+      "ignore": ["after-comment"]
     } ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
@@ -22,12 +22,12 @@
     "block-opening-brace-space-before": "always",
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {
-      except: ["first-nested"],
-      ignore: ["after-comment", "stylelint-commands"]
+      "except": ["first-nested"],
+      "ignore": ["after-comment", "stylelint-commands"]
     } ],
     "custom-property-empty-line-before": [ "always", {
-      except: [ "after-custom-property", "first-nested" ],
-      ignore: [ "after-comment", "inside-single-line-block" ],
+      "except": [ "after-custom-property", "first-nested" ],
+      "ignore": [ "after-comment", "inside-single-line-block" ]
     } ],
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
@@ -40,14 +40,14 @@
     "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
     "declaration-empty-line-before": [ "always", {
-      except: [
+      "except": [
         "after-declaration",
-        "first-nested",
+        "first-nested"
       ],
-      ignore: [
+      "ignore": [
         "after-comment",
-        "inside-single-line-block",
-      ],
+        "inside-single-line-block"
+      ]
     } ],
     "function-comma-space-after": "always-single-line",
     "function-comma-space-before": "never",
@@ -66,6 +66,7 @@
     "media-feature-range-operator-space-before": "always",
     "media-query-list-comma-space-after": "always",
     "media-query-list-comma-space-before": "never",
+    "no-descending-specificity": null,
     "no-eol-whitespace": true,
     "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
@@ -77,6 +78,7 @@
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
+    "selector-class-pattern": null,
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
@@ -91,6 +93,6 @@
     "unit-allowed-list": ["deg", "dpi", "dppx", "em", "px", "rem", "s", "vh", "%", "turn"],
     "value-list-comma-space-after": "always",
     "value-list-comma-space-before": "never",
-    "value-list-max-empty-lines": 0,
+    "value-list-max-empty-lines": 0
   }
 }
