@@ -13,7 +13,9 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'UCLA Web Components');
+fractal.set('project.title', 'UCLA Component Library');
+fractal.set('project.version', 'v1.0');
+fractal.set('project.author', 'Strategic Communications');
 
 /*
  * Tell Fractal where to look for components.
