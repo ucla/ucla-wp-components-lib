@@ -2,9 +2,9 @@
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
 
-/*------------------------------------
+/* ------------------------------------
     Header
-  ------------------------------------*/
+  ------------------------------------ */
 #header {
   border-bottom: 1px solid colors.$grey-10;
 
@@ -23,44 +23,9 @@
   }
 }
 
-/*------------------------------------
-    Header Logo
-  ------------------------------------*/
-.header-logo {
-  background-color: colors.$ucla-blue;
-  padding: 8px 24px;
-  max-height: 48px;
-
-  @media (min-width: breakpoints.breakpoint-min(lg)) {
-    padding: 12px 24px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  &__wrap {
-    display: block;
-    max-width: 1176px;
-    margin: 0 auto;
-  }
-
-  &__image {
-    display: inline-block;
-    height: 24px;
-    margin-right: 13px;
-  }
-
-  .breadcrumb {
-    position: relative;
-    top: 5px;
-    width: calc(100% - 100px);
-  }
-}
-
-/*------------------------------------
+/* ------------------------------------
     Breadcrumb
-  ------------------------------------*/
+  ------------------------------------ */
 .breadcrumb {
   margin: 0;
   padding: 0;
@@ -68,10 +33,10 @@
   white-space: nowrap;
   overflow-y: scroll;
   width: 100%;
+  width: calc(100% - 5px);
   -ms-overflow-style: none;
   scrollbar-width: none;
   display: inline-block;
-  width: calc(100% - 5px);
 
   @media (min-width: breakpoints.breakpoint-min(lg)) {
     width: 100%;
@@ -105,7 +70,7 @@
     }
 
     &::before {
-      content: '/';
+      content: "/";
       display: inline;
       padding: 0 8px;
       margin: 0;
@@ -143,7 +108,7 @@
   &--fade {
     display: inline-block;
     position: relative;
-    width: 0px;
+    width: 0;
     height: 25px;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
@@ -151,28 +116,64 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 5px;
       height: 24px;
-      top: 0px;
-      right: 0px;
-      background: rgb(255, 255, 255);
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 84%, rgba(255, 255, 255, 1) 100%);
+      top: 0;
+      right: 0;
+      background: rgb(255 255 255);
+      background: linear-gradient(90deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 100%) 84%, rgb(255 255 255 / 100%) 100%);
     }
 
     &.white {
       &::after {
-        background: rgb(39, 116, 174);
-        background: linear-gradient(90deg, rgba(39, 116, 174, 0) 0%, rgba(39, 116, 174, 1) 84%, rgba(39, 116, 174, 1) 100%);
+        background: rgb(39 116 174);
+        background: linear-gradient(90deg, rgb(39 116 174 / 0%) 0%, rgb(39 116 174 / 100%) 84%, rgb(39 116 174 / 100%) 100%);
       }
     }
   }
 }
 
-/*--------------------------------------
-    Site Name
-  ------------------------------------*/
+/* ------------------------------------
+  Header Logo
+------------------------------------ */
+.header-logo {
+  background-color: colors.$ucla-blue;
+  padding: 8px 24px;
+  max-height: 48px;
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    padding: 12px 24px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__wrap {
+    display: block;
+    max-width: 1176px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    display: inline-block;
+    height: 24px;
+    margin-right: 13px;
+  }
+
+  .breadcrumb {
+    position: relative;
+    top: 5px;
+    width: calc(100% - 100px);
+  }
+}
+
+/* --------------------------------------
+  Site Name
+------------------------------------ */
+
 .site-name {
   font-weight: bold;
   font-size: 1.75rem;
@@ -186,25 +187,25 @@
   }
 }
 
-/*--------------------------------------
+/* --------------------------------------
     Header Wrap
-  ------------------------------------*/
+  ------------------------------------ */
 .header-wrap {
   display: block;
   max-width: 1176px;
   margin: 0 auto;
-  padding: 16px 0px 0px;
+  padding: 16px 0 0;
   position: relative;
   top: 1px;
   min-height: 41px;
 
   @media (min-width: breakpoints.breakpoint-min(lg)) {
-    padding: 24px 24px 0px;
+    padding: 24px 24px 0;
     min-height: auto;
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -215,12 +216,12 @@
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       width: 50%;
-      margin-left: 0px;
-      margin-bottom: 0px;
+      margin-left: 0;
+      margin-bottom: 0;
     }
 
     a {
-      margin-bottom: 0px;
+      margin-bottom: 0;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         margin-bottom: 32px;
@@ -246,9 +247,9 @@
   }
 }
 
-/*------------------------------------
+/* ------------------------------------
     Navigation Container
-  ------------------------------------*/
+  ------------------------------------ */
 #menu {
   display: block;
   position: relative;
@@ -266,7 +267,7 @@
     z-index: 100;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
-      top: 0px;
+      top: 0;
       z-index: 100;
     }
 
@@ -296,20 +297,20 @@
 
   .hamburger {
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: -31px;
     margin-right: 24px;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: none;
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }
 
-/*------------------------------------
+/* ------------------------------------
     Secondary navigation
-  ------------------------------------*/
+  ------------------------------------ */
 .nav-secondary {
   &__list {
     margin: 0;
@@ -358,9 +359,9 @@
   }
 }
 
-/*------------------------------------
+/* ------------------------------------
     Primary Main navigation
-  ------------------------------------*/
+  ------------------------------------ */
 .nav-primary {
   position: relative;
   border-top: 1px solid colors.$medium-grey3;
@@ -396,8 +397,6 @@
 
     /* Make the navigation a flexbox above 1024px */
     @media (min-width: breakpoints.breakpoint-min(lg)) {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
     }
 
@@ -489,7 +488,7 @@
           position: relative;
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             width: calc(100% - 32px);
             height: 4px;
@@ -509,7 +508,7 @@
 
       .nav-primary__sublist {
         .nav-primary__item {
-          padding-right: 0px;
+          padding-right: 0;
 
           a {
             &.nav-primary__link--current-page {
@@ -561,7 +560,7 @@
       display: block;
       width: 100%;
       height: 1em;
-      background: url("/img/icons/denotive/right-arrow--blue.svg") no-repeat center;
+      background: url("/icons/denotive/right-arrow--blue.svg") no-repeat center;
       background-size: 24px;
     }
 
@@ -657,8 +656,8 @@
     }
 
     &--has-children {
-      display: -webkit-box;
-      display: -ms-flexbox;
+      display: box;
+      display: flexbox;
       display: flex;
       flex-wrap: wrap;
 
@@ -679,8 +678,8 @@
         }
 
         & > a {
-          display: -webkit-box;
-          display: -ms-flexbox;
+          display: box;
+          display: flexbox;
           display: flex;
           align-items: center;
 
@@ -717,18 +716,19 @@
   }
 
   /* Search Form */
-  &__search-mobile, &__search-desktop {
+  &__search-mobile,
+  &__search-desktop {
     .nav-primary__search-form {
       display: block;
       position: relative;
 
       &::before {
         display: block;
-        content: ' ';
+        content: " ";
         width: 18px;
         height: 18px;
         position: absolute;
-        background-image: url(/img/icons/denotive/search--grey60.svg);
+        background-image: url(/icons/denotive/search--grey60.svg);
         background-position: center;
         background-size: contain;
         margin: 12px;
@@ -751,21 +751,21 @@
         input {
           width: 100%;
           padding: 11px 12px 11px 38px;
-          background: #EBEBEB;
+          background: #ebebeb;
           border: 0;
-          -webkit-appearance: none;
+          appearance: none;
 
           &::-webkit-search-cancel-button {
-            background-image: url(/img/icons/denotive/clear--grey60.svg);
+            background-image: url(/icons/denotive/clear--grey60.svg);
             background-size: 23px;
-            -webkit-appearance: none;
+            appearance: none;
             width: 23px;
             height: 23px;
           }
 
           &:focus {
             outline-offset: -0.25rem;
-            outline: 1px dotted #0079BF;
+            outline: 1px dotted #0079bf;
           }
         }
       }
@@ -777,10 +777,10 @@
           display: inline-block;
           width: 8%;
           padding: 12px !important;
-          -webkit-appearance: none;
-          background: #00598C;
-          color: #FFFFFF;
-          border: 0px;
+          appearance: none;
+          background: #00598c;
+          color: #fff;
+          border: 0;
           border-radius: 0 2px 2px 0;
           margin-left: -5px;
         }
@@ -811,7 +811,7 @@
       display: none;
 
       &:hover {
-        background: #0079BF;
+        background: #0079bf;
         cursor: pointer;
 
         svg {
@@ -821,19 +821,19 @@
 
       &:focus {
         outline-offset: -0.25rem;
-        outline: 1px dotted #0079BF;
+        outline: 1px dotted #0079bf;
       }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: block;
         height: 44px;
         width: 56px;
-        background: #FFFFFF;
-        -webkit-appearance: none;
+        background: #fff;
+        appearance: none;
         border: 0;
 
         &--is-active {
-          background: #0079BF;
+          background: #0079bf;
 
           svg {
             filter: brightness(0) invert(1);
@@ -849,9 +849,9 @@
     .nav-primary__search-block-form {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: none;
-        background: #FFFFFF;
-        padding: 17px 32px 15px 32px;
-        border: 1px solid #CCCCCC;
+        background: #fff;
+        padding: 17px 32px 15px;
+        border: 1px solid #ccc;
 
         &--is-active {
           display: block;
@@ -862,9 +862,9 @@
   }
 }
 
-/*------------------------------------
+/* ------------------------------------
     Hamburger Navigation
-  ------------------------------------*/
+  ------------------------------------ */
 .hamburger {
   width: 40px;
   padding: 12px;
@@ -922,20 +922,21 @@
     width: 16px;
     height: 2px;
     background: colors.$ucla-blue;
-    border-radius: 0px;
+    border-radius: 0;
     position: absolute;
     display: block;
     top: 50%;
     margin-top: -2px;
 
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       position: relative;
       display: block;
       width: 16px;
       height: 2px;
       background: colors.$ucla-blue;
-      border-radius: 0px;
+      border-radius: 0;
     }
 
     &::before {

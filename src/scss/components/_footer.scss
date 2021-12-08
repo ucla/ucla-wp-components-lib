@@ -2,7 +2,8 @@
 @use "../utilities/colors";
 
 .footer {
-  &__dept, &__global {
+  &__dept,
+  &__global {
     padding: 32px 24px;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
@@ -35,7 +36,8 @@
       }
     }
 
-    &--info, &--links {
+    &--info,
+    &--links {
       display: block;
 
       @media only screen and (min-width: 1064px) {
@@ -127,6 +129,7 @@
           background: colors.$active-state-dark;
         }
       }
+
       // Spacing between address and phone number
       & p:nth-child(2) {
         margin-bottom: 14px;
@@ -149,48 +152,61 @@
 
 
       &-facebook {
-        &:hover, &:active {
-          content: url("/img/icons/social/facebook--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/facebook--black.svg");
         }
       }
 
       &-twitter {
-        &:hover, &:active {
-          content: url("/img/icons/social/twitter--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/twitter--black.svg");
         }
       }
 
       &-instagram {
-        &:hover, &:active {
-          content: url("/img/icons/social/instagram--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/instagram--black.svg");
         }
       }
 
       &-snapchat {
-        &:hover, &:active {
-          content: url("/img/icons/social/snapchat--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/snapchat--black.svg");
         }
       }
 
       &-linkedin {
-        &:hover, &:active {
-          content: url("/img/icons/social/linkedin--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/linkedin--black.svg");
         }
       }
 
       &-youtube {
-        &:hover, &:active {
-          content: url("/img/icons/social/youtube--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/youtube--black.svg");
         }
       }
 
       &-tiktok {
-        &:hover, &:active {
-          content: url("/img/icons/social/tiktok--black.svg");
+        &:hover,
+        &:active {
+          content: url("/icons/social/tiktok--black.svg");
         }
       }
 
-      &-facebook, &-twitter, &-instagram, &-snapchat, &-linkedin, &-youtube, &-tiktok {
+      &-facebook,
+      &-twitter,
+      &-instagram,
+      &-snapchat,
+      &-linkedin,
+      &-youtube,
+      &-tiktok {
         max-height: 100%;
         width: 48px;
         background-size: 48px;
@@ -209,8 +225,8 @@
         }
 
         &:hover {
-          background-size: 48px;
           background: colors.$hover-state-dark;
+          background-size: 48px;
         }
 
         &:active {
@@ -230,7 +246,7 @@
   }
 }
 
-//global footer area
+// Global footer area
 .global-foot {
   .social-links-container {
     justify-content: flex-start;
@@ -349,7 +365,13 @@
     padding: 40px;
   }
 
-  &__heading, &__description, &__form, &__legal-text, &__legal-link, &__legal-link:visited, &__legal-link:link {
+  &__heading,
+  &__description,
+  &__form,
+  &__legal-text,
+  &__legal-link,
+  &__legal-link:visited,
+  &__legal-link:link {
     color: colors.$white;
   }
 
@@ -367,7 +389,7 @@
 
   &__input {
     display: block;
-    padding: 0px;
+    padding: 0;
     margin-bottom: 22px;
     vertical-align: top;
 
@@ -400,7 +422,7 @@
       }
 
       &.checked {
-        background-image: url('/img/Success.svg') !important;
+        background-image: url("/img/Success.svg") !important;
         background-repeat: no-repeat;
         background-size: auto !important;
         background-position: 96% 51%;
@@ -411,7 +433,7 @@
       }
 
       &.error {
-        background-image: url('/img/Error.svg') !important;
+        background-image: url("/img/Error.svg") !important;
         background-repeat: no-repeat;
         background-size: auto !important;
         background-position: 98% 50%;
@@ -433,11 +455,11 @@
       width: 100%;
       margin-top: 6px;
       position: relative;
-      top: 0px;
+      top: 0;
       max-width: 120px;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        margin-top: 0px;
+        margin-top: 0;
         top: 23px;
         max-width: none;
       }

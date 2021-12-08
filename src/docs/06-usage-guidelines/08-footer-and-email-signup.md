@@ -2,7 +2,7 @@
 title: Footer and Email Signup
 label: 'Footer and Email Signup'
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Display your signature, contact information, and links to practical information. Treat the footer as your toolbox. You don't need to include lots of links, but the ones you do include should be utilitarian and helpful.
 

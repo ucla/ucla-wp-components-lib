@@ -1,7 +1,7 @@
 ---
 title: Component Documentation Template 1
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Introduction sentence 1 about component (optional). Introduction sentence 2 about component (optional).
 

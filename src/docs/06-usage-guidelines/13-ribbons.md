@@ -1,7 +1,7 @@
 ---
 title: Ribbons
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Highlight important ideas or brand tag lines.
 

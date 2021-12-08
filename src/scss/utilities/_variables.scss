@@ -1,13 +1,11 @@
-/*------------------------------------*\
+/* ------------------------------------*\
     $VARIABLES
-\*------------------------------------*/
+\*------------------------------------ */
 
-//Typography
-$font : "Helvetica", "Arial", sans-serif;
-$font-secondary : "Helvetica", "Arial", sans-serif;
-
-$font-size-base : 100%;
-
+// Typography
+$font: "Helvetica", "Arial", sans-serif;
+$font-secondary: "Helvetica", "Arial", sans-serif;
+$font-size-base: 100%;
 $corner-radius: 4px;
 
 /*
@@ -17,7 +15,7 @@ $corner-radius: 4px;
  */
 
 $grid-breakpoints: (
-  na: 0px,
+  na: 0,
   xs: 480px,
   sm: 600px,
   md: 768px,

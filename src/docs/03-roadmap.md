@@ -1,7 +1,7 @@
 ---
 title: Project Roadmap
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 This document contains future goals for the UCLA component library.
 

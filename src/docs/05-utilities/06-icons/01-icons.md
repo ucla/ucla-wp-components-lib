@@ -1,13 +1,12 @@
 ---
 title: Icons
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/C01TW0HVB0Q">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
 Icons in our library are provided as an extension. If you are using our UCLA WordPress theme, the icons are conveniently installed on your site. We have also supplied the icons for download via zip file.
 
 ### **Download Icons**
-<a class="create-button" href="/UCLA-WEB-ICONS.zip">Download Icons Zip File</a>
+<a class="create-button" href="{{path '/icons/ucla-web-icons.zip'}}">Download Icons Zip File</a>
 
 ## **Usage**
 
@@ -27,34 +26,43 @@ The supplied icons are ADA compliant and have been reviewed by the DCP. Strategi
 1. IMG Icons: Extra styling attribute IS NOT required for usage
 
 ## Denotive Icons
-{{view '@denotive-image'}}
+{{render '@denotive-icons'}}
 
 ## Weather Icons
-{{view '@weather-image'}}
+{{render '@weather-icons'}}
 
 ## Social Icons
-{{view '@social-image'}}
+{{render '@social-icons'}}
 
 ## Code
 
 ### **Use as an Image**
 
-<img alt="download" src="/img/icons/denotive/download--black.svg">
-<img alt="download" src="/img/icons/denotive/download--white.svg" style="background: #2774AE">
-<img alt="download" src="/img/icons/denotive/download--blue.svg">
+<img alt="download" src="{{path '/icons/denotive/download--black.svg'}}">
+<img alt="download" src="{{path '/icons/denotive/download--white.svg'}}" style="background: #2774AE">
+<img alt="download" src="{{path '/icons/denotive/download--blue.svg'}}">
 
 ```
 <!-- Download -->
-<img alt="download" src="/img/icons/download-black.svg">
-<img alt="download" src="/img/icons/download-white.svg" style="background: #2774AE">
-<img alt="download" src="/img/icons/download-defaultblue.svg">
+<img alt="download" src="{{path '/icons/denotive/download-black.svg'}}">
+<img alt="download" src="{{path '/icons/denotive/download-white.svg'}}" style="background: #2774AE">
+<img alt="download" src="{{path '/icons/denotive/download-defaultblue.svg'}}">
 ```
 
 ### **Use as Inline SVG**
 
 Inline SVGs do not require a <?xml> doctype declaration. A <!DOCTYPE> should already be declared at the very top of your page.
 
-{{view '@denotive-svg--download'}}
 ```
-{{view '@denotive-svg--download'}}
+
+<!-- Download Blue -->
+<svg width="48px" height="48px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+   <title>Download</title>
+<style type="text/css">
+  .download--blue{fill-rule:evenodd;clip-rule:evenodd;fill:#00598C;}
+</style>
+<path class="download--blue" d="M24,4c11,0,20,9,20,20s-9,20-20,20S4,35,4,24S13,4,24,4z M24,7C14.6,7,7,14.6,7,24s7.6,17,17,17s17-7.6,17-17
+  S33.4,7,24,7z M25.7,10.7V31l9.3-9.3l2.3,2.4L24,37.3L10.7,24l2.4-2.4l9.3,9.3V10.7H25.7z"/>
+</svg>
 ```

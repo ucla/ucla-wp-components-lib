@@ -1,7 +1,7 @@
 ---
 title: Buttons
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Buttons draw attention to important actions, content or next steps. Button tags, `<button>`, are used for internal page actions. Links, or `<a>` tags, are used for linking to an external page.
 

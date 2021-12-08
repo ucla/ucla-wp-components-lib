@@ -1,7 +1,7 @@
 ---
 title: Tables
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Compactly display complex data in columns and rows
 

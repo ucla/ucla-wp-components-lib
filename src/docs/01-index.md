@@ -1,7 +1,7 @@
 ---
 title: Web Component Library
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 The Web Components Library is the digital application of UCLA’s brand. It contains a suite of components, guidelines and code to assist you in designing and developing websites and web applications for UCLA.
 
