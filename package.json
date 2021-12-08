@@ -20,6 +20,7 @@
     "fractal-status-helper": "^1.0.0"
   },
   "devDependencies": {
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",

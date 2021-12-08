@@ -1,7 +1,8 @@
 'use strict';
 
-const { src, dest, watch, series} = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 const concat = require('gulp-concat');
+const del = require('del');
 const eslint = require('gulp-eslint');
 const minify = require('gulp-minify');
 const sass = require('gulp-sass')(require('sass'));
@@ -13,6 +14,7 @@ function defaultTask (cb) {
   cb();
 }
 
+
 // UCLA Web Component Library CSS stylesheet
 
 function generateCompLibStyles () {
@@ -20,7 +22,7 @@ function generateCompLibStyles () {
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(concat('ucla-lib.css'))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(''))
     .pipe(dest('public/css'));
 }
 
@@ -28,8 +30,8 @@ function compressCompLibStyles () {
   return src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(concat('ucla-lib-min.css'))
-    .pipe(sourcemaps.write())
+    .pipe(concat('ucla-lib.min.css'))
+    .pipe(sourcemaps.write(''))
     .pipe(dest('public/css'));
 }
 
@@ -39,8 +41,8 @@ function generateDocStyles () {
   return src('src/docs/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(concat('ucla-fractal-style.css'))
-    .pipe(sourcemaps.write())
+    .pipe(concat('ucla-fractal-theme.css'))
+    .pipe(sourcemaps.write(''))
     .pipe(dest('public/css'));
 }
 
@@ -75,6 +77,7 @@ function lintJavascriptDoc () {
 
 function generateCompLibScripts () {
   return src('src/js/*.js')
+    .pipe(sourcemaps.init())
     .pipe(concat('ucla-lib-scripts.js'))
     .pipe(minify({
       ext: {
@@ -82,6 +85,7 @@ function generateCompLibScripts () {
         min: '.min.js'
       },
     }))
+    .pipe(sourcemaps.write(''))
     .pipe(dest('public/js'));
 }
 
@@ -90,7 +94,7 @@ function generateCompLibScripts () {
 
 function generateDocScripts () {
   return src(['src/docs/js/**.js'])
-    .pipe(concat('ucla-fractal-script.js'))
+    .pipe(concat('ucla-fractal-theme.js'))
     .pipe(minify({
       ext: {
         src: '.js',
@@ -100,6 +104,14 @@ function generateDocScripts () {
     .pipe(dest('public/js'));
 }
 
+// Clean unnecessary files
+
+function cleanScriptsStyles () {
+  return del([
+    'public/js/*',
+    'public/css/*'
+  ]);
+}
 
 // gulp
 exports.default = defaultTask;
@@ -107,6 +119,7 @@ exports.default = defaultTask;
 // gulp watch
 exports.watch = series(
   watchJavascript,
+  cleanScriptsStyles,
   generateCompLibScripts,
   generateDocScripts,
   generateCompLibStyles,
@@ -116,6 +129,7 @@ exports.watch = series(
 
 // gulp build
 exports.build = series(
+  cleanScriptsStyles,
   generateCompLibScripts,
   generateDocScripts,
   generateCompLibStyles,
@@ -125,6 +139,7 @@ exports.build = series(
 
 // gulp production
 exports.production = series(
+  cleanScriptsStyles,
   generateCompLibScripts,
   generateDocScripts,
   generateCompLibStyles,

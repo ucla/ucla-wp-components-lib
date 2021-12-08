@@ -91,8 +91,8 @@ const myCustomisedTheme = mandelbrot({
   skin: 'black',
   // any other theme configuration values here
   nav: ['search', 'components', 'docs', 'information'],
-  styles: ['default', '/css/ucla-fractal-style.css'],
-  scripts: ['default', '/js/ucla-fractal-script.js'],
+  styles: ['default', '/css/ucla-fractal-theme.css'],
+  scripts: ['default', '/js/ucla-fractal-theme.js'],
   favicon: '/favicon.ico',
 });
 
