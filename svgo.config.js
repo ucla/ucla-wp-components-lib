@@ -1,3 +1,4 @@
+// run via cli when needed `svgo -f ./src/icons/**/* -o ./public/icons/**/*`
 module.exports = {
   multipass: true,
   js2svg: {
@@ -19,3 +20,4 @@ module.exports = {
     },
   }],
 };
+
