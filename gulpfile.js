@@ -7,7 +7,13 @@ const minify = require('gulp-minify');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 
-// Component Library CSS styles
+
+// Test if Gulp is installed.
+function defaultTask (cb) {
+  cb();
+}
+
+// UCLA Web Component Library CSS stylesheet
 
 function generateCompLibStyles () {
   return src('src/scss/**/*.scss')
@@ -27,7 +33,8 @@ function compressCompLibStyles () {
     .pipe(dest('public/css'));
 }
 
-// Documentation library CSS stylesheet
+// Fractal Docs CSS stylesheet
+
 function generateDocStyles () {
   return src('src/docs/scss/**/*.scss')
     .pipe(sourcemaps.init())
@@ -39,13 +46,12 @@ function generateDocStyles () {
 
 
 // ES Lint Notes
-// eslint() attaches output to the "eslint" property
-// to be used by other modules.
+// eslint() attaches output to the "eslint" property to be used by other modules.
 // eslint.format() outputs the lint results to the console.
 // Alternatively use eslint.formatEach() (see Docs).
 // To have the process exit with an error code (1) on
-// lint error, return the stream and pipe to failAfterError last.
-//.pipe(eslint.failAfterError());
+// lint error, return the stream and pipe to failAfterError last use:
+// .pipe(eslint.failAfterError());
 
 function watchJavascript (done) {
   watch('src/js/*.js', series(generateCompLibScripts, lintJavascriptLib));
@@ -65,7 +71,8 @@ function lintJavascriptDoc () {
     .pipe(eslint.format());
 }
 
-// Component Library Scripts
+// UCLA Web Component Library Scripts
+
 function generateCompLibScripts () {
   return src('src/js/*.js')
     .pipe(concat('ucla-lib-scripts.js'))
@@ -79,7 +86,7 @@ function generateCompLibScripts () {
 }
 
 
-// Documentation scripts
+// Fractal Docs Scripts
 
 function generateDocScripts () {
   return src(['src/docs/js/**.js'])
@@ -92,6 +99,10 @@ function generateDocScripts () {
     }))
     .pipe(dest('public/js'));
 }
+
+
+// gulp
+exports.default = defaultTask;
 
 // gulp watch
 exports.watch = series(
