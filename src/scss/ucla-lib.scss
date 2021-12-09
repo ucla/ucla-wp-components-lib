@@ -1,6 +1,9 @@
-// use @imports to bring in style sheets per element.
-// BASE UCLA COMPONENET STYLES
-// These are component related styles only. DO NOT put fractal or mandlebrot theme styles here. Those belong in ./src/docs/scss
+/* UCLA Web Component Library Styles */
+
+// UCLA Web Component Library Styles
+// These are UCLA Web Component styles only. 
+// DO NOT ADD Fractal or Mandlebrot theme stylesheets here. Those belong in ./src/docs/scss
+
 
 @use "./utilities/_colors";
 @use "./utilities/_mixins/_helper";
