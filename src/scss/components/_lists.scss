@@ -16,12 +16,14 @@
       margin-left: -18px;
       padding-right: 13px;
     }
+
     // Second level list item/lists
     li &::before {
       content: "\25A1";
     }
 
-    .ucla-list--bulleted, .ucla-list--numbered {
+    .ucla-list--bulleted,
+    .ucla-list--numbered {
       margin-top: 16px;
       padding-left: 20px;
 
@@ -60,7 +62,8 @@
     }
 
     // Second level lists
-    .ucla-list--bulleted, .ucla-list--numbered {
+    .ucla-list--bulleted,
+    .ucla-list--numbered {
       padding-left: 20px;
       margin-top: 16px;
 

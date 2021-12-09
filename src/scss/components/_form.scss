@@ -1,13 +1,19 @@
 @use "../utilities/colors";
 
-.text, .radio, .select, .checkbox {
+.text,
+.radio,
+.select,
+.checkbox {
   margin-bottom: 8px;
 }
 
 // Text Input Styling
 
 .text {
-  &__label, &__input, &__help, &__error {
+  &__label,
+  &__input,
+  &__help,
+  &__error {
     display: block;
   }
 
@@ -22,8 +28,6 @@
 
   &__input {
     box-sizing: border-box;
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
     background: colors.$lightest-grey-2;
     background-size: 24px;
@@ -85,10 +89,8 @@
   }
 
   &__menu {
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
-    background: colors.$lightest-grey-2 url('/img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
+    background: colors.$lightest-grey-2 url("/icons/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: 16px;
     line-height: 24px;
@@ -107,7 +109,7 @@
     }
 
     &:active {
-      color: #000000;
+      color: #000;
     }
   }
 
@@ -124,7 +126,7 @@
   &.hasError {
     & > .select__menu {
       border: 1px solid red;
-      background: #EBEBEB url("/img/icons/error-red.svg") no-repeat 96.5% 50%;
+      background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
       background-size: 24px 24px;
     }
 
@@ -141,9 +143,8 @@
 .checkbox {
   &__input {
     appearance: none;
-    -webkit-appearance: none;
     border: 1px solid #cacece;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0 0 0 / 0.05%), inset 0 -15px 10px -12px rgba(0 0 0 / 0.05%);
     padding: 9px;
     border-radius: 2px;
     display: inline-block;
@@ -158,31 +159,25 @@
       outline-offset: 1px;
     }
 
-    &:active, &:checked:active {
-      outline-offset: -1px;
-    }
-
     &:checked {
       background-color: colors.$active-state;
       border: 1px solid #adb8c0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 1px 2px rgba(0 0 0 / 0.05%), inset 0 -15px 10px -12px rgba(0 0 0 / 0.05%), inset 15px 10px -12px rgba(255 255 255 / 0.1%);
       padding: 0 4px;
     }
 
+    &:active,
+    &:checked:active {
+      outline-offset: -1px;
+    }
+
     &:checked::after {
-      background-image: url("/img/icons/checkmark-white.svg");
+      background-image: url("/icons/denotive/form-success.svg");
       background-size: 10px 10px;
       display: inline-block;
       width: 10px;
       height: 10px;
       content: "";
-    }
-
-    &:checked {
-      background-color: colors.$active-state;
-      border: 1px solid #adb8c0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-      padding: 0 4px;
     }
   }
 }
@@ -191,8 +186,6 @@
 
 .radio {
   &__input {
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
     display: inline-block;
     height: 24px;
@@ -213,7 +206,7 @@
     }
 
     &:checked::after {
-      background-image: url("/img/icons/radio-bullet-icon.svg");
+      background-image: url("/icons/denotive/form-success.svg");
       background-size: 25px 25px;
       background-repeat: none;
       background-position: 50%;
@@ -230,7 +223,7 @@
   }
 }
 
-// fieldset and Legened Styling
+// Fieldset and Legend Styling
 
 .fieldset {
   border: 1px solid #808080;
