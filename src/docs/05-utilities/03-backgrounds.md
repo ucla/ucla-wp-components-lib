@@ -62,4 +62,4 @@ When using a background color the foreground text requires a contrast ratio mini
 </div>
 ```
 
-[See visual examples](/components/detail/backgrounds).
+[See visual examples](/build/%!CurrentVersion%!/components/detail/backgrounds).
