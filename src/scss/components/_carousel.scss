@@ -2,7 +2,8 @@
 @use "../utilities/colors";
 
 // Orginal CSS comes from SplideJS carousel v2.4.24. https://github.com/Splidejs/splide/tree/master/dist/css
-// This CSS has been modfied to fit UCLA's needs. Documentation on themeing Splide can be found here, https://splidejs.com/themes/
+// This CSS has been modfied to fit UCLA's needs.
+// Documentation on themeing Splide can be found here, https://splidejs.com/themes/
 
 @keyframes splide-loading {
   0% {
@@ -20,8 +21,6 @@
   position: relative;
 
   &--draggable > .splide__track > .splide__list > .splide__slide {
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 
@@ -68,13 +67,11 @@
   }
 
   &.is-active .splide__list {
-    display: -ms-flexbox;
     display: flex;
   }
 
   &__arrow {
     background: colors.$ucla-blue;
-    -webkit-appearance: none;
     border: 0;
     margin: 1px;
     width: 30px;
@@ -111,13 +108,9 @@
   }
 
   &__pagination {
-    -ms-flex-align: center;
     align-items: center;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
     width: 95%;
@@ -157,7 +150,6 @@
   &__play,
   &__pause {
     background: colors.$ucla-blue;
-    -webkit-appearance: none;
     border: 0;
     border-radius: 2px;
     margin: 1px;

@@ -76,7 +76,6 @@
     }
 
     &-source {
-      line-height: 1.25rem;
       font-weight: bold;
       line-height: 1.25;
 
@@ -109,7 +108,6 @@
     width: 100%;
     min-width: 376px;
     max-width: 376px;
-    //background: colors.$white;
 
     &-image {
       height: auto;
@@ -136,7 +134,7 @@
     &-content {
       box-sizing: border-box;
       width: 100%;
-      padding: 0 32px 0;
+      padding: 0 32px;
     }
 
     &-blurb {
@@ -153,7 +151,8 @@
       margin: 12px 0;
     }
 
-    &-link, a { // Link styles added below title so they are read last.
+    &-link,
+    a { // Link styles added below title so they are read last.
       outline: none;
       text-decoration: none;
       height: auto;
@@ -164,7 +163,7 @@
       &::before {
         display: none;
         position: absolute;
-        content: '';
+        content: "";
         max-width: 376px;
         max-height: 250px;
         width: 100%;

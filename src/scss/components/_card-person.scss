@@ -2,7 +2,8 @@
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
 
-.person-card, .person-card-grey {
+.person-card,
+.person-card-grey {
   height: auto;
   position: relative;
   background: colors.$white;
@@ -13,8 +14,12 @@
     margin: 0 16px 32px;
   }
 
-  &-grey > &__info-wrapper {
-    background: colors.$grey-5;
+  &__info-wrapper {
+    position: relative;
+    bottom: 32px;
+    background: colors.$white;
+    z-index: 0;
+    padding: 64px 32px 32px;
   }
 
   &-grey > &__info-wrapper {
@@ -27,14 +32,6 @@
     padding-left: 32px;
     position: relative;
     z-index: 1;
-  }
-
-  &__info-wrapper {
-    position: relative;
-    bottom: 32px;
-    background: colors.$white;
-    z-index: 0;
-    padding: 64px 32px 32px;
   }
 
   &__name {
@@ -59,12 +56,12 @@
     max-height: 300px;
 
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
   &:first-child {
-    margin-top: 0px;
+    margin-top: 0;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       margin-top: 40px;

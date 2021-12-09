@@ -11,7 +11,8 @@
     margin-left: calc(36% + 16px); /* If you change this line you must also change the nested class ".fixed-table__sticky-col" width to match. */
     overflow-x: auto;
     overflow-y: visible;
-    //padding-bottom: 5px;
+
+    // padding-bottom: 5px;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
       overflow-x: visible;
@@ -114,30 +115,28 @@
     }
   }
 
-  //Sorting tables can be found on the faculty Awards pages /about/awards-and-honors/faculty/
+  // Sorting tables can be found on the faculty Awards pages /about/awards-and-honors/faculty/
   #sortTable {
     opacity: 0;
     filter: alpha(opacity=0);
 
     tr th:nth-child(1) {
       position: absolute;
+      width: 34%;
 
       @media (min-width: breakpoints.breakpoint-min(md)) {
         position: relative;
       }
     }
-
-    tr th:nth-child(1) {
-      width: 34%;
-    }
-
+    
     th {
       position: relative;
       cursor: pointer;
       padding-left: 32px;
 
-      &::before, &::after {
-        content: '\25E4';
+      &::before,
+      &::after {
+        content: "\25E4";
         font-size: 6px;
         color: colors.$medium-grey5;
         display: block;
