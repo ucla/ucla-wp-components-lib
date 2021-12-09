@@ -1,10 +1,10 @@
-$(document).ready(function (){
+$(document).ready(function() {
 
   /*
-  *   This content is licensed according to the W3C Software License at
-  *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
-  */
-  (function () {
+   *   This content is licensed according to the W3C Software License at
+   *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+   */
+  (function() {
     let tablist = document.querySelectorAll('[role="tablist"]')[0];
     let tabs;
     let panels;
@@ -20,7 +20,7 @@ $(document).ready(function (){
 
     generateArrays();
 
-    function generateArrays () {
+    function generateArrays() {
       tabs = document.querySelectorAll('[role="tab"]');
       panels = document.querySelectorAll('[role="tabpanel"]');
     };
@@ -50,7 +50,7 @@ $(document).ready(function (){
     };
 
     // Check if tabs overflow max-width of container
-    function isTabListOverflow (tablist) {
+    function isTabListOverflow(tablist) {
       let buttonWidth = 0;
       let buttons = tablist.querySelectorAll('[role="tab"]');
 
@@ -60,7 +60,7 @@ $(document).ready(function (){
       return buttonWidth > tablist.offsetWidth;
     }
 
-    function setOverflowStyles (tablist) {
+    function setOverflowStyles(tablist) {
       if (isTabListOverflow(tablist)) {
         // tablist.style['overflow'] = 'scroll';
 
@@ -72,7 +72,7 @@ $(document).ready(function (){
       }
     }
 
-    function addListeners (index) {
+    function addListeners(index) {
       tabs[index].addEventListener('click', clickEventListener);
       tabs[index].addEventListener('keydown', keydownEventListener);
       tabs[index].addEventListener('keyup', keyupEventListener);
@@ -82,55 +82,55 @@ $(document).ready(function (){
     };
 
     // When a tab is clicked, activateTab is fired to activate it
-    function clickEventListener (event) {
+    function clickEventListener(event) {
       let tab = event.target;
       activateTab(tab, false);
     };
 
     // Handle keydown on tabs
-    function keydownEventListener (event) {
+    function keydownEventListener(event) {
       let key = event.keyCode;
 
       switch (key) {
-      case keys.end:
-        event.preventDefault();
-        // Activate last tab
-        activateTab(tabs[tabs.length - 1]);
-        break;
-      case keys.home:
-        event.preventDefault();
-        // Activate first tab
-        activateTab(tabs[0]);
-        break;
+        case keys.end:
+          event.preventDefault();
+          // Activate last tab
+          activateTab(tabs[tabs.length - 1]);
+          break;
+        case keys.home:
+          event.preventDefault();
+          // Activate first tab
+          activateTab(tabs[0]);
+          break;
 
-      // Up and down are in keydown
-      // because we need to prevent page scroll >:)
-      case keys.up:
-      case keys.down:
-        determineOrientation(event);
-        break;
+          // Up and down are in keydown
+          // because we need to prevent page scroll >:)
+        case keys.up:
+        case keys.down:
+          determineOrientation(event);
+          break;
       };
     };
 
     // Handle keyup on tabs
-    function keyupEventListener (event) {
+    function keyupEventListener(event) {
       let key = event.keyCode;
 
       switch (key) {
-      case keys.left:
-      case keys.right:
-        determineOrientation(event);
-        break;
-      case keys.delete:
-        determineDeletable(event);
-        break;
+        case keys.left:
+        case keys.right:
+          determineOrientation(event);
+          break;
+        case keys.delete:
+          determineDeletable(event);
+          break;
       };
     };
 
     // When a tablist's aria-orientation is set to vertical,
     // only up and down arrow should function.
     // In all other cases only left and right arrow function.
-    function determineOrientation (event) {
+    function determineOrientation(event) {
       let key = event.keyCode;
       let vertical = tablist.getAttribute('aria-orientation') === 'vertical';
       let proceed = false;
@@ -140,8 +140,7 @@ $(document).ready(function (){
           event.preventDefault();
           proceed = true;
         };
-      }
-      else {
+      } else {
         if (key === keys.left || key === keys.right) {
           proceed = true;
         };
@@ -154,7 +153,7 @@ $(document).ready(function (){
 
     // Either focus the next, previous, first, or last tab
     // depending on key pressed
-    function switchTabOnArrowPress (event) {
+    function switchTabOnArrowPress(event) {
       let pressed = event.keyCode;
 
       for (x = 0; x < tabs.length; x++) {
@@ -166,11 +165,9 @@ $(document).ready(function (){
         if (target.index !== undefined) {
           if (tabs[target.index + direction[pressed]]) {
             tabs[target.index + direction[pressed]].focus();
-          }
-          else if (pressed === keys.left || pressed === keys.up) {
+          } else if (pressed === keys.left || pressed === keys.up) {
             focusLastTab();
-          }
-          else if (pressed === keys.right || pressed === keys.down) {
+          } else if (pressed === keys.right || pressed === keys.down) {
             focusFirstTab();
           };
         };
@@ -178,7 +175,7 @@ $(document).ready(function (){
     };
 
     // Activates any given tab panel
-    function activateTab (tab, setFocus) {
+    function activateTab(tab, setFocus) {
       setFocus = setFocus || true;
       // Deactivate all other tabs
       deactivateTabs();
@@ -201,7 +198,7 @@ $(document).ready(function (){
     };
 
     // Deactivate all tabs and tab panels
-    function deactivateTabs () {
+    function deactivateTabs() {
       for (t = 0; t < tabs.length; t++) {
         tabs[t].setAttribute('tabindex', '-1');
         tabs[t].setAttribute('aria-selected', 'false');
@@ -214,17 +211,17 @@ $(document).ready(function (){
     };
 
     // Focus first tab
-    function focusFirstTab () {
+    function focusFirstTab() {
       tabs[0].focus();
     };
 
     // Focus last tab
-    function focusLastTab () {
+    function focusLastTab() {
       tabs[tabs.length - 1].focus();
     };
 
     // Detect if a tab is deletable
-    function determineDeletable (event) {
+    function determineDeletable(event) {
       target = event.target;
 
       if (target.getAttribute('data-deletable') !== null) {
@@ -237,15 +234,14 @@ $(document).ready(function (){
         // Activate the closest tab to the one that was just deleted
         if (target.index - 1 < 0) {
           activateTab(tabs[0]);
-        }
-        else {
+        } else {
           activateTab(tabs[target.index - 1]);
         };
       };
     };
 
     // Deletes a tab and its panel
-    function deleteTab (event) {
+    function deleteTab(event) {
       let target = event.target;
       let panel = document.getElementById(target.getAttribute('aria-controls'));
 
@@ -255,7 +251,7 @@ $(document).ready(function (){
 
     // Determine whether there should be a delay
     // when user navigates with the arrow keys
-    function determineDelay () {
+    function determineDelay() {
 
       let hasDelay = $(this).attr('data-delay');
       let delay = 0;
@@ -264,8 +260,7 @@ $(document).ready(function (){
         let delayValue = tablist.getAttribute('data-delay');
         if (delayValue) {
           delay = delayValue;
-        }
-        else {
+        } else {
           // If no value is specified, default to 300ms
           delay = 300;
         };
@@ -278,14 +273,14 @@ $(document).ready(function (){
     };
 
     //
-    function focusEventHandler (event) {
+    function focusEventHandler(event) {
       let target = event.target;
 
       setTimeout(checkTabFocus, delay, target);
     };
 
     // Only activate tab on focus if it still has focus after the delay
-    function checkTabFocus (target) {
+    function checkTabFocus(target) {
       focused = document.activeElement;
 
       if (target === focused) {
