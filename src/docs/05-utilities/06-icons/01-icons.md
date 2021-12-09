@@ -9,22 +9,22 @@ Icons in our library are provided as an extension. If you are using our UCLA Wor
 ### **Download Icons**
 <a class="create-button" href="/UCLA-WEB-ICONS.zip">Download Icons Zip File</a>
 
-## **Usage**
+## Usage
 
 ### **Accessibility Requirements**
-The supplied icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of light weight SVGs for UCLA websites or application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files. Icons have been created and reviewed according to the known needs of the university.
+The supplied icons have been created and reviewed according to the known needs of the university. These icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of lightweight SVGs for UCLA websites and application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files.
 
-1. Export as SVG version1.1 to convert SVG to inline styles.
-2. IDs removed have been removed to prevent duplicate IDs per page in case icon is used more than once per page.
+1. IDs have been removed to prevent duplicate IDs per page in case icon is used more than once per page.
+2. Exported as SVG version1.1 to convert SVG to inline styles.
 4. Classes updated to BEM naming convention.
-5. Inline titles tags added to the SVG.
-6. DCP has reviewed the icon with a screen reader.
+5. Inline title tags added to the SVG.
+6. DCP has reviewed the icons with a screen reader.
 
 
 ### **Please Note**
-1. Extra styling with or without divs are added to better depict white icons
-1. SVG Icons: Extra div with background and display styling IS NOT REQUIRED for usage
-1. IMG Icons: Extra styling attribute IS NOT required for usage
+1. Extra styling with or without divs are added to better depict white icons.
+1. SVG Icons: Extra div with background and display styling IS NOT REQUIRED for usage.
+1. IMG Icons: Extra styling attribute IS NOT REQUIRED for usage.
 
 ## Denotive Icons
 {{view '@denotive-image'}}

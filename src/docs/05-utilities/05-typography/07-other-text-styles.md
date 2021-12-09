@@ -44,7 +44,7 @@ title: Other Text Styles
 {{view '@typography--inserted'}}
 ```
 
-Note: The following blockquote's styling does not behave as it does when being used. To see an better example, please see the component example [here](/build/%!CurrentVersion%!/components/detail/typography.html).
+Note: The following blockquote's styling does not behave as it does when being used. To see an better example, please see the component example [here](/build/%!CurrentVersion%!/components/detail/typography--blockquote.html).
 
 {{view '@typography--blockquote'}}
 
