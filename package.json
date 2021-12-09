@@ -15,6 +15,11 @@
     "fractal-status-helper": "^1.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -23,6 +28,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.44.0",
+    "semantic-release": "^18.0.1",
     "stylelint": "^14.1.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
@@ -30,8 +36,7 @@
   },
   "scripts": {
     "start": "fractal start --sync",
-    "build": "fractal build",
-    "commit": "npm run update \n git tag -d $(git tag -l) \nchanged=0 \ngit remote update && git status -uno | grep -q 'Your branch is behind' && changed=1\nif [ $changed = 1 ]; then\n    echo \"***WARNING***\n pull latest\";\nelse\n git-cz\nfi"
+    "build": "fractal build"
   },
   "config": {
     "commitizen": {
