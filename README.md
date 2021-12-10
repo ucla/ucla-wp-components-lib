@@ -23,8 +23,8 @@ Our goal is to provide flexible resources and tools for any person or team who c
 --- 
 
 ## For Designers
-
 - [Brand Guidelines and Design Files](./help/designers/artifacts.md)
+
 ---
 
 
