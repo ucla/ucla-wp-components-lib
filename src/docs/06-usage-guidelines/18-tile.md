@@ -1,7 +1,7 @@
 ---
 title: Tile
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Large, descriptive link with optional ambient image.
 

@@ -16,9 +16,7 @@
     line-height: 24px;
     font-weight: bold;
     position: relative;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0 0 0 / 0%);
     margin-top: 1px;
     padding: 8px 32px 8px 16px;
 
@@ -26,13 +24,14 @@
       outline-style: dotted;
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background: colors.$hover-state;
       color: colors.$white;
       cursor: pointer;
 
       &::after {
-        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--white.svg");
+        background: url("/icons/denotive/down--white.svg");
         background-position: center;
         background-size: contain;
         position: absolute;
@@ -54,9 +53,6 @@
 
     &.active {
       &::after {
-        -moz-transform: scaleY(-1);
-        -o-transform: scaleY(-1);
-        -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
       }
     }
@@ -64,7 +60,7 @@
     &::after {
       display: block;
       content: "";
-      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--blue.svg");
+      background: url("/icons/denotive/down--blue.svg");
       background-position: center;
       background-size: contain;
       position: absolute;
@@ -111,7 +107,7 @@
   }
 }
 
-//load more code
+// load more code
 .load-more {
   &.btn {
     border: 2px solid colors.$default-state;

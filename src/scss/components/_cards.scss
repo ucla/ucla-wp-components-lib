@@ -12,7 +12,9 @@
 //  Basic Cards //  Basic Cards //  Basic Cards
 //  Basic Cards //  Basic Cards //  Basic Cards
 
-.basic-card, .basic-card-grey, .basic-card-gray {
+.basic-card,
+.basic-card-grey,
+.basic-card-gray {
   display: inline-block;
   background: colors.$white;
   margin: 32px 2% 0 0;
@@ -51,7 +53,7 @@
     max-height: 300px;
 
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -64,12 +66,11 @@
   }
 }
 
-.basic-card-grey > .basic-card__info-wrapper, .basic-card-gray > .basic-card__info-wrapper {
+.basic-card-grey > .basic-card__info-wrapper,
+.basic-card-gray > .basic-card__info-wrapper {
   background: colors.$grey-5;
 }
 
-//  Event Cards //  Event Cards //  Event Cards
-//  Event Cards //  Event Cards //  Event Cards
 //  Event Cards //  Event Cards //  Event Cards
 
 .event-card {
@@ -102,15 +103,36 @@
   &__link {
     text-decoration: none;
 
+    &:focus {
+      outline: 1px dotted colors.$focus-state;
+    }
+
+    &:focus,
+    &:active {
+      span {
+        color: colors.$white;
+        outline: 1px dotted colors.$focus-state;
+        background-color: colors.$active-state;
+      }
+    }
 
     &:hover {
+      color: colors.$default-state;
+      background-color: transparent;
+
       img {
         opacity: 0.5;
       }
 
+      &:visited {
+        background-color: colors.$visited-state;
+        color: colors.$visited-state;
+        text-decoration: none;
+      }
+
       &::before {
         display: block;
-        content: '';
+        content: "";
         width: 100%;
         height: 184px;
         position: absolute;
@@ -123,29 +145,6 @@
         background-color: colors.$hover-state;
         color: colors.$white;
         text-decoration: none;
-      }
-    }
-
-    &:focus {
-      outline: 1px dotted colors.$focus-state;
-    }
-
-    &:hover {
-      color: colors.$default-state;
-      background-color: transparent;
-
-      &:visited {
-        background-color: colors.$visited-state;
-        color: colors.$visited-state;
-        text-decoration: none;
-      }
-    }
-
-    &:focus, &:active {
-      span {
-        color: colors.$white;
-        outline: 1px dotted colors.$focus-state;
-        background-color: colors.$active-state;
       }
     }
   }
@@ -162,37 +161,28 @@
     &__time {
       width: 16px;
       height: 16px;
-      margin-top: -1.5px;
-      margin-bottom: -1.5px;
-      margin-left: 1px;
-      margin-right: 6px;
+      margin: -1.5px 6px -1.5px 1px;
       vertical-align: bottom;
     }
 
     &__location {
       width: 16px;
       height: 16px;
-      margin-top: -1.5px;
-      margin-bottom: -1.5px;
-      margin-left: 1px;
-      margin-right: 6px;
+      margin: -1.5px 6px -1.5px 1px;
       vertical-align: bottom;
     }
 
     &__play {
       width: 15px;
       height: 15px;
-      margin-top: -1.5px;
-      margin-bottom: 0px;
-      margin-left: 1.25px;
-      margin-right: 6px;
+      margin: -1.5px 6px 0 1.25px;
       vertical-align: bottom;
     }
   }
 
   &-info {
     display: block;
-    padding: 8px 24px 24px 24px;
+    padding: 8px 24px 24px;
     background: colors.$white;
 
     &__date {
@@ -255,13 +245,13 @@
       max-height: 300px;
 
       &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
   }
 
   &:first-child {
-    margin-top: 0px;
+    margin-top: 0;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       margin-top: 40px;

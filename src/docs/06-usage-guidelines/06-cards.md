@@ -1,7 +1,7 @@
 ---
 title: Cards
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Preview articles, topics, and events in a visual way.
 

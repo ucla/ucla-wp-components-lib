@@ -1,7 +1,7 @@
 ---
 title: Lists
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Display a single list of items in a quick, scannable format. The UCLA brands dictates that lists are ordered with numbers or bullets in ![#2774AE](https://via.placeholder.com/15/2774AE/000000?text=+) `#2774AE` which is the "$ucla-blue" [variable](/build/%!CurrentVersion%!/docs/colors/layout). Examples can be found [here](/build/%!CurrentVersion%!/components/detail/lists.html).
 
@@ -21,7 +21,7 @@ Display a single list of items in a quick, scannable format. The UCLA brands dic
 ### **Code**
 
 ```
-{{ view '@lists--unordered-lists' }}
+{{ render '@lists--unordered-lists' }}
 ```
 
 ## **Ordered List**
@@ -29,5 +29,5 @@ Display a single list of items in a quick, scannable format. The UCLA brands dic
 ### **Code**
 
 ```
-{{ view '@lists--ordered-lists' }}
+{{ render '@lists--ordered-lists' }}
 ```

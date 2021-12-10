@@ -2,12 +2,13 @@
   display: block;
   position: relative;
   width: 100%;
-  //background-image: url(./image/quote-bg-1-mobile.png);
+
+  // ackground-image: url(./image/quote-bg-1-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
 
   @media (min-width: breakpoint-min(md)) {
-    //background-image: url(./image/quote-bg-1-desktop.png);
+    // background-image: url(./image/quote-bg-1-desktop.png);
   }
 
   .block-quote {
@@ -27,7 +28,7 @@
     &::before {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       width: 60%;
       height: 4px;
       background: $cyan;
@@ -44,7 +45,7 @@
     &::after {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       width: 60%;
       height: 4px;
       background: $ucla-gold;
@@ -75,7 +76,7 @@
 
       @media (min-width: breakpoint-min(lg)) {
         display: inline-block;
-        margin: 48px 0 0 0;
+        margin: 48px 0 0;
         vertical-align: top;
       }
 
@@ -120,7 +121,7 @@
           font-size: 24px;
           width: 30px;
           height: 30px;
-          content: '“';
+          content: "“";
           position: absolute;
           left: 32px;
 
@@ -139,7 +140,7 @@
             font-size: 24px;
             width: 30px;
             height: 30px;
-            content: '”';
+            content: "”";
             position: relative;
 
             @media (min-width: breakpoint-min(md)) {

@@ -1,9 +1,9 @@
 ---
 title: Support
 ---
-{{view '@support'}}
+{{render '@support'}}
 
-If you find a issue or bug, report it on our issue board. Make sure to include the device, browser and versions that you are using if possible.
+If you find an issue or bug, report it on our issue board. Make sure to include the device, browser and versions that you are using if possible.
 
 - [Report an Issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open)
 

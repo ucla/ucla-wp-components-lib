@@ -1,7 +1,7 @@
 ---
 title: Tabs
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Navigate content within a page or section of your site. Tabs provide the ability to navigate different views or facets of the same content. For example, on one tab you could show a list of cards while another contains paragraphs of text. Rather than listing those views in your navigation, you could divide them into tabs.
 
@@ -32,7 +32,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 ### HTML
 
 ```
-{{ view '@tabs' }}
+{{ render '@tabs' }}
 ```
 
 ### JavaScript

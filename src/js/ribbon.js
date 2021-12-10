@@ -14,9 +14,9 @@ $(window).resize(() => {
 });
 
 // Separate each word in ribbon into individual span
-function formatRibbon () {
+function formatRibbon() {
   // For each ribbon
-  $('.ribbon').each(function (index, value) {
+  $('.ribbon').each(function(index, value) {
     let text = $(value).html();
     let words = $.trim(text).split(' ');
     let ret = '';
@@ -28,9 +28,9 @@ function formatRibbon () {
 };
 
 // Add padding to sides of each ribbon
-function adjustPadding () {
+function adjustPadding() {
   // For each ribbon
-  $('.ribbon').each(function () {
+  $('.ribbon').each(function() {
     const ribbon_right = this.getBoundingClientRect().right; // Ribbon position right
 
     let prev_top = 0; // Previous span position top
@@ -38,7 +38,7 @@ function adjustPadding () {
 
     // For each span within ribbon
     let spans = $(this).find('span');
-    spans.each((function (index) {
+    spans.each((function(index) {
       // Clear any existing first or last classes
       let $t = $(this);
       $t.removeClass('first');
@@ -48,13 +48,13 @@ function adjustPadding () {
       right = this.getBoundingClientRect().right; // Get span right position
 
       // First word in ribbon (index = 0)
-      if (index === 0){
+      if (index === 0) {
         $t.addClass('first');
         prev_top = this.getBoundingClientRect().top;
       }
 
       // Last word in the ribbon (index = N-1)
-      if (index === spans.length - 1){
+      if (index === spans.length - 1) {
         $t.addClass('last');
       }
 
@@ -62,11 +62,9 @@ function adjustPadding () {
       let padding = 0;
       if ($t.parent()[0].classList.contains('ribbon--highlight')) {
         padding = padding_highlight;
-      }
-      else if ($(window).width >= breakpoint_min) {
+      } else if ($(window).width >= breakpoint_min) {
         padding = padding_desktop;
-      }
-      else {
+      } else {
         padding = padding_mobile;
       }
 

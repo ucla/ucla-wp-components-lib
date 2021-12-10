@@ -1,6 +1,6 @@
 @use "../utilities/colors";
 
-//=== SOCIAL MEDIA LINKS ===//
+// === SOCIAL MEDIA LINKS ===//
 .social-links-container,
 .social-links-container--blue {
   padding: 10px;
@@ -57,59 +57,59 @@
   // Corporation Branded Colors icons
   .social-icon {
     &--facebook {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/facebook--brand.svg);
+      background: url("/icons/social/facebook--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--twitter {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/twitter--brand.svg);
+      background: url("/icons/social/twitter--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--instagram {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/instagram--brand.svg);
+      background: url("/icons/social/instagram--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--snapchat {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/snapchat--brand.svg);
+      background: url("/icons/social/snapchat--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--linkedin {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/linkedin--brand.svg);
+      background: url("/icons/social/linkedin--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--youtube {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/youtube--brand.svg);
+      background: url("/icons/social/youtube--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
 
     &--tiktok {
-      background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/tiktok--brand.svg);
+      background: url("/icons/social/tiktok--brand.svg");
       width: 44px;
       height: 44px;
       display: block;
-      content: '';
+      content: "";
     }
   }
 
@@ -117,59 +117,59 @@
   &--blue {
     .social-icon {
       &--facebook {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/facebook--white.svg);
+        background: url("/icons/social/facebook--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--twitter {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/twitter--white.svg);
+        background: url("/icons/social/twitter--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--instagram {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/instagram--white.svg);
+        background: url("/icons/social/instagram--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--snapchat {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/snapchat--white.svg);
+        background: url("/icons/social/snapchat--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--linkedin {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/linkedin--brand.svg);
+        background: url("/icons/social/linkedin--brand.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--youtube {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/youtube--white.svg);
+        background: url("/icons/social/youtube--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
 
       &--tiktok {
-        background: url(https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/tiktok--white.svg);
+        background: url("/icons/social/tiktok--white.svg");
         width: 44px;
         height: 44px;
         display: block;
-        content: '';
+        content: "";
       }
     }
   }
@@ -180,31 +180,31 @@
   a:active {
     .social-icon {
       &--facebook {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/facebook--white.svg');
+        background: url("/icons/social/facebook--white.svg");
       }
 
       &--twitter {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/twitter--white.svg');
+        background: url("/icons/social/twitter--white.svg");
       }
 
       &--instagram {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/instagram--white.svg');
+        background: url("/icons/social/instagram--white.svg");
       }
 
       &--snapchat {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/snapchat--white.svg');
+        background: url("/icons/social/snapchat--white.svg");
       }
 
       &--linkedin {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/linkedin--white.svg');
+        background: url("/icons/social/linkedin--white.svg");
       }
 
       &--youtube {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/youtube--white.svg');
+        background: url("/icons/social/youtube--white.svg");
       }
 
       &--tiktok {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/tiktok--white.svg');
+        background: url("/icons/social/tiktok--white.svg");
       }
     }
   }
@@ -214,31 +214,31 @@
   &--blue a:active {
     .social-icon {
       &--facebook {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/facebook--black.svg');
+        background: url("/icons/social/facebook--black.svg");
       }
 
       &--twitter {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/twitter--black.svg');
+        background: url("/icons/social/twitter--black.svg");
       }
 
       &--instagram {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/instagram--black.svg');
+        background: url("/icons/social/instagram--black.svg");
       }
 
       &--snapchat {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/snapchat--black.svg');
+        background: url("/icons/social/snapchat--black.svg");
       }
 
       &--linkedin {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/linkedin--black.svg');
+        background: url("/icons/social/linkedin--black.svg");
       }
 
       &--youtube {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/youtube--black.svg');
+        background: url("/icons/social/youtube--black.svg");
       }
 
       &--tiktok {
-        background: url('https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/social/tiktok--black.svg');
+        background: url("/icons/social/tiktok--black.svg");
       }
     }
   }
