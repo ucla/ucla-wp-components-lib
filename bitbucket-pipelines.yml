@@ -37,11 +37,11 @@ pipelines:
             # update version # in package.json
             - jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
             # add %!CurrentVersion%! string filter
-            # - gulp addImageFilterStrs
+            - gulp addImageFilterStrs
             # update version # in asset URL documentation page
             # - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
-            - gulp generateCompLibScripts
+            - gulp generateCompLibScriptsLocal
             # update component script and style file extensions
             - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
@@ -89,7 +89,7 @@ pipelines:
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
                 S3_BUCKET: webcomponents.ucla.edu/img
-                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/icons
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
@@ -120,8 +120,8 @@ pipelines:
             # update version # in asset URL documentation page
             # - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/build\/%!CurrentVersion%!/dev-webcomponents.ucla.edu\/build\/"$updateTag"/g"
             # add %!CurrentVersion%! string filter
-            # - gulp addImageFilterStrs
-            #- find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
+            - gulp addImageFilterStrs
+            - find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
             # produce local comp scripts to ensure minified production scripts can be created
             - gulp generateCompLibScripts
             # update component script and style file extensions
@@ -166,7 +166,7 @@ pipelines:
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
                 S3_BUCKET: dev-webcomponents-ucla-edu/img
-                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/icons
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/img
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
             - touch ./redirection/index.html
