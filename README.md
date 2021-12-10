@@ -23,10 +23,12 @@ Our goal is to provide flexible resources and tools for any person or team who c
 --- 
 
 ## For Designers
-- [Brand Guidelines and Design Files](./help/designers/artifacts.md)
+
+- [Brand Guidelines](https://brand.ucla.edu)
+- [Design Files](./help/designers/artifacts.md)
+
 
 ---
-
 
 ## For Consumers
 - [How To Navigate the Website](./help/consumers/navigatingSite.md)
@@ -36,7 +38,7 @@ Our goal is to provide flexible resources and tools for any person or team who c
 
 ---
 
-#### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
+### Have questions on how to consume or contribute to this library? Please reach out to one of our developers:
 - [Post an Issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open)
 - [Join the Slack Discussion](https://ucla.slack.com/archives/G01KJ3GJKHS)
 - [Internal Project Maintainers](./help/internal/tableofcontents.md)
