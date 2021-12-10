@@ -1,7 +1,7 @@
 ---
 title: Accordion
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Display content in a compact manner. Accordions provide a space-saving technique for displaying content in your viewport. Users can explore an overview of topics and then expand accordions as needed to see more information.
 

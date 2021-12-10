@@ -1,7 +1,7 @@
 ---
 title: Social
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Display links to official social channels or embed related content.
 

@@ -1,7 +1,7 @@
 ---
 title: Links
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Display a single list of items in a quick, scannable format
 

@@ -1,7 +1,7 @@
 ---
 title: Download Components
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 This repository is available for official UCLA websites only. Your domain must be a subdomain of [ucla.edu](https://ucla.edu) and have been created through the [411 domain policy](http://www.adminpolicies.ucla.edu/APP/Number/411.0).
 
