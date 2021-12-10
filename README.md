@@ -52,3 +52,153 @@ Our goal is to provide flexible resources and tools for any person or team who c
 **Built with:** [Fractal Component Library](https://fractal.build/)
 
 **Created by:** Strategic Communications
+
+
+## File tree
+
+```
+├── CHANGELOG.md
+├── README.md
+├── bitbucket-pipelines.yml
+├── build
+│   ├── apple-touch-icon-precomposed.png
+│   ├── apple-touch-icon.png
+│   ├── assets.html
+│   ├── components
+│   │   ├── detail
+│   │   ├── preview
+│   │   └── render
+│   ├── components.html
+│   ├── css
+│   │   ├── ucla-fractal-theme.css
+│   │   ├── ucla-fractal-theme.css.map
+│   │   ├── ucla-lib.css
+│   │   ├── ucla-lib.css.map
+│   │   ├── ucla-lib.min.css
+│   │   └── ucla-lib.min.css.map
+│   ├── docs
+│   │   ├── contribute
+│   │   ├── contribute.html
+│   │   ├── install.html
+│   │   ├── layout
+│   │   ├── roadmap.html
+│   │   ├── support.html
+│   │   ├── usage-guidelines
+│   │   └── utilities
+│   ├── docs.html
+│   ├── favicon.ico
+│   ├── icons
+│   │   ├── denotive
+│   │   ├── social
+│   │   ├── ucla-web-icons.zip
+│   │   └── weather
+│   ├── img
+│   │   ├── docs
+│   │   ├── example-post.jpg
+│   │   └── examples
+│   ├── index.html
+│   ├── js
+│   │   ├── ucla-fractal-theme.js
+│   │   ├── ucla-fractal-theme.min.js
+│   │   ├── ucla-lib-scripts.js
+│   │   ├── ucla-lib-scripts.js.map
+│   │   ├── ucla-lib-scripts.min.js
+│   │   └── ucla-lib-scripts.min.js.map
+│   └── themes
+│       └── mandelbrot
+├── createcommit.js
+├── fractal.config.js
+├── gulpfile.js
+├── help
+│   ├── consumers
+│   │   ├── componentStatus.md
+│   │   └── navigatingSite.md
+│   ├── designers
+│   │   └── artifacts.md
+│   ├── developers
+│   │   ├── getSetup.md
+│   │   ├── howToContribute.md
+│   │   ├── namingConvention.md
+│   │   └── projectHierarchy.md
+│   ├── images
+│   │   └── dependency-versions.png
+│   └── internal
+│       ├── branchingModel.md
+│       ├── bucketCloudSetup.md
+│       ├── contributingFlow.md
+│       ├── semanticReleaseFlow.md
+│       └── tableofcontents.md
+├── lastcommit.txt
+├── package-lock.json
+├── package.json
+├── public
+│   ├── apple-touch-icon-precomposed.png
+│   ├── apple-touch-icon.png
+│   ├── css
+│   │   ├── ucla-fractal-theme.css
+│   │   ├── ucla-fractal-theme.css.map
+│   │   ├── ucla-lib.css
+│   │   ├── ucla-lib.css.map
+│   │   ├── ucla-lib.min.css
+│   │   └── ucla-lib.min.css.map
+│   ├── favicon.ico
+│   ├── icons
+│   │   ├── denotive
+│   │   ├── social
+│   │   ├── ucla-web-icons.zip
+│   │   └── weather
+│   ├── img
+│   │   ├── docs
+│   │   ├── example-post.jpg
+│   │   └── examples
+│   └── js
+│       ├── ucla-fractal-theme.js
+│       ├── ucla-fractal-theme.min.js
+│       ├── ucla-lib-scripts.js
+│       ├── ucla-lib-scripts.js.map
+│       ├── ucla-lib-scripts.min.js
+│       └── ucla-lib-scripts.min.js.map
+├── src
+│   ├── components
+│   │   ├── 01-layout
+│   │   ├── 02-utilities
+│   │   ├── 03-components
+│   │   ├── 98-support
+│   │   ├── 99-template
+│   │   └── _preview.hbs
+│   ├── docs
+│   │   ├── 01-index.md
+│   │   ├── 02-install.md
+│   │   ├── 03-roadmap.md
+│   │   ├── 04-layout
+│   │   ├── 05-utilities
+│   │   ├── 06-usage-guidelines
+│   │   ├── 07-contribute
+│   │   ├── 08-support.md
+│   │   ├── docs.config.json
+│   │   ├── index.config.json
+│   │   ├── install.config.json
+│   │   ├── js
+│   │   ├── roadmap.config.json
+│   │   ├── scss
+│   │   └── support.config.json
+│   ├── icons
+│   │   ├── denotive
+│   │   ├── social
+│   │   └── weather
+│   ├── js
+│   │   ├── accordion.js
+│   │   ├── carousel.js
+│   │   ├── form.js
+│   │   ├── grid.js
+│   │   ├── primary-nav.js
+│   │   ├── ribbon.js
+│   │   ├── table.js
+│   │   └── tabs.js
+│   └── scss
+│       ├── components
+│       ├── ucla-lib.scss
+│       └── utilities
+├── svgo.config.js
+└── test-commit
+```
