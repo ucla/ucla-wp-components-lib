@@ -201,3 +201,10 @@ exports.production = series(
   compressCompLibStyles,
   generateDocStyles
 );
+
+// Bitbucket pipeline gulp tasks
+// gulp styleProductionPublic
+exports.generateCompLibStyles = generateCompLibStyles;
+
+// Generate Lib Script - To be used in CI prior to executing production task
+exports.generateCompLibScripts = generateCompLibScripts;
