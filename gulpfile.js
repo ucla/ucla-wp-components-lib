@@ -3,6 +3,7 @@
 const { src, dest, watch, series } = require('gulp');
 const concat = require('gulp-concat');
 const del = require('del');
+const fractal = require('./fractal.config');
 const eslint = require('gulp-eslint');
 const minify = require('gulp-minify');
 const sass = require('gulp-sass')(require('sass'));
@@ -10,14 +11,14 @@ const sourcemaps = require('gulp-sourcemaps');
 
 
 // Test if Gulp is installed.
-function defaultTask (cb) {
+function defaultTask(cb) {
   cb();
 }
 
 
 // UCLA Web Component Library CSS stylesheet
 
-function generateCompLibStyles () {
+function generateCompLibStyles() {
   return src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -26,7 +27,7 @@ function generateCompLibStyles () {
     .pipe(dest('public/css'));
 }
 
-function compressCompLibStyles () {
+function compressCompLibStyles() {
   return src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -37,7 +38,7 @@ function compressCompLibStyles () {
 
 // Fractal Docs CSS stylesheet
 
-function generateDocStyles () {
+function generateDocStyles() {
   return src('src/docs/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -55,19 +56,19 @@ function generateDocStyles () {
 // lint error, return the stream and pipe to failAfterError last use:
 // .pipe(eslint.failAfterError());
 
-function watchJavascript (done) {
+function watchJavascript(done) {
   watch('src/js/*.js', series(generateCompLibScripts, lintJavascriptLib));
   watch('src/docs/js/*.js', series(generateDocScripts, lintJavascriptDoc));
   done();
 }
 
-function lintJavascriptLib () {
+function lintJavascriptLib() {
   return src('src/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
 }
 
-function lintJavascriptDoc () {
+function lintJavascriptDoc() {
   return src('src/docs/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
@@ -75,7 +76,7 @@ function lintJavascriptDoc () {
 
 // UCLA Web Component Library Scripts
 
-function generateCompLibScripts () {
+function generateCompLibScripts() {
   return src('src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('ucla-lib-scripts.js'))
@@ -92,7 +93,7 @@ function generateCompLibScripts () {
 
 // Fractal Docs Scripts
 
-function generateDocScripts () {
+function generateDocScripts() {
   return src(['src/docs/js/**.js'])
     .pipe(concat('ucla-fractal-theme.js'))
     .pipe(minify({
@@ -106,11 +107,62 @@ function generateDocScripts () {
 
 // Clean unnecessary files
 
-function cleanScriptsStyles () {
+function cleanScriptsStyles() {
   return del([
     'public/js/*',
     'public/css/*'
   ]);
+}
+
+
+
+/*
+ * Configure a Fractal instance.
+ */
+
+const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+
+/*
+ * Fractal tasks
+
+  * Start the Fractal server
+  *
+  * In this example we are passing the option 'sync: true' which means that it will
+  * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
+  * Obviously this is completely optional!
+  *
+  * This task will also log any errors to the console.
+  */
+
+function fractalStart () {
+  const server = fractal.web.server({
+    sync: true
+  });
+  server.on('error', err => logger.error(err.message));
+  return server.start().then(() => {
+    logger.success(`Fractal server is now running at ${server.url}`);
+  });
+}
+
+/*
+ * Run a static export of the project web UI.
+ *
+ * This task will report on progress using the 'progress' event emitted by the
+ * builder instance, and log any errors to the terminal.
+ *
+ * The build destination will be the directory specified in the 'builder.dest'
+ * configuration option set above.
+ */
+
+function fractalBuild () {
+  const builder = fractal.web.builder();
+  builder.on('progress', (completed, total) =>
+    logger.update(`Exported ${completed} of ${total} items`, 'info')
+  );
+  builder.on('error', err => logger.error(err.message));
+  return builder.build().then(() => {
+    logger.success('Fractal build completed!');
+  });
 }
 
 // gulp
@@ -118,6 +170,7 @@ exports.default = defaultTask;
 
 // gulp watch
 exports.watch = series(
+  fractalStart,
   watchJavascript,
   cleanScriptsStyles,
   generateCompLibScripts,
@@ -129,6 +182,7 @@ exports.watch = series(
 
 // gulp build
 exports.build = series(
+  fractalBuild,
   cleanScriptsStyles,
   generateCompLibScripts,
   generateDocScripts,
@@ -139,6 +193,7 @@ exports.build = series(
 
 // gulp production
 exports.production = series(
+  fractalBuild,
   cleanScriptsStyles,
   generateCompLibScripts,
   generateDocScripts,
