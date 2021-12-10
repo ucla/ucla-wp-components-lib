@@ -43,7 +43,7 @@
 
   - If installed successfully, these commands should return a version number, similar to below:
 
-    ![npm v6.13.4, node v12.14.1, gulp CLI v2.2.0, gulp v4.0.2](./../images/dependency-versions.png)
+    ![npm v8.1.4, node v16.13.1, gulp CLI v2.2.1, gulp v4.0.2](./../images/dependency-versions.png)
 
 4. Install package dependencies:
 
@@ -51,13 +51,29 @@
     npm install
     ```
 
-5. Compile assets and watch any changes:
+5. Run Fractal and watch any changes:
 
-    ```
-    gulp build && gulp watch
-    ```
+    - `fractal build`
+    - `fractal start --sync`
 
 Your local environment should be running at [http://localhost:3000](http://localhost:3000).
+
+6. Run Gulp to transpile stylesheets and scripts.
+    
+    - `gulp build`
+    - `gulp watch`
+
+7. Run SVGO to process svg files
+
+    - `svgo -f ./src/icons/**/* -o ./public/icons/**/*`
+
+--- 
+
+8. Helpful sass commands if you prefer to not rely on gulp
+
+    - `sass src/scss/ucla-styles.scss public/css/ucla-styles.css`
+    - `sass src/docs/scss/ucla-fractal-style.scss public/css/ucla-fractal-style.css`
+    
 
 ---
 # Helpful gulp commands
@@ -73,4 +89,4 @@ Your local environment should be running at [http://localhost:3000](http://local
 
  ---
 
-:arrow_left: [Go Back to Main README](https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/)
+
