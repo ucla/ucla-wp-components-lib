@@ -11,14 +11,14 @@ const sourcemaps = require('gulp-sourcemaps');
 
 
 // Test if Gulp is installed.
-function defaultTask(cb) {
+function defaultTask (cb) {
   cb();
 }
 
 
 // UCLA Web Component Library CSS stylesheet
 
-function generateCompLibStyles() {
+function generateCompLibStyles () {
   return src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -27,7 +27,7 @@ function generateCompLibStyles() {
     .pipe(dest('public/css'));
 }
 
-function compressCompLibStyles() {
+function compressCompLibStyles () {
   return src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -38,7 +38,7 @@ function compressCompLibStyles() {
 
 // Fractal Docs CSS stylesheet
 
-function generateDocStyles() {
+function generateDocStyles () {
   return src('src/docs/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -56,19 +56,19 @@ function generateDocStyles() {
 // lint error, return the stream and pipe to failAfterError last use:
 // .pipe(eslint.failAfterError());
 
-function watchJavascript(done) {
+function watchJavascript (done) {
   watch('src/js/*.js', series(generateCompLibScripts, lintJavascriptLib));
   watch('src/docs/js/*.js', series(generateDocScripts, lintJavascriptDoc));
   done();
 }
 
-function lintJavascriptLib() {
+function lintJavascriptLib () {
   return src('src/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
 }
 
-function lintJavascriptDoc() {
+function lintJavascriptDoc () {
   return src('src/docs/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
@@ -76,7 +76,7 @@ function lintJavascriptDoc() {
 
 // UCLA Web Component Library Scripts
 
-function generateCompLibScripts() {
+function generateCompLibScripts () {
   return src('src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('ucla-lib-scripts.js'))
@@ -93,7 +93,7 @@ function generateCompLibScripts() {
 
 // Fractal Docs Scripts
 
-function generateDocScripts() {
+function generateDocScripts () {
   return src(['src/docs/js/**.js'])
     .pipe(concat('ucla-fractal-theme.js'))
     .pipe(minify({
@@ -107,7 +107,7 @@ function generateDocScripts() {
 
 // Clean unnecessary files
 
-function cleanScriptsStyles() {
+function cleanScriptsStyles () {
   return del([
     'public/js/*',
     'public/css/*'
