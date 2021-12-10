@@ -12,7 +12,8 @@
   "dependencies": {
     "@frctl/fractal": "^1.5.11",
     "@frctl/mandelbrot": "^1.9.4",
-    "fractal-status-helper": "^1.0.0"
+    "fractal-status-helper": "^1.0.0",
+    "gulp-zip": "^5.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
