@@ -21,11 +21,11 @@ Highlight important ideas or brand tag lines.
 ### **Code**
 
 ```
-{{ view '@ribbons--brand' }}
+{{ render '@ribbons--brand' }}
 ```
 
 ### **Code**
 
 ```
-{{ view '@ribbons--highlight' }}
+{{ render '@ribbons--highlight' }}
 ```

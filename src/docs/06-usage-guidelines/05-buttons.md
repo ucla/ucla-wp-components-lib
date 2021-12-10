@@ -92,7 +92,7 @@ Span wrapper that represents self-contained content.
 
 ### **Code**
 ```
-{{ view '@button--primary' }}
+{{ render '@button--primary' }}
 ```
 
 ## **Secondary Button**
@@ -100,21 +100,21 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-{{ view '@button--secondary' }}
+{{ render '@button--secondary' }}
 ```
 
 ## **Tertiary Button**
 ### **Code**
 
 ```
-{{ view '@button--tertiary' }}
+{{ render '@button--tertiary' }}
 ```
 
 ## **Button Group**
 ### **Code**
 
 ```
-{{ view '@button--group' }}
+{{ render '@button--group' }}
 ```
 
 
@@ -122,19 +122,19 @@ Span wrapper that represents self-contained content.
 ### **Code**
 
 ```
-{{ view '@links--related-links' }}
+{{ render '@links--related-links' }}
 ```
 
 1. Link (required)
 2. Container (on hover and active states only)
 
 ```
-{{ view '@links--inline' }}
+{{ render '@links--inline' }}
 ```
 
 ## **Pagination Button**
 ### **Code**
 
 ```
-{{ view '@button--pagination' }}
+{{ render '@button--pagination' }}
 ```

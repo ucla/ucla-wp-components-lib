@@ -28,5 +28,5 @@ If you embed content from social channels on your website, we recommend displayi
 ### **Code**
 
 ```
-{{ view '@social--links' }}
+{{ render '@social--links' }}
 ```

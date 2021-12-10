@@ -23,7 +23,7 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 ### **Code**
 
 ```
-{{ view '@lists--unordered-lists' }}
+{{ render '@lists--unordered-lists' }}
 ```
 
 
@@ -32,5 +32,5 @@ The UCLA brands dictates that lists are ordered with numbers or bullets in ![#27
 ### **Code**
 
 ```
-{{ view '@lists--ordered-lists' }}
+{{ render '@lists--ordered-lists' }}
 ```

@@ -21,7 +21,7 @@ Display a single list of items in a quick, scannable format. The UCLA brands dic
 ### **Code**
 
 ```
-{{ view '@lists--unordered-lists' }}
+{{ render '@lists--unordered-lists' }}
 ```
 
 ## **Ordered List**
@@ -29,5 +29,5 @@ Display a single list of items in a quick, scannable format. The UCLA brands dic
 ### **Code**
 
 ```
-{{ view '@lists--ordered-lists' }}
+{{ render '@lists--ordered-lists' }}
 ```

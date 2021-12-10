@@ -32,7 +32,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 ### HTML
 
 ```
-{{ view '@tabs' }}
+{{ render '@tabs' }}
 ```
 
 ### JavaScript
