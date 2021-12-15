@@ -3,7 +3,7 @@ title: Headings
 ---
 {{render '@support'}}
 
-These are heading styles. Font-style should be bold for these headers.
+These are heading styles. The UCLA title headings are Helvetica with bold font-styles applied. This combination is used for high readability across digital devices.
 
 #### **Do’s**
 
