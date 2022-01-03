@@ -10,11 +10,11 @@ Collect information from users or filter content with form select and search fie
 ### **Usability Guidance**
 
 * Tell people why you're collecting their information and what you're going to do with it.
-* Immediately validate entries to reassure users they entered the information correctly. Don't wait for the form submission to communicate missing or erroneous information.
+* Immediately validate entries to reassure users they entered the information correctly. Don't wait until the form submission to communicate missing or erroneous information.
 * Provide clear and non-judgmental error messages to help users correct their mistakes.
-* Use placeholders or contextual tips to help people provide the right data.
+* Use placeholders or contextual tips in form fields to help people provide the right data.
 * Auto-format data rather than asking users to match your standards, e.g. 3107941234 should auto-format to (310) 794-1234. Or separate data inputs to avoid this problem altogether, e.g. (`310`) `794`-`1234` x`555`.
-* Use the right input type to aid with validation and substitute relevant keyboards. For instance, if you use `<input type="tel">`, mobile browsers will dynamically substitute a numeric keypad to enter a phone numbers. If you use `<input type="email">`  or `type="url">` mobile browsers will display `@`, `.`, `/` and `.com` buttons for quicker entry.
+* Use the right input type to aid with validation and substitute relevant keyboards. For instance, if you use `<input type="tel">`, mobile browsers will dynamically substitute a numeric keypad to enter a phone numbers. If you use `<input type="email">`  or `<input type="url">`, mobile browsers will display `@`, `.`, `/` and `.com` buttons for quicker entry.
 * Divide long forms into multiple steps and indicate their progress, e.g. "Step 3 of 4: Payment Method".
 * Clearly state if and when users can expect a response from your department.
 

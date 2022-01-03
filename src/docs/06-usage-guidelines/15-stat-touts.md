@@ -3,7 +3,7 @@ title: Statistics, Rankings and Factoids
 ---
 {{view '@support'}}
 
-Highlight an important fact, data point, or ranking. We have a lot of useful data and information to share with the public, and accomplishments we can tout. Use these highly visual callouts to do it.
+Highlight an important fact, data point or ranking. We have a lot of useful data and information to share with the public, and accomplishments we can tout. Use these highly visual callouts to do it.
 
 ## **Usage**
 

@@ -3,7 +3,7 @@ title: Cards
 ---
 {{view '@support'}}
 
-Preview articles, topics, and events in a visual way.
+Preview articles, topics and events in a visual way.
 
 ## **Usage**
 
@@ -24,10 +24,10 @@ Preview articles, topics, and events in a visual way.
 ### **Accessibility Requirements**
 
 * Link the card's headline, heading or title to provide the most succinct description to screen readers and search engines. Both technologies use links to understand and navigate document structure.
-* Wrap your link around the image too if you decide to include one.
+* Wrap your link around the image if you decide to include one.
 * Only use one link per card.
 * Write [alt text](https://webaim.org/techniques/alttext/) for any images you include.
-* Avoid linking from buttons with generic labels like "read more" or "view details". Screen readers cannot differentiate card topics with the same link text.
+* Avoid linking from buttons with generic labels like "read more" or "view details." Screen readers cannot differentiate card topics with the same link text.
 
 ## **Basic Card**
 
@@ -44,7 +44,7 @@ Preview articles, topics, and events in a visual way.
 
 ### **Code**
 
-Use the `<article>` element to denote your card as a standalone element within the body of your page. Basic Card backgrounds will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "basic-card" class to "basic-card-grey".
+Use the `<article>` element to denote your card as a standalone element within the body of your page. Basic Card backgrounds will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "basic-card" class to "basic-card-grey."
 
 
 ```
@@ -68,15 +68,15 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 #### **Do’s**
 
-* Only use one Featured Card per section.
+* Only use one featured card per section.
 
 #### **Don’ts**
 
-* Don’t stack multiple Featured Cards in one section.
+* Don’t stack multiple featured cards in one section.
 
 ### **Code**
 
-Use the `<article>` element to denote your card as a standalone element within the body of your page. Featured story cards should be included within a parent "section" or "div" tag with the class, "story". Non-featured story cards (shown in the next section) can be included below featured stories.
+Use the `<article>` element to denote your card as a standalone element within the body of your page. Featured story cards should be included within a parent "section" or "div" tag with the class, "story." Non-featured story cards (shown in the next section) can be included below featured stories.
 
 ```
 {{view '@cards--featured-story'}}
@@ -96,7 +96,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 ### **Code**
 
-Use the `<article>` element to denote your card as a standalone element within the body of your page. A Person Card's background will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "person-card" class to "person-card-grey".
+Use the `<article>` element to denote your card as a standalone element within the body of your page. A person card's background will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "person-card" class to "person-card-grey."
 
 
 ```
