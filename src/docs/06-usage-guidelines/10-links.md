@@ -1,7 +1,7 @@
 ---
 title: Links
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 
 ## **Usage**

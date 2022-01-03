@@ -1,7 +1,7 @@
 ---
 title: Ribbons
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Highlight important ideas or brand tag lines.
 
@@ -21,7 +21,7 @@ Highlight important ideas or brand tag lines.
 ### **Code**
 
 ```
-{{ view '@ribbons--brand' }}
+{{ render '@ribbons--brand' }}
 ```
 
 ## **Highlight Ribbon**
@@ -29,5 +29,5 @@ Highlight important ideas or brand tag lines.
 ### **Code**
 
 ```
-{{ view '@ribbons--highlight' }}
+{{ render '@ribbons--highlight' }}
 ```

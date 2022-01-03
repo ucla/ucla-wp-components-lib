@@ -1,7 +1,7 @@
 ---
 title: Design criteria
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 The following criteria will be used to evaluate if a designed component, enhancement, or proposal should be included in the component library:
 

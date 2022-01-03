@@ -1,8 +1,7 @@
 ---
 title: Backgrounds
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/C01TW0HVB0Q">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
 You can set the background of any element using the `has-background-*` class. Using the background utility class will not change the color of text. Please use the text utility class `.has-white-text` when necessary.
 
@@ -62,4 +61,4 @@ When using a background color the foreground text requires a contrast ratio mini
 </div>
 ```
 
-[See visual examples](/components/detail/backgrounds).
+[See visual examples](/build/%!CurrentVersion%!/components/detail/backgrounds).

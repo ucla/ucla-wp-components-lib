@@ -1,10 +1,9 @@
 ---
 title: Headings
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/C01TW0HVB0Q">![Slack](https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/build/%!CurrentVersion%!/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
-These are heading styles. Font-style should be bold for these headers.
+These are heading styles. The UCLA title headings are Helvetica with bold font-styles applied. This combination is used for high readability across digital devices.
 
 #### **Do’s**
 

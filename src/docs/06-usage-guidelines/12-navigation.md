@@ -1,7 +1,7 @@
 ---
 title: Navigation
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Preview and navigate priority topics on your site
 
@@ -55,7 +55,7 @@ Preview and navigate priority topics on your site
     <div class="header-logo">
         <div class="header-logo__wrap">
             <a href="https://www.ucla.edu/">
-                <img class="header-logo__image" src="/img/icons/ucla_logo_white.svg" alt="UCLA Logo" />
+                <img class="header-logo__image" src="/icons/ucla_logo_white.svg" alt="UCLA Logo" />
             </a>
 
             <ul class="breadcrumb breadcrumb--white">

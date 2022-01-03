@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document).ready(function() {
 
   const $sublistItem = $('.nav-primary__sublist');
   const $toggle = $('.nav-primary__toggle');
@@ -8,7 +8,7 @@ $(document).ready(function (){
   $sublistItem.addClass('nav-primary__sublist--hidden');
 
   // Show nav children on click of toggle
-  $toggle.on('click', function () {
+  $toggle.on('click', function() {
 
     if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
@@ -24,13 +24,13 @@ $(document).ready(function (){
   evalNav($(window).width());
 
   // Run evaluation on page resize
-  $(window).resize(function () {
+  $(window).resize(function() {
     evalNav($(window).width());
     mobileNavPosition($(window).width(), breakpoint);
   });
 
   // Hide open mobile sub navs above browser width 1024px
-  function evalNav (windowWidth) {
+  function evalNav(windowWidth) {
 
     if (windowWidth >= breakpoint) {
       $sublistItem.addClass('nav-primary__sublist--hidden');
@@ -39,7 +39,7 @@ $(document).ready(function (){
       $('.nav-primary').removeClass('nav-primary--is-active');
       enableMenuTab();
     } else {
-      disableMenuTab ();
+      disableMenuTab();
     }
   }
 
@@ -50,11 +50,11 @@ $(document).ready(function (){
   /*-------------------------------------------------------------------------------------
     SEARCH FUNCTIONALITY
   -------------------------------------------------------------------------------------*/
-  $('.nav-primary__search-desktop-button').click(function (){
+  $('.nav-primary__search-desktop-button').click(function() {
 
     let secondLevelNav = $('li.has-child > ul');
 
-    desktopSubmenuResize ();
+    desktopSubmenuResize();
 
     if ($(this).hasClass('nav-primary__search-desktop-button--is-active')) {
       $('.nav-primary__search-block-form').removeClass('nav-primary__search-block-form--is-active');
@@ -82,7 +82,7 @@ $(document).ready(function (){
 
   /* Select the size on load or reset the size of the submenu for dekstop only. Resize the submenu when
   ================================================================= */
-  function desktopSubmenuResize () {
+  function desktopSubmenuResize() {
     let w = $('.nav-primary').width() - 70,
       negOffset = (w + 10) * -1;
 
@@ -101,37 +101,37 @@ $(document).ready(function (){
   -------------------------------------------------------------------------------------*/
 
   //reset the primary navigation
-  resetTabs ();
+  resetTabs();
 
   //get the window width
   let windowWidth = $(window).width();
 
   //set the tabbing functionality
   if (windowWidth >= breakpoint) {
-    addDesktopTabs ();
+    addDesktopTabs();
   } else {
-    addMobileTabs ();
+    addMobileTabs();
   }
 
   //On Resize
-  $(window).resize(function () {
+  $(window).resize(function() {
 
     windowWidth = $(window).width();
 
-    setTimeout(function () {
+    setTimeout(function() {
 
       if (windowWidth >= breakpoint) {
-        resetTabs ();
-        addDesktopTabs ();
+        resetTabs();
+        addDesktopTabs();
       } else {
-        resetTabs ();
-        addMobileTabs ();
+        resetTabs();
+        addMobileTabs();
       }
     }, 100);
   });
 
   //on mouse out of sublist reset
-  $('#nav-main .nav-primary__sublist').mouseout(function () {
+  $('#nav-main .nav-primary__sublist').mouseout(function() {
     $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
@@ -139,7 +139,7 @@ $(document).ready(function (){
   });
 
   //Set aria labels for the primary navigation
-  $('#nav-main .nav-primary__link--has-children').mouseover(function () {
+  $('#nav-main .nav-primary__link--has-children').mouseover(function() {
 
     windowWidth = $(window).width();
 
@@ -151,7 +151,7 @@ $(document).ready(function (){
     }
   });
 
-  $('#nav-main .nav-primary__link--has-children').mouseleave(function () {
+  $('#nav-main .nav-primary__link--has-children').mouseleave(function() {
 
     let $this = $(this);
 
@@ -161,7 +161,7 @@ $(document).ready(function (){
     if (windowWidth >= breakpoint) {
 
       $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
-      setTimeout(function () {
+      setTimeout(function() {
         $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
       }, 50);
 
@@ -174,7 +174,7 @@ $(document).ready(function (){
 
 
   /* ---------- Reset all the tabbing and styles ---------- */
-  function resetTabs () {
+  function resetTabs() {
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $(document).unbind('keydown');
   }
@@ -207,19 +207,19 @@ $(document).ready(function (){
 
   }
   /* --------------add dekstop tabbing controls------------ */
-  function addDesktopTabs () {
+  function addDesktopTabs() {
 
     //keypress focus
-    $(document).keydown(function (e) {
+    $(document).keydown(function(e) {
 
       let keyCode = e.keyCode || e.which;
 
       //tab key was pressed
       if (keyCode === 9) {
 
-        setTimeout(function () {
+        setTimeout(function() {
 
-          let $focus = $(':focus')/*, $dropdown*/;
+          let $focus = $(':focus') /*, $dropdown*/ ;
 
           //if this is a top level nav or the focus is not a primary nav item
           if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
@@ -237,7 +237,8 @@ $(document).ready(function (){
       if (keyCode === 40) {
 
         //get the focused element
-        let $focus = $(':focus'), $dropdown;
+        let $focus = $(':focus'),
+          $dropdown;
 
         //if this is a primary navigation item
         if ($focus.hasClass('nav-primary__link')) {
@@ -262,7 +263,7 @@ $(document).ready(function (){
       //escape key was pressed
       if (keyCode === 27) {
 
-        setTimeout(function () {
+        setTimeout(function() {
 
           let $focus = $(':focus');
 
@@ -285,16 +286,16 @@ $(document).ready(function (){
   }
 
   /* --------------add mobile tabbing controls------------ */
-  function addMobileTabs () {
+  function addMobileTabs() {
     //keypress focus
-    $(document).keydown(function (e) {
+    $(document).keydown(function(e) {
 
       let keyCode = e.keyCode || e.which;
 
       //tab key was pressed
       if (keyCode === 9) {
 
-        setTimeout(function () {
+        setTimeout(function() {
 
           let $focus = $(':focus');
           let $hamburgerBtn = $('.hamburger');
@@ -353,7 +354,7 @@ $(document).ready(function (){
   let $primaryNav = $('.nav-primary');
   let $header = $('#header');
 
-  $hamburgerBtn.bind('click', function () {
+  $hamburgerBtn.bind('click', function() {
 
     //if not active add class active
     if (!$(this).hasClass('hamburger--is-active')) {
@@ -361,7 +362,7 @@ $(document).ready(function (){
       $(this).addClass('hamburger--is-active');
       $primaryNav.addClass('nav-primary--is-active');
 
-      mobileNavPosition ();
+      mobileNavPosition();
       enableMenuTab();
 
     } else {
@@ -373,7 +374,7 @@ $(document).ready(function (){
   });
 
   //check if the mobile nav needs to be repositioned.
-  function mobileNavPosition (windowWidth, breakpoint) {
+  function mobileNavPosition(windowWidth, breakpoint) {
 
     let $primaryNav = $('.nav-primary');
     let height;
@@ -384,7 +385,7 @@ $(document).ready(function (){
       $primaryNav.removeAttr('style');
     } else {
       if (height > 105) {
-        $primaryNav.css({'top': '71px'});
+        $primaryNav.css({ 'top': '71px' });
       } else {
         $primaryNav.removeAttr('style');
       }
@@ -392,14 +393,14 @@ $(document).ready(function (){
   }
 
   //disable tabbing for the mobile menu
-  function disableMenuTab () {
+  function disableMenuTab() {
     $('.nav-primary__link').attr('tabindex', '-1');
     $('.nav-primary__toggle').attr('tabindex', '-1');
     $('.nav-primary__search-field').attr('tabindex', '-1');
   }
 
   //enable the tabbing for the mobile menu
-  function enableMenuTab () {
+  function enableMenuTab() {
     $('.nav-primary__link').attr('tabindex', '0');
     $('.nav-primary__toggle').attr('tabindex', '0');
     $('.nav-primary__search-field').attr('tabindex', '0');
@@ -412,7 +413,7 @@ $(document).ready(function (){
   /*-------------------------------------------------------------------------------------
     BREADCRUMB FUNCTIONALITY
   -------------------------------------------------------------------------------------*/
-  $('.breadcrumb').each(function () {
+  $('.breadcrumb').each(function() {
 
     if ($(this).hasClass('breadcrumb--white')) {
       $(this).after('<span class="breadcrumb--fade white"></span>');

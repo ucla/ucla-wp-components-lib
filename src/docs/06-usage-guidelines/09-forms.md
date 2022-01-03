@@ -1,7 +1,7 @@
 ---
 title: Forms
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Collect information from users or filter content with form select and search fields.
 

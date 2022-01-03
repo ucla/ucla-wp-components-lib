@@ -1,7 +1,7 @@
 ---
 title: Issue branching
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 
 If submitting your work through an issue branch in the Bitbucket repository, please follow these additional steps:

@@ -1,7 +1,7 @@
 ---
 title: Alerts
 ---
-{{view '@support'}}
+{{render '@support'}}
 
 Notify users of an important change or new piece of information.
 
