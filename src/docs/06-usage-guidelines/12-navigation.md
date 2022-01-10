@@ -26,8 +26,8 @@ Preview and navigate priority topics on your site
 
 ### **Accessibility Requirements**
 
-* Use the `<nav>` element and ARIA labels, e.g. "Main", "Footer", "Social", etc., to identify each distinct navigation menu of your site.
-* Insert a hidden skip nav with quick links to different parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
+* Use the `<nav>` element and ARIA labels, e.g. "Main," "Footer," "Social," etc., to identify each distinct navigation menu of your site.
+* Insert a hidden skip nav with quick links to differentiate parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
 
 **Further Reading**
 
@@ -43,7 +43,7 @@ Preview and navigate priority topics on your site
 
 #### **Don'ts**
 
-* Don't link to individual reports, articles, events, or people. Use Banners and Cards to highlight editorial content, events, and important people.
+* Don't link to individual reports, articles, events or people. Use Banners and Cards to highlight editorial content, events, and important people.
 * Don't link to external websites.
 * Don't link to non-web formats like PDF, DOC, etc. These formats do not comply with federal accessibility guidelines by default.
 

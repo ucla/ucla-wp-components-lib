@@ -24,7 +24,7 @@ When using a background color the foreground text requires a contrast ratio mini
 <div class="ucla campus has-background-ucla-blue has-white-text">
   <div class="col span_1_of_2">
     <h2>Column 1 Content Title</h2>
-    <p>The utility class `.has-background-ucla-blue` has been added so only the row has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
+    <p>The utility class ʻ.has-background-ucla-blueʼ has been added so only the row has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
   </div>
   <div class="col span_1_of_2">
     <h2>Column 2 Content Title</h2>
@@ -38,7 +38,7 @@ When using a background color the foreground text requires a contrast ratio mini
 <div class="ucla campus">
   <div class="col span_1_of_2 has-background-ucla-blue has-white-text">
     <h2>Column 1 Content Title</h2>
-    <p>The utility class `.has-background-ucla-blue` has been added so only the first column has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
+    <p>The utility class ʻ.has-background-ucla-blueʼ has been added so only the first column has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
   </div>
   <div class="col span_1_of_2">
    <h2>Column 2 Content Title</h2>
@@ -56,7 +56,7 @@ When using a background color the foreground text requires a contrast ratio mini
   </div>
   <div class="col span_1_of_2">
     <h2 class="has-background-ucla-blue has-white-text">Column 2 Content Title</h2>
-    <p>The utility class `.has-background-ucla-blue` has been added so only the title in the second column has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
+    <p>The utility class ʻ.has-background-ucla-blueʼ has been added so only the title in the second column has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
   </div>
 </div>
 ```
