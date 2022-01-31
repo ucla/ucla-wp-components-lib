@@ -50,14 +50,3 @@ Note: The following blockquote's styling does not behave as it does when being u
 ```
 {{view '@typography--blockquote'}}
 ```
-
-<p style="background: #2774AE;color: #fff;">The utility class `.has-background-ucla-blue` has been added so only the row has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
-
-```
-<div class="ucla campus has-background-ucla-blue has-white-text">
-  <div class="col span_1_of_1">
-    <p>The utility class `.has-background-ucla-blue` has been added so only the row has a modified background color. A second utility class `.has-white-text` has been added to turn the text white.</p>
-  </div>
-</div>
-
-```

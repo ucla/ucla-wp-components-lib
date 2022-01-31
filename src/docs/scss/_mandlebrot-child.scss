@@ -79,6 +79,13 @@ a.Tree-entityLink {
   }
 }
 
+// Fix for mobile view where inline styles does not apply on first load
+[dir=ltr] .Frame-body {
+  @media (max-width: 47.49em) {
+      margin-right: -240px;
+  }
+}
+
 // The Information title in the left hand menu
 .Frame-panel--sidebar .Navigation .Navigation-group:nth-of-type(4) .Tree {
   &-header {

@@ -47,29 +47,32 @@
 
 4. Install package dependencies:
 
-    ```
-    npm install
-    ```
+    - `npm install`
 
-5. Run Fractal and watch any changes:
+5. Run first fractal build
+
+  - `npm run prepare`
+
+
+6. Run Fractal and watch any changes:
 
     - `fractal build`
     - `fractal start --sync`
-
+    
 Your local environment should be running at [http://localhost:3000](http://localhost:3000).
 
-6. Run Gulp to transpile stylesheets and scripts.
+7. Run Gulp to transpile stylesheets and scripts.
     
     - `gulp build`
     - `gulp watch`
 
-7. Run SVGO to process svg files
+8. Run SVGO to process svg files
 
     - `svgo -f ./src/icons/**/* -o ./public/icons/**/*`
 
 --- 
 
-8. Helpful sass commands if you prefer to not rely on gulp
+9. Helpful sass commands if you prefer to not rely on gulp
 
     - `sass src/scss/ucla-styles.scss public/css/ucla-styles.css`
     - `sass src/docs/scss/ucla-fractal-style.scss public/css/ucla-fractal-style.css`

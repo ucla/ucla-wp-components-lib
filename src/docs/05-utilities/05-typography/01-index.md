@@ -3,7 +3,7 @@ title: Typography
 ---
 {{render '@support'}}
 
-In this section we cover fonts, headings, rules, and type related use.
+In this section we cover fonts, headings, rules and type-related use.
 
 The UCLA official type is Helvetica. More on the brand type [here](http://brand.ucla.edu/identity/typography).
 
