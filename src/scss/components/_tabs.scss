@@ -1,5 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 /*************************************
   Tabbed card section
@@ -72,7 +73,7 @@
 
     // Sometimes tabcontent will have paragraph content
     p {
-      font-size: 16px;
+      font-size: variables.$ucla-font-size-default;
       line-height: 24px;
 
       // Add styles to links

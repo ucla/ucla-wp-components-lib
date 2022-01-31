@@ -1,5 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .blockquote-wrapper {
   .blockquote {
@@ -9,7 +10,7 @@
     margin: 24px 24px 0;
 
     &__quote {
-      font-size: 16px;
+      font-size: variables.$ucla-font-size-default;
       line-height: 24px;
       display: block;
       margin-bottom: 16px;
@@ -17,7 +18,7 @@
     }
 
     &__citation {
-      font-size: 16px;
+      font-size: variables.$ucla-font-size-default;
       line-height: 24px;
       display: block;
       color: colors.$medium-grey4;

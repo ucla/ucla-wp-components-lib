@@ -702,6 +702,7 @@ textarea {
  * These are used to customize the grid layout
  * Feel free to overwrite them as necessary
  */
+/* Spacing */
 /* this is all from Bootstrap */
 .m-0 {
   margin: 0 !important;
@@ -6385,71 +6386,71 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 40.5px;
   font-weight: bold;
 }
 @media (min-width: 768px) {
   h1,
 .h1 {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 54px;
   }
 }
 
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 32px;
   font-weight: bold;
 }
 @media (min-width: 768px) {
   h2,
 .h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 40.5px;
   }
 }
 
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 27px;
   font-weight: bold;
 }
 
 h4,
 .h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 22.5px;
   font-weight: bold;
 }
 
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   font-weight: bold;
 }
 
 h6,
 .h6 {
-  font-size: 12.8px;
+  font-size: 0.75rem;
   line-height: 16px;
   font-weight: bold;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   padding-bottom: 16px;
 }
 p strong {
-  font-size: bold;
+  font-weight: bold;
 }
 p small {
-  font-size: 12.8px;
+  font-size: 0.75rem;
   line-height: 16px;
 }
 p em {
@@ -6636,7 +6637,7 @@ p em {
 }
 @media (min-width: 768px) {
   .accordion__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 22px 64px 18px 16px;
   }
   .accordion__title::after {
@@ -6697,14 +6698,14 @@ p em {
   margin: 24px 24px 0;
 }
 .blockquote-wrapper .blockquote__quote {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   display: block;
   margin-bottom: 16px;
   color: #333;
 }
 .blockquote-wrapper .blockquote__citation {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   display: block;
   color: #666;
@@ -6741,7 +6742,7 @@ p em {
 
 .btn {
   padding: 12px 16px 8px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 2px;
   border: 2px solid transparent;
@@ -7163,7 +7164,7 @@ p em {
 .basic-card__title,
 .basic-card-grey__title,
 .basic-card-gray__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 27px;
 }
@@ -7175,7 +7176,7 @@ p em {
 .basic-card__description,
 .basic-card-grey__description,
 .basic-card-gray__description {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   max-height: 300px;
@@ -7268,7 +7269,7 @@ p em {
 .event-card__title {
   color: #00598c;
   margin: 24px 24px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 22.5px;
 }
@@ -7326,7 +7327,7 @@ p em {
 .event-card-info__time, .event-card-info__location, .event-card-info__play {
   display: inline-flex;
   margin-bottom: 8px;
-  font-size: 12.8px;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #666;
 }
@@ -7339,7 +7340,7 @@ p em {
 }
 .event-card-info__description {
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   max-height: 300px;
@@ -7395,21 +7396,21 @@ p em {
 .person-card__name,
 .person-card-grey__name {
   color: #00598c;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 27px;
   margin-bottom: 8px;
 }
 .person-card__department,
 .person-card-grey__department {
   color: #666;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 22.5px;
   margin-bottom: 12px;
 }
 .person-card__description,
 .person-card-grey__description {
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   max-height: 300px;
@@ -7538,12 +7539,12 @@ p em {
   margin-bottom: 0;
 }
 .story__secondary-card-date {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 32px 32px 0;
 }
 .story__secondary-card-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 27px;
   margin: 8px 32px;
   outline: none;
@@ -7555,13 +7556,13 @@ p em {
   padding: 0 32px;
 }
 .story__secondary-card-blurb {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 24px;
 }
 .story__secondary-card-source {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   font-weight: bold;
   margin: 12px 0;
@@ -7764,7 +7765,7 @@ p em {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 0.625rem;
   padding: 3px;
 }
 .splide__play:hover, .splide__pause:hover {
@@ -7906,7 +7907,7 @@ p em {
 }
 .footer__dept--contact p {
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .footer__dept--contact a {
   color: #fff;
@@ -8009,12 +8010,12 @@ p em {
 .global-foot__legal {
   display: block;
   width: 100%;
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 .global-foot__legal--copyright {
   display: block;
   width: 225px;
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 18px;
 }
 @media only screen and (min-width: 768px) {
@@ -8099,7 +8100,7 @@ p em {
   color: #fff;
 }
 .email__heading {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 20px;
   text-transform: uppercase;
@@ -8275,7 +8276,7 @@ p em {
   }
 }
 .email__legal-text {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 18px;
 }
 .email__legal-link {
@@ -8304,7 +8305,7 @@ p em {
 }
 .text__label {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   margin-top: 8px;
@@ -8315,7 +8316,7 @@ p em {
   appearance: none;
   background: #ebebeb;
   background-size: 24px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
@@ -8349,7 +8350,7 @@ p em {
 
 .select__label {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #333;
   margin-top: 8px;
@@ -8362,7 +8363,7 @@ p em {
   appearance: none;
   background: #ebebeb url("/icons/down--blue.svg") no-repeat 98.5% 50%;
   background-size: 24px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
@@ -8471,7 +8472,7 @@ p em {
   padding: 32px;
 }
 .fieldset__legend {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 22.5px;
   color: #333;
@@ -8610,7 +8611,7 @@ li .ucla-list--bulleted li::before {
 }
 .ucla-list--bulleted li .ucla-list--bulleted li::before,
 .ucla-list--bulleted li .ucla-list--numbered li::before {
-  font-size: 9px;
+  font-size: 0.5625rem;
 }
 
 .ucla-list--numbered {
@@ -8929,7 +8930,7 @@ li .ucla-list--bulleted li::before {
 }
 .social-tile__text, .social-tile__info {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 1rem;
 }
 .social-tile__text {
@@ -9002,7 +9003,7 @@ TABLE OF CONTENTS:
   }
 }
 .stat-wrapper .stat-tout__number {
-  font-size: 54px;
+  font-size: 3.375rem;
   line-height: 48px;
   color: #333;
   font-weight: bold;
@@ -9010,12 +9011,12 @@ TABLE OF CONTENTS:
   margin-bottom: 8px;
 }
 .stat-wrapper .stat-tout__number > span {
-  font-size: 18px;
+  font-size: 1.125rem;
   vertical-align: middle;
   margin: 0 -5px;
 }
 .stat-wrapper .stat-tout__label {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 24px;
   font-weight: bold;
   display: block;
@@ -9029,7 +9030,7 @@ TABLE OF CONTENTS:
 }
 .stat-wrapper .stat-tout__source {
   display: block;
-  font-size: 12.8px;
+  font-size: 0.75rem;
   font-weight: bold;
   font-style: italic;
   color: #666;
@@ -9121,7 +9122,7 @@ TABLE OF CONTENTS:
   border: none;
 }
 .fixed-table__wrapper tbody td {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   color: #333;
   padding: 8px 16px;
@@ -9139,7 +9140,7 @@ TABLE OF CONTENTS:
   border: none;
 }
 .fixed-table__wrapper tfoot td {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   color: #333;
   padding: 8px 16px;
@@ -9290,7 +9291,7 @@ TABLE OF CONTENTS:
   outline-offset: -2px;
 }
 .tabs .tabcontent p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
 }
 .tabs .tabcontent p a {
@@ -10171,7 +10172,7 @@ TABLE OF CONTENTS:
   z-index: 1;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 30px;
   font-weight: bold;
   padding-left: 32px;

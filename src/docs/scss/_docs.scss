@@ -7,7 +7,7 @@
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
 
 .Document-title {
-  font-size: 48px;
+  font-size: variables.$ucla-font-size-xxx-large;
   line-height: 54px;
 }
 
@@ -67,42 +67,42 @@ code {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: variables.$ucla-font-size-display;
     line-height: 40.5px;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
-      font-size: 48px;
+      font-size: variables.$ucla-font-size-xxx-large;
       line-height: 54px;
     }
   }
 
   h2 {
-    font-size: 28px;
+    font-size: variables.$ucla-font-size-x-large;
     line-height: 32px;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
-      font-size: 36px;
+      font-size: variables.$ucla-font-size-display;
       line-height: 40.5px;
     }
   }
 
   h3 {
-    font-size: 24px;
+    font-size: variables.$ucla-font-size-large;
     line-height: 27px;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: variables.$ucla-font-size-medium;
     line-height: 22.5px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: variables.$ucla-font-size-default;
     line-height: 20px;
   }
 
   h6 {
-    font-size: 12.8px;
+    font-size: variables.$ucla-font-size-small;
     line-height: 16px;
   }
 }
@@ -128,7 +128,7 @@ code {
   margin-bottom: 1rem;
 
   &.small {
-    font-size: 12px;
+    font-size: variables.$ucla-font-size-x-small;
     padding: 8px 10px;
 
     img {

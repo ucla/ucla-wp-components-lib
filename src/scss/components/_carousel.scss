@@ -1,5 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 // Orginal CSS comes from SplideJS carousel v2.4.24. https://github.com/Splidejs/splide/tree/master/dist/css
 // This CSS has been modfied to fit UCLA's needs.
@@ -156,7 +157,7 @@
     color: colors.$white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 10px;
+    font-size: variables.$ucla-font-size-xxx-small;
     padding: 3px;
 
     &:hover {
