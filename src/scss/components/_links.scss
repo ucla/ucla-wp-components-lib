@@ -1,4 +1,5 @@
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 // Specificity is added this way so that links automatically inherit
 // styling without needing to include class names.

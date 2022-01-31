@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .fixed-table {
   position: relative;
@@ -27,7 +28,7 @@
 
     thead {
       th {
-        font-size: 0.75rem;
+        font-size: variables.$ucla-font-size-xx-small;
         line-height: 0.75rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -80,7 +81,7 @@
       }
 
       td {
-        font-size: 0.8rem;
+        font-size: variables.$ucla-font-size-xx-small;
         line-height: 1rem;
         color: colors.$grey-80;
         padding: 8px 16px;
@@ -106,7 +107,7 @@
       }
 
       td {
-        font-size: 0.8rem;
+        font-size: variables.$ucla-font-size-xx-small;
         line-height: 1rem;
         color: colors.$medium-grey5;
         padding: 8px 16px;
