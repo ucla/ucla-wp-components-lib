@@ -7,7 +7,7 @@
 // https://fractal.build/guide/web/default-theme.html#default-theme-mandelbrot
 
 .Document-title {
-  font-size: variables.$ucla-font-size-display-medium;
+  font-size: variables.$ucla-font-size-xxx-large;
   line-height: 54px;
 }
 
@@ -71,7 +71,7 @@ code {
     line-height: 40.5px;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
-      font-size: variables.$ucla-font-size-display-medium;
+      font-size: variables.$ucla-font-size-xxx-large;
       line-height: 54px;
     }
   }
