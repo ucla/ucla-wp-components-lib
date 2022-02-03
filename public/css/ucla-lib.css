@@ -8598,7 +8598,7 @@ p em {
   padding-right: 13px;
 }
 li .ucla-list--bulleted li::before {
-  content: "□";
+  content: "▫";
 }
 .ucla-list--bulleted li .ucla-list--bulleted,
 .ucla-list--bulleted li .ucla-list--numbered {
@@ -8608,10 +8608,6 @@ li .ucla-list--bulleted li::before {
 .ucla-list--bulleted li .ucla-list--bulleted li,
 .ucla-list--bulleted li .ucla-list--numbered li {
   padding-left: 0;
-}
-.ucla-list--bulleted li .ucla-list--bulleted li::before,
-.ucla-list--bulleted li .ucla-list--numbered li::before {
-  font-size: 0.5625rem;
 }
 
 .ucla-list--numbered {
@@ -9164,36 +9160,24 @@ TABLE OF CONTENTS:
   cursor: pointer;
   padding-left: 32px;
 }
-.fixed-table #sortTable th::before, .fixed-table #sortTable th::after {
-  content: "◤";
-  font-size: 6px;
+.fixed-table #sortTable th::before {
   color: #333;
   display: block;
   position: absolute;
-  left: 18px;
-  top: 12px;
-  width: 6px;
-  height: 9px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  background-repeat: no-repeat;
+  background-size: 25px 30px;
+  left: 9px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/icons/denotive/sort--default.svg");
+  content: "";
 }
-.fixed-table #sortTable th::after {
-  left: 16px;
-  top: 16px;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-.fixed-table #sortTable th.sorting-asc::after {
-  color: #00598c;
+.fixed-table #sortTable th.sorting-asc::before {
+  background-image: url("/icons/denotive/sort--ascending.svg");
 }
 .fixed-table #sortTable th.sorting-desc::before {
-  color: #00598c;
+  background-image: url("/icons/denotive/sort--descending.svg");
 }
 .fixed-table__sticky-col {
   left: 0;
