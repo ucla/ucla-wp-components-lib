@@ -49,7 +49,7 @@
 
   &__description {
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 
@@ -241,7 +241,7 @@
     &__description {
       margin-bottom: 8px;
       font-size: variables.$ucla-font-size-default;
-      line-height: 24px;
+      line-height: 1.5;
       color: colors.$medium-grey5;
       max-height: 300px;
 

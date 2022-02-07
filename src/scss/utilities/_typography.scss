@@ -62,13 +62,13 @@ h5,
 h6,
 .h6 {
   font-size: variables.$ucla-font-size-xx-small;
-  line-height: 16px;
+  line-height: 16px; // 1.33
   font-weight: bold;
 }
 
 p {
   font-size: variables.$ucla-font-size-default;
-  line-height: 24px;
+  line-height: 1.5;
   color: colors.$grey-80;
   padding-bottom: 16px;
 

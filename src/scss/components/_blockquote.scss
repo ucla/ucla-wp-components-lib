@@ -11,7 +11,7 @@
 
     &__quote {
       font-size: variables.$ucla-font-size-default;
-      line-height: 24px;
+      line-height: 1.5;
       display: block;
       margin-bottom: 16px;
       color: colors.$medium-grey5;
@@ -19,7 +19,7 @@
 
     &__citation {
       font-size: variables.$ucla-font-size-default;
-      line-height: 24px;
+      line-height: 1.5;
       display: block;
       color: colors.$medium-grey4;
       max-width: 212px;
