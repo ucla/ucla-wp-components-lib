@@ -3,7 +3,7 @@
 
 .ucla-list--bulleted {
   list-style: none;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 28.5px;
 
   // First level list item
@@ -38,7 +38,7 @@
 .ucla-list--numbered {
   list-style: none;
   counter-reset: li;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 5px;
 
   // First level list item

@@ -126,7 +126,7 @@
 
     &-title {
       font-size: variables.$ucla-font-size-large;
-      line-height: 27px;
+      line-height: 1.125;
       margin: 8px 32px;
       outline: none;
       position: relative;
@@ -147,7 +147,7 @@
 
     &-source {
       font-size: variables.$ucla-font-size-default;
-      line-height: 20px;
+      line-height: 1.25;
       font-weight: bold;
       margin: 12px 0;
     }
