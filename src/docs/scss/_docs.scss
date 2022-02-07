@@ -8,7 +8,7 @@
 
 .Document-title {
   font-size: variables.$ucla-font-size-xxx-large;
-  line-height: 54px;
+  line-height: 1.125;
 }
 
 code {
@@ -68,42 +68,40 @@ code {
 
   h1 {
     font-size: variables.$ucla-font-size-display;
-    line-height: 40.5px;
+    line-height: 1.125;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: variables.$ucla-font-size-xxx-large;
-      line-height: 54px;
     }
   }
 
   h2 {
     font-size: variables.$ucla-font-size-x-large;
-    line-height: 32px;
+    line-height: 1.125;
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: variables.$ucla-font-size-display;
-      line-height: 40.5px;
     }
   }
 
   h3 {
     font-size: variables.$ucla-font-size-large;
-    line-height: 27px;
+    line-height: 1.125;
   }
 
   h4 {
     font-size: variables.$ucla-font-size-medium;
-    line-height: 22.5px;
+    line-height: 1.125;
   }
 
   h5 {
     font-size: variables.$ucla-font-size-default;
-    line-height: 20px;
+    line-height: 1.125;
   }
 
   h6 {
     font-size: variables.$ucla-font-size-small;
-    line-height: 16px;
+    line-height: 1.125;
   }
 }
 
