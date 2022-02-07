@@ -6378,80 +6378,69 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
-  font-weight: bold;
-  font-family: "Helvetica", "Arial", sans-serif;
   padding-bottom: 16px;
+  color: #333;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  line-height: 1.125;
 }
 
 h1,
 .h1 {
   font-size: 2.25rem;
-  line-height: 40.5px;
-  font-weight: bold;
 }
 @media (min-width: 768px) {
   h1,
 .h1 {
     font-size: 3rem;
-    line-height: 54px;
   }
 }
 
 h2,
 .h2 {
   font-size: 1.75rem;
-  line-height: 32px;
-  font-weight: bold;
 }
 @media (min-width: 768px) {
   h2,
 .h2 {
     font-size: 2.25rem;
-    line-height: 40.5px;
   }
 }
 
 h3,
 .h3 {
   font-size: 1.5rem;
-  line-height: 27px;
-  font-weight: bold;
 }
 
 h4,
 .h4 {
   font-size: 1.25rem;
-  line-height: 22.5px;
-  font-weight: bold;
 }
 
 h5,
 .h5 {
   font-size: 1rem;
-  line-height: 20px;
-  font-weight: bold;
+  line-height: 1.25;
 }
 
 h6,
 .h6 {
   font-size: 0.75rem;
-  line-height: 16px;
-  font-weight: bold;
+  line-height: 1.33;
 }
 
 p {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
-  padding-bottom: 16px;
+  margin-bottom: 1em;
 }
 p strong {
   font-weight: bold;
 }
 p small {
   font-size: 0.75rem;
-  line-height: 16px;
+  line-height: 1.33;
 }
 p em {
   font-style: italic;
@@ -6459,12 +6448,12 @@ p em {
 
 .lead {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.33;
 }
 
 .body-copy-small {
   font-size: 0.75rem;
-  line-height: 1.125rem;
+  line-height: 1.5;
   color: #333;
 }
 
@@ -6547,7 +6536,7 @@ p em {
   padding: 16px;
   border-width: 4px;
   border-style: solid;
-  line-height: 24px;
+  line-height: 1.5;
   /* Specific Alert Styles */
 }
 .alert img {
@@ -6587,7 +6576,7 @@ p em {
   text-align: left;
   color: #00598c;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: bold;
   position: relative;
   background: rgba(0, 0, 0, 0);
@@ -6670,7 +6659,7 @@ p em {
   background: #fff;
   padding: 12px 16px 8px;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.25;
   color: #00598c;
 }
 .load-more.btn:hover {
@@ -6699,14 +6688,14 @@ p em {
 }
 .blockquote-wrapper .blockquote__quote {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   display: block;
   margin-bottom: 16px;
   color: #333;
 }
 .blockquote-wrapper .blockquote__citation {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   display: block;
   color: #666;
   max-width: 212px;
@@ -7166,7 +7155,7 @@ p em {
 .basic-card-gray__title {
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 27px;
+  line-height: 1.125;
 }
 .basic-card__info-wrapper,
 .basic-card-grey__info-wrapper,
@@ -7177,7 +7166,7 @@ p em {
 .basic-card-grey__description,
 .basic-card-gray__description {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7271,7 +7260,7 @@ p em {
   margin: 24px 24px 0;
   font-size: 1.25rem;
   font-weight: bold;
-  line-height: 22.5px;
+  line-height: 1.125;
 }
 .event-card-icon__time {
   width: 16px;
@@ -7341,7 +7330,7 @@ p em {
 .event-card-info__description {
   margin-bottom: 8px;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7397,21 +7386,21 @@ p em {
 .person-card-grey__name {
   color: #00598c;
   font-size: 1.5rem;
-  line-height: 27px;
+  line-height: 1.125;
   margin-bottom: 8px;
 }
 .person-card__department,
 .person-card-grey__department {
   color: #666;
   font-size: 1.125rem;
-  line-height: 22.5px;
+  line-height: 1.125;
   margin-bottom: 12px;
 }
 .person-card__description,
 .person-card-grey__description {
   margin-bottom: 8px;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7545,7 +7534,7 @@ p em {
 }
 .story__secondary-card-title {
   font-size: 1.5rem;
-  line-height: 27px;
+  line-height: 1.125;
   margin: 8px 32px;
   outline: none;
   position: relative;
@@ -7557,13 +7546,13 @@ p em {
 }
 .story__secondary-card-blurb {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   margin-top: 0;
   margin-bottom: 24px;
 }
 .story__secondary-card-source {
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 1.25;
   font-weight: bold;
   margin: 12px 0;
 }
@@ -8016,7 +8005,7 @@ p em {
   display: block;
   width: 225px;
   font-size: 0.8rem;
-  line-height: 18px;
+  line-height: 1.33;
 }
 @media only screen and (min-width: 768px) {
   .global-foot__legal--copyright {
@@ -8050,7 +8039,6 @@ p em {
 }
 .global-foot__legal--list-item {
   list-style: none;
-  line-height: 32px;
 }
 .global-foot__legal--link {
   text-decoration: none;
@@ -8102,7 +8090,7 @@ p em {
 .email__heading {
   font-size: 1rem;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 1.25;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -8277,7 +8265,7 @@ p em {
 }
 .email__legal-text {
   font-size: 0.75rem;
-  line-height: 18px;
+  line-height: 1.5;
 }
 .email__legal-link {
   text-decoration: underline;
@@ -8306,7 +8294,7 @@ p em {
 .text__label {
   display: block;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -8317,7 +8305,7 @@ p em {
   background: #ebebeb;
   background-size: 24px;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
   border-radius: 2px;
@@ -8351,7 +8339,7 @@ p em {
 .select__label {
   display: block;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -8364,7 +8352,7 @@ p em {
   background: #ebebeb url("/icons/down--blue.svg") no-repeat 98.5% 50%;
   background-size: 24px;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
   border-radius: 2px;
@@ -8474,7 +8462,7 @@ p em {
 .fieldset__legend {
   font-size: 1.25rem;
   font-weight: bold;
-  line-height: 22.5px;
+  line-height: 1.125;
   color: #333;
   padding: 0 4px;
 }
@@ -8529,7 +8517,7 @@ p em {
   display: block;
 }
 .ucla .related-links li a {
-  line-height: 1.5rem;
+  line-height: 1.5;
   color: #00598c;
   text-decoration: none;
   display: block;
@@ -8584,7 +8572,7 @@ p em {
 
 .ucla-list--bulleted {
   list-style: none;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 28.5px;
 }
 .ucla-list--bulleted li {
@@ -8613,7 +8601,7 @@ li .ucla-list--bulleted li::before {
 .ucla-list--numbered {
   list-style: none;
   counter-reset: li;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 5px;
 }
 .ucla-list--numbered li {
@@ -8927,7 +8915,7 @@ li .ucla-list--bulleted li::before {
 .social-tile__text, .social-tile__info {
   color: #fff;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.33;
 }
 .social-tile__text {
   max-height: 152px;
@@ -9013,7 +9001,7 @@ TABLE OF CONTENTS:
 }
 .stat-wrapper .stat-tout__label {
   font-size: 1.25rem;
-  line-height: 24px;
+  line-height: 1.2;
   font-weight: bold;
   display: block;
   max-width: 212px;
@@ -9031,7 +9019,7 @@ TABLE OF CONTENTS:
   font-style: italic;
   color: #666;
   padding-top: 8px;
-  line-height: 16px;
+  line-height: 1.33;
 }
 @media (min-width: 1024px) {
   .stat-wrapper .stat-tout--inline {
@@ -9079,7 +9067,7 @@ TABLE OF CONTENTS:
 }
 .fixed-table__wrapper thead th {
   font-size: 0.75rem;
-  line-height: 0.75rem;
+  line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
   color: #333;
@@ -9119,7 +9107,7 @@ TABLE OF CONTENTS:
 }
 .fixed-table__wrapper tbody td {
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.33;
   color: #333;
   padding: 8px 16px;
   word-wrap: break-word;
@@ -9137,7 +9125,7 @@ TABLE OF CONTENTS:
 }
 .fixed-table__wrapper tfoot td {
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.33;
   color: #333;
   padding: 8px 16px;
   word-wrap: break-word;
@@ -9276,7 +9264,7 @@ TABLE OF CONTENTS:
 }
 .tabs .tabcontent p {
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
 }
 .tabs .tabcontent p a {
   text-decoration: underline;
@@ -9341,7 +9329,7 @@ TABLE OF CONTENTS:
   padding: 0;
   margin: 0;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.125;
   font-weight: bold;
   border-radius: 1px;
 }
@@ -9445,7 +9433,7 @@ TABLE OF CONTENTS:
 .site-name {
   font-weight: bold;
   font-size: 1.75rem;
-  line-height: 1.75rem;
+  line-height: 1;
   margin-bottom: 16px;
 }
 .site-name a {
@@ -9911,7 +9899,7 @@ TABLE OF CONTENTS:
   color: #00598c;
   font-weight: bold;
   font-size: 1rem;
-  line-height: 1.333rem;
+  line-height: 1.33;
   text-decoration: none;
   padding: 14px 24px;
   cursor: pointer;
@@ -10157,7 +10145,7 @@ TABLE OF CONTENTS:
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
-  line-height: 30px;
+  line-height: 1.25;
   font-weight: bold;
   padding-left: 32px;
   background: #2774ae;
