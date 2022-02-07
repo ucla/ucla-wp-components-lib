@@ -52,7 +52,7 @@
     padding: 0;
     margin: 0;
     font-size: variables.$ucla-font-size-default;
-    line-height: 1.25rem;
+    line-height: 1.125;
     font-weight: bold;
     border-radius: 1px;
 
@@ -178,7 +178,7 @@
 .site-name {
   font-weight: bold;
   font-size: variables.$ucla-font-size-x-large;
-  line-height: 1.75rem;
+  line-height: 1;
   margin-bottom: 16px;
 
   a {
@@ -705,7 +705,7 @@
     color: colors.$default-state;
     font-weight: bold;
     font-size: variables.$ucla-font-size-default;
-    line-height: 1.333rem;
+    line-height: 1.33;
     text-decoration: none;
     padding: 14px 24px;
     cursor: pointer;

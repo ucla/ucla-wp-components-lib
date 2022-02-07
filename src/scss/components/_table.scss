@@ -29,7 +29,7 @@
     thead {
       th {
         font-size: variables.$ucla-font-size-xx-small;
-        line-height: 0.75rem;
+        line-height: 1;
         font-weight: bold;
         text-transform: uppercase;
         color: colors.$medium-grey5;
@@ -82,7 +82,7 @@
 
       td {
         font-size: variables.$ucla-font-size-xx-small;
-        line-height: 1rem;
+        line-height: 1.33;
         color: colors.$grey-80;
         padding: 8px 16px;
         word-wrap: break-word;
@@ -108,7 +108,7 @@
 
       td {
         font-size: variables.$ucla-font-size-xx-small;
-        line-height: 1rem;
+        line-height: 1.33;
         color: colors.$medium-grey5;
         padding: 8px 16px;
         word-wrap: break-word;
