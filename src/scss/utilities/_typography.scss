@@ -18,12 +18,12 @@ h6 {
 h1,
 .h1 {
   font-size: variables.$ucla-font-size-xx-large;
-  line-height: 40.5px;
+  line-height: 1.125;
   font-weight: bold;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: variables.$ucla-font-size-xxx-large;
-    line-height: 54px;
+    //line-height: 54px; already declared
   }
 }
 
@@ -35,7 +35,7 @@ h2,
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: variables.$ucla-font-size-xx-large;
-    line-height: 40.5px;
+    line-height: 1.125;
   }
 }
 
