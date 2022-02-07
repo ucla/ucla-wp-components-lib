@@ -38,21 +38,21 @@
   &__name {
     color: colors.$default-state;
     font-size: variables.$ucla-font-size-large;
-    line-height: 27px;
+    line-height: 1.125;
     margin-bottom: 8px;
   }
 
   &__department {
     color: colors.$medium-grey4;
     font-size: variables.$ucla-font-size-medium-small;
-    line-height: 22.5px;
+    line-height: 1.125;
     margin-bottom: 12px;
   }
 
   &__description {
     margin-bottom: 8px;
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 

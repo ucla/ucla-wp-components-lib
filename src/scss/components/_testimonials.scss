@@ -116,7 +116,7 @@
         @media (min-width: breakpoint-min(lg)) {
           padding: 42px 0 24px;
           font-size: variables.$ucla-font-size-xx-large;
-          line-height: 40px;
+          line-height: 1.125;
         }
 
         &::before {

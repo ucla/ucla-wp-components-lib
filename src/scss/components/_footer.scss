@@ -269,7 +269,7 @@
       display: block;
       width: 225px;
       font-size: variables.$ucla-font-size-x-small;
-      line-height: 18px;
+      line-height: 1.33;
 
       @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
         width: 100%;
@@ -300,7 +300,6 @@
 
       &-item {
         list-style: none;
-        line-height: 32px;
       }
     }
 
@@ -379,7 +378,7 @@
   &__heading {
     font-size: variables.$ucla-font-size-default;
     font-weight: bold;
-    line-height: 20px;
+    line-height: 1.25;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
@@ -563,7 +562,7 @@
 
   &__legal-text {
     font-size: variables.$ucla-font-size-xx-small;
-    line-height: 18px;
+    line-height: 1.5;
   }
 
   &__legal-link {
