@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .tile {
   display: inline-block;
@@ -17,8 +18,8 @@
     z-index: 1;
     color: colors.$white;
     text-decoration: none;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: variables.$ucla-font-size-large;
+    line-height: 1.25;
     font-weight: bold;
     padding-left: 32px;
     background: colors.$ucla-blue;

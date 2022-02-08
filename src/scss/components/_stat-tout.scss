@@ -1,5 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 /*************************************
 ************************************
@@ -41,7 +42,7 @@ TABLE OF CONTENTS:
     // "Value text" appears on the left of a stat tout
     // e.g. #9, $1 billion, 45%
     &__number {
-      font-size: 54px;
+      font-size: variables.$ucla-font-size-display;
       line-height: 48px;
       color: colors.$medium-grey5;
       font-weight: bold;
@@ -51,7 +52,7 @@ TABLE OF CONTENTS:
       // Target spans wrapping "out of"
       // For multiple variable stat touts
       & > span {
-        font-size: 18px;
+        font-size: variables.$ucla-font-size-medium-small;
         vertical-align: middle;
         margin: 0 -5px;
       }
@@ -60,8 +61,8 @@ TABLE OF CONTENTS:
     // "Descriptor text" appears on the right of a stat tout
     // This gives context to value text, or stand-alone as a word-only factoid
     &__label {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: variables.$ucla-font-size-medium;
+      line-height: 1.2;
       font-weight: bold;
       display: block;
       max-width: 212px;
@@ -76,12 +77,12 @@ TABLE OF CONTENTS:
     // e.g. Forbes (2019), U.S. News & World Report (2018)
     &__source {
       display: block;
-      font-size: 12.8px;
+      font-size: variables.$ucla-font-size-xx-small;
       font-weight: bold;
       font-style: italic;
       color: colors.$grey-60;
       padding-top: 8px;
-      line-height: 16px;
+      line-height: 1.33;
     }
 
     /************

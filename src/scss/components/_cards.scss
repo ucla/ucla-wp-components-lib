@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 // ~Styles for Cards~ //
 // 1) Basic Cards
@@ -37,9 +38,9 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: variables.$ucla-font-size-large;
     font-weight: bold;
-    line-height: 27px;
+    line-height: 1.125;
   }
 
   &__info-wrapper {
@@ -47,8 +48,8 @@
   }
 
   &__description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 
@@ -152,9 +153,9 @@
   &__title {
     color: colors.$default-state;
     margin: 24px 24px 0;
-    font-size: 20px;
+    font-size: variables.$ucla-font-size-medium;
     font-weight: bold;
-    line-height: 22.5px;
+    line-height: 1.125;
   }
 
   &-icon {
@@ -206,7 +207,7 @@
     &__day,
     &__month {
       display: block;
-      font-size: 0.75rem;
+      font-size: variables.$ucla-font-size-xx-small;
       text-transform: uppercase;
     }
 
@@ -216,7 +217,7 @@
 
     &__number {
       display: inline-block;
-      font-size: 2.25rem;
+      font-size: variables.$ucla-font-size-xx-large;
     }
 
     &__time,
@@ -224,7 +225,7 @@
     &__play {
       display: inline-flex;
       margin-bottom: 8px;
-      font-size: 12.8px;
+      font-size: variables.$ucla-font-size-xx-small;
       font-weight: bold;
       color: colors.$medium-grey4;
 
@@ -239,8 +240,8 @@
 
     &__description {
       margin-bottom: 8px;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: variables.$ucla-font-size-default;
+      line-height: 1.5;
       color: colors.$medium-grey5;
       max-height: 300px;
 

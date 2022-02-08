@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .fixed-table {
   position: relative;
@@ -27,8 +28,8 @@
 
     thead {
       th {
-        font-size: 0.75rem;
-        line-height: 0.75rem;
+        font-size: variables.$ucla-font-size-xx-small;
+        line-height: 1;
         font-weight: bold;
         text-transform: uppercase;
         color: colors.$medium-grey5;
@@ -80,8 +81,8 @@
       }
 
       td {
-        font-size: 0.8rem;
-        line-height: 1rem;
+        font-size: variables.$ucla-font-size-xx-small;
+        line-height: 1.33;
         color: colors.$grey-80;
         padding: 8px 16px;
         word-wrap: break-word;
@@ -106,8 +107,8 @@
       }
 
       td {
-        font-size: 0.8rem;
-        line-height: 1rem;
+        font-size: variables.$ucla-font-size-xx-small;
+        line-height: 1.33;
         color: colors.$medium-grey5;
         padding: 8px 16px;
         word-wrap: break-word;
@@ -134,34 +135,30 @@
       cursor: pointer;
       padding-left: 32px;
 
-      &::before,
-      &::after {
-        content: "\25E4";
-        font-size: 6px;
+      &::before {
         color: colors.$medium-grey5;
         display: block;
         position: absolute;
-        left: 18px;
-        top: 12px;
-        width: 6px;
-        height: 9px;
-
-        @include helper.transform ( rotate(45deg) );
-      }
-
-      &::after {
-        left: 16px;
-        top: 16px;
-
-        @include helper.transform ( rotate(225deg) );
+        background-repeat: no-repeat;
+        background-size: 25px 30px;
+        left: 9px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        background-image: url('/icons/denotive/sort--default.svg');
+        content: '';
       }
 
       &.sorting-asc {
-        &::after { color: colors.$default-state; }
+        &::before {
+          background-image: url('/icons/denotive/sort--ascending.svg');
+        }
       }
 
       &.sorting-desc {
-        &::before { color: colors.$default-state; }
+        &::before {
+          background-image: url('/icons/denotive/sort--descending.svg');
+        }
       }
     }
   }

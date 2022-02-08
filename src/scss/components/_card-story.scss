@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .story {
   margin-bottom: 0;
@@ -60,7 +61,7 @@
     }
 
     &-title {
-      font-size: 2.25rem;
+      font-size: variables.$ucla-font-size-xx-large;
       line-height: 1.125;
       margin-bottom: 16px;
 
@@ -118,14 +119,14 @@
     }
 
     &-date {
-      font-size: 14px;
+      font-size: variables.$ucla-font-size-small;
       font-weight: bold;
       padding: 32px 32px 0;
     }
 
     &-title {
-      font-size: 24px;
-      line-height: 27px;
+      font-size: variables.$ucla-font-size-large;
+      line-height: 1.125;
       margin: 8px 32px;
       outline: none;
       position: relative;
@@ -138,15 +139,15 @@
     }
 
     &-blurb {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: variables.$ucla-font-size-default;
+      line-height: 1.5;
       margin-top: 0;
       margin-bottom: 24px;
     }
 
     &-source {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: variables.$ucla-font-size-default;
+      line-height: 1.25;
       font-weight: bold;
       margin: 12px 0;
     }

@@ -9,77 +9,66 @@ h3,
 h4,
 h5,
 h6 {
-  color: colors.$grey-80;
-  font-weight: bold;
-  font-family: variables.$font;
   padding-bottom: 16px;
+  color: colors.$grey-80;
+  font-family: variables.$font;
+  font-weight: bold;
+  line-height: 1.125;
 }
 
 h1,
 .h1 {
-  font-size: 36px;
-  line-height: 40.5px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-xx-large;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
-    font-size: 48px;
-    line-height: 54px;
+    font-size: variables.$ucla-font-size-xxx-large;
   }
 }
 
 h2,
 .h2 {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-x-large;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
-    font-size: 36px;
-    line-height: 40.5px;
+    font-size: variables.$ucla-font-size-xx-large;
   }
 }
 
 h3,
 .h3 {
-  font-size: 24px;
-  line-height: 27px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-large;
 }
 
 h4,
 .h4 {
-  font-size: 20px;
-  line-height: 22.5px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-medium;
 }
 
 h5,
 .h5 {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-default;
+  line-height: 1.25;
 }
 
 h6,
 .h6 {
-  font-size: 12.8px;
-  line-height: 16px;
-  font-weight: bold;
+  font-size: variables.$ucla-font-size-xx-small;
+  line-height: 1.33;
 }
 
 p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: variables.$ucla-font-size-default;
+  line-height: 1.5;
   color: colors.$grey-80;
-  padding-bottom: 16px;
+  margin-bottom: 1em;
 
   strong {
-    font-size: bold;
+    font-weight: bold;
   }
 
   small {
-    font-size: 12.8px;
-    line-height: 16px;
+    font-size: variables.$ucla-font-size-xx-small;
+    line-height: 1.33;
   }
 
   em {
@@ -88,13 +77,13 @@ p {
 }
 
 .lead {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: variables.$ucla-font-size-large;
+  line-height: 1.33;
 }
 
 .body-copy-small {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: variables.$ucla-font-size-xx-small;
+  line-height: 1.5;
   color: #333;
 }
 

@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 /* ------------------------------------
     Header
@@ -50,8 +51,8 @@
     display: inline-block;
     padding: 0;
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.125;
     font-weight: bold;
     border-radius: 1px;
 
@@ -176,8 +177,8 @@
 
 .site-name {
   font-weight: bold;
-  font-size: 1.75rem;
-  line-height: 1.75rem;
+  font-size: variables.$ucla-font-size-x-large;
+  line-height: 1;
   margin-bottom: 16px;
 
   a {
@@ -329,7 +330,7 @@
 
   &__link {
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: variables.$ucla-font-size-small;
     line-height: 1.286;
     font-weight: bold;
     color: colors.$default-state;
@@ -703,15 +704,15 @@
   a {
     color: colors.$default-state;
     font-weight: bold;
-    font-size: 1rem;
-    line-height: 1.333rem;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.33;
     text-decoration: none;
     padding: 14px 24px;
     cursor: pointer;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       padding: 8px 16px 16px;
-      font-size: 1.125rem;
+      font-size: variables.$ucla-font-size-medium-small;
     }
   }
 

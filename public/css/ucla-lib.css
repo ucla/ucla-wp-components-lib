@@ -702,6 +702,7 @@ textarea {
  * These are used to customize the grid layout
  * Feel free to overwrite them as necessary
  */
+/* Spacing */
 /* this is all from Bootstrap */
 .m-0 {
   margin: 0 !important;
@@ -6377,80 +6378,69 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
-  font-weight: bold;
-  font-family: "Helvetica", "Arial", sans-serif;
   padding-bottom: 16px;
+  color: #333;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  line-height: 1.125;
 }
 
 h1,
 .h1 {
-  font-size: 36px;
-  line-height: 40.5px;
-  font-weight: bold;
+  font-size: 2.25rem;
 }
 @media (min-width: 768px) {
   h1,
 .h1 {
-    font-size: 48px;
-    line-height: 54px;
+    font-size: 3rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: bold;
+  font-size: 1.75rem;
 }
 @media (min-width: 768px) {
   h2,
 .h2 {
-    font-size: 36px;
-    line-height: 40.5px;
+    font-size: 2.25rem;
   }
 }
 
 h3,
 .h3 {
-  font-size: 24px;
-  line-height: 27px;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 h4,
 .h4 {
-  font-size: 20px;
-  line-height: 22.5px;
-  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 h5,
 .h5 {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 h6,
 .h6 {
-  font-size: 12.8px;
-  line-height: 16px;
-  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.33;
 }
 
 p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
-  padding-bottom: 16px;
+  margin-bottom: 1em;
 }
 p strong {
-  font-size: bold;
+  font-weight: bold;
 }
 p small {
-  font-size: 12.8px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1.33;
 }
 p em {
   font-style: italic;
@@ -6458,12 +6448,12 @@ p em {
 
 .lead {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.33;
 }
 
 .body-copy-small {
   font-size: 0.75rem;
-  line-height: 1.125rem;
+  line-height: 1.5;
   color: #333;
 }
 
@@ -6546,7 +6536,7 @@ p em {
   padding: 16px;
   border-width: 4px;
   border-style: solid;
-  line-height: 24px;
+  line-height: 1.5;
   /* Specific Alert Styles */
 }
 .alert img {
@@ -6586,7 +6576,7 @@ p em {
   text-align: left;
   color: #00598c;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: bold;
   position: relative;
   background: rgba(0, 0, 0, 0);
@@ -6636,7 +6626,7 @@ p em {
 }
 @media (min-width: 768px) {
   .accordion__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 22px 64px 18px 16px;
   }
   .accordion__title::after {
@@ -6669,7 +6659,7 @@ p em {
   background: #fff;
   padding: 12px 16px 8px;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.25;
   color: #00598c;
 }
 .load-more.btn:hover {
@@ -6697,15 +6687,15 @@ p em {
   margin: 24px 24px 0;
 }
 .blockquote-wrapper .blockquote__quote {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   display: block;
   margin-bottom: 16px;
   color: #333;
 }
 .blockquote-wrapper .blockquote__citation {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   display: block;
   color: #666;
   max-width: 212px;
@@ -6741,7 +6731,7 @@ p em {
 
 .btn {
   padding: 12px 16px 8px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 2px;
   border: 2px solid transparent;
@@ -7163,9 +7153,9 @@ p em {
 .basic-card__title,
 .basic-card-grey__title,
 .basic-card-gray__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 27px;
+  line-height: 1.125;
 }
 .basic-card__info-wrapper,
 .basic-card-grey__info-wrapper,
@@ -7175,8 +7165,8 @@ p em {
 .basic-card__description,
 .basic-card-grey__description,
 .basic-card-gray__description {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7268,9 +7258,9 @@ p em {
 .event-card__title {
   color: #00598c;
   margin: 24px 24px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  line-height: 22.5px;
+  line-height: 1.125;
 }
 .event-card-icon__time {
   width: 16px;
@@ -7326,7 +7316,7 @@ p em {
 .event-card-info__time, .event-card-info__location, .event-card-info__play {
   display: inline-flex;
   margin-bottom: 8px;
-  font-size: 12.8px;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #666;
 }
@@ -7339,8 +7329,8 @@ p em {
 }
 .event-card-info__description {
   margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7395,22 +7385,22 @@ p em {
 .person-card__name,
 .person-card-grey__name {
   color: #00598c;
-  font-size: 24px;
-  line-height: 27px;
+  font-size: 1.5rem;
+  line-height: 1.125;
   margin-bottom: 8px;
 }
 .person-card__department,
 .person-card-grey__department {
   color: #666;
-  font-size: 18px;
-  line-height: 22.5px;
+  font-size: 1.125rem;
+  line-height: 1.125;
   margin-bottom: 12px;
 }
 .person-card__description,
 .person-card-grey__description {
   margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
   max-height: 300px;
 }
@@ -7538,13 +7528,13 @@ p em {
   margin-bottom: 0;
 }
 .story__secondary-card-date {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 32px 32px 0;
 }
 .story__secondary-card-title {
-  font-size: 24px;
-  line-height: 27px;
+  font-size: 1.5rem;
+  line-height: 1.125;
   margin: 8px 32px;
   outline: none;
   position: relative;
@@ -7555,14 +7545,14 @@ p em {
   padding: 0 32px;
 }
 .story__secondary-card-blurb {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   margin-top: 0;
   margin-bottom: 24px;
 }
 .story__secondary-card-source {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25;
   font-weight: bold;
   margin: 12px 0;
 }
@@ -7764,7 +7754,7 @@ p em {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 0.625rem;
   padding: 3px;
 }
 .splide__play:hover, .splide__pause:hover {
@@ -7906,7 +7896,7 @@ p em {
 }
 .footer__dept--contact p {
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .footer__dept--contact a {
   color: #fff;
@@ -8009,13 +7999,13 @@ p em {
 .global-foot__legal {
   display: block;
   width: 100%;
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 .global-foot__legal--copyright {
   display: block;
   width: 225px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8rem;
+  line-height: 1.33;
 }
 @media only screen and (min-width: 768px) {
   .global-foot__legal--copyright {
@@ -8049,7 +8039,6 @@ p em {
 }
 .global-foot__legal--list-item {
   list-style: none;
-  line-height: 32px;
 }
 .global-foot__legal--link {
   text-decoration: none;
@@ -8099,9 +8088,9 @@ p em {
   color: #fff;
 }
 .email__heading {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 1.25;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -8275,8 +8264,8 @@ p em {
   }
 }
 .email__legal-text {
-  font-size: 0.8rem;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 .email__legal-link {
   text-decoration: underline;
@@ -8304,8 +8293,8 @@ p em {
 }
 .text__label {
   display: block;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -8315,8 +8304,8 @@ p em {
   appearance: none;
   background: #ebebeb;
   background-size: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
   border-radius: 2px;
@@ -8349,8 +8338,8 @@ p em {
 
 .select__label {
   display: block;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -8362,8 +8351,8 @@ p em {
   appearance: none;
   background: #ebebeb url("/icons/down--blue.svg") no-repeat 98.5% 50%;
   background-size: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   padding: 8px 24px 8px 16px;
   border: 1px solid #808080;
   border-radius: 2px;
@@ -8471,9 +8460,9 @@ p em {
   padding: 32px;
 }
 .fieldset__legend {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  line-height: 22.5px;
+  line-height: 1.125;
   color: #333;
   padding: 0 4px;
 }
@@ -8528,7 +8517,7 @@ p em {
   display: block;
 }
 .ucla .related-links li a {
-  line-height: 1.5rem;
+  line-height: 1.5;
   color: #00598c;
   text-decoration: none;
   display: block;
@@ -8583,7 +8572,7 @@ p em {
 
 .ucla-list--bulleted {
   list-style: none;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 28.5px;
 }
 .ucla-list--bulleted li {
@@ -8597,7 +8586,7 @@ p em {
   padding-right: 13px;
 }
 li .ucla-list--bulleted li::before {
-  content: "□";
+  content: "▫";
 }
 .ucla-list--bulleted li .ucla-list--bulleted,
 .ucla-list--bulleted li .ucla-list--numbered {
@@ -8608,15 +8597,11 @@ li .ucla-list--bulleted li::before {
 .ucla-list--bulleted li .ucla-list--numbered li {
   padding-left: 0;
 }
-.ucla-list--bulleted li .ucla-list--bulleted li::before,
-.ucla-list--bulleted li .ucla-list--numbered li::before {
-  font-size: 9px;
-}
 
 .ucla-list--numbered {
   list-style: none;
   counter-reset: li;
-  line-height: 24px;
+  line-height: 1.5;
   padding-left: 5px;
 }
 .ucla-list--numbered li {
@@ -8929,8 +8914,8 @@ li .ucla-list--bulleted li::before {
 }
 .social-tile__text, .social-tile__info {
   color: #fff;
-  font-size: 0.8rem;
-  line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.33;
 }
 .social-tile__text {
   max-height: 152px;
@@ -9002,7 +8987,7 @@ TABLE OF CONTENTS:
   }
 }
 .stat-wrapper .stat-tout__number {
-  font-size: 54px;
+  font-size: 3.375rem;
   line-height: 48px;
   color: #333;
   font-weight: bold;
@@ -9010,13 +8995,13 @@ TABLE OF CONTENTS:
   margin-bottom: 8px;
 }
 .stat-wrapper .stat-tout__number > span {
-  font-size: 18px;
+  font-size: 1.125rem;
   vertical-align: middle;
   margin: 0 -5px;
 }
 .stat-wrapper .stat-tout__label {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.2;
   font-weight: bold;
   display: block;
   max-width: 212px;
@@ -9029,12 +9014,12 @@ TABLE OF CONTENTS:
 }
 .stat-wrapper .stat-tout__source {
   display: block;
-  font-size: 12.8px;
+  font-size: 0.75rem;
   font-weight: bold;
   font-style: italic;
   color: #666;
   padding-top: 8px;
-  line-height: 16px;
+  line-height: 1.33;
 }
 @media (min-width: 1024px) {
   .stat-wrapper .stat-tout--inline {
@@ -9082,7 +9067,7 @@ TABLE OF CONTENTS:
 }
 .fixed-table__wrapper thead th {
   font-size: 0.75rem;
-  line-height: 0.75rem;
+  line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
   color: #333;
@@ -9121,8 +9106,8 @@ TABLE OF CONTENTS:
   border: none;
 }
 .fixed-table__wrapper tbody td {
-  font-size: 0.8rem;
-  line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.33;
   color: #333;
   padding: 8px 16px;
   word-wrap: break-word;
@@ -9139,8 +9124,8 @@ TABLE OF CONTENTS:
   border: none;
 }
 .fixed-table__wrapper tfoot td {
-  font-size: 0.8rem;
-  line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.33;
   color: #333;
   padding: 8px 16px;
   word-wrap: break-word;
@@ -9163,36 +9148,24 @@ TABLE OF CONTENTS:
   cursor: pointer;
   padding-left: 32px;
 }
-.fixed-table #sortTable th::before, .fixed-table #sortTable th::after {
-  content: "◤";
-  font-size: 6px;
+.fixed-table #sortTable th::before {
   color: #333;
   display: block;
   position: absolute;
-  left: 18px;
-  top: 12px;
-  width: 6px;
-  height: 9px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  background-repeat: no-repeat;
+  background-size: 25px 30px;
+  left: 9px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/icons/denotive/sort--default.svg");
+  content: "";
 }
-.fixed-table #sortTable th::after {
-  left: 16px;
-  top: 16px;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-.fixed-table #sortTable th.sorting-asc::after {
-  color: #00598c;
+.fixed-table #sortTable th.sorting-asc::before {
+  background-image: url("/icons/denotive/sort--ascending.svg");
 }
 .fixed-table #sortTable th.sorting-desc::before {
-  color: #00598c;
+  background-image: url("/icons/denotive/sort--descending.svg");
 }
 .fixed-table__sticky-col {
   left: 0;
@@ -9290,8 +9263,8 @@ TABLE OF CONTENTS:
   outline-offset: -2px;
 }
 .tabs .tabcontent p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .tabs .tabcontent p a {
   text-decoration: underline;
@@ -9356,7 +9329,7 @@ TABLE OF CONTENTS:
   padding: 0;
   margin: 0;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.125;
   font-weight: bold;
   border-radius: 1px;
 }
@@ -9460,7 +9433,7 @@ TABLE OF CONTENTS:
 .site-name {
   font-weight: bold;
   font-size: 1.75rem;
-  line-height: 1.75rem;
+  line-height: 1;
   margin-bottom: 16px;
 }
 .site-name a {
@@ -9926,7 +9899,7 @@ TABLE OF CONTENTS:
   color: #00598c;
   font-weight: bold;
   font-size: 1rem;
-  line-height: 1.333rem;
+  line-height: 1.33;
   text-decoration: none;
   padding: 14px 24px;
   cursor: pointer;
@@ -10171,8 +10144,8 @@ TABLE OF CONTENTS:
   z-index: 1;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.25;
   font-weight: bold;
   padding-left: 32px;
   background: #2774ae;
