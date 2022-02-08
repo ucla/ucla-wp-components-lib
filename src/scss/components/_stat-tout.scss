@@ -62,7 +62,7 @@ TABLE OF CONTENTS:
     // This gives context to value text, or stand-alone as a word-only factoid
     &__label {
       font-size: variables.$ucla-font-size-medium;
-      line-height: 24px;
+      line-height: 1.2;
       font-weight: bold;
       display: block;
       max-width: 212px;
@@ -82,7 +82,7 @@ TABLE OF CONTENTS:
       font-style: italic;
       color: colors.$grey-60;
       padding-top: 8px;
-      line-height: 16px;
+      line-height: 1.33;
     }
 
     /************

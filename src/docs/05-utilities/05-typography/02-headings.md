@@ -18,39 +18,39 @@ These are heading styles. The UCLA title headings are Helvetica with bold font-s
 {{view '@typography--h1'}}
 ```
 <!--
-Desktop: font-size: 48px; line-height: 54px;
-Mobile: font-size: 36px; line-height: 40.5px; -->
+Desktop: font-size: 2.25rem; line-height: 1.125;
+Mobile: font-size: 1.75rem; line-height: 1.125; -->
 {{view '@typography--h1'}}
 ```
 
 {{view '@typography--h2'}}
 ```
 <!--
-Desktop: font-size: 36px; line-height: 40.5px;
-Mobile: font-size: 28px; line-height: 32px; -->
+Desktop: font-size: 1.75rem; line-height: 1.125px;
+Mobile: font-size: 1.75rem; line-height: 1.125; -->
 {{view '@typography--h2'}}
 ```
 
 {{view '@typography--h3'}}
 ```
-<!-- Desktop & Mobile: font-size: 24px; line-height: 27px; -->
+<!-- Desktop & Mobile: font-size: 1.5rem; line-height: 1.125; -->
 {{view '@typography--h3'}}
 ```
 
 {{view '@typography--h4'}}
 ```
-<!-- Desktop & Mobile: font-size: 20px; line-height: 22.5px; -->
+<!-- Desktop & Mobile: font-size: 1.25rem; line-height: 1.125; -->
 {{view '@typography--h4'}}
 ```
 
 {{view '@typography--h5'}}
 ```
-<!-- Desktop & Mobile: font-size: 16px; line-height: 20px; -->
+<!-- Desktop & Mobile: font-size: 1rem; line-height: 1.125; -->
 {{view '@typography--h5'}}
 ```
 
 {{view '@typography--h6'}}
 ```
-<!-- Desktop & Mobile: font-size: 12.8px; line-height: 16px; -->
+<!-- Desktop & Mobile: font-size: 0.8rem; line-height: 1.125; -->
 {{view '@typography--h6'}}
 ```

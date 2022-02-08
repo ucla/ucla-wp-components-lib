@@ -21,7 +21,7 @@
   &__label {
     display: block;
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -33,7 +33,7 @@
     background: colors.$lightest-grey-2;
     background-size: 24px;
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
@@ -79,7 +79,7 @@
   &__label {
     display: block;
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -94,7 +94,7 @@
     background: colors.$lightest-grey-2 url("/icons/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
@@ -233,7 +233,7 @@
   &__legend {
     font-size: variables.$ucla-font-size-medium;
     font-weight: bold;
-    line-height: 22.5px;
+    line-height: 1.125;
     color: colors.$medium-grey5;
     padding: 0 4px;
   }

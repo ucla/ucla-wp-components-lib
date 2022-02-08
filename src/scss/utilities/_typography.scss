@@ -9,69 +9,58 @@ h3,
 h4,
 h5,
 h6 {
-  color: colors.$grey-80;
-  font-weight: bold;
-  font-family: variables.$font;
   padding-bottom: 16px;
+  color: colors.$grey-80;
+  font-family: variables.$font;
+  font-weight: bold;
+  line-height: 1.125;
 }
 
 h1,
 .h1 {
   font-size: variables.$ucla-font-size-xx-large;
-  line-height: 40.5px;
-  font-weight: bold;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: variables.$ucla-font-size-xxx-large;
-    line-height: 54px;
   }
 }
 
 h2,
 .h2 {
   font-size: variables.$ucla-font-size-x-large;
-  line-height: 32px;
-  font-weight: bold;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
     font-size: variables.$ucla-font-size-xx-large;
-    line-height: 40.5px;
   }
 }
 
 h3,
 .h3 {
   font-size: variables.$ucla-font-size-large;
-  line-height: 27px;
-  font-weight: bold;
 }
 
 h4,
 .h4 {
   font-size: variables.$ucla-font-size-medium;
-  line-height: 22.5px;
-  font-weight: bold;
 }
 
 h5,
 .h5 {
   font-size: variables.$ucla-font-size-default;
-  line-height: 20px;
-  font-weight: bold;
+  line-height: 1.25;
 }
 
 h6,
 .h6 {
   font-size: variables.$ucla-font-size-xx-small;
-  line-height: 16px;
-  font-weight: bold;
+  line-height: 1.33;
 }
 
 p {
   font-size: variables.$ucla-font-size-default;
-  line-height: 24px;
+  line-height: 1.5;
   color: colors.$grey-80;
-  padding-bottom: 16px;
+  margin-bottom: 1em;
 
   strong {
     font-weight: bold;
@@ -79,7 +68,7 @@ p {
 
   small {
     font-size: variables.$ucla-font-size-xx-small;
-    line-height: 16px;
+    line-height: 1.33;
   }
 
   em {
@@ -89,12 +78,12 @@ p {
 
 .lead {
   font-size: variables.$ucla-font-size-large;
-  line-height: 2rem;
+  line-height: 1.33;
 }
 
 .body-copy-small {
   font-size: variables.$ucla-font-size-xx-small;
-  line-height: 1.125rem;
+  line-height: 1.5;
   color: #333;
 }
 

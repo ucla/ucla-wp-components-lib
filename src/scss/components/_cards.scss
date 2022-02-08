@@ -40,7 +40,7 @@
   &__title {
     font-size: variables.$ucla-font-size-large;
     font-weight: bold;
-    line-height: 27px;
+    line-height: 1.125;
   }
 
   &__info-wrapper {
@@ -49,7 +49,7 @@
 
   &__description {
     font-size: variables.$ucla-font-size-default;
-    line-height: 24px;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 
@@ -155,7 +155,7 @@
     margin: 24px 24px 0;
     font-size: variables.$ucla-font-size-medium;
     font-weight: bold;
-    line-height: 22.5px;
+    line-height: 1.125;
   }
 
   &-icon {
@@ -241,7 +241,7 @@
     &__description {
       margin-bottom: 8px;
       font-size: variables.$ucla-font-size-default;
-      line-height: 24px;
+      line-height: 1.5;
       color: colors.$medium-grey5;
       max-height: 300px;
 
