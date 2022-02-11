@@ -10,8 +10,8 @@
     "url": "https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.5.11",
-    "@frctl/mandelbrot": "^1.9.4",
+    "@frctl/fractal": "^1.5.13",
+    "@frctl/mandelbrot": "^1.10.1",
     "fractal-status-helper": "^1.0.0"
   },
   "devDependencies": {
@@ -25,12 +25,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-minify": "^3.1.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-zip": "^5.1.0",
-    "sass": "^1.49.0",
+    "sass": "^1.49.7",
     "semantic-release": "^18.0.1",
-    "stylelint": "^14.1.0",
+    "stylelint": "^14.5.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "svgo": "^2.8.0"
