@@ -746,7 +746,7 @@
           display: inline-block;
           width: 91%;
           margin: 0;
-          border: 1px solid #333;
+          border: 1px solid colors.$grey-80;
         }
 
         input {
@@ -780,7 +780,7 @@
           padding: 12px !important;
           appearance: none;
           background: #00598c;
-          color: #fff;
+          color: colors.$white;
           border: 0;
           border-radius: 0 2px 2px 0;
           margin-left: -5px;
@@ -829,7 +829,7 @@
         display: block;
         height: 44px;
         width: 56px;
-        background: #fff;
+        background: colors.$white;
         appearance: none;
         border: 0;
 
@@ -850,7 +850,7 @@
     .nav-primary__search-block-form {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: none;
-        background: #fff;
+        background: colors.$white;
         padding: 17px 32px 15px;
         border: 1px solid #ccc;
 
