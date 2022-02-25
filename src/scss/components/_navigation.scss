@@ -383,6 +383,7 @@
     li {
       list-style: none;
       background: colors.$white;
+      padding-right: 2px;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         background: none;
@@ -412,7 +413,7 @@
         min-width: inherit;
         flex-basis: auto;
         align-self: flex-end;
-        border: 1px solid none;
+        border: 1px solid transparent;
         border-bottom: 0;
 
         &:hover {
@@ -587,7 +588,7 @@
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       position: absolute;
       width: 20rem;
-      top: 44px;
+      //top: 44px;
     }
 
     &--open {
@@ -746,7 +747,7 @@
           display: inline-block;
           width: 91%;
           margin: 0;
-          border: 1px solid #333;
+          border: 1px solid colors.$grey-80;
         }
 
         input {
@@ -780,7 +781,7 @@
           padding: 12px !important;
           appearance: none;
           background: #00598c;
-          color: #fff;
+          color: colors.$white;
           border: 0;
           border-radius: 0 2px 2px 0;
           margin-left: -5px;
@@ -802,10 +803,10 @@
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: inline-block;
-      height: 44px;
+      // height: 44px;
       width: 56px;
       position: relative;
-      top: -1px;
+      // top: -5px;
     }
 
     .nav-primary__search-desktop-button {
@@ -827,9 +828,10 @@
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: block;
-        height: 44px;
+        // height: 44px;
         width: 56px;
-        background: #fff;
+        padding: 13px 16px 16px;
+        background: transparent;
         appearance: none;
         border: 0;
 
@@ -850,7 +852,7 @@
     .nav-primary__search-block-form {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: none;
-        background: #fff;
+        background: colors.$white;
         padding: 17px 32px 15px;
         border: 1px solid #ccc;
 

@@ -3,17 +3,24 @@
 @use "colors";
 @use "variables";
 
+body {
+  color: colors.$grey-80;
+  font-family: variables.$font;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  padding-bottom: 16px;
-  color: colors.$grey-80;
-  font-family: variables.$font;
+  //color: colors.$grey-80; // declared on body
+  //font-family: variables.$font;
   font-weight: bold;
   line-height: 1.125;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -57,26 +64,21 @@ h6,
 }
 
 p {
+  //color: colors.$grey-80; // declared on body
   font-size: variables.$ucla-font-size-default;
   line-height: 1.5;
-  color: colors.$grey-80;
   margin-bottom: 1em;
 
-  strong {
-    font-weight: bold;
-  }
-
-  small {
-    font-size: variables.$ucla-font-size-xx-small;
-    line-height: 1.33;
-  }
-
-  em {
-    font-style: italic;
-  }
+  // small should be 80% and is declared globally in normalize.scss
+  // small {
+  //   font-size: variables.$ucla-font-size-xx-small;
+  //   line-height: 1.33;
+  // }
 }
 
-.lead {
+// add typographical name of lead and lede
+.lead,
+.lede {
   font-size: variables.$ucla-font-size-large;
   line-height: 1.33;
 }
@@ -84,7 +86,7 @@ p {
 .body-copy-small {
   font-size: variables.$ucla-font-size-xx-small;
   line-height: 1.5;
-  color: #333;
+  color: colors.$grey-80;
 }
 
 .right-align {
@@ -112,8 +114,40 @@ p {
 
   @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
 
-  > div,
-  > aside {
+  >div,
+  >aside {
     @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
   }
+}
+
+// moved from grid.scss here b/c this isn't grid related
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9; //what is this in colors.scss
+  color: colors.$black;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9; //what is this in colors.scss
+  color: colors.$black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+
+input,
+select {
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
 }
