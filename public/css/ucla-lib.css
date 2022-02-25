@@ -6,11 +6,33 @@
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+/* force inline block styling */
+.inline-block {
+  display: inline-block !important;
+}
+
+/*
+ * Align right
+ */
+.align-right {
+  text-align: right;
+}
+
+/*
+ * Justify (use with flex elements)
+ */
+.justify-left {
+  justify-content: left;
+}
+
+.justify-right {
+  justify-content: right;
+}
+
 /*
  * Hide visually and from screen readers
  */
-.hidden,
-[hidden] {
+.hidden {
   display: none !important;
 }
 
@@ -22,24 +44,27 @@
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
+.visuallyhidden,
 .sr-only {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
 /*
- * Extends the .sr-only class to allow the element
+ * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus,
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -47,8 +72,8 @@
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
   width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -56,6 +81,10 @@
  */
 .invisible {
   visibility: hidden;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /*
@@ -69,13 +98,15 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix::before,
-.clearfix::after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
+  /* 1 */
   display: table;
+  /* 2 */
 }
 
-.clearfix::after {
+.clearfix:after {
   clear: both;
 }
 
@@ -97,11 +128,12 @@
    ========================================================================== */
 @media print {
   *,
-*::before,
-*::after {
-    background: #fff !important;
+*:before,
+*:after {
+    background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -111,11 +143,11 @@ a:visited {
     text-decoration: underline;
   }
 
-  a[href]::after {
+  a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  abbr[title]::after {
+  abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
@@ -123,8 +155,8 @@ a:visited {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-a[href^="javascript:"]::after {
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
     content: "";
   }
 
@@ -140,7 +172,7 @@ blockquote {
 
   /*
    * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
     display: table-header-group;
