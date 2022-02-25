@@ -9454,6 +9454,7 @@ TABLE OF CONTENTS:
 .nav-primary__list li {
   list-style: none;
   background: #fff;
+  padding-right: 2px;
 }
 @media (min-width: 1024px) {
   .nav-primary__list li {
@@ -9483,7 +9484,7 @@ TABLE OF CONTENTS:
     min-width: inherit;
     flex-basis: auto;
     align-self: flex-end;
-    border: 1px solid none;
+    border: 1px solid transparent;
     border-bottom: 0;
   }
   .nav-primary__list li:hover {
@@ -9798,10 +9799,8 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .nav-primary__search-desktop {
     display: inline-block;
-    height: 44px;
     width: 56px;
     position: relative;
-    top: -5px;
   }
 }
 .nav-primary__search-desktop .nav-primary__search-desktop-button {
@@ -9821,9 +9820,9 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .nav-primary__search-desktop .nav-primary__search-desktop-button {
     display: block;
-    height: 44px;
     width: 56px;
-    background: #fff;
+    padding: 13px 16px 16px;
+    background: transparent;
     appearance: none;
     border: 0;
   }
