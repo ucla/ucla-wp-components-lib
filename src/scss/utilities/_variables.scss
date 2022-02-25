@@ -1,24 +1,15 @@
-/* ------------------------------------*\
-    $VARIABLES
-\*------------------------------------ */
-
 // Typography
 $font: "Helvetica", "Arial", sans-serif;
 $font-secondary: "Helvetica", "Arial", sans-serif;
 $font-size-base: 100%;
 $corner-radius: 4px;
 
-/*
- * Grid parameter defaults
- * These are used to customize the grid layout
- * Feel free to overwrite them as necessary
- */
-
-// xs: 480px 30rem
-// sm: 600px, 37.5rem
-// md: 768px, 48rem;
-// lg: 1024px, 64rem;
-// xl: 1280px 80rem;
+// relative units
+// xs: 480px 30em
+// sm: 600px, 37.5em
+// md: 768px, 48em;
+// lg: 1024px, 64em;
+// xl: 1280px 80em;
 
 $grid-breakpoints: (
   na: 0,
