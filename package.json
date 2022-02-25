@@ -10,7 +10,7 @@
     "url": "https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.5.11",
+    "@frctl/fractal": "^1.5.13",
     "@frctl/mandelbrot": "^1.9.4",
     "fractal-status-helper": "^1.0.0"
   },
@@ -45,5 +45,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/uclaucomm/ucla-bruin-components.git"
   }
 }
