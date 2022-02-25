@@ -9586,7 +9586,6 @@ TABLE OF CONTENTS:
   .nav-primary__sublist {
     position: absolute;
     width: 20rem;
-    top: 44px;
   }
 }
 .nav-primary__sublist--open {
