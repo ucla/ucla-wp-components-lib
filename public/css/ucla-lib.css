@@ -7222,6 +7222,26 @@ nav ul {
 .person-card-grey__description:last-child {
   margin-bottom: 0;
 }
+.person-card__contact-details,
+.person-card-grey__contact-details {
+  display: flex;
+  align-items: center;
+}
+.person-card__contact-details p.person-card__contact-label,
+.person-card-grey__contact-details p.person-card__contact-label {
+  width: 4.375rem;
+  font-weight: bold;
+}
+.person-card__contact-details p,
+.person-card-grey__contact-details p {
+  margin-bottom: 0;
+}
+.person-card__photo-credit,
+.person-card-grey__photo-credit {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 1.125rem;
+}
 .person-card:first-child,
 .person-card-grey:first-child {
   margin-top: 0;
