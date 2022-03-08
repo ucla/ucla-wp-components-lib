@@ -259,3 +259,51 @@
     }
   }
 }
+
+//  Info Cards //  Info Cards //  Info Cards
+
+.info-card {
+  display: inline-block;
+  background: colors.$lightest-grey-2;
+  box-shadow: inset 0 4px 0 colors.$ucla-gold;
+  margin: 32px 2% 0 0;
+  vertical-align: top;
+
+  @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
+    max-width: 376px;
+    margin: 32px 2% 0 0;
+  }
+
+  &__title {
+    font-size: variables.$ucla-font-size-large;
+    font-weight: bold;
+    line-height: 1.125;
+  }
+
+  &__wrapper {
+    padding: 32px;
+  }
+
+  &__description {
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
+    color: colors.$medium-grey5;
+    max-height: 300px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__ctas {
+    a {
+      display: list-item;
+      list-style: none;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
