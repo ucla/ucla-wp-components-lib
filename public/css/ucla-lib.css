@@ -7160,6 +7160,45 @@ nav ul {
   }
 }
 
+.info-card {
+  display: inline-block;
+  background: #ebebeb;
+  box-shadow: inset 0 4px 0 #ffd100;
+  margin: 32px 2% 0 0;
+  vertical-align: top;
+}
+@media only screen and (min-width: 600px) {
+  .info-card {
+    max-width: 376px;
+    margin: 32px 2% 0 0;
+  }
+}
+.info-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.125;
+}
+.info-card__wrapper {
+  padding: 32px;
+}
+.info-card__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  max-height: 300px;
+}
+.info-card__description:last-child {
+  margin-bottom: 0;
+}
+.info-card__ctas a {
+  display: list-item;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.info-card__ctas a:last-child {
+  margin-bottom: 0;
+}
+
 .person-card,
 .person-card-grey {
   height: auto;
