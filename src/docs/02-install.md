@@ -42,5 +42,5 @@ Place code in between your site’s `<footer>` tags.
 ```
 
 ### Zip Download
-
+For those who cannot or do not wish to add a CND to their project, a zip download file is available.
 Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.
