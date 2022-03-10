@@ -7400,6 +7400,10 @@ nav ul {
   width: 100%;
   margin-bottom: 0;
 }
+.story-card-date {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
 .story-card-content {
   padding: 32px;
 }
