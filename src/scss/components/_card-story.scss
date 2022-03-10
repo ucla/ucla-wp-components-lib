@@ -118,6 +118,11 @@
       margin-bottom: 0;
     }
 
+    &-date {
+      font-size: variables.$ucla-font-size-small;
+      font-weight: bold;
+    }
+
     &-content {
       padding: 32px;
     }
