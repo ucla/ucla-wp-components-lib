@@ -12,7 +12,7 @@ Large, descriptive link with optional ambient image.
 * Use plain language when writing headlines and descriptions.
 * Avoid technical language, acronyms or jargon people don't understand.
 * Front-load the first 2 words of your headlines for [easy eye scanning](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/).
-* Limit headlines to one phrase or 2 lines -- there is a suggested 32 maximum character limit.
+* Limit headlines to 1 phrase or 2 lines -- there is a suggested 32 maximum character limit.
 * Use original images rather than stock images to maintain credibility and trust among your users.
 
 ### **Accessibility Requirements**
