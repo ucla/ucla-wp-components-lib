@@ -17,7 +17,7 @@
   &__dept {
     background: colors.$ucla-blue;
     color: colors.$white;
-    font-weight: bold;
+    // font-weight: bold;
 
     &--logo {
       display: block;
@@ -58,15 +58,19 @@
       // reset default margin, padding and bullet styles
       ul {
         margin-top: 0;
-        margin-right: 24px;
         padding-left: 0;
         vertical-align: top;
-        width: auto;
+        width: 40vw;
         display: inline-block;
 
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+          margin-right: 64px;
+          width: auto;
+        }
+
         & li {
-          margin-bottom: 2px;
-          font-size: variables.$ucla-font-size-default;
+          margin-bottom: 0.75rem;
+          font-size: variables.$ucla-font-size-x-small;
 
           & a {
             color: colors.$white;
@@ -78,12 +82,17 @@
             }
 
             &:focus {
-              outline: 1px dotted colors.$white;
+              outline: 1px solid colors.$hover-state-dark;
+              outline-offset: 2px;
             }
 
             &:active {
               background: colors.$active-state-dark;
             }
+          }
+
+          &:first-child {
+            font-weight: bold;
           }
 
           &:not(:first-child) {
@@ -98,20 +107,19 @@
     }
 
     &--info {
-      margin-right: 24px;
+      margin-right: 0px;
 
-      @media only screen and (min-width: breakpoints.breakpoint-min(lrg)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
         max-width: 25%;
+        margin-right: 140px;
       }
     }
 
     &--contact {
       margin-bottom: 12px;
-
-      p {
-        color: colors.$white;
-        font-size: variables.$ucla-font-size-small;
-      }
+      color: colors.$white;
+      font-size: variables.$ucla-font-size-small;
+      font-weight: bold;
 
       a {
         color: colors.$white;
@@ -209,12 +217,17 @@
       &-youtube,
       &-tiktok {
         max-height: 100%;
-        width: 48px;
-        background-size: 48px;
+        width: 30px;
+        // background-size: 21.33px;
         background-repeat: no-repeat;
         border-radius: 2px;
         display: inline-block;
         position: relative;
+        vertical-align: middle;
+
+        img {
+          width: 30px;
+        }
 
         & span {
           position: relative;
@@ -226,20 +239,20 @@
         }
 
         &:hover {
-          background: colors.$hover-state-dark;
-          background-size: 48px;
+          background-color: colors.$hover-state-dark;
+          // background-size: 21.33px;
         }
 
         &:active {
-          background: colors.$active-state-dark;
+          background-color: colors.$active-state-dark;
         }
 
         @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-          width: 48px;
-          background-size: 48px;
+          // width: 21.33px;
+          // background-size: 21.33px;
 
           &:hover {
-            background-size: 48px;
+            // background-size: 21.33px;
           }
         }
       }
