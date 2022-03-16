@@ -7732,7 +7732,6 @@ nav ul {
 .footer__dept {
   background: #2774ae;
   color: #fff;
-  font-weight: bold;
 }
 .footer__dept--logo {
   display: block;
@@ -7772,15 +7771,20 @@ nav ul {
 }
 .footer__dept--links ul {
   margin-top: 0;
-  margin-right: 24px;
   padding-left: 0;
   vertical-align: top;
-  width: auto;
+  width: 40vw;
   display: inline-block;
 }
+@media only screen and (min-width: 768px) {
+  .footer__dept--links ul {
+    margin-right: 64px;
+    width: auto;
+  }
+}
 .footer__dept--links ul li {
-  margin-bottom: 2px;
-  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
 }
 .footer__dept--links ul li a {
   color: #fff;
@@ -7791,10 +7795,14 @@ nav ul {
   color: #000;
 }
 .footer__dept--links ul li a:focus {
-  outline: 1px dotted #fff;
+  outline: 1px solid #ffe500;
+  outline-offset: 2px;
 }
 .footer__dept--links ul li a:active {
   background: #ffbf0f;
+}
+.footer__dept--links ul li:first-child {
+  font-weight: bold;
 }
 .footer__dept--links ul li:not(:first-child) {
   font-size: 0.75rem;
@@ -7803,19 +7811,19 @@ nav ul {
   content: none;
 }
 .footer__dept--info {
-  margin-right: 24px;
+  margin-right: 0px;
 }
-@media only screen and (min-width: ) {
+@media only screen and (min-width: 1024px) {
   .footer__dept--info {
     max-width: 25%;
+    margin-right: 140px;
   }
 }
 .footer__dept--contact {
   margin-bottom: 12px;
-}
-.footer__dept--contact p {
   color: #fff;
   font-size: 0.875rem;
+  font-weight: bold;
 }
 .footer__dept--contact a {
   color: #fff;
@@ -7873,12 +7881,15 @@ nav ul {
 }
 .footer__dept--social-facebook, .footer__dept--social-twitter, .footer__dept--social-instagram, .footer__dept--social-snapchat, .footer__dept--social-linkedin, .footer__dept--social-youtube, .footer__dept--social-tiktok {
   max-height: 100%;
-  width: 48px;
-  background-size: 48px;
+  width: 30px;
   background-repeat: no-repeat;
   border-radius: 2px;
   display: inline-block;
   position: relative;
+  vertical-align: middle;
+}
+.footer__dept--social-facebook img, .footer__dept--social-twitter img, .footer__dept--social-instagram img, .footer__dept--social-snapchat img, .footer__dept--social-linkedin img, .footer__dept--social-youtube img, .footer__dept--social-tiktok img {
+  width: 30px;
 }
 .footer__dept--social-facebook span, .footer__dept--social-twitter span, .footer__dept--social-instagram span, .footer__dept--social-snapchat span, .footer__dept--social-linkedin span, .footer__dept--social-youtube span, .footer__dept--social-tiktok span {
   position: relative;
@@ -7888,22 +7899,11 @@ nav ul {
   border-radius: 2px;
 }
 .footer__dept--social-facebook:hover, .footer__dept--social-twitter:hover, .footer__dept--social-instagram:hover, .footer__dept--social-snapchat:hover, .footer__dept--social-linkedin:hover, .footer__dept--social-youtube:hover, .footer__dept--social-tiktok:hover {
-  background: #ffe500;
-  background-size: 48px;
+  background-color: #ffe500;
 }
 .footer__dept--social-facebook:active, .footer__dept--social-twitter:active, .footer__dept--social-instagram:active, .footer__dept--social-snapchat:active, .footer__dept--social-linkedin:active, .footer__dept--social-youtube:active, .footer__dept--social-tiktok:active {
-  background: #ffbf0f;
+  background-color: #ffbf0f;
 }
-@media only screen and (min-width: 768px) {
-  .footer__dept--social-facebook, .footer__dept--social-twitter, .footer__dept--social-instagram, .footer__dept--social-snapchat, .footer__dept--social-linkedin, .footer__dept--social-youtube, .footer__dept--social-tiktok {
-    width: 48px;
-    background-size: 48px;
-  }
-  .footer__dept--social-facebook:hover, .footer__dept--social-twitter:hover, .footer__dept--social-instagram:hover, .footer__dept--social-snapchat:hover, .footer__dept--social-linkedin:hover, .footer__dept--social-youtube:hover, .footer__dept--social-tiktok:hover {
-    background-size: 48px;
-  }
-}
-
 .global-foot .social-links-container {
   justify-content: flex-start;
   padding: 0;
