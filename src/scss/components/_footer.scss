@@ -89,6 +89,22 @@
             &:active {
               background: colors.$active-state-dark;
             }
+
+            &[target=_blank] {
+              &::after {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin-left: 2px;
+                padding-left: 2px;
+                content: '';
+              }
+
+              &:hover::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.93255 0V1.49867H4.62L0 6.11683L1.05552 7.1734L5.67551 2.55523V5.24534H7.1727V0H1.93255Z' fill='%23333333'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+              }
+            }
           }
 
           &:first-child {
