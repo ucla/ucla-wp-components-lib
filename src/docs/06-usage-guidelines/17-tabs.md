@@ -13,7 +13,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 * Limit to 2-6 tabs within each page or section.
 * Use succinct labels of 1-2 words in length for each tab.
-* Visually distinguished current and other tabs with active, hover, and focus states.
+* Visually distinguish current and other tabs with active, hover and focus states.
 
 ### **Accessibility Requirements**
 
