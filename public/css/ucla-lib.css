@@ -7160,6 +7160,45 @@ nav ul {
   }
 }
 
+.info-card {
+  display: inline-block;
+  background: #ebebeb;
+  box-shadow: inset 0 4px 0 #ffd100;
+  margin: 32px 2% 0 0;
+  vertical-align: top;
+}
+@media only screen and (min-width: 600px) {
+  .info-card {
+    max-width: 376px;
+    margin: 32px 2% 0 0;
+  }
+}
+.info-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.125;
+}
+.info-card__wrapper {
+  padding: 32px;
+}
+.info-card__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  max-height: 300px;
+}
+.info-card__description:last-child {
+  margin-bottom: 0;
+}
+.info-card__ctas a {
+  display: list-item;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.info-card__ctas a:last-child {
+  margin-bottom: 0;
+}
+
 .person-card,
 .person-card-grey {
   height: auto;
@@ -7221,6 +7260,26 @@ nav ul {
 .person-card__description:last-child,
 .person-card-grey__description:last-child {
   margin-bottom: 0;
+}
+.person-card__contact-details,
+.person-card-grey__contact-details {
+  display: flex;
+  align-items: center;
+}
+.person-card__contact-details p.person-card__contact-label,
+.person-card-grey__contact-details p.person-card__contact-label {
+  width: 4.375rem;
+  font-weight: bold;
+}
+.person-card__contact-details p,
+.person-card-grey__contact-details p {
+  margin-bottom: 0;
+}
+.person-card__photo-credit,
+.person-card-grey__photo-credit {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 1.125rem;
 }
 .person-card:first-child,
 .person-card-grey:first-child {
@@ -7329,10 +7388,65 @@ nav ul {
   color: #fff;
   text-decoration: none;
 }
-.story__secondary-card {
+.story-card {
   width: 100%;
   min-width: 376px;
   max-width: 376px;
+}
+.story-card-image {
+  height: auto;
+  max-width: 376px;
+  max-height: 282px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.story-card-date {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.story-card-content {
+  padding: 32px;
+}
+.story-card-title .story-card-link {
+  line-height: 1.125;
+  margin: 8px 0;
+  text-decoration: none;
+  color: #00598c;
+}
+.story-card-title .story-card-link:hover {
+  background-color: #0079bf;
+  color: #fff;
+}
+.story-card-source {
+  font-weight: bold;
+}
+.story-card-source a {
+  text-decoration: none;
+  color: #00598c;
+}
+.story__secondary-card {
+  width: 100%;
+  min-width: 272px;
+  max-width: 272px;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+.story__secondary-card:last-child {
+  border-bottom: 1px solid #ccc;
+}
+@media (min-width: 600px) {
+  .story__secondary-card {
+    display: flex;
+    min-width: 576px;
+    max-width: 576px;
+    padding: 1.5rem 0;
+  }
+}
+.story__secondary-card-image-link {
+  display: inline-block;
+}
+.story__secondary-card-image-link:hover img {
+  opacity: 0.8;
 }
 .story__secondary-card-image {
   height: auto;
@@ -7341,22 +7455,33 @@ nav ul {
   width: 100%;
   margin-bottom: 0;
 }
+@media (min-width: 600px) {
+  .story__secondary-card-image {
+    max-width: 200px;
+    max-height: 133px;
+  }
+}
 .story__secondary-card-date {
   font-size: 0.875rem;
   font-weight: bold;
-  padding: 32px 32px 0;
 }
 .story__secondary-card-title {
   font-size: 1.5rem;
   line-height: 1.125;
-  margin: 8px 32px;
+  margin: 8px 0;
   outline: none;
   position: relative;
 }
 .story__secondary-card-content {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 32px;
+  padding: 32px;
+}
+@media (min-width: 600px) {
+  .story__secondary-card-content {
+    flex: 1;
+    padding: 0 32px;
+  }
 }
 .story__secondary-card-blurb {
   font-size: 1rem;
@@ -7368,10 +7493,9 @@ nav ul {
   font-size: 1rem;
   line-height: 1.25;
   font-weight: bold;
-  margin: 12px 0;
+  margin: 12px 0 0 0;
 }
-.story__secondary-card-link,
-.story__secondary-card a {
+.story__secondary-card-link {
   outline: none;
   text-decoration: none;
   height: auto;
@@ -7379,66 +7503,47 @@ nav ul {
   max-width: 376px;
   color: #00598c;
 }
-.story__secondary-card-link::before,
-.story__secondary-card a::before {
-  display: none;
-  position: absolute;
-  content: "";
-  max-width: 376px;
-  max-height: 250px;
-  width: 100%;
-  height: 250px;
-  background: #00598c;
+.story__secondary-card-link:hover {
+  background: #0079bf;
+  color: white;
 }
-.story__secondary-card-link span,
-.story__secondary-card a span {
+.story__secondary-card-link span {
   color: #00598c;
 }
-.story__secondary-card-link:hover::before,
-.story__secondary-card a:hover::before {
+.story__secondary-card-link:hover::before {
   display: block;
 }
-.story__secondary-card-link:hover.source::before,
-.story__secondary-card a:hover.source::before {
+.story__secondary-card-link:hover.source::before {
   display: none;
 }
-.story__secondary-card-link:hover img,
-.story__secondary-card a:hover img {
+.story__secondary-card-link:hover img {
   opacity: 0.8;
 }
-.story__secondary-card-link:hover span,
-.story__secondary-card a:hover span {
+.story__secondary-card-link:hover span {
   color: #fff;
   background: #0079bf;
 }
-.story__secondary-card-link:focus span,
-.story__secondary-card a:focus span {
+.story__secondary-card-link:focus span {
   outline: 1px dotted #0079bf;
 }
-.story__secondary-card-link:active::before,
-.story__secondary-card a:active::before {
+.story__secondary-card-link:active::before {
   display: block;
   background: #003b5c;
 }
-.story__secondary-card-link:active.source::before,
-.story__secondary-card a:active.source::before {
+.story__secondary-card-link:active.source::before {
   display: none;
 }
-.story__secondary-card-link:active img,
-.story__secondary-card a:active img {
+.story__secondary-card-link:active img {
   opacity: 0.8;
 }
-.story__secondary-card-link:active span,
-.story__secondary-card a:active span {
+.story__secondary-card-link:active span {
   color: #fff;
   background: #003b5c;
 }
-.story__secondary-card-link:visited:focus,
-.story__secondary-card a:visited:focus {
+.story__secondary-card-link:visited:focus {
   outline: none;
 }
-.story__secondary-card-link:visited:focus span,
-.story__secondary-card a:visited:focus span {
+.story__secondary-card-link:visited:focus span {
   outline: 1px dotted #0079bf;
 }
 

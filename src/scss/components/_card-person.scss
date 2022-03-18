@@ -61,6 +61,26 @@
     }
   }
 
+  &__contact-details {
+    display: flex;
+    align-items: center;
+
+    p.person-card__contact-label {
+      width: 4.375rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo-credit {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 1.125rem;
+  }
+
   &:first-child {
     margin-top: 0;
 
