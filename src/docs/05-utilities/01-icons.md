@@ -5,10 +5,10 @@ title: Icons
 
 Icons in our library are provided as an extension. If you are using our UCLA WordPress theme, the icons are conveniently installed on your site. We have also supplied the icons for download via zip file.
 
-<h1>Download Icons<h1>
+<h3>Download Icons<h3>
 <a class="create-button" href="{{path '/icons/ucla-web-icons.zip'}}">Download Icons Zip File</a>
 
-<h1>Usage</h1>
+<h2>Usage</h2>
 
 <h3>Accessibility Requirements</h3>
 The supplied icons have been created and reviewed according to the known needs of the university. These icons are ADA compliant and have been reviewed by the DCP. Strategic Communications strongly encourages the use of lightweight SVGs for UCLA websites and application. All icons are available in SVG format and can be used as raw SVG code or by linking to the image files.
