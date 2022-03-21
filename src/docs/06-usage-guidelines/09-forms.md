@@ -5,9 +5,9 @@ title: Forms
 
 Collect information from users or filter content with form select and search fields.
 
-## **Usage**
+<h2>Usage</h2>
 
-### **Usability Guidance**
+<h3>Usability Guidance</h3>
 
 * Tell people why you're collecting their information and what you're going to do with it.
 * Immediately validate entries to reassure users they entered the information correctly. Don't wait until the form submission to communicate missing or erroneous information.
@@ -18,50 +18,50 @@ Collect information from users or filter content with form select and search fie
 * Divide long forms into multiple steps and indicate their progress, e.g. "Step 3 of 4: Payment Method".
 * Clearly state if and when users can expect a response from your department.
 
-### **Accessibility Requirements**
+<h3>Accessibility Requirements</h3>
 
 * Create tab order and focus states for keyboard navigation at a minimum.
 * Style focus states for users who tab through form fields using their keyboard.
 * Use `<fieldset>` containers and `<legend>` and `<label>` elements to denote sections and fields of the form.
 
-## **Text Inputs**
+<h2>Text Inputs</h2>
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{view '@forms--text'}}
 ```
 
-## **Select Menus**
+<h2>Select Menus</h2>
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{view '@forms--select-menu'}}
 ```
 
-## **Checkboxes**
+<h2>Checkboxes</h2>
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{view '@forms--checkbox'}}
 ```
-## **Radio Buttons**
+<h2>Radio Buttons</h2>
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{view '@forms--radio'}}
 ```
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{view '@forms--fieldset-legend'}}
 ```
 
-## **Error Handling**
+<h2>Error Handling</h2>
 
 * To trigger errors, the "hasError" class name should be appended to the inputs's parent div. This feature is currently only available for the "select" and "text" inputs.
 
@@ -69,7 +69,8 @@ Collect information from users or filter content with form select and search fie
 
 * Before checking and triggering errors, you should use the "clearErrors" function to clear the form of previous errors. This function looks for the form DOM object to be passed in to work correctly.
 
-### **Code**
+<h3>Code</h3>
+
 ```
 <form class="example-form">
 <!-- this select class does not have an error -->
@@ -105,7 +106,8 @@ Collect information from users or filter content with form select and search fie
 </script>
 ```
 
-### **Example of HTML After Errors are Triggered**
+<h3>Example of HTML After Errors are Triggered</h3>
+
 ```
 <form class="example-form">
 <!-- this select has an error -->

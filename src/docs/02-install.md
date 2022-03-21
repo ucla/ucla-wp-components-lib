@@ -5,7 +5,7 @@ title: Download Components
 
 This repository is available for official UCLA websites only. Your domain must be a subdomain of [ucla.edu](https://ucla.edu) and have been created through the [411 domain policy](http://www.adminpolicies.ucla.edu/APP/Number/411.0).
 
-### Install with CDN
+<h3>Install with CDN</h3>
 
 CDN is the recommended type of installation.
 
@@ -41,6 +41,6 @@ Place code in between your site’s `<footer>` tags.
 </footer>
 ```
 
-### Zip Download
+<h3>Zip Download</h3>
 
 Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.

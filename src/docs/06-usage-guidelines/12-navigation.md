@@ -5,9 +5,9 @@ title: Navigation
 
 Preview and navigate priority topics on your site
 
-## **Usage**
+<h2>Usage</h2>
 
-### **Usability Guidance**
+<h3>Usability Guidance</h3>
 
 * Highlight the primary topics of your website. Help visitors understand what content they can expect to find before they start browsing your site.
 * Use succinct labels of 1-2 words in length for each navigation link.
@@ -18,36 +18,36 @@ Preview and navigate priority topics on your site
 * If you need to highlight things like a widely publicized report or conference, do so within the body of your website. Navigation links are intended for evergreen content.
 * Adding the class `nav-primary__link--current-page` to `nav-primary__link` anchor tag will create the yellow border to the item.
 
-**Further Reading**
+<strong>Further Reading</strong>
 
 * [Navigation: You Are Here](https://www.nngroup.com/articles/navigation-you-are-here/) (Nielsen Norman Group)
 * [Information Scent: How User Decide Where to Go Next](https://www.nngroup.com/articles/information-scent/) (Nielsen Norman Group)
 * [The 3-Click Rule for Navigation Is False](https://www.nngroup.com/articles/3-click-rule/) (Nielsen Norman Group)<br>
 
-### **Accessibility Requirements**
+<h3>Accessibility Requirements</h3>
 
 * Use the `<nav>` element and ARIA labels, e.g. "Main," "Footer," "Social," etc., to identify each distinct navigation menu of your site.
 * Insert a hidden skip nav with quick links to differentiate parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
 
-**Further Reading**
+<strong>Further Reading</strong>
 
 * [Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/TR/WCAG20-TECHS/G1.html) (W3)
 
-### **Do’s and Don’ts**
+<h3>Do’s and Don’ts</h3>
 
-#### **Do’s**
+<h4>Do’s</h4>
 
 * Limit main navigation to 4-6 links for easy scanning of website topics. No more than 7 links maximum.
 * Avoid acronyms, abbreviation, institutional or technical jargon if it is not widely known by site visitors.
 * Stick to broad topics or categories.
 
-#### **Don'ts**
+<h4>Don'ts</h4>
 
 * Don't link to individual reports, articles, events or people. Use Banners and Cards to highlight editorial content, events, and important people.
 * Don't link to external websites.
 * Don't link to non-web formats like PDF, DOC, etc. These formats do not comply with federal accessibility guidelines by default.
 
-### **Code**
+<h3>Code</h3>
 
 ```
 <header id="header">
@@ -224,13 +224,13 @@ Preview and navigate priority topics on your site
 
 <!--Headers and Main Menus code here, if applicable-->
 
-## **Breadcrumbs**
+<h2>Breadcrumbs</h2>
 
 Breadcrumbs provide an important method of navigating the site. They may feel redundant if your site structure and menus are relatively simple, but they have multiple benefits and require minimal space. We recommend any website with 3 or more levels of page hierarchy (e.g. Home / Academics / Undergraduate) implement breadcrumbs and the wayfinding abilities they provide.
 
 Most visitors will find your site via search engines. If searching for a topic more specific than your program alone, they will likely bypass your homepage to an internal sub-page of your site. Letting visitors know where they entered, and how to navigate upwards to broaden their search, will encourage them to stick around and search for related content.
 
-### **Code**
+<h3>Code</h3>
 
 <!--Breadcrumbs code here, if applicable-->
 ```

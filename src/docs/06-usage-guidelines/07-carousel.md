@@ -5,13 +5,13 @@ title: Carousel
 
 This carousel has been forked from [SplideJs](https://splidejs.com) and themed to fit the needs of UCLA. The SplideJS carousel was chosen for its high accessibility support and its ability to be modified. SplideJS supports images, captions, video, grids and a wide variety of features. For additional support beyond this documentation please look to the SplideJS [documentation](https://splidejs.com/documents/).
 
-## **Usage**
+<h2>Usage</h2>
 
-### **Usability Guidance**
+<h3>Usability Guidance</h3>
 
 The javascript for this carousel is already installed in the library. To create a slider, use the follwing html structure and mount the slider by adding your javascript.
 
-***HTML***
+<em><strong>HTML</strong></em>
 ```
 <div id="example-slider-one" class="splide">
     <div class="splide__track">
@@ -41,21 +41,21 @@ The javascript for this carousel is already installed in the library. To create 
 
 Next, add the javascript to your page.
 
-***Javascript***
+<em><strong>Javascript</strong></em>
 ```
 new Splide('#example-slider-one').mount();
 ```
 
 [See Working Examples](/components/detail/carousel--default)
 
-**Further Reading**
+<strong>Further Reading<strong>
 
 - [Splide Getting Started](https://splidejs.com/getting-started/)
 - [Slipde Options](https://splidejs.com/options/)
 - [Splide API](https://splidejs.com/apis/)
 - [Splide Tutorials](https://splidejs.com/category/tutorials/)
 
-### **Accessibility Requirements**
+<h3>Accessibility Requirements</h3>
 
 - [Splide Accessibility](https://splidejs.com/accessibility/)
 * [Splide i18n](https://splidejs.com/i18n/)

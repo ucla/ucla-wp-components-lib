@@ -13,13 +13,13 @@ Available class utilities |  Hex color
 .has-background-ucla-blue | #2774AE
 .has-background-white | #FFFFFF
 
-### **Accessibility Requirements**
+<h3>Accessibility Requirements</h3>
 
 When using a background color the foreground text requires a contrast ratio minimum level AA according to WCAG standards and UCLA's DCP. In order to help meet this requirement the class `.has-white-text` has been added to the library and should be applied when necessary. You can test your color ratios for compliance with [Web Aim's contrast checker](https://webaim.org/resources/contrastchecker/).
 
-## Examples
+<h2>Examples</h2>
 
-### Add background to row
+<h3>Add background to row</h3>
 ```
 <div class="ucla campus has-background-ucla-blue has-white-text">
   <div class="col span_1_of_2">
@@ -33,7 +33,7 @@ When using a background color the foreground text requires a contrast ratio mini
 </div>
 ```
 
-### Add background to column
+<h3>Add background to column</h3>
 ```
 <div class="ucla campus">
   <div class="col span_1_of_2 has-background-ucla-blue has-white-text">
@@ -47,7 +47,7 @@ When using a background color the foreground text requires a contrast ratio mini
 </div>
 ```
 
-### Add background to single element
+<h3>Add background to single element</h3>
 ```
 <div class="ucla campus">
   <div class="col span_1_of_2">

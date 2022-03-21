@@ -41,13 +41,13 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
 
 <h2>Core Principles</h2>
 
-### Support common needs
+<h3>Support common needs</h3>
 Our goal is to thoughtfully improve and expand the component library to support the most common needs on campus. Before recommending an enhancement or component, we encourage you to consider the utility for other designers, developers and end users. In a place as diverse and large as UCLA, it’s a challenge to anticipate what other people need. We always appreciate contributions based on pattern research, insights into user needs, industry trends and usability standards.
 
-### Design for flexibility
+<h3>Design for flexibility</h3>
 People will use components to address design problems in different ways. When suggesting an enhancement or new component, think about all the ways in which it might be used. Specify the minimum requirements for that component to function, and then define optional add-ons based on different use cases. Design and develop with flexibility in mind.
 
-### Collaborate with others
+<h3>Collaborate with others</h3>
 This project is an iterative and community-driven effort. We encourage you to work with other people to get feedback, conduct research or build new features. When you submit an enhancement or feature to the library, know that other people will eventually review, refine and build on your work.
 </div>
 

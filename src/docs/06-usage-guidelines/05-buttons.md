@@ -5,7 +5,7 @@ title: Buttons
 
 Buttons draw attention to important actions, content or next steps. Button tags, `<button>`, are used for internal page actions. Links, or `<a>` tags, are used for linking to an external page.
 
-## **Usage**
+<h2>Usage</h2>
 <div class="tabs">
     <!-- .tablist is the container for tabs only -->
     <div role="tablist" aria-label="content-tabs">
@@ -26,13 +26,15 @@ Buttons draw attention to important actions, content or next steps. Button tags,
 * [Front-load](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/) meaningful keywords in longer, tertiary links or text-only buttons.
 <br/><br/>
 
-**Further Reading**
+<strong>Further Reading</strong>
+
 * [Information Scent: How Users Decide Where to Go Next](https://www.nngroup.com/articles/information-scent/) (Nielsen Norman Group)
 * [Writing Hyperlinks: Salient, Descriptive, Start with Keyword](https://www.nngroup.com/articles/writing-links/) (Nielsen Norman Group)
 * [Learn More Links: You Can Do Better](https://www.nngroup.com/articles/learn-more-links/) (Nielsen Norman Group)
     </div>
     <div tabindex="0" role="tabpanel" id="panel-02-tab" aria-labelledby="panel-02" hidden="" class="tabcontent">
 <br/>
+
 * Write button labels so they make sense without reading the copy around them so they are accessible to screen readers.
 * Don’t write button labels that are generic or not specific to the content being presented.
 * Avoid more than one instance of generic text like "Read More". Screen readers can't disambiguate multiple buttons with the same or similar text.
@@ -40,20 +42,21 @@ Buttons draw attention to important actions, content or next steps. Button tags,
 * Link headlines in Story Cards or Event Cards rather than adding buttons with generic text.
 <br/><br/>
 
-### **Code Guidance**
+<h3>Code Guidance</h3>
+
 * Be sure to include the minimum parent class "ucla" in the containers for your links. This will allow the element to inherit default link styles.
 * Adding the "campus" classname will allow for grid layout.
 <br/><br/>
 
-**Further Reading**
+<strong>Further Reading</strong>
 * [ARIA button role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (Mozilla)
 * [ARIA button role](https://www.w3.org/TR/wai-aria-1.1/#button) (W3)
     </div>
 </div>
 
-## **Code**
+<h2>Code</h2>
 
-### **Buttons**
+<h3>Buttons</h3>
 
 If your button links to another page, use the anchor element.
 ```
@@ -76,50 +79,53 @@ Span wrapper that represents self-contained content.
 <span class="btn-span">Button Copy</span>
 ```
 
-## **Primary Button**
+<h2>Primary Button</h2>
 
-### **Do’s and Don’ts**
+<h3>Do’s and Don’ts</h3>
 
-#### **Do’s**
+<h4>Do’s</h4>
+
 * Do use only one primary button per section of content.
 * Do group primary buttons with secondary buttons or tertiary buttons.
 
-#### **Don’ts**
+<h4>Don’ts</h4>
+
 * Don’t change the color of buttons or button labels.
 * Don’t group more than one primary button together.
 
-### **Anatomy**
+<h3>Anatomy</h3>
 
-### **Code**
+<h3>Code</h3>
+
 ```
 {{ render '@button--primary' }}
 ```
 
-## **Secondary Button**
+<h2>Secondary Button</h2>
 
-### **Code**
+<h3>Code</h3>
 
 ```
 {{ render '@button--secondary' }}
 ```
 
-## **Tertiary Button**
-### **Code**
+<h2>Tertiary Button</h2>
+<h3>Code</h3>
 
 ```
 {{ render '@button--tertiary' }}
 ```
 
-## **Button Group**
-### **Code**
+<h2>Button Group</h2>
+<h3>Code</h3>
 
 ```
 {{ render '@button--group' }}
 ```
 
 
-## **Links**
-### **Code**
+<h2>Links</h2>
+<h3>Code</h3>
 
 ```
 {{ render '@links--related-links' }}
@@ -132,8 +138,8 @@ Span wrapper that represents self-contained content.
 {{ render '@links--inline' }}
 ```
 
-## **Pagination Button**
-### **Code**
+<h2>Pagination Button</h2>
+<h3>Code</h3>
 
 ```
 {{ render '@button--pagination' }}
