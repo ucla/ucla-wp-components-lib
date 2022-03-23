@@ -8,7 +8,7 @@
     padding: 32px 24px;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-      padding: 40px;
+      padding: 36px;
     }
   }
 
@@ -274,71 +274,116 @@
       }
     }
   }
+
+  .global-foot {
+    padding: 24px 36px;
+  
+    .social-links-container {
+      // justify-content: flex-start;
+      // padding: 0;
+      // margin-left: -8px;
+      margin: 0 auto;
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        // justify-content: center;
+        // margin-left: 0;
+        margin: 0;
+        order: 3;
+      }
+    }
+  
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+      }
+      // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      //   flex-direction: row;
+      // }
+    }
+  
+    &__legal {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      font-size: variables.$ucla-font-size-x-small;
+  
+      &--copyright {
+        font-size: variables.$ucla-font-size-x-small;
+        line-height: 1.33;
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        //   width: 100%;
+        //   text-align: center;
+        // }
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        //   display: inline-block;
+        //   width: 30%;
+        //   text-align: left;
+        // }
+      }
+  
+      &--list {
+        padding-inline-start: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+          margin: 0 auto;
+        }
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        //   float: right;
+        //   width: 63%;
+        // }
+  
+        &-item {
+          display: block;
+          margin-right: 1rem;
+  
+          @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+            display: inline;
+          }
+        }
+      }
+  
+      &--link {
+        text-decoration: none;
+        color: colors.$ucla-blue;
+        font-weight: bold;
+      }
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        flex-direction: row;
+      }
+    }
+  
+    // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+    //   padding: 0 12px;
+    // }
+  }
 }
 
 // Global footer area
-.global-foot {
-  .social-links-container {
-    justify-content: flex-start;
-    padding: 0;
-    margin-left: -8px;
+// .ucla.campus.global-foot {
+//   padding-top: 0;
+//   padding-bottom: 32px; 
 
-    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-      justify-content: center;
-      margin-left: 0;
-    }
-  }
+//   @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+//     padding-top: 32px;
+//   }
+// }
 
-  &__legal {
-    display: block;
-    width: 100%;
-    font-size: variables.$ucla-font-size-x-small;
 
-    &--copyright {
-      display: block;
-      width: 225px;
-      font-size: variables.$ucla-font-size-x-small;
-      line-height: 1.33;
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        width: 100%;
-        text-align: center;
-      }
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        display: inline-block;
-        width: 30%;
-        text-align: left;
-      }
-    }
-
-    &--list {
-      padding-inline-start: 0;
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        margin-top: 0;
-      }
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        float: right;
-        width: 63%;
-      }
-
-      &-item {
-        list-style: none;
-      }
-    }
-
-    &--link {
-      text-decoration: none;
-      color: colors.$ucla-blue;
-      font-weight: bold;
-    }
-  }
-}
 
 // Comp lib override
 #footer {
@@ -369,11 +414,6 @@
   .copy__link-a.dark {
     font-weight: bold;
     text-decoration: none;
-    display: block;
-
-    @media only screen and (min-width: breakpoint-min(md)) {
-      display: inline-block;
-    }
 
     &:visited {
       color: colors.$ucla-blue;
