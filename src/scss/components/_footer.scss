@@ -8,7 +8,7 @@
     padding: 32px 24px;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-      padding: 40px;
+      padding: 36px;
     }
   }
 
@@ -17,7 +17,7 @@
   &__dept {
     background: colors.$ucla-blue;
     color: colors.$white;
-    font-weight: bold;
+    // font-weight: bold;
 
     &--logo {
       display: block;
@@ -58,15 +58,19 @@
       // reset default margin, padding and bullet styles
       ul {
         margin-top: 0;
-        margin-right: 24px;
         padding-left: 0;
         vertical-align: top;
-        width: auto;
+        width: 40vw;
         display: inline-block;
 
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+          margin-right: 64px;
+          width: auto;
+        }
+
         & li {
-          margin-bottom: 2px;
-          font-size: variables.$ucla-font-size-default;
+          margin-bottom: 0.75rem;
+          font-size: variables.$ucla-font-size-x-small;
 
           & a {
             color: colors.$white;
@@ -78,12 +82,33 @@
             }
 
             &:focus {
-              outline: 1px dotted colors.$white;
+              outline: 1px solid colors.$hover-state-dark;
+              outline-offset: 2px;
             }
 
             &:active {
               background: colors.$active-state-dark;
             }
+
+            &[target=_blank] {
+              &::after {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin-left: 2px;
+                padding-left: 2px;
+                content: '';
+              }
+
+              &:hover::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.93255 0V1.49867H4.62L0 6.11683L1.05552 7.1734L5.67551 2.55523V5.24534H7.1727V0H1.93255Z' fill='%23333333'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+              }
+            }
+          }
+
+          &:first-child {
+            font-weight: bold;
           }
 
           &:not(:first-child) {
@@ -98,20 +123,19 @@
     }
 
     &--info {
-      margin-right: 24px;
+      margin-right: 0px;
 
-      @media only screen and (min-width: breakpoints.breakpoint-min(lrg)) {
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
         max-width: 25%;
+        margin-right: 140px;
       }
     }
 
     &--contact {
-      margin-bottom: 12px;
-
-      p {
-        color: colors.$white;
-        font-size: variables.$ucla-font-size-small;
-      }
+      margin-bottom: 32px;
+      color: colors.$white;
+      font-size: variables.$ucla-font-size-small;
+      font-weight: bold;
 
       a {
         color: colors.$white;
@@ -209,12 +233,17 @@
       &-youtube,
       &-tiktok {
         max-height: 100%;
-        width: 48px;
-        background-size: 48px;
+        width: 30px;
+        // background-size: 21.33px;
         background-repeat: no-repeat;
         border-radius: 2px;
         display: inline-block;
         position: relative;
+        vertical-align: middle;
+
+        img {
+          width: 30px;
+        }
 
         & span {
           position: relative;
@@ -226,90 +255,135 @@
         }
 
         &:hover {
-          background: colors.$hover-state-dark;
-          background-size: 48px;
+          background-color: colors.$hover-state-dark;
+          // background-size: 21.33px;
         }
 
         &:active {
-          background: colors.$active-state-dark;
+          background-color: colors.$active-state-dark;
         }
 
         @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-          width: 48px;
-          background-size: 48px;
+          // width: 21.33px;
+          // background-size: 21.33px;
 
           &:hover {
-            background-size: 48px;
+            // background-size: 21.33px;
           }
         }
       }
     }
   }
+
+  .global-foot {
+    padding: 24px 36px;
+  
+    .social-links-container {
+      // justify-content: flex-start;
+      // padding: 0;
+      // margin-left: -8px;
+      margin: 0 auto;
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        // justify-content: center;
+        // margin-left: 0;
+        margin: 0;
+        order: 3;
+      }
+    }
+  
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+      }
+      // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      //   flex-direction: row;
+      // }
+    }
+  
+    &__legal {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      font-size: variables.$ucla-font-size-x-small;
+  
+      &--copyright {
+        font-size: variables.$ucla-font-size-x-small;
+        line-height: 1.33;
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        //   width: 100%;
+        //   text-align: center;
+        // }
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        //   display: inline-block;
+        //   width: 30%;
+        //   text-align: left;
+        // }
+      }
+  
+      &--list {
+        padding-inline-start: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+          margin: 0 auto;
+        }
+  
+        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        //   float: right;
+        //   width: 63%;
+        // }
+  
+        &-item {
+          display: block;
+          margin-right: 1rem;
+  
+          @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+            display: inline;
+          }
+        }
+      }
+  
+      &--link {
+        text-decoration: none;
+        color: colors.$ucla-blue;
+        font-weight: bold;
+      }
+  
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        flex-direction: row;
+      }
+    }
+  
+    // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+    //   padding: 0 12px;
+    // }
+  }
 }
 
 // Global footer area
-.global-foot {
-  .social-links-container {
-    justify-content: flex-start;
-    padding: 0;
-    margin-left: -8px;
+// .ucla.campus.global-foot {
+//   padding-top: 0;
+//   padding-bottom: 32px; 
 
-    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-      justify-content: center;
-      margin-left: 0;
-    }
-  }
+//   @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+//     padding-top: 32px;
+//   }
+// }
 
-  &__legal {
-    display: block;
-    width: 100%;
-    font-size: variables.$ucla-font-size-x-small;
 
-    &--copyright {
-      display: block;
-      width: 225px;
-      font-size: variables.$ucla-font-size-x-small;
-      line-height: 1.33;
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        width: 100%;
-        text-align: center;
-      }
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        display: inline-block;
-        width: 30%;
-        text-align: left;
-      }
-    }
-
-    &--list {
-      padding-inline-start: 0;
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        margin-top: 0;
-      }
-
-      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        float: right;
-        width: 63%;
-      }
-
-      &-item {
-        list-style: none;
-      }
-    }
-
-    &--link {
-      text-decoration: none;
-      color: colors.$ucla-blue;
-      font-weight: bold;
-    }
-  }
-}
 
 // Comp lib override
 #footer {
@@ -340,11 +414,6 @@
   .copy__link-a.dark {
     font-weight: bold;
     text-decoration: none;
-    display: block;
-
-    @media only screen and (min-width: breakpoint-min(md)) {
-      display: inline-block;
-    }
 
     &:visited {
       color: colors.$ucla-blue;
