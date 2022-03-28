@@ -1,3 +1,10 @@
+# [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-03-28)
+
+
+### Bug Fixes
+
+* footer changes, focus states, documentation ([220f4aa](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/220f4aa4de48e2bf84b97cb2ac509bf69c165d56))
+
 # [1.0.0-dev-beta.18](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.17...v1.0.0-dev-beta.18) (2021-12-10)
 
 
