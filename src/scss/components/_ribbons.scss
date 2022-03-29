@@ -1,8 +1,9 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .ribbon span {
-  font-size: 1.5rem;
+  font-size: variables.$ucla-font-size-large;
   font-weight: bold;
   text-transform: uppercase;
   color: colors.$white;
@@ -17,7 +18,7 @@
   &.last { padding-right: 8px; }
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
-    font-size: 3rem;
+    font-size: variables.$ucla-font-size-xxx-large;
     padding: 8px 4px 4px 12px;
     margin-bottom: 2px;
 
@@ -28,7 +29,7 @@
 }
 
 .ribbon--highlight span {
-  font-size: 1.5rem;
+  font-size: variables.$ucla-font-size-large;
   font-weight: bold;
   text-transform: none;
   line-height: 1;

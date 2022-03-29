@@ -1,8 +1,9 @@
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .btn {
   padding: 12px 16px 8px;
-  font-size: 16px;
+  font-size: variables.$ucla-font-size-default;
   font-weight: bold;
   border-radius: 2px;
   border: 2px solid transparent;

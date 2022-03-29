@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .person-card,
 .person-card-grey {
@@ -36,28 +37,48 @@
 
   &__name {
     color: colors.$default-state;
-    font-size: 24px;
-    line-height: 27px;
+    font-size: variables.$ucla-font-size-large;
+    line-height: 1.125;
     margin-bottom: 8px;
   }
 
   &__department {
     color: colors.$medium-grey4;
-    font-size: 18px;
-    line-height: 22.5px;
+    font-size: variables.$ucla-font-size-medium-small;
+    line-height: 1.125;
     margin-bottom: 12px;
   }
 
   &__description {
     margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__contact-details {
+    display: flex;
+    align-items: center;
+
+    p.person-card__contact-label {
+      width: 4.375rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo-credit {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 1.125rem;
   }
 
   &:first-child {

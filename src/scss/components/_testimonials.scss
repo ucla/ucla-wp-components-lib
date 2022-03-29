@@ -1,9 +1,12 @@
+@use "../utilities/colors";
+@use "../utilities/variables";
+
 .adm-testimonial {
   display: block;
   position: relative;
   width: 100%;
 
-  // ackground-image: url(./image/quote-bg-1-mobile.png);
+  // background-image: url(./image/quote-bg-1-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -106,19 +109,19 @@
       }
 
       &-testimonial {
-        font-size: 24px;
+        font-size: variables.$ucla-font-size-large;
         font-weight: bold;
         padding: 0 0 24px;
 
         @media (min-width: breakpoint-min(lg)) {
           padding: 42px 0 24px;
-          font-size: 36px;
-          line-height: 40px;
+          font-size: variables.$ucla-font-size-xx-large;
+          line-height: 1.125;
         }
 
         &::before {
           display: inline-block;
-          font-size: 24px;
+          font-size: variables.$ucla-font-size-large;
           width: 30px;
           height: 30px;
           content: "“";
@@ -126,7 +129,7 @@
           left: 32px;
 
           @media (min-width: breakpoint-min(md)) {
-            font-size: 36px;
+            font-size: variables.$ucla-font-size-xx-large;
           }
 
           @media (min-width: breakpoint-min(lg)) {
@@ -137,14 +140,14 @@
         span.last {
           &::after {
             display: inline-block;
-            font-size: 24px;
+            font-size: variables.$ucla-font-size-large;
             width: 30px;
             height: 30px;
             content: "”";
             position: relative;
 
             @media (min-width: breakpoint-min(md)) {
-              font-size: 36px;
+              font-size: variables.$ucla-font-size-xx-large;
             }
           }
         }
