@@ -8283,6 +8283,7 @@ nav ul {
 }
 .select__menu {
   appearance: none;
+  -webkit-appearance: none;
   background: #ebebeb url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
   background-size: 24px;
   font-size: 1rem;
@@ -8316,6 +8317,10 @@ nav ul {
   background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
   background-size: 24px 24px;
 }
+.select.hasError > .select__menu:focus {
+  outline: 3px solid #d60000;
+  outline-offset: 1px;
+}
 .select.hasError > .select__error {
   display: block;
   color: #d60000;
@@ -8329,10 +8334,11 @@ nav ul {
   padding: 9px;
   border-radius: 2px;
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 .checkbox__input:hover {
   background: #0079bf;
+  cursor: pointer;
 }
 .checkbox__input:focus {
   outline-style: dotted;
@@ -8364,11 +8370,12 @@ nav ul {
   border-radius: 12px;
   border: 1px solid #808080;
   background-clip: content-box;
-  margin-right: 11px;
+  margin-right: 8px;
 }
 .radio__input:hover {
   background: #0079bf;
   border-color: #0079bf;
+  cursor: pointer;
 }
 .radio__input:checked {
   background: #003b5c;
