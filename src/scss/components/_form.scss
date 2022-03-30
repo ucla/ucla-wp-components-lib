@@ -40,7 +40,7 @@
     color: colors.$medium-grey4;
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 3px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
   }
@@ -70,6 +70,11 @@
       color: colors.$error-red;
       margin-top: 8px;
     }
+
+    &:focus {
+      outline: 3px solid colors.$error-red;
+      outline-offset: 1px;
+    }
   }
 }
 
@@ -91,7 +96,7 @@
 
   &__menu {
     appearance: none;
-    background: colors.$lightest-grey-2 url("/icons/down--blue.svg") no-repeat 98.5% 50%;
+    background: colors.$lightest-grey-2 url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: variables.$ucla-font-size-default;
     line-height: 1.5;
@@ -105,7 +110,7 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 1px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
 
