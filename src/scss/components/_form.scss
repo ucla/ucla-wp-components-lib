@@ -40,7 +40,7 @@
     color: colors.$medium-grey4;
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 3px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
   }
@@ -70,6 +70,11 @@
       color: colors.$error-red;
       margin-top: 8px;
     }
+
+    &:focus {
+      outline: 3px solid colors.$error-red;
+      outline-offset: 1px;
+    }
   }
 }
 
@@ -91,7 +96,8 @@
 
   &__menu {
     appearance: none;
-    background: colors.$lightest-grey-2 url("/icons/down--blue.svg") no-repeat 98.5% 50%;
+    -webkit-appearance: none;
+    background: colors.$lightest-grey-2 url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: variables.$ucla-font-size-default;
     line-height: 1.5;
@@ -105,7 +111,7 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 1px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
 
@@ -129,6 +135,11 @@
       border: 1px solid red;
       background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
       background-size: 24px 24px;
+
+      &:focus {
+        outline: 3px solid colors.$error-red;
+        outline-offset: 1px;
+      }
     }
 
     & > .select__error {
@@ -149,10 +160,11 @@
     padding: 9px;
     border-radius: 2px;
     display: inline-block;
-    margin-right: 12px; // should be 16px but subtracted 4 from default label/input spacing
+    margin-right: 8px; // should be 16px but subtracted 4 from default label/input spacing
 
     &:hover {
       background: colors.$hover-state;
+      cursor: pointer;
     }
 
     &:focus {
@@ -194,11 +206,12 @@
     border-radius: 12px;
     border: 1px solid #808080;
     background-clip: content-box;
-    margin-right: 11px; // should be 16px but subtracted 5 from default label/input spacing
+    margin-right: 8px; // should be 16px but subtracted 5 from default label/input spacing
 
     &:hover {
       background: colors.$hover-state;
       border-color: colors.$hover-state;
+      cursor: pointer;
     }
 
     &:checked {
