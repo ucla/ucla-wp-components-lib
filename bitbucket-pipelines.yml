@@ -193,10 +193,7 @@ pipelines:
             - gulp generateCompLibScripts
             - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
-            - gulp production
-            # redirection to most current version hack
-            - mkdir redirection
-            - touch ./redirection/index.html  
+            - gulp production 
             # deploy build to S3
             - pipe: atlassian/aws-s3-deploy:0.4.3
               variables:
