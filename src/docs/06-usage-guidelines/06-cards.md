@@ -5,9 +5,9 @@ title: Cards
 
 Preview articles, topics and events in a visual way.
 
-<h2>Usage</h2>
+## Usage
 
-<h3>Usability Guidance</h3>
+### Usability Guidance
 
 * Use plain language when writing headlines and descriptions.
 * Avoid technical language, acronyms or jargon people don't understand.
@@ -15,13 +15,13 @@ Preview articles, topics and events in a visual way.
 * Limit descriptions below headlines to one sentence or 2-3 lines.
 * Use original images rather than stock images to maintain credibility and trust among your users.
 
-<strong>Further Reading</strong>
+**Further Reading**
 
 * [Cards](https://inclusive-components.design/cards/) (Inclusive Components)
 * [5 Tips for Writing Headlines That Convert](https://www.nngroup.com/articles/headings-pickup-lines/) (Nielsen Norman Group)
 * [First 2 Words: A Signal for the Scanning Eye](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/) (Nielsen Norman Group)
 
-<h3>Accessibility Requirements</h3>
+### Accessibility Requirements
 
 * Link the card's headline, heading or title to provide the most succinct description to screen readers and search engines. Both technologies use links to understand and navigate document structure.
 * Wrap your link around the image if you decide to include one.
@@ -29,20 +29,20 @@ Preview articles, topics and events in a visual way.
 * Write [alt text](https://webaim.org/techniques/alttext/) for any images you include.
 * Avoid linking from buttons with generic labels like "read more" or "view details." Screen readers cannot differentiate card topics with the same link text.
 
-<h2>Basic Card</h2>
+## Basic Card
 
-<h3>Do’s and Don’ts</h3>
+### Do’s and Don’ts
 
-<h4>Do’s</h4>
+#### Do’s
 
 * Do adjust the container color of the card to grey-05 if it’s being used on a white background.
 
-<h4>Don’ts</h4>
+#### Don’ts
 
 * Don’t adjust the container color to a color other than white or grey-05.
 * Don’t use primary or secondary buttons in cards.
 
-<h3>Code</h3>
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. Basic Card backgrounds will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "basic-card" class to "basic-card-grey."
 
@@ -51,9 +51,9 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards'}}
 ```
 
-<h2>Event Card</h2>
+## Event Card
 
-<h3>Code</h3>
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page.
 
@@ -62,19 +62,19 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--event'}}
 ```
 
-<h2>Featured Story Card</h2>
+## Featured Story Card
 
-<h3>Do’s and Don’ts</h3>
+### Do’s and Don’ts
 
-<h4>Do’s</h4>
+#### Do’s
 
 * Only use one featured card per section.
 
-<h4>Don’ts</h4>
+#### Don’ts
 
 * Don’t stack multiple featured cards in one section.
 
-<h3>Code</h3>
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. Featured story cards should be included within a parent "section" or "div" tag with the class, "story." Non-featured story cards (shown in the next section) can be included below featured stories.
 
@@ -82,9 +82,9 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--featured-story'}}
 ```
 
-<h2>Story Card</h2>
+## Story Card
 
-<h3>Code</h3>
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page.
 
@@ -92,9 +92,9 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--story'}}
 ```
 
-<h2>Person Card</h2>
+## Person Card
 
-<h3>Code</h3>
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. A person card's background will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "person-card" class to "person-card-grey."
 
