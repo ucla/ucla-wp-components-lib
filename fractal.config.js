@@ -93,7 +93,7 @@ const myCustomisedTheme = mandelbrot({
   nav: ['search', 'components', 'docs', 'information'],
   styles: ['default', '/css/ucla-fractal-theme.css'],
   scripts: ['default', '/js/ucla-fractal-theme.js'],
-  naviation: 'split',
+  navigation: 'split',
   favicon: '/favicon.ico',
 });
 
