@@ -33,7 +33,7 @@ The supplied icons have been created and reviewed according to the known needs o
 <h2>Social Icons</h2>
 {{render '@social-icons'}}
 
-<h1>Code</h1>
+<h2>Code</h2>
 
 <h3>Use as an Image</h3>
 
