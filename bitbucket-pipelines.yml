@@ -194,4 +194,17 @@ pipelines:
             - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
             - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
             - gulp production
+            # redirection to most current version hack
+            - mkdir redirection
+            - touch ./redirection/index.html  
+            # deploy build to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: campus-webcomponents-ucla-edu/
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+                ACL: 'public-read'
+                EXTRA_ARGS: "--delete"  
 
