@@ -7,7 +7,7 @@ Display content in a compact manner. Accordions provide a space-saving technique
 
 ## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
 * Use accordions only when information doesn't need to be immediately visible, and you believe additional information will overwhelm users.
 * Use accordions to a greater extent on mobile devices to help reduce scrolling.
@@ -18,31 +18,34 @@ Display content in a compact manner. Accordions provide a space-saving technique
 * [Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/) (Nielsen Norman Group)
 * [Accessible accordions & disclosure widgets](https://github.com/scottaohara/a11y_accordions) (The A11Y Project)
 
-### **Code Guidance**
+### Code Guidance
 
 * Be sure include a class of `accordion-last` on the last element of your accordion.
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * Use `<dl>` with a nested `<button>` element.
 * Only display one load more button per page or differentiate load more button text so screen readers can differentiate for non-sighted users.
 * Apply ARIA roles so accordions are tab-able.
 * Apply ARIA states to denote open headings and panels.
+<<<<<<< HEAD
+=======
 
-### **Do’s and Don’ts**
+### Do’s and Don’ts
 
-#### **Do’s**
+#### Do’s
 
 * Customize the heading to describe the content nested within each panel.
 * Use an icon or text label to visually indicate more information is contained within.
 
-#### **Don’ts**
+#### Don’ts
 
 * Don't nest the primary sections of a page in accordions, nest only the secondary topics.
 * Don't use accordions when additional or related content should have a separate page, due to the length of content or when visibility is needed in navigation and search engines.
 
-### **Code**
+### Code
 
 ```
 {{view '@accordion'}}
 ```
+>>>>>>> 685da7f

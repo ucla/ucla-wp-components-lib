@@ -13,7 +13,7 @@ Available class utilities |  Hex color
 .has-background-ucla-blue | #2774AE
 .has-background-white | #FFFFFF
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 When using a background color the foreground text requires a contrast ratio minimum level AA according to WCAG standards and UCLA's DCP. In order to help meet this requirement the class `.has-white-text` has been added to the library and should be applied when necessary. You can test your color ratios for compliance with [Web Aim's contrast checker](https://webaim.org/resources/contrastchecker/).
 

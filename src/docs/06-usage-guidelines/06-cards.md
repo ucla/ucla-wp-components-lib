@@ -5,9 +5,9 @@ title: Cards
 
 Preview articles, topics and events in a visual way.
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
 * Use plain language when writing headlines and descriptions.
 * Avoid technical language, acronyms or jargon people don't understand.
@@ -21,7 +21,7 @@ Preview articles, topics and events in a visual way.
 * [5 Tips for Writing Headlines That Convert](https://www.nngroup.com/articles/headings-pickup-lines/) (Nielsen Norman Group)
 * [First 2 Words: A Signal for the Scanning Eye](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/) (Nielsen Norman Group)
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * Link the card's headline, heading or title to provide the most succinct description to screen readers and search engines. Both technologies use links to understand and navigate document structure.
 * Wrap your link around the image if you decide to include one.
@@ -29,31 +29,31 @@ Preview articles, topics and events in a visual way.
 * Write [alt text](https://webaim.org/techniques/alttext/) for any images you include.
 * Avoid linking from buttons with generic labels like "read more" or "view details." Screen readers cannot differentiate card topics with the same link text.
 
-## **Basic Card**
+## Basic Card
 
-### **Do’s and Don’ts**
+### Do’s and Don’ts
 
-#### **Do’s**
+#### Do’s
 
 * Do adjust the container color of the card to grey-05 if it’s being used on a white background.
 
-#### **Don’ts**
+#### Don’ts
 
 * Don’t adjust the container color to a color other than white or grey-05.
 * Don’t use primary or secondary buttons in cards.
 
-### **Code**
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. Basic Card backgrounds will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "basic-card" class to "basic-card-grey."
 
 
 ```
-{{view '@cards'}}
+{{view '@cards--basic'}}
 ```
 
-## **Event Card**
+## Event Card
 
-### **Code**
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page.
 
@@ -62,19 +62,19 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--event'}}
 ```
 
-## **Featured Story Card**
+## Featured Story Card
 
-### **Do’s and Don’ts**
+### Do’s and Don’ts
 
-#### **Do’s**
+#### Do’s
 
 * Only use one featured card per section.
 
-#### **Don’ts**
+#### Don’ts
 
 * Don’t stack multiple featured cards in one section.
 
-### **Code**
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. Featured story cards should be included within a parent "section" or "div" tag with the class, "story." Non-featured story cards (shown in the next section) can be included below featured stories.
 
@@ -82,9 +82,9 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--featured-story'}}
 ```
 
-## **Story Card**
+## Story Card
 
-### **Code**
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page.
 
@@ -92,9 +92,9 @@ Use the `<article>` element to denote your card as a standalone element within t
 {{view '@cards--story'}}
 ```
 
-## **Person Card**
+## Person Card
 
-### **Code**
+### Code
 
 Use the `<article>` element to denote your card as a standalone element within the body of your page. A person card's background will have a white background by default and should be used on dark backgrounds. For usage on light backgrounds, change the component's parent "person-card" class to "person-card-grey."
 
