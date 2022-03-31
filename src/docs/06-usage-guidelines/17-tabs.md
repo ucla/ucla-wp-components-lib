@@ -7,15 +7,15 @@ Navigate content within a page or section of your site. Tabs provide the ability
 
 Tabs can represent static pages or dynamic views of one page, with a single or multiple URL for each view. UCLA's tabs have been forked and themed for our uses from the [W3.org tab examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html).
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
 * Limit to 2-6 tabs within each page or section.
 * Use succinct labels of 1-2 words in length for each tab.
 * Visually distinguish current and other tabs with active, hover and focus states.
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * Wrap your tabs in a container with ARIA `role="tablist"` and an `aria-label`.
 * Use the button `<button>` element for tabs with ARIA `role="tab"` and `aria-selected="true"` or `"false"`.
@@ -27,7 +27,7 @@ Tabs can represent static pages or dynamic views of one page, with a single or m
 
 * [ARIA tab role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role) (Mozilla)
 
-## **Code**
+## Code
 
 ### HTML
 

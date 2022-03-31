@@ -5,28 +5,28 @@ title: Ribbons
 
 Highlight important ideas or brand tag lines.
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
 * Limit 1-2 ribbons per page and focus on your most important message.
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * Use the approved brand colors to ensure ribbons have high color contrast and meet accessibility standards.
 * Use the `<aside>` element to denote ribbons as standalone content.
 
-## **Ribbon**
+## Ribbon
 
-### **Code**
+### Code
 
 ```
 {{ render '@ribbons--brand' }}
 ```
 
-## **Highlight Ribbon**
+## Highlight Ribbon
 
-### **Code**
+### Code
 
 ```
 {{ render '@ribbons--highlight' }}

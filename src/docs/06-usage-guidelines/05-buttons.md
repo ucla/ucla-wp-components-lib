@@ -5,7 +5,7 @@ title: Buttons
 
 Buttons draw attention to important actions, content or next steps. Button tags, `<button>`, are used for internal page actions. Links, or `<a>` tags, are used for linking to an external page.
 
-## **Usage**
+## Usage
 <div class="tabs">
     <!-- .tablist is the container for tabs only -->
     <div role="tablist" aria-label="content-tabs">
@@ -27,12 +27,14 @@ Buttons draw attention to important actions, content or next steps. Button tags,
 <br/><br/>
 
 **Further Reading**
+
 * [Information Scent: How Users Decide Where to Go Next](https://www.nngroup.com/articles/information-scent/) (Nielsen Norman Group)
 * [Writing Hyperlinks: Salient, Descriptive, Start with Keyword](https://www.nngroup.com/articles/writing-links/) (Nielsen Norman Group)
 * [Learn More Links: You Can Do Better](https://www.nngroup.com/articles/learn-more-links/) (Nielsen Norman Group)
     </div>
     <div tabindex="0" role="tabpanel" id="panel-02-tab" aria-labelledby="panel-02" hidden="" class="tabcontent">
 <br/>
+
 * Write button labels so they make sense without reading the copy around them so they are accessible to screen readers.
 * Don’t write button labels that are generic or not specific to the content being presented.
 * Avoid more than one instance of generic text like "Read More". Screen readers can't disambiguate multiple buttons with the same or similar text.
@@ -40,7 +42,8 @@ Buttons draw attention to important actions, content or next steps. Button tags,
 * Link headlines in Story Cards or Event Cards rather than adding buttons with generic text.
 <br/><br/>
 
-### **Code Guidance**
+### Code Guidance
+
 * Be sure to include the minimum parent class "ucla" in the containers for your links. This will allow the element to inherit default link styles.
 * Adding the "campus" classname will allow for grid layout.
 <br/><br/>
@@ -51,9 +54,9 @@ Buttons draw attention to important actions, content or next steps. Button tags,
     </div>
 </div>
 
-## **Code**
+## Code
 
-### **Buttons**
+### Buttons
 
 If your button links to another page, use the anchor element.
 ```
@@ -76,50 +79,53 @@ Span wrapper that represents self-contained content.
 <span class="btn-span">Button Copy</span>
 ```
 
-## **Primary Button**
+## Primary Button
 
-### **Do’s and Don’ts**
+### Do’s and Don’ts
 
-#### **Do’s**
+#### Do’s
+
 * Do use only one primary button per section of content.
 * Do group primary buttons with secondary buttons or tertiary buttons.
 
-#### **Don’ts**
+#### Don’ts
+
 * Don’t change the color of buttons or button labels.
 * Don’t group more than one primary button together.
 
-### **Anatomy**
+### Anatomy
 
-### **Code**
+### Code
+
 ```
 {{ render '@button--primary' }}
 ```
 
-## **Secondary Button**
+## Secondary Button
 
-### **Code**
+### Code
 
 ```
 {{ render '@button--secondary' }}
 ```
 
-## **Tertiary Button**
-### **Code**
+## Tertiary Button
+### Code
 
 ```
 {{ render '@button--tertiary' }}
 ```
 
-## **Button Group**
-### **Code**
+## Button Group
+### Code
 
 ```
 {{ render '@button--group' }}
 ```
 
 
-## **Links**
-### **Code**
+## Links
+### Code
 
 ```
 {{ render '@links--related-links' }}
@@ -132,8 +138,8 @@ Span wrapper that represents self-contained content.
 {{ render '@links--inline' }}
 ```
 
-## **Pagination Button**
-### **Code**
+## Pagination Button
+### Code
 
 ```
 {{ render '@button--pagination' }}
