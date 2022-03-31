@@ -8260,14 +8260,14 @@ nav ul {
 .text.hasError > .text__input {
   border: 1px solid red;
 }
+.text.hasError > .text__input:focus {
+  outline: 3px solid #d60000;
+  outline-offset: 1px;
+}
 .text.hasError > .text__error {
   display: block;
   color: #d60000;
   margin-top: 8px;
-}
-.text.hasError:focus {
-  outline: 3px solid #d60000;
-  outline-offset: 1px;
 }
 
 .select__label {
@@ -8298,7 +8298,7 @@ nav ul {
   /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
 }
 .select__menu:focus {
-  outline: 1px solid #2774ae;
+  outline: 3px solid #2774ae;
   outline-offset: 1px;
 }
 .select__menu:active {
@@ -8341,7 +8341,7 @@ nav ul {
   cursor: pointer;
 }
 .checkbox__input:focus {
-  outline-style: dotted;
+  outline: 1px solid #0079bf;
   outline-offset: 1px;
 }
 .checkbox__input:checked {
@@ -8354,8 +8354,6 @@ nav ul {
   outline-offset: -1px;
 }
 .checkbox__input:checked::after {
-  background-image: url("/icons/denotive/form-success.svg");
-  background-size: 10px 10px;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -8382,17 +8380,13 @@ nav ul {
   border-color: #003b5c;
 }
 .radio__input:checked::after {
-  background-image: url("/icons/denotive/form-success.svg");
-  background-size: 25px 25px;
-  background-repeat: none;
-  background-position: 50%;
   display: inline-block;
   content: "";
   width: 22px;
   height: 22px;
 }
 .radio__input:focus {
-  outline-style: dotted;
+  outline: 1px solid #0079bf;
   outline-offset: 1px;
 }
 

@@ -63,17 +63,17 @@
   &.hasError {
     & > .text__input {
       border: 1px solid red;
+      
+      &:focus {
+        outline: 3px solid colors.$error-red;
+        outline-offset: 1px;
+      }
     }
 
     & > .text__error {
       display: block;
       color: colors.$error-red;
       margin-top: 8px;
-    }
-
-    &:focus {
-      outline: 3px solid colors.$error-red;
-      outline-offset: 1px;
     }
   }
 }
@@ -111,7 +111,7 @@
     }
 
     &:focus {
-      outline: 1px solid colors.$ucla-blue;
+      outline: 3px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
 
@@ -168,7 +168,7 @@
     }
 
     &:focus {
-      outline-style: dotted;
+      outline: 1px solid colors.$focus-state;
       outline-offset: 1px;
     }
 
@@ -185,8 +185,8 @@
     }
 
     &:checked::after {
-      background-image: url("/icons/denotive/form-success.svg");
-      background-size: 10px 10px;
+      // background-image: url("/icons/denotive/form-success.svg");
+      // background-size: 10px 10px;
       display: inline-block;
       width: 10px;
       height: 10px;
@@ -220,10 +220,10 @@
     }
 
     &:checked::after {
-      background-image: url("/icons/denotive/form-success.svg");
-      background-size: 25px 25px;
-      background-repeat: none;
-      background-position: 50%;
+      // background-image: url("/icons/denotive/form-success.svg");
+      // background-size: 25px 25px;
+      // background-repeat: none;
+      // background-position: 50%;
       display: inline-block;
       content: "";
       width: 22px;
@@ -231,7 +231,7 @@
     }
 
     &:focus {
-      outline-style: dotted;
+      outline: 1px solid colors.$focus-state;
       outline-offset: 1px;
     }
   }
