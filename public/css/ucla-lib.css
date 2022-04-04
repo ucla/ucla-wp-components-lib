@@ -6325,24 +6325,32 @@ nav ul {
   list-style: none;
 }
 
-.has-background-grey-40 {
-  background: #999;
+.has-background-grey-20 {
+  background-color: #ccc;
 }
-
-.has-background-lightest-grey-2 {
-  background: #ebebeb;
+.has-background-light-grey-08 {
+  background-color: #ebebeb;
 }
-
 .has-background-light-grey {
-  background: #e7e7e8;
+  background-color: #e7e7e8;
 }
-
+.has-background-grey-05 {
+  background-color: #f2f2f2;
+}
+.has-background-grey-03 {
+  background-color: #f7f7f7;
+}
 .has-background-ucla-blue {
-  background: #2774ae;
+  background-color: #2774ae;
 }
-
 .has-background-white {
-  background: #fff;
+  background-color: #fff;
+}
+.has-background-darker-blue {
+  background-color: #005587;
+}
+.has-background-darkest-blue {
+  background-color: #003b5c;
 }
 
 .alert {
@@ -6811,6 +6819,12 @@ nav ul {
   background: url("/icons/denotive/external-link--blue.svg");
   background-size: contain;
   background-position: 0 -1px;
+}
+.btn--tertiary--darkbg.icon--play::before {
+  background-image: url("/icons/denotive/play--black.svg");
+}
+.btn--tertiary--darkbg.icon--link::after {
+  background-image: url("/icons/denotive/external-link--black.svg");
 }
 .btn--group {
   background: transparent;

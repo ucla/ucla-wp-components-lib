@@ -7,11 +7,15 @@ You can set the background of any element using the `has-background-*` class. Us
 
 Available class utilities |  Hex color
 ------------ | -------------
-.has-background-grey-40 | #999999
-.has-background-lightest-grey-2 | #EBEBEB
+.has-background-grey-20 | #CCCCCC
+.has-background-grey-05 | #F2F2F2
+.has-background-grey-03 | #F7F7F7
 .has-background-light-grey | #E7E7E8
+.has-background-light-grey-08 | #EBEBEB
 .has-background-ucla-blue | #2774AE
 .has-background-white | #FFFFFF
+.has-background-darker-blue | #005587
+.has-background-darkest-blue | #003B5C
 
 ### Accessibility Requirements
 

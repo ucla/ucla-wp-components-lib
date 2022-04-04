@@ -334,6 +334,15 @@
       background-size: contain;
       background-position: 0 -1px;
     }
+
+    &--darkbg {
+      &.icon--play::before {
+        background-image: url("/icons/denotive/play--black.svg");
+      }
+      &.icon--link::after {
+        background-image: url("/icons/denotive/external-link--black.svg");
+      }
+    }
   }
 
   /*** Button Group Styling ***/
