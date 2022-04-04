@@ -8587,6 +8587,9 @@ li .ucla-list--bulleted li::before {
   padding-left: 0;
 }
 
+.ribbon {
+  max-width: 776px;
+}
 .ribbon span {
   font-size: 1.5rem;
   font-weight: bold;
