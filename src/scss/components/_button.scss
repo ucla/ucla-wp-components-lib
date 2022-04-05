@@ -13,16 +13,6 @@
   align-items: center;
   text-decoration: none;
 
-  &--sm {
-    padding: 8px 12px;
-    font-size: variables.$ucla-font-size-small;
-  }
-
-  &--xs {
-    padding: 4px 8px;
-    font-size: variables.$ucla-font-size-default;
-  }
-
   &:focus {
     outline: none;
   }
@@ -330,7 +320,7 @@
     }
 
     &.icon--link::after {
-      background: url("/icons/denotive/external-link--blue.svg");
+      background: url("/icons/denotive/external-link--defaultblue.svg");
       background-size: contain;
       background-position: 0 -1px;
     }
@@ -405,6 +395,16 @@
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
     }
+  }
+
+  &--sm {
+    padding: 8px 12px;
+    font-size: variables.$ucla-font-size-small;
+  }
+
+  &--xs {
+    padding: 4px 8px;
+    font-size: variables.$ucla-font-size-default;
   }
 }
 
