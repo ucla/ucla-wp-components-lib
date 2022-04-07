@@ -7995,68 +7995,69 @@ nav ul {
 .footer__dept--social-facebook:active, .footer__dept--social-twitter:active, .footer__dept--social-instagram:active, .footer__dept--social-snapchat:active, .footer__dept--social-linkedin:active, .footer__dept--social-youtube:active, .footer__dept--social-tiktok:active {
   background-color: #ffbf0f;
 }
-.footer .global-foot {
+
+.global-foot {
   padding: 24px 36px;
 }
-.footer .global-foot .social-links-container {
+.global-foot .social-links-container {
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  .footer .global-foot .social-links-container {
+  .global-foot .social-links-container {
     margin: 0;
     order: 3;
   }
 }
-.footer .global-foot__wrapper {
+.global-foot__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 @media only screen and (min-width: 768px) {
-  .footer .global-foot__wrapper {
+  .global-foot__wrapper {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
 }
-.footer .global-foot__legal {
+.global-foot__legal {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   font-size: 0.8rem;
 }
-.footer .global-foot__legal--copyright {
+.global-foot__legal--copyright {
   font-size: 0.8rem;
   line-height: 1.33;
 }
-.footer .global-foot__legal--list {
+.global-foot__legal--list {
   padding-inline-start: 0;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 @media only screen and (min-width: 1024px) {
-  .footer .global-foot__legal--list {
+  .global-foot__legal--list {
     margin: 0 auto;
   }
 }
-.footer .global-foot__legal--list-item {
+.global-foot__legal--list-item {
   display: block;
   margin-right: 1rem;
 }
 @media only screen and (min-width: 768px) {
-  .footer .global-foot__legal--list-item {
+  .global-foot__legal--list-item {
     display: inline;
   }
 }
-.footer .global-foot__legal--link {
+.global-foot__legal--link {
   text-decoration: none;
   color: #2774ae;
   font-weight: bold;
 }
 @media only screen and (min-width: 1024px) {
-  .footer .global-foot__legal {
+  .global-foot__legal {
     flex-direction: row;
   }
 }
@@ -8104,17 +8105,14 @@ nav ul {
   margin-bottom: 16px;
 }
 .email__description {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .email__input {
-  display: block;
   padding: 0;
   margin-bottom: 22px;
-  vertical-align: top;
 }
 @media (min-width: 1024px) {
   .email__input {
-    display: table-cell;
     padding: 0 12px;
     margin-bottom: 0;
   }
@@ -8169,17 +8167,6 @@ nav ul {
   font-weight: bold;
   padding: 12px 24px;
   width: 100%;
-  margin-top: 6px;
-  position: relative;
-  top: 0;
-  max-width: 120px;
-}
-@media (min-width: 1024px) {
-  .email__input-submit {
-    margin-top: 0;
-    top: 23px;
-    max-width: none;
-  }
 }
 .email__input-submit:active {
   background-color: #ffbf0f;
@@ -8190,14 +8177,17 @@ nav ul {
   outline-offset: 1px;
 }
 .email__input-container {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: end;
   padding: 0;
   width: 100%;
   margin-bottom: 24px;
 }
 @media (min-width: 1024px) {
   .email__input-container {
-    display: table;
+    flex-wrap: nowrap;
   }
 }
 .email__input-label {
@@ -8205,72 +8195,60 @@ nav ul {
 }
 .email__input-email {
   width: auto;
+  flex-basis: 100%;
 }
 @media (min-width: 1024px) {
   .email__input-email {
-    width: 28.32%;
+    flex-basis: auto;
     padding-left: 0;
-  }
-}
-@media (min-width: 768px) {
-  .email__input-email input[type=text] {
-    max-width: 520px;
   }
 }
 .email__input-firstname {
   width: auto;
+  flex-basis: 100%;
 }
 @media (min-width: 768px) {
   .email__input-firstname {
-    width: 256px;
-    display: inline-block;
-    margin-right: 5px;
+    flex-basis: calc(50% - 12px);
+    margin-right: 12px;
   }
 }
 @media (min-width: 1024px) {
   .email__input-firstname {
-    width: 23.89%;
-    display: table-cell;
+    flex-basis: auto;
   }
 }
 .email__input-lastname {
   width: auto;
+  flex-basis: 100%;
 }
 @media (min-width: 768px) {
   .email__input-lastname {
-    width: 256px;
-    display: inline-block;
+    flex-basis: calc(50% - 12px);
+    margin-left: 12px;
   }
 }
 @media (min-width: 1024px) {
   .email__input-lastname {
-    width: 24.34%;
-    display: table-cell;
+    flex-basis: auto;
   }
 }
 .email__input-zipcode {
   width: auto;
+  flex-basis: 100%;
 }
 @media (min-width: 1024px) {
   .email__input-zipcode {
-    width: 12.04%;
+    flex-basis: auto;
   }
-}
-.email__input-zipcode input[name=Zip] {
-  max-width: 120px;
-  clear: both;
 }
 .email__input-button {
   width: auto;
   padding-right: 0;
   position: relative;
-  margin-bottom: 8px;
 }
-@media (min-width: 1024px) {
-  .email__input-button {
-    width: 11.53%;
-    margin-bottom: 0;
-  }
+.email__input:last-child {
+  margin-right: 0;
 }
 .email__legal-text {
   font-size: 0.75rem;

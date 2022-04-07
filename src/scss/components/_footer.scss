@@ -262,126 +262,110 @@
         &:active {
           background-color: colors.$active-state-dark;
         }
-
-        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-          // width: 21.33px;
-          // background-size: 21.33px;
-
-          &:hover {
-            // background-size: 21.33px;
-          }
-        }
       }
     }
   }
 
-  .global-foot {
-    padding: 24px 36px;
   
-    .social-links-container {
-      // justify-content: flex-start;
-      // padding: 0;
-      // margin-left: -8px;
-      margin: 0 auto;
-  
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        // justify-content: center;
-        // margin-left: 0;
-        margin: 0;
-        order: 3;
-      }
-    }
-  
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-  
-  
-      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-      }
-      // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-      //   flex-direction: row;
-      // }
-    }
-  
-    &__legal {
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      font-size: variables.$ucla-font-size-x-small;
-  
-      &--copyright {
-        font-size: variables.$ucla-font-size-x-small;
-        line-height: 1.33;
-  
-        // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-        //   width: 100%;
-        //   text-align: center;
-        // }
-  
-        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        //   display: inline-block;
-        //   width: 30%;
-        //   text-align: left;
-        // }
-      }
-  
-      &--list {
-        padding-inline-start: 0;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-  
-        @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-          margin: 0 auto;
-        }
-  
-        // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        //   float: right;
-        //   width: 63%;
-        // }
-  
-        &-item {
-          display: block;
-          margin-right: 1rem;
-  
-          @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-            display: inline;
-          }
-        }
-      }
-  
-      &--link {
-        text-decoration: none;
-        color: colors.$ucla-blue;
-        font-weight: bold;
-      }
-  
-      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
-        flex-direction: row;
-      }
-    }
-  
-    // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-    //   padding: 0 12px;
-    // }
-  }
 }
 
 // Global footer area
-// .ucla.campus.global-foot {
-//   padding-top: 0;
-//   padding-bottom: 32px; 
+.global-foot {
+  padding: 24px 36px;
 
-//   @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
-//     padding-top: 32px;
-//   }
-// }
+  .social-links-container {
+    // justify-content: flex-start;
+    // padding: 0;
+    // margin-left: -8px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+      // justify-content: center;
+      // margin-left: 0;
+      margin: 0;
+      order: 3;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+    // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+    //   flex-direction: row;
+    // }
+  }
+
+  &__legal {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: variables.$ucla-font-size-x-small;
+
+    &--copyright {
+      font-size: variables.$ucla-font-size-x-small;
+      line-height: 1.33;
+
+      // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+      //   width: 100%;
+      //   text-align: center;
+      // }
+
+      // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      //   display: inline-block;
+      //   width: 30%;
+      //   text-align: left;
+      // }
+    }
+
+    &--list {
+      padding-inline-start: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        margin: 0 auto;
+      }
+
+      // @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      //   float: right;
+      //   width: 63%;
+      // }
+
+      &-item {
+        display: block;
+        margin-right: 1rem;
+
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+          display: inline;
+        }
+      }
+    }
+
+    &--link {
+      text-decoration: none;
+      color: colors.$ucla-blue;
+      font-weight: bold;
+    }
+
+    @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      flex-direction: row;
+    }
+  }
+
+  // @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+  //   padding: 0 12px;
+  // }
+}
 
 
 
@@ -453,17 +437,18 @@
   }
 
   &__description {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   &__input {
-    display: block;
+    // display: block;
     padding: 0;
     margin-bottom: 22px;
-    vertical-align: top;
+    // vertical-align: top;
+    // margin-right: 1rem;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
-      display: table-cell;
+      // display: table-cell;
       padding: 0 12px;
       margin-bottom: 0;
     }
@@ -522,16 +507,16 @@
       font-weight: bold;
       padding: 12px 24px;
       width: 100%;
-      margin-top: 6px;
-      position: relative;
-      top: 0;
-      max-width: 120px;
+      // margin-top: 6px;
+      // position: relative;
+      // top: 0;
+      // max-width: 120px;
 
-      @media (min-width: breakpoints.breakpoint-min(lg)) {
-        margin-top: 0;
-        top: 23px;
-        max-width: none;
-      }
+      // @media (min-width: breakpoints.breakpoint-min(lg)) {
+      //   margin-top: 0;
+      //   top: 23px;
+      //   max-width: none;
+      // }
 
       &:active {
         background-color: colors.$button-active;
@@ -545,13 +530,16 @@
     }
 
     &-container {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: end;
       padding: 0;
       width: 100%;
       margin-bottom: 24px;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        display: table;
+        flex-wrap: nowrap;
       }
     }
 
@@ -561,71 +549,79 @@
 
     &-email {
       width: auto;
+      flex-basis: 100%;
+
+      // @media (min-width: breakpoints.breakpoint-min(lg)) {
+      //   width: 28.32%;
+      //   padding-left: 0;
+      // }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        width: 28.32%;
+        flex-basis: auto;
         padding-left: 0;
-      }
-
-      @media (min-width: breakpoints.breakpoint-min(md)) {
-        input[type="text"] {
-          max-width: 520px;
-        }
       }
     }
 
     &-firstname {
       width: auto;
+      flex-basis: 100%;
 
       @media (min-width: breakpoints.breakpoint-min(md)) {
-        width: 256px;
-        display: inline-block;
-        margin-right: 5px;
+        // width: 256px;
+        // display: inline-block;
+        // margin-right: 5px;
+        flex-basis: calc(50% - 12px);
+        margin-right: 12px;
       }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        width: 23.89%;
-        display: table-cell;
+        flex-basis: auto
       }
     }
 
     &-lastname {
       width: auto;
+      flex-basis: 100%;
 
       @media (min-width: breakpoints.breakpoint-min(md)) {
-        width: 256px;
-        display: inline-block;
+        
+        flex-basis: calc(50% - 12px);
+        margin-left: 12px;
       }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        width: 24.34%;
-        display: table-cell;
+        flex-basis: auto
       }
     }
 
     &-zipcode {
       width: auto;
+      flex-basis: 100%;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        width: 12.04%;
+        flex-basis: auto
       }
 
-      input[name="Zip"] {
-        max-width: 120px;
-        clear: both;
-      }
+      // input[name="Zip"] {
+      //   max-width: 120px;
+      //   clear: both;
+      // }
     }
 
     &-button {
       width: auto;
       padding-right: 0;
       position: relative;
-      margin-bottom: 8px;
+      // margin-bottom: 8px;
 
-      @media (min-width: breakpoints.breakpoint-min(lg)) {
-        width: 11.53%;
-        margin-bottom: 0;
-      }
+      // @media (min-width: breakpoints.breakpoint-min(lg)) {
+      //   width: 11.53%;
+      //   margin-bottom: 0;
+      // }
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
