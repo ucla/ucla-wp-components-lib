@@ -575,7 +575,8 @@
       }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        flex-basis: auto
+        flex-basis: auto;
+        margin-right: 0;
       }
     }
 
@@ -590,7 +591,8 @@
       }
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
-        flex-basis: auto
+        flex-basis: auto;
+        margin-left: 0;
       }
     }
 

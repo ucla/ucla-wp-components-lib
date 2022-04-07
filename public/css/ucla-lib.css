@@ -8216,6 +8216,7 @@ nav ul {
 @media (min-width: 1024px) {
   .email__input-firstname {
     flex-basis: auto;
+    margin-right: 0;
   }
 }
 .email__input-lastname {
@@ -8231,6 +8232,7 @@ nav ul {
 @media (min-width: 1024px) {
   .email__input-lastname {
     flex-basis: auto;
+    margin-left: 0;
   }
 }
 .email__input-zipcode {
