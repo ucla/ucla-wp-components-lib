@@ -4,10 +4,10 @@
 .btn {
   padding: 10px 16px;
   font-size: variables.$ucla-font-size-default;
+  line-height: variables.$ucla-font-size-default;
   font-weight: bold;
   border-radius: 2px;
-  border: 2px solid transparent;
-  line-height: 1.25;
+  border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -21,30 +21,34 @@
     cursor: not-allowed;
   }
 
-  &.icon--play::before {
-    flex-shrink: 0;
-    content: "";
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 8px;
-    margin-left: -8px;
-    background: url("/icons/denotive/play--white.svg");
-    background-size: contain;
-    background-position: 0 -1px;
+  &.icon--play {
+      padding-left: 14px;
+
+      &::before {
+        flex-shrink: 0;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("/icons/denotive/play--white.svg");
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
   }
 
-  &.icon--link::after {
-    flex-shrink: 0;
-    content: "";
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-left: 8px;
-    margin-right: -8px;
-    background: url("/icons/denotive/external-link--white.svg");
-    background-size: contain;
-    background-position: 0 -1px;
+  &.icon--link {
+    padding-right: 14px;
+
+    &::after {
+      flex-shrink: 0;
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-image: url("/icons/denotive/external-link--white.svg");
+      margin-left: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   // primary-light button styling
@@ -63,7 +67,7 @@
 
     &:focus {
       background: colors.$focus-state;
-      outline: 1px dotted colors.$hover-state;
+      outline: 1px solid colors.$hover-state;
       outline-offset: 2px;
     }
 
@@ -95,7 +99,7 @@
 
     &:focus {
       background: colors.$focus-state-dark;
-      outline: 1px dotted colors.$white;
+      outline: 1px solid colors.$white;
       outline-offset: 2px;
     }
 
@@ -109,15 +113,13 @@
     }
 
     &.icon--play::before {
-      background: url("/icons/denotive/play--black.svg");
+      background-image: url("/icons/denotive/play--black.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &.icon--link::after {
-      background: url("/icons/denotive/external-link--black.svg");
+      background-image: url("/icons/denotive/external-link--black.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
   }
 
@@ -125,32 +127,32 @@
   &--secondary {
     // secondary-light button styling
     &--lightbg {
-      background: transparent;
+      background-color: transparent;
       color: colors.$default-state;
       border: 2px solid colors.$default-state;
 
       &.icon--play::before {
-        background: url("/icons/denotive/play--blue.svg");
+        background-image: url("/icons/denotive/play--blue.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link::after {
-        background: url("/icons/denotive/external-link--defaultblue.svg");
+        background-image: url("/icons/denotive/external-link--defaultblue.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--play:hover::before,
       &.icon--play:focus::before {
-        background: url("/icons/denotive/play--white.svg");
+        background-image: url("/icons/denotive/play--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link:hover::after,
       &.icon--link:focus::after {
-        background: url("/icons/denotive/external-link--white.svg");
+        background-image: url("/icons/denotive/external-link--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
@@ -170,7 +172,7 @@
       &:focus {
         background: colors.$focus-state;
         border-color: transparent;
-        outline: 1px dotted colors.$focus-state;
+        outline: 1px solid colors.$focus-state;
         outline-offset: 2px;
         color: colors.$white;
       }
@@ -195,26 +197,26 @@
 
       &.icon--play:hover::before,
       &.icon--play:focus::before {
-        background: url("/icons/denotive/play--black.svg");
+        background-image: url("/icons/denotive/play--black.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--play::before {
-        background: url("/icons/denotive/play--white.svg");
+        background-image: url("/icons/denotive/play--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link:hover::after,
       &.icon--link:focus::after {
-        background: url("/icons/denotive/external-link--black.svg");
+        background-image: url("/icons/denotive/external-link--black.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link::after {
-        background: url("/icons/denotive/external-link--white.svg");
+        background-image: url("/icons/denotive/external-link--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
@@ -234,7 +236,7 @@
       &:focus {
         background: colors.$focus-state-dark;
         border-color: transparent;
-        outline: 1px dotted colors.$white;
+        outline: 1px solid colors.$white;
         outline-offset: 2px;
         color: colors.$black;
       }
@@ -260,15 +262,13 @@
 
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background: url("/icons/denotive/play--white.svg");
+      background-image: url("/icons/denotive/play--white.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &.icon--play::before {
-      background: url("/icons/denotive/play--blue.svg");
+      background-image: url("/icons/denotive/play--blue.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &:visited {
@@ -283,7 +283,7 @@
 
     &:focus {
       background: colors.$focus-state;
-      outline: 1px dotted colors.$hover-state;
+      outline: 1px solid colors.$hover-state;
       outline-offset: 2px;
       color: colors.$white;
     }
@@ -301,28 +301,24 @@
 
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background: url("/icons/denotive/play--white.svg");
+      background-image: url("/icons/denotive/play--white.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &.icon--play::before {
-      background: url("/icons/denotive/play--blue.svg");
+      background-image: url("/icons/denotive/play--blue.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &.icon--link:hover::after,
     &.icon--link:focus::after {
-      background: url("/icons/denotive/external-link--white.svg");
+      background-image: url("/icons/denotive/external-link--white.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &.icon--link::after {
-      background: url("/icons/denotive/external-link--defaultblue.svg");
+      background-image: url("/icons/denotive/external-link--defaultblue.svg");
       background-size: contain;
-      background-position: 0 -1px;
     }
 
     &--darkbg {
@@ -367,7 +363,7 @@
         color: colors.$white;
         border-color: colors.$focus-state;
         background: colors.$focus-state;
-        outline: 1px dotted colors.$hover-state;
+        outline: 1px solid colors.$hover-state;
         outline-offset: 2px;
       }
 
@@ -400,11 +396,29 @@
   &--sm {
     padding: 8px 12px;
     font-size: variables.$ucla-font-size-small;
+    line-height: variables.$ucla-font-size-small;
+
+    &.icon--play {
+      padding-left: 10px;
+    }
+
+    &.icon--link {
+      padding-right: 10px;
+    }
   }
 
   &--xs {
     padding: 4px 8px;
-    font-size: variables.$ucla-font-size-default;
+    font-size: variables.$ucla-font-size-small;
+    line-height: variables.$ucla-font-size-small;
+
+    &.icon--play {
+      padding-left: 6px;
+    }
+
+    &.icon--link {
+      padding-right: 6px;
+    }
   }
 }
 
@@ -412,6 +426,9 @@
 .pagination,
 .pagination--boxed {
   padding-inline-start: 0;
+  padding-left: 0;
+  list-style: none;
+  margin: 16px 0;
 
   // remove comp library's default bullets
   li::before {
@@ -423,7 +440,7 @@
 
   // boxed and unboxed shared styling
   li {
-    display: inline;
+    // display: inline;
 
     & .page {
       text-decoration: none;
@@ -432,25 +449,37 @@
       border-style: solid;
       border-color: transparent;
       color: colors.$default-state;
-      background: white;
 
       &:visited {
         color: colors.$default-state;
-        background: white;
       }
 
       &:hover {
         color: colors.$white;
         background: colors.$hover-state;
         border-color: colors.$hover-state;
+
+        & .pagination-next {
+          background-image: url('/icons/denotive/right-arrow--white.svg');
+        }
+        & .pagination-prev {
+          background-image: url('/icons/denotive/left-arrow--white.svg');
+        }
       }
 
       &:focus {
         background: colors.$focus-state;
         border-color: colors.$focus-state;
-        outline: 1px dotted colors.$hover-state;
+        outline: 1px solid colors.$hover-state;
         outline-offset: 2px;
         color: colors.$white;
+
+        & .pagination-next {
+          background-image: url('/icons/denotive/right-arrow--white.svg');
+        }
+        & .pagination-prev {
+          background-image: url('/icons/denotive/left-arrow--white.svg');
+        }
       }
 
       &:active {
@@ -458,6 +487,30 @@
         border-color: colors.$active-state;
         color: colors.$white;
         outline: none;
+
+        & .pagination-next {
+          background-image: url('/icons/denotive/right-arrow--white.svg');
+        }
+        & .pagination-prev {
+          background-image: url('/icons/denotive/left-arrow--white.svg');
+        }
+      }
+
+      // Next & Previous Button
+      .pagination-next, .pagination-prev {
+        width: 8.5px;
+        height: 16px;
+        display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        background-position-x: center;
+      }
+      .pagination-next {
+        background-image: url('/icons/denotive/right-arrow--blue.svg');
+      }
+      .pagination-prev {
+        background-image: url('/icons/denotive/left-arrow--blue.svg');
       }
     }
 
@@ -492,5 +545,6 @@
     border-width: 2px;
     border-style: solid;
     border-color: colors.$default-state;
+    border-radius: 2px;
   }
 }

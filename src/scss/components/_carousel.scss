@@ -75,17 +75,26 @@
     background: colors.$ucla-blue;
     border: 0;
     margin: 1px;
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
+    width: 40px;
+    height: 40px;
 
     &--prev {
-      transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+
+      svg {
+        transform: scaleX(-1); /* Equal to rotateZ(45deg) */
+      }
+    }
+
+    &--next {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 12px;
+      height: 12px;
 
       path {
         fill: colors.$white;
@@ -103,7 +112,7 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$active-state;
+      outline: 1px solid colors.$active-state;
       outline-offset: 1px;
     }
   }
@@ -136,8 +145,8 @@
         }
 
         &:hover {
-          background: colors.$ucla-gold;
-          border: 1px solid colors.$grey-40;
+          background: colors.$hover-state;
+          border: 1px solid colors.$hover-state;
           cursor: pointer;
         }
 

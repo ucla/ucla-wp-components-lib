@@ -36,7 +36,7 @@
     color: colors.$default-state;
     font-weight: bold;
     background: none;
-    border-bottom: 4px solid transparent; // invisible border so hover state doesn't move button element
+    border: 4px solid transparent; // invisible border so hover state doesn't move button element
 
     /* when button is active */
     &[aria-selected="true"] {
@@ -51,18 +51,20 @@
 
     &:focus {
       color: colors.$focus-state;
-      outline: 1px dotted colors.$focus-state;
-      outline-offset: -2px;
+      border: 4px solid colors.$focus-state;
+      // outline: 4px solid colors.$focus-state;
+      // outline-offset: -2px;
     }
 
     &:active {
       color: colors.$grey-80;
-      border-bottom: 4px solid colors.$ucla-gold;
+      border-bottom: 4px solid colors.$active-state;
     }
   }
 
   /* .tabcontent are the tab panels containing content */
   .tabcontent {
+    margin-top: 1rem;
     position: relative;
     z-index: 2;
 
