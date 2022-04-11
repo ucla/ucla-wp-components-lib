@@ -6406,7 +6406,8 @@ nav ul {
   padding: 8px 32px 8px 16px;
 }
 .accordion__title:focus {
-  outline-style: dotted;
+  outline: 3px solid #0079bf;
+  outline-offset: -3px;
 }
 .accordion__title:hover, .accordion__title:active {
   background: #0079bf;
