@@ -28,7 +28,6 @@ Display content in a compact manner. Accordions provide a space-saving technique
 * Only display one load more button per page or differentiate load more button text so screen readers can differentiate for non-sighted users.
 * Apply ARIA roles so accordions are tab-able.
 * Apply ARIA states to denote open headings and panels.
-<<<<<<< HEAD
 
 <h3>Do’s and Don’ts</h3>
 
