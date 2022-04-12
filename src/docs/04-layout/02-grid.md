@@ -5,19 +5,19 @@ title: Grid
 
 Our fully responsive grid for UCLA digital properties has 12 columns and 5 breakpoints. It has been designed to easily adapt to different screen sizes and to ensure consistent layouts across devices.
 
-The grid has three main parts: <strong>columns</strong>, <strong>gutters</strong> and <strong>margins</strong>
+The grid has three main parts: **columns**, **gutters** and **margins**
 
-* <strong>Columns</strong>
+* **Columns**
   * Columns contain the content.
   * They act as invisible guides while setting typography and aligning elements to establish a visual rhythm.
-* <strong>Gutters</strong>
+* **Gutters**
   * Gutters are the spaces between columns.
   * They provide breathing room around elements so your content can be easily consumed.
-* <strong>Margins</strong>
+* **Margins**
   * Margins are the spaces between the 1) content area and 2) the left and right edges of the screen. (We do not use top and bottom margins for our grids.)
   * Margins define the content area from within the viewable area.
 
-<h3>Viewports and Breakpoints</h3>
+### Viewports and Breakpoints
 
 We have defined commonly used breakpoints to make development for all screen sizes more efficient. These variables are used through our grid and spacing class names.
 
@@ -32,7 +32,7 @@ Medium / Tablet Devices | 768px | "md"
 Large / Desktop or Laptop Devices | 1024px | "lg"
 Extra Large / Presentation Mode | 1280px | "xl"
 
-<h3>Breakpoint Examples</h3>
+### Breakpoint Examples
 
 ```
 // CSS Example Breakpoint Usage
@@ -47,7 +47,7 @@ Extra Large / Presentation Mode | 1280px | "xl"
 
 ```
 
-<h3>Columns</h3>
+### Columns
 
 In order to use the column grid you must wrap the page area with the “ucla campus” class.
 

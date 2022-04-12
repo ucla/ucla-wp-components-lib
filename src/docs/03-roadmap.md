@@ -5,7 +5,7 @@ title: Project Roadmap
 
 This document contains future goals for the UCLA component library.
 
-<h2>Goals</h2>
+## Goals
 
 - Complete component builds from design team and get reviewed by DCP:
   - [x] Accordion
@@ -25,10 +25,10 @@ This document contains future goals for the UCLA component library.
   - [x] Tabs
   - [x] Tiles
 
-<h3>December, 2021</h3>
+### December, 2021
 
 - [ ] `1.0-alpha-rc` Release Candidate of Web Component Library
 
-<h3>Quarter 1, 2022</h3>
+### Quarter 1, 2022
 
 - [ ] Official release of `1.0-alpha` of Web Component Library

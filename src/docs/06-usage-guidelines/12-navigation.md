@@ -5,9 +5,9 @@ title: Navigation
 
 Preview and navigate priority topics on your site
 
-<h2>Usage</h2>
+## Usage
 
-<h3>Usability Guidance</h3>
+### Usability Guidance
 
 * Highlight the primary topics of your website. Help visitors understand what content they can expect to find before they start browsing your site.
 * Use succinct labels of 1-2 words in length for each navigation link.
@@ -18,22 +18,22 @@ Preview and navigate priority topics on your site
 * If you need to highlight things like a widely publicized report or conference, do so within the body of your website. Navigation links are intended for evergreen content.
 * Adding the class `nav-primary__link--current-page` to `nav-primary__link` anchor tag will create the yellow border to the item.
 
-<strong>Further Reading</strong>
+**Further Reading**
 
 * [Navigation: You Are Here](https://www.nngroup.com/articles/navigation-you-are-here/) (Nielsen Norman Group)
 * [Information Scent: How User Decide Where to Go Next](https://www.nngroup.com/articles/information-scent/) (Nielsen Norman Group)
 * [The 3-Click Rule for Navigation Is False](https://www.nngroup.com/articles/3-click-rule/) (Nielsen Norman Group)<br>
 
-<h3>Accessibility Requirements</h3>
+### Accessibility Requirements
 
 * Use the `<nav>` element and ARIA labels, e.g. "Main," "Footer," "Social," etc., to identify each distinct navigation menu of your site.
 * Insert a hidden skip nav with quick links to differentiate parts of your site like the main content, navigation menus, search bar, toolbar, footer, etc.
 
-<strong>Further Reading</strong>
+**Further Reading**
 
 * [Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/TR/WCAG20-TECHS/G1.html) (W3)
 
-<h3>Do’s and Don’ts</h3>
+### Do’s and Don’ts
 
 <h4>Do’s</h4>
 
@@ -47,7 +47,7 @@ Preview and navigate priority topics on your site
 * Don't link to external websites.
 * Don't link to non-web formats like PDF, DOC, etc. These formats do not comply with federal accessibility guidelines by default.
 
-<h3>Code</h3>
+### Code
 
 ```
 <header id="header">
@@ -224,13 +224,13 @@ Preview and navigate priority topics on your site
 
 <!--Headers and Main Menus code here, if applicable-->
 
-<h2>Breadcrumbs</h2>
+## Breadcrumbs
 
 Breadcrumbs provide an important method of navigating the site. They may feel redundant if your site structure and menus are relatively simple, but they have multiple benefits and require minimal space. We recommend any website with 3 or more levels of page hierarchy (e.g. Home / Academics / Undergraduate) implement breadcrumbs and the wayfinding abilities they provide.
 
 Most visitors will find your site via search engines. If searching for a topic more specific than your program alone, they will likely bypass your homepage to an internal sub-page of your site. Letting visitors know where they entered, and how to navigate upwards to broaden their search, will encourage them to stick around and search for related content.
 
-<h3>Code</h3>
+### Code
 
 <!--Breadcrumbs code here, if applicable-->
 ```

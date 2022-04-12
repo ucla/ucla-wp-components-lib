@@ -7,7 +7,7 @@ UCLA official colors communicate our brand identity and are the building blocks 
 
 We define the following variables in a [Sass](https://sass-lang.com/) stylesheet located at `./src/scss/utilities/_colors.scss`. Use Sass to compile it back to CSS.
 
-> <strong>NOTE</strong>: ADA compliance requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, and a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
+> **NOTE**: ADA compliance requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, and a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
 
 - [Layout Colors](./colors/layout.html)
 - [Text Colors](./colors/text.html)
@@ -15,4 +15,4 @@ We define the following variables in a [Sass](https://sass-lang.com/) stylesheet
 - [Interactive Colors - Dark Background](./colors/interactive-dark.html)
 - [Denotive Colors](./colors/denotive.html)
 
-<strong>For more information about contributing to Colors, see README file at `./src/components/98-colors/README.md`</strong>
+**For more information about contributing to Colors, see README file at `./src/components/98-colors/README.md`**

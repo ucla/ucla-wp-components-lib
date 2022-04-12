@@ -6,23 +6,23 @@ title: Contribute
 This component library is an opensource project governed by the UCLA Strategic Communications and ITS departments. We invite anyone at UCLA to recommend features, contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html) and [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html).
 
 
-<strong>UCLA Component Library Repository</strong>
+**UCLA Component Library Repository**
 <br/>
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/">Bitbucket Repository</a>
 
-<h2>Step 1 - Choose A or B</h2>
+## Step 1 - Choose A or B
 
-<h4>A. Check for open issues</h4>
+#### A. Check for open issues
 
-Start by searching the [open issues board](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open) in our repository to identify issues that align with your recommendations or desired contributions. <strong>Comment</strong> on that issue to let other know you’re working on it or interested. This will also help you connect with potential supporters or collaborators.
+Start by searching the [open issues board](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open) in our repository to identify issues that align with your recommendations or desired contributions. **Comment** on that issue to let other know you’re working on it or interested. This will also help you connect with potential supporters or collaborators.
 
 If you want to elevate an issue, show your support and check out step 2 for more.
 
-Note: <strong>Watch</strong> an issue to keep track of future discussion and progress.
+Note: **Watch** an issue to keep track of future discussion and progress.
 
 <br/>
 
-<h4>B. Create a new issue</h4>
+#### B. Create a new issue
 
 If you don’t see a suggestion or issue similar to your own, [create a new issue](https://bitbucket.org/uclaucomm/ucla-bruin-components/issues/new). Write a clear title and summarize the reason for your issue in the description. The more information you can provide, the better equipped we’ll be to evaluate your recommendation.
 
@@ -46,9 +46,9 @@ Select the Create issue button and select the dropdown from the following option
 | Select Kind |
 | ------------ |
 | 
-- <strong>Bug</strong>: Fix errors in existing code, design, or documentation.
-- <strong>Enhancement</strong> Improve or add to existing code, design, or documentation.
-- <strong>Proposal</strong Submit or recommend new components or features for inclusion in the library.
+- **Bug**: Fix errors in existing code, design, or documentation.
+- **Enhancement** Improve or add to existing code, design, or documentation.
+- **Proposal** Submit or recommend new components or features for inclusion in the library.
 
 </td>
 </tr>
@@ -60,11 +60,11 @@ Select the Create issue button and select the dropdown from the following option
 | Select Priority |
 | ------------ |
 |
-- <strong>Trivial</strong> Nice to have, not essential.
-- <strong>Minor</strong> Not serious or urgent, but should be addressed.
-- <strong>Major</strong> Important and significant issue, should be addressed soon.
-- <strong>Critical</strong> Extreme defect or security issue, address ASAP.
-- <strong>Blocker</strong> This issue is currently stopping other tasks from moving forward.
+- **Trivial** Nice to have, not essential.
+- **Minor** Not serious or urgent, but should be addressed.
+- **Major** Important and significant issue, should be addressed soon.
+- **Critical** Extreme defect or security issue, address ASAP.
+- **Blocker** This issue is currently stopping other tasks from moving forward.
 
 </td>
 <td style="vertical-align:top;width:50%">
@@ -72,16 +72,16 @@ Select the Create issue button and select the dropdown from the following option
 | Select Component |
 | ------------ |
 |
-- <strong>Accessibility</strong> Fixes or enhances a component for ADA compliance.
-- <strong>Code</strong> Makes code easier to use, faster or more secure.
-- <strong>Design</strong> Makes design more usable, extensible, user centered or brand compliant.
-- <strong>Documentation</strong> Makes the instructions for components more clear, helpful or concise.
+- **Accessibility** Fixes or enhances a component for ADA compliance.
+- **Code** Makes code easier to use, faster or more secure.
+- **Design** Makes design more usable, extensible, user centered or brand compliant.
+- **Documentation** Makes the instructions for components more clear, helpful or concise.
 
 </td>
 </tr>
 </table>
 
-<h2>Step 2 - Submit supporting work for feedback</h2>
+## Step 2 - Submit supporting work for feedback
 
 Once you select or create an issue, we strongly recommend you share any supporting work. In the description or comments of the issue, include links to any of the suggested formats below. We want to see the thought process behind the component.
 
@@ -89,10 +89,10 @@ Once you select or create an issue, we strongly recommend you share any supporti
 - Screenshots, design files, or sketches (Box, Dropbox, Adobe Cloud, Sketch Cloud, Figma, InVision, etc.).
 - Documentation (Google Drive, Box, Evernote, etc.) suggesting new content or edits to existing documentation.
 
-<strong>Solicit feedback!</strong> Now is a good time to share your work with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/C01TW0HVB0Q). Share your recommendations, collect feedback and gather support for your issue.
+**Solicit feedback!** Now is a good time to share your work with people in our Slack channel, [#web-components](https://ucla.slack.com/archives/C01TW0HVB0Q). Share your recommendations, collect feedback and gather support for your issue.
 
 
-<h2>Step 3 - Develop code and documentation</h2>
+## Step 3 - Develop code and documentation
 
 Now that you have gotten some feedback on your work, it's time to start developing. In the component library repository you can find documentation for development contributors.
 
@@ -105,9 +105,9 @@ Now that you have gotten some feedback on your work, it's time to start developi
       - Will frontend users require instructions to understand this new feature?
 
 
-<h2>Step 4 - Submit revisions or final work</h2>
+## Step 4 - Submit revisions or final work
 
-<h4>Review and approval</h4>
+#### Review and approval
 
 Issues and enhancement requests will be reviewed by Strategic Communications and ITS. The [Disabilities and Computing Program (DCP)](https://dcp.ucla.edu/) will review components for compliance with [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
@@ -115,6 +115,6 @@ Any feedback will be communicated through the comments on the issue in Bitbucket
 
 If we review and accept your proposal or enhancement, you’ll also be notified in the comments. Plans for implementing your proposal or enhancement in the component library will then be arranged, including any revisions to work or related documentation.
 
-<h3>What if my proposal is not accepted?</h3>
+### What if my proposal is not accepted?
 
 No worries! Remember the component library is a base set of components geared towards helping you build common website patterns quickly, efficiently and on brand. It won’t cover every need for every department. You are always able to add or revise components on your own websites to fit specific needs or requirements your department or division may have.
