@@ -28,21 +28,3 @@ Display content in a compact manner. Accordions provide a space-saving technique
 * Only display one load more button per page or differentiate load more button text so screen readers can differentiate for non-sighted users.
 * Apply ARIA roles so accordions are tab-able.
 * Apply ARIA states to denote open headings and panels.
-
-<h3>Do’s and Don’ts</h3>
-
-<h4>Do’s</h4>
-
-* Customize the heading to describe the content nested within each panel.
-* Use an icon or text label to visually indicate more information is contained within.
-
-<h4>Don’ts</h4>
-
-* Don't nest the primary sections of a page in accordions, nest only the secondary topics.
-* Don't use accordions when additional or related content should have a separate page, due to the length of content or when visibility is needed in navigation and search engines.
-
-<h3>Code</h3>
-
-```
-{{view '@accordion'}}
-```
