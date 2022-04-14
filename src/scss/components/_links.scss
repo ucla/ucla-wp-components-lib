@@ -16,16 +16,18 @@
 
     &:hover {
       color: white;
-      background: colors.$hover-state;
+      background-color: colors.$hover-state;
     }
 
     &:active {
       color: white;
-      background: colors.$active-state;
+      background-color: colors.$active-state;
     }
 
     &:focus {
-      outline: 1px dotted colors.$default-state;
+      color: white;
+      background-color: colors.$focus-state;
+      outline: 0;
     }
 
     &:not(.page):visited {
@@ -42,8 +44,9 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$white;
-      color: colors.$white;
+      color: colors.$medium-grey5;
+      background-color: colors.$focus-state-dark;
+      outline: 0;
     }
 
     &:hover {
