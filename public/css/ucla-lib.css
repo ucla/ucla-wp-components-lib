@@ -8123,7 +8123,7 @@ nav ul {
   padding: 12px 30px 12px 12px;
   width: 100%;
   height: 48px;
-  border: none;
+  border: 1px solid #808080;
   font-size: 1rem;
   opacity: 1;
   border-radius: 1px;
@@ -8133,7 +8133,7 @@ nav ul {
   color: #ccc;
 }
 .email__input-text:focus {
-  outline: 1px dotted #fff;
+  outline: 3px solid #0079bf;
   outline-offset: -3px;
 }
 .email__input-text.checked {
