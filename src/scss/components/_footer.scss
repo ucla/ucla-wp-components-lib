@@ -460,10 +460,9 @@
       height: 48px;
       border: none;
       font-size: variables.$ucla-font-size-default;
-      background-color: colors.$darkest-blue;
       opacity: 1;
-      border-radius: 2px;
-      color: colors.$white;
+      border-radius: 1px;
+      // color: colors.$white;
       margin-top: 6px;
 
       &::placeholder {

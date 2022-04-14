@@ -95,8 +95,6 @@
         &:focus {
           color: colors.$white;
           background-color: colors.$focus-state;
-          outline: 1px dotted colors.$focus-state;
-          outline-offset: 2px;
         }
 
         &:active {

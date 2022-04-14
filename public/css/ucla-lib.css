@@ -8125,10 +8125,8 @@ nav ul {
   height: 48px;
   border: none;
   font-size: 1rem;
-  background-color: #003b5c;
   opacity: 1;
-  border-radius: 2px;
-  color: #fff;
+  border-radius: 1px;
   margin-top: 6px;
 }
 .email__input-text::placeholder {
@@ -8719,6 +8717,7 @@ li .ucla-list--bulleted li::before {
   padding: 8px 4px 6px;
   margin-bottom: 2px;
   position: relative;
+  line-height: 0.8;
 }
 .ribbon span.first {
   padding-left: 8px;
@@ -8748,7 +8747,7 @@ li .ucla-list--bulleted li::before {
   color: #333;
   background: #ffd100;
   display: inline-block;
-  padding: 12px 3px 6px;
+  padding: 12px 3px 12px;
   margin-bottom: 2px;
 }
 .ribbon--highlight span.first {
@@ -9045,6 +9044,14 @@ TABLE OF CONTENTS:
 
 *************************************
 ************************************/
+.stat-set .stat-wrapper:nth-child(n+2) {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .stat-set .stat-wrapper:nth-child(n+2) {
+    margin-left: 2rem;
+  }
+}
 @media (min-width: 768px) {
   .stat-set {
     display: flex;
@@ -9360,8 +9367,6 @@ TABLE OF CONTENTS:
 .tabs .tabcontent p a:focus {
   color: #fff;
   background-color: #0079bf;
-  outline: 1px dotted #0079bf;
-  outline-offset: 2px;
 }
 .tabs .tabcontent p a:active {
   color: #fff;
