@@ -9384,7 +9384,7 @@ TABLE OF CONTENTS:
 #header {
   border-bottom: 1px solid #e5e5e5;
 }
-#header a:focus {
+#header .site-name a:focus {
   outline: 1px dotted #0079bf;
 }
 #header .header-logo a:focus {
@@ -9730,7 +9730,6 @@ TABLE OF CONTENTS:
 .nav-primary__list li {
   list-style: none;
   background: #fff;
-  padding-right: 2px;
 }
 @media (min-width: 1024px) {
   .nav-primary__list li {
@@ -9760,8 +9759,8 @@ TABLE OF CONTENTS:
     min-width: inherit;
     flex-basis: auto;
     align-self: flex-end;
-    border: 1px solid transparent;
     border-bottom: 0;
+    margin-right: 4px;
   }
   .nav-primary__list li:hover {
     /* Keep top level item hover state when inside child elesearch-iconts */
@@ -9821,11 +9820,11 @@ TABLE OF CONTENTS:
   .nav-primary__item a.nav-primary__link--current-page::before {
     content: "";
     display: block;
-    width: calc(100% - 32px);
+    width: calc(100% - 30px);
     height: 4px;
     position: absolute;
     background: #ffd100;
-    top: 35px;
+    bottom: 8px;
     left: 16px;
   }
   .nav-primary__item:hover .nav-primary__toggle {
@@ -9846,7 +9845,8 @@ TABLE OF CONTENTS:
   background-color: #fff;
   border: 0;
   border-left: 1px solid #e5e5e5;
-  width: 3.2em;
+  width: 48px;
+  height: 48px;
   margin-left: auto;
 }
 .nav-primary__toggle.is-open::after {
@@ -9856,6 +9856,7 @@ TABLE OF CONTENTS:
   transform: rotate(90deg);
 }
 .nav-primary__toggle:hover {
+  cursor: pointer;
   background-color: #0079bf;
 }
 .nav-primary__toggle:hover::after {
@@ -9863,7 +9864,7 @@ TABLE OF CONTENTS:
 }
 .nav-primary__toggle:focus {
   outline-offset: -0.25rem;
-  outline: 1px dotted #0079bf;
+  outline: 4px solid #0079bf;
 }
 .nav-primary__toggle::after {
   content: "";
@@ -9881,10 +9882,14 @@ TABLE OF CONTENTS:
     background: none;
     border: none;
     width: 2em;
+    height: auto;
     cursor: pointer;
   }
   .nav-primary__toggle:hover {
     background: none;
+  }
+  .nav-primary__toggle:focus {
+    outline: 0;
   }
 }
 .nav-primary__sublist {
@@ -9938,25 +9943,31 @@ TABLE OF CONTENTS:
   display: block;
 }
 .nav-primary__link:hover {
-  background: #0079bf;
-  color: #fff;
+  outline: 4px solid #0079bf;
+  outline-offset: -0.25rem;
+}
+@media (min-width: 1024px) {
+  .nav-primary__link:hover {
+    background: #0079bf;
+    color: #fff;
+    outline: 0;
+  }
 }
 .nav-primary__link:focus {
-  outline-offset: -0.25rem;
-  outline: 1px dotted #0079bf;
+  outline-offset: -4px;
+  outline: 4px solid #0079bf;
 }
 @media (min-width: 1024px) {
   .nav-primary__link:focus {
     outline-offset: -0.25rem;
+    outline: 1px dotted #0079bf;
   }
 }
 .nav-primary__link:active {
-  background: #003b5c;
+  background: #0079bf;
   color: #fff;
 }
 .nav-primary__link--has-children {
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
 }
@@ -9967,7 +9978,7 @@ TABLE OF CONTENTS:
   .nav-primary__link--has-children {
     display: inline-block;
     position: relative;
-    padding-right: 2px;
+    padding-right: 0;
   }
   .nav-primary__link--has-children .nav-primary__link:hover {
     border-bottom: 1px;
@@ -9989,15 +10000,16 @@ TABLE OF CONTENTS:
   color: #00598c;
   font-weight: bold;
   font-size: 1rem;
-  line-height: 1.33;
+  line-height: 20px;
   text-decoration: none;
   padding: 14px 24px;
   cursor: pointer;
 }
 @media (min-width: 1024px) {
   .nav-primary a {
-    padding: 8px 16px 16px;
+    padding: 8px 16px 12px;
     font-size: 1.125rem;
+    line-height: 24px;
   }
 }
 .nav-primary__search-mobile .nav-primary__search-form, .nav-primary__search-desktop .nav-primary__search-form {
@@ -10045,8 +10057,8 @@ TABLE OF CONTENTS:
   height: 23px;
 }
 .nav-primary__search-mobile .nav-primary__search-form label input:focus, .nav-primary__search-desktop .nav-primary__search-form label input:focus {
-  outline-offset: -0.25rem;
-  outline: 1px dotted #0079bf;
+  outline: 0;
+  box-shadow: inset 0px 0px 0px 3px #0079BF, inset 0px -1px 0px #CCCCCC;
 }
 .nav-primary__search-mobile .nav-primary__search-form .nav-primary__search-submit, .nav-primary__search-desktop .nav-primary__search-form .nav-primary__search-submit {
   display: none;
@@ -10075,7 +10087,6 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .nav-primary__search-desktop {
     display: inline-block;
-    width: 56px;
     position: relative;
   }
 }
@@ -10096,8 +10107,10 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .nav-primary__search-desktop .nav-primary__search-desktop-button {
     display: block;
-    width: 56px;
-    padding: 13px 16px 16px;
+    height: 44px;
+    width: 52px;
+    padding-bottom: 15px;
+    padding-top: 11px;
     background: transparent;
     appearance: none;
     border: 0;
@@ -10107,6 +10120,8 @@ TABLE OF CONTENTS:
   }
   .nav-primary__search-desktop .nav-primary__search-desktop-button--is-active svg {
     filter: brightness(0) invert(1);
+    width: 18px;
+    height: 18px;
   }
   .nav-primary__search-desktop .nav-primary__search-desktop-button--is-active:focus {
     outline: 1px dotted #fff;
@@ -10130,7 +10145,8 @@ TABLE OF CONTENTS:
   ------------------------------------ */
 .hamburger {
   width: 40px;
-  padding: 12px;
+  height: 40px;
+  padding: 14px 12px;
   border-radius: 2px;
   display: inline-block;
   cursor: pointer;
@@ -10168,7 +10184,6 @@ TABLE OF CONTENTS:
 .hamburger__box {
   width: 16px;
   height: 12px;
-  display: inline-block;
   position: relative;
 }
 .hamburger__inner {
