@@ -9529,7 +9529,7 @@ TABLE OF CONTENTS:
 .site-name a {
   text-decoration: none;
   color: #333;
-  display: block;
+  display: inline-block;
 }
 
 /* --------------------------------------
