@@ -6253,14 +6253,6 @@ p {
   text-align: center;
 }
 
-.mark-text {
-  background: #fff0a5;
-}
-
-.insert-text {
-  background: #daebfe;
-}
-
 .has-white-text {
   color: #fff;
 }
@@ -6297,17 +6289,15 @@ p {
 
 /* change colours to suit your needs */
 ins {
-  background-color: #ff9;
+  background-color: #daebfe;
   color: #000;
   text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-  background-color: #ff9;
+  background-color: #fff0a5;
   color: #000;
-  font-style: italic;
-  font-weight: bold;
 }
 
 abbr[title],
@@ -6503,52 +6493,62 @@ nav ul {
   color: #fff;
 }
 
-.blockquote-wrapper .blockquote {
+figure.blockquote {
   display: block;
-  border-left: 4px solid #2774ae;
+  border-left: 8px solid #2774ae;
   padding: 0 0 0 32px;
   margin: 24px 24px 0;
 }
-.blockquote-wrapper .blockquote__quote {
+figure.blockquote blockquote > p {
   font-size: 1rem;
   line-height: 1.5;
   display: block;
   margin-bottom: 16px;
   color: #333;
 }
-.blockquote-wrapper .blockquote__citation {
+@media only screen and (min-width: 768px) {
+  figure.blockquote {
+    width: calc(50% - 12px);
+    float: left;
+    margin-right: 24px;
+  }
+  figure.blockquote:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  figure.blockquote {
+    width: calc(33.3333333333% - 16px);
+    float: left;
+    margin-right: 24px;
+  }
+  figure.blockquote:nth-child(2n) {
+    margin-right: 24px;
+  }
+  figure.blockquote:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+figure.blockquote > figcaption {
   font-size: 1rem;
   line-height: 1.5;
   display: block;
   color: #666;
   max-width: 212px;
+  padding-left: 20px;
+  position: relative;
+}
+figure.blockquote > figcaption > cite {
+  font-style: italic;
+}
+figure.blockquote > figcaption::before {
+  content: "—";
+  position: absolute;
+  left: 0;
 }
 @media (min-width: 768px) {
-  .blockquote-wrapper .blockquote__citation {
+  figure.blockquote > figcaption {
     max-width: 312px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .blockquote-wrapper .blockquote {
-    width: calc(50% - 12px);
-    float: left;
-    margin-right: 24px;
-  }
-  .blockquote-wrapper .blockquote:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .blockquote-wrapper .blockquote {
-    width: calc(33.3333333333% - 16px);
-    float: left;
-    margin-right: 24px;
-  }
-  .blockquote-wrapper .blockquote:nth-child(2n) {
-    margin-right: 24px;
-  }
-  .blockquote-wrapper .blockquote:nth-child(3n) {
-    margin-right: 0;
   }
 }
 
