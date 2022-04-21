@@ -4,7 +4,6 @@
 
 .ribbon {
   max-width: 776px;
-  
   span {
     font-size: variables.$ucla-font-size-large;
     font-weight: bold;
@@ -33,18 +32,26 @@
   }
 }
 
-.ribbon--highlight span {
-  font-size: variables.$ucla-font-size-large;
-  font-weight: bold;
-  text-transform: none;
-  line-height: 1;
-  color: colors.$medium-grey5;
-  background: colors.$ucla-gold;
-  display: inline-block;
-  padding: 12px 3px 12px;
-  margin-bottom: 2px;
+.ribbon--highlight {
+  max-width: 274px;
 
-  &.first { padding-left: 12px; }
+  span {
+    font-size: variables.$ucla-font-size-large;
+    font-weight: bold;
+    text-transform: none;
+    line-height: 1;
+    color: colors.$medium-grey5;
+    background: colors.$ucla-gold;
+    display: inline-block;
+    padding: 12px 3px 12px;
+    margin-bottom: 2px;
 
-  &.last { padding-right: 12px; }
+    &.first { padding-left: 12px; }
+
+    &.last { padding-right: 12px; }
+  }
+
+  &.ribbon--right {
+    text-align: right;
+  }
 }

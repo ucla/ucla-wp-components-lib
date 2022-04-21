@@ -153,7 +153,8 @@
   }
 
   &__wrap {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 1176px;
     margin: 0 auto;
   }
@@ -161,13 +162,17 @@
   &__image {
     display: inline-block;
     height: 24px;
-    margin-right: 13px;
+    margin-right: 8px;
   }
 
   .breadcrumb {
-    position: relative;
-    top: 5px;
+    position: static;
     width: calc(100% - 100px);
+    margin-top: 5px;
+
+    &> .breadcrumb__item::before {
+      padding: 0 4px;
+    }
   }
 }
 

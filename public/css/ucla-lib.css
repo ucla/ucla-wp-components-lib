@@ -8742,6 +8742,9 @@ li .ucla-list--bulleted li::before {
   }
 }
 
+.ribbon--highlight {
+  max-width: 274px;
+}
 .ribbon--highlight span {
   font-size: 1.5rem;
   font-weight: bold;
@@ -8758,6 +8761,9 @@ li .ucla-list--bulleted li::before {
 }
 .ribbon--highlight span.last {
   padding-right: 12px;
+}
+.ribbon--highlight.ribbon--right {
+  text-align: right;
 }
 
 .social-links-container,
@@ -9502,19 +9508,23 @@ TABLE OF CONTENTS:
   text-decoration: none;
 }
 .header-logo__wrap {
-  display: block;
+  display: flex;
+  align-items: center;
   max-width: 1176px;
   margin: 0 auto;
 }
 .header-logo__image {
   display: inline-block;
   height: 24px;
-  margin-right: 13px;
+  margin-right: 8px;
 }
 .header-logo .breadcrumb {
-  position: relative;
-  top: 5px;
+  position: static;
   width: calc(100% - 100px);
+  margin-top: 5px;
+}
+.header-logo .breadcrumb > .breadcrumb__item::before {
+  padding: 0 4px;
 }
 
 /* --------------------------------------

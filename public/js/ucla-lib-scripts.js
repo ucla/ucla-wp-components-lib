@@ -2716,7 +2716,9 @@ $(document).ready(function() {
 
     // When a tab is clicked, activateTab is fired to activate it
     function clickEventListener(event) {
+      event.preventDefault();
       let tab = event.target;
+      tab.blur();
       activateTab(tab, false);
     };
 
@@ -2809,7 +2811,7 @@ $(document).ready(function() {
 
     // Activates any given tab panel
     function activateTab(tab, setFocus) {
-      setFocus = setFocus || true;
+      // setFocus = setFocus || true;
       // Deactivate all other tabs
       deactivateTabs();
 
