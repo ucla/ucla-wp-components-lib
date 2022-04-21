@@ -8130,7 +8130,7 @@ figure.blockquote > figcaption::before {
   margin-top: 6px;
 }
 .email__input-text::placeholder {
-  color: #ccc;
+  color: #666;
 }
 .email__input-text:focus {
   outline: 3px solid #0079bf;
