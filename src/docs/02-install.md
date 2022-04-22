@@ -1,8 +1,7 @@
 ---
 title: Download Components
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](/build/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
 This repository is available for official UCLA websites only. Your domain must be a subdomain of [ucla.edu](https://ucla.edu) and have been created through the [411 domain policy](http://www.adminpolicies.ucla.edu/APP/Number/411.0).
 
@@ -10,13 +9,13 @@ This repository is available for official UCLA websites only. Your domain must b
 
 CDN is the recommended type of installation.
 
-1. Put the `<link>` reference tag between the `<head>` tags of your website. Replace `%!CurrentVersion%!` version with the version you site in this sites URL.
+1. Put the `<link>` reference tag between the `<head>` tags of your website. Previous versions will continue to be stored on the content delivery network(CDN).
 
 ```
 // Copy below
 <link rel="stylesheet" href="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/css/ucla-lib.min.css">
 ```
-Place in between your sites head tags
+Place code in between your site’s `<head>` tags.
 
 ```
 <head>
@@ -26,14 +25,14 @@ Place in between your sites head tags
 </head>
 ```
 
-2. Put the `<script>` reference tag between the `<footer>` tags of your website. Replace `%!CurrentVersion%!` version with the version you site in this sites URL.
+2. Put the `<script>` reference tag between the `<footer>` tags of your website.
 
 ```
 // Copy below
 <script type="text/javascript" src="https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/js/ucla-lib-scripts.min.js"></script>
 ```
 
-Place in between your site footer tags
+Place code in between your site’s `<footer>` tags.
 ```
 <footer>
   // After the  opening footer tag.
@@ -42,6 +41,6 @@ Place in between your site footer tags
 </footer>
 ```
 
-### Zip Download
+### Install with Zip Download
 
-Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.
+For those who do not want to or cannot add a CND to their project, a [zip download file](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) is available.

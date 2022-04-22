@@ -1,8 +1,10 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 // Orginal CSS comes from SplideJS carousel v2.4.24. https://github.com/Splidejs/splide/tree/master/dist/css
-// This CSS has been modfied to fit UCLA's needs. Documentation on themeing Splide can be found here, https://splidejs.com/themes/
+// This CSS has been modfied to fit UCLA's needs.
+// Documentation on themeing Splide can be found here, https://splidejs.com/themes/
 
 @keyframes splide-loading {
   0% {
@@ -20,8 +22,6 @@
   position: relative;
 
   &--draggable > .splide__track > .splide__list > .splide__slide {
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 
@@ -68,26 +68,33 @@
   }
 
   &.is-active .splide__list {
-    display: -ms-flexbox;
     display: flex;
   }
 
   &__arrow {
     background: colors.$ucla-blue;
-    -webkit-appearance: none;
     border: 0;
     margin: 1px;
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
+    width: 40px;
+    height: 40px;
 
     &--prev {
-      transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+
+      svg {
+        transform: scaleX(-1); /* Equal to rotateZ(45deg) */
+      }
+    }
+
+    &--next {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 12px;
+      height: 12px;
 
       path {
         fill: colors.$white;
@@ -105,19 +112,15 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$active-state;
+      outline: 1px solid colors.$active-state;
       outline-offset: 1px;
     }
   }
 
   &__pagination {
-    -ms-flex-align: center;
     align-items: center;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
     width: 95%;
@@ -142,8 +145,8 @@
         }
 
         &:hover {
-          background: colors.$ucla-gold;
-          border: 1px solid colors.$grey-40;
+          background: colors.$hover-state;
+          border: 1px solid colors.$hover-state;
           cursor: pointer;
         }
 
@@ -157,14 +160,13 @@
   &__play,
   &__pause {
     background: colors.$ucla-blue;
-    -webkit-appearance: none;
     border: 0;
     border-radius: 2px;
     margin: 1px;
     color: colors.$white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 10px;
+    font-size: variables.$ucla-font-size-xxx-small;
     padding: 3px;
 
     &:hover {

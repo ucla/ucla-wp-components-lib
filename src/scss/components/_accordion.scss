@@ -1,5 +1,6 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 .accordion {
   display: block;
@@ -12,27 +13,27 @@
     width: 100%;
     text-align: left;
     color: colors.$default-state;
-    font-size: 1rem;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     font-weight: bold;
     position: relative;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0 0 0 / 0%);
     margin-top: 1px;
     padding: 8px 32px 8px 16px;
 
     &:focus {
-      outline-style: dotted;
+      outline: 3px solid colors.$focus-state;
+      outline-offset: -3px;
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background: colors.$hover-state;
       color: colors.$white;
       cursor: pointer;
 
       &::after {
-        background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--white.svg");
+        background: url("/icons/denotive/down--white.svg");
         background-position: center;
         background-size: contain;
         position: absolute;
@@ -54,9 +55,6 @@
 
     &.active {
       &::after {
-        -moz-transform: scaleY(-1);
-        -o-transform: scaleY(-1);
-        -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
       }
     }
@@ -64,7 +62,7 @@
     &::after {
       display: block;
       content: "";
-      background: url("https://s3.us-west-1.amazonaws.com/webcomponents.ucla.edu/img/icons/denotive/down--blue.svg");
+      background: url("/icons/denotive/down--blue.svg");
       background-position: center;
       background-size: contain;
       position: absolute;
@@ -75,7 +73,7 @@
     }
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
-      font-size: 24px;
+      font-size: variables.$ucla-font-size-large;
       padding: 22px 64px 18px 16px;
 
       &::after {
@@ -111,14 +109,14 @@
   }
 }
 
-//load more code
+// load more code
 .load-more {
   &.btn {
     border: 2px solid colors.$default-state;
     background: colors.$white;
     padding: 12px 16px 8px;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.25;
     color: colors.$default-state;
 
     &:hover {

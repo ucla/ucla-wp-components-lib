@@ -1,6 +1,7 @@
 @use "../utilities/_mixins/breakpoints";
 @use "../utilities/_mixins/helper";
 @use "../utilities/colors";
+@use "../utilities/variables";
 
 // ~Styles for Cards~ //
 // 1) Basic Cards
@@ -12,7 +13,9 @@
 //  Basic Cards //  Basic Cards //  Basic Cards
 //  Basic Cards //  Basic Cards //  Basic Cards
 
-.basic-card, .basic-card-grey, .basic-card-gray {
+.basic-card,
+.basic-card-grey,
+.basic-card-gray {
   display: inline-block;
   background: colors.$white;
   margin: 32px 2% 0 0;
@@ -35,9 +38,9 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: variables.$ucla-font-size-large;
     font-weight: bold;
-    line-height: 27px;
+    line-height: 1.125;
   }
 
   &__info-wrapper {
@@ -45,13 +48,13 @@
   }
 
   &__description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     max-height: 300px;
 
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -64,12 +67,11 @@
   }
 }
 
-.basic-card-grey > .basic-card__info-wrapper, .basic-card-gray > .basic-card__info-wrapper {
+.basic-card-grey > .basic-card__info-wrapper,
+.basic-card-gray > .basic-card__info-wrapper {
   background: colors.$grey-5;
 }
 
-//  Event Cards //  Event Cards //  Event Cards
-//  Event Cards //  Event Cards //  Event Cards
 //  Event Cards //  Event Cards //  Event Cards
 
 .event-card {
@@ -102,15 +104,36 @@
   &__link {
     text-decoration: none;
 
+    &:focus {
+      outline: 1px dotted colors.$focus-state;
+    }
+
+    &:focus,
+    &:active {
+      span {
+        color: colors.$white;
+        outline: 1px dotted colors.$focus-state;
+        background-color: colors.$active-state;
+      }
+    }
 
     &:hover {
+      color: colors.$default-state;
+      background-color: transparent;
+
       img {
         opacity: 0.5;
       }
 
+      &:visited {
+        background-color: colors.$visited-state;
+        color: colors.$visited-state;
+        text-decoration: none;
+      }
+
       &::before {
         display: block;
-        content: '';
+        content: "";
         width: 100%;
         height: 184px;
         position: absolute;
@@ -125,74 +148,42 @@
         text-decoration: none;
       }
     }
-
-    &:focus {
-      outline: 1px dotted colors.$focus-state;
-    }
-
-    &:hover {
-      color: colors.$default-state;
-      background-color: transparent;
-
-      &:visited {
-        background-color: colors.$visited-state;
-        color: colors.$visited-state;
-        text-decoration: none;
-      }
-    }
-
-    &:focus, &:active {
-      span {
-        color: colors.$white;
-        outline: 1px dotted colors.$focus-state;
-        background-color: colors.$active-state;
-      }
-    }
   }
 
   &__title {
     color: colors.$default-state;
     margin: 24px 24px 0;
-    font-size: 20px;
+    font-size: variables.$ucla-font-size-medium;
     font-weight: bold;
-    line-height: 22.5px;
+    line-height: 1.125;
   }
 
   &-icon {
     &__time {
       width: 16px;
       height: 16px;
-      margin-top: -1.5px;
-      margin-bottom: -1.5px;
-      margin-left: 1px;
-      margin-right: 6px;
+      margin: -1.5px 6px -1.5px 1px;
       vertical-align: bottom;
     }
 
     &__location {
       width: 16px;
       height: 16px;
-      margin-top: -1.5px;
-      margin-bottom: -1.5px;
-      margin-left: 1px;
-      margin-right: 6px;
+      margin: -1.5px 6px -1.5px 1px;
       vertical-align: bottom;
     }
 
     &__play {
       width: 15px;
       height: 15px;
-      margin-top: -1.5px;
-      margin-bottom: 0px;
-      margin-left: 1.25px;
-      margin-right: 6px;
+      margin: -1.5px 6px 0 1.25px;
       vertical-align: bottom;
     }
   }
 
   &-info {
     display: block;
-    padding: 8px 24px 24px 24px;
+    padding: 8px 24px 24px;
     background: colors.$white;
 
     &__date {
@@ -216,7 +207,7 @@
     &__day,
     &__month {
       display: block;
-      font-size: 0.75rem;
+      font-size: variables.$ucla-font-size-xx-small;
       text-transform: uppercase;
     }
 
@@ -226,7 +217,7 @@
 
     &__number {
       display: inline-block;
-      font-size: 2.25rem;
+      font-size: variables.$ucla-font-size-xx-large;
     }
 
     &__time,
@@ -234,7 +225,7 @@
     &__play {
       display: inline-flex;
       margin-bottom: 8px;
-      font-size: 12.8px;
+      font-size: variables.$ucla-font-size-xx-small;
       font-weight: bold;
       color: colors.$medium-grey4;
 
@@ -249,22 +240,70 @@
 
     &__description {
       margin-bottom: 8px;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: variables.$ucla-font-size-default;
+      line-height: 1.5;
       color: colors.$medium-grey5;
       max-height: 300px;
 
       &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
   }
 
   &:first-child {
-    margin-top: 0px;
+    margin-top: 0;
 
     @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
       margin-top: 40px;
+    }
+  }
+}
+
+//  Info Cards //  Info Cards //  Info Cards
+
+.info-card {
+  display: inline-block;
+  background: colors.$lightest-grey-2;
+  box-shadow: inset 0 4px 0 colors.$ucla-gold;
+  margin: 32px 2% 0 0;
+  vertical-align: top;
+
+  @media only screen and (min-width: breakpoints.breakpoint-min(sm)) {
+    max-width: 376px;
+    margin: 32px 2% 0 0;
+  }
+
+  &__title {
+    font-size: variables.$ucla-font-size-large;
+    font-weight: bold;
+    line-height: 1.125;
+  }
+
+  &__wrapper {
+    padding: 32px;
+  }
+
+  &__description {
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
+    color: colors.$medium-grey5;
+    max-height: 300px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__ctas {
+    a {
+      display: list-item;
+      list-style: none;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

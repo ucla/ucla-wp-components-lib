@@ -47,7 +47,8 @@
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.visuallyhidden {
+.visuallyhidden,
+.sr-only {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -66,7 +67,9 @@
  */
 
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:focus,
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -83,6 +86,11 @@
 .invisible {
     visibility: hidden;
 }
+
+.hidden {
+    display: none !important;
+}
+
 
 /*
  * Clearfix: contain floats

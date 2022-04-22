@@ -1,17 +1,16 @@
 ---
 title: Headings
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](/build/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
-These are heading styles. Font-style should be bold for these headers.
+These are heading styles. The UCLA title headings are Helvetica with bold font-styles applied. This combination is used for high readability across digital devices.
 
-#### **Do’s**
+#### Do’s
 
 * Use the correct header tags when possible
 * Use the respective "h1" - "h6" classnames to inherit respective header styles (i.e with CMS that makes it hard to customize HTML semantics)
 
-#### **Don’ts**
+#### Don’ts
 
 * Don't use "h1" - "h6" classnames to incorrectly alter styles astray from the brand guidelines
 
@@ -19,39 +18,39 @@ These are heading styles. Font-style should be bold for these headers.
 {{view '@typography--h1'}}
 ```
 <!--
-Desktop: font-size: 48px; line-height: 54px;
-Mobile: font-size: 36px; line-height: 40.5px; -->
+Desktop: font-size: 2.25rem; line-height: 1.125;
+Mobile: font-size: 1.75rem; line-height: 1.125; -->
 {{view '@typography--h1'}}
 ```
 
 {{view '@typography--h2'}}
 ```
 <!--
-Desktop: font-size: 36px; line-height: 40.5px;
-Mobile: font-size: 28px; line-height: 32px; -->
+Desktop: font-size: 1.75rem; line-height: 1.125px;
+Mobile: font-size: 1.75rem; line-height: 1.125; -->
 {{view '@typography--h2'}}
 ```
 
 {{view '@typography--h3'}}
 ```
-<!-- Desktop & Mobile: font-size: 24px; line-height: 27px; -->
+<!-- Desktop & Mobile: font-size: 1.5rem; line-height: 1.125; -->
 {{view '@typography--h3'}}
 ```
 
 {{view '@typography--h4'}}
 ```
-<!-- Desktop & Mobile: font-size: 20px; line-height: 22.5px; -->
+<!-- Desktop & Mobile: font-size: 1.25rem; line-height: 1.125; -->
 {{view '@typography--h4'}}
 ```
 
 {{view '@typography--h5'}}
 ```
-<!-- Desktop & Mobile: font-size: 16px; line-height: 20px; -->
+<!-- Desktop & Mobile: font-size: 1rem; line-height: 1.125; -->
 {{view '@typography--h5'}}
 ```
 
 {{view '@typography--h6'}}
 ```
-<!-- Desktop & Mobile: font-size: 12.8px; line-height: 16px; -->
+<!-- Desktop & Mobile: font-size: 0.8rem; line-height: 1.125; -->
 {{view '@typography--h6'}}
 ```

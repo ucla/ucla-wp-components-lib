@@ -1,91 +1,93 @@
 // PRIMARY COLORS
-$ucla-blue: #2774AE;
-$ucla-gold: #FFD100;
-$white: #FFFFFF;
+$ucla-blue: #2774ae;
+$ucla-gold: #ffd100;
+$white: #fff;
 
 // SECONDARY COLORS
 $darker-blue: #005587;
-$darkest-blue: #003B5C;
+$darkest-blue: #003b5c;
 
 // SECONDARY COLORS - DEPRECATED FROM BRAND GUIDELINES
-$lightest-blue: #DAEBFE;
-$light-blue: #2BA1FB;
-$lighter-blue: #8BB8E8;
-$lightest-gold: #FFF0A5;
-$lighter-gold: #FFDF42;
-$darker-gold: #FFC72C;
-$darkest-gold: #FFB81C;
+$lightest-blue: #daebfe;
+$light-blue: #2ba1fb;
+$lighter-blue: #8bb8e8;
+$lightest-gold: #fff0a5;
+$lighter-gold: #ffdf42;
+$darker-gold: #ffc72c;
+$darkest-gold: #ffb81c;
 
 // TERTIARY COLORS - DEPRECATED FROM BRAND GUIDELINES
-$yellow: #FFFF00;
-$green: #00FF87;
-$magenta: #FF00A5;
-$cyan: #00FFFF;
-$purple: #8237FF;
-$black: #000000;
-$cmyk-yellow: #FFEA00;
-$cmyk-green: #35B558;
-$cmyk-magenta: #EC008C;
-$cmyk-cyan: #20C4F4;
-$cmyk-purple: #6658A6;
-$cmyk-black: #23191C;
+$yellow: #ff0;
+$green: #00ff87;
+$magenta: #ff00a5;
+$cyan: #0ff;
+$purple: #8237ff;
+$black: #000;
+$cmyk-yellow: #ffea00;
+$cmyk-green: #35b558;
+$cmyk-magenta: #ec008c;
+$cmyk-cyan: #20c4f4;
+$cmyk-purple: #6658a6;
+$cmyk-black: #23191c;
 
 // GREYS
-$grey-5: #F2F2F2;
-$grey-10: #E5E5E5;
+$grey-03: #f7f7f7;
+$grey-5: #f2f2f2;
+$grey-10: #e5e5e5;
 $grey-40: #999;
 $grey-60: #666;
 $grey-80: #333;
 
 // TEXT COLORS FROM BRAND GUIDELINES
 $grey: $grey-80;
-$lightest-grey-2: #EBEBEB;
-$light-grey: #E7E7E8;
+$lightest-grey-2: #ebebeb;
+$light-grey: #e7e7e8;
 $dark-grey: #262626;
 $lightest-grey: #757575;
 $lighter-grey: #454545;
 $medium-grey: #424242;
 $medium-grey2: #525252;
-$medium-grey3: #CCCCCC;
-$medium-grey4: #666666;
-$medium-grey5: #333333;
+$medium-grey3: #ccc;
+$medium-grey4: #666;
+$medium-grey5: #333;
 
 // LINK STATE COLORS
-$default-state: #00598C;
-$hover-state: #0079BF;
-$active-state: #003B5C;
-$focus-state: #0079BF;
+$default-state: #00598c;
+$hover-state: #0079bf;
+$active-state: #003b5c;
+$focus-state: #0079bf;
 $disabled-state: #757575;
-$visited-state: #5223B0;
+$visited-state: #5223b0;
 
+// lINK STATE COLORS DARK THEME
 $default-state-dark: $ucla-gold;
-$hover-state-dark: #FFE500;
-$active-state-dark: #FFBF0F;
+$hover-state-dark: #ffe500;
+$active-state-dark: #ffbf0f;
 $focus-state-dark: $hover-state-dark;
 $disabled-state-dark: $grey-10;
-$visited-state-dark: #CFC3F3;
+$visited-state-dark: #cfc3f3;
 
 // DENOTIVE COLORS
-$error-red: #D60000;
-$error-red-20: #F7CCCC;
+$error-red: #d60000;
+$error-red-20: #f7cccc;
 $success-green: #007339;
-$success-green-20: #CCE3D7;
-$warning-orange: #F57F17;
-$warning-orange-20: #FDE5D1;
-$primary-alert-blue: #8BB8E8;
-$primary-alert-blue-20: #E8F1FA;
+$success-green-20: #cce3d7;
+$warning-orange: #f57f17;
+$warning-orange-20: #fde5d1;
+$primary-alert-blue: #8bb8e8;
+$primary-alert-blue-20: #e8f1fa;
 $secondary-alert-grey: $grey-40;
 $secondary-alert-grey-10: $grey-10;
 
 // BUTTON COLORS
-$button-hover: #FFE500;
-$button-active: #FFBF0F;
+$button-hover: #fe0;
+$button-active: #ffbf0f;
 
 // OPAQUE COLORS
-$default-blue-opaque: rgba(0, 89, 140, 0.85);
-$default-blue-opaque-hover: rgba(0, 121, 191, 0.85);
+$default-blue-opaque: rgb(0 89 140 / 85%);
+$default-blue-opaque-hover: rgb(0 121 191 / 85%);
 
-//Emergency Colors
-$emergency-bg: #F7CCCC;
-$emergency-bg-light: #E5E5E5;
-$emergency-border: #D60000;
+// Emergency Colors
+$emergency-bg: #f7cccc;
+$emergency-bg-light: #e5e5e5;
+$emergency-border: #d60000;

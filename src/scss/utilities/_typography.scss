@@ -3,88 +3,90 @@
 @use "colors";
 @use "variables";
 
-h1, h2, h3, h4, h5, h6 {
+body {
   color: colors.$grey-80;
-  font-weight: bold;
   font-family: variables.$font;
-  padding-bottom: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
 }
 
-h1, .h1 {
-  font-size: 36px;
-  line-height: 40.5px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //color: colors.$grey-80; // declared on body
+  //font-family: variables.$font;
   font-weight: bold;
+  line-height: 1.125;
+  margin-bottom: 1rem;
+}
+
+h1,
+.h1 {
+  font-size: variables.$ucla-font-size-xx-large;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
-    font-size: 48px;
-    line-height: 54px;
+    font-size: variables.$ucla-font-size-xxx-large;
   }
 }
 
-h2, .h2 {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: bold;
+h2,
+.h2 {
+  font-size: variables.$ucla-font-size-x-large;
 
   @media (min-width: breakpoints.breakpoint-min(md)) {
-    font-size: 36px;
-    line-height: 40.5px;
+    font-size: variables.$ucla-font-size-xx-large;
   }
 }
 
-h3, .h3 {
-  font-size: 24px;
-  line-height: 27px;
-  font-weight: bold;
+h3,
+.h3 {
+  font-size: variables.$ucla-font-size-large;
 }
 
-h4, .h4 {
-  font-size: 20px;
-  line-height: 22.5px;
-  font-weight: bold;
+h4,
+.h4 {
+  font-size: variables.$ucla-font-size-medium;
 }
 
-h5, .h5 {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: bold;
+h5,
+.h5 {
+  font-size: variables.$ucla-font-size-default;
+  line-height: 1.25;
 }
 
-h6, .h6 {
-  font-size: 12.8px;
-  line-height: 16px;
-  font-weight: bold;
+h6,
+.h6 {
+  font-size: variables.$ucla-font-size-xx-small;
+  line-height: 1.33;
 }
 
 p {
-  font-size: 16px;
-  line-height: 24px;
-  color: colors.$grey-80;
-  padding-bottom: 16px;
+  //color: colors.$grey-80; // declared on body
+  font-size: variables.$ucla-font-size-default;
+  line-height: 1.5;
+  margin-bottom: 1em;
 
-  strong {
-    font-size: bold;
-  }
-
-  small {
-    font-size: 12.8px;
-    line-height: 16px;
-  }
-
-  em {
-    font-style: italic;
-  }
+  // small should be 80% and is declared globally in normalize.scss
+  // small {
+  //   font-size: variables.$ucla-font-size-xx-small;
+  //   line-height: 1.33;
+  // }
 }
 
-.lead {
-  font-size: 1.5rem;
-  line-height: 2rem;
+// add typographical name of lead and lede
+.lead,
+.lede {
+  font-size: variables.$ucla-font-size-large;
+  line-height: 1.33;
 }
 
 .body-copy-small {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  color: #333;
+  font-size: variables.$ucla-font-size-xx-small;
+  line-height: 1.5;
+  color: colors.$grey-80;
 }
 
 .right-align {
@@ -99,21 +101,43 @@ p {
   text-align: center;
 }
 
-.mark-text {
-  background: #FFF0A5;
-}
-
-.insert-text {
-  background: #DAEBFE;
-}
-
 .has-white-text {
   color: colors.$white;
 
   @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
 
-  > div,
-  > aside {
+  >div,
+  >aside {
     @include helper.is-white-text; // located in /utilities/_mixins/_helper.scss
   }
+}
+
+// moved from grid.scss here b/c this isn't grid related
+/* change colours to suit your needs */
+ins {
+  background-color: colors.$lightest-blue; //what is this in colors.scss
+  color: colors.$black;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: colors.$lightest-gold;
+  color: colors.$black;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+
+input,
+select {
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
 }

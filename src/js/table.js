@@ -1,20 +1,20 @@
 // stupidtable
-(function (c) {
-  c.fn.stupidtable = function (a) {
-    return this.each(function () {
+(function(c) {
+  c.fn.stupidtable = function(a) {
+    return this.each(function() {
       let b = c(this);
       a = a || {};
       a = c.extend({}, c.fn.stupidtable.default_sort_fns, a);
       b.data('sortFns', a);
       b.stupidtable_build();
-      b.on('click.stupidtable', 'thead th', function () {
+      b.on('click.stupidtable', 'thead th', function() {
         c(this).stupidsort();
       });
       b.find('th[data-sort-onload=yes]').eq(0).stupidsort();
     });
   };
   c.fn.stupidtable.default_settings = {
-    should_redraw: function () {
+    should_redraw: function() {
       return !0;
     },
     will_manually_build_table: !1
@@ -24,30 +24,30 @@
     DESC: 'desc'
   };
   c.fn.stupidtable.default_sort_fns = {
-    'int': function (a,
+    'int': function(a,
       b) {
       return parseInt(a, 10) - parseInt(b, 10);
     },
-    'float': function (a, b) {
+    'float': function(a, b) {
       return parseFloat(a) - parseFloat(b);
     },
-    string: function (a, b) {
+    string: function(a, b) {
       return a.toString().localeCompare(b.toString());
     },
-    'string-ins': function (a, b) {
+    'string-ins': function(a, b) {
       a = a.toString().toLocaleLowerCase();
       b = b.toString().toLocaleLowerCase();
       return a.localeCompare(b);
     }
   };
-  c.fn.stupidtable_settings = function (a) {
-    return this.each(function () {
+  c.fn.stupidtable_settings = function(a) {
+    return this.each(function() {
       let b = c(this),
         f = c.extend({}, c.fn.stupidtable.default_settings, a);
       b.stupidtable.settings = f;
     });
   };
-  c.fn.stupidsort = function (a) {
+  c.fn.stupidsort = function(a) {
     let b = c(this),
       f = b.data('sort') ||
       null;
@@ -69,7 +69,7 @@
         $th: b
       });
       d.css('display');
-      setTimeout(function () {
+      setTimeout(function() {
         d.stupidtable.settings.will_manually_build_table || d.stupidtable_build();
         /*eslint-disable */
         var a = l(e),
@@ -77,7 +77,7 @@
         if (d.stupidtable.settings.should_redraw(e)) {
           d.children('tbody').append(a);
           var a = e.$table,
-          /*eslint-enable */
+            /*eslint-enable */
             c = e.$th,
             f = c.data('sort-dir');
           a.find('th').data('sort-dir', null).removeClass('sorting-desc sorting-asc');
@@ -93,24 +93,24 @@
       return b;
     }
   };
-  c.fn.updateSortVal = function (a) {
+  c.fn.updateSortVal = function(a) {
     let b = c(this);
     b.is('[data-sort-value]') && b.attr('data-sort-value', a);
     b.data('sort-value', a);
     return b;
   };
-  c.fn.stupidtable_build = function () {
-    return this.each(function () {
+  c.fn.stupidtable_build = function() {
+    return this.each(function() {
       let a = c(this),
         b = [];
-      a.children('tbody').children('tr').each(function (a,
+      a.children('tbody').children('tr').each(function(a,
         d) {
         let e = {
           $tr: c(d),
           columns: [],
           index: a
         };
-        c(d).children('td').each(function (a, b) {
+        c(d).children('td').each(function(a, b) {
           let d = c(b).data('sort-value');
           'undefined' === typeof d && (d = c(b).text(), c(b).data('sort-value', d));
           e.columns.push(d);
@@ -120,14 +120,14 @@
       a.data('stupidsort_internaltable', b);
     });
   };
-  let l = function (a) {
-    /*eslint-disable */
+  let l = function(a) {
+      /*eslint-disable */
       var b = a.$table.data('stupidsort_internaltable'),
         f = a.th_index,
         d = a.$th.data('sort-multicolumn'),
         d = d ? d.split(',') : [],
         /*eslint-enable */
-        e = c.map(d, function (b) {
+        e = c.map(d, function(b) {
           let c = a.$table.find('th'),
             e = parseInt(b, 10),
             f;
@@ -137,7 +137,7 @@
             $e: f
           };
         });
-      b.sort(function (b, c) {
+      b.sort(function(b, c) {
         /*eslint-disable */
         for (var d = e.slice(0), g = a.compare_fn(b.columns[f], c.columns[f]); 0 === g && d.length;) {
           var g = d[0], // eslint-disable-line no-use-before-define
@@ -151,27 +151,27 @@
       a.sort_dir !== c.fn.stupidtable.dir.ASC && b.reverse();
       return b;
     },
-    m = function (a, b) {
-      let f = c.map(a, function (a, c) {
+    m = function(a, b) {
+      let f = c.map(a, function(a, c) {
         return [
           [a.columns[b.th_index], a.$tr, c]
         ];
       });
       b.column = f;
-      return c.map(a, function (a) {
+      return c.map(a, function(a) {
         return a.$tr;
       });
     },
-    k = function (a, b) {
+    k = function(a, b) {
       let f, d = b.$th,
         e = c.fn.stupidtable.dir;
       a ? f = a : (f = a || d.data('sort-default') || e.ASC, d.data('sort-dir') && (f = d.data('sort-dir') === e.ASC ? e.DESC : e.ASC));
       return f;
     },
-    h = function (a) {
+    h = function(a) {
       let b = 0,
         f = a.$th.index();
-      a.$th.parents('tr').find('th').slice(0, f).each(function () {
+      a.$th.parents('tr').find('th').slice(0, f).each(function() {
         let a = c(this).attr('colspan') || 1;
         b += parseInt(a, 10);
       });
@@ -180,7 +180,7 @@
 })(jQuery);
 
 // sort-tables.js
-$(document).ready(function () {
+$(document).ready(function() {
 
   const $table = $('#sortTable');
 
@@ -198,7 +198,7 @@ $(document).ready(function () {
 	***/
 
   $table.stupidtable({
-    'lastname': function (a, b){
+    'lastname': function(a, b) {
 
       const pattern = '^[w"-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[]]{2,}$';
       const re = new RegExp(pattern);
@@ -212,45 +212,45 @@ $(document).ready(function () {
 
   $table.animate({
     opacity: 1,
-  }, 500, function () { });
+  }, 500, function() {});
 
 });
 
 
 
 // responsive-tables.js
-$(document).ready(function () {
+$(document).ready(function() {
 
   let resizeId;
 
   setRowHeight($);
 
   //on window resize
-  $(window).resize(function () {
+  $(window).resize(function() {
 
     clearTimeout(resizeId);
-    resizeId = setTimeout(function () { setRowHeight ($); }, 100);
+    resizeId = setTimeout(function() { setRowHeight($); }, 100);
   });
 });
 
 
-function setRowHeight ($) {
+function setRowHeight($) {
 
-  $('td:first-child, th:first-child').each(function () {
+  $('td:first-child, th:first-child').each(function() {
 
     //reset rows
     $(this).css('height', '');
     $(this).parent('tr').css('height', '');
 
     //grab heights
-	    let firstChildHeight = $(this).closest('tr').height(),
-	        firstCell = $(this).outerHeight();
+    let firstChildHeight = $(this).closest('tr').height(),
+      firstCell = $(this).outerHeight();
 
-	    //set height
-	    if (firstChildHeight > firstCell) {
-	    	$(this).css('height', firstChildHeight+'px');
+    //set height
+    if (firstChildHeight > firstCell) {
+      $(this).css('height', firstChildHeight + 'px');
     } else {
-	    	$(this).parent('tr').css('height', firstCell+'px');
-	    }
-  	});
+      $(this).parent('tr').css('height', firstCell + 'px');
+    }
+  });
 }

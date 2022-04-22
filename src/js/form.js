@@ -1,7 +1,7 @@
-$(document).ready(function (){
+$(document).ready(function() {
 
   // Trigger Errors - Only select and text input errors are built out so far
-  window.triggerError = function (fieldName, errorMessage) { // eslint-disable-line no-unused-vars
+  window.triggerError = function(fieldName, errorMessage) { // eslint-disable-line no-unused-vars
     // get select element
     let elParent = $('select[name ="' + fieldName + '"]').parent();
     let errorSpan = elParent.find('.select__error'); // eslint-disable-line no-unused-vars
@@ -19,7 +19,7 @@ $(document).ready(function (){
   };
 
   // Clear Errors - This should be called to clear any previous error messages
-  window.clearErrors = function (formEl) {
+  window.clearErrors = function(formEl) {
     // Get class name
     let elSelector = formEl.className;
     let errorInputs;
@@ -41,8 +41,8 @@ $(document).ready(function (){
     }
   };
 
-  function updateSelectionTextColor () {
-    $('.select__option').each(function () {
+  function updateSelectionTextColor() {
+    $('.select__option').each(function() {
       if ($(this).is(':selected') && !$(this).is(':disabled')) {
         $(this).parent().css('color', '#000000');
       } else {
@@ -52,7 +52,7 @@ $(document).ready(function (){
   }
 
   // Change text color when changed from placeholder
-  $('.select__menu').on('change', function () {
+  $('.select__menu').on('change', function() {
     updateSelectionTextColor();
   });
 

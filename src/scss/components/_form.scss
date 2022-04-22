@@ -1,20 +1,27 @@
 @use "../utilities/colors";
+@use "../utilities/variables";
 
-.text, .radio, .select, .checkbox {
+.text,
+.radio,
+.select,
+.checkbox {
   margin-bottom: 8px;
 }
 
 // Text Input Styling
 
 .text {
-  &__label, &__input, &__help, &__error {
+  &__label,
+  &__input,
+  &__help,
+  &__error {
     display: block;
   }
 
   &__label {
     display: block;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -22,20 +29,18 @@
 
   &__input {
     box-sizing: border-box;
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
     background: colors.$lightest-grey-2;
     background-size: 24px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
     color: colors.$medium-grey4;
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 3px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
   }
@@ -58,6 +63,11 @@
   &.hasError {
     & > .text__input {
       border: 1px solid red;
+      
+      &:focus {
+        outline: 3px solid colors.$error-red;
+        outline-offset: 1px;
+      }
     }
 
     & > .text__error {
@@ -73,8 +83,8 @@
 .select {
   &__label {
     display: block;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     color: colors.$medium-grey5;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -85,13 +95,12 @@
   }
 
   &__menu {
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
-    background: colors.$lightest-grey-2 url('/img/icons/arrow-down-defaultblue.svg') no-repeat 98.5% 50%;
+    -webkit-appearance: none;
+    background: colors.$lightest-grey-2 url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: variables.$ucla-font-size-default;
+    line-height: 1.5;
     padding: 8px 24px 8px 16px;
     border: 1px solid #808080;
     border-radius: 2px;
@@ -102,12 +111,12 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$hover-state;
+      outline: 3px solid colors.$ucla-blue;
       outline-offset: 1px;
     }
 
     &:active {
-      color: #000000;
+      color: #000;
     }
   }
 
@@ -124,8 +133,13 @@
   &.hasError {
     & > .select__menu {
       border: 1px solid red;
-      background: #EBEBEB url("/img/icons/error-red.svg") no-repeat 96.5% 50%;
+      background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
       background-size: 24px 24px;
+
+      &:focus {
+        outline: 3px solid colors.$error-red;
+        outline-offset: 1px;
+      }
     }
 
     & > .select__error {
@@ -141,48 +155,42 @@
 .checkbox {
   &__input {
     appearance: none;
-    -webkit-appearance: none;
     border: 1px solid #cacece;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0 0 0 / 0.05%), inset 0 -15px 10px -12px rgba(0 0 0 / 0.05%);
     padding: 9px;
     border-radius: 2px;
     display: inline-block;
-    margin-right: 12px; // should be 16px but subtracted 4 from default label/input spacing
+    margin-right: 8px; // should be 16px but subtracted 4 from default label/input spacing
 
     &:hover {
       background: colors.$hover-state;
+      cursor: pointer;
     }
 
     &:focus {
-      outline-style: dotted;
+      outline: 1px solid colors.$focus-state;
       outline-offset: 1px;
-    }
-
-    &:active, &:checked:active {
-      outline-offset: -1px;
     }
 
     &:checked {
       background-color: colors.$active-state;
       border: 1px solid #adb8c0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 1px 2px rgba(0 0 0 / 0.05%), inset 0 -15px 10px -12px rgba(0 0 0 / 0.05%), inset 15px 10px -12px rgba(255 255 255 / 0.1%);
       padding: 0 4px;
     }
 
+    &:active,
+    &:checked:active {
+      outline-offset: -1px;
+    }
+
     &:checked::after {
-      background-image: url("/img/icons/checkmark-white.svg");
-      background-size: 10px 10px;
+      // background-image: url("/icons/denotive/form-success.svg");
+      // background-size: 10px 10px;
       display: inline-block;
       width: 10px;
       height: 10px;
       content: "";
-    }
-
-    &:checked {
-      background-color: colors.$active-state;
-      border: 1px solid #adb8c0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-      padding: 0 4px;
     }
   }
 }
@@ -191,8 +199,6 @@
 
 .radio {
   &__input {
-    -moz-appearance: none; /* Firefox */
-    -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
     display: inline-block;
     height: 24px;
@@ -200,11 +206,12 @@
     border-radius: 12px;
     border: 1px solid #808080;
     background-clip: content-box;
-    margin-right: 11px; // should be 16px but subtracted 5 from default label/input spacing
+    margin-right: 8px; // should be 16px but subtracted 5 from default label/input spacing
 
     &:hover {
       background: colors.$hover-state;
       border-color: colors.$hover-state;
+      cursor: pointer;
     }
 
     &:checked {
@@ -213,10 +220,10 @@
     }
 
     &:checked::after {
-      background-image: url("/img/icons/radio-bullet-icon.svg");
-      background-size: 25px 25px;
-      background-repeat: none;
-      background-position: 50%;
+      // background-image: url("/icons/denotive/form-success.svg");
+      // background-size: 25px 25px;
+      // background-repeat: none;
+      // background-position: 50%;
       display: inline-block;
       content: "";
       width: 22px;
@@ -224,22 +231,22 @@
     }
 
     &:focus {
-      outline-style: dotted;
+      outline: 1px solid colors.$focus-state;
       outline-offset: 1px;
     }
   }
 }
 
-// fieldset and Legened Styling
+// Fieldset and Legend Styling
 
 .fieldset {
   border: 1px solid #808080;
   padding: 32px;
 
   &__legend {
-    font-size: 20px;
+    font-size: variables.$ucla-font-size-medium;
     font-weight: bold;
-    line-height: 22.5px;
+    line-height: 1.125;
     color: colors.$medium-grey5;
     padding: 0 4px;
   }

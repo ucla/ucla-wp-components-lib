@@ -1,6 +1,7 @@
 @use "../utilities/colors";
+@use "../utilities/variables";
 
-//=== SOCIAL MEDIA POST TILES ===//
+// === SOCIAL MEDIA POST TILES ===//
 .social-tile {
   display: flex;
   max-width: 276px;
@@ -44,8 +45,8 @@
   &__text,
   &__info {
     color: colors.$white;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: variables.$ucla-font-size-xx-small;
+    line-height: 1.33;
   }
 
   &__text {

@@ -1,10 +1,9 @@
 ---
 title: Body Copy
 ---
-<a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/issues?status=new&status=open">![bitbucket](/build/docs/img/bitbucket-icon-white.png) Report an Issue</a>
-<a class="create-button small" href="https://ucla.slack.com/archives/G01KJ3GJKHS">![Slack](/build/docs/img/slack-icon-white.png) Join the Slack Discussion</a>
+{{render '@support'}}
 
-This is the body copy style.
+This is the body copy style. A series of sentences together which make a paragraph.
 
 {{view '@typography--body-copy'}}
 

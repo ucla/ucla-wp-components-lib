@@ -1,4 +1,6 @@
 @use "../utilities/colors";
+@use "../utilities/variables";
+@use "../utilities/_mixins/breakpoints";
 
 // Specificity is added this way so that links automatically inherit
 // styling without needing to include class names.
@@ -12,24 +14,27 @@
   a {
     color: colors.$default-state;
 
-    &:not(.page):visited {
-      color: colors.$visited-state;
-    }
-
     &:hover {
       color: white;
-      background: colors.$hover-state;
+      background-color: colors.$hover-state;
     }
 
     &:active {
       color: white;
-      background: colors.$active-state;
+      background-color: colors.$active-state;
     }
 
     &:focus {
-      outline: 1px dotted colors.$default-state;
+      color: white;
+      background-color: colors.$focus-state;
+      outline: 0;
+    }
+
+    &:not(.page):visited {
+      color: colors.$visited-state;
     }
   }
+
   // links on dark backgrounds
   & .white-link {
     color: colors.$white;
@@ -39,8 +44,9 @@
     }
 
     &:focus {
-      outline: 1px dotted colors.$white;
-      color: colors.$white;
+      color: colors.$medium-grey5;
+      background-color: colors.$focus-state-dark;
+      outline: 0;
     }
 
     &:hover {
@@ -72,7 +78,7 @@
       }
 
       a {
-        line-height: 1.5rem;
+        line-height: 1.5;
         color: colors.$default-state;
         text-decoration: none;
         display: block;
@@ -102,7 +108,7 @@
         &.related-links--external {
           &::after {
             content: "";
-            background: url("/img/icons/external-link-defaultblue.svg");
+            background: url("/icons/denotive/external-link--defaultblue.svg");
             background-size: contain;
             width: 24px;
             height: 24px;
@@ -113,7 +119,7 @@
           }
 
           &:hover::after {
-            background: url("/img/icons/external-link-white.svg");
+            background: url("/icons/denotive/external-link--white.svg");
             background-size: contain;
           }
         }
@@ -121,7 +127,7 @@
         &.related-links--download {
           &::after {
             content: "";
-            background: url("/img/icons/download-defaultblue.svg");
+            background: url("/icons/denotive/download--blue.svg");
             background-size: contain;
             width: 24px;
             height: 24px;
@@ -132,11 +138,98 @@
           }
 
           &:hover::after {
-            background: url("/img/icons/download-white.svg");
+            background: url("/icons/denotive/download--white.svg");
             background-size: contain;
           }
         }
       }
+    }
+  }
+
+  // Resource Links
+  .resource-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 12px 32px;
+    border: 2px solid colors.$default-state;
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 2px;
+
+    & > span {
+      width: 100%;
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        width: 50%;
+      }
+    }
+
+    & > .resource-link__primary {
+      font-weight: bold;
+    }
+    &::after {
+      content: "";
+      background-image: url("/icons/denotive/external-link--defaultblue.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 -1px;
+      width: 24px;
+      height: 24px;
+      display: block;
+      position: absolute;
+      padding-right: 24px;
+      right: 0;
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        padding-right: 18px;
+      }
+    }
+    &:hover {
+      border-color: colors.$hover-state;
+
+      &::after {
+        background-image: url("/icons/denotive/external-link--white.svg");
+      }
+    }
+    &:focus {
+      border-color: colors.$focus-state;
+      outline: 1px solid colors.$focus-state;
+      outline-offset: 1px;
+    }
+    &:active {
+      border-color: colors.$active-state;
+    }
+    @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+      flex-direction: row;
+      padding: 18px 24px;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      cursor: default;
+      border: 2px solid colors.$disabled-state;
+
+      & > span {
+        color: colors.$disabled-state;
+      }
+      &::after {
+        background-image: url("/icons/denotive/external-link--disabledgrey.svg");
+      }
+    }
+  }
+
+  .tag-link {
+    font-size: variables.$ucla-font-size-x-small;
+    padding: 4px 12px;
+    border: 2px solid colors.$default-state;
+    color: colors.$default-state;
+    border-radius: 50rem;
+    text-decoration: none;
+
+    &:focus {
+      outline: 1px solid colors.$focus-state;
+      outline-offset: 1px;
     }
   }
 }

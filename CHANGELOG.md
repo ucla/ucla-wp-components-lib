@@ -1,3 +1,61 @@
+# [1.0.0-dev-beta.18](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.17...v1.0.0-dev-beta.18) (2021-12-10)
+
+
+### Bug Fixes
+
+* bug fix ([27d2017](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/27d2017ab5367823e94303e9719eb8ffc640613e))
+
+# [1.0.0-beta.16](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2021-09-28)
+
+
+### Bug Fixes
+
+* bug fix ([27d2017](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/27d2017ab5367823e94303e9719eb8ffc640613e))
+
+# [1.0.0-beta.15](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-07-20)
+
+
+### Bug Fixes
+
+* new button, social tiles reconfig, doc and readme updates ([17c189a](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/17c189a9b9b217a69d92fee46b30a0f45baf9605))
+
+
+### BREAKING CHANGES
+
+* Social tiles have been reconfigured
+
+58, 62
+
+<<<<<<< HEAD
+# [1.0.0-beta.14](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-06-08)
+
+
+### Features
+
+* **component:** cards and spacing ([5baaebb](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/5baaebb3fee99f6932ba766b0442dbd020772d71))
+=======
+# [1.0.0-dev-beta.17](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.16...v1.0.0-dev-beta.17) (2021-07-20)
+
+
+### Bug Fixes
+
+* new button, social tiles reconfig, doc and readme updates ([17c189a](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/17c189a9b9b217a69d92fee46b30a0f45baf9605))
+
+
+### BREAKING CHANGES
+
+* Social tiles have been reconfigured
+
+58, 62
+>>>>>>> 98f2a12a3a3c1d7cacd8525d3a785bb93383a247
+
+# [1.0.0-dev-beta.16](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.15...v1.0.0-dev-beta.16) (2021-06-08)
+
+
+### Features
+
+* **component:** cards and spacing ([5baaebb](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/5baaebb3fee99f6932ba766b0442dbd020772d71))
+
 # [1.0.0-dev-beta.15](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.14...v1.0.0-dev-beta.15) (2021-05-24)
 
 

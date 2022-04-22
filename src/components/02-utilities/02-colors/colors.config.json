@@ -52,11 +52,7 @@
         "name": "Grey-80",
         "variable": "$grey-80",
         "hex": "#333"
-      }, {
-        "name": "Black",
-        "variable": "$black",
-        "hex": "#000000"
-    }],
+      }],
     "interactive-light": [{
         "name": "Default",
         "variable": "$default-state",

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   // GLOBAL Grid JAVASCRIPT
 
   // Insert white divat top of grey color background making the top 30% of the wrap white, leaving the bottom 70% grey.
