@@ -5,9 +5,9 @@ title: Tile
 
 Large, descriptive link with optional ambient image.
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
 * Use plain language when writing headlines and descriptions.
 * Avoid technical language, acronyms or jargon people don't understand.
@@ -15,7 +15,7 @@ Large, descriptive link with optional ambient image.
 * Limit headlines to 1 phrase or 2 lines -- there is a suggested 32 maximum character limit.
 * Use original images rather than stock images to maintain credibility and trust among your users.
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * Link the tile's headline, heading or title to provide the most succinct description to screen readers and search engines. Both technologies use links to understand and navigate document structure.
 * Avoid using generic headlines like "read more" or "view details".
@@ -25,7 +25,7 @@ Large, descriptive link with optional ambient image.
 * https://www.webaxe.org/resources-for-developing-accessible-cards-tiles/
 * https://www.davidmacd.com/blog/what-is-pure-decoration-alt-text-in-wcag.html
 
-## **Code**
+## Code
 
 ```
 {{view '@tile'}}

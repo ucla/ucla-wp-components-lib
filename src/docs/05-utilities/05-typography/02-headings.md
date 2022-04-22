@@ -5,12 +5,12 @@ title: Headings
 
 These are heading styles. The UCLA title headings are Helvetica with bold font-styles applied. This combination is used for high readability across digital devices.
 
-#### **Do’s**
+#### Do’s
 
 * Use the correct header tags when possible
 * Use the respective "h1" - "h6" classnames to inherit respective header styles (i.e with CMS that makes it hard to customize HTML semantics)
 
-#### **Don’ts**
+#### Don’ts
 
 * Don't use "h1" - "h6" classnames to incorrectly alter styles astray from the brand guidelines
 

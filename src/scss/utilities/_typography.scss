@@ -101,14 +101,6 @@ p {
   text-align: center;
 }
 
-.mark-text {
-  background: #fff0a5;
-}
-
-.insert-text {
-  background: #daebfe;
-}
-
 .has-white-text {
   color: colors.$white;
 
@@ -123,17 +115,15 @@ p {
 // moved from grid.scss here b/c this isn't grid related
 /* change colours to suit your needs */
 ins {
-  background-color: #ff9; //what is this in colors.scss
+  background-color: colors.$lightest-blue; //what is this in colors.scss
   color: colors.$black;
   text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-  background-color: #ff9; //what is this in colors.scss
+  background-color: colors.$lightest-gold;
   color: colors.$black;
-  font-style: italic;
-  font-weight: bold;
 }
 
 abbr[title],

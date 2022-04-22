@@ -181,3 +181,27 @@ pipelines:
                 EXTRA_ARGS: "--website-redirect=http://dev-webcomponents-ucla-edu.s3-us-west-1.amazonaws.com/build/${updateTag}/index.html"
             - rm -rf ./redirection
             - echo "Updates from the branch ==> $BITBUCKET_BRANCH <== has been included in S3 with the tag ==> $updateTag <=="
+    campus:
+      - step:
+          name: Web Components Campus
+          script:
+            # Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+            - apt-get update && apt-get install -y curl jq moreutils
+            - export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
+            - npm install -g gulp
+            - npm install gulp-minify gulp-zip del
+            - gulp generateCompLibScripts
+            - sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+            - sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
+            - gulp production 
+            # deploy build to S3
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_DEV
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_DEV
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_DEV
+                S3_BUCKET: campus-webcomponents-ucla-edu
+                LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/build
+                ACL: 'public-read'
+                EXTRA_ARGS: "--delete"  
+

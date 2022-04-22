@@ -23,6 +23,14 @@ TABLE OF CONTENTS:
 // .stat-set is the container required for multiple stat touts across
 // This handles responsiveness of more than one stat tout across
 .stat-set {
+  .stat-wrapper:nth-child(n+2) {
+    margin-left: 0;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      margin-left: 2rem;
+    }
+  }
+  
   @media (min-width: breakpoints.breakpoint-min(md)) {
     display: flex;
   }

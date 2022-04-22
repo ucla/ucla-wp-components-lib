@@ -22,7 +22,8 @@
     padding: 8px 32px 8px 16px;
 
     &:focus {
-      outline-style: dotted;
+      outline: 3px solid colors.$focus-state;
+      outline-offset: -3px;
     }
 
     &:hover,

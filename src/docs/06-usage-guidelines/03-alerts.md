@@ -5,21 +5,21 @@ title: Alerts
 
 Notify users of an important change or new piece of information.
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance 
 
 * Use alerts to validate steps taken by users or denote a system change.
 * Use alerts sparingly. Show one at a time to avoid overwhelming users.
 * Be polite and encouraging, and inform users how to respond to or fix a problem.
 
-### **Code Guidance**
+### Code Guidance 
 
 * Be sure to include the default "alert" classname in addition to a specific "alert" classname. This will allow the element to inherit default alert styles.
 * Alerts will take the full width of the container.
 * Adding the "inline-block" classname to an alert element will allow for usage of an alert element that only takes the width of the text content of the alert.
 
-### **Accessibility Requirements**
+### Accessibility Requirements 
 
 * Design alerts to visually contrast with surrounding content.
 * Use a high-contrast outline or background color and an icon for high visibility.
@@ -29,42 +29,42 @@ Notify users of an important change or new piece of information.
 
 * [Using the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role) (Mozilla)
 
-## **Primary Alert**
+## Primary Alert
 
 
-### **Code**
+### Code 
 
 ```
 {{view '@alerts--primary'}}
 ```
 
-## **Secondary Alert**
+## Secondary Alert
 
-### **Code**
+### Code 
 
 ```
 {{view '@alerts--secondary'}}
 ```
 
-## **Success Alert**
+## Success Alert
 
-### **Code**
+### Code 
 
 ```
 {{view '@alerts--success'}}
 ```
 
-## **Error Alert**
+## Error Alert
 
-### **Code**
+### Code 
 
 ```
 {{view '@alerts--error'}}
 ```
 
-## **Warning Alert**
+## Warning Alert
 
-### **Code**
+### Code 
 
 ```
 {{view '@alerts--warning'}}

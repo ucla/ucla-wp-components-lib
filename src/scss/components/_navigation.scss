@@ -9,7 +9,7 @@
 #header {
   border-bottom: 1px solid colors.$grey-10;
 
-  a {
+  .site-name a {
     &:focus {
       outline: 1px dotted colors.$hover-state;
     }
@@ -153,7 +153,8 @@
   }
 
   &__wrap {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 1176px;
     margin: 0 auto;
   }
@@ -161,13 +162,17 @@
   &__image {
     display: inline-block;
     height: 24px;
-    margin-right: 13px;
+    margin-right: 8px;
   }
 
   .breadcrumb {
-    position: relative;
-    top: 5px;
+    position: static;
     width: calc(100% - 100px);
+    margin-top: 5px;
+
+    &> .breadcrumb__item::before {
+      padding: 0 4px;
+    }
   }
 }
 
@@ -184,7 +189,7 @@
   a {
     text-decoration: none;
     color: colors.$medium-grey5;
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -383,7 +388,7 @@
     li {
       list-style: none;
       background: colors.$white;
-      padding-right: 2px;
+      // padding-right: 2px;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         background: none;
@@ -413,8 +418,9 @@
         min-width: inherit;
         flex-basis: auto;
         align-self: flex-end;
-        border: 1px solid transparent;
+        // border: 1px solid transparent;
         border-bottom: 0;
+        margin-right: 4px;
 
         &:hover {
           /* Keep top level item hover state when inside child elesearch-iconts */
@@ -492,11 +498,11 @@
           &::before {
             content: "";
             display: block;
-            width: calc(100% - 32px);
+            width: calc(100% - 30px);
             height: 4px;
             position: absolute;
             background: colors.$ucla-gold;
-            top: 35px;
+            bottom: 8px;
             left: 16px;
           }
         }
@@ -531,7 +537,8 @@
     background-color: colors.$white;
     border: 0;
     border-left: 1px solid colors.$grey-10;
-    width: 3.2em;
+    width: 48px;
+    height: 48px;
     margin-left: auto;
 
     &.is-open {
@@ -545,6 +552,7 @@
     }
 
     &:hover {
+      cursor: pointer;
       background-color: colors.$hover-state;
 
       &::after {
@@ -554,7 +562,7 @@
 
     &:focus {
       outline-offset: -0.25rem;
-      outline: 1px dotted colors.$hover-state;
+      outline: 4px solid colors.$hover-state;
     }
 
     &::after {
@@ -573,10 +581,15 @@
       background: none;
       border: none;
       width: 2em;
+      height: auto;
       cursor: pointer;
 
       &:hover {
         background: none;
+      }
+
+      &:focus {
+        outline: 0;
       }
     }
   }
@@ -639,27 +652,33 @@
     display: block;
 
     &:hover {
-      background: colors.$hover-state;
-      color: colors.$white;
+      outline: 4px solid colors.$hover-state;
+      outline-offset: -0.25rem;
+      // color: colors.$white;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        background: colors.$hover-state;
+        color: colors.$white;
+        outline: 0;
+      }
     }
 
     &:focus {
-      outline-offset: -0.25rem;
-      outline: 1px dotted colors.$hover-state;
+      outline-offset: -4px;
+      outline: 4px solid colors.$hover-state;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         outline-offset: -0.25rem;
+        outline: 1px dotted colors.$hover-state;
       }
     }
 
     &:active {
-      background: colors.$active-state;
+      background: colors.$hover-state;
       color: colors.$white;
     }
 
     &--has-children {
-      display: box;
-      display: flexbox;
       display: flex;
       flex-wrap: wrap;
 
@@ -670,7 +689,8 @@
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: inline-block;
         position: relative;
-        padding-right: 2px;
+        padding-right: 0;
+        // padding-right: 2px;
 
 
         .nav-primary__link {
@@ -706,14 +726,15 @@
     color: colors.$default-state;
     font-weight: bold;
     font-size: variables.$ucla-font-size-default;
-    line-height: 1.33;
+    line-height: 20px;
     text-decoration: none;
     padding: 14px 24px;
     cursor: pointer;
 
     @media (min-width: breakpoints.breakpoint-min(lg)) {
-      padding: 8px 16px 16px;
+      padding: 8px 16px 12px;
       font-size: variables.$ucla-font-size-medium-small;
+      line-height: 24px;
     }
   }
 
@@ -766,8 +787,10 @@
           }
 
           &:focus {
-            outline-offset: -0.25rem;
-            outline: 1px dotted #0079bf;
+            // outline-offset: -0.25rem;
+            // outline: 1px dotted #0079bf;
+            outline: 0;
+            box-shadow: inset 0px 0px 0px 3px #0079BF, inset 0px -1px 0px #CCCCCC;
           }
         }
       }
@@ -804,7 +827,7 @@
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       display: inline-block;
       // height: 44px;
-      width: 56px;
+      // width: 52px;
       position: relative;
       // top: -5px;
     }
@@ -828,9 +851,10 @@
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: block;
-        // height: 44px;
-        width: 56px;
-        padding: 13px 16px 16px;
+        height: 44px;
+        width: 52px;
+        padding-bottom: 15px;
+        padding-top: 11px;
         background: transparent;
         appearance: none;
         border: 0;
@@ -840,6 +864,8 @@
 
           svg {
             filter: brightness(0) invert(1);
+            width: 18px;
+            height: 18px;
           }
 
           &:focus {
@@ -870,7 +896,8 @@
   ------------------------------------ */
 .hamburger {
   width: 40px;
-  padding: 12px;
+  height: 40px;
+  padding: 14px 12px;
   border-radius: 2px;
   display: inline-block;
   cursor: pointer;
@@ -914,7 +941,7 @@
   &__box {
     width: 16px;
     height: 12px;
-    display: inline-block;
+    // display: inline-block;
     position: relative;
   }
 

@@ -5,7 +5,7 @@
 | main | https://webcomponents.ucla.edu | https://s3.console.aws.amazon.com/s3/buckets/webcomponents.ucla.edu/?region=us-west-1 |
 | development | http://dev-webcomponents-ucla-edu.s3-website-us-west-1.amazonaws.com | https://s3.console.aws.amazon.com/s3/buckets/dev-webcomponents-ucla-edu/?region=us-west-1 |
 | semantic-check | not setup | not setup |
-| campus | not setup | not setup |
+| campus | http://campus-webcomponents-ucla-edu.s3-website-us-west-2.amazonaws.com/ | https://s3.console.aws.amazon.com/s3/buckets/campus-webcomponents-ucla-edu?region=us-west-2&tab=objects |
 
 ## CDN Distribution and Invalidation Information (BETA)
 * This project's documentation and component public library in production environment is deployed behind Cloudfront CDN. To see updates instantly after updates have been to production, you must manually invalidate the files. See the distribution page for the documentation [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:E3BKWM01VHPJ5I) or for the public library [here](https://console.aws.amazon.com/cloudfront/home?region=us-west-1#distribution-settings:EUU3JRBWPI1HQ). For more on "how to invalidate" see the AWS docs [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html).

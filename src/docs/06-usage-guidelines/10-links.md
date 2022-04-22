@@ -4,30 +4,30 @@ title: Links
 {{render '@support'}}
 
 
-## **Usage**
+## Usage
 
-### **Usability Guidance**
+### Usability Guidance
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
-### **Code**
+### Code
 
-### **Examples of Use**
+### Examples of Use
 
-#### **Default**
+#### Default
 
 ```
 {{view '@links--default'}}
 
 ```
-#### **Inline**
+#### Inline
 
 ```
 {{view '@links--inline'}}
 
 ```
 
-#### **Links In List**
+#### Links In List
 
 
 ```
@@ -35,7 +35,7 @@ title: Links
 
 ```
 
-#### **Related Links**
+#### Related Links
 
 ```
 {{view '@links--related-links'}}
