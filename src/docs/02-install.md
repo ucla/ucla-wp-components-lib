@@ -41,6 +41,6 @@ Place code in between your site’s `<footer>` tags.
 </footer>
 ```
 
-### Zip Download
+### Install with Zip Download
 
-Manually [download](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) styles and script files to include in your project.
+For those who do not want to or cannot add a CND to their project, a [zip download file](https://cdn.webcomponents.ucla.edu/%!CurrentVersion%!/ucla-components.zip) is available.

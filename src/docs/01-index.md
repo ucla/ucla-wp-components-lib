@@ -28,7 +28,7 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
 <!--Panel One -->
 <div id="panel-01-tab" tabindex="0" role="tabpanel" aria-labelledby="panel-01" class="tabcontent">
 
-<h2>Goals</h2>
+## Goals
 
 - Create a more cohesive experience and unified brand for end users
 - Support campus teams who want to create web experiences that follow brand guidelines, web standards and accessibility guidelines
@@ -39,7 +39,7 @@ The Web Components Library is the digital application of UCLA’s brand. It cont
 <!--Panel Two -->
 <div id="panel-02-tab" tabindex="0" role="tabpanel" aria-labelledby="panel-02" class="tabcontent">
 
-<h2>Core Principles</h2>
+## Core Principles
 
 ### Support common needs
 Our goal is to thoughtfully improve and expand the component library to support the most common needs on campus. Before recommending an enhancement or component, we encourage you to consider the utility for other designers, developers and end users. In a place as diverse and large as UCLA, it’s a challenge to anticipate what other people need. We always appreciate contributions based on pattern research, insights into user needs, industry trends and usability standards.
@@ -54,7 +54,7 @@ This project is an iterative and community-driven effort. We encourage you to wo
 <!--Panel Three -->
 <div id="panel-03-tab" tabindex="0" role="tabpanel" aria-labelledby="panel-03" class="tabcontent">
 
-<h2>Visual Guidance</h2>
+## Visual Guidance
 
 Following UCLA’s [Brand Guidelines](https://brand.ucla.edu/), our web components should be designed to deliver on an open, optimistic, energetic, and progressive look and feel. Some things to consider that may help deliver this aesthetic:
 
@@ -69,11 +69,11 @@ Following UCLA’s [Brand Guidelines](https://brand.ucla.edu/), our web componen
 <!--Panel Four -->
 <div id="panel-04-tab" tabindex="0" role="tabpanel" aria-labelledby="panel-04" class="tabcontent">
 
-<h2>Component Status Types</h2>
+## Component Status Types
 
 {{# componentStatuses }}{{/ componentStatuses }}
 
-<h2>Documentation Status Types</h2>
+## Documentation Status Types
 
 {{# documentStatuses }}{{/ documentStatuses }}
 

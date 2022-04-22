@@ -5,7 +5,7 @@ title: Component Documentation Template 1
 
 Introduction sentence 1 about component (optional). Introduction sentence 2 about component (optional).
 
-### **Usability Guidance**
+### Usability Guidance
 
 * List Item 1
 * List Item 2
@@ -15,7 +15,7 @@ Introduction sentence 1 about component (optional). Introduction sentence 2 abou
 [Link optional]()
 [Link optional]()
 
-### **Accessibility Requirements**
+### Accessibility Requirements
 
 * List Item 1
 * List Item 2
@@ -25,7 +25,7 @@ Introduction sentence 1 about component (optional). Introduction sentence 2 abou
 [Link needed]() (Mozilla)
 [Link needed]() (W3)
 
-### **Do’s and Don’ts**
+### Do’s and Don’ts
 
 #### Do’s
 
@@ -37,7 +37,7 @@ Introduction sentence 1 about component (optional). Introduction sentence 2 abou
 * List Item 1
 * List Item 2
 
-## **Code**
+## Code
 
 Text about code
 

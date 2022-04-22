@@ -6,7 +6,8 @@ title: Contribute
 This component library is an opensource project governed by the UCLA Strategic Communications and ITS departments. We invite anyone at UCLA to recommend features, contribute code, design, documentation, or iterations to existing work. We will review and consider any contributions that follow our [core principles](/build/%!CurrentVersion%!/docs/index.html) and [design criteria](/build/%!CurrentVersion%!/docs/contribute/design-criteria.html).
 
 
-**UCLA Component Library Repository**<br/>
+**UCLA Component Library Repository**
+<br/>
 <a class="create-button small" href="https://bitbucket.org/uclaucomm/ucla-bruin-components/src/campus/">Bitbucket Repository</a>
 
 ## Step 1 - Choose A or B
@@ -46,8 +47,8 @@ Select the Create issue button and select the dropdown from the following option
 | ------------ |
 | 
 - **Bug**: Fix errors in existing code, design, or documentation.
-- **Enhancement**: Improve or add to existing code, design, or documentation.
-- **Proposal**: Submit or recommend new components or features for inclusion in the library.
+- **Enhancement** Improve or add to existing code, design, or documentation.
+- **Proposal** Submit or recommend new components or features for inclusion in the library.
 
 </td>
 </tr>
@@ -59,11 +60,11 @@ Select the Create issue button and select the dropdown from the following option
 | Select Priority |
 | ------------ |
 |
-- **Trivial**: Nice to have, not essential.
-- **Minor**: Not serious or urgent, but should be addressed.
-- **Major**: Important and significant issue, should be addressed soon.
-- **Critical**: Extreme defect or security issue, address ASAP.
-- **Blocker**: This issue is currently stopping other tasks from moving forward.
+- **Trivial** Nice to have, not essential.
+- **Minor** Not serious or urgent, but should be addressed.
+- **Major** Important and significant issue, should be addressed soon.
+- **Critical** Extreme defect or security issue, address ASAP.
+- **Blocker** This issue is currently stopping other tasks from moving forward.
 
 </td>
 <td style="vertical-align:top;width:50%">
@@ -71,10 +72,10 @@ Select the Create issue button and select the dropdown from the following option
 | Select Component |
 | ------------ |
 |
-- **Accessibility**: Fixes or enhances a component for ADA compliance.
-- **Code**: Makes code easier to use, faster or more secure.
-- **Design**: Makes design more usable, extensible, user centered or brand compliant.
-- **Documentation**: Makes the instructions for components more clear, helpful or concise.
+- **Accessibility** Fixes or enhances a component for ADA compliance.
+- **Code** Makes code easier to use, faster or more secure.
+- **Design** Makes design more usable, extensible, user centered or brand compliant.
+- **Documentation** Makes the instructions for components more clear, helpful or concise.
 
 </td>
 </tr>
