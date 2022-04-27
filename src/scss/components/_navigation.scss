@@ -536,7 +536,7 @@
   &__toggle {
     background-color: colors.$white;
     border: 0;
-    border-left: 1px solid colors.$grey-10;
+    border-left: 1px solid colors.$medium-grey3;
     width: 48px;
     height: 48px;
     margin-left: auto;
@@ -577,6 +577,67 @@
     @media (min-width: breakpoints.breakpoint-min(lg)) {
       position: absolute;
       top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      width: 2em;
+      height: auto;
+      cursor: pointer;
+
+      &:hover {
+        background: none;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  &__toggle-2 {
+    background-color: colors.$lightest-grey-2;
+    border: 0;
+    border-left: 1px solid colors.$medium-grey3;
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+
+    &.is-open {
+      &::after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: colors.$hover-state;
+
+      &::after {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:focus {
+      outline-offset: -0.25rem;
+      outline: 4px solid colors.$hover-state;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1em;
+      background: url("/icons/denotive/right-arrow--blue.svg") no-repeat center;
+      background-size: 24px;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      position: absolute;
+      top: 15px;
       right: 10px;
       background: none;
       border: none;
@@ -639,6 +700,60 @@
     .nav-primary__link {
       padding: 14px 24px 14px 48px;
       background-color: colors.$lightest-grey-2;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        background-color: colors.$white;
+      }
+    }
+  }
+
+  /* The children of the sublist */
+  &__sublist-2 {
+    width: 100%;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      position: absolute;
+      width: 20rem;
+      list-style-position: outside !important;
+      right: -20rem;
+      top: -1px;
+    }
+
+    &--open {
+      display: block;
+    }
+
+    /* TODO refactor this to .nav-primary__list li>ul li */
+    .nav-primary__item {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        border: 1px solid colors.$grey-10;
+        border-top: 0;
+
+        a {
+          padding: 14px 16px;
+        }
+      }
+
+      &:first-child {
+        border-top: 1px solid colors.$medium-grey3;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-top: 1px solid colors.$grey-10;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-bottom: 1px solid colors.$grey-10;
+        }
+      }
+    }
+
+    .nav-primary__link {
+      padding: 14px 24px 14px 72px;
+      background-color: colors.$grey-8;
 
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         background-color: colors.$white;
@@ -713,9 +828,87 @@
     }
   }
 
+  &__link-2 {
+    display: block;
+
+    &:hover {
+      outline: 4px solid colors.$hover-state;
+      outline-offset: -0.25rem;
+      // color: colors.$white;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        background: colors.$hover-state;
+        color: colors.$white;
+        outline: 0;
+      }
+    }
+
+
+    &:focus {
+      outline-offset: -4px;
+      outline: 4px solid colors.$hover-state;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        outline-offset: -0.25rem;
+        outline: 1px dotted colors.$hover-state;
+      }
+    }
+
+    &:active {
+      background: colors.$hover-state;
+      color: colors.$white;
+    }
+
+    &--has-children {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > *:nth-child(1) {
+        flex: 1;
+      }
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        // display: inline-block;
+        position: relative;
+        padding-right: 0;
+        // padding-right: 2px;
+
+
+        .nav-primary__link {
+          &:hover {
+            border-bottom: 1px;
+          }
+        }
+
+        &:hover {
+          & > .nav-primary__toggle-2 {      
+            filter: brightness(0) invert(1);
+          }
+        }
+
+        & > a {
+          display: box;
+          display: flexbox;
+          display: flex;
+          align-items: center;
+
+          &.nav-primary__link {
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+  }
+
   /* Hide child items with this class
      Class added vis JS */
   &__sublist {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__sublist-2 {
     &--hidden {
       display: none;
     }
