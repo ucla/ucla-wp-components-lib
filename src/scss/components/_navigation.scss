@@ -560,9 +560,18 @@
       }
     }
 
+    // &:focus {
+    //   outline-offset: -0.25rem;
+    //   outline: 4px solid colors.$hover-state;
+    // }
     &:focus {
-      outline-offset: -0.25rem;
+      outline-offset: -4px;
       outline: 4px solid colors.$hover-state;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        outline-offset: -0.25rem;
+        outline: 1px dotted colors.$hover-state;
+      }
     }
 
     &::after {
@@ -588,9 +597,9 @@
         background: none;
       }
 
-      &:focus {
-        outline: 0;
-      }
+      // &:focus {
+      //   outline: 0;
+      // }
     }
   }
 
@@ -621,9 +630,19 @@
       }
     }
 
+    // &:focus {
+    //   outline-offset: -0.25rem;
+    //   outline: 4px solid colors.$hover-state;
+    // }
+
     &:focus {
-      outline-offset: -0.25rem;
+      outline-offset: -4px;
       outline: 4px solid colors.$hover-state;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        outline-offset: -0.25rem;
+        outline: 1px dotted colors.$hover-state;
+      }
     }
 
     &::after {
@@ -649,9 +668,9 @@
         background: none;
       }
 
-      &:focus {
-        outline: 0;
-      }
+      // &:focus {
+      //   outline: 0;
+      // }
     }
   }
 
