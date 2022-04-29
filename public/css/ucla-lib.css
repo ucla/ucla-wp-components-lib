@@ -9092,13 +9092,13 @@ TABLE OF CONTENTS:
   line-height: 48px;
   color: #333;
   font-weight: bold;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 8px;
 }
 .stat-wrapper .stat-tout__number > span {
   font-size: 1.125rem;
-  vertical-align: middle;
-  margin: 0 -5px;
+  margin: 0 10px;
 }
 .stat-wrapper .stat-tout__label {
   font-size: 1.25rem;
@@ -9125,7 +9125,7 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .stat-wrapper .stat-tout--inline {
     display: flex;
-    align-items: stretch;
+    align-items: center;
   }
   .stat-wrapper .stat-tout--inline .stat-tout__number {
     margin-right: 16px;
