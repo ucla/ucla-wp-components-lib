@@ -619,6 +619,10 @@
 
     &::after {
       transform: rotate(90deg);
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        transform: none;
+      }
     }
 
     &:hover {
