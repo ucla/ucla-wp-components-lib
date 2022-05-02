@@ -141,3 +141,11 @@ select {
 nav ul {
   list-style: none;
 }
+
+code {
+  font-family: monospace;
+  font-weight: 400;
+  background: rgba(83,83,99,.075);
+  padding: 2px 3px;
+  border-radius: 2px;
+}

@@ -6315,6 +6315,14 @@ nav ul {
   list-style: none;
 }
 
+code {
+  font-family: monospace;
+  font-weight: 400;
+  background: rgba(83, 83, 99, 0.075);
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
 .has-background-grey-20 {
   background-color: #ccc;
 }
@@ -9092,13 +9100,13 @@ TABLE OF CONTENTS:
   line-height: 48px;
   color: #333;
   font-weight: bold;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 8px;
 }
 .stat-wrapper .stat-tout__number > span {
   font-size: 1.125rem;
-  vertical-align: middle;
-  margin: 0 -5px;
+  margin: 0 10px;
 }
 .stat-wrapper .stat-tout__label {
   font-size: 1.25rem;
@@ -9125,7 +9133,7 @@ TABLE OF CONTENTS:
 @media (min-width: 1024px) {
   .stat-wrapper .stat-tout--inline {
     display: flex;
-    align-items: stretch;
+    align-items: center;
   }
   .stat-wrapper .stat-tout--inline .stat-tout__number {
     margin-right: 16px;
