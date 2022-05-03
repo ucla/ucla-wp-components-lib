@@ -9887,8 +9887,14 @@ TABLE OF CONTENTS:
   filter: brightness(0) invert(1);
 }
 .nav-primary__toggle:focus {
-  outline-offset: -0.25rem;
+  outline-offset: -4px;
   outline: 4px solid #0079bf;
+}
+@media (min-width: 1024px) {
+  .nav-primary__toggle:focus {
+    outline-offset: -0.25rem;
+    outline: 1px dotted #0079bf;
+  }
 }
 .nav-primary__toggle::after {
   content: "";
@@ -9912,9 +9918,6 @@ TABLE OF CONTENTS:
   .nav-primary__toggle:hover {
     background: none;
   }
-  .nav-primary__toggle:focus {
-    outline: 0;
-  }
 }
 .nav-primary__toggle-2 {
   background-color: #ebebeb;
@@ -9930,6 +9933,11 @@ TABLE OF CONTENTS:
 .nav-primary__toggle-2::after {
   transform: rotate(90deg);
 }
+@media (min-width: 1024px) {
+  .nav-primary__toggle-2::after {
+    transform: none;
+  }
+}
 .nav-primary__toggle-2:hover {
   cursor: pointer;
   background-color: #0079bf;
@@ -9938,8 +9946,14 @@ TABLE OF CONTENTS:
   filter: brightness(0) invert(1);
 }
 .nav-primary__toggle-2:focus {
-  outline-offset: -0.25rem;
+  outline-offset: -4px;
   outline: 4px solid #0079bf;
+}
+@media (min-width: 1024px) {
+  .nav-primary__toggle-2:focus {
+    outline-offset: -0.25rem;
+    outline: 1px dotted #0079bf;
+  }
 }
 .nav-primary__toggle-2::after {
   content: "";
@@ -9963,9 +9977,6 @@ TABLE OF CONTENTS:
   .nav-primary__toggle-2:hover {
     background: none;
   }
-  .nav-primary__toggle-2:focus {
-    outline: 0;
-  }
 }
 .nav-primary__sublist {
   width: 100%;
@@ -9979,6 +9990,11 @@ TABLE OF CONTENTS:
 }
 .nav-primary__sublist--open {
   display: block;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist--open-left {
+    right: -4px;
+  }
 }
 @media (min-width: 1024px) {
   .nav-primary__sublist .nav-primary__item {
@@ -10029,6 +10045,12 @@ TABLE OF CONTENTS:
 }
 .nav-primary__sublist-2--open {
   display: block;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2--open-left {
+    right: 20rem !important;
+    margin-right: -10px !important;
+  }
 }
 @media (min-width: 1024px) {
   .nav-primary__sublist-2 .nav-primary__item {
