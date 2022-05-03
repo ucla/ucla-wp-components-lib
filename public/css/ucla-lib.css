@@ -9727,6 +9727,7 @@ TABLE OF CONTENTS:
   transition: right 0.5s ease;
   /* The main list of navigation links. */
   /* Child list ul(s) */
+  /* The children of the sublist */
   /* Link styling
      TODO most of this could be moved to the a selector. Really only need this to target the has children class. */
   /* Hide child items with this class
@@ -9867,7 +9868,7 @@ TABLE OF CONTENTS:
 .nav-primary__toggle {
   background-color: #fff;
   border: 0;
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid #ccc;
   width: 48px;
   height: 48px;
   margin-left: auto;
@@ -9915,6 +9916,57 @@ TABLE OF CONTENTS:
     outline: 0;
   }
 }
+.nav-primary__toggle-2 {
+  background-color: #ebebeb;
+  border: 0;
+  border-left: 1px solid #ccc;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+}
+.nav-primary__toggle-2.is-open::after {
+  transform: rotate(-90deg);
+}
+.nav-primary__toggle-2::after {
+  transform: rotate(90deg);
+}
+.nav-primary__toggle-2:hover {
+  cursor: pointer;
+  background-color: #0079bf;
+}
+.nav-primary__toggle-2:hover::after {
+  filter: brightness(0) invert(1);
+}
+.nav-primary__toggle-2:focus {
+  outline-offset: -0.25rem;
+  outline: 4px solid #0079bf;
+}
+.nav-primary__toggle-2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1em;
+  background: url("/icons/denotive/right-arrow--blue.svg") no-repeat center;
+  background-size: 24px;
+}
+@media (min-width: 1024px) {
+  .nav-primary__toggle-2 {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: none;
+    border: none;
+    width: 2em;
+    height: auto;
+    cursor: pointer;
+  }
+  .nav-primary__toggle-2:hover {
+    background: none;
+  }
+  .nav-primary__toggle-2:focus {
+    outline: 0;
+  }
+}
 .nav-primary__sublist {
   width: 100%;
   /* TODO refactor this to .nav-primary__list li>ul li */
@@ -9959,6 +10011,56 @@ TABLE OF CONTENTS:
 }
 @media (min-width: 1024px) {
   .nav-primary__sublist .nav-primary__link {
+    background-color: #fff;
+  }
+}
+.nav-primary__sublist-2 {
+  width: 100%;
+  /* TODO refactor this to .nav-primary__list li>ul li */
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2 {
+    position: absolute;
+    width: 20rem;
+    list-style-position: outside !important;
+    right: -20rem;
+    top: -1px;
+  }
+}
+.nav-primary__sublist-2--open {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2 .nav-primary__item {
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+  }
+  .nav-primary__sublist-2 .nav-primary__item a {
+    padding: 14px 16px;
+  }
+}
+.nav-primary__sublist-2 .nav-primary__item:first-child {
+  border-top: 1px solid #ccc;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2 .nav-primary__item:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
+}
+.nav-primary__sublist-2 .nav-primary__item:last-child {
+  border-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2 .nav-primary__item:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+.nav-primary__sublist-2 .nav-primary__link {
+  padding: 14px 24px 14px 72px;
+  background-color: #e0e0e0;
+}
+@media (min-width: 1024px) {
+  .nav-primary__sublist-2 .nav-primary__link {
     background-color: #fff;
   }
 }
@@ -10016,7 +10118,66 @@ TABLE OF CONTENTS:
     padding-right: 40px;
   }
 }
+.nav-primary__link-2 {
+  display: block;
+}
+.nav-primary__link-2:hover {
+  outline: 4px solid #0079bf;
+  outline-offset: -0.25rem;
+}
+@media (min-width: 1024px) {
+  .nav-primary__link-2:hover {
+    background: #0079bf;
+    color: #fff;
+    outline: 0;
+  }
+}
+.nav-primary__link-2:focus {
+  outline-offset: -4px;
+  outline: 4px solid #0079bf;
+}
+@media (min-width: 1024px) {
+  .nav-primary__link-2:focus {
+    outline-offset: -0.25rem;
+    outline: 1px dotted #0079bf;
+  }
+}
+.nav-primary__link-2:active {
+  background: #0079bf;
+  color: #fff;
+}
+.nav-primary__link-2--has-children {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-primary__link-2--has-children > *:nth-child(1) {
+  flex: 1;
+}
+@media (min-width: 1024px) {
+  .nav-primary__link-2--has-children {
+    position: relative;
+    padding-right: 0;
+  }
+  .nav-primary__link-2--has-children .nav-primary__link:hover {
+    border-bottom: 1px;
+  }
+  .nav-primary__link-2--has-children:hover > .nav-primary__toggle-2 {
+    filter: brightness(0) invert(1);
+  }
+  .nav-primary__link-2--has-children > a {
+    display: box;
+    display: flexbox;
+    display: flex;
+    align-items: center;
+  }
+  .nav-primary__link-2--has-children > a.nav-primary__link {
+    padding-right: 40px;
+  }
+}
 .nav-primary__sublist--hidden {
+  display: none;
+}
+.nav-primary__sublist-2--hidden {
   display: none;
 }
 .nav-primary a {
