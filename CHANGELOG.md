@@ -1,3 +1,10 @@
+# [1.0.0-beta.18](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-05-03)
+
+
+### Bug Fixes
+
+* fixes icon placement in S3 Bucket ([1d36673](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/1d36673c04e77846b65e705cad57dcaa3772e33c))
+
 # [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-05-03)
 
 
