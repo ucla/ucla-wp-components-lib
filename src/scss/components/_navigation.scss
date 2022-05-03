@@ -692,6 +692,12 @@
       display: block;
     }
 
+    &--open-left {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        right: -4px;
+      }
+    }
+
     /* TODO refactor this to .nav-primary__list li>ul li */
     .nav-primary__item {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
@@ -744,6 +750,13 @@
 
     &--open {
       display: block;
+    }
+
+    &--open-left {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        right: 20rem !important;
+        margin-right: -10px !important;
+      }
     }
 
     /* TODO refactor this to .nav-primary__list li>ul li */
