@@ -368,7 +368,7 @@ $(document).ready(function() {
               $dropdown.show();
   
               //add a tabindex of 0
-              $dropdown.find('.nav-primary__link-2').attr('tabindex', '0');
+              $dropdown.find('.nav-primary__link').attr('tabindex', '0');
   
               //set aria expanded to true
               $focus.parent().find('.nav-primary__sublist-2').attr('aria-expanded', 'true');
