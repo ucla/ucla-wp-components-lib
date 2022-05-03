@@ -1,4 +1,17 @@
-# [1.0.0-beta.17](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-04-22)
+# [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-05-03)
+
+
+### Bug Fixes
+
+* fixes icon placement in S3 Bucket ([1d36673](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/1d36673c04e77846b65e705cad57dcaa3772e33c))
+* footer changes, focus states, documentation ([220f4aa](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/220f4aa4de48e2bf84b97cb2ac509bf69c165d56))
+
+
+### Features
+
+* documentation changes, improve and fix components, refactor ([d27d0c8](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/d27d0c8c569ad19eef2ea68580eb119edc79757d))
+
+# [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-05-03)
 
 
 ### Bug Fixes
@@ -57,14 +70,6 @@
 
 58, 62
 
-<<<<<<< HEAD
-# [1.0.0-beta.14](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-06-08)
-
-
-### Features
-
-* **component:** cards and spacing ([5baaebb](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/5baaebb3fee99f6932ba766b0442dbd020772d71))
-=======
 # [1.0.0-dev-beta.17](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.16...v1.0.0-dev-beta.17) (2021-07-20)
 
 
@@ -78,7 +83,6 @@
 * Social tiles have been reconfigured
 
 58, 62
->>>>>>> 98f2a12a3a3c1d7cacd8525d3a785bb93383a247
 
 # [1.0.0-dev-beta.16](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.15...v1.0.0-dev-beta.16) (2021-06-08)
 
