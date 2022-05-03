@@ -63,7 +63,6 @@ $(document).ready(function() {
         if (obj.getBoundingClientRect().x + 30*rem > windowWidth) {
           const sublist = obj.parentNode.children[2];
           sublist.classList.add('nav-primary__sublist--open-left');
-          console.log(sublist.children);
           for (var item of sublist.children) {
             if (item.classList.contains('nav-primary__link-2--has-children')) {
               item.children[2].classList.add('nav-primary__sublist-2--open-left');
@@ -297,7 +296,7 @@ $(document).ready(function() {
         setTimeout(function() {
 
           let $focus = $(':focus') /*, $dropdown*/ ;
-          console.log($focus);
+
           //if this is a top level nav or the focus is not a primary nav item
           if ($focus.hasClass('nav-primary__search-desktop-button') ||
               ($focus.parent().parent('.nav-primary__list').length > 0 &&
