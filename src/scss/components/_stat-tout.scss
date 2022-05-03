@@ -54,15 +54,17 @@ TABLE OF CONTENTS:
       line-height: 48px;
       color: colors.$medium-grey5;
       font-weight: bold;
-      display: block;
+      display: flex;
+      align-items: center;
       margin-bottom: 8px;
 
       // Target spans wrapping "out of"
       // For multiple variable stat touts
       & > span {
         font-size: variables.$ucla-font-size-medium-small;
-        vertical-align: middle;
-        margin: 0 -5px;
+        // vertical-align: middle;
+        // margin: 0 -5px;
+        margin: 0 10px;
       }
     }
 
@@ -101,7 +103,7 @@ TABLE OF CONTENTS:
     &--inline {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
         display: flex;
-        align-items: stretch;
+        align-items: center;
 
         .stat-tout__number {
           margin-right: 16px;
