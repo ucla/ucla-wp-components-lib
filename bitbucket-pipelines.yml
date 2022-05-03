@@ -88,7 +88,7 @@ pipelines:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
-                S3_BUCKET: webcomponents.ucla.edu/img
+                S3_BUCKET: webcomponents.ucla.edu/icons
                 LOCAL_PATH: ${BITBUCKET_CLONE_DIR}/src/components/icons
                 EXTRA_ARGS: "--delete"
             - mkdir redirection
