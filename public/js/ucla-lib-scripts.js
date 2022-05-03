@@ -1874,16 +1874,34 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 
+  // Toggle list functionality for 3rd level
+  const $sublistItem2 = $('.nav-primary__sublist-2');
+  const $toggle2 = $('.nav-primary__toggle-2');
+  const breakpoint = 1024;
+
+  // Hide sub items in small device sizes
+  $sublistItem2.addClass('nav-primary__sublist-2--hidden');
+
+  // Show nav children on click of toggle
+  $toggle2.on('click', function() {
+    if ($(this).siblings('.nav-primary__sublist-2').hasClass('nav-primary__sublist-2--hidden')) {
+      $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'true');
+    } else {
+      $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+    }
+
+    $(this).siblings('.nav-primary__sublist-2').toggleClass('nav-primary__sublist-2--hidden');
+    $(this).toggleClass('is-open');
+  });
+
   const $sublistItem = $('.nav-primary__sublist');
   const $toggle = $('.nav-primary__toggle');
-  const breakpoint = 1024;
 
   // Hide sub items in small device sizes
   $sublistItem.addClass('nav-primary__sublist--hidden');
 
   // Show nav children on click of toggle
   $toggle.on('click', function() {
-
     if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
     } else {
@@ -1912,6 +1930,20 @@ $(document).ready(function() {
       $('.hamburger').removeClass('hamburger--is-active');
       $('.nav-primary').removeClass('nav-primary--is-active');
       enableMenuTab();
+
+      // If any tab is too far to the right, open left
+      $sublistItem.siblings('.nav-primary__link').each(function(i, obj) {
+        const rem = parseFloat(getComputedStyle(obj).fontSize);
+        if (obj.getBoundingClientRect().x + 30*rem > windowWidth) {
+          const sublist = obj.parentNode.children[2];
+          sublist.classList.add('nav-primary__sublist--open-left');
+          for (var item of sublist.children) {
+            if (item.classList.contains('nav-primary__link-2--has-children')) {
+              item.children[2].classList.add('nav-primary__sublist-2--open-left');
+            }
+          }
+        }
+      });
     } else {
       disableMenuTab();
     }
@@ -2006,10 +2038,22 @@ $(document).ready(function() {
 
   //on mouse out of sublist reset
   $('#nav-main .nav-primary__sublist').mouseout(function() {
+    $('#nav-main').find('.nav-primary__list .nav-primary__link-2').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__sublist-2 .nav-primary__link-2').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
+    $('#nav-main').find('.nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
     $('#nav-main').find('.nav-primary__list .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $('#nav-main').find('.nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+  });
+
+  //on mouse out of second sublist
+  $('#nav-main .nav-primary__sublist-2').mouseout(function() {
+    $('#nav-main').find('.nav-primary__list .nav-primary__link-2').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__sublist-2 .nav-primary__link-2').attr('tabindex', '0');
+    $('#nav-main').find('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
+    $('#nav-main').find('.nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
   });
 
   //Set aria labels for the primary navigation
@@ -2024,6 +2068,19 @@ $(document).ready(function() {
       $(this).find('.nav-primary__sublist').removeClass('nav-primary__sublist--hidden');
     }
   });
+
+  //Set aria labels for the the second tier
+  $('#nav-main .nav-primary__link-2--has-children').mouseover(function() {
+
+      windowWidth = $(window).width();
+  
+      //if this is desktop
+      if (windowWidth >= breakpoint) {
+  
+        $(this).find('.nav-primary__sublist-2').attr('aria-expanded', 'true');
+        $(this).find('.nav-primary__sublist-2').removeClass('nav-primary__sublist-2--hidden');
+      }
+    });
 
   $('#nav-main .nav-primary__link--has-children').mouseleave(function() {
 
@@ -2043,6 +2100,24 @@ $(document).ready(function() {
     }
   });
 
+  $('#nav-main .nav-primary__link-2--has-children').mouseleave(function() {
+
+    let $this = $(this);
+
+    windowWidth = $(window).width();
+
+    //if this is desktop
+    if (windowWidth >= breakpoint) {
+
+      $(this).find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+      setTimeout(function() {
+        $this.find('.nav-primary__sublist-2').addClass('nav-primary__sublist-2--hidden');
+      }, 50);
+
+      $toggle.removeClass('is-open');
+    }
+  });
+
 
 
 
@@ -2050,6 +2125,7 @@ $(document).ready(function() {
   /* ---------- Reset all the tabbing and styles ---------- */
   function resetTabs() {
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
+    $('#nav-main').find('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
     $(document).unbind('keydown');
   }
 
@@ -2096,15 +2172,29 @@ $(document).ready(function() {
           let $focus = $(':focus') /*, $dropdown*/ ;
 
           //if this is a top level nav or the focus is not a primary nav item
-          if ($focus.parent().parent('.nav-primary__list').length > 0 || !$focus.hasClass('nav-primary__link')) {
-
+          if ($focus.hasClass('nav-primary__search-desktop-button') ||
+              ($focus.parent().parent('.nav-primary__list').length > 0 &&
+              !$focus.hasClass('nav-primary__toggle'))) {
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
             $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
             $toggle.removeClass('is-open');
             $sublistItem.addClass('nav-primary__sublist--hidden');
+
+            $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
+            $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+            $toggle2.removeClass('is-open');
+            $sublistItem2.addClass('nav-primary__sublist-2--hidden');
           }
 
-        }, 50);
+          //if the is focused on the text of the categories, not the button
+          if ($focus.parent().parent('.nav-primary__sublist-2').length == 0 &&
+              !$focus.hasClass('nav-primary__toggle-2')) {
+            $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
+            $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+            $toggle2.removeClass('is-open');
+            $sublistItem2.addClass('nav-primary__sublist-2--hidden');
+          }
+        }, 10);
       }
 
       //arrow down was pressed
@@ -2113,7 +2203,7 @@ $(document).ready(function() {
         //get the focused element
         let $focus = $(':focus'),
           $dropdown;
-
+          
         //if this is a primary navigation item
         if ($focus.hasClass('nav-primary__link')) {
 
@@ -2133,6 +2223,32 @@ $(document).ready(function() {
           }
         }
       }
+      
+      // right arrow is pressed
+      if (keyCode === 39) {
+        
+        // get the focused element
+        let $focus = $(':focus'),
+          $dropdown;
+          
+          // check if second tier
+          if ($focus.hasClass('nav-primary__link') && $focus.parent().hasClass('nav-primary__link-2--has-children')) {
+            $dropdown = $focus.parent('.nav-primary__item').find('.nav-primary__sublist-2');
+  
+            //has a dropdown
+            if ($dropdown.length > 0) {
+  
+              //Show the dropdown
+              $dropdown.show();
+  
+              //add a tabindex of 0
+              $dropdown.find('.nav-primary__link').attr('tabindex', '0');
+  
+              //set aria expanded to true
+              $focus.parent().find('.nav-primary__sublist-2').attr('aria-expanded', 'true');
+            }
+          }
+      }
 
       //escape key was pressed
       if (keyCode === 27) {
@@ -2150,11 +2266,23 @@ $(document).ready(function() {
           //if this is a nav item
           if ($focus.parent().parent('.nav-primary__sublist').length > 0) {
             $focus.parent().parent().parent('.nav-primary__item').find('a').focus();
+          } else if ($focus.parent().parent('.nav-primary__sublist-2').length > 0) {
+            $focus.parent().parent().parent().parent().parent('.nav-primary__item').find('a').focus();
           }
-        }, 50);
+
+          //close the 3rd tier
+          $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
+          $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+          $toggle2.removeClass('is-open');
+          $('.nav-primary__sublist-2').addClass('nav-primary__sublist-2--hidden');
+
+          //if this is a nav item
+          if ($focus.parent().parent('.nav-primary__sublist-2').length > 0) {
+            $focus.parent().parent().parent('.nav-primary__item').find('a').focus();
+          }
+        }, 20);
       }
-
-
+      
     });
 
   }
@@ -2270,6 +2398,8 @@ $(document).ready(function() {
   function disableMenuTab() {
     $('.nav-primary__link').attr('tabindex', '-1');
     $('.nav-primary__toggle').attr('tabindex', '-1');
+    $('.nav-primary__link-2').attr('tabindex', '-1');
+    $('.nav-primary__toggle-2').attr('tabindex', '-1');
     $('.nav-primary__search-field').attr('tabindex', '-1');
   }
 
@@ -2277,6 +2407,8 @@ $(document).ready(function() {
   function enableMenuTab() {
     $('.nav-primary__link').attr('tabindex', '0');
     $('.nav-primary__toggle').attr('tabindex', '0');
+    $('.nav-primary__link-2').attr('tabindex', '0');
+    $('.nav-primary__toggle-2').attr('tabindex', '0');
     $('.nav-primary__search-field').attr('tabindex', '0');
   }
 
