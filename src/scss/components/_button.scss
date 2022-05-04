@@ -29,7 +29,7 @@
         content: "";
         width: 20px;
         height: 20px;
-        background-image: url("/icons/denotive/play--white.svg");
+        background-image: url("../icons/denotive/play--white.svg");
         margin-right: 10px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -44,7 +44,7 @@
       content: "";
       width: 12px;
       height: 12px;
-      background-image: url("/icons/denotive/external-link--white.svg");
+      background-image: url("../icons/denotive/external-link--white.svg");
       margin-left: 14px;
       background-size: contain;
       background-repeat: no-repeat;
@@ -113,12 +113,12 @@
     }
 
     &.icon--play::before {
-      background-image: url("/icons/denotive/play--black.svg");
+      background-image: url("../icons/denotive/play--black.svg");
       background-size: contain;
     }
 
     &.icon--link::after {
-      background-image: url("/icons/denotive/external-link--black.svg");
+      background-image: url("../icons/denotive/external-link--black.svg");
       background-size: contain;
     }
   }
@@ -132,27 +132,27 @@
       border: 2px solid colors.$default-state;
 
       &.icon--play::before {
-        background-image: url("/icons/denotive/play--blue.svg");
+        background-image: url("../icons/denotive/play--blue.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link::after {
-        background-image: url("/icons/denotive/external-link--defaultblue.svg");
+        background-image: url("../icons/denotive/external-link--defaultblue.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--play:hover::before,
       &.icon--play:focus::before {
-        background-image: url("/icons/denotive/play--white.svg");
+        background-image: url("../icons/denotive/play--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link:hover::after,
       &.icon--link:focus::after {
-        background-image: url("/icons/denotive/external-link--white.svg");
+        background-image: url("../icons/denotive/external-link--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
@@ -197,26 +197,26 @@
 
       &.icon--play:hover::before,
       &.icon--play:focus::before {
-        background-image: url("/icons/denotive/play--black.svg");
+        background-image: url("../icons/denotive/play--black.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--play::before {
-        background-image: url("/icons/denotive/play--white.svg");
+        background-image: url("../icons/denotive/play--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link:hover::after,
       &.icon--link:focus::after {
-        background-image: url("/icons/denotive/external-link--black.svg");
+        background-image: url("../icons/denotive/external-link--black.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
 
       &.icon--link::after {
-        background-image: url("/icons/denotive/external-link--white.svg");
+        background-image: url("../icons/denotive/external-link--white.svg");
         background-size: contain;
         background-position: 0 -1px;
       }
@@ -262,12 +262,12 @@
 
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background-image: url("/icons/denotive/play--white.svg");
+      background-image: url("../icons/denotive/play--white.svg");
       background-size: contain;
     }
 
     &.icon--play::before {
-      background-image: url("/icons/denotive/play--blue.svg");
+      background-image: url("../icons/denotive/play--blue.svg");
       background-size: contain;
     }
 
@@ -301,32 +301,32 @@
 
     &.icon--play:hover::before,
     &.icon--play:focus::before {
-      background-image: url("/icons/denotive/play--white.svg");
+      background-image: url("../icons/denotive/play--white.svg");
       background-size: contain;
     }
 
     &.icon--play::before {
-      background-image: url("/icons/denotive/play--blue.svg");
+      background-image: url("../icons/denotive/play--blue.svg");
       background-size: contain;
     }
 
     &.icon--link:hover::after,
     &.icon--link:focus::after {
-      background-image: url("/icons/denotive/external-link--white.svg");
+      background-image: url("../icons/denotive/external-link--white.svg");
       background-size: contain;
     }
 
     &.icon--link::after {
-      background-image: url("/icons/denotive/external-link--defaultblue.svg");
+      background-image: url("../icons/denotive/external-link--defaultblue.svg");
       background-size: contain;
     }
 
     &--darkbg {
       &.icon--play::before {
-        background-image: url("/icons/denotive/play--black.svg");
+        background-image: url("../icons/denotive/play--black.svg");
       }
       &.icon--link::after {
-        background-image: url("/icons/denotive/external-link--black.svg");
+        background-image: url("../icons/denotive/external-link--black.svg");
       }
     }
   }
@@ -460,10 +460,10 @@
         border-color: colors.$hover-state;
 
         & .pagination-next {
-          background-image: url('/icons/denotive/right-arrow--white.svg');
+          background-image: url('../icons/denotive/right-arrow--white.svg');
         }
         & .pagination-prev {
-          background-image: url('/icons/denotive/left-arrow--white.svg');
+          background-image: url('../icons/denotive/left-arrow--white.svg');
         }
       }
 
@@ -475,10 +475,10 @@
         color: colors.$white;
 
         & .pagination-next {
-          background-image: url('/icons/denotive/right-arrow--white.svg');
+          background-image: url('../icons/denotive/right-arrow--white.svg');
         }
         & .pagination-prev {
-          background-image: url('/icons/denotive/left-arrow--white.svg');
+          background-image: url('../icons/denotive/left-arrow--white.svg');
         }
       }
 
@@ -489,10 +489,10 @@
         outline: none;
 
         & .pagination-next {
-          background-image: url('/icons/denotive/right-arrow--white.svg');
+          background-image: url('../icons/denotive/right-arrow--white.svg');
         }
         & .pagination-prev {
-          background-image: url('/icons/denotive/left-arrow--white.svg');
+          background-image: url('../icons/denotive/left-arrow--white.svg');
         }
       }
 
@@ -507,10 +507,10 @@
         background-position-x: center;
       }
       .pagination-next {
-        background-image: url('/icons/denotive/right-arrow--blue.svg');
+        background-image: url('../icons/denotive/right-arrow--blue.svg');
       }
       .pagination-prev {
-        background-image: url('/icons/denotive/left-arrow--blue.svg');
+        background-image: url('../icons/denotive/left-arrow--blue.svg');
       }
     }
 
