@@ -33,7 +33,7 @@
       cursor: pointer;
 
       &::after {
-        background: url("/icons/denotive/down--white.svg");
+        background: url("../icons/denotive/down--white.svg");
         background-position: center;
         background-size: contain;
         position: absolute;
@@ -62,7 +62,7 @@
     &::after {
       display: block;
       content: "";
-      background: url("/icons/denotive/down--blue.svg");
+      background: url("../icons/denotive/down--blue.svg");
       background-position: center;
       background-size: contain;
       position: absolute;
