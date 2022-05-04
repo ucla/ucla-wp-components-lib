@@ -6413,7 +6413,7 @@ code {
   cursor: pointer;
 }
 .accordion__title:hover::after, .accordion__title:active::after {
-  background: url("/icons/denotive/down--white.svg");
+  background: url("../icons/denotive/down--white.svg");
   background-position: center;
   background-size: contain;
   position: absolute;
@@ -6436,7 +6436,7 @@ code {
 .accordion__title::after {
   display: block;
   content: "";
-  background: url("/icons/denotive/down--blue.svg");
+  background: url("../icons/denotive/down--blue.svg");
   background-position: center;
   background-size: contain;
   position: absolute;
@@ -6587,7 +6587,7 @@ figure.blockquote > figcaption::before {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url("/icons/denotive/play--white.svg");
+  background-image: url("../icons/denotive/play--white.svg");
   margin-right: 10px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -6600,7 +6600,7 @@ figure.blockquote > figcaption::before {
   content: "";
   width: 12px;
   height: 12px;
-  background-image: url("/icons/denotive/external-link--white.svg");
+  background-image: url("../icons/denotive/external-link--white.svg");
   margin-left: 14px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -6654,11 +6654,11 @@ figure.blockquote > figcaption::before {
   background: #e5e5e5;
 }
 .btn--darkbg.icon--play::before {
-  background-image: url("/icons/denotive/play--black.svg");
+  background-image: url("../icons/denotive/play--black.svg");
   background-size: contain;
 }
 .btn--darkbg.icon--link::after {
-  background-image: url("/icons/denotive/external-link--black.svg");
+  background-image: url("../icons/denotive/external-link--black.svg");
   background-size: contain;
 }
 .btn--secondary--lightbg {
@@ -6667,22 +6667,22 @@ figure.blockquote > figcaption::before {
   border: 2px solid #00598c;
 }
 .btn--secondary--lightbg.icon--play::before {
-  background-image: url("/icons/denotive/play--blue.svg");
+  background-image: url("../icons/denotive/play--blue.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--lightbg.icon--link::after {
-  background-image: url("/icons/denotive/external-link--defaultblue.svg");
+  background-image: url("../icons/denotive/external-link--defaultblue.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--lightbg.icon--play:hover::before, .btn--secondary--lightbg.icon--play:focus::before {
-  background-image: url("/icons/denotive/play--white.svg");
+  background-image: url("../icons/denotive/play--white.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--lightbg.icon--link:hover::after, .btn--secondary--lightbg.icon--link:focus::after {
-  background-image: url("/icons/denotive/external-link--white.svg");
+  background-image: url("../icons/denotive/external-link--white.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
@@ -6718,22 +6718,22 @@ figure.blockquote > figcaption::before {
   border: 2px solid #fff;
 }
 .btn--secondary--darkbg.icon--play:hover::before, .btn--secondary--darkbg.icon--play:focus::before {
-  background-image: url("/icons/denotive/play--black.svg");
+  background-image: url("../icons/denotive/play--black.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--darkbg.icon--play::before {
-  background-image: url("/icons/denotive/play--white.svg");
+  background-image: url("../icons/denotive/play--white.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--darkbg.icon--link:hover::after, .btn--secondary--darkbg.icon--link:focus::after {
-  background-image: url("/icons/denotive/external-link--black.svg");
+  background-image: url("../icons/denotive/external-link--black.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
 .btn--secondary--darkbg.icon--link::after {
-  background-image: url("/icons/denotive/external-link--white.svg");
+  background-image: url("../icons/denotive/external-link--white.svg");
   background-size: contain;
   background-position: 0 -1px;
 }
@@ -6769,11 +6769,11 @@ figure.blockquote > figcaption::before {
   color: #00598c;
 }
 .btn--tertiary.icon--play:hover::before, .btn--tertiary.icon--play:focus::before {
-  background-image: url("/icons/denotive/play--white.svg");
+  background-image: url("../icons/denotive/play--white.svg");
   background-size: contain;
 }
 .btn--tertiary.icon--play::before {
-  background-image: url("/icons/denotive/play--blue.svg");
+  background-image: url("../icons/denotive/play--blue.svg");
   background-size: contain;
 }
 .btn--tertiary:visited {
@@ -6800,26 +6800,26 @@ figure.blockquote > figcaption::before {
   background: transparent;
 }
 .btn--tertiary.icon--play:hover::before, .btn--tertiary.icon--play:focus::before {
-  background-image: url("/icons/denotive/play--white.svg");
+  background-image: url("../icons/denotive/play--white.svg");
   background-size: contain;
 }
 .btn--tertiary.icon--play::before {
-  background-image: url("/icons/denotive/play--blue.svg");
+  background-image: url("../icons/denotive/play--blue.svg");
   background-size: contain;
 }
 .btn--tertiary.icon--link:hover::after, .btn--tertiary.icon--link:focus::after {
-  background-image: url("/icons/denotive/external-link--white.svg");
+  background-image: url("../icons/denotive/external-link--white.svg");
   background-size: contain;
 }
 .btn--tertiary.icon--link::after {
-  background-image: url("/icons/denotive/external-link--defaultblue.svg");
+  background-image: url("../icons/denotive/external-link--defaultblue.svg");
   background-size: contain;
 }
 .btn--tertiary--darkbg.icon--play::before {
-  background-image: url("/icons/denotive/play--black.svg");
+  background-image: url("../icons/denotive/play--black.svg");
 }
 .btn--tertiary--darkbg.icon--link::after {
-  background-image: url("/icons/denotive/external-link--black.svg");
+  background-image: url("../icons/denotive/external-link--black.svg");
 }
 .btn--group {
   background: transparent;
@@ -6927,11 +6927,11 @@ figure.blockquote > figcaption::before {
 }
 .pagination li .page:hover .pagination-next,
 .pagination--boxed li .page:hover .pagination-next {
-  background-image: url("/icons/denotive/right-arrow--white.svg");
+  background-image: url("../icons/denotive/right-arrow--white.svg");
 }
 .pagination li .page:hover .pagination-prev,
 .pagination--boxed li .page:hover .pagination-prev {
-  background-image: url("/icons/denotive/left-arrow--white.svg");
+  background-image: url("../icons/denotive/left-arrow--white.svg");
 }
 .pagination li .page:focus,
 .pagination--boxed li .page:focus {
@@ -6943,11 +6943,11 @@ figure.blockquote > figcaption::before {
 }
 .pagination li .page:focus .pagination-next,
 .pagination--boxed li .page:focus .pagination-next {
-  background-image: url("/icons/denotive/right-arrow--white.svg");
+  background-image: url("../icons/denotive/right-arrow--white.svg");
 }
 .pagination li .page:focus .pagination-prev,
 .pagination--boxed li .page:focus .pagination-prev {
-  background-image: url("/icons/denotive/left-arrow--white.svg");
+  background-image: url("../icons/denotive/left-arrow--white.svg");
 }
 .pagination li .page:active,
 .pagination--boxed li .page:active {
@@ -6958,11 +6958,11 @@ figure.blockquote > figcaption::before {
 }
 .pagination li .page:active .pagination-next,
 .pagination--boxed li .page:active .pagination-next {
-  background-image: url("/icons/denotive/right-arrow--white.svg");
+  background-image: url("../icons/denotive/right-arrow--white.svg");
 }
 .pagination li .page:active .pagination-prev,
 .pagination--boxed li .page:active .pagination-prev {
-  background-image: url("/icons/denotive/left-arrow--white.svg");
+  background-image: url("../icons/denotive/left-arrow--white.svg");
 }
 .pagination li .page .pagination-next, .pagination li .page .pagination-prev,
 .pagination--boxed li .page .pagination-next,
@@ -6977,11 +6977,11 @@ figure.blockquote > figcaption::before {
 }
 .pagination li .page .pagination-next,
 .pagination--boxed li .page .pagination-next {
-  background-image: url("/icons/denotive/right-arrow--blue.svg");
+  background-image: url("../icons/denotive/right-arrow--blue.svg");
 }
 .pagination li .page .pagination-prev,
 .pagination--boxed li .page .pagination-prev {
-  background-image: url("/icons/denotive/left-arrow--blue.svg");
+  background-image: url("../icons/denotive/left-arrow--blue.svg");
 }
 .pagination li .page--current,
 .pagination--boxed li .page--current {
@@ -7959,25 +7959,25 @@ figure.blockquote > figcaption::before {
   }
 }
 .footer__dept--social-facebook:hover, .footer__dept--social-facebook:active {
-  content: url("/icons/social/facebook--black.svg");
+  content: url("../icons/social/facebook--black.svg");
 }
 .footer__dept--social-twitter:hover, .footer__dept--social-twitter:active {
-  content: url("/icons/social/twitter--black.svg");
+  content: url("../icons/social/twitter--black.svg");
 }
 .footer__dept--social-instagram:hover, .footer__dept--social-instagram:active {
-  content: url("/icons/social/instagram--black.svg");
+  content: url("../icons/social/instagram--black.svg");
 }
 .footer__dept--social-snapchat:hover, .footer__dept--social-snapchat:active {
-  content: url("/icons/social/snapchat--black.svg");
+  content: url("../icons/social/snapchat--black.svg");
 }
 .footer__dept--social-linkedin:hover, .footer__dept--social-linkedin:active {
-  content: url("/icons/social/linkedin--black.svg");
+  content: url("../icons/social/linkedin--black.svg");
 }
 .footer__dept--social-youtube:hover, .footer__dept--social-youtube:active {
-  content: url("/icons/social/youtube--black.svg");
+  content: url("../icons/social/youtube--black.svg");
 }
 .footer__dept--social-tiktok:hover, .footer__dept--social-tiktok:active {
-  content: url("/icons/social/tiktok--black.svg");
+  content: url("../icons/social/tiktok--black.svg");
 }
 .footer__dept--social-facebook, .footer__dept--social-twitter, .footer__dept--social-instagram, .footer__dept--social-snapchat, .footer__dept--social-linkedin, .footer__dept--social-youtube, .footer__dept--social-tiktok {
   max-height: 100%;
@@ -8350,7 +8350,7 @@ figure.blockquote > figcaption::before {
 .select__menu {
   appearance: none;
   -webkit-appearance: none;
-  background: #ebebeb url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
+  background: #ebebeb url("../icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
   background-size: 24px;
   font-size: 1rem;
   line-height: 1.5;
@@ -8380,7 +8380,7 @@ figure.blockquote > figcaption::before {
 }
 .select.hasError > .select__menu {
   border: 1px solid red;
-  background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
+  background: #ebebeb url("../icons/denotive/form-error.svg") no-repeat 96.5% 50%;
   background-size: 24px 24px;
 }
 .select.hasError > .select__menu:focus {
@@ -8545,7 +8545,7 @@ figure.blockquote > figcaption::before {
 }
 .ucla .related-links li a.related-links--external::after {
   content: "";
-  background: url("/icons/denotive/external-link--defaultblue.svg");
+  background: url("../icons/denotive/external-link--defaultblue.svg");
   background-size: contain;
   width: 24px;
   height: 24px;
@@ -8555,12 +8555,12 @@ figure.blockquote > figcaption::before {
   top: calc(50% - 11px);
 }
 .ucla .related-links li a.related-links--external:hover::after {
-  background: url("/icons/denotive/external-link--white.svg");
+  background: url("../icons/denotive/external-link--white.svg");
   background-size: contain;
 }
 .ucla .related-links li a.related-links--download::after {
   content: "";
-  background: url("/icons/denotive/download--blue.svg");
+  background: url("../icons/denotive/download--blue.svg");
   background-size: contain;
   width: 24px;
   height: 24px;
@@ -8570,7 +8570,7 @@ figure.blockquote > figcaption::before {
   top: calc(50% - 11px);
 }
 .ucla .related-links li a.related-links--download:hover::after {
-  background: url("/icons/denotive/download--white.svg");
+  background: url("../icons/denotive/download--white.svg");
   background-size: contain;
 }
 .ucla .resource-link {
@@ -8824,98 +8824,98 @@ li .ucla-list--bulleted li::before {
   background: #ffbf0f;
 }
 .social-links-container .social-icon--facebook {
-  background: url("/icons/social/facebook--brand.svg");
+  background: url("../icons/social/facebook--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--twitter {
-  background: url("/icons/social/twitter--brand.svg");
+  background: url("../icons/social/twitter--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--instagram {
-  background: url("/icons/social/instagram--brand.svg");
+  background: url("../icons/social/instagram--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--snapchat {
-  background: url("/icons/social/snapchat--brand.svg");
+  background: url("../icons/social/snapchat--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--linkedin {
-  background: url("/icons/social/linkedin--brand.svg");
+  background: url("../icons/social/linkedin--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--youtube {
-  background: url("/icons/social/youtube--brand.svg");
+  background: url("../icons/social/youtube--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container .social-icon--tiktok {
-  background: url("/icons/social/tiktok--brand.svg");
+  background: url("../icons/social/tiktok--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--facebook {
-  background: url("/icons/social/facebook--white.svg");
+  background: url("../icons/social/facebook--white.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--twitter {
-  background: url("/icons/social/twitter--white.svg");
+  background: url("../icons/social/twitter--white.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--instagram {
-  background: url("/icons/social/instagram--white.svg");
+  background: url("../icons/social/instagram--white.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--snapchat {
-  background: url("/icons/social/snapchat--white.svg");
+  background: url("../icons/social/snapchat--white.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--linkedin {
-  background: url("/icons/social/linkedin--brand.svg");
+  background: url("../icons/social/linkedin--brand.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--youtube {
-  background: url("/icons/social/youtube--white.svg");
+  background: url("../icons/social/youtube--white.svg");
   width: 44px;
   height: 44px;
   display: block;
   content: "";
 }
 .social-links-container--blue .social-icon--tiktok {
-  background: url("/icons/social/tiktok--white.svg");
+  background: url("../icons/social/tiktok--white.svg");
   width: 44px;
   height: 44px;
   display: block;
@@ -8924,58 +8924,58 @@ li .ucla-list--bulleted li::before {
 .social-links-container--blue .social-icon--facebook,
 .social-links-container a:hover .social-icon--facebook,
 .social-links-container a:active .social-icon--facebook {
-  background: url("/icons/social/facebook--white.svg");
+  background: url("../icons/social/facebook--white.svg");
 }
 .social-links-container--blue .social-icon--twitter,
 .social-links-container a:hover .social-icon--twitter,
 .social-links-container a:active .social-icon--twitter {
-  background: url("/icons/social/twitter--white.svg");
+  background: url("../icons/social/twitter--white.svg");
 }
 .social-links-container--blue .social-icon--instagram,
 .social-links-container a:hover .social-icon--instagram,
 .social-links-container a:active .social-icon--instagram {
-  background: url("/icons/social/instagram--white.svg");
+  background: url("../icons/social/instagram--white.svg");
 }
 .social-links-container--blue .social-icon--snapchat,
 .social-links-container a:hover .social-icon--snapchat,
 .social-links-container a:active .social-icon--snapchat {
-  background: url("/icons/social/snapchat--white.svg");
+  background: url("../icons/social/snapchat--white.svg");
 }
 .social-links-container--blue .social-icon--linkedin,
 .social-links-container a:hover .social-icon--linkedin,
 .social-links-container a:active .social-icon--linkedin {
-  background: url("/icons/social/linkedin--white.svg");
+  background: url("../icons/social/linkedin--white.svg");
 }
 .social-links-container--blue .social-icon--youtube,
 .social-links-container a:hover .social-icon--youtube,
 .social-links-container a:active .social-icon--youtube {
-  background: url("/icons/social/youtube--white.svg");
+  background: url("../icons/social/youtube--white.svg");
 }
 .social-links-container--blue .social-icon--tiktok,
 .social-links-container a:hover .social-icon--tiktok,
 .social-links-container a:active .social-icon--tiktok {
-  background: url("/icons/social/tiktok--white.svg");
+  background: url("../icons/social/tiktok--white.svg");
 }
 .social-links-container--blue a:hover .social-icon--facebook, .social-links-container--blue a:active .social-icon--facebook {
-  background: url("/icons/social/facebook--black.svg");
+  background: url("../icons/social/facebook--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--twitter, .social-links-container--blue a:active .social-icon--twitter {
-  background: url("/icons/social/twitter--black.svg");
+  background: url("../icons/social/twitter--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--instagram, .social-links-container--blue a:active .social-icon--instagram {
-  background: url("/icons/social/instagram--black.svg");
+  background: url("../icons/social/instagram--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--snapchat, .social-links-container--blue a:active .social-icon--snapchat {
-  background: url("/icons/social/snapchat--black.svg");
+  background: url("../icons/social/snapchat--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--linkedin, .social-links-container--blue a:active .social-icon--linkedin {
-  background: url("/icons/social/linkedin--black.svg");
+  background: url("../icons/social/linkedin--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--youtube, .social-links-container--blue a:active .social-icon--youtube {
-  background: url("/icons/social/youtube--black.svg");
+  background: url("../icons/social/youtube--black.svg");
 }
 .social-links-container--blue a:hover .social-icon--tiktok, .social-links-container--blue a:active .social-icon--tiktok {
-  background: url("/icons/social/tiktok--black.svg");
+  background: url("../icons/social/tiktok--black.svg");
 }
 
 .social-tile {
@@ -9267,14 +9267,14 @@ TABLE OF CONTENTS:
   top: 0px;
   width: 20px;
   height: 20px;
-  background-image: url("/icons/denotive/sort--default.svg");
+  background-image: url("../icons/denotive/sort--default.svg");
   content: "";
 }
 .fixed-table #sortTable th.sorting-asc::before {
-  background-image: url("/icons/denotive/sort--ascending.svg");
+  background-image: url("../icons/denotive/sort--ascending.svg");
 }
 .fixed-table #sortTable th.sorting-desc::before {
-  background-image: url("/icons/denotive/sort--descending.svg");
+  background-image: url("../icons/denotive/sort--descending.svg");
 }
 .fixed-table__sticky-col {
   left: 0;
@@ -9901,7 +9901,7 @@ TABLE OF CONTENTS:
   display: block;
   width: 100%;
   height: 1em;
-  background: url("/icons/denotive/right-arrow--blue.svg") no-repeat center;
+  background: url("../icons/denotive/right-arrow--blue.svg") no-repeat center;
   background-size: 24px;
 }
 @media (min-width: 1024px) {
@@ -10228,7 +10228,7 @@ TABLE OF CONTENTS:
   width: 18px;
   height: 18px;
   position: absolute;
-  background-image: url(/icons/denotive/search--grey60.svg);
+  background-image: url("../icons/denotive/search--grey60.svg");
   background-position: center;
   background-size: contain;
   margin: 12px;
@@ -10256,7 +10256,7 @@ TABLE OF CONTENTS:
   appearance: none;
 }
 .nav-primary__search-mobile .nav-primary__search-form label input::-webkit-search-cancel-button, .nav-primary__search-desktop .nav-primary__search-form label input::-webkit-search-cancel-button {
-  background-image: url(/icons/denotive/clear--grey60.svg);
+  background-image: url("../icons/denotive/clear--grey60.svg");
   background-size: 23px;
   appearance: none;
   width: 23px;
