@@ -1,3 +1,10 @@
+# [1.0.0-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.18...v1.0.0-beta.19) (2022-05-04)
+
+
+### Bug Fixes
+
+* **move icon urls to relative url:** point icon url to relative ([ab1b597](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/ab1b59781cd6f532acab9dac0c930b43df7c0fd8))
+
 # [1.0.0-beta.18](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-05-03)
 
 
