@@ -579,7 +579,7 @@
       display: block;
       width: 100%;
       height: 1em;
-      background: url("/icons/denotive/right-arrow--blue.svg") no-repeat center;
+      background: url("../icons/denotive/right-arrow--blue.svg") no-repeat center;
       background-size: 24px;
     }
 
@@ -980,7 +980,7 @@
         width: 18px;
         height: 18px;
         position: absolute;
-        background-image: url(/icons/denotive/search--grey60.svg);
+        background-image: url("../icons/denotive/search--grey60.svg");
         background-position: center;
         background-size: contain;
         margin: 12px;
@@ -1008,7 +1008,7 @@
           appearance: none;
 
           &::-webkit-search-cancel-button {
-            background-image: url(/icons/denotive/clear--grey60.svg);
+            background-image: url("../icons/denotive/clear--grey60.svg");
             background-size: 23px;
             appearance: none;
             width: 23px;

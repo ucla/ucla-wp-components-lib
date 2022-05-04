@@ -97,7 +97,7 @@
   &__menu {
     appearance: none;
     -webkit-appearance: none;
-    background: colors.$lightest-grey-2 url("/icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
+    background: colors.$lightest-grey-2 url("../icons/denotive/down--blue.svg") no-repeat 98.5% 50%;
     background-size: 24px;
     font-size: variables.$ucla-font-size-default;
     line-height: 1.5;
@@ -133,7 +133,7 @@
   &.hasError {
     & > .select__menu {
       border: 1px solid red;
-      background: #ebebeb url("/icons/denotive/form-error.svg") no-repeat 96.5% 50%;
+      background: #ebebeb url("../icons/denotive/form-error.svg") no-repeat 96.5% 50%;
       background-size: 24px 24px;
 
       &:focus {
