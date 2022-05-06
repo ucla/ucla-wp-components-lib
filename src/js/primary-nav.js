@@ -56,20 +56,6 @@ $(document).ready(function() {
       $('.hamburger').removeClass('hamburger--is-active');
       $('.nav-primary').removeClass('nav-primary--is-active');
       enableMenuTab();
-
-      // If any tab is too far to the right, open left
-      $sublistItem.siblings('.nav-primary__link').each(function(i, obj) {
-        const rem = parseFloat(getComputedStyle(obj).fontSize);
-        if (obj.getBoundingClientRect().x + 30*rem > windowWidth) {
-          const sublist = obj.parentNode.children[2];
-          sublist.classList.add('nav-primary__sublist--open-left');
-          for (var item of sublist.children) {
-            if (item.classList.contains('nav-primary__link-2--has-children')) {
-              item.children[2].classList.add('nav-primary__sublist-2--open-left');
-            }
-          }
-        }
-      });
     } else {
       disableMenuTab();
     }

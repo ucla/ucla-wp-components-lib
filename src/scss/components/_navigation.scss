@@ -439,6 +439,17 @@
             z-index: 820;
           }
         }
+
+        &:nth-last-child(-n+4) {
+          & > .nav-primary__sublist {
+            right: -4px;
+            
+            .nav-primary__sublist-2 {
+              right: 20rem !important;
+              margin-right: -10px !important;
+            }
+          }
+        }
       }
 
       /* Style child links below 1024px */
@@ -692,12 +703,6 @@
       display: block;
     }
 
-    &--open-left {
-      @media (min-width: breakpoints.breakpoint-min(lg)) {
-        right: -4px;
-      }
-    }
-
     /* TODO refactor this to .nav-primary__list li>ul li */
     .nav-primary__item {
       @media (min-width: breakpoints.breakpoint-min(lg)) {
@@ -750,13 +755,6 @@
 
     &--open {
       display: block;
-    }
-
-    &--open-left {
-      @media (min-width: breakpoints.breakpoint-min(lg)) {
-        right: 20rem !important;
-        margin-right: -10px !important;
-      }
     }
 
     /* TODO refactor this to .nav-primary__list li>ul li */
