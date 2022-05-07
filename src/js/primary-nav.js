@@ -12,8 +12,10 @@ $(document).ready(function() {
   $toggle2.on('click', function() {
     if ($(this).siblings('.nav-primary__sublist-2').hasClass('nav-primary__sublist-2--hidden')) {
       $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'true');
+      $(this).attr('aria-label', 'collapse');
     } else {
       $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+      $(this).attr('aria-label', 'expand');
     }
 
     $(this).siblings('.nav-primary__sublist-2').toggleClass('nav-primary__sublist-2--hidden');
@@ -30,13 +32,19 @@ $(document).ready(function() {
   $toggle.on('click', function() {
     if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
+      $(this).attr('aria-label', 'collapse');
     } else {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
+      $(this).attr('aria-label', 'expand');
     }
 
     $(this).siblings('.nav-primary__sublist').toggleClass('nav-primary__sublist--hidden');
     $(this).toggleClass('is-open');
   });
+
+  // Set toggle button labels to "expand" by default
+  $toggle.attr('aria-label', 'expand');
+  $toggle2.attr('aria-label', 'expand');
 
   // Evaluate mobile sub nav states on page load
   evalNav($(window).width());
@@ -158,6 +166,8 @@ $(document).ready(function() {
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $('#nav-main').find('.nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+    $toggle.attr('aria-label', 'expand');
+    $toggle2.attr('aria-label', 'expand');
   });
 
   //on mouse out of second sublist
@@ -166,6 +176,7 @@ $(document).ready(function() {
     $('#nav-main').find('.nav-primary__sublist-2 .nav-primary__link-2').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
     $('#nav-main').find('.nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+    $toggle2.attr('aria-label', 'expand');
   });
 
   //Set aria labels for the primary navigation
@@ -290,11 +301,13 @@ $(document).ready(function() {
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
             $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
             $toggle.removeClass('is-open');
+            $toggle.attr('aria-label', 'expand');
             $sublistItem.addClass('nav-primary__sublist--hidden');
 
             $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
             $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
             $toggle2.removeClass('is-open');
+            $toggle2.attr('aria-label', 'expand');
             $sublistItem2.addClass('nav-primary__sublist-2--hidden');
           }
 
@@ -304,6 +317,7 @@ $(document).ready(function() {
             $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
             $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
             $toggle2.removeClass('is-open');
+            $toggle2.attr('aria-label', 'expand');
             $sublistItem2.addClass('nav-primary__sublist-2--hidden');
           }
 
@@ -388,6 +402,7 @@ $(document).ready(function() {
           $('.nav-primary__list .nav-primary__sublist').attr('style', '');
           $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
           $toggle.removeClass('is-open');
+          $toggle.attr('aria-label', 'expand');
           $('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
 
           //if this is a nav item
@@ -401,6 +416,7 @@ $(document).ready(function() {
           $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
           $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
           $toggle2.removeClass('is-open');
+          $toggle2.attr('aria-label', 'expand');
           $('.nav-primary__sublist-2').addClass('nav-primary__sublist-2--hidden');
 
           //if this is a nav item
