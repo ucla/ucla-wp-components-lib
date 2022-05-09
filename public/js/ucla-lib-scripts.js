@@ -1886,8 +1886,10 @@ $(document).ready(function() {
   $toggle2.on('click', function() {
     if ($(this).siblings('.nav-primary__sublist-2').hasClass('nav-primary__sublist-2--hidden')) {
       $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'true');
+      $(this).attr('aria-label', 'collapse');
     } else {
       $(this).siblings('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+      $(this).attr('aria-label', 'expand');
     }
 
     $(this).siblings('.nav-primary__sublist-2').toggleClass('nav-primary__sublist-2--hidden');
@@ -1904,13 +1906,19 @@ $(document).ready(function() {
   $toggle.on('click', function() {
     if ($(this).siblings('.nav-primary__sublist').hasClass('nav-primary__sublist--hidden')) {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'true');
+      $(this).attr('aria-label', 'collapse');
     } else {
       $(this).siblings('.nav-primary__sublist').attr('aria-expanded', 'false');
+      $(this).attr('aria-label', 'expand');
     }
 
     $(this).siblings('.nav-primary__sublist').toggleClass('nav-primary__sublist--hidden');
     $(this).toggleClass('is-open');
   });
+
+  // Set toggle button labels to "expand" by default
+  $toggle.attr('aria-label', 'expand');
+  $toggle2.attr('aria-label', 'expand');
 
   // Evaluate mobile sub nav states on page load
   evalNav($(window).width());
@@ -1930,20 +1938,6 @@ $(document).ready(function() {
       $('.hamburger').removeClass('hamburger--is-active');
       $('.nav-primary').removeClass('nav-primary--is-active');
       enableMenuTab();
-
-      // If any tab is too far to the right, open left
-      $sublistItem.siblings('.nav-primary__link').each(function(i, obj) {
-        const rem = parseFloat(getComputedStyle(obj).fontSize);
-        if (obj.getBoundingClientRect().x + 30*rem > windowWidth) {
-          const sublist = obj.parentNode.children[2];
-          sublist.classList.add('nav-primary__sublist--open-left');
-          for (var item of sublist.children) {
-            if (item.classList.contains('nav-primary__link-2--has-children')) {
-              item.children[2].classList.add('nav-primary__sublist-2--open-left');
-            }
-          }
-        }
-      });
     } else {
       disableMenuTab();
     }
@@ -2046,6 +2040,8 @@ $(document).ready(function() {
     $('#nav-main').find('.nav-primary__sublist .nav-primary__link').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist').attr('style', '');
     $('#nav-main').find('.nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
+    $toggle.attr('aria-label', 'expand');
+    $toggle2.attr('aria-label', 'expand');
   });
 
   //on mouse out of second sublist
@@ -2054,6 +2050,7 @@ $(document).ready(function() {
     $('#nav-main').find('.nav-primary__sublist-2 .nav-primary__link-2').attr('tabindex', '0');
     $('#nav-main').find('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
     $('#nav-main').find('.nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
+    $toggle2.attr('aria-label', 'expand');
   });
 
   //Set aria labels for the primary navigation
@@ -2178,11 +2175,13 @@ $(document).ready(function() {
             $('.nav-primary__list .nav-primary__sublist').attr('style', '');
             $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
             $toggle.removeClass('is-open');
+            $toggle.attr('aria-label', 'expand');
             $sublistItem.addClass('nav-primary__sublist--hidden');
 
             $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
             $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
             $toggle2.removeClass('is-open');
+            $toggle2.attr('aria-label', 'expand');
             $sublistItem2.addClass('nav-primary__sublist-2--hidden');
           }
 
@@ -2192,7 +2191,23 @@ $(document).ready(function() {
             $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
             $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
             $toggle2.removeClass('is-open');
+            $toggle2.attr('aria-label', 'expand');
             $sublistItem2.addClass('nav-primary__sublist-2--hidden');
+          }
+
+          //if the tabs are not in the search button
+          if (!$focus.hasClass('nav-primary__search-desktop-button') && !$focus.hasClass('nav-primary__search-field')
+              && !$focus.hasClass('nav-primary__search-submit')) {
+            let secondLevelNav = $('li.has-child > ul');
+            $('.nav-primary__search-desktop-button').removeClass('nav-primary__search-desktop-button--is-active')
+            $('.nav-primary__search-block-form').removeClass('nav-primary__search-block-form--is-active');
+            $(this).removeClass('nav-primary__search-desktop-button--is-active');
+            $('.nav-primary__search-desktop-button > svg').replaceWith('<svg role="img" aria-label="Search Icon" class="nav-primary__search-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Search Icon</title><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="search-nav-icon-primary" transform="translate(-15.000000, -15.000000)"><g id="Nav-Item"><g id="Icon/Search" transform="translate(12.000000, 12.000000)"><polygon class="Path-polygon" points="0 0 24 0 24 24 0 24"></polygon><path d="M15.5,14 L14.71,14 L14.43,13.73 C15.41,12.59 16,11.11 16,9.5 C16,5.91 13.09,3 9.5,3 C5.91,3 3,5.91 3,9.5 C3,13.09 5.91,16 9.5,16 C11.11,16 12.59,15.41 13.73,14.43 L14,14.71 L14,15.5 L19,20.49 L20.49,19 L15.5,14 Z M9.5,14 C7.01,14 5,11.99 5,9.5 C5,7.01 7.01,5 9.5,5 C11.99,5 14,7.01 14,9.5 C14,11.99 11.99,14 9.5,14 Z" id="Shape" fill="#00598C" fill-rule="evenodd"></path></g></g></g></g></svg>');
+
+            // Display other submenus is search menu is not active
+            for (let i = 0; i < secondLevelNav.length; i += 1) {
+              secondLevelNav[i].style.display = '';
+            }
           }
         }, 10);
       }
@@ -2261,6 +2276,7 @@ $(document).ready(function() {
           $('.nav-primary__list .nav-primary__sublist').attr('style', '');
           $('#nav-main .nav-primary__link--has-children').find('.nav-primary__sublist').attr('aria-expanded', 'false');
           $toggle.removeClass('is-open');
+          $toggle.attr('aria-label', 'expand');
           $('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
 
           //if this is a nav item
@@ -2274,6 +2290,7 @@ $(document).ready(function() {
           $('.nav-primary__list .nav-primary__sublist-2').attr('style', '');
           $('#nav-main .nav-primary__link-2--has-children').find('.nav-primary__sublist-2').attr('aria-expanded', 'false');
           $toggle2.removeClass('is-open');
+          $toggle2.attr('aria-label', 'expand');
           $('.nav-primary__sublist-2').addClass('nav-primary__sublist-2--hidden');
 
           //if this is a nav item
