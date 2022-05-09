@@ -1,6 +1,6 @@
 {
   "branches": [
-    {name: 'main', release: true},
+    {name: 'main', release: true, range: '1.0.x'},
     {name: 'development', prerelease: 'dev-beta'}
   ],
   "plugins": [
