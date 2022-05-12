@@ -1,7 +1,7 @@
 {
   "branches": [
-    {name: 'beta', release: true},
-    {name: 'main', prerelease: 'beta'},
+    '+([0-9])?(.{+([0-9]),x}).x',
+    'main',
     {name: 'development', prerelease: 'dev-beta'}
   ],
   "plugins": [
