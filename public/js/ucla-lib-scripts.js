@@ -1873,7 +1873,6 @@ $(document).ready(function() {
   $('.light-grey.tall-65').prepend('<div class="white-35"></div>');
 });
 $(document).ready(function() {
-
   // Toggle list functionality for 3rd level
   const $sublistItem2 = $('.nav-primary__sublist-2');
   const $toggle2 = $('.nav-primary__toggle-2');
@@ -1921,17 +1920,16 @@ $(document).ready(function() {
   $toggle2.attr('aria-label', 'expand');
 
   // Evaluate mobile sub nav states on page load
-  evalNav($(window).width());
+  evalNav($(window).outerWidth());
 
   // Run evaluation on page resize
   $(window).resize(function() {
-    evalNav($(window).width());
-    mobileNavPosition($(window).width(), breakpoint);
+    evalNav($(window).outerWidth());
+    mobileNavPosition($(window).outerWidth(), breakpoint);
   });
 
   // Hide open mobile sub navs above browser width 1024px
   function evalNav(windowWidth) {
-
     if (windowWidth >= breakpoint) {
       $sublistItem.addClass('nav-primary__sublist--hidden');
       $toggle.removeClass('is-open');
@@ -2004,7 +2002,7 @@ $(document).ready(function() {
   resetTabs();
 
   //get the window width
-  let windowWidth = $(window).width();
+  let windowWidth = $(window).outerWidth();
 
   //set the tabbing functionality
   if (windowWidth >= breakpoint) {
@@ -2016,7 +2014,7 @@ $(document).ready(function() {
   //On Resize
   $(window).resize(function() {
 
-    windowWidth = $(window).width();
+    windowWidth = $(window).outerWidth();
 
     setTimeout(function() {
 
@@ -2056,7 +2054,7 @@ $(document).ready(function() {
   //Set aria labels for the primary navigation
   $('#nav-main .nav-primary__link--has-children').mouseover(function() {
 
-    windowWidth = $(window).width();
+    windowWidth = $(window).outerWidth();
 
     //if this is desktop
     if (windowWidth >= breakpoint) {
@@ -2069,7 +2067,7 @@ $(document).ready(function() {
   //Set aria labels for the the second tier
   $('#nav-main .nav-primary__link-2--has-children').mouseover(function() {
 
-      windowWidth = $(window).width();
+      windowWidth = $(window).outerWidth();
   
       //if this is desktop
       if (windowWidth >= breakpoint) {
@@ -2083,11 +2081,10 @@ $(document).ready(function() {
 
     let $this = $(this);
 
-    windowWidth = $(window).width();
+    windowWidth = $(window).outerWidth();
 
     //if this is desktop
     if (windowWidth >= breakpoint) {
-
       $(this).find('.nav-primary__sublist').attr('aria-expanded', 'false');
       setTimeout(function() {
         $this.find('.nav-primary__sublist').addClass('nav-primary__sublist--hidden');
@@ -2101,7 +2098,7 @@ $(document).ready(function() {
 
     let $this = $(this);
 
-    windowWidth = $(window).width();
+    windowWidth = $(window).outerWidth();
 
     //if this is desktop
     if (windowWidth >= breakpoint) {
@@ -2401,8 +2398,10 @@ $(document).ready(function() {
     height = Number($header.height());
 
     if (windowWidth >= breakpoint) {
+      $('body').removeAttr('style')
       $primaryNav.removeAttr('style');
     } else {
+      $('body').css('overflowX', 'hidden');
       if (height > 105) {
         $primaryNav.css({ 'top': '71px' });
       } else {
