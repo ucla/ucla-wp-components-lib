@@ -5,8 +5,8 @@ title: Body Copy
 
 This is the body copy style. A series of sentences together which make a paragraph.
 
-{{view '@typography--body-copy'}}
+{{view '@typography--paragraph'}}
 
 ```
-{{view '@typography--body-copy'}}
+{{view '@typography--paragraph'}}
 ```
