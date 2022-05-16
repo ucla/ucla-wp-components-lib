@@ -64,12 +64,12 @@ In order to use the column grid you must wrap the page area with the “ucla cam
 // Three Columns
 {{view '@grid--three'}}
 // Twelve Columns Responsive EXAMPLE
-{{view '@grid--thirteen'}}
+{{view '@grid--twelve'}}
 ```
 
 You can place columns within columns.
 
 ```
 // Body Layout
-{{view '@grid--fourteen'}}
+{{view '@grid--nesteed-columns'}}
 ```
