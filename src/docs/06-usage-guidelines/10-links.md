@@ -17,7 +17,13 @@ title: Links
 #### Default
 
 ```
-{{view '@links--default'}}
+{{ render '@links--inline' }}
+
+{{ render '@links--links-in-list' }}
+
+{{ render '@links--related-links' }}
+
+{{ render '@links--resource-links' }}
 
 ```
 #### Inline
