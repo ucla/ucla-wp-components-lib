@@ -58,18 +58,30 @@ In order to use the column grid you must wrap the page area with the “ucla cam
 
 ```
 // Full Width
-{{view '@grid'}}
+{{ render '@grid--two' }}
+{{ render '@grid--three' }}
+{{ render '@grid--four' }}
+{{ render '@grid--five' }}
+{{ render '@grid--six' }}
+{{ render '@grid--seven' }}
+{{ render '@grid--eight' }}
+{{ render '@grid--nine' }}
+{{ render '@grid--ten' }}
+{{ render '@grid--eleven' }}
+{{ render '@grid--twelve' }}
+{{ render '@grid--column-span' }}
+{{ render '@grid--nested-columns' }}
 // Two Columns
 {{view '@grid--two'}}
 // Three Columns
 {{view '@grid--three'}}
 // Twelve Columns Responsive EXAMPLE
-{{view '@grid--thirteen'}}
+{{view '@grid--twelve'}}
 ```
 
 You can place columns within columns.
 
 ```
 // Body Layout
-{{view '@grid--fourteen'}}
+{{view '@grid--nested-columns'}}
 ```
