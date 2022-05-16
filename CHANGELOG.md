@@ -1,44 +1,18 @@
-# 1.0.0 (2022-05-12)
+# [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-05-16)
 
 
 ### Bug Fixes
 
-* bug fix ([27d2017](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/27d2017ab5367823e94303e9719eb8ffc640613e))
-* **button:** updated button styles to be identical for anchor usage ([de63cc6](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/de63cc651aed09b1151aa1fd711ca11d17336734))
-* **colors:** fix broken content links on the color overview page ([811f245](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/811f245863d08c081f41fe0f82ff1c4f324c7c11))
-* **component:** update cards and svg ([44d48ab](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/44d48ab787ce58713eb36006460a5a669d017b58))
 * fix submenu from staying active on tablet view ([957f10b](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/957f10be282059840bc6930e13fa52249b905311))
 * fixes icon placement in S3 Bucket ([1d36673](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/1d36673c04e77846b65e705cad57dcaa3772e33c))
 * footer changes, focus states, documentation ([220f4aa](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/220f4aa4de48e2bf84b97cb2ac509bf69c165d56))
-* **grid, typography:** fix spacing ([b6b56dc](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/b6b56dc3cae624fc70deb83c1b3b3b1718c4d6c9))
 * **move icon urls to relative url:** point icon url to relative ([ab1b597](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/ab1b59781cd6f532acab9dac0c930b43df7c0fd8))
-* new button, social tiles reconfig, doc and readme updates ([17c189a](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/17c189a9b9b217a69d92fee46b30a0f45baf9605))
-* **related links:** fix missing icons for external links and downloads ([4465dc3](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/4465dc3fdfb05541df0cddc49672e0808f532f98))
-* **tab.js:** console Error Fix ([6062280](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/60622808ebc54c3bebc16d3cff64ab2e75247fcb))
-* **tab.js:** fix CDN Javascript Error ([93bba5b](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/93bba5be1c38b9638387d3b7ebe105b60964c4eb))
 
 
 ### Features
 
-* **accordion, primary navigation:** added Accordion and Primary Navigation Component ([3bf151d](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/3bf151dcaacf7b4fab1682e97b26bf7590e2823d)), closes [#6](http://bitbucket.org/uclaucomm/ucla-bruin-components/issue/6) [#8](http://bitbucket.org/uclaucomm/ucla-bruin-components/issue/8)
-* **cards:** including variant card components ([24d8775](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/24d87753d733e6b0adbf14a46d6ad54be64057c1))
 * **component:** add 3-tier navigation ([722c786](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/722c7862f6eafbf055c8dadb5bb92363a17fb41e))
-* **component:** cards and spacing ([5baaebb](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/5baaebb3fee99f6932ba766b0442dbd020772d71))
 * documentation changes, improve and fix components, refactor ([d27d0c8](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/d27d0c8c569ad19eef2ea68580eb119edc79757d))
-* **footer and email:** including footer and email sign up component ([32fb5bf](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/32fb5bfc1b41184934bea37f7c3347ac0c7d67d2))
-* **form component:** included form inputs ([6d311c3](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/6d311c3c8935810a212198834047ceccf6b0e585))
-* **headers:** including header classnames to allow for inheritance of respective header names ([9e5657f](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/9e5657f1a58d8550a364350840cdab8efe6ea51d))
-* **new components and fixes:** adding Alert and Tabs Components, Fixing style lint errors ([e95d77f](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/e95d77f51b785c38ff0b95c690aacb0fd6cc0bf2))
-* **primary navigation, grid:** primary Nav Escape and Grid Spacing ([60e36bd](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/60e36bd680ff6def1b14118b9d09632176527a3b))
-* **social:** create social component ([f284140](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/f284140a68f51f20613ed9e72e1a704840214196))
-* **tile component:** including tile component ([4853bc0](http://bitbucket.org/uclaucomm/ucla-bruin-components/commits/4853bc0d8a26f31f3305b567bae22393a75504a2))
-
-
-### BREAKING CHANGES
-
-* Social tiles have been reconfigured
-
-58, 62
 
 # [1.0.0-dev-beta.19](http://bitbucket.org/uclaucomm/ucla-bruin-components/compare/v1.0.0-dev-beta.18...v1.0.0-dev-beta.19) (2022-05-12)
 
