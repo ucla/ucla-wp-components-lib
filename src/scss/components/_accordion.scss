@@ -13,13 +13,13 @@
     width: 100%;
     text-align: left;
     color: colors.$default-state;
-    font-size: variables.$ucla-font-size-default;
-    line-height: 1.5;
+    font-size: variables.$ucla-font-size-medium;
+    line-height: 1.5rem;
     font-weight: bold;
     position: relative;
     background: rgba(0 0 0 / 0%);
     margin-top: 1px;
-    padding: 8px 32px 8px 16px;
+    padding: 20px 64px 20px 16px;
 
     &:focus {
       outline: 3px solid colors.$focus-state;
@@ -38,7 +38,7 @@
         background-size: contain;
         position: absolute;
         right: 16px;
-        top: 8px;
+        top: 20px;
         width: 24px;
         height: 24px;
       }
@@ -67,14 +67,14 @@
       background-size: contain;
       position: absolute;
       right: 16px;
-      top: 8px;
+      top: 20px;
       width: 24px;
       height: 24px;
     }
 
     @media (min-width: breakpoints.breakpoint-min(md)) {
       font-size: variables.$ucla-font-size-large;
-      padding: 22px 64px 18px 16px;
+      padding: 18px 64px 18px 16px;
 
       &::after {
         background-size: contain;

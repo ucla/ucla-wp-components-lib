@@ -6395,13 +6395,13 @@ code {
   width: 100%;
   text-align: left;
   color: #00598c;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: bold;
   position: relative;
   background: rgba(0, 0, 0, 0);
   margin-top: 1px;
-  padding: 8px 32px 8px 16px;
+  padding: 20px 64px 20px 16px;
 }
 .accordion__title:focus {
   outline: 3px solid #0079bf;
@@ -6418,7 +6418,7 @@ code {
   background-size: contain;
   position: absolute;
   right: 16px;
-  top: 8px;
+  top: 20px;
   width: 24px;
   height: 24px;
 }
@@ -6441,14 +6441,14 @@ code {
   background-size: contain;
   position: absolute;
   right: 16px;
-  top: 8px;
+  top: 20px;
   width: 24px;
   height: 24px;
 }
 @media (min-width: 768px) {
   .accordion__title {
     font-size: 1.5rem;
-    padding: 22px 64px 18px 16px;
+    padding: 18px 64px 18px 16px;
   }
   .accordion__title::after {
     background-size: contain;
