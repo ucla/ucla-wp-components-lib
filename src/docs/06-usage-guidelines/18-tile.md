@@ -23,7 +23,7 @@ Large, descriptive link with optional ambient image.
 
 **Further Reading**
 * [Resources for developing accessible cards and tiles](https://www.webaxe.org/resources-for-developing-accessible-cards-tiles/) (Web Axe)
-* [When to use null alt text](https://www.davidmacd.com/blog/what-is-pure-decoration-alt-text-in-wcag.html) (CanAdpat)
+* [When to use null alt text](https://www.davidmacd.com/blog/what-is-pure-decoration-alt-text-in-wcag.html) (CanAdapt)
 
 ## Code
 
