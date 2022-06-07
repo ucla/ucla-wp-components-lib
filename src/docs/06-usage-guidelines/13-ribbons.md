@@ -21,7 +21,7 @@ Highlight important ideas or brand tag lines.
 ### Code
 
 ```
-{{ render '@ribbons--brand' }}
+{{ render '@ribbons' }}
 ```
 
 ## Highlight Ribbon

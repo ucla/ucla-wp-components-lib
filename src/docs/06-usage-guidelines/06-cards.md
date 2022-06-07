@@ -48,7 +48,7 @@ Use the `<article>` element to denote your card as a standalone element within t
 
 
 ```
-{{view '@cards--basic'}}
+{{view '@cards'}}
 ```
 
 ## Event Card

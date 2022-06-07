@@ -105,7 +105,7 @@ fractal.web.theme(myCustomisedTheme);
 
 // https://github.com/jwir3/fractal-status-helper
 const FractalStatusHelper = require('fractal-status-helper')(fractal);
-
+// fractal.components.set('default.collated', true);
 fractal.docs.engine(
   require('@frctl/handlebars')({
     helpers: {

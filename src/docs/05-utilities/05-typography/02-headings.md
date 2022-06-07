@@ -15,12 +15,12 @@ These are heading styles. The UCLA title headings are Helvetica with bold font-s
 * Don't use "h1" - "h6" classnames to incorrectly alter styles astray from the brand guidelines
 
 
-{{view '@typography--h1'}}
+{{view '@typography'}}
 ```
 <!--
 Desktop: font-size: 2.25rem; line-height: 1.125;
 Mobile: font-size: 1.75rem; line-height: 1.125; -->
-{{view '@typography--h1'}}
+{{view '@typography'}}
 ```
 
 {{view '@typography--h2'}}
