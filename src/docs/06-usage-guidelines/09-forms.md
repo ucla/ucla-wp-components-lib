@@ -29,7 +29,7 @@ Collect information from users or filter content with form select and search fie
 ### Code
 
 ```
-{{view '@forms--text'}}
+{{view '@forms'}}
 ```
 
 ## Select Menus

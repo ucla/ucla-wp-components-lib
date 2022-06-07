@@ -1,6 +1,7 @@
 {
 	"title": "Cards",
   "status": "ready",
+  "collated": false,
   "context": {
        "title": "How do parents embrace technology for kids, but prevent it from ruling the household?",
        "description": "With schools closed and remote learning the norm, how many hours of digital technology are acceptable for kids, and how much is too much? Can parents control when kids use tec…",
@@ -12,4 +13,5 @@
            "cta-title": "CTA 2"
        }]
    }
+   
 }
