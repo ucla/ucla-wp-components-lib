@@ -17,7 +17,7 @@ title: Links
 #### Default
 
 ```
-{{ render '@links--inline' }}
+{{ render '@links' }}
 
 {{ render '@links--links-in-list' }}
 
@@ -29,7 +29,7 @@ title: Links
 #### Inline
 
 ```
-{{view '@links--inline'}}
+{{view '@links'}}
 
 ```
 

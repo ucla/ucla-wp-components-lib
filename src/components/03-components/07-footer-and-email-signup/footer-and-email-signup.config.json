@@ -1,4 +1,17 @@
 {
 	"title": "Footer",
-  "status": "ready"
+  "status": "ready",
+  "collated": true,
+  "variants": [
+    {
+      "name": "default",
+      "label": "Department"
+    },
+    {
+      "name": "email"
+    },
+    {
+      "name": "global"
+    }
+  ]
 }
