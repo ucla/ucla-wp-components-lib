@@ -29,5 +29,5 @@ Display a single list of items in a quick, scannable format. The UCLA brands dic
 ### Code
 
 ```
-{{ render '@lists--ordered-lists' }}
+{{ render '@lists' }}
 ```

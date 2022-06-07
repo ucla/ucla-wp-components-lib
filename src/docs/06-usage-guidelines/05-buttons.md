@@ -99,7 +99,7 @@ Span wrapper that represents self-contained content.
 ### Code
 
 ```
-{{ render '@button--primary' }}
+{{ render '@button' }}
 ```
 
 ## Secondary Button
@@ -136,7 +136,7 @@ Span wrapper that represents self-contained content.
 2. Container (on hover and active states only)
 
 ```
-{{ render '@links--inline' }}
+{{ render '@links' }}
 ```
 
 ## Pagination Button
