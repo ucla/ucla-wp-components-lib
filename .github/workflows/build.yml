@@ -42,7 +42,7 @@ jobs:
           set -euxo pipefail
           export updateTag=$(git describe --tags --abbrev=0)
           export updateTag="${updateTag#?}"
-          echo "updateTag=${updateTag#?}" >> $GITHUB_ENV
+          echo "updateTag=${updateTag}" >> $GITHUB_ENV
       - name: update version number in package.json
         run: |
           set -euxo pipefail
