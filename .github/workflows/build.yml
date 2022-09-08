@@ -58,12 +58,11 @@ jobs:
           gulp production
       - name: add updated package.json and compiled public assets
         run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git status
-          git add package.json
-          git add package-lock.json
+          git add package.json package-lock.json
           # git add -f public/*
-          # set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${{ env.updateTag }}" set -e
-          # set +e git push set -e
-          git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${{ env.updateTag }}"
-          git push
+          set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${{ env.updateTag }}" set -e
+          set +e git push set -e
         
