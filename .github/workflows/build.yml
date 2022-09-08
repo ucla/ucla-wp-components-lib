@@ -1,0 +1,61 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      # Runs a set of commands using the runners shell
+      - name: Get an oauth access token using the client credentials, parsing out the token with jq (json processor).
+        run: |
+          apt-get update && apt-get install -y curl jq moreutils
+          export BB_TOKEN=$(echo "x-token-auth:")$(curl -s -X POST -u "${CLIENT_ID}:${CLIENT_SECRET}" https://bitbucket.org/site/oauth2/access_token -d grant_type=client_credentials -d scopes="repository" | jq --raw-output '.access_token')
+          npm install -g gulp
+          npm install gulp-minify gulp-zip del
+          npx semantic-release
+      - name: set current tag number -- this will be used to deploy to the correct S3 public folder
+        run: |
+          export updateTag=$(git describe --tags --abbrev=0)
+          export updateTag="${updateTag#?}"
+      - name: update version number in package.json
+        run: jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
+      - name: update version number in asset URL documentation page
+        run: find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
+      - name: produce local comp scripts to ensure minified production scripts can be created
+        run: gulp generateCompLibScripts
+      - name: update component script and style file extensions
+        run: |
+          sed -i -e 's/ucla-lib-scripts.js/'"ucla-lib-scripts.min.js"'/g' src/components/_preview.hbs
+          sed -i -e 's/ucla-lib.css/'"ucla-lib.min.css"'/g' src/components/_preview.hbs
+          gulp production
+      - name: add updated package.json and compiled public assets
+        run: |
+          git add package.json package-lock.json
+          # git add -f public/*
+          set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}" set -e
+          set +e git push set -e
+        
