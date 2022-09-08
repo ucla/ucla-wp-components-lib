@@ -54,6 +54,7 @@ jobs:
           gulp production
       - name: add updated package.json and compiled public assets
         run: |
+          git status
           git add package.json package-lock.json
           # git add -f public/*
           set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}" set -e
