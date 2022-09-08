@@ -41,13 +41,13 @@ jobs:
         run: |
           export updateTag=$(git describe --tags --abbrev=0)
           export updateTag="${updateTag#?}"
-          echo "This is the updateTag: $updateTag"
+          echo "updateTag=${updateTag#?}" >> $GITHUB_ENV
       - name: update version number in package.json
         run: |
           set -euxo pipefail
-          jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
+          jq --arg updateTag ${{ env.updateTag }} '.version = ${{ env.updateTag }}' package.json|sponge package.json
       - name: update version number in asset URL documentation page
-        run: find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
+        run: find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"${{ env.updateTag }}"/g"
       - name: produce local comp scripts to ensure minified production scripts can be created
         run: gulp generateCompLibScripts
       - name: update component script and style file extensions
@@ -60,6 +60,6 @@ jobs:
           git status
           git add package.json package-lock.json
           # git add -f public/*
-          set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${updateTag}" set -e
+          set +e git commit -m "[skip ci] Auto production build during CI with current tag upgraded to ${{ env.updateTag }}" set -e
           set +e git push set -e
         
