@@ -41,6 +41,7 @@ jobs:
         run: |
           export updateTag=$(git describe --tags --abbrev=0)
           export updateTag="${updateTag#?}"
+          echo "This is the updateTag: $updateTag"
       - name: update version number in package.json
         run: jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
       - name: update version number in asset URL documentation page
