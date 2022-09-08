@@ -43,7 +43,9 @@ jobs:
           export updateTag="${updateTag#?}"
           echo "This is the updateTag: $updateTag"
       - name: update version number in package.json
-        run: jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
+        run: |
+          set -euxo pipefail
+          jq --arg updateTag $updateTag '.version = $updateTag' package.json|sponge package.json
       - name: update version number in asset URL documentation page
         run: find src \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i "s/%!CurrentVersion%!/"$updateTag"/g"
       - name: produce local comp scripts to ensure minified production scripts can be created
