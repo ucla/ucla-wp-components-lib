@@ -39,6 +39,7 @@ jobs:
           npx semantic-release
       - name: set current tag number -- this will be used to deploy to the correct S3 public folder
         run: |
+          set -euxo pipefail
           export updateTag=$(git describe --tags --abbrev=0)
           export updateTag="${updateTag#?}"
           echo "updateTag=${updateTag#?}" >> $GITHUB_ENV
